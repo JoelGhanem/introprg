@@ -1,0 +1,5 @@
+'01':
+  stdout:
+  - Hello World!
+_mainclass: HolaMon
+_version: '2223'
