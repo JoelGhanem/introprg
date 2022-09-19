@@ -1,0 +1,18 @@
+'01':
+  stdin:
+  - Renat
+  - Taner
+  stdout:
+  - Nom?
+  - Primer cognom?
+  - Ei Renat, tinc una amiga que també és Taner.
+'02':
+  stdin:
+  - Fullet
+  - Tortuga
+  stdout:
+  - Nom?
+  - Primer cognom?
+  - Ei Fullet, tinc una amiga que també és Tortuga.
+_mainclass: NomCognom
+_version: '2223'
