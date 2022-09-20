@@ -1,0 +1,13 @@
+$ mkdir carpeta/			Crea una carpeta anomenada carpeta/
+$ cd carpeta/				Canvia el directori actual a carpeta/
+$ cat fitxer                Et permet comprovar la informació que hi ha a un fitxer
+$ gedit fitxer &            Crea un document i et permet obrir més eines a la vegada que el terminal
+$ ls                        Et diu quins documents hi ha a la carpeta
+$ rm fitxer                 Esborras un fitxer
+$ git init                  Permet inicialitzar un repositori git
+$ git clone                 Et permet clonar un repositori de git
+$ git status                Et diu si has fet tot el que havies de fer al repositori
+$ git add                   Afegeix tots els arxius al git
+$ git commit                Et permet veure la diferència entre els canvis que has realitzat
+$ git push                  Envia els exercicis al repositori
+$ git pull                  Rep els exercicis del repositori
