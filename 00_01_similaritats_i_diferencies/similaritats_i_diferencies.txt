@@ -1,0 +1,20 @@
+Pregunta 1. Què fa el programa?
+    El programa et dona l'àrea d'un cercel a partir del radi que indiqui l'usuari.
+
+Pregunta 2. Elements comuns
+    S'ha de definir PI, ja sigui a partir d'una biblioteca o d'introduir un valor.
+    També s'ha d'escriure print per tal de que l'usuari vegi la resposta que buscava.
+    Sempre s'ha de tancar el programa (menys a python, que és millor que els altres)
+
+Pregunta 3. Entrada/Sortida
+    Al pseudocodi l'entrada s'obté amb llegeix radi i la sortida amb escriu"quelcom"
+    A C l'entrada s'obté amb scanf(!%f!, &radi); i la sortida amb printf("quelcom")
+    A Python l'entrada s'obté amb input i la sortida amb print("quelcom")
+    A la java l'entrada s'obté amb  BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); i la sortida amb System.out.print("quelcom") 
+    A Kotlin l'entrada s'obté amb val reader = BufferedReader(InputStreamReader(System.`in`)) i la sortida s'obté amb print("quelcom")
+
+Pregunta 4. Variables
+    Un altre variable és el radi, que s'identifica com un float o un double ja queconté decimals.
+    
+Pregunta 5. Prefeferència
+    A primera vista m'agrada més el python, és més net que els altres, més fàcil d'entendre i et permet fer més codi en menys línies.
