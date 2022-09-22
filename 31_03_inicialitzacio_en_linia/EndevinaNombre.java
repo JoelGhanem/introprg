@@ -17,14 +17,12 @@
         public static void main(String[] args) {
 
 
-            int numeroPensat;   // guardarà el número pensat
-
-            int numero;         // guardarà els càlculs intermitjos
-
+            int numeroPensat; int numero; numeroPensat = Integer.parseInt(args[0]); numero = numeroPensat * 3;
+               
 
             // pensa un número
 
-            numeroPensat = Integer.parseInt(args[0]);
+            
 
             System.out.print("El número pensat és ");
 
@@ -33,7 +31,7 @@
 
             // Multiplica'l per 3
 
-            numero = numeroPensat * 3;
+            
 
             System.out.print("Quan el multipliques per 3 obtens ");
 
