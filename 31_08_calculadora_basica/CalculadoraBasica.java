@@ -20,10 +20,10 @@ public class CalculadoraBasica{
 		int divisió = primerOperand / segonOperand;
 
 		// mostra resultats
-		System.out.println(primerOperand + "+" + segonOperand + "=" + suma);
-		System.out.println(primerOperand + "-" + segonOperand + "=" + resta);
-		System.out.println(primerOperand + "*" + segonOperand + "=" + multiplicació);
-		System.out.println(primerOperand + "/" + segonOperand + "=" + divisió);
+		System.out.println(primerOperand + " + " + segonOperand + " = " + suma);
+		System.out.println(primerOperand + " - " + segonOperand + " = " + resta);
+		System.out.println(primerOperand + " * " + segonOperand + " = " + multiplicació);
+		System.out.println(primerOperand + " / " + segonOperand + " = " + divisió);
 	}
 }
 
