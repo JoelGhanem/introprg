@@ -1,0 +1,29 @@
+/*
+ * Aquest programa implementa una calculadora bàsica 
+ *
+ * Demana dos nombres per entrada estàndar i mostra el resultat de sumar-los, restar-li el segon al primer, multiplicar-los i dividir el primer entre el segon.
+ *
+ * El programa no controla valors no adecuats d'entrada
+ */
+public class CalculadoraBasica{
+	public static void main(String[]args){
+		// obté operands d'entrada 
+		System.out.println("Primer operand:");
+		int primerOperand = Integer.parseInt(Entrada.readLine());
+		System.out.println("Segon operand:");
+		int segonOperand = Integer.parseInt(Entrada.readLine());
+
+		//operacions 
+		int suma = primerOperand + segonOperand;
+		int resta = primerOperand - segonOperand;
+		int multiplicació = primerOperand * segonOperand;
+		int divisió = primerOperand / segonOperand;
+
+		// mostra resultats
+		System.out.println(primerOperand + "+" + segonOperand + "=" + suma);
+		System.out.println(primerOperand + "-" + segonOperand + "=" + resta);
+		System.out.println(primerOperand + "*" + segonOperand + "=" + multiplicació);
+		System.out.println(primerOperand + "/" + segonOperand + "=" + divisió);
+	}
+}
+
