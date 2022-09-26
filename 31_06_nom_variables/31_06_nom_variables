@@ -1,0 +1,7 @@
+int tallaSabates = 47;
+int dataNaix = 23032004;
+string nomJoel = "Joel";
+string colorWallpaper = "Negre";
+boolean mAgradaLlimona = true;
+string lletraCançóPref = "Piensa que la valla solo és un trozo de metal"
+string llistaPelisLlibres = ""
