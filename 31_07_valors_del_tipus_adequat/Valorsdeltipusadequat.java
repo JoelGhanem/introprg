@@ -4,4 +4,4 @@ string nomJoel = "Joel";
 string colorWallpaper = "Negre";
 boolean mAgradaLlimona = true;
 string lletraCançóPref = "Piensa que la valla solo és un trozo de metal"
-string llistaPelisLlibres = ""
+string llistaPelisLlibres = "Deadpool mata al universo MARVEL"
