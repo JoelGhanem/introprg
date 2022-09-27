@@ -1,0 +1,27 @@
+int tallaSabates = 47;
+
+tallaSabates, elMeuPeu, queChanclaUsas
+
+int dataNaix = 23032004;
+
+dataNaix, elMeuDia, diaNaix
+
+string nomJoel = "Joel";
+
+nomJoel, elMeuNom, comEtDius
+
+string colorWallpaper = "Negre";
+
+colorWallpaper, colorDeFons, ColorFonsPantalla
+
+boolean mAgradaLlimona = true;
+
+mAgradaLlimona, noMAgradaLlimona, laLlimonaMAgrada
+
+string lletraCançóPref = "Piensa que la valla solo és un trozo de metal"
+
+lletraCançóPreferida, cançóPreferida, favLyrics
+
+string llistaPelisLlibres = ""
+
+llistaPelisLlibres, llibresPelisQueTHanMarcat
