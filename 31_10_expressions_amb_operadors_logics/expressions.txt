@@ -1,0 +1,35 @@
+1.  la Clara és més jove que tu
+
+	boolean socMesVellQueLaClara = edatClara < edatJoel; edatClara < edatJoel
+
+2.  la Clara i el Marc són més joves que tu
+
+	boolean elJoelEsUnVell = edatJoel >== edatClara && edatMarc; edatClara && < edatJoel
+
+3.  la Clara és més jove que tu i tu ets més jove que el Marc
+
+	boolean cadascuMesVellQueLAnterior = edatClara < edatJoel &&edat Joel < edatMarc; edatClara < edatJoel && edatJoel < edatMarc
+
+4.  la Clara no és més jove que el Marc
+
+	boolean !laClaraEsMesJoveQueElMarc = edatClara < edatMarc; false == edatClara < edatMarc 
+
+5.  no és cert que el Marc sigui més jove que la Clara
+
+	boolean !elMarcEsMesJoveQueLaClara = edatMarc > edatClara; false (edatMarc < edatClara)
+
+6.  Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc
+
+	boolean !elMarcEsMesJoveQUeLaClara edatMarc < edatClara && !elMarcMesJoveQueJo; false == (edatMarc < edatClara && edatMarc > edatJoel)
+
+7.  Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat
+
+	boolean edatJoel > (edatMarc + edatClara) || edatClara == edatMarc; edatJoel > (edatMarc + edatClara) || edatClara == edatMarc
+
+8. La temperatura d'Espanya es major que la temperatura d'Alemanya i Chile
+	
+	boolean temperaturaEspanya > temperaturaAlemanya && temperatura Chile; temperaturaEspanya > temperaturaAlemanya && temperaturaChile
+
+	9. el pes d'una balena no es major que el pes d'un Elefant, un guepard i una Orca junts
+
+	boolean !unaBalenaPesaMesQueMoltsAnimals  pesBalena > (pesElefant + pesGuepard + pesOrca); false == pesBalena > (pesElefant + pesGuepard + pesOrca)
