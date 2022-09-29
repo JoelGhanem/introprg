@@ -1,0 +1,51 @@
+1. La Clara és major d'edat o la Clara es mes jove que el Marc; 
+
+	boolean A = edatClara >= 18; boolean B = edatMarc >= 18;  
+
+	A	B	A || B
+
+	0	0	 false 
+	0	1	 true
+	1	0	 true 
+	1	1	 true
+			  
+
+2. Al menys un de vosaltres, la Clara o el Marc o tu es m,ajor d'edat
+
+	boolean A = edatClara >= 18; boolean B = edatMarc >= 18; boolean C = edatJoel >= 18;
+	
+	boolean  edatClara >= 18 || edatMarc >= 18 || edatJoel >= 18;
+
+			
+	A	B	  C		A ||  B || C
+
+	0	0	  0		    false	    
+	0	0	  1		    true  
+	0	1	  0		    true 
+	0	1	  1   		    true
+	1	0	  0		    true
+	1	0	  1		    true
+	1	1	  0		    true
+	1	1	  1		    true
+		 
+
+3. La Clara es major d'edat, i tu ets major que el Marc pero no major que laClara
+
+	boolean A = edatClara >= 18;
+	
+	boolean B = edatJoel > edatMarc;
+
+	boolean C = edatJoel < edatClara;
+
+	boolean edatClara >= 18 (edatMarc < edatJoel && edatJoel < edatClara);
+
+	A	B	C	B && C = D	A && D
+	
+	0	0	0	 false		 false
+	0	0	1	 false	 	 false 
+	0	1	0	 false 		 false
+	0	1	1	 true		 false
+	1	0	0	 false  	 false
+	1	0	1	 false		 false
+	1	1	0	 false		 false
+	1       1    	1	 true		 true

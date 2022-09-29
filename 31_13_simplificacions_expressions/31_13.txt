@@ -1,0 +1,8 @@
+1. true && A, A
+2. A && A, A
+3. A || false, A
+4. A || A, A
+5. A && false, false
+6. A || true, true 
+7. ! (A && B), !A || B
+8. ! (A || B), !A 
