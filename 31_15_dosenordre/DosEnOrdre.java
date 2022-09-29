@@ -3,7 +3,7 @@
  */
 public class DosEnOrdre {
     public static void main(String[] args) {
-        System.out.println("Primer");
+        System.out.println("Primer?");
         int primer = Integer.parseInt(Entrada.readLine());
 
 	System.out.println("Segon?");
