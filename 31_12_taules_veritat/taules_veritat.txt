@@ -32,8 +32,19 @@
 
 3. La Clara es major d'edat, i tu ets major que el Marc pero no major que laClara
 
-	boolean A = edatClara >= 18; edatMarc < edatJoel && edatJoel < edatClara
+	boolean A = edatClara >= 18; 
+	
+	boolean B = edatMarc < edatJoel 
+	
+	boolean C = edatJoel < edatClara
 	
 	boolean  edatClara >= 18 && edatMarc >= 18 edatJoel >= 18;
-	A	B	  C		C
-            
+	A	B	C	B && C = D	A && D		
+        0	0	0	   0		   0
+	0	0	1	   0		   0
+	0	1	0	   0		   0
+	0	1	1	   1		   0
+	1	0	0	   0		   0
+	1	0	1	   0		   0
+	1	1	0	   0		   0
+	1	1	1	   1		   1			   		   	    
