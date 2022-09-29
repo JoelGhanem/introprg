@@ -11,7 +11,7 @@ public class DosEnOrdre {
 
         System.out.println(primer + " i " + segon);
 	if (segon > primer) {
-		System.out.println(segon + "i" + primer);
+		System.out.println(segon + " i " + primer);
                  /*condicional amb if i else mostra el missatge corresponent.*/
                  
 	}	
