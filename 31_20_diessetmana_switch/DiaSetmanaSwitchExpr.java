@@ -20,7 +20,7 @@
                         break;
                 case 7: diaSetmana = "Diumenge";
                         break;
-                case 8: diaSetmana = "Error";
+                default: diaSetmana = "Error";
                         break;
         }
     }
