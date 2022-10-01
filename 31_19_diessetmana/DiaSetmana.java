@@ -18,6 +18,10 @@ public class DiaSetmana {
                 System.out.println("Dissabte");
         }   else if (numero == 7) {
                 System.out.println("Diumenge");
+        }   else if (numero > 7) { 
+                System.out.println("Error");
+        }   else if (numero < 1) {               
+                System.out.println("Error");
         }
-    }               
+    }          
 }
