@@ -6,6 +6,8 @@
             int dia = Integer.parseInt(args[0]);
             String diaSetmana;
             switch (dia) {
+                case 0: diaSetmana = "Error";
+                        break;
                 case 1: diaSetmana = "Dilluns";
                         break;
                 case 2: diaSetmana = "Dimarts";
