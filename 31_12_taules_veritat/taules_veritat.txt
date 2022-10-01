@@ -40,7 +40,7 @@
 	
 	boolean  edatClara >= 18 && edatMarc >= 18 edatJoel >= 18;
 	A	B	C	B && C = D	A && D		
-        0	0	0	   0		   0
+    0	0	0	   0		   0
 	0	0	1	   0		   0
 	0	1	0	   0		   0
 	0	1	1	   1		   0
@@ -48,3 +48,4 @@
 	1	0	1	   0		   0
 	1	1	0	   0		   0
 	1	1	1	   1		   1			   		   	    
+

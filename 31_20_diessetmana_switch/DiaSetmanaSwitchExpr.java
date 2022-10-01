@@ -24,6 +24,11 @@
                         break;
                 default: diaSetmana = "Error";
                         break;
+                if (dia < 1) {
+                    System.out.println("Error");
+              }  else if (dia > 7) {
+                    System.out.println("Error");
+            }
         }
     }
 }
