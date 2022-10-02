@@ -1,7 +1,7 @@
 /*
  * Aquest programa duplica el valor que rep com a primer argument
  *
- * El programa no controla valors no adequats d'entrada
+ * El programa no controla valors no adequats d'entrada.
  */
 
 public class Duplica {
