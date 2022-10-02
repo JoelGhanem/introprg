@@ -28,7 +28,7 @@
                         break;
                        
                 case 6:
-                    System.out.println("Dissabtes");
+                    System.out.println("Dissabte");
                         break;
                        
                 case 7:
