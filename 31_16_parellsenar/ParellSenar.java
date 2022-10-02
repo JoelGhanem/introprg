@@ -1,6 +1,6 @@
 /*
 *Programa que indica si el numero proporcionat com a primer argument es parell o senar.
-si no s especifica cap num el resultat es indeterminat
+si no s especifica cap num el resultat es indeterminat.
 */
 
 public class ParellSenar {
