@@ -1,5 +1,5 @@
 /*
- * Programa que ordena dos nombres
+ * Programa que ordena dos nombres.
  */
 public class DosEnOrdre {
     public static void main(String[] args) {
