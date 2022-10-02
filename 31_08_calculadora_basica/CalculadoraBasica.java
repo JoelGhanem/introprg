@@ -3,7 +3,7 @@
  *
  * Demana dos nombres per entrada estàndar i mostra el resultat de sumar-los, restar-li el segon al primer, multiplicar-los i dividir el primer entre el segon.
  *
- * El programa no controla valors no adecuats d'entrada
+ * El programa no controla valors no adecuats d'entrada.
  */
 public class CalculadoraBasica{
 	public static void main(String[]args){
