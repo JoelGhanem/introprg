@@ -6,29 +6,31 @@
             int dia = Integer.parseInt(args[0]);
             String diaSetmana;
             switch (dia) {
-                case 0: diaSetmana = "Error";
-                        break;
-                case 1: diaSetmana = "Dilluns";
-                        break;
-                case 2: diaSetmana = "Dimarts";
-                        break;
-                case 3: diaSetmana = "Dimecres";
-                        break;
-                case 4: diaSetmana = "Dijous";
-                        break;
-                case 5: diaSetmana = "Divendres";
-                        break;
-                case 6: diaSetmana = "Dissabte";
-                        break;
-                case 7: diaSetmana = "Diumenge";
-                        break;
-                default: diaSetmana = "Error";
-                        break;
-                if (dia < 1) {
-                    System.out.println("Error");
-              }  else if (dia > 7) {
-                    System.out.println("Error");
-            }
+
+                case 1: 
+                   System.out.println("Dilluns");
+                        
+                case 2: 
+                   System.out.println("Dimarts");
+                       
+                case 3:
+                   System.out.println("Dimecres");
+                
+                case 4: 
+                System.out.println("Dijous");
+                 
+                case 5:
+                System.out.println("Divendres");
+                       
+                case 6:
+                   System.out.println("Dissabtes");
+                       
+                case 7:
+                   System.out.println("Diumenge");
+                    
+                default:
+                System.out.println("Error");
+                        
         }
     }
 }
