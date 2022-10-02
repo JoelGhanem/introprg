@@ -1,7 +1,7 @@
     /*
      * Aquest programa mostra capacitats d'endevinació
      *
-     * Per executar-ho, fes
+     * Per executar-ho, fes.
      * $ java EndevinaNombre 42
 
      */
