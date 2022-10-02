@@ -7,9 +7,9 @@
       public static void main(String[] args) {
           int numero = Integer.parseInt(args[0]);
               String ParellOSenar = (numero %2 == 0) ? "El número és parell" : "El número és senar";
-          }
-  
-      }                                                                 
+    }
+ 
+}                                                                 
                                                                                                                                                                                                                   
                                                                                                                                                                                                                   
                                                                                                                                                                                                                   
