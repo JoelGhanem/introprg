@@ -17,7 +17,7 @@
 
     l'any que ve seràs major d'edat
 
-	esatAnyQueVe > 18;
+	edatAnyQueVe > 18;
 
     l'any passat encara no eres major d'edat
 
@@ -38,7 +38,6 @@
     estem a més de 28 graus
 
 	temperaturaActual > 28;
-    
     
     el meu peu es un 47
 	
