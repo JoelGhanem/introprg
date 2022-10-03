@@ -16,7 +16,7 @@
                 } else if (mes == 1) {
                     System.out.println("Mes anterior 12/" + anyAnterior + " i mes següent " + mesSeguent + "/" + any); 
 
-
+                } else {
                     System.out.println("Mes anterior " + mesAnterior  + "/" + any + " i mes següent " + mesSeguent + "/" + any); 
         }
     }
