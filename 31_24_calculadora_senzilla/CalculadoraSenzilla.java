@@ -26,15 +26,15 @@ public class CalculadoraSenzilla {
             double resultat = operand1 / operand2;
             System.out.println(operand1 + " / " + operand2 + " = " + resultat);
         } else if (operador != '+') {
-            System.out.println("L'operador " + operador + " no esta disponible");
+            System.out.println("L'operador " + operador + " no está disponible");
         } else if (operador != '-') {
-            System.out.println("L'operador " + operador + " no esta disponible");
+            System.out.println("L'operador " + operador + " no está disponible");
         } else if (operador != '*') {
-            System.out.println("L'operador " + operador + " no esta disponible");
+            System.out.println("L'operador " + operador + " no está disponible");
         } else if (operador != '/') {
-            System.out.println("L'operador " + operador + " no esta disponible");
+            System.out.println("L'operador " + operador + " no está disponible");
 
-        } /* █████ */
+        } 
     }
 }
 
