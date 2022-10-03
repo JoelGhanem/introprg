@@ -9,9 +9,13 @@
                 int any = Integer.parseInt(Entrada.readLine());                  
                 int mesAnterior = mes - 1;
                 int mesSeguent = mes + 1; 
-                System.out.println("Mes anterior " + mesAnterior  + "/" + any + " i mes següent " + mesSeguent + "/" + any); 
+                int anySeguent = any + 1;
+                if (mes == 12) {
+                    System.out.println("Mes anterior " + mesAnterior  + "/" + anySeguent + " i mes següent 1/" + any); 
+                } else {
+                    System.out.println("Mes anterior " + mesAnterior  + "/" + any + " i mes següent " + mesSeguent + "/" + any); 
+                }
     }
-}
-                                                                                                                                                                                                               
+}                                                                                                                                                                                                               
                                                                                                                                                                                                                   
                                                      
