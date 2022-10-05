@@ -13,7 +13,7 @@ public class Pagament {
     if (diferencia == 0) {
         System.out.println("No sobra ni falta res");
     } else if (diferencia <  0) {
-        System.out.println("sobren " + diferenciaPositiva + "€");
+        System.out.println("Sobren " + diferenciaPositiva + "€");
     } else if (diferencia >  0) {
         System.out.println("Falten " + diferencia + "€");
     }
