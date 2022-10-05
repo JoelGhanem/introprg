@@ -7,7 +7,11 @@ public class Semafor {
     String color = Entrada.readLine();
     if (color.equals("groc")) {
         System.out.println("corre!");
-    } else if (color.equals("verd"));
+    } else if (color.equals("verd")) {
         System.out.println("vas be");
+    } else if (color.equals("vermell")){
+        System.out.println("espera");
+
+        }
     }
 }
