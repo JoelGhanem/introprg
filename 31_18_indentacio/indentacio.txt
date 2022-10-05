@@ -1,0 +1,13 @@
+public class DosEnOrdre 
+|___public static void main(String[] args) 
+    |___System.out.println("Primer?");
+    |---int primer = Integer.parseInt(Entrada.readLine())
+    |	|___System.out.println("Segon?");
+	|---int segon = Integer.parseInt(Entrada.readLine())
+    |---if (segon < primer) 
+    |   |___System.out.println(segon + " i " + primer)
+    |---else {
+		|___System.out.println(primer + " i " + segon)
+		     	    		
+
+
