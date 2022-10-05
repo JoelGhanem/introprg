@@ -7,7 +7,7 @@ public class Pagament {
     System.out.println("Paga?");
     int paga = Integer.parseInt(Entrada.readLine());
     int diferencia = preu - paga;
-    boolean diferencia positiva = paga > preu;
+    boolean diferenciaPositiva = paga > preu;
     boolean diferenciaNegativa = paga < preu;
     boolean perfecte = paga == preu;
     if (diferencia == 0) {
