@@ -9,8 +9,10 @@ public class Semafor {
         System.out.println("corre!");
     } else if (color.equals("verd")) {
         System.out.println("passa");
-    } else if (color.equals("vermell")){
+    } else if (color.equals("vermell")) {
         System.out.println("espera");
+    } else if (color.equals("magenta")) {
+        System.out.println("ves a l'oculista");
 
         }
     }
