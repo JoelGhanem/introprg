@@ -7,7 +7,7 @@ public class Pagament {
     System.out.println("Paga?");
     int paga = Integer.parseInt(Entrada.readLine());
     int diferencia = preu - paga;
-    int diferenciaNegativa  paga - preu;
+    boolean diferenciaNegativa = paga < preu;
     if (diferencia == 0) {
         System.out.println("No sobra ni falta res");
     } else if (diferencia > 0) {
