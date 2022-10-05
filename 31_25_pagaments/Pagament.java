@@ -4,10 +4,10 @@ public class Pagament {
     public static void main(String[] args) {
     System.out.println("Preu?");
     int preu = Integer.parseInt(Entrada.readLine());
-    System.out.println("paga?");
+    System.out.println("Paga?");
     int paga = Integer.parseInt(Entrada.readLine());
     int diferencia = preu - paga;
-    boolean diferenciaNegativa = paga > preu;
+    int diferenciaNegativa  paga - preu;
     if (diferencia == 0) {
         System.out.println("No sobra ni falta res");
     } else if (diferencia > 0) {
