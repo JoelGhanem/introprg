@@ -17,7 +17,13 @@
         public static void main(String[] args) {
 
 
-            int numeroPensat; int numero; numeroPensat = Integer.parseInt(args[0]); numero = numeroPensat * 3;
+            int numeroPensat; 
+
+            int numero; 
+
+            numeroPensat = Integer.parseInt(args[0]); 
+
+            numero = numeroPensat * 3;
                
 
             // pensa un número
