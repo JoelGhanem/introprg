@@ -1,3 +1,7 @@
+/* Programa que rep 3 numeros i tels retorna en ordre ascendent
+*/
+/* Declaracio de variables 
+*/
 public class TresEnOrdre {
     public static void main(String[] args) {
         System.out.println("Primer?");
@@ -8,7 +12,8 @@ public class TresEnOrdre {
 
         System.out.println("Tercer?");
         int tercer = Integer.parseInt(Entrada.readLine());
-
+/* Part del programa que retorna els numeros en ordre :
+*/
     if (primer > segon && segon > tercer) {
         System.out.println(tercer + ", " + segon + " i " + primer);
 
