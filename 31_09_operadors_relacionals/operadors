@@ -17,11 +17,11 @@
 
     l'any que ve seràs major d'edat
 
-	edatAnyQueVe > 18;
+	edat + 1 >= 18;
 
     l'any passat encara no eres major d'edat
 
-	edatAnyPassat < 18;
+	edat - 1 <= 18;
 
     tens com a molt 35 companys a classe
 
