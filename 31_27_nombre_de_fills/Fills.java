@@ -15,6 +15,10 @@ public class Fills {
                 break;
         case 2:
             System.out.println("No t'avorreixes a casa, eh?");
+                break;
+        case 4: 
+            System.out.println("No t'avorreixes a casa, eh?");
+                break;
 }    
 }
 }
