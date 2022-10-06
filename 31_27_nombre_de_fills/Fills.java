@@ -1,6 +1,7 @@
 /*Programa que et demana quants fills tens i et respon segons el nombre*/
 public class Fills {
     public static void main(String[] args) {
+    System.out.println("Quants fills tens?");
     int numFills = Integer.parseInt(Entrada.readLine());
     switch (numFills) {
         case -1:
