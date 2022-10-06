@@ -22,6 +22,9 @@ public class Fills {
         case 5: 
             System.out.println("Tu sí fas país!");
                 break;
+        case 6: 
+            System.out.println("Tu sí fas país!");
+                break;
 }    
 }
 }
