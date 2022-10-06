@@ -13,6 +13,8 @@ public class Fills {
         case 1:
             System.out.println("Compte de no mimar-lo massa!");
                 break;
+        case 2:
+            System.out.println("No t'avorreixes a casa, eh?");
 }    
 }
 }
