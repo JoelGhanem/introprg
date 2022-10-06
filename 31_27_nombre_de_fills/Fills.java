@@ -19,6 +19,9 @@ public class Fills {
         case 4: 
             System.out.println("No t'avorreixes a casa, eh?");
                 break;
+        case 5: 
+            System.out.println("Tu sí fas país!");
+                break;
 }    
 }
 }
