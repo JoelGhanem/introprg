@@ -4,7 +4,7 @@
 
 2.  la Clara i el Marc són més joves que tu
 
-	boolean elJoelEsUnVell = edatJoel > edatClara && edatMarc < edatJoel; edatClara && < edatJoel
+boolean elJoelEsUnVell = edatJoel > edatClara && edatMarc < edatJoel; (edatClara && edadMarc) < edatJoel
 
 3.  la Clara és més jove que tu i tu ets més jove que el Marc
 
