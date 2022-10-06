@@ -7,6 +7,9 @@ public class Fills {
         case -1:
             System.out.println("No pots tenir menys de 0 fills!");
                 break;
+        case 0:
+            System.out.println("Tot el que t'has estalviat en bolquers!");
+                break;
         case 1:
             System.out.println("Compte de no mimar-lo massa!");
                 break;
