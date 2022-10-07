@@ -25,10 +25,8 @@ public class Ascensor {
                 System.out.println("primer pis");
         }   else if (pis.equals("segon pis") && (onVas.equals("baixar dos"))) {
                 System.out.println("planta baixa");
-    
-            
-            
-            
+        }   else if (pis.equals("planta baixa") && (onVas.equals("baixar dos"))) {
+                System.out.println("error");
         }
     }
 }
