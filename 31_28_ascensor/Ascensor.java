@@ -7,9 +7,24 @@ public class Ascensor {
         String onVas = Entrada.readLine();
         if (pis.equals("planta baixa") && (onVas.equals("baixar un"))) {
             System.out.println("error");
-            
-/*            (onVas.equals("pujar un")) {
-            }*/
+        }   else if (pis.equals("planta baixa") && (onVas.equals("pujar un"))) {
+                System.out.println("primer pis");
+        }   else if (pis.equals("planta baixa") && (onVas.equals("pujar dos"))) {
+                System.out.println("segon pis");
+        }   else if (pis.equals("primer pis") && (onVas.equals("baixar un"))) {
+                System.out.println("planta baixa");
+        }   else if (pis.equals("primer pis") && (onVas.equals("pujar un"))) {
+                System.out.println("segon pis");
+        }   else if (pis.equals("primer pis") && (onVas.equals("pujar dos"))) {
+                System.out.println("error");
+        }   else if (pis.equals("segon pis") && (onVas.equals("pujar dos"))) {
+                System.out.println("error");
+        }   else if (pis.equals("segon pis") && (onVas.equals("pujar un"))) {
+                System.out.println("error");
+        }   else if (pis.equals("segon pis") && (onVas.equals("baixar un"))) {
+                System.out.println("primer pis");
+        }   else if (pis.equals("segon pis") && (onVas.equals("baixar dos"))) {
+                System.out.println("planta baixa");
         }
     }
 }
