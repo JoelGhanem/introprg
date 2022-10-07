@@ -29,7 +29,7 @@ public class Ascensor {
                 System.out.println("error");
         }   else if (pis.equals("primer pis") && (onVas.equals("baixar dos"))) {
                 System.out.println("error");
-        }   else if (pis.equals(Entrada.readLine())) {
+        }   else if (!"pis".equals("planta baixa")) {
             System.out.println("error");
         }
     }
