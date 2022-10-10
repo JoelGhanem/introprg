@@ -12,7 +12,7 @@ public class TresEnOrdre {
          b = a;
          b = temp;
          } 
-         System.out.println(a + b + c);
+         System.out.println(a + ", " + b +" i " + c);
     }
 }
 
