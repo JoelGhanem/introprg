@@ -13,7 +13,7 @@ public class TresEnOrdre {
             b = temp;
         }
         if (c < b) {
-            int temp = b;
+            int temp = c;
             c = b;
             b = temp;
         }
