@@ -9,12 +9,12 @@ public class TresEnOrdre {
         int c = Integer.parseInt(Entrada.readLine());
         if (b < a) {
             int temp = a;
-            a  = b;
+            a = b;
             b = temp;
         }
         if (c < b) {
             int temp = b;
-            a = b;
+            c = b;
             b = temp;
         }
         if (b < a) {
