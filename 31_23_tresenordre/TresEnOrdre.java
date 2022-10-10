@@ -20,7 +20,7 @@ public class TresEnOrdre {
         if (b < a) {
             int temp = a;
             a = b;
-            a = temp;
+            b = temp;
         }
          System.out.println(a + ", " + b +" i " + c);
     }
