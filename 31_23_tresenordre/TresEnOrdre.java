@@ -9,17 +9,17 @@ public class TresEnOrdre {
         int c = Integer.parseInt(Entrada.readLine());
         if (b < a) {
             int temp = a;
-            b = a;
+            a  = b;
             b = temp;
         }
         if (c < a) {
             int temp = a;
-            c = a;
+            a = c;
             c = temp;
         }
         if (b < a) {
             int temp = a;
-            b = a;
+            a = b;
             a = temp;
         }
          System.out.println(a + ", " + b +" i " + c);
