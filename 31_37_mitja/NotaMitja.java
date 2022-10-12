@@ -3,7 +3,7 @@ public class NotaMitja {
     public static void main(String[] args) {
         int valor = 0;
         int suma = 0;
-        int numDeNotes = 0;
+        int numDeNotes = 1;
         System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
         while (valor >= 0 && valor <= 100) {
