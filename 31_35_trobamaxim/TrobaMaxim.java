@@ -9,8 +9,9 @@ public class TrobaMaxim {
         valor = Integer.parseInt(Entrada.readLine());
         if (valorMax < valor) {
             valorMax = valor;
-    }
+    
         System.out.println("El màxim és " + valorMax);
-    }
+        }
+        }
     }
 }
