@@ -10,7 +10,6 @@ public class NotaMitja {
          }   
         int suma = 0;
         int numDeNotes = 1;
-            valor = Integer.parseInt(Entrada.readLine());
         while (valor >= 0 && valor <= 100) {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
