@@ -6,13 +6,13 @@ public class Lloro {
         String paraulaNoBuida = Entrada.readLine();
         while ((paraula.isEmpty() == false)  && (paraula.isBlank() == false))  {
             paraula = Entrada.readLine();
-            paraula.equals(paraulaNoBuida);{
-                System.out.println("El lloro repeteix: " + paraulaNoBuida);
-                    System.out.println("El lloro espera paraula:");
-                    if (paraula.isEmpty() != false) {
+            paraula.equals(paraulaNoBuida);
+            System.out.println("El lloro repeteix: " + paraulaNoBuida);
+            System.out.println("El lloro espera paraula:");
+                if (paraula.isEmpty() != false) {
                         System.out.println("Adéu");
                     }
-                }
         }
     }
 }
+
