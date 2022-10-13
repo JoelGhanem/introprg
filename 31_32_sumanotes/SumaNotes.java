@@ -6,7 +6,7 @@ public class SumaNotes {
         int sumaNota = 0;
         int nota = Integer.parseInt(Entrada.readLine());
         while ((nota >= 0) && (nota <= 100)) {
-            sumaNota = sumaNota = nota;
+            sumaNota = sumaNota +  nota;
             System.out.println("Introdueix una nota");
             nota = Integer.parseInt(Entrada.readLine());
         }
