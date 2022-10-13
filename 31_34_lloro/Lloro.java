@@ -6,7 +6,6 @@ public class Lloro {
         while (!"".equals(paraula)) {
             paraula = Entrada.readLine();
             System.out.println("El lloro repeteix: " + paraula);
-            System.out.println("El lloro espera paraula:");
         }
         if (paraula.equals("")) {
             System.out.println("Adéu");
