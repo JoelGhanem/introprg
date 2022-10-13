@@ -9,7 +9,6 @@ public class QuantsParells {
                 System.out.println("");
         }
         while (valor >= 0) {
-            System.out.println("XXX entrem al while amb valor = " + valor);
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
             if (valor % 2 == 0) {
@@ -19,7 +18,6 @@ public class QuantsParells {
                     valor = numValorSenar;
                 }
             }
-            System.out.println("XXX sortim del while amb valor = " + valor);
         }
         System.out.println("Nombre de parells introduïts: " +  numValorParell);
     }
