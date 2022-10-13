@@ -4,6 +4,7 @@ public class QuantsParells {
         int valor = 0;
         int valorParell = 0;
         int numValorParell = 0;
+            valor = Integer.parseInt(Entrada.readLine());
         while (valor >= 0) {
         System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
