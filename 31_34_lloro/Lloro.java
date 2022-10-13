@@ -10,7 +10,7 @@ public class Lloro {
             paraula.equals(paraulaNoBuida);{
             System.out.println("El lloro repeteix: " + paraulaNoBuida);
             System.out.println("El lloro espera paraula:");
-        if (paraula.isEmpty()) {
+        if (paraula.isBlank() == false)  {
         System.out.println("Adéu");
         }
         }
