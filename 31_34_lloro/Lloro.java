@@ -6,7 +6,7 @@ public class Lloro {
         String paraulaNoBuida = Entrada.readLine();
         while (!paraula.isEmpty()) {
             paraula = Entrada.readLine();
-        if (!paraula.isEmpty()) {
+        if (paraula.isEmpty() && (paraula.isBlank() == false))  {
             paraula.equals(paraulaNoBuida);{
             System.out.println("El lloro repeteix: " + paraulaNoBuida);
             System.out.println("El lloro espera paraula:");
