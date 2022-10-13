@@ -7,9 +7,9 @@ public class Lloro {
             paraula = Entrada.readLine();
             System.out.println("El lloro repeteix: " + paraula);
             System.out.println("El lloro espera paraula:");
-        }
         if (paraula.isEmpty()) {
-            System.out.println("Adéu");
+        System.out.println("Adéu");
+        }
         }
     }
 }
