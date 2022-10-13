@@ -3,7 +3,7 @@ public class QuantsParells {
     public static void main(String[] args) {
         int valor = 0;
         int valorParell = 0;
-        int numValorParell = 0;
+        int numValorParell = 1;
         int numValorSenar = 0;
         System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
