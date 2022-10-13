@@ -4,17 +4,15 @@ public class Lloro {
         System.out.println("El lloro espera paraula:");
         String paraula = "0"; 
         String paraulaNoBuida = Entrada.readLine();
-        while (!paraula.isEmpty()) {
+        while ((paraula.isEmpty() == false)  && (paraula.isBlank() == false))  {
             paraula = Entrada.readLine();
-        if (paraula.isEmpty() && (paraula.isBlank() == false))  {
             paraula.equals(paraulaNoBuida);{
-            System.out.println("El lloro repeteix: " + paraulaNoBuida);
-            System.out.println("El lloro espera paraula:");
-        if (paraula.isBlank() == false)  {
-        System.out.println("Adéu");
-        }
-        }
-        }
+                System.out.println("El lloro repeteix: " + paraulaNoBuida);
+                    System.out.println("El lloro espera paraula:");
+                    if (paraula.isEmpty() != false) {
+                        System.out.println("Adéu");
+                    }
+                }
         }
     }
 }
