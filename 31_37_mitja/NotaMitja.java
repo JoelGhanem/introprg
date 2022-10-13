@@ -6,7 +6,7 @@ public class NotaMitja {
         valor = Integer.parseInt(Entrada.readLine());
         if ((valor < 0) && (valor > 100)) {
              System.out.println("Cap nota vàlida introduïda");
-         }   
+        }   
         int suma = 0;
         int numDeNotes = 0;
         while (valor >= 0 && valor <= 100) {
