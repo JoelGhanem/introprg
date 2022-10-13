@@ -35,6 +35,9 @@ public class SumaPositius {
                 suma = suma + valor;
 
             }
+        System.out.println("Introdueix el segon valor");
+ 
+
 
         }
 
