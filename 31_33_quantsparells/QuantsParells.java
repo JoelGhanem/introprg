@@ -5,6 +5,8 @@ public class QuantsParells {
         int valorParell = 0;
         int numValorParell = 0;
         int numValorSenar = 0;
+        if (valor < 0) {
+                System.out.println("");
         while (valor >= 0) {
         System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
@@ -13,8 +15,6 @@ public class QuantsParells {
             numValorParell = numValorParell + 1;
         if (valor % 2 != 0) {
             valor = numValorSenar;
-        if (valor < 0) {
-                System.out.println("");
         }
         }
         }
