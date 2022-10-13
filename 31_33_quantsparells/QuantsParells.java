@@ -12,9 +12,6 @@ public class QuantsParells {
         if (valor % 2 == 0) {
             valor = valorParell;
             numValorParell = numValorParell + 1;
-        if (valor % 2 == 0) {
-            valor = valorSenar;
-        }
         }
         }
         System.out.println("Nombre de parells introduïts: " +  numValorParell);
