@@ -17,9 +17,6 @@ public class QuantsParells {
         }
         }
         }
-        if (valor < 0) {
-        System.out.println("Nombre de parells introduïts: " +  numValorParell);
-        }
         System.out.println("Nombre de parells introduïts: " +  numValorParell);
     }
 }
