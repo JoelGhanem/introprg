@@ -1,0 +1,138 @@
+_mainclass: TrobaMesProxim
+_version: '2223'
+'01':
+  stdin:
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Àncora no vàlida
+'02':
+  stdin:
+  - '20'
+  - '12'
+  - '10'
+  - '24'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - El valor introduït més pròxim a 20 és 24
+'03':
+  stdin:
+  - '11'
+  - '12'
+  - '10'
+  - '24'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - El valor introduït més pròxim a 11 és 10
+'04':
+  stdin:
+  - '10'
+  - '32'
+  - '10'
+  - '24'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - El valor introduït més pròxim a 10 és 10
+'05':
+  stdin:
+  - '1000'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - No s'ha introduït cap valor positiu
+'06':
+  stdin:
+  - '10'
+  - '1'
+  - '19'
+  - '2'
+  - '18'
+  - '3'
+  - '17'
+  - '4'
+  - '16'
+  - '5'
+  - '15'
+  - '14'
+  - '13'
+  - '6'
+  - '7'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - El valor introduït més pròxim a 10 és 7
+'07':
+  stdin:
+  - '10'
+  - '1'
+  - '19'
+  - '2'
+  - '18'
+  - '3'
+  - '17'
+  - '4'
+  - '16'
+  - '5'
+  - '15'
+  - '14'
+  - '13'
+  - '6'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - Introdueix un valor
+  - El valor introduït més pròxim a 10 és 13
+'08':
+  stdin:
+  - '10'
+  - '100'
+  - '-1'
+  stdout:
+  - Introdueix l'àncora
+  - Introdueix un valor
+  - Introdueix un valor
+  - El valor introduït més pròxim a 10 és 100
