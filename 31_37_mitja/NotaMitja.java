@@ -2,9 +2,10 @@
 public class NotaMitja {
     public static void main(String[] args) {
         int valor = 0;
+        int valor1 = 0;
         System.out.println("Introdueix un valor");
-        valor = Integer.parseInt(Entrada.readLine());
-        if (valor < 0 || valor > 100) {
+        valor1 = Integer.parseInt(Entrada.readLine());
+        if (valor1 < 0 || valor1 > 100) {
             System.out.println("Cap nota vàlida introduïda");
         }   
         int suma = 0;
