@@ -7,10 +7,11 @@ public class QuantsParells {
         int valorNegatiu = 0;
         System.out.println("Introdueix un valor");
         valor = Integer.parseInt(Entrada.readLine());
+        
         while (valor >= 0) {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
-            if (valor % 2 == 0) {
+            if ((valor % 2 == 0) && (valor >= 0)) {
                 valor = valorParell;
                 numValorParell = numValorParell + 1;
                     }
