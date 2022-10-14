@@ -5,7 +5,7 @@ public class NotaMitja {
         System.out.println("Introdueix un valor");
         valor = Integer.parseInt(Entrada.readLine());
         if (valor < 0 || valor > 100) {
-             System.out.println("Cap nota vàlida introduïda");
+            System.out.println("Cap nota vàlida introduïda");
         }   
         int suma = 0;
         int numDeNotes = 0;
@@ -15,9 +15,7 @@ public class NotaMitja {
             suma = suma + valor;
             numDeNotes = numDeNotes + 1;
         }
-        if (valor >= 0 && valor <= 100) {
-            System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
-        }
+        System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
     }
 }
 
