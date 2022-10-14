@@ -16,6 +16,9 @@ public class QuantsParells {
                 numValorParell = numValorParell + 1;
                 if (valor % 2 != 0) {
                     valor = numValorSenar;
+                    if (valor < 0) {
+                        System.out.println("");
+                    }
                 }
             }
         }
