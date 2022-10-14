@@ -5,9 +5,6 @@ public class Lloro {
         String paraulaLloro = "";
         System.out.println("El lloro espera paraula:");
         paraula = Entrada.readLine();
-        if (paraula.isEmpty() == true) {
-            System.out.print("");
-        }
         while ((paraula.isEmpty() == false)  && (paraula.isBlank() == false))  {
             paraulaLloro = paraula; 
             System.out.println("El lloro repeteix: " + paraula);
