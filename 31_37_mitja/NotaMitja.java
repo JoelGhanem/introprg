@@ -14,7 +14,7 @@ public class NotaMitja {
         while (((valor1 >= 0) == true) && ((valor1 <= 100) == true)) {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
-            if ((valor < 0 != true) && (valor > 100 != true)) {
+            if (((valor < 0) == false) && ((valor > 100) == false)) {
                 suma = suma + valor;
                 numDeNotes = numDeNotes + 1;
             }
