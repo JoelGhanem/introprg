@@ -9,16 +9,20 @@ public class NotaMitja {
         }   
         int suma = 0;
         int numDeNotes = 0;
-        while (valor >= 0 && valor <= 100) {
+        while ((valor >= 0) && (valor <= 100)) {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
-            suma = suma + valor;
-            numDeNotes = numDeNotes + 1;
-            if (valor > 100) {
-                valor = 0;
+            if ((valor < 0 != true) && (valor > 100 != true)) {
+                suma = suma + valor;
+                numDeNotes = numDeNotes + 1;
+            }
         }
-        System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
+        if ((valor < 0 != true) && (valor > 100 != true)) {
+            System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
+        }
+        if (valor > 100) {
+            valor = 0;
+            System.out.println("La mitja de les notes vàlides és " + suma );
         }
     }
 }
-
