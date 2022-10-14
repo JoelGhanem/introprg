@@ -5,6 +5,7 @@ public class QuantsParells {
         int valorParell = 0;
         int numValorParell = 0;
         int numValorSenar = 0;
+        int valorNegatiu = 0;
         if (valor < 0) {
             System.out.println("");
         }
@@ -17,7 +18,7 @@ public class QuantsParells {
                 if (valor % 2 != 0) {
                     valor = numValorSenar;
                     if (valor < 0) {
-                        System.out.println("");
+                        valorNegatiu = valor;
                     }
                 }
             }
