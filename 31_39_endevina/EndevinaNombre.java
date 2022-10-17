@@ -14,7 +14,6 @@ public class EndevinaNombre {
                 System.out.println("Introdueix un valor");
             }
         }
-        while (numero > numeroPensat) {
             System.out.println("És més petit que " + numero);
             if ((numero > 100) == true) {
                 System.out.println("Com a màxim 100");
