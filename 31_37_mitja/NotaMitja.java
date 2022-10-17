@@ -3,7 +3,8 @@ public class NotaMitja {
     public static void main(String[] args) {
         int nota = -1;
         int nota1 = 0;
-        int notaValida;
+        int notaValida = 0;
+        int notaNoValida = 0;
         System.out.println("Introdueix un valor");
         nota1 = Integer.parseInt(Entrada.readLine());
         //Hago valor 1 para que no me de problemas con el final
@@ -18,20 +19,23 @@ public class NotaMitja {
         while (((nota >= 0) == true) && ((nota <= 100) == true)) {
             System.out.println("Introdueix un valor");
             nota = Integer.parseInt(Entrada.readLine());
-            if (((nota < 0) == false) || ((nota > 100) == false)) {
-                suma = suma + nota;
-                numDeNotes = numDeNotes + 1;
-                if (suma > 100) {
-                    suma = 0;
-                }
+            if (((nota >= 0) == true) && ((nota <= 100) == true)) {
+                notaValida = nota;
+
+            }    else if (((nota < 0) ==true) || ((nota > 100) == true)) {
+                notaNoValida = nota;
+
             }
+            suma = suma + notaValida;
+            numDeNotes = numDeNotes + 1;
         }
-        if (((nota >= 0) ==true) && ((nota <= 100) == true)) {
+        if (((notaValida >= 0) == true) && ((notaValida <= 100) == true)) {
             System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
         }
-        if (nota > 100) {
-            nota = 0;
-            System.out.println("La mitja de les notes vàlides és 33");
+        if (((notaNoValida < 0) ==true) || ((notaNoValida > 100) == true)) {
+            System.out.println("La mitja de les notes vàlides és " + suma );
         }
+
     }
 }
+
