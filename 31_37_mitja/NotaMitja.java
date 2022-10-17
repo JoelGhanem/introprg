@@ -9,7 +9,7 @@ public class NotaMitja {
         if (((valor1 < 0) == true) || ((valor1 > 100))) {
             System.out.println("Cap nota vàlida introduïda");
         }   
-        if (((valor1 >= 0) == true) && ((valor1 <= 100))) {
+        if (((valor1 >= 0) == true) && ((valor1 < 100))) {
             valor = valor1;
         }
         int suma = 0;
