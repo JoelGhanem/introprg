@@ -1,7 +1,7 @@
 /*Programa que et diu nla nota mitja*/
 public class NotaMitja {
     public static void main(String[] args) {
-        int valor = -1;
+        int valor = 1;
         int valor1 = 0;
         System.out.println("Introdueix un valor");
         valor1 = Integer.parseInt(Entrada.readLine());
@@ -14,7 +14,7 @@ public class NotaMitja {
         }
         int suma = 0;
         int numDeNotes = 0;
-        while (((valor1 >= 0) == true) && ((valor1 <= 100) == true)) {
+        while (((valor >= 0) == true) && ((valor <= 100) == true)) {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
             if (((valor < 0) == false) || ((valor > 100) == false)) {
