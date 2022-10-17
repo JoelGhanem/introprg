@@ -15,21 +15,20 @@ public class prueba {
             nota  = nota1;
         }
         int suma = 0;
-        int i = 0;
+        int numDeNotes = 0;
         while (((nota >= 0) == true) && ((nota <= 100) == true)) {
             System.out.println("Introdueix un valor");
             nota = Integer.parseInt(Entrada.readLine());
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
                 suma =suma + notaValida;
-               i = i + 1;
+                numDeNotes = numDeNotes + 1;
             }
         }
-        int sumaNotes = suma/i;
+        int notaMedia = suma/numDeNotes;
         if (nota != notaValida) {
             nota = notaNoValida;
         }
-        int notaMedia = sumaNotes;
         System.out.println("La mitja de les notes vàlides és " + notaMedia);
     }
 }
