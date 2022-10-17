@@ -21,16 +21,19 @@ public class NotaMitja {
             nota = Integer.parseInt(Entrada.readLine());
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
-                numDeNotes = numDeNotes + 1;
             }
             if (((nota < 0) ==true) || ((nota > 100) == true)) {
                 notaNoValida = nota;
 
             }
             suma = suma + notaValida;
+            numDeNotes = numDeNotes + 1;
         }
-        if ((notaValida >= 0)) {
+        if ((notaValida == nota)) {
             System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
+        }
+        if ((notaNoValida == nota)) {
+            System.out.println("La mitja de les notes vàlides és " + suma );
         }
     }
 }
