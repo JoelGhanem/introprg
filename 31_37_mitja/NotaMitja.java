@@ -1,7 +1,7 @@
 /*Programa que et diu nla nota mitja*/
 public class NotaMitja {
     public static void main(String[] args) {
-        int nota = -1;
+        int nota = 0;
         int nota1 = 0;
         int notaValida = 0;
         int notaNoValida = 0;
@@ -21,21 +21,19 @@ public class NotaMitja {
             nota = Integer.parseInt(Entrada.readLine());
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
-
-            }    else if (((nota < 0) ==true) || ((nota > 100) == true)) {
+            }
+            if (((nota < 0) ==true) || ((nota > 100) == true)) {
                 notaNoValida = nota;
 
             }
             suma = suma + notaValida;
             numDeNotes = numDeNotes + 1;
         }
-        if (((notaValida >= 0) == true) && ((notaValida <= 100) == true)) {
+        if ((notaValida == nota)) {
             System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
         }
-        if (((notaNoValida < 0) ==true) || ((notaNoValida > 100) == true)) {
+        if ((notaNoValida == nota)) {
             System.out.println("La mitja de les notes vàlides és " + suma );
         }
-
     }
 }
-
