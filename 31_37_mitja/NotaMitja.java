@@ -3,6 +3,7 @@ public class NotaMitja {
     public static void main(String[] args) {
         int valor = -1;
         int valor1 = 0;
+        int valorRevisado = valor - valor;
         System.out.println("Introdueix un valor");
         valor1 = Integer.parseInt(Entrada.readLine());
         //Hago valor 1 para que no me de problemas con el final
@@ -20,6 +21,9 @@ public class NotaMitja {
             if (((valor < 0) == false) || ((valor > 100) == false)) {
                 suma = suma + valor;
                 numDeNotes = numDeNotes + 1;
+                if (suma > 100) {
+                    suma = 0;
+                }
             }
         }
         if (((valor >= 0) ==true) && ((valor <= 100) == true)) {
