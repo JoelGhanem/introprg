@@ -21,9 +21,9 @@ public class NotaMitja {
             nota = Integer.parseInt(Entrada.readLine());
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
+            }
                 suma = suma + notaValida;
                 numDeNotes = numDeNotes + 1;
-            }
             if (((nota < 0) ==true) || ((nota > 100) == true)) {
                 notaNoValida = nota;
 
