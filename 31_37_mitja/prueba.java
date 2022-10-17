@@ -5,11 +5,10 @@ public class prueba {
         int numDeNotes = 0;
         int nota = 0;
         int notaMedia = 0;
-
         System.out.println("Introdueix un valor");
         nota = Integer.parseInt(Entrada.readLine());
         if ((nota >= 0) && (nota <= 100)) {
-            while (((nota >= 0) == true) && ((nota <= 100) == true)) {
+            while ((nota >= 0) && (nota <= 100)) {
                 suma = suma + nota;
                 numDeNotes = numDeNotes + 1;
                 System.out.println("Introdueix un valor");
