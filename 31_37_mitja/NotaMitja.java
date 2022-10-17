@@ -1,36 +1,36 @@
 /*Programa que et diu nla nota mitja*/
 public class NotaMitja {
     public static void main(String[] args) {
-        int valor = -1;
-        int valor1 = 0;
-        int valorRevisado = valor - valor;
+        int nota = -1;
+        int nota1 = 0;
+        int notaValida;
         System.out.println("Introdueix un valor");
-        valor1 = Integer.parseInt(Entrada.readLine());
+        nota1 = Integer.parseInt(Entrada.readLine());
         //Hago valor 1 para que no me de problemas con el final
-        if (((valor1 < 0) == true) || ((valor1 > 100))) {
+        if (((nota1 < 0) == true) || ((nota1 > 100))) {
             System.out.println("Cap nota vàlida introduïda");
         }   
-        if (((valor1 >= 0) == true) && ((valor1 < 100))) {
-            valor = valor1;
+        if (((nota1 >= 0) == true) && ((nota1 < 100))) {
+            nota  = nota1;
         }
         int suma = 0;
         int numDeNotes = 0;
-        while (((valor >= 0) == true) && ((valor <= 100) == true)) {
+        while (((nota >= 0) == true) && ((nota <= 100) == true)) {
             System.out.println("Introdueix un valor");
-            valor = Integer.parseInt(Entrada.readLine());
-            if (((valor < 0) == false) || ((valor > 100) == false)) {
-                suma = suma + valor;
+            nota = Integer.parseInt(Entrada.readLine());
+            if (((nota < 0) == false) || ((nota > 100) == false)) {
+                suma = suma + nota;
                 numDeNotes = numDeNotes + 1;
                 if (suma > 100) {
                     suma = 0;
                 }
             }
         }
-        if (((valor >= 0) ==true) && ((valor <= 100) == true)) {
+        if (((nota >= 0) ==true) && ((nota <= 100) == true)) {
             System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
         }
-        if (valor > 100) {
-            valor = 0;
+        if (nota > 100) {
+            nota = 0;
             System.out.println("La mitja de les notes vàlides és " + suma );
         }
     }
