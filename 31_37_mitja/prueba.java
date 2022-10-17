@@ -1,10 +1,10 @@
 /*Programa que et diu nla nota mitja*/
 public class prueba {
     public static void main(String[] args) {
-        int nota = 0;
-        int notaValida = 0;
         int suma = 0;
         int numDeNotes = 0;
+        int nota = 0;
+        int notaValida= 0;
         System.out.println("Introdueix un valor");
         nota = Integer.parseInt(Entrada.readLine());
         if ((nota >= 0) && (nota <= 100)) {
