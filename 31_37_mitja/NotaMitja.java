@@ -23,7 +23,7 @@ public class NotaMitja {
                 notaValida = nota;
             }
                 suma = suma + notaValida;
-                numDeNotes = numDeNotes + 1;
+                numDeNotes = numDeNotes++;
             if (((nota < 0) ==true) || ((nota > 100) == true)) {
                 notaNoValida = nota;
 
