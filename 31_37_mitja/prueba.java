@@ -14,7 +14,7 @@ public class prueba {
                 System.out.println("Introdueix un valor");
                 nota = Integer.parseInt(Entrada.readLine());
             }
-            int notaMedia = suma/numDeNotes;
+            int notaMedia = suma / numDeNotes;
             System.out.println("La mitja de les notes vàlides és " + notaMedia);
         } else {
             System.out.println("Cap nota vàlida introduïda");
