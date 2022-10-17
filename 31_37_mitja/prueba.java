@@ -22,15 +22,12 @@ public class prueba {
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
                 suma =suma + notaValida;
-                numDeNotes++;
+                numDeNotes = numDeNotes + 1;
             }
         }
-        int sumaNotes = suma + numDeNotes;
+        int sumaNotes = suma/numDeNotes;
         if (nota != notaValida) {
             nota = notaNoValida;
-        }
-        if ((notaNoValida == nota)) {
-            System.out.println("La mitja de les notes vàlides és " + suma);
         }
         int notaMedia = sumaNotes;
         System.out.println("La mitja de les notes vàlides és " + notaMedia);
