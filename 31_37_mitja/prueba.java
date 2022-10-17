@@ -5,6 +5,8 @@ public class prueba {
         int notaValida = 0;
         int suma = 0;
         int numDeNotes = 0;
+        System.out.println("Introdueix un valor");
+        nota = Integer.parseInt(Entrada.readLine());
         if ((nota >= 0) && (nota <= 100)) {
             while (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 System.out.println("Introdueix un valor");
