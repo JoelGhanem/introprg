@@ -18,7 +18,6 @@ public class NotaMitja {
             System.out.println("Introdueix un valor");
             valor = Integer.parseInt(Entrada.readLine());
             if (((valor < 0) == false) || ((valor > 100) == false)) {
-                valor = 0;
                 suma = suma + valor;
                 numDeNotes++;
             }
