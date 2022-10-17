@@ -7,8 +7,8 @@ public class prueba {
         int notaMedia = 0;
         System.out.println("Introdueix un valor");
         nota = Integer.parseInt(Entrada.readLine());
-        if ((nota >= 0) && (nota <= 100)) {
-            while ((nota >= 0) && (nota <= 100)) {
+        if (nota >= 0 && nota <= 100) {
+            while (nota >= 0 && nota <= 100) {
                 suma = suma + nota;
                 numDeNotes = numDeNotes + 1;
                 System.out.println("Introdueix un valor");
