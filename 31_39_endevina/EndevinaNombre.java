@@ -6,7 +6,7 @@ public class EndevinaNombre {
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
         System.out.println("Introdueix un valor");
         numero = Integer.parseInt(Entrada.readLine());
-        while (numero != numeroPensat) {
+        while ((numero != numeroPensat) == true) {
             if (numero > numeroPensat) {
                 System.out.println("És més petit que " + numero);
             }
