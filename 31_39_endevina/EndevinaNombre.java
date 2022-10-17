@@ -23,7 +23,9 @@ public class EndevinaNombre {
                 System.out.println("Com a màxim 100");
             }
             System.out.println("Introdueix un valor");
+            if (numero == numeroPensat) {
+                System.out.println("Has encertat!");
+            }
         }
-
     }
 }
