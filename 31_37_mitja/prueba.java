@@ -9,10 +9,10 @@ public class prueba {
         nota = Integer.parseInt(Entrada.readLine());
         if ((nota >= 0) && (nota <= 100)) {
             while (((nota >= 0) == true) && ((nota <= 100) == true)) {
-                System.out.println("Introdueix un valor");
-                nota = Integer.parseInt(Entrada.readLine());
                 suma = suma + nota;
                 numDeNotes = numDeNotes + 1;
+                System.out.println("Introdueix un valor");
+                nota = Integer.parseInt(Entrada.readLine());
             }
             int notaMedia = suma/numDeNotes;
             System.out.println("La mitja de les notes vàlides és " + notaMedia);
