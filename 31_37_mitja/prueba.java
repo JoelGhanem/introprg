@@ -1,7 +1,7 @@
 /*Programa que et diu nla nota mitja*/
 public class prueba {
     public static void main(String[] args) {
-        int nota = -1;
+        int nota = 0;
         int notaValida = 0;
         int suma = 0;
         int numDeNotes = 0;
@@ -16,8 +16,7 @@ public class prueba {
             }
             int notaMedia = suma/numDeNotes;
             System.out.println("La mitja de les notes vàlides és " + notaMedia);
-        }
-        else {
+        } else {
             System.out.println("Cap nota vàlida introduïda");
         }
     }
