@@ -20,10 +20,10 @@ public class NotaMitja {
             if (((valor < 0) == false) || ((valor > 100) == false)) {
                 valor = 0;
                 suma = suma + valor;
-                numDeNotes = numDeNotes + 1;
+                numDeNotes++;
             }
         }
-        if (((valor < 0) == false) && ((valor > 100) == false)) {
+        if (((valor < 0) == false) || ((valor > 100) == false)) {
             System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
         }
         if (valor > 100) {
