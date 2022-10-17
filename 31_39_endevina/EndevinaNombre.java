@@ -20,10 +20,10 @@ public class EndevinaNombre {
                 System.out.println("Com a màxim 100");
             }
             System.out.println("Introdueix un valor");
+        }
+        if (numeroPensat == numero) {
+            System.out.println("Has encertat!");
 
-            if (numeroPensat == numero) {
-                System.out.println("Has encertat!");
-            }
         }
     }
 }
