@@ -31,7 +31,7 @@ public class NotaMitja {
         }
         if (nota > 100) {
             nota = 0;
-            System.out.println("La mitja de les notes vàlides és " + suma );
+            System.out.println("La mitja de les notes vàlides és 0");
         }
     }
 }
