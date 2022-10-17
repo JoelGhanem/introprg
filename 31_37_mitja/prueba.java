@@ -15,17 +15,17 @@ public class prueba {
             nota  = nota1;
         }
         int suma = 0;
-        int numDeNotes = 0;
+        int i = 0;
         while (((nota >= 0) == true) && ((nota <= 100) == true)) {
             System.out.println("Introdueix un valor");
             nota = Integer.parseInt(Entrada.readLine());
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
                 suma =suma + notaValida;
-                numDeNotes = numDeNotes + 1;
+               i = i + 1;
             }
         }
-        int sumaNotes = suma/numDeNotes;
+        int sumaNotes = suma/i;
         if (nota != notaValida) {
             nota = notaNoValida;
         }
