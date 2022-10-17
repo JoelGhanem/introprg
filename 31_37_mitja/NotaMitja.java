@@ -5,7 +5,6 @@ public class NotaMitja {
         int nota1 = 0;
         int notaValida = 0;
         int notaNoValida = 0;
-        int notaMedia = suma / numDeNotes;
         System.out.println("Introdueix un valor");
         nota1 = Integer.parseInt(Entrada.readLine());
         //Hago valor 1 para que no me de problemas con el final
@@ -30,8 +29,9 @@ public class NotaMitja {
 
             }
         }
-            System.out.println("La mitja de les notes vàlides és " + notaMedia);
-        
+        int notaMedia = suma / numDeNotes;
+        System.out.println("La mitja de les notes vàlides és " + notaMedia);
+
         if ((notaNoValida == nota)) {
             System.out.println("La mitja de les notes vàlides és " + suma );
         }
