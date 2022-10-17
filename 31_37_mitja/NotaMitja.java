@@ -23,7 +23,7 @@ public class NotaMitja {
                 numDeNotes = numDeNotes + 1;
             }
         }
-        if (((valor < 0) == false) || ((valor > 100) == false)) {
+        if (((valor >= 0) ==true) && ((valor <= 100) == true)) {
             System.out.println("La mitja de les notes vàlides és " + suma /numDeNotes );
         }
         if (valor > 100) {
