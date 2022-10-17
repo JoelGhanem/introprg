@@ -8,10 +8,10 @@ public class EndevinaNombre {
         numero = Integer.parseInt(Entrada.readLine());
         while (numero != numeroPensat) {
             if (numero > numeroPensat) {
-            System.out.println("És més petit que " + numero);
+                System.out.println("És més petit que " + numero);
             }
             if (numero < numeroPensat) {
-            System.out.println("És més gran que " + numero);
+                System.out.println("És més gran que " + numero);
             }
             if ((numero <= 0) == true) {
                 System.out.println("Com a mínim 1");
@@ -20,9 +20,9 @@ public class EndevinaNombre {
                 System.out.println("Com a màxim 100");
             }
             System.out.println("Introdueix un valor");
-        }
-        if (numeroPensat == numero) {
-            System.out.println("Has encertat!");
+
+            if (numeroPensat == numero) {
+                System.out.println("Has encertat!");
+            }
         }
     }
-}
