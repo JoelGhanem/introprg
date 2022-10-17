@@ -30,9 +30,9 @@ public class prueba {
             nota = notaNoValida;
         }
         if ((notaNoValida == nota)) {
-            System.out.println("La mitja de les notes vàlides és " + sumaNotes);
+            System.out.println("La mitja de les notes vàlides és " + suma);
         }
-        int notaMedia = suma / numDeNotes;
+        int notaMedia = sumaNotes;
         System.out.println("La mitja de les notes vàlides és " + notaMedia);
     }
 }
