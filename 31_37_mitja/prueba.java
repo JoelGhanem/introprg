@@ -21,7 +21,7 @@ public class prueba {
             nota = Integer.parseInt(Entrada.readLine());
             if (((nota >= 0) == true) && ((nota <= 100) == true)) {
                 notaValida = nota;
-                suma = notaValida + suma;
+                suma =suma + notaValida;
                 numDeNotes++;
             }
         }
