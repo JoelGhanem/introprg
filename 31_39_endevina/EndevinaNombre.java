@@ -18,7 +18,7 @@ public class EndevinaNombre {
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
                 }
-                if ((numero <= 0) == true) {
+                if ((numero < 0) == true) {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
