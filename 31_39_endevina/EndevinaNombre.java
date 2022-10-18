@@ -30,7 +30,7 @@ public class EndevinaNombre {
                 }
             }
         }
-        else if (numero == numeroPensat) {
+        if (numero == numeroPensat) {
             System.out.println("Has encertat!");
         }
 
