@@ -30,8 +30,6 @@ public class EndevinaNombre {
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
                 }
-                System.out.println("Introdueix un valor");
-                numero = Integer.parseInt(Entrada.readLine());
             }
         }
         if (numero == numeroPensat) {
