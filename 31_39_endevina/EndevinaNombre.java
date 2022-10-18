@@ -13,6 +13,11 @@ public class EndevinaNombre {
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
                 }
+                else if (numero > 100) {
+                    System.out.println("Com a màxim 100");
+                    System.out.println("Introdueix un valor");
+                    numero = Integer.parseInt(Entrada.readLine());
+                }
                 else if (numero > numeroPensat) {
                     System.out.println("És més petit que " + numero);
                     System.out.println("Introdueix un valor");
@@ -20,11 +25,6 @@ public class EndevinaNombre {
                 }
                 else if (numero < numeroPensat) {
                     System.out.println("És més gran que " + numero);
-                    System.out.println("Introdueix un valor");
-                    numero = Integer.parseInt(Entrada.readLine());
-                }
-                else if (numero > 100) {
-                    System.out.println("Com a màxim 100");
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
                 }
