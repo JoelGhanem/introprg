@@ -16,7 +16,7 @@ public class TrobaMesProxim {
             System.out.println("Àncora no vàlida");
         }
         if (valor <= 0) {
-            System.out.println("Àncora no vàlida");
+            System.out.println("No s'ha introduït cap valor positiu");
         }
     }
 }
