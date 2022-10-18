@@ -8,18 +8,18 @@ public class EndevinaNombre {
         numero = Integer.parseInt(Entrada.readLine());
         if (numero != numeroPensat) {
             while (numero != numeroPensat) {
-                if (numero > numeroPensat) {
+                if (numero == 0) {
+                    System.out.println("Com a mínim 1");
+                    System.out.println("Introdueix un valor");
+                    numero = Integer.parseInt(Entrada.readLine());
+                }
+                else if (numero > numeroPensat) {
                     System.out.println("És més petit que " + numero);
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
                 }
                 else if (numero < numeroPensat) {
                     System.out.println("És més gran que " + numero);
-                    System.out.println("Introdueix un valor");
-                    numero = Integer.parseInt(Entrada.readLine());
-                }
-                else  if (numero == 0) {
-                    System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
                     numero = Integer.parseInt(Entrada.readLine());
                 }
