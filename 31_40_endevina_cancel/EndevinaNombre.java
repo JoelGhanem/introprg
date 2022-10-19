@@ -1,8 +1,8 @@
 // Programa que et fa jugar amb ell per que endevis un nombre
 public class EndevinaNombre {
     public static void main(String[] args) {
-        int numero = 1;
-        int numeroPensat = 42;
+        Integer numero = 1;
+        Integer numeroPensat = 42;
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el q    ue jo he pensat");
         System.out.println("Introdueix un valor");
         numero = Integer.parseInt(Entrada.readLine());
@@ -29,7 +29,7 @@ public class EndevinaNombre {
                     numero = Integer.parseInt(Entrada.readLine());
                 }
             }
-            if (numero = "") {
+            if (numero == null) {
                 System.out.println("Cancel·lat!");
             }
         }
