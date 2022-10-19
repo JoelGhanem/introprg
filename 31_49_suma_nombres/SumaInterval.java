@@ -20,6 +20,9 @@ public class SumaInterval {
             }
             System.out.println(suma);
         }
+        if (inici == final1) {
+            System.out.println(inici);
+        }
     }
 }
 
