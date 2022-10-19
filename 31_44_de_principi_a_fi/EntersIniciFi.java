@@ -11,8 +11,8 @@ public class EntersIniciFi {
         System.out.println("Salt?");
         salt = Integer.parseInt(Entrada.readLine());
         while (valorInicial > valorFinal) {
-            valorInicial = valorInicial + salt;
             System.out.println(valorInicial);
+            valorInicial = valorInicial + salt;
         }
     }
 }
