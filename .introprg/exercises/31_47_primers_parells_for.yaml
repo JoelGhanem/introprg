@@ -1,0 +1,9 @@
+'01':
+  stdout:
+  - '2'
+  - '4'
+  - '6'
+  - '8'
+  - '10'
+_mainclass: PrimersParells
+_version: '2223'

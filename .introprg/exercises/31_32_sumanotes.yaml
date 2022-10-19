@@ -1,3 +1,5 @@
+_mainclass: SumaNotes
+_version: '2223'
 '01':
   stdin:
   - '-1'
@@ -34,5 +36,39 @@
   - Introdueix una nota
   - Introdueix una nota
   - La suma de les notes vàlides és 160
-_mainclass: SumaNotes
-_version: '2223'
+'05':
+  stdin:
+  - '1'
+  - '10'
+  - '1'
+  - '21'
+  - '1'
+  - '32'
+  - '1'
+  - '43'
+  - '1'
+  - '54'
+  - '1'
+  - '0'
+  - '1'
+  - '1'
+  - '1'
+  - '-123'
+  stdout:
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - Introdueix una nota
+  - La suma de les notes vàlides és 169

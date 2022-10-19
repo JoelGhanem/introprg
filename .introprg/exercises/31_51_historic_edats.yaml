@@ -1,0 +1,68 @@
+_mainclass: HistoricEdats
+_version: '2223'
+'01':
+  stdin:
+  - Eleftèria
+  - '5'
+  - '2012'
+  stdout:
+  - El vostre nom?
+  - La vostra edat?
+  - L'any actual?
+  - El 2007 vau néixer
+  - El 2008 teníeu 1 any
+  - El 2009 teníeu 2 anys
+  - El 2010 teníeu 3 anys
+  - El 2011 teníeu 4 anys
+  - Adéu Eleftèria
+'02':
+  stdin:
+  - Eleftèria
+  - '1'
+  - '2012'
+  stdout:
+  - El vostre nom?
+  - La vostra edat?
+  - L'any actual?
+  - El 2011 vau néixer
+  - Adéu Eleftèria
+'03':
+  stdin:
+  - Eleftèria
+  - '0'
+  - '2012'
+  stdout:
+  - El vostre nom?
+  - La vostra edat?
+  - L'any actual?
+  - Adéu Eleftèria
+'04':
+  stdin:
+  - Eleftèria
+  - '-3'
+  - '2012'
+  stdout:
+  - El vostre nom?
+  - La vostra edat?
+  - L'any actual?
+  - Entrada incorrecta
+'05':
+  stdin:
+  - ''
+  - '5'
+  - '2012'
+  stdout:
+  - El vostre nom?
+  - La vostra edat?
+  - L'any actual?
+  - Entrada incorrecta
+'06':
+  stdin:
+  - Eleftèria
+  - '5'
+  - '1970'
+  stdout:
+  - El vostre nom?
+  - La vostra edat?
+  - L'any actual?
+  - Entrada incorrecta
