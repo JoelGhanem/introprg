@@ -10,7 +10,7 @@ public class EntersIniciFi {
         valorFinal = Integer.parseInt(Entrada.readLine());
         System.out.println("Salt?");
         salt = Integer.parseInt(Entrada.readLine());
-        while (valorInicial > valorFinal) {
+        while (valorInicial < valorFinal) {
             System.out.println(valorInicial);
             valorInicial = valorInicial + salt;
         }
