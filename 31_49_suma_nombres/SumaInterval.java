@@ -8,10 +8,19 @@ public class SumaInterval {
         inici = Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
         final1 = Integer.parseInt(Entrada.readLine());
-        for (int i = inici; i <= final1; i = i + 1) {
-            suma = suma + i;
-        }
+        if (inici < final1) {
+            for (int i = inici; i <= final1; i = i + 1) {
+                suma = suma + i;
+            }
             System.out.println(suma);
+        }
+        if (inici > final1) {
+            for (int i = final1; i <= inici; i = i + 1) {
+                suma = suma + i;
+            }
+            System.out.println(suma);
+        }
     }
 }
+
 
