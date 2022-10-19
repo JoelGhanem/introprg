@@ -3,12 +3,14 @@ public class SumaInterval {
     public static void main (String[] args) {
         int inici;
         int final1;
+        int suma;
         System.out.println("inici?");
         inici = Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
         final1 = Integer.parseInt(Entrada.readLine());
-        for (int i = inici; i <= final1; i = i + (i + 1)) {
-            System.out.println(i);
+        for (int i = inici; i <= final1; i = i + 1 ) {
+            suma = i;
+            System.out.println(suma);
         }
     }
 }
