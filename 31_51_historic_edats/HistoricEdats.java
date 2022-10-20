@@ -15,11 +15,11 @@ public class HistoricEdats {
         System.out.println("El " + anyNaix + " vau néixer");
         int n = 1;
         anyNaix = anyNaix + 1;
-        System.out.println("El " + anyNaix + " tenieu 1 any");
+        System.out.println("El " + anyNaix + " teníeu 1 any");
         anyNaix = anyNaix + 1;
         for (i = anyNaix; i < any; i = 1 + i) {
             n = n + 1;
-            System.out.println("El " + i + " tenieu " + n + " anys");
+            System.out.println("El " + i + " teníeu " + n + " anys");
 
 
         }
