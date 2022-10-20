@@ -3,7 +3,7 @@ public class TrobaMesProxim {
     public static void main(String[] args) {
         int ancora = 0;
         int valor1 = 0;
-        int valor2 = 0;
+        int valor2 = 3;
         int dif1 = 0;
         int dif2 = 0;
         int difPetita = 0;
