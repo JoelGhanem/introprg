@@ -13,7 +13,7 @@ public class MostraInterval {
             }
         }
         if (inici > final1) {
-            for (int i = final1; i <= inici; i--) {
+            for (int i = final1; i >= inici; i--) {
                 System.out.println(i);
             }
         }
