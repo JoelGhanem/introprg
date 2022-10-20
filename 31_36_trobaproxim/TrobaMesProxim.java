@@ -1,6 +1,6 @@
 //Programa que t arruina la vida
 public class TrobaMesProxim {
-    public static void maion(String[] args) {
+    public static void main(String[] args) {
         int ancora;
         int valor1;
         int valor2;
