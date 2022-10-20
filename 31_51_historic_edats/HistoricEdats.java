@@ -12,25 +12,30 @@ public class HistoricEdats {
         System.out.println("L'any actual?");
         any = Integer.parseInt(Entrada.readLine());
         int anyNaix = (any - edat);
-        if (edat >= 0) {
-        if (edat != 0) {
-        System.out.println("El " + anyNaix + " vau néixer");
-        int n = 1;
-        anyNaix = anyNaix + 1;
-            if (edat != 1) {
-                System.out.println("El " + anyNaix + " teníeu 1 any");
+        if (nom.isBlank()== false) {
+            if (edat >= 0) {
+                if (edat != 0) {
+                    System.out.println("El " + anyNaix + " vau néixer");
+                    int n = 1;
+                    anyNaix = anyNaix + 1;
+                    if (edat != 1) {
+                        System.out.println("El " + anyNaix + " teníeu 1 any");
+                    }
+                    anyNaix = anyNaix + 1;
+                    for (i = anyNaix; i < any; ++i) {
+                        n = n + 1;
+                        System.out.println("El " + i + " teníeu " + n + " anys");
+                    }
+                }
+                System.out.println("Adéu " + nom);
             }
-            anyNaix = anyNaix + 1;
-            for (i = anyNaix; i < any; ++i) {
-                n = n + 1;
-                System.out.println("El " + i + " teníeu " + n + " anys");
+            else if (edat <=0) {
+                System.out.println("Entrada incorrecta");
             }
         }
-        System.out.println("Adéu " + nom);
-    }
-    else if (edat <=0) {
-        System.out.println("Entrada incorrecta");
-    }
+        else if(nom.isBlank()) {
+            System.out.println("Entrada incorrecta");
+        }
     }
 }
 
