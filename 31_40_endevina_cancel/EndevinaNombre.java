@@ -41,7 +41,7 @@ public class EndevinaNombre {
                     System.out.println("Cancel·lat!");
                 }
             }
-            if (numero == numPensat) {
+            if (num.equals("42")) {
                 System.out.println("Has encertat!");
             }
         }
