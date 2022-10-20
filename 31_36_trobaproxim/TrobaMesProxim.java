@@ -19,7 +19,7 @@ public class TrobaMesProxim {
                 System.out.println("No s'ha introduït cap valor positiu");
             }
             else if (valor >= 0) {
-                while (valor1 >= 0) {
+                do {
                     System.out.println("Introdueix un valor");
                     valor1 = Integer.parseInt(Entrada.readLine());
                     dif1 = ancora - valor1;
@@ -35,13 +35,10 @@ public class TrobaMesProxim {
                     if (dif1 < dif2) {
                         difPetita = dif1;
                     }
-
                 }
+                    while (valor1 >= 0);
             }
-
             System.out.println("El valor introduït més pròxim a " + ancora + " és " + difPetita);
-
         }
     }
-
 }
