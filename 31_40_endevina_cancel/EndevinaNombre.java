@@ -34,14 +34,17 @@ public class EndevinaNombre {
                     num = (Entrada.readLine());
                     numero = Integer.parseInt(num);
                 }
+                else if(num.equals(null)) {
+                    numero = 42;
+                }
+                if (num.equals(null)) {
+                    System.out.println("Cancel·lat!");
+                }
             }
-            if (num.equals(null)) {
-                System.out.println("Cancel·lat!");
+            if (numero == numPensat) {
+                System.out.println("Has encertat!");
             }
-        }
-        if (numero == numPensat) {
-            System.out.println("Has encertat!");
-        }
 
+        }
     }
 }
