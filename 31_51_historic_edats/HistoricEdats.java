@@ -17,7 +17,7 @@ public class HistoricEdats {
         anyNaix = anyNaix + 1;
         System.out.println("El " + anyNaix + " teníeu 1 any");
         anyNaix = anyNaix + 1;
-        for (i = anyNaix; i <= any; ++i) {
+        for (i = anyNaix; i < any; ++i) {
             n = n + 1;
             System.out.println("El " + i + " teníeu " + n + " anys");
         }
