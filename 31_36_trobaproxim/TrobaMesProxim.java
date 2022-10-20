@@ -1,12 +1,12 @@
 //Programa que t arruina la vida
 public class TrobaMesProxim {
     public static void main(String[] args) {
-        int ancora;
-        int valor1;
-        int valor2;
-        int dif1;
-        int dif2;
-        int difPetita;
+        int ancora = 0;
+        int valor1 = 0;
+        int valor2 = 0;
+        int dif1 = 0;
+        int dif2 = 0;
+        int difPetita = 0;
         System.out.println("Introdueix l'àncora");
         ancora = Integer.parseInt(Entrada.readLine());
         if (ancora >= 0) {
