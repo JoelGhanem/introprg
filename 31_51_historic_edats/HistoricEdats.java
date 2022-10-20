@@ -15,13 +15,15 @@ public class HistoricEdats {
         System.out.println("El " + anyNaix + " vau néixer");
         int n = 1;
         anyNaix = anyNaix + 1;
-        if (edat != 1) {
-        System.out.println("El " + anyNaix + " teníeu 1 any");
-        }
-        anyNaix = anyNaix + 1;
-        for (i = anyNaix; i < any; ++i) {
-            n = n + 1;
-            System.out.println("El " + i + " teníeu " + n + " anys");
+        if (edat != 0) {
+            if (edat != 1) {
+                System.out.println("El " + anyNaix + " teníeu 1 any");
+            }
+            anyNaix = anyNaix + 1;
+            for (i = anyNaix; i < any; ++i) {
+                n = n + 1;
+                System.out.println("El " + i + " teníeu " + n + " anys");
+            }
         }
         System.out.println("Adéu " + nom);
     }
