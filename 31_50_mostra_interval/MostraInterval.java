@@ -12,8 +12,10 @@ public class MostraInterval {
                 System.out.println(i);
             }
         }
-    }if (inici > final1) {
-        for (int i = final1; i <= inici; i--) {
-            System.out.println(i);
+        if (inici > final1) {
+            for (int i = final1; i <= inici; i--) {
+                System.out.println(i);
+            }
         }
     }
+}
