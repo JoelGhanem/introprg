@@ -13,6 +13,7 @@ public class HistoricEdats {
         any = Integer.parseInt(Entrada.readLine());
         int anyNaix = (any - edat);
         if (nom.isBlank()== false) {
+            if (any >= 1971) {
             if (edat >= 0) {
                 if (edat != 0) {
                     System.out.println("El " + anyNaix + " vau néixer");
@@ -32,6 +33,10 @@ public class HistoricEdats {
             else if (edat <=0) {
                 System.out.println("Entrada incorrecta");
             }
+        }
+        else if (any < 1971) {
+            System.out.println("Entrada incorrecta");
+        }
         }
         else if(nom.isBlank()) {
             System.out.println("Entrada incorrecta");
