@@ -4,12 +4,13 @@ public class EndevinaNombre {
         Integer numPensat = 42;
         String num;
         Integer numero;
+        Integer numerito = 0;
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
         System.out.println("Introdueix un valor");
         num = (Entrada.readLine());
         numero = Integer.parseInt(num);
-        if (numero != numPensat) {
-            while (numero != numPensat || (num.equals("") == false)) {
+        if (numero != numPensat || numerito == 1) {
+            while (numero != numPensat || numerito == 1) {
                 if (numero <= 0) {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
@@ -27,11 +28,11 @@ public class EndevinaNombre {
                     System.out.println("Introdueix un valor");
                     num = (Entrada.readLine());
                     if (num.equals("")) {
-                        numero = 42;
+                        numerito = 1;
                     }
                     else if (num.equals("") == false) {
                         numero = Integer.parseInt(num);
-                }
+                    }
                 }
                 else if (numero < numPensat) {
                     System.out.println("És més gran que " + num);
@@ -47,6 +48,8 @@ public class EndevinaNombre {
         if (numero == numPensat) {
             System.out.println("Has encertat!");
         }
-
+        if (numerito == 1) {
+            System.out.println("Cancel·lat!");
+        }
     }
 }
