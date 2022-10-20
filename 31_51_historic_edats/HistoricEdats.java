@@ -19,7 +19,7 @@ public class HistoricEdats {
         anyNaix = anyNaix + 1;
         if (edat == 1) {
 
-        System.out.println("El " + any + " teníeu 1 any");
+        System.out.println("El " + any + " teníeu 2 any");
         }
         for (i = anyNaix; i < any; i = 1 + i) {
             n = n + 1;
