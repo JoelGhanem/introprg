@@ -2,7 +2,7 @@
 public class EndevinaNombre {
     public static void main(String[] args) {
         Integer numPensat = 42;
-        String num;
+        String num = " ";
         Integer numero;
         Integer numerito = 0;
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
