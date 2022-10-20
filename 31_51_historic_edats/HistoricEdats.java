@@ -20,9 +20,8 @@ public class HistoricEdats {
         for (i = anyNaix; i < any; i = 1 + i) {
             n = n + 1;
             System.out.println("El " + i + " teníeu " + n + " anys");
-
-
         }
+        System.out.println("Adéu " + nom);
     }
 }
 
