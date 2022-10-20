@@ -27,7 +27,7 @@ public class EndevinaNombre {
                     System.out.println("És més petit que " + num);
                     System.out.println("Introdueix un valor");
                     num = (Entrada.readLine());
-                    if (num.isBlank()) {
+                    if (num == null) {
                         numerito = 1;
                     }
                     else if (num.equals("") == false) {
