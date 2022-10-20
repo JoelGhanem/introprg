@@ -29,7 +29,7 @@ public class HistoricEdats {
         System.out.println("Adéu " + nom);
     }
     else if (edat <=0) {
-        System.out.println("Entrada incorrecta ");
+        System.out.println("Entrada incorrecta");
     }
     }
 }
