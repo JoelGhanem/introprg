@@ -5,6 +5,7 @@ public class HistoricEdats {
         int edat;
         int any;
         int n = 0;
+        int i;
         System.out.println("El vostre nom?");
         nom = Entrada.readLine();
         System.out.println("La vostra edat?");
@@ -13,8 +14,10 @@ public class HistoricEdats {
         any = Integer.parseInt(Entrada.readLine());
         int anyNaix = any - edat;
         System.out.println("El " + anyNaix + " vau néixer");
-        
-        for (int i = anyNaix; i <= any; ++i); n = n + 1; {
+        for (i = anyNaix; i <= any; ++i); n = n + 1; {
+            System.out.println(i);
+            //System.out.println("El " + i + " tenieu " + n + " any");
+
 
         }
     }
