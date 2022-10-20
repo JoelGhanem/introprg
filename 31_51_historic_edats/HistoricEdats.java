@@ -12,6 +12,8 @@ public class HistoricEdats {
         edat = Integer.parseInt(Entrada.readLine());
         System.out.println("L'any actual?");
         any = Integer.parseInt(Entrada.readLine());
+        System.out.println("El " + any + " vau néixer");
+        
         for (int i = any; i <= anyFinal; ++i); n = n + 1; {
 
         }
