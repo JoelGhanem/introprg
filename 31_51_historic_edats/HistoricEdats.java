@@ -4,7 +4,6 @@ public class HistoricEdats {
         String nom;
         int edat;
         int any;
-        int anyFinal = 2021;
         int n = 0;
         System.out.println("El vostre nom?");
         nom = Entrada.readLine();
@@ -12,9 +11,10 @@ public class HistoricEdats {
         edat = Integer.parseInt(Entrada.readLine());
         System.out.println("L'any actual?");
         any = Integer.parseInt(Entrada.readLine());
-        System.out.println("El " + any + " vau néixer");
+        int anyNaix = any - edat;
+        System.out.println("El " + anyNaix + " vau néixer");
         
-        for (int i = any; i <= anyFinal; ++i); n = n + 1; {
+        for (int i = any; i <= any; ++i); n = n + 1; {
 
         }
     }
