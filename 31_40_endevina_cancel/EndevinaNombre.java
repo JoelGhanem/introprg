@@ -1,40 +1,45 @@
 // Programa que et fa jugar amb ell per que endevis un nombre
 public class EndevinaNombre {
     public static void main(String[] args) {
-        Integer numero = 1;
-        Integer numeroPensat = 42;
-        String num;
+        Integer numPensat = 42;
+        String num = "0";
+        Integer numero = Integer.parseInt(num);
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
         System.out.println("Introdueix un valor");
-        numero = Integer.parseInt(Entrada.readLine());
-        if (numero != numeroPensat) {
-            while (numero != numeroPensat) {
+        num = (Entrada.readLine());
+        numero = Integer.parseInt(num);
+        if (numero != numPensat) {
+            while (numero != numPensat) {
                 if (numero <= 0) {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
-                    numero = Integer.parseInt(Entrada.readLine());
+                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(num);
                 }
                 else if (numero > 100) {
                     System.out.println("Com a màxim 100");
                     System.out.println("Introdueix un valor");
-                    numero = Integer.parseInt(Entrada.readLine());
+                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(num);
                 }
-                else if (numero > numeroPensat) {
-                    System.out.println("És més petit que " + numero);
+                else if (numero > numPensat) {
+                    System.out.println("És més petit que " + num);
                     System.out.println("Introdueix un valor");
-                    numero = Integer.toString(Entrada.readLine());
+                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(num);
                 }
-                else if (numero < numeroPensat) {
-                    System.out.println("És més gran que " + numero);
+                else if (numero < numPensat) {
+                    System.out.println("És més gran que " + num);
                     System.out.println("Introdueix un valor");
-                    numero = Integer.parseInt(Entrada.readLine());
+                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(num);
                 }
             }
-            if (numero.equals(null)) {
+            if (num.equals(null)) {
                 System.out.println("Cancel·lat!");
             }
         }
-        if (numero == numeroPensat) {
+        if (numero == numPensat) {
             System.out.println("Has encertat!");
         }
 
