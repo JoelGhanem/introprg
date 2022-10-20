@@ -12,6 +12,7 @@ public class HistoricEdats {
         System.out.println("L'any actual?");
         any = Integer.parseInt(Entrada.readLine());
         int anyNaix = (any - edat);
+        if (edat >= 0) {
         if (edat != 0) {
         System.out.println("El " + anyNaix + " vau néixer");
         int n = 1;
@@ -26,6 +27,10 @@ public class HistoricEdats {
             }
         }
         System.out.println("Adéu " + nom);
+    }
+    else if (edat <=0) {
+        System.out.println("Entrada incorrecta ");
+    }
     }
 }
 
