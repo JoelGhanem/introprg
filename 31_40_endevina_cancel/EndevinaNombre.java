@@ -44,7 +44,6 @@ public class EndevinaNombre {
             if (numero == numPensat) {
                 System.out.println("Has encertat!");
             }
-
         }
     }
 }
