@@ -19,7 +19,7 @@ public class TrobaMesProxim {
             }
             else if (valor1 >= 0) {
                 do {
-                    System.out.println("Introdueix un valor1");
+                    System.out.println("Introdueix un valor");
                     valor1 = Integer.parseInt(Entrada.readLine());
                     dif1 = ancora - valor1;
                     Math.abs(dif1);
