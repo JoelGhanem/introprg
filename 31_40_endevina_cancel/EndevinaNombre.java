@@ -3,7 +3,6 @@ public class EndevinaNombre {
     public static void main(String[] args) {
         Integer numero = 1;
         Integer numeroPensat = 42;
-        String num = Integer.toString(numero);
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
         System.out.println("Introdueix un valor");
         numero = Integer.parseInt(Entrada.readLine());
@@ -12,22 +11,22 @@ public class EndevinaNombre {
                 if (numero <= 0) {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
-                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(Entrada.readLine());
                 }
                 else if (numero > 100) {
                     System.out.println("Com a màxim 100");
                     System.out.println("Introdueix un valor");
-                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(Entrada.readLine());
                 }
                 else if (numero > numeroPensat) {
                     System.out.println("És més petit que " + numero);
                     System.out.println("Introdueix un valor");
-                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(Entrada.readLine());
                 }
                 else if (numero < numeroPensat) {
                     System.out.println("És més gran que " + numero);
                     System.out.println("Introdueix un valor");
-                    num = (Entrada.readLine());
+                    numero = Integer.parseInt(Entrada.readLine());
                 }
             }
             if (numero.equals(null)) {
