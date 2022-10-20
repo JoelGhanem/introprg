@@ -27,7 +27,7 @@ public class EndevinaNombre {
                     System.out.println("Introdueix un valor");
                     num = (Entrada.readLine());
                     numero = Integer.parseInt(num);
-                    if (num.isBlank()) {
+                    if (num.equals("")) {
                         numero = 42;
                     }
                 }
