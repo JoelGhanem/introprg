@@ -24,19 +24,11 @@ public class TrobaMesProxim {
                     valor1 = Integer.parseInt(Entrada.readLine());
                     dif1 = ancora - valor1;
                     Math.abs(dif1);
-                    dif2 = ancora - valor1;
-                    Math.abs(dif2);
-                    if (dif1 > dif2); {
-                        dif1 = dif2;
-                        difPetita = dif1;
-                    }
-                    if (dif1 < dif2) {
-                        difPetita = dif1;
-                    }
+                    difPetita = dif1;
                 }
-                    while (valor1 >= 0);
+                while (valor1 >= 0);
             }
-            System.out.println("El valor introduït més pròxim a " + ancora + " és " + difPetita);
         }
+        System.out.println("El valor introduït més pròxim a " + ancora + " és " + difPetita);
     }
 }
