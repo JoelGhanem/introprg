@@ -9,7 +9,7 @@ public class EndevinaNombre {
         num = (Entrada.readLine());
         numero = Integer.parseInt(num);
         if (numero != numPensat) {
-            while (numero != numPensat || (num.equals(""))) {
+            while (numero != numPensat || (num.equals("") == false)) {
                 if (numero <= 0) {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
