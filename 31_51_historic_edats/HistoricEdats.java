@@ -14,7 +14,7 @@ public class HistoricEdats {
         any = Integer.parseInt(Entrada.readLine());
         int anyNaix = any - edat;
         System.out.println("El " + anyNaix + " vau néixer");
-        for (i = anyNaix; i <= any; ++i); n = n + 1; {
+        for (i = anyNaix; i < any; ++i); n = n + 1; {
             System.out.println("El " + i + " tenieu " + n + " any");
 
 
