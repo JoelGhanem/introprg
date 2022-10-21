@@ -1,43 +1,37 @@
-//Programa que t arruina la vida
+//Programa que te dice el valor mas proximo
 public class TrobaMesProxim {
     public static void main(String[] args) {
         int ancora = 0;
-        int valor1 = 0;
-        int valor2 = 0;
+        int val = 0;
+        int dif = 0;
         int dif1 = 0;
-        int dif2 = 0;
         int difPetita = 0;
         System.out.println("Introdueix l'àncora");
         ancora = Integer.parseInt(Entrada.readLine());
-        if (ancora < 0) {
-            System.out.println("Àncora no vàlida");
-        }
-        else if (ancora >= 0) {
+        if (ancora >= 0) {
             System.out.println("Introdueix un valor");
-            valor1 = Integer.parseInt(Entrada.readLine());
-            if (valor1 < 0) {
+            val = Integer.parseInt(Entrada.readLine());
+            if (val >= 0) {
+                dif = ancora - val;
+                Math.abs(dif);
+                System.out.println("Introdueix un valor");
+                val = Integer.parseInt(Entrada.readLine());
+                dif1 = ancora - val;
+                Math.abs(dif1);
+                if (dif < dif1) {
+                    difPetita = dif;
+                }
+                    else if (dif > dif1) {
+                        dif = dif1;
+                        difPetita = dif;
+                    }
+            } else if (val < 0) {
                 System.out.println("No s'ha introduït cap valor positiu");
             }
-            else if (valor1 >= 0) {
-                do {
-                    System.out.println("Introdueix un valor");
-                    valor1 = Integer.parseInt(Entrada.readLine());
-                    dif1 = ancora - valor1;
-                    Math.abs(dif1);
-                    valor2 = valor1;
-                    dif2 = ancora - valor2;
-                    Math.abs(dif2);
-                    if (dif1 > dif2); {
-                        dif1 = dif2;
-                        difPetita = dif1;
-                    }
-                    if (dif1 < dif2) {
-                        difPetita = dif1;
-                    }
-                }
-                    while (valor1 >= 0);
-            }
-            System.out.println("El valor introduït més pròxim a " + ancora + " és " + difPetita);
+        }
+        else if (ancora < 0) {
+            System.out.println("Àncora no vàlida");
         }
     }
 }
+
