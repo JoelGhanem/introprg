@@ -37,7 +37,7 @@ public class TrobaMesProxim {
                 }
                     while (valor1 >= 0);
             }
-            System.out.println("El valor1 introduït més pròxim a " + ancora + " és " + difPetita);
+            System.out.println("El valor introduït més pròxim a " + ancora + " és " + difPetita);
         }
     }
 }
