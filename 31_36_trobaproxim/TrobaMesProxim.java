@@ -27,8 +27,9 @@ public class TrobaMesProxim {
                         difPetita = dif;
                         Math.abs(difPetita);
                     }
-            } if (val < 0) {
+             if (val < 0) {
                 System.out.println("No s'ha introduït cap valor positiu");
+            }
             }
             System.out.println("El valor introduït més pròxim a " + ancora + " és " +     difPetita);
 
