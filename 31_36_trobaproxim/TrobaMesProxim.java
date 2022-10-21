@@ -2,10 +2,10 @@
 public class TrobaMesProxim {
     public static void main(String[] args) {
         int ancora = 0;
-        int val = 0;
+        int val = 10000;
         int dif = 0;
         int dif1 = 0;
-        int difPetita = 0;
+        int difPetita = 100;
         int valorReal = -1;
         int valorReal1;
         System.out.println("Introdueix l'àncora");
@@ -30,6 +30,7 @@ public class TrobaMesProxim {
                     if (dif < dif1) {
                         difPetita = dif;
                         difPetita = valorReal;
+                        valorReal = valorReal;
                     }
                     else if (dif > dif1) {
                         dif = dif1;
