@@ -31,7 +31,7 @@ public class TrobaMesProxim {
                         Math.abs(difPetita);
                     }
             }
-            System.out.println("El valor introduït més pròxim a " + ancora + " és " +     difPetita);
+            System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
 
 
         }
