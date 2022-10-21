@@ -21,7 +21,6 @@ public class TrobaMesProxim {
                 dif = Math.abs(dif);
                 valorReal = val;
                 System.out.println("Introdueix un valor");
-                val = Integer.parseInt(Entrada.readLine());
                 dif1 = ancora - val;
                 valorReal1 = val;
                 Math.abs(dif1);
