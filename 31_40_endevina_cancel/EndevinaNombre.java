@@ -3,12 +3,17 @@ public class EndevinaNombre {
     public static void main(String[] args) {
         Integer numPensat = 42;
         String num = " ";
-        Integer numero;
+        Integer numero = 0;
         Integer numerito = 0;
         System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
         System.out.println("Introdueix un valor");
         num = (Entrada.readLine());
-        numero = Integer.parseInt(num);
+        if (num.equals("")) {
+            System.out.println("Cancel·lat!");
+        }
+        else if (num.equals("") == false) {
+            numero = Integer.parseInt(num);
+        }
         if (numero != numPensat) {
             while (numero != numPensat) {
                 if (numero <= 0) {
