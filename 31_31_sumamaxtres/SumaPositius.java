@@ -1,3 +1,5 @@
+//Necesito poner una cabecera descriptiva ppara que me lo cuente bien asi que voy a decir que este programa me suma 3 numeros
+
 public class SumaPositius {
 
     public static void main(String[] args) {
