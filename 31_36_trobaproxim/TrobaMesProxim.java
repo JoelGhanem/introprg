@@ -20,15 +20,17 @@ public class TrobaMesProxim {
                 Math.abs(dif1);
                 if (dif < dif1) {
                     difPetita = dif;
+                    Math.abs(difPetita);
                 }
                     else if (dif > dif1) {
                         dif = dif1;
                         difPetita = dif;
+                        Math.abs(difPetita);
                     }
             } if (val < 0) {
                 System.out.println("No s'ha introduït cap valor positiu");
             }
-            System.out.println("El valor1 introduït més pròxim a " + ancora + " és " +     difPetita);
+            System.out.println("El valor introduït més pròxim a " + ancora + " és " +     difPetita);
 
 
         }
