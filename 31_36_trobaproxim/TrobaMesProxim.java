@@ -6,6 +6,8 @@ public class TrobaMesProxim {
         int dif = 0;
         int dif1 = 0;
         int difPetita = 0;
+        int valorReal = 0;
+        int valorReal1 = 0;
         System.out.println("Introdueix l'àncora");
         ancora = Integer.parseInt(Entrada.readLine());
         if (ancora >= 0) {
@@ -17,18 +19,20 @@ public class TrobaMesProxim {
             while (val >= 0) {
                 dif = ancora - val;
                 dif = Math.abs(dif);
+                valorReal = val;
                 System.out.println("Introdueix un valor");
                 val = Integer.parseInt(Entrada.readLine());
+                valorReal1 = val;
                 dif1 = ancora - val;
-                Math.abs(dif1);
+                dif1 = Math.abs(dif1);
                 if (dif < dif1) {
                     difPetita = dif;
-                    Math.abs(difPetita);
+                    difPetita = valorReal;
                 }
                     else if (dif > dif1) {
                         dif = dif1;
                         difPetita = dif;
-                        Math.abs(difPetita);
+                        difPetita = valorReal1;
                     }
             }
             System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
