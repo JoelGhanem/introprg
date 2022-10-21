@@ -16,28 +16,30 @@ public class TrobaMesProxim {
             if (val < 0) {
                 System.out.println("No s'ha introduït cap valor positiu");
             }
-            while (val >= 0) {
-                dif = ancora - val;
-                dif = Math.abs(dif);
-                valorReal = val;
-                System.out.println("Introdueix un valor");
-                val = Integer.parseInt(Entrada.readLine());
-                if (val >= 0) {
-                    valorReal1 = val;
-                    dif1 = ancora - val;
-                    dif1 = Math.abs(dif1);
-                    if (dif < dif1) {
-                        difPetita = dif;
-                        difPetita = valorReal;
-                    }
-                    else if (dif > dif1) {
-                        dif = dif1;
-                        difPetita = dif;
-                        difPetita = valorReal1;
+            if (val >= 0) {
+                while (val >= 0) {
+                    dif = ancora - val;
+                    dif = Math.abs(dif);
+                    valorReal = val;
+                    System.out.println("Introdueix un valor");
+                    val = Integer.parseInt(Entrada.readLine());
+                    if (val >= 0) {
+                        valorReal1 = val;
+                        dif1 = ancora - val;
+                        dif1 = Math.abs(dif1);
+                        if (dif < dif1) {
+                            difPetita = dif;
+                            difPetita = valorReal;
+                        }
+                        else if (dif > dif1) {
+                            dif = dif1;
+                            difPetita = dif;
+                            difPetita = valorReal1;
+                        }
                     }
                 }
+                System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
             }
-            System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
 
 
         }
