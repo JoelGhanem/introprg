@@ -26,7 +26,7 @@ public class TrobaMesProxim {
                 dif1 = Math.abs(dif1);
                 valorReal1 = val;
                 //este if es pq si no lo hago me detecta el valor -1 como un valor aceptable ya que el sistema hace todo el procedimiento antes de comprobar si el valor es positivo;
-                if (val >= 0) {
+                if (val >= 0) 
                 if (dif < dif1) {
                     difPetita = dif;
                     difPetita = valorReal;
@@ -36,7 +36,7 @@ public class TrobaMesProxim {
                         difPetita = dif;
                     difPetita = valorReal1;
                     }
-                }
+                
             }
             System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
         }
