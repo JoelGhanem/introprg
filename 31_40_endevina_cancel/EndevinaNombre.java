@@ -20,7 +20,13 @@ public class EndevinaNombre {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
                     num = (Entrada.readLine());
-                    numero = Integer.parseInt(num);
+                    if (num.equals("")) {
+                        numerito = 1;
+                        numero = 42;
+                    } 
+                    else if (num != null) {
+                        numero = Integer.parseInt(num);
+                    }
                 }
                 else if (numero > 100) {
                     System.out.println("Com a màxim 100");
@@ -58,3 +64,4 @@ public class EndevinaNombre {
         }
     }
 }
+
