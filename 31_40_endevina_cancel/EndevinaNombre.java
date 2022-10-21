@@ -51,8 +51,5 @@ public class EndevinaNombre {
                 System.out.println("Has encertat!");
             }
         }
-        else if(numerito == 1) {
-            System.out.println("Cancel·lat!");
-        }
     }
 }
