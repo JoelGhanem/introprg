@@ -13,7 +13,7 @@ public class EndevinaNombre {
         }
         else if (num != null) {
             numero = Integer.parseInt(num);
-        }
+        
         if (numero != numPensat) {
             while (numero != numPensat) {
                 if (numero <= 0) {
@@ -56,6 +56,7 @@ public class EndevinaNombre {
             if (num.equals("")) {
                 System.out.println("Cancel·lat!");
             }
+        }
         }
         if (numerito != 1) {
             if (numero == numPensat) {
