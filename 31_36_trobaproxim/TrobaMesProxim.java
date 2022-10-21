@@ -1,13 +1,13 @@
 //Programa que te dice el valor mas proximo
 public class TrobaMesProxim {
     public static void main(String[] args) {
-        int ancora = 0;
-        int val = 0;
-        int dif = 0;
-        int dif1 = 0;
-        int difPetita = 0;
-        int valorReal = -1;
-        int valorReal1;
+        int ancora = 01111;
+        int val = 011111;
+        int dif = 111110;
+        int dif1 = 333;
+        int difPetita = -111000;
+        int valorReal = 1001100;
+        int valorReal1 = 100011110;
         System.out.println("Introdueix l'àncora");
         ancora = Integer.parseInt(Entrada.readLine());
         if (ancora >= 0) {
@@ -22,11 +22,11 @@ public class TrobaMesProxim {
                 valorReal = val;
                 System.out.println("Introdueix un valor");
                 val = Integer.parseInt(Entrada.readLine());
-                dif1 = ancora - val;
-                dif1 = Math.abs(dif1);
-                valorReal1 = val;
-                //este if es pq si no lo hago me detecta el valor -1 como un valor aceptable ya que el sistema hace todo el procedimiento antes de comprobar si el valor es positivo.
-                if (val >= 0) 
+                if (val >= 0) {
+                    dif1 = ancora - val;
+                    dif1 = Math.abs(dif1);
+                    valorReal1 = val;
+                    //este if es pq si no lo hago me detecta el valor -1 como un valor aceptable ya que el sistema hace todo el procedimiento antes de comprobar si el valor es positivo.
                     if (dif < dif1) {
                         difPetita = dif;
                         difPetita = valorReal;
@@ -36,8 +36,9 @@ public class TrobaMesProxim {
                         difPetita = dif;
                         difPetita = valorReal1;
                     }
-            }
+                }
 
+            }
             if (valorReal >= 0) {
                 System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
             }
