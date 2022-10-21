@@ -10,9 +10,9 @@ public class EndevinaNombre {
         num = (Entrada.readLine());
         if (num.equals("")) {
             System.out.println("Cancel·lat!");
-        }
-        else if (num.equals("") == false) {
+        if (num != null) {
             numero = Integer.parseInt(num);
+        }
         }
         if (numero != numPensat) {
             while (numero != numPensat) {
