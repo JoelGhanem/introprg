@@ -9,8 +9,8 @@ public class EndevinaNombre {
         System.out.println("Introdueix un valor");
         num = (Entrada.readLine());
         numero = Integer.parseInt(num);
-        if (numero != numPensat || numerito == 1) {
-            while (numero != numPensat || numerito == 1) {
+        if (numero != numPensat) {
+            while (numero != numPensat) {
                 if (numero <= 0) {
                     System.out.println("Com a mínim 1");
                     System.out.println("Introdueix un valor");
@@ -29,6 +29,7 @@ public class EndevinaNombre {
                     num = (Entrada.readLine());
                     if (num.equals("")) {
                         numerito = 1;
+                        numero = 42;
                     }
                     else if (num != null) {
                         numero = Integer.parseInt(num);
@@ -45,10 +46,12 @@ public class EndevinaNombre {
                 System.out.println("Cancel·lat!");
             }
         }
-        if (numero == numPensat) {
-            System.out.println("Has encertat!");
+        if (numerito != 1) {
+            if (numero == numPensat) {
+                System.out.println("Has encertat!");
+            }
         }
-        if (numerito == 1) {
+        else if(numerito == 1) {
             System.out.println("Cancel·lat!");
         }
     }
