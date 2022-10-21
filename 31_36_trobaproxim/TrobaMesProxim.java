@@ -20,6 +20,7 @@ public class TrobaMesProxim {
                 dif = ancora - val;
                 dif = Math.abs(dif);
                 valorReal = val;
+                if (val >= 0) {
                 System.out.println("Introdueix un valor");
                 val = Integer.parseInt(Entrada.readLine());
                 dif1 = ancora - val;
@@ -34,6 +35,7 @@ public class TrobaMesProxim {
                         difPetita = dif;
                     difPetita = valorReal1;
                     }
+                }
             }
             System.out.println("El valor introduït més pròxim a " + ancora + " és " +  difPetita);
         }
