@@ -42,7 +42,7 @@ public class TrobaMesProxim {
                         }
                     }
                 } else if(sequencia == 2) {
-                    valorReal1 = valorReal;
+                    difPetita = valorReal;
                 }
             }
             if (valorReal >= 0) {
