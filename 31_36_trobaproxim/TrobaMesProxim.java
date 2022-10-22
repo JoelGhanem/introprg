@@ -2,6 +2,7 @@
 public class TrobaMesProxim {
     public static void main(String[] args) {
         int ancora = 0;
+        int sequencia = 1;
         int val = 10000;
         int dif = 0;
         int dif1 = 0;
@@ -20,13 +21,14 @@ public class TrobaMesProxim {
                 dif = ancora - val;
                 dif = Math.abs(dif);
                 valorReal = val;
+                sequencia += 1;
                 System.out.println("Introdueix un valor");
                 val = Integer.parseInt(Entrada.readLine());
                 dif1 = ancora - val;
                 dif1 = Math.abs(dif1);
                 valorReal1 = val;
                 //este if es pq si no lo hago me detecta el valor -1 como un valor aceptable ya que el sistema hace todo el procedimiento antes de comprobar si el valor es positivo;
-                if (valorReal1 >= 0) {
+                if (sequencia != 2) {
                     if (val >= 0) {
                         if (dif < dif1) {
                             difPetita = dif;
@@ -39,7 +41,7 @@ public class TrobaMesProxim {
                             difPetita = valorReal1;
                         }
                     }
-                } else if(valorReal1 < 0) {
+                } else if(sequencia == 2) {
                     valorReal1 = valorReal;
                 }
             }
