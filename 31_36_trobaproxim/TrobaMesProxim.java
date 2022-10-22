@@ -20,11 +20,11 @@ public class TrobaMesProxim {
                 dif = ancora - val;
                 dif = Math.abs(dif);
                 valorReal = val;
-                if (val == 100) {
-                difPetita = valorReal;
-                }
                 System.out.println("Introdueix un valor");
                 val = Integer.parseInt(Entrada.readLine());
+                if (val <= 0) {
+                difPetita = valorReal;
+                }
                 dif1 = ancora - val;
                 dif1 = Math.abs(dif1);
                 valorReal1 = val;
