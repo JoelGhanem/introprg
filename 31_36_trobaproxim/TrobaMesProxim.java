@@ -5,7 +5,7 @@ public class TrobaMesProxim {
         int val = 10000;
         int dif = 0;
         int dif1 = 0;
-        int difPetita = 100;
+        int difPetita = 0;
         int valorReal = -1;
         int valorReal1;
         System.out.println("Introdueix l'àncora");
