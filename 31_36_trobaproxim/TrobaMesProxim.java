@@ -26,19 +26,21 @@ public class TrobaMesProxim {
                 dif1 = Math.abs(dif1);
                 valorReal1 = val;
                 //este if es pq si no lo hago me detecta el valor -1 como un valor aceptable ya que el sistema hace todo el procedimiento antes de comprobar si el valor es positivo;
-                if (val >= 0) {
-                    if (dif < dif1) {
-                        difPetita = dif;
-                        difPetita = valorReal;
-                        valorReal = valorReal;
+                if (valorReal1 >= 0) {
+                    if (val >= 0) {
+                        if (dif < dif1) {
+                            difPetita = dif;
+                            difPetita = valorReal;
+                            valorReal = valorReal;
+                        }
+                        else if (dif > dif1) {
+                            dif = dif1;
+                            difPetita = dif;
+                            difPetita = valorReal1;
+                        }
                     }
-                    else if (dif > dif1) {
-                        dif = dif1;
-                        difPetita = dif;
-                        difPetita = valorReal1;
-                    }
-                } else if (val < 0) {
-                    difPetita = valorReal;
+                } else if(valorReal1 < 0) {
+                    valorReal1 = valorReal;
                 }
             }
             if (valorReal >= 0) {
