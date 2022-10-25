@@ -5,7 +5,7 @@ public class TriangleNombres {
         System.out.println("Nombre?");
         num = Integer.parseInt(Entrada.readLine());
         for (int li =1; li <= num; li++) {
-            for (int co = 1; co <= li; co++) {
+            for (int co = li; co > 0; co--) {
                 System.out.print(" " + co);
             }
             System.out.println();
