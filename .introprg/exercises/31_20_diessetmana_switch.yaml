@@ -25,5 +25,5 @@
 09:
   argsin: '8'
   stdout: Error
-_mainclass: DiaSetmanaSwitchExpr
+_mainclass: DiaSetmanaSwitch
 _version: '2223'
