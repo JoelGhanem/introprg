@@ -6,7 +6,11 @@ public class TriangleInvertit {
         num = Integer.parseInt(Entrada.readLine());
         for (int li = num; li >= 1; li--) {
             for (int co = 1; co <= li; co++) {
-                System.out.print(co + ", ");
+                System.out.print(co);
+            
+            if (co != num) {
+                System.out.print(", ");
+            }
             }
             System.out.println();
         }
