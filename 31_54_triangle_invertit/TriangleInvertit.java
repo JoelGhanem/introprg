@@ -7,10 +7,9 @@ public class TriangleInvertit {
         for (int li = num; li >= 1; li--) {
             for (int co = 1; co <= li; co++) {
                 System.out.print(co);
-            
-            if (co != num) {
-                System.out.print(", ");
-            }
+                if (co != li) {
+                    System.out.print(", ");
+                }
             }
             System.out.println();
         }
