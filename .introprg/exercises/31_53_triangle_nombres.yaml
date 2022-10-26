@@ -1,3 +1,5 @@
+_mainclass: TriangleNombres
+_version: '2223'
 '01':
   stdin:
   - '0'
@@ -35,5 +37,3 @@
   - ' 4 3 2 1'
   - ' 5 4 3 2 1'
   - ' 6 5 4 3 2 1'
-_mainclass: TriangleNombres
-_version: '2223'
