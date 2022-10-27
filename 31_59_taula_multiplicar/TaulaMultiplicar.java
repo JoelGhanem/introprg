@@ -6,7 +6,7 @@ public class TaulaMultiplicar {
         int tercer = Integer.parseInt(args[2]);
         int quart = Integer.parseInt(args[3]);
         if (primer >= segon) {
-            if (tercer <= quart) {
+            if (tercer != quart) {
                 for (int uno = Integer.parseInt(args[0]); uno <= segon; uno++) { 
                     for (int dos = Integer.parseInt(args[2]); dos <= quart; dos++) {
                         System.out.println(uno + " x " + tercer + " = " + uno*dos);
