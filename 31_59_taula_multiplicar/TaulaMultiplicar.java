@@ -10,7 +10,6 @@ public class TaulaMultiplicar {
                 for (int uno = Integer.parseInt(args[0]); uno <= segon; uno++) { 
                     for (int dos = Integer.parseInt(args[2]); dos <= quart; dos++) {
                         System.out.println(uno + " x " + tercer + " = " + uno*dos);
-                        System.out.println(uno + " x " + quart + " = " + uno*dos);
                     }
                 }
             }
