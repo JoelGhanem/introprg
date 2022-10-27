@@ -13,7 +13,7 @@ public class TaulaMultiplicar {
                     }
                 }
                 if (tercer > quart) {
-                    for (int dos = Integer.parseInt(args[2]); dos >= quart; dos--) {
+                    for (int dos = Integer.parseInt(args[3]); dos >= quart; dos--) {
                         System.out.println(uno + " x " + dos + " = " + uno*dos);
                     }
                 }
@@ -27,7 +27,7 @@ public class TaulaMultiplicar {
                     }
                 }
                 if (tercer > quart) {
-                    for (int dos = Integer.parseInt(args[2]); dos >= quart; dos--) {
+                    for (int dos = Integer.parseInt(args[3]); dos >= quart; dos--) {
                         System.out.println(uno + " x " + dos + " = " + uno*dos);
                     }
                 }
