@@ -9,7 +9,7 @@ public class TaulaMultiplicar {
         int tercer = Integer.parseInt(args[3]);
         System.out.println("El quart argument és  " + args[4]);
         int quart = Integer.parseInt(args[4]);
-        if (primer > segon) {
+        if (primer >= segon) {
             for (int uno = Integer.parseInt(args[1]); uno <= segon; uno++) { 
                 System.out.println(uno + " x " + tercer + " = " + uno*tercer);
                     System.out.println(uno + " x " + quart + " = " + uno*quart);
