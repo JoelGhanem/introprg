@@ -1,0 +1,20 @@
+TIPUS       BITS        MINIM       MÀXIM       EXEMPLE
+
+int      |  32     |    -2^31   |   (2^31)-1  | 42
+
+boolean  |  indef. |       true i false       | true
+
+byte     |  8      |    -128    |   127       | 1MB
+
+short    |  16     |    -32.767 |   32.767    | 155
+
+long     |  64     |    -2^36   |   2^63      | 123456
+
+float    |  32     |        IEEE 754          | 33.43
+
+double   |  64     |        IEEE 754          | 1050.69
+
+char     |  16     |    '\u0000'|   '\uffff'  | a
+
+
+//IEEE 754 hi ha una discussió sobre el tema pero si busques "IEEE 754" a internet trobarás tota la informació
