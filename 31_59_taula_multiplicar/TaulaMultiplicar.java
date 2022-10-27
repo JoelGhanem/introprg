@@ -19,7 +19,7 @@ public class TaulaMultiplicar {
             }
         }
         else if (primer < segon) {
-            for (int dos = Integer.parseInt(args[1]); dos <= primer; dos++) {
+            for (int dos = Integer.parseInt(args[1]); dos >= primer; dos--) {
                 System.out.println(dos + " x " + tercer + " = " + dos*tercer);
                 System.out.println(dos + " x " + quart + " = " + dos*quart);
             }
