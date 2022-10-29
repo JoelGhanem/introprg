@@ -1,9 +1,9 @@
 // Programa que te ayuda con los strings
 public class InformeString {
     public static void main(String[] args) {
-        System.out.println("Text principal");
+        System.out.println("Text principal?");
         String primer = Entrada.readLine();
-        System.out.println("Text secundari");
+        System.out.println("Text secundari?");
         String segon = Entrada.readLine();
         System.out.println("Número positiu?");
         int num = Integer.parseInt(Entrada.readLine());
