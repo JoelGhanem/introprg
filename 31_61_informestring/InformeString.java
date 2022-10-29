@@ -8,7 +8,7 @@ public class InformeString {
         System.out.println("Número positiu?");
         int num = Integer.parseInt(Entrada.readLine());
         System.out.println("\"" + primer + "\".length(): " + primer.length());
-        System.out.println("\"" + primer + "\".starstWith(\"" + segon + "\"): " + primer.startsWith(segon));
+        System.out.println("\"" + primer + "\".startsWith(\"" + segon + "\"): " + primer.startsWith(segon));
         System.out.println("\"" + primer + "\".endstWith(\"" + segon + "\"): " + primer.endsWith(segon));
         System.out.println("\"" + primer + "\".equals(\"" + segon + "\"): " + primer.equals(segon));
         System.out.println("\"" + primer + "\".equalsIgnoreCase(\"" + segon + "\"): " + primer.equalsIgnoreCase(segon));
