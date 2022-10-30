@@ -15,7 +15,7 @@ public class InformeString {
         System.out.println("\"" + primer + "\".isBlank(): " + primer.isBlank());
         System.out.println("\"" + primer + "\".isEmpty(): " + primer.isEmpty());
         System.out.println("\"" + primer + "\".charAt(" + num + "): " + primer.charAt(num));
-        System.out.println("\"" + primer + "\".concat(" + segon + "): " + primer.concat(segon));
+        System.out.println("\"" + primer + "\".concat(\"" + segon + "\"): " + primer.concat(segon));
 
 
     }
