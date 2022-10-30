@@ -14,7 +14,7 @@ public class InformeString {
         System.out.println("\"" + primer + "\".equalsIgnoreCase(\"" + segon + "\"): " + primer.equalsIgnoreCase(segon));
         System.out.println("\"" + primer + "\".isBlank(): " + primer.isBlank());
         System.out.println("\"" + primer + "\".isEmpty(): " + primer.isEmpty());
-        System.out.println("\"" + primer + "\".chartAt(" + num + "): " + primer.charAt(num));
+        System.out.println("\"" + primer + "\".charAt(" + num + "): " + primer.charAt(num));
 
     }
 }
