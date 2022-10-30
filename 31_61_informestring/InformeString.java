@@ -19,10 +19,6 @@ public class InformeString {
         System.out.println("\"" + primer + "\".repeat(" + num + "): " + primer.repeat(num));
         System.out.println("\"" + primer + "\".toUpperCase(): "  + primer.toUpperCase());
         System.out.println("\"" + primer + "\".toLowerCase(): "  + primer.toLowerCase());
-
-
-
-
     }
 }
 
