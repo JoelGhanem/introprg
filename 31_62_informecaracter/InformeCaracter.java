@@ -7,7 +7,7 @@ public class InformeCaracter {
         if (palabra.equals("")) {
             System.out.println("Caràcter buit");
         }else {
-            System.out.println("Character.getName('H'): " + Character.getName(uno));
+            System.out.println("Character.getName(" + uno + "): " + Character.getName(uno));
             
         }
     }
