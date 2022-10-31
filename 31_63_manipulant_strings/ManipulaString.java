@@ -7,7 +7,7 @@ public class ManipulaString {
         System.out.println("La segona lletra és '" + paraula.charAt(1) + "'");
         System.out.println("La darrera lletra és '" + paraula.charAt(paraula.length()-1) + "'");
         //la penultima
-        System.out.println("La paraula en majúscules és " + paraula.toUpperCase());
+        System.out.println("La paraula en majúscules és \"" + paraula.toUpperCase() + "\"");
 
     }
 }
