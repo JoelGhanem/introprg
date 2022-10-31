@@ -6,7 +6,7 @@ public class InformeCaracter {
         char uno = palabra.charAt(0);
         if (palabra.equals("")) {
             System.out.println("Caràcter buit");
-        }else {
+        }   else {
             System.out.println("Character.getName('" + uno + "'): " + Character.getName(uno));
             System.out.println("Character.isDigit('" + uno + "'): " + Character.isDigit(uno));
             System.out.println("Character.isJavaIdentifierStart('" + uno + "'): " + Character.isJavaIdentifierStart(uno));
