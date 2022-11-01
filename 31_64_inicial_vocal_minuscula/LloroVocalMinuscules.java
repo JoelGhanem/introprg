@@ -19,7 +19,7 @@ public class LloroVocalMinuscules {
             else {
                 System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
             }
-            System.out.println("Adéu");
         }
+        System.out.println("Adéu");
     }
 }
