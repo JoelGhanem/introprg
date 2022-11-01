@@ -12,6 +12,6 @@ public class ManipulaString {
         System.out.println("La composició de quatre és \"" + paraula.charAt(paraula.length()-1) + paraula.substring(0,3) + "\"");
         char mayus = paraula.charAt(paraula.length()-1);
         String minus = paraula.substring(0,3);
-        System.out.println("La composició de quatre corregint majúscules és \"" + mayus + minus.toLowerCase() + "\"");
+        System.out.println("La composició de quatre corregint majúscules és \"" + Character.toUpperCase(mayus) + minus.toLowerCase() + "\"");
     }
 }
