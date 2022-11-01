@@ -10,7 +10,8 @@ public class ManipulaString {
         System.out.println("La paraula en majúscules és \"" + paraula.toUpperCase() + "\"");
         System.out.println("La composició de quatre primeres és \"" + paraula.substring(0,4) + "\"");
         System.out.println("La composició de quatre és \"" + paraula.charAt(paraula.length()-1) + paraula.substring(0,3) + "\"");
+        char mayus = paraula.charAt(paraula.length()-1);
         String minus = paraula.substring(0,3);
-        System.out.println("La composició de quatre corregint majúscules és \"" + minus.toLowerCase());
+        System.out.println("La composició de quatre corregint majúscules és \"" + mayus + minus.toLowerCase() + "\"");
     }
 }
