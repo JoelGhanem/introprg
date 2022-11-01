@@ -3,6 +3,9 @@ public class ManipulaString {
     public static void main(String[] args) {
         System.out.println("Paraula?");
         String  paraula = Entrada.readLine();
+        if (paraula.length() <= 1) {
+            System.out.println("caràcter buit");
+        }
         System.out.println("La longitud és " + paraula.length());
         System.out.println("La segona lletra és '" + paraula.charAt(1) + "'");
         System.out.println("La darrera lletra és '" + paraula.charAt(paraula.length()-1) + "'");
