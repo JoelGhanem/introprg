@@ -15,7 +15,7 @@ public class LloroVocalMinuscules {
                     paraula = Entrada.readLine();
                 }
             }
-            else {
+            else if (Character.isUpperCase(primera)) {
                 System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
             }
         }
