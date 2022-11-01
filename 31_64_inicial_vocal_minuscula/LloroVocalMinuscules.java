@@ -10,7 +10,7 @@ public class LloroVocalMinuscules {
             if (Character.isLowerCase(primera)){
                 while ((paraula.isEmpty() == false)  && (paraula.isBlank() == false))  {
                     paraulaLloro = paraula; 
-                    System.out.println("El lloro repeteix: " + paraulaLloro);
+                    System.out.println("El lloro diu: " + paraulaLloro);
                     System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules:");
                     paraula = Entrada.readLine();
                 }
