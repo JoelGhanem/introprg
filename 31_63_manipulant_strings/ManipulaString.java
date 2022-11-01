@@ -3,7 +3,7 @@ public class ManipulaString {
     public static void main(String[] args) {
         System.out.println("Paraula?");
         String  paraula = Entrada.readLine();
-        if (paraula.length() <= 1) {
+        if (paraula.length() == 0) {
             System.out.println("caràcter buit");
         }
         System.out.println("La longitud és " + paraula.length());
