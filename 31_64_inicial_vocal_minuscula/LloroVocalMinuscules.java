@@ -17,10 +17,10 @@ public class LloroVocalMinuscules {
                     paraula = Entrada.readLine();
                     if (paraula.isEmpty() == false) {
                         primera = paraula.charAt(0);
-                    }
-                    if (Character.isLowerCase(primera)) {
-                        paraula = Entrada.readLine();
-                        paraulaLloro = paraula; 
+                        if (Character.isLowerCase(primera)) {
+                            paraula = Entrada.readLine();
+                            paraulaLloro = paraula; 
+                        }
                     } 
                 }
             }
