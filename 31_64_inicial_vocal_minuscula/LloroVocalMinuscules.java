@@ -12,8 +12,6 @@ public class LloroVocalMinuscules {
             }
             else if (Character.isUpperCase(primera) == false) {
                 while ((paraula.isEmpty() == false)  && (paraula.isBlank() == false))  {
-                    System.out.println("El lloro diu: " + paraulaLloro);
-                    System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
                     paraula = Entrada.readLine();
                     if (paraula.isEmpty() == false) {
                         primera = paraula.charAt(0);
@@ -21,6 +19,8 @@ public class LloroVocalMinuscules {
                             paraula = Entrada.readLine();
                             paraulaLloro = paraula; 
                         }
+                        System.out.println("El lloro diu: " + paraulaLloro);
+                        System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
                     } 
                 }
             }
