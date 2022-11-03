@@ -4,13 +4,15 @@ public class SegonaIgualPenultima {
         System.out.println("Ves introduïnt texts (finalitza amb enter sol)");
         String paraula = Entrada.readLine();
         while (paraula.isEmpty() == false) {
-            if (paraula.charAt(1) != paraula.charAt(paraula.length()-2)) {
-                System.out.println("Segona diferent de penúltima");
+            if (paraula.isEmpty() == false) {
+                if (paraula.charAt(1) != paraula.charAt(paraula.length()-2)) {
+                    System.out.println("Segona diferent de penúltima");
+                }
+                else if (paraula.charAt(1) == paraula.charAt(paraula.length()-2)) {
+                    System.out.println("Segona igual a penúltima");
+                }
+                paraula = Entrada.readLine();
             }
-            else if (paraula.charAt(1) == paraula.charAt(paraula.length()-2)) {
-                System.out.println("Segona igual a penúltima");
-            }
-            paraula = Entrada.readLine();
         }
         System.out.println("Adéu");
     }
