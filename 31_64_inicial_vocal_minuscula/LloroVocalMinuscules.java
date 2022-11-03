@@ -22,5 +22,6 @@ public class LloroVocalMinuscules {
                 }
             }
         }
+        System.out.println("Adéu");
     }
 }
