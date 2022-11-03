@@ -15,25 +15,13 @@ public class MatriculaValida {
             char cuatro = matricula.charAt(4);
             char cinco = matricula.charAt(5);
             char seis = matricula.charAt(6);
-            if (Character.isUpperCase(cero)) {
-                if (Character.isUpperCase(uno)) {
-                    if (Character.isDigit(dos)) {
-                        if (Character.isDigit(tres)) {
-                            if (Character.isDigit(cuatro)) {
-                                if (Character.isUpperCase(cinco)) {
-                                    if (Character.isUpperCase(seis)) {
-                                        System.out.println("És una matrícula italiana vàlida");
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            if (Character.isUpperCase(cero) && (Character.isUpperCase(uno))  && (Character.isDigit(dos)) &&(Character.isDigit(tres)) && (Character.isDigit(cuatro)) && (Character.isUpperCase(cinco)) && (Character.isUpperCase(seis))) { 
+                System.out.println("És una matrícula italiana vàlida");
             }
-        }
-        else {
-            System.out.println("No és una matrícula italiana vàlida");
+            else {
+                System.out.println("No és una matrícula italiana vàlida");
 
+            }
         }
     }
 }
