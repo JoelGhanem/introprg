@@ -1,4 +1,4 @@
-//Programa per aprendre chars//
+//Programa per aprendre chars cabecera descriptiva donfde haces un informe de cun char
 public class InformeCaracter {
     public static void main(String[] args) {
         System.out.println("Caràcter?");
