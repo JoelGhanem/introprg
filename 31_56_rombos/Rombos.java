@@ -1,4 +1,4 @@
-// ejercicio piramidal pabajo
+// no me acepta el comenteario en el prgtest programa que hace rmobos
 public class Rombos {
     public static void main(String[] args) {
         int num;

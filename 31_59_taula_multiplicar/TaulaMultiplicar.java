@@ -1,4 +1,4 @@
-//multiplicaciones 
+//como no me acepta la cabecera digo q la calculadora hace muchas multiplicaciones 
 public class TaulaMultiplicar {
     public static void main(String[] args) {
         int primer = Integer.parseInt(args[0]);
