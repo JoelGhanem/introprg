@@ -3,7 +3,7 @@ public class MatriculaValida {
     public static void main(String[] args) {
         System.out.println("Introduïu una matrícula");
         String matricula = Entrada.readLine();
-        if (matricula.length() >= 7) {
+        if (matricula.length() == 7) {
             char i = 'I';
             char o = 'O';
             char u = 'U';
