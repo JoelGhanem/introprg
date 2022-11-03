@@ -10,6 +10,8 @@ public class SegonaIgualPenultima {
             else if (paraula.charAt(1) == paraula.charAt(paraula.length()-2)) {
                 System.out.println("Segona igual a penúltima");
             }
+            System.out.println("Ves introduïnt texts (finalitza amb enter sol)");
+            paraula = Entrada.readLine();
         }
     }
 }
