@@ -32,7 +32,8 @@ public class MatriculaValida {
             }
         }
         else {
-            System.out.print("tos tus muertos pisaos ninio");
+            System.out.println("No és una matrícula italiana vàlida");
+
         }
     }
 }
