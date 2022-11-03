@@ -12,6 +12,7 @@ public class SegonaIgualPenultima {
             }
             paraula = Entrada.readLine();
         }
+        System.out.println("Adéu");
     }
 }
 
