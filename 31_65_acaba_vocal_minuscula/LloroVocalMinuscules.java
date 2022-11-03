@@ -4,7 +4,7 @@ public class LloroVocalMinuscules {
         String paraula;
         char fin;
         String paraulaLloro;
-        System.out.println("El lloro pregunta paraula que finalitzi amb vocal en minúscules");
+        System.out.println("El lloro pregunta paraula que finalitzi per vocal en minúscules");
         paraula = Entrada.readLine();
         if (paraula.isEmpty() == false) {
             fin = paraula.charAt(0);
@@ -17,7 +17,7 @@ public class LloroVocalMinuscules {
                             System.out.println("El lloro diu: " + paraulaLloro);
                         }
                     }
-                    System.out.println("El lloro pregunta paraula que finalitzi amb vocal en minúscules");
+                    System.out.println("El lloro pregunta paraula que finalitzi per vocal en minúscules");
                     paraula = Entrada.readLine();
 
 
