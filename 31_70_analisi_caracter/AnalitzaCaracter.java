@@ -22,7 +22,7 @@ public class AnalitzaCaracter {
             }
         }
         if (posicio < 0) {
-            car = text.charAt(text.length()-posicio);
+            car = text.charAt(text.length()-Math.abs(posicio));
             if (posicio < text.length()){
                 System.out.println("Fora de rang");
             }
