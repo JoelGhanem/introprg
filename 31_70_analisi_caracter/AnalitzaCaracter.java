@@ -32,7 +32,7 @@ public class AnalitzaCaracter {
             else if (Character.isLetter(car) == false) {
                 System.out.println("'" + car + "' és una altra cosa" );
             }
-            if (posicio < text.length()){
+            else if (posicio < text.length()){
                 System.out.println("Fora de rang");
             }
         }
