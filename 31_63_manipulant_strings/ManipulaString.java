@@ -1,4 +1,6 @@
 //Programa pa mirar documentacion oficial
+//Programa pa mirar documentacion oficial
+//Programa pa mirar documentacion oficial
 public class ManipulaString {
     public static void main(String[] args) {
         System.out.println("Paraula?");
