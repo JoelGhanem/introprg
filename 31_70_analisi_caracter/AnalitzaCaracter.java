@@ -6,11 +6,14 @@ public class AnalitzaCaracter {
         char car = text.charAt(0);
         System.out.println("Posició?");
         int posicio = Integer.parseInt(Entrada.readLine());
+        int largo = text.length();
         if (posicio >= 0) {
-            if (posicio > text.length()) {
+            if (posicio > largo) {
                 System.out.println("Fora de rang");
             }
-            car = text.charAt(posicio);
+            if (largo <= posicio) { 
+                car = text.charAt(posicio);
+            }
             if (Character.isLetter(car)) {
                 System.out.println("'" + car + "' és una lletra" );
             }
