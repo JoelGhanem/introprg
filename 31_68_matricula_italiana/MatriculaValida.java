@@ -18,16 +18,16 @@ public class MatriculaValida {
             char cinco = matricula.charAt(5);
             char seis = matricula.charAt(6);
             if (Character.isUpperCase(cero) && (Character.isUpperCase(uno))  && (Character.isDigit(dos)) &&(Character.isDigit(tres)) && (Character.isDigit(cuatro)) && (Character.isUpperCase(cinco)) && (Character.isUpperCase(seis))) { 
-                if (cero == 73 || cero ==  79 || cero == 81 || cero == 85) { 
+                if (cero < 65 || cero == 73 || cero ==  79 || cero == 81 || cero == 85 || cero > 90) { 
                     System.out.println("No és una matrícula italiana vàlida");
                 }
-                else if (uno == 73 || uno ==  79 || uno == 81 || uno == 85) { 
+                else if (uno < 65 || uno == 73 || uno ==  79 || uno == 81 || uno == 85 || uno > 90) { 
                     System.out.println("No és una matrícula italiana vàlida");
                 }
-                else if (cinco == 73 || cinco ==  79 || cinco == 81 || cinco == 85) { 
+                else if (cinco < 65 || cinco == 73 || cinco ==  79 || cinco == 81 || cinco == 85 || cinco > 90) { 
                     System.out.println("No és una matrícula italiana vàlida");
                 }
-                else if (seis == 73 || seis ==  79 || seis == 81 || seis == 85) { 
+                else if (seis < 65 || seis == 73 || seis ==  79 || seis == 81 || seis == 85 || seis > 90) { 
                     System.out.println("No és una matrícula italiana vàlida");
                 }
                 else {
