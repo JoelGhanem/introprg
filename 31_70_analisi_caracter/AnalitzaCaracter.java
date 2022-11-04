@@ -3,9 +3,9 @@ public class AnalitzaCaracter {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
+        char car = text.charAt(0);
         System.out.println("Posició?");
         int posicio = Integer.parseInt(Entrada.readLine());
-        char car = text.charAt(text.length()-posicio);
         if (posicio >= 0) {
             car = text.charAt(posicio);
             if (posicio > text.length()) {
