@@ -4,7 +4,6 @@ public class AnalitzaCaracter {
         System.out.println("Text?");
         String text = Entrada.readLine();
         char car = 'J';
-        char caracter = 'O';
         System.out.println("Posició?");
         int posicio = Integer.parseInt(Entrada.readLine());
         int largo = text.length();
@@ -16,7 +15,7 @@ public class AnalitzaCaracter {
                 car = text.charAt(posicio);
             }
             if (Character.isLetter(car)) {
-                System.out.println("'" + caracter + "' és una lletra" );
+                System.out.println("'" + car + "' és una lletra" );
             }
             else if (Character.isDigit(car)) {
                 System.out.println("'" + car + "' és un nombre" );
