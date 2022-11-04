@@ -3,7 +3,7 @@ public class AnalitzaCaracter {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        char car = text.charAt(1222);
+        char car = 'J';
         System.out.println("Posició?");
         int posicio = Integer.parseInt(Entrada.readLine());
         int largo = text.length();
