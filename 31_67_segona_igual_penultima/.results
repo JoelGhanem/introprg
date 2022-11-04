@@ -1,0 +1,11 @@
+# Aquest fitxer recull els resultats de prgtest sobre aquest exercici
+# És MOLT IMPORTANT que no el modifiquis de cap manera o prgtest podria deixar de funcionar
+# En cas de modificació o eliminació accidental, parla amb el teu docent.
+#
+2022-11-03T16:03:19.473326,fail,fuh,F)U+dGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?(XLVt0UvOn^b!>ELZDA}nFk~}fGdDCgFf=$aWie$pF*#*8W;8f7W?^MyW;iosG%z<|H#RmbW-Kx=GBPnSFf%bWF,a
+2022-11-03T16:05:04.719339,fail,~IXk,GAv_eGBRp!Wo#,l(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?(XLVt0UvOn^b!>ELZDA}qG&DJ5Vq!2gIAvitVPi96Ff}k`W,MMNmVl_54V`4NjIW%H9G%`0VW-Kx,=GBPn,SFf%bW,F,f,=,qa
+2022-11-03T16:06:32.321541,fail,n,Gc03fGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?(XLVt0UvOn^b!>ELZDA~BWid5kGGaGkVP;`uVP-ipIAk$pIW{n2H8y5BGBaXkFfuVQG-fa?W-Kx=GBP,SFf%bWFg,7w,Y
+2022-11-03T16:07:03.087098,fail,(XLVt0UvOn^b!>ELZDA},G%RCgGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?,jHZ(OjIAvooG-WbmFlIMnVP-ZrG-hKkVl+2pHaKHqF=aC`W@ch6W-Kx=GBPnSFf,%bWFg,7(,g
+2022-11-03T16:07:34.582705,fail,vOn^b!>ELZDA}nW;,H7sLhGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?(XLVt0U,A7CFlJ+9VPRo0Fk@jfFfubTFl0DpH!wJ1IX5&pGdMXpG&waaW-Kx=GBPnSFf%,bW,FgG(,W
+2022-11-03T16:08:35.635524,fail,WMnvFF)(CeHezEeW-K,HY{UiGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?(XLVt0UvOn^b!>ELZDA~AVlz26H90h9VKHT7IA%3CV>UB2V>CB6G+|>k,x=GBP,nSFf,%bWFg,P<,Y
+2022-11-03T16:14:44.000433,pass,BRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@Up6;ib7g05Zed?(XLV,H!NdjG,t0UvOn^b!>ELZDA},iH#IaiWn(!qHDh9AVrDsGVq#-BG-75oIWjggWHMtnHaR&,qHaRdXa4a$~GBPnSF,f%,bWF*Gw,b
