@@ -1,6 +1,6 @@
 /*programa que et diu quin dia de la setmana es segons el numero que escriguis
 */
-public class DiaSetmanaSwitch {
+public class DiaSetmanaSwitchExpr {
     public static void main(String[] args) { 
         int dia = Integer.parseInt(args[0]);
         String diaSetmana;
