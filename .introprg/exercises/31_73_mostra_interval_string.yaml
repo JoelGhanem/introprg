@@ -1,3 +1,5 @@
+_mainclass: MostraInterval
+_version: '2223'
 '01':
   stdin:
   - Java rocks!
@@ -345,5 +347,29 @@
   - a
   - l
   - o
-_mainclass: MostraInterval
-_version: '2223'
+'29':
+  stdin:
+  - Exercici 31_73. Paeonia broteri
+  - '13'
+  - '29'
+  stdout:
+  - text?
+  - inici?
+  - final?
+  - '3'
+  - '.'
+  - ' '
+  - 'P'
+  - 'a'
+  - 'e'
+  - 'o'
+  - 'n'
+  - 'i'
+  - 'a'
+  - ' '
+  - 'b'
+  - 'r'
+  - 'o'
+  - 't'
+  - 'e'
+  - 'r'
