@@ -1,4 +1,4 @@
-// loro jodido
+// loro que acaba de otra amnera a los otros 4 putos loros
 public class LloroAcabaLletra {
     public static void main (String[] args) {
         String paraula;
@@ -19,8 +19,6 @@ public class LloroAcabaLletra {
                     }
                     System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal"); 
                     paraula = Entrada.readLine();
-
-
                 }
             }
         }
