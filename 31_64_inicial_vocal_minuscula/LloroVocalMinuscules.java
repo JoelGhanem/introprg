@@ -1,4 +1,4 @@
-// loro jodido
+// El ejercicio del Loro pero mas complejo 
 public class LloroVocalMinuscules {
     public static void main (String[] args) {
         String paraula;
@@ -19,8 +19,6 @@ public class LloroVocalMinuscules {
                     }
                     System.out.println("El lloro pregunta paraula que comenci amb vocal en minúscules");
                     paraula = Entrada.readLine();
-
-
                 }
             }
         }

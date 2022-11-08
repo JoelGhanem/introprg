@@ -1,4 +1,4 @@
-// loro jodido
+//  Las cabeceras me dan problemas :*(
 public class LloroVocalMinuscules {
     public static void main (String[] args) {
         String paraula;
@@ -19,8 +19,6 @@ public class LloroVocalMinuscules {
                     }
                     System.out.println("El lloro pregunta paraula que finalitzi per vocal en minúscules");
                     paraula = Entrada.readLine();
-
-
                 }
             }
         }
