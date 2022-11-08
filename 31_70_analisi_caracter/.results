@@ -2,24 +2,4 @@
 # És MOLT IMPORTANT que no el modifiquis de cap manera o prgtest podria deixar de funcionar
 # En cas de modificació o eliminació accidental, parla amb el teu docent.
 #
-2022-11-04T11:31:22.083636,fail,PVJ>fSXDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EMqigVq`O8I5{&oHDNY5W;il4WH2x^IWaS4VKXu@VK-(tIAdipFf3*)GB7eSF)=VSF)=,F)U+dGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98c,eRH,8u
-2022-11-04T11:34:32.271299,fail,cVQyh;X>(~`V_|Y(V{~P5EMYNWVlz22GBRN^FlAyeVmCH7GBY`1GB`IhGB9RjV>UB5F=JvhV,GAv_eGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@UpFv,=QJYGB7eSF)=VSF)=e,VGB,5
-2022-11-04T11:35:22.717252,fail,9r*db82s4Ze(F~b98cPVJ>fSXDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EMhY>VK,Gc03fGBRp!Wo#~IXkl(;Z,QPcGBILhVK`(oWi>W1HfA(2Ha0,b,5GB7t`H)b?2Vlgu?V=,QJYGB7eSF),=VSF)=eVG,B5
-2022-11-04T11:36:16.336280,fail,XDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EI45~H#9P2WMN}BF*Y(ZW;8i4W->W9WHx,G%RCgGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fS,1GVP<AAF=J&kH83({VJv,1WGB7,eSF)=VS,F)=,eX,F),{
-2022-11-04T11:37:14.411667,fail,~b98cPVJ>fSXDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EH^k~Vq`I5Ha9djH(@elHD)nkFfwH^IW{;oFk~_^Hf3UAI5spmWh`baGB7eSF)=VSF,H7sLhGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F,)=e,YF,gX
-2022-11-04T11:38:30.128438,fail,p!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>,HY{UiGBR,fSXDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EHY$aHf3WtWH~i4W;tazG&C|bIbmaAVrF77GcYzYGiEh7GG;h,AGAw2+GB7eSF)=VSF)=,e,Z,GB,p
-2022-11-04T11:39:00.455260,fail,BRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EM#P1H(_HiHa9RiG%;l}Vq;-4HexhpIAk<pV>mcAF=04kIWb{nF)U^*GB7eSF)=VSF)=eZH8,H!NdjG,l
-2022-11-04T11:40:03.966777,fail,h;X>(~`V_|Y(V{~P5EM+z|H(_BkV>mK7GB;r,I4omkGBRp!Wo#~IXkl(;Z9r*db82s4Ze(F~b98cPVJ>fSXDl-@UpFvcVQy,}IW,%EmWHUK6He_NoHD)<6I5lQtW;Zi8Ff3*)GB,7eSF)=V,SF)=,e,a,H8,}
-2022-11-04T11:41:40.159749,fail,db82s4Ze(F~b98cPVJ>fSXDl-@UpFvcVQyh;X>(~`V_|Y(V{~P5EI2YXVlic9W->KoG&W*6F*h+YG-hTtWn,IV@vlGBRp!Wo#~IXkl(;Z9r*,pGvFl1(7G,&o^lW;SMIIV@%@GB7eSF),=,VSF)=hT,G,d2
-2022-11-04T11:42:21.210208,fail,AI5K28W?^MxH90jhF=H%dEHW@MG,F)%D+W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax5@1HD)qlG-ES1VKO!~H(_BlG%zzYGdX2,BGh,QG%+z,WGB7,s
-2022-11-04T11:43:08.419548,fail,a%U_vF<&<@Utw,F)=J-W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJ,-xY-w|8Ut?i%VPkY<ax6GBGdMJ6F=99|F=9A0Fl9Jl,G%+}0V`VouVPj-sGc;y2WHn(lG%_q^EHW@MGBG,hQG%+zWGc,Yv
-2022-11-04T11:43:45.769336,fail,mGVKFRbEHW@,F)}P;W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax61sH8x^lVlp{nW@BVwFgQ3gWim2jWietmGdMLfVlZVkIAv,MGBGhQG%+zWG,c+,&
-2022-11-04T11:45:06.739921,fail,7nYWHc,F*7V<W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax7tEIbvirW@b5LH8nV7W;9|rG-YFAF=jJiF*ss3HaRpjGB,;hEHW@MGBGhQG%+zW,H,8,3#
-2022-11-04T11:46:54.938722,fail,Gb=W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY,F*,<ax5@nHD+NqW@TYvH83zXH8D41HDxw,sGdW~5Vr,4iuWH@AFHDWX|I5aF~EHW@M,GBGhQG%+zWHZ,?E
-2022-11-04T11:54:42.778717,fail,+?|GB+_{VP-aAHDfe0I5IL}I5A^5F*Ph^EHW@MGBGhQG%+zXG&,F*Ph>W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax7+LIb=6BVl_1|VKZYlG%,3{
-2022-11-04T11:55:43.447469,fail,%+zX,F*Yn?W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax6D7V=`qjVPs`6GdN{1GGQ=dF*jmmWo2VEGB9O0W;if3Fk)jcGdC<|EHW@MGBGhQG,H8,V2
-2022-11-04T11:56:24.433953,fail,XJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax6,F*ht@W->BrZ)I#Q,DwGdVC~GC5^pF=RJ1F*Z0hG-Y8hGGb<CH,#THpH,D)+wV>UK,8FkviaEHW@MGBGhQG%+z,XH,Z,eH
-2022-11-04T11:57:50.250414,fail,#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPk,F*qz^W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b,Y<ax7vsIX5#mGdMUiVKX&2GGaMnG&VFiV>x1DH)CXFW@KhIWjA6qHDoMiEHW@MGBGhQG%+zXH#9,N
-2022-11-04T11:58:14.911425,fail,z(_W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax6GzH)A$2VK`=GI5;&kVmV=BG%`3fGBY<YVr4WrI5%cCV=_27HDWAgEHW@MGB,F*,GhQG%+,zXI,59,8
-2022-11-04T21:07:01.508228,fail,oFf}Y@EHW@MGBGhQG%_(THZ,GB7M-W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax7&yWjA6oHa9Y2Heq8iVK+E2VKFy2WH2@|G+|<8V>CE4WMMZ,d^
-2022-11-04T21:08:19.569508,fail,9UhV>4r7Ff}Y@E,GBGS;W->BrZ)I#QXJ}z=Wo<xdWpiq8VQyq$b#rubX<;sJa%U_vF<&<@Utw-xY-w|8Ut?i%VPkY<ax6D8WHmEnV>U53HaTQvF=j9|Fkxe4Wo0xrG&wafF*,HW@MGBGhQG%_(TI59,K
+2022-11-08T19:11:52.185406,fail,Z((j^VRdtKa%o{MZ*pfWGc,V`efkYHww1E@x<AZe?viX=QV2,jK`FkfMAVQgu0X<uVua$#e1WpXTLG&MFeGGb+AF=S&fWH~T6GBsm1W-&7~WHn`FGB{*0,GC4VAI5}Y~W-Kx=GBPnSFgP(eF)=,hZ
