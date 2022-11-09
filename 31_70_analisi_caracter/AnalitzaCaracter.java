@@ -10,9 +10,10 @@ public class AnalitzaCaracter {
         if (posicio >= 0) {
             if (posicio > largo) {
                 System.out.println("Fora de rang");
-            }
-            else if (largo > posicio) { 
-                car = text.charAt(posicio);
+
+                if (largo > posicio) { 
+                    car = text.charAt(posicio);
+                }
             }
             else if (Character.isLetter(car)) {
                 System.out.println("'" + car + "' és una lletra" );
