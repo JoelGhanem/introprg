@@ -14,13 +14,13 @@ public class AnalitzaCaracter {
             if (largo > posicio) { 
                 car = text.charAt(posicio);
             }
-            else if (Character.isLetter(car)) {
+            if (Character.isLetter(car)) {
                 System.out.println("'" + car + "' és una lletra" );
             }
-            else if (Character.isDigit(car)) {
+            if (Character.isDigit(car)) {
                 System.out.println("'" + car + "' és un nombre" );
             }
-            else if (Character.isLetter(car) == false) {
+            if (Character.isLetter(car) == false) {
                 System.out.println("'" + car + "' és una altra cosa" );
             }
         }
