@@ -25,7 +25,7 @@ public class AnalitzaCaracter {
             }
         }
         if (posicio < 0) {
-            car = text.charAt(text.length()-posicio);
+            car = text.charAt(text.length()-Math.abs(posicio));
             if (Character.isLetter(car)) {
                 System.out.println("'" + car + "' és una lletra" );
             }
