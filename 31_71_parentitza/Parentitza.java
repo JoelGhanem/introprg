@@ -3,8 +3,8 @@ public class Parentitza {
     public static void main(String[] args){
         System.out.println("Text?");
         String text = Entrada.readLine();
-        for (int parentesis = 0; parentesis <= text.length(); parentesis ++){
-        System.out.print("(" + text.charAt(parentesis) + ")");
+        for (int num = 0; num <= text.length(); num ++){
+        System.out.print("(" + text.charAt(num) + ")");
         }
     }
 }
