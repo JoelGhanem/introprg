@@ -4,7 +4,7 @@ public class Parentitza {
         System.out.println("Text?");
         String text = Entrada.readLine();
         for (int num = 0; num <= text.length(); num ++){
-        System.out.print("(" + text.charAt(num) + ")");
+        System.out.print(text.charAt(num));
         }
     }
 }
