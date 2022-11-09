@@ -20,7 +20,7 @@ public class AnalitzaCaracter {
             if (Character.isDigit(car)) {
                 System.out.println("'" + car + "' és un nombre" );
             }
-            if (Character.isLetter(car) == false) {
+            if (Character.isLetter(car) == false && Character.isDigit(car) == false) {
                 System.out.println("'" + car + "' és una altra cosa" );
             }
         }
