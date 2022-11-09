@@ -13,9 +13,9 @@ public class AnalitzaCaracter {
             }
             if (largo > posicio) { 
                 car = text.charAt(posicio);
-            }
-            if (Character.isLetter(car)) {
-                System.out.println("'" + car + "' és una lletra" );
+                if (Character.isLetter(car)) {
+                    System.out.println("'" + car + "' és una lletra" );
+                }
             }
             else if (Character.isDigit(car)) {
                 System.out.println("'" + car + "' és un nombre" );
