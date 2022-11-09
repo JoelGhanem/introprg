@@ -25,20 +25,25 @@ public class AnalitzaCaracter {
                 System.out.println("'" + car + "' és una altra cosa" );
             }
         }
-        if (posicio < 0) {
-            car = text.charAt(text.length()-Math.abs(posicio));
-            if (Character.isLetter(car)) {
-                System.out.println("'" + car + "' és una lletra" );
+        if ((posicio < largoNegativo) == false) {
+            if (posicio < 0) {
+                car = text.charAt(text.length()-Math.abs(posicio));
+                if (Character.isLetter(car)) {
+                    System.out.println("'" + car + "' és una lletra" );
+                }
+                else if (Character.isDigit(car)) {
+                    System.out.println("'" + car + "' és un nombre" );
+                }
+                else if (Character.isLetter(car) == false) {
+                    System.out.println("'" + car + "' és una altra cosa" );
+                }
+                else if (posicio < text.length()){
+                    System.out.println("Fora de rang");
+                }
             }
-            else if (Character.isDigit(car)) {
-                System.out.println("'" + car + "' és un nombre" );
-            }
-            else if (Character.isLetter(car) == false) {
-                System.out.println("'" + car + "' és una altra cosa" );
-            }
-            else if (posicio < text.length()){
-                System.out.println("Fora de rang");
-            }
+        }
+        else if (posicio < largoNegativo) {
+            System.out.println("Fora de rang");
         }
     }
 }
