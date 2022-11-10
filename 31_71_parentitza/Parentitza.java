@@ -5,7 +5,11 @@ public class Parentitza {
         String text = Entrada.readLine();
         for (int num = 0; num < text.length(); num ++){
             if (Character.isLetter(text.charAt(num))) {
-                System.out.print("(" + text.charAt(num) + ")");
+                System.out.print("(");
+            }
+            System.out.print(text.charAt(num));
+            if (Character.isLetter(text.charAt(num))) {
+                System.out.print(")");
             }
         }
     }
