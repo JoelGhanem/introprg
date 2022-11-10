@@ -8,7 +8,7 @@ public class NomesLletres {
             System.out.print(text.charAt(num));
             }
             if (Character.isLetter(text.charAt(num))) {
-            System.out.print(",");
+            System.out.print(", ");
             }
         }
     }
