@@ -3,7 +3,6 @@ public class Parentitza {
     public static void main(String[] args){
         System.out.println("Text?");
         String text = Entrada.readLine();
-        System.out.println(text.length());
         for (int num = 0; num < text.length(); num ++){
             System.out.print("(" + text.charAt(num) + ")");
         }
