@@ -1,0 +1,43 @@
+_mainclass: ParaulesReves
+_version: '2223'
+'01':
+  stdin:
+  - a
+  stdout:
+  - Text?
+  - a
+'02':
+  stdin:
+  - ab
+  stdout:
+  - Text?
+  - ba
+'03':
+  stdin:
+  - abc
+  stdout:
+  - Text?
+  - cba
+'04':
+  stdin:
+  - Es gibt keinen Weg zurück
+  stdout:
+  - Text?
+  - sE tbig neniek geW kcüruz
+'05':
+  stdin:
+  - 'Tot el que diuen de Windows és fals!'
+  stdout:
+  - Text?
+  - 'toT le euq neuid ed swodniW sé slaf!'
+'06':
+  stdin:
+  - 'Més  espais  que  no  em  pensava  !  '
+  stdout:
+  - Text?
+  - 'séM  siapse  euq  on  me  avasnep  !  '
+'07':
+  stdin:
+  - ''
+  stdout:
+  - Text?
