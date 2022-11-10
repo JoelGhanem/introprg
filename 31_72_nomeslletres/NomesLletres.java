@@ -8,7 +8,7 @@ public class NomesLletres {
             if (Character.isLetter(text.charAt(num))) {
                 limpia = limpia + text.charAt(num); 
                 System.out.print(limpia);
-                for (int numero = 0; num < limpia.length(); numero ++) {
+                for (int numero = 0; numero < limpia.length(); numero ++) {
                     System.out.print(", ");
                 }
             }
