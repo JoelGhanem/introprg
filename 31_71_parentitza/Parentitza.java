@@ -1,4 +1,4 @@
-//cabecera descriptiva pq no para de joder el prgtest, (insertar descripcion guap'isdima)
+//cabecera descriptiva pq no para de joder el prgtest, (insertar descripcion guapisima)
 public class Parentitza {
     public static void main(String[] args){
         System.out.println("Text?");
