@@ -13,7 +13,7 @@ public class LloroAcabaLletra {
                     paraulaLloro = paraula; 
                     fin = paraula.charAt(paraula.length()-1);
                     if (Character.isLetter(fin)) {
-                        if (fin != 'a' && fin != 'e' && fin != 'i' && fin != 'o' && fin != 'u' && fin != 'A' && fin != 'E' && fin != 'O' && fin != 'U') {
+                        if (fin != 'a' && fin != 'e' && fin != 'i' && fin != 'o' && fin != 'u' && fin != 'A' && fin != 'E' && fin != 'O' && fin !='I' && fin != 'U') {
                             System.out.println("El lloro diu: " + paraulaLloro);
                         }
                     }
