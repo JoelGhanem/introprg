@@ -5,10 +5,9 @@ public class NomesLletres {
         String text = Entrada.readLine();
         for (int num = 0; num < text.length(); num++) {
             if (Character.isLetter(text.charAt(num))) {
-                System.out.print(text.charAt(num));
-            }
-            if (Character.isLetter(text.charAt(num))) {
-                if (Character.isLetter(text.length()-2) == false ) {
+                String limpia = (Character.isLetter(text.charAt(num)) == true);
+                System.out.print(limpia);
+                for (int numero = 0; num < limpia.length(); numero ++) {
                     System.out.print(", ");
                 }
             }
