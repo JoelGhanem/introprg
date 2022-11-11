@@ -1,4 +1,4 @@
-//Programa que te dice el valor mas proximo
+//Programa que te dice el valor mas proximo algo
 public class TrobaMesProxim {
     public static void main(String[] args) {
         int ancora = 0;
