@@ -13,7 +13,6 @@ public class EsEnter {
                 else {
                     numerico = (numerico * 0);
                 }
-                numero = Entrada.readLine();
             }
             if (numerico != 1) {
                 System.out.println("És enter");
@@ -21,6 +20,7 @@ public class EsEnter {
             else {
                 System.out.println("No és enter");
             }
+                numero = Entrada.readLine();
         }
         System.out.println("Adéu");
     }
