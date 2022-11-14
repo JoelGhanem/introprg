@@ -7,31 +7,28 @@ public class MostraInterval {
         int inici = Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
         int fi = Integer.parseInt(Entrada.readLine());
-        if (fi > text.length()) {
+        if (inici < 0) {
+            inici = 0;
+        }
+        else if (inici > text.length()) {
+            inici = (text.length()-1);
+        }
+        if (fi < 0) {
+            fi = 0;
+        }
+        else if (fi > text.length()) {
             fi = (text.length()-1);
         }
-        if (inici < 0) {
-            for (int num = 0; num <= fi; num ++) {
-                System.out.println(text.charAt(num));
+        //cuando inicio es mayor a fi
+        if (inici > fi) {
+            for (int num = inici; num >= fi; num ++) {
+                System.out.println(text.charAt(num)); 
             }
-        }
-        else if (inici < fi) {
-            if (inici > 0) {
-                for (int num = inici; num <= fi; num ++) {
+            }else {
+                //cuando inici es igual o menor a fi
+                for (int num = fi; num > inici; num --) {
                     System.out.println(text.charAt(num));
                 }
             }
-        }
-        else {
-            if (inici > text.length()) {
-                inici = (text.length()-1);
-            }
-            if (fi < 0) {
-                System.out.println(text.charAt(0));
-            }
-            for (int num = inici; num >= fi; num --) {
-                System.out.println(text.charAt(num));
-            }
-        }
     }
 }
