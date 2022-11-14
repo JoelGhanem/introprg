@@ -5,6 +5,9 @@ public class CadenaContinua {
         String text = Entrada.readLine();
         System.out.println("Nombre?");
         int nombre = Integer.parseInt(Entrada.readLine());
+        if (text.isEmpty()) {
+            System.out.println("error");
+        }
         for (int num = 0; num <= nombre; num ++) {
             if (num > nombre) {
                 num = 0;
