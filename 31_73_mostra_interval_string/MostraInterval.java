@@ -10,10 +10,10 @@ public class MostraInterval {
         if (fi > text.length()) {
             fi = (text.length()-1);
         }
-        if (fi < text.length()) {
+        else if (fi < text.length()) {
             fi = text.charAt(0);
         }
-        if (inici < 0) {
+        else if (inici < 0) {
             for (int num = 0; num <= fi; num ++) {
                 System.out.println(text.charAt(num));
             }
