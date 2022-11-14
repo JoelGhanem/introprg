@@ -16,6 +16,9 @@ public class MostraInterval {
             }
         }
         else {
+            if (inici > text.length()) {
+                inici = (text.length()-1);
+            }
             for (int num = inici; num >= fi; num --) {
                 System.out.println(text.charAt(num));
             }
