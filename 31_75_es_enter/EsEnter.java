@@ -19,5 +19,6 @@ public class EsEnter {
         else {
             System.out.println("No és enter");
         }
+        System.out.println("Adéu");
     }
 }
