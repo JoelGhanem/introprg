@@ -2,13 +2,17 @@
 public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
+        int numero = 1;
         String text = Entrada.readLine();
         if (text.isEmpty()) {
             System.out.println("error");
         }
         System.out.println("Nombre?");
         String nombre = Entrada.readLine();
-        int numero = Integer.parseInt(nombre);
+        if (!text.isEmpty()) {
+            System.out.println("error");
+            numero = Integer.parseInt(nombre);
+        }
         for (int num = 0; num <= numero; num ++) {
             if (num > numero) {
                 num = 0;
