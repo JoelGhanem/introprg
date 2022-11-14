@@ -6,13 +6,11 @@ public class EsEnter {
         int largo = numero.length();
         int numerico = 1;
         for (int num = 0; num <= largo; num ++) {
-            while (Character.isLetter(numero.charAt(num))) {
-                if (Character.isLetter(numero.charAt(num))) {
-                    numerico = (numerico * 1);
-                }
-                else {
-                    numerico = (numerico * 0);
-                }
+            if (Character.isLetter(numero.charAt(num))) {
+                numerico = (numerico * 1);
+            }
+            else {
+                numerico = (numerico * 0);
             }
         }
         if (numerico == 1) {
