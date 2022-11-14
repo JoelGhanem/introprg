@@ -10,7 +10,7 @@ public class EndevinaNombre {
 public static void main(String[] args) {
 
 int numeroPensat = Integer.parseInt(args[0]); // variable + declaració
-int numero = numeroPensat * 23; // inicialització de la variable numero
+int numero = numeroPensat * 3; // inicialització de la variable numero
 
 // pensa un número
 System.out.print("El número pensat és ");
