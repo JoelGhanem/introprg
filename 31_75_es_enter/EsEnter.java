@@ -6,6 +6,7 @@ public class EsEnter {
         int largo = numero.length();
         int numerico = 1;
         char cero = numero.charAt(0);
+        while (!numero.isEmpty()) {
         for (int num = 1; num < largo; num ++) {
             if (!numero.isEmpty()) {
                 if (cero == '-') {
@@ -25,6 +26,7 @@ public class EsEnter {
             System.out.println("No és enter");
         }
         numero = Entrada.readLine();
+        }
         System.out.println("Adéu");
     }
 }
