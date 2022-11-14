@@ -18,14 +18,14 @@ public class EsEnter {
                         }
                     }
                 }
-            if (numerico == 1) {
-                System.out.println("És enter");
-            }
-            else {
-                System.out.println("No és enter");
+                if (numerico == 1) {
+                    System.out.println("És enter");
+                }
+                else {
+                    System.out.println("No és enter");
+                }
             }
             numero = Entrada.readLine();
-        }
         }
         System.out.println("Adéu");
     }
