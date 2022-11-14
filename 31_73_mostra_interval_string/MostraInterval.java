@@ -8,8 +8,11 @@ public class MostraInterval {
         System.out.println("final?");
         int fi = Integer.parseInt(Entrada.readLine());
         if (inici <= 0) {
-            for (int num = 0; num <= fi; num ++) {
-                System.out.println(text.charAt(num));
+            if (fi > text.length()) {
+                fi = (text.length()-1);
+                for (int num = 0; num <= fi; num ++) {
+                    System.out.println(text.charAt(num));
+                }
             }
         }
         else if (inici < fi) {
