@@ -7,7 +7,13 @@ public class MostraInterval {
         int inici = Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
         int fi = Integer.parseInt(Entrada.readLine());
-        if (inici > text.length()) {
+        if (inici < 0 && fi < 0) {
+            System.out.println("");
+        }
+        if (inici < 0) {
+            inici = 0;
+        }
+        else if (inici > text.length()) {
             inici = (text.length()-1);
         }
         if (fi > text.length()) {
@@ -15,9 +21,6 @@ public class MostraInterval {
         }
         else if (fi < 0) {
             fi = 0;
-        }
-        if (inici < 0) {
-            inici = 0;
         }
         if (inici == fi) {
             System.out.print(text.charAt(fi));
