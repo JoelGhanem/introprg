@@ -13,7 +13,9 @@ public class MostraInterval {
             }
         }
         else if (inici > text.length()) {
-            System.out.println("negatvio");
+            for (int num = (text.length()-1); num >= fi; num --) {
+                System.out.println(text.charAt(num));
+            }
         }
         else if (inici < fi) {
             for (int num = inici; num <= fi; num ++) {
