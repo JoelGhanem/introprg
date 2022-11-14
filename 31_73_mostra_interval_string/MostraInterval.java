@@ -10,16 +10,16 @@ public class MostraInterval {
         if (inici < 0 && fi < 0) {
             System.out.println("");
         }
-        else if (inici < 0) {
+        if (inici < 0) {
             inici = 0;
         }
-        else if (inici > text.length()) {
+        if (inici > text.length()) {
             inici = (text.length()-1);
         }
         if (fi > text.length()) {
             fi = (text.length()-1);
         }
-        else if (fi < 0) {
+        if (fi < 0) {
             fi = 0;
         }
         if (inici == fi) {
