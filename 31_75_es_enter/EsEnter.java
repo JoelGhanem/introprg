@@ -5,13 +5,16 @@ public class EsEnter {
         String numero = Entrada.readLine();
         int largo = numero.length();
         int numerico = 1;
-        for (int num = 0; num < largo; num ++) {
+        char cero = numero.charAt(0);
+        for (int num = 1; num < largo; num ++) {
             if (!numero.isEmpty()) {
-                if (Character.isDigit(numero.charAt(num))) {
-                    numerico = (numerico * 1);
-                }
-                else {
-                    numerico = (numerico * 0);
+                if (cero == '-') {
+                    if (Character.isDigit(numero.charAt(num))) {
+                        numerico = (numerico * 1);
+                    }
+                    else {
+                        numerico = (numerico * 0);
+                    }
                 }
             }
         }
