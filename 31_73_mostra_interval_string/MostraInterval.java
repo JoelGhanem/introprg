@@ -7,7 +7,7 @@ public class MostraInterval {
         int inici = Integer.parseInt(Entrada.readLine());
         System.out.println("final?");
         int fi = Integer.parseInt(Entrada.readLine());
-        if (inici > fi) {
+        if (inici < fi) {
             if (inici < 0) {
                 inici = 0;
             }
