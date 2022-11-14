@@ -19,9 +19,9 @@ public class MostraInterval {
         else if (fi > text.length()) {
             fi = (text.length()-1);
         }
-        //cuando inicio es mayor a fi
+        //cuando inicio es menor a fi
         if (inici < fi) {
-            for (int num = inici; num >= fi; num ++) {
+            for (int num = inici; num <= fi; num ++) {
                 System.out.println(text.charAt(num)); 
             }
             }else {
