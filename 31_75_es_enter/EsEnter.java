@@ -6,19 +6,21 @@ public class EsEnter {
         int largo = numero.length();
         int numerico = 1;
         for (int num = 0; num < largo; num ++) {
-            if (Character.isLetter(numero.charAt(num))) {
-                numerico = (numerico * 1);
+            if (!numero.isEmpty()) {
+                if (Character.isLetter(numero.charAt(num))) {
+                    numerico = (numerico * 1);
+                }
+                else {
+                    numerico = (numerico * 0);
+                }
+                numero = Entrada.readLine();
+            }
+            if (numerico != 1) {
+                System.out.println("És enter");
             }
             else {
-                numerico = (numerico * 0);
+                System.out.println("No és enter");
             }
-            numero = Entrada.readLine();
-        }
-        if (numerico != 1) {
-            System.out.println("És enter");
-        }
-        else {
-            System.out.println("No és enter");
         }
         System.out.println("Adéu");
     }
