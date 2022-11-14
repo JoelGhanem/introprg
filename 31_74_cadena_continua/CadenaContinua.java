@@ -7,7 +7,6 @@ public class CadenaContinua {
         if (text.isEmpty()) {
             System.out.println("error");
         }
-        System.out.println("Nombre?");
         if (!text.isEmpty()) {
             System.out.println("Nombre?");
             numero = Integer.parseInt(Entrada.readLine());
