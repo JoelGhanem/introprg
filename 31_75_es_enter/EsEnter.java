@@ -20,8 +20,8 @@ public class EsEnter {
             else {
                 System.out.println("No és enter");
             }
-                numero = Entrada.readLine();
         }
+                numero = Entrada.readLine();
         System.out.println("Adéu");
     }
 }
