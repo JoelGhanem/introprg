@@ -3,11 +3,11 @@ public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        System.out.println("Nombre?");
-        int nombre = Integer.parseInt(Entrada.readLine());
         if (text.isEmpty()) {
             System.out.println("error");
         }
+        System.out.println("Nombre?");
+        int nombre = Integer.parseInt(Entrada.readLine());
         for (int num = 0; num <= nombre; num ++) {
             if (num > nombre) {
                 num = 0;
