@@ -17,6 +17,9 @@ public class MostraInterval {
                 System.out.println(text.charAt(num));
             }
         }
+        else if (inici < 0) {
+            System.out.println("negatvio");
+        }
         else if (fi >= text.length()) {
             for (int num = inici; num < text.length(); num ++) {
                 System.out.println(text.charAt(num));
