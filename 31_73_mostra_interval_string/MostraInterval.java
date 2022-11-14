@@ -11,12 +11,12 @@ public class MostraInterval {
             if (inici < 0) {
                 inici = 0;
             }
-            for (int num = inici; inici <= fi; num ++) {
+            for (int num = inici; num <= fi; num ++) {
                 System.out.println(text.charAt(num));
             }
         }
         else {
-            for (int num = fi; fi > inici; num --) {
+            for (int num = fi; num > inici; num --) {
                 System.out.println(text.charAt(num));
             }
         }
