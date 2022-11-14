@@ -9,7 +9,7 @@ public class MostraInterval {
         int fi = Integer.parseInt(Entrada.readLine());
         if (inici <= 0) {
             if (fi > text.length()) {
-                fi = text.charAt(text.length());
+                fi = text.charAt(text.length()-1);
                 for (int num = 0; num <= fi; num ++) {
                     System.out.println(text.charAt(num));
                 }
