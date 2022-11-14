@@ -7,7 +7,7 @@ public class EsEnter {
         int numerico = 1;
         for (int num = 0; num < largo; num ++) {
             if (!numero.isEmpty()) {
-                if (Character.isLetter(numero.charAt(num))) {
+                if (Character.isDigit(numero.charAt(num))) {
                     numerico = (numerico * 1);
                 }
                 else {
@@ -15,7 +15,7 @@ public class EsEnter {
                 }
             }
         }
-        if (numerico != 1) {
+        if (numerico == 1) {
             System.out.println("És enter");
         }
         else {
