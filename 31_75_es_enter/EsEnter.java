@@ -7,25 +7,25 @@ public class EsEnter {
         int numerico = 1;
         char cero = numero.charAt(0);
         while (!numero.isEmpty()) {
-        for (int num = 1; num < largo; num ++) {
-            if (!numero.isEmpty()) {
-                if (cero == '-') {
-                    if (Character.isDigit(numero.charAt(num))) {
-                        numerico = (numerico * 1);
-                    }
-                    else {
-                        numerico = (numerico * 0);
+            for (int num = 1; num < largo; num ++) {
+                if (!numero.isEmpty()) {
+                    if (cero == '-') {
+                        if (Character.isDigit(numero.charAt(num))) {
+                            numerico = (numerico * 1);
+                        }
+                        else {
+                            numerico = (numerico * 0);
+                        }
                     }
                 }
             }
-        }
-        if (numerico == 1) {
-            System.out.println("És enter");
-        }
-        else {
-            System.out.println("No és enter");
-        }
-        numero = Entrada.readLine();
+            if (numerico == 1) {
+                System.out.println("És enter");
+            }
+            else {
+                System.out.println("No és enter1");
+            }
+            numero = Entrada.readLine();
         }
         System.out.println("Adéu");
     }
