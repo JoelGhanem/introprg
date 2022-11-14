@@ -20,7 +20,7 @@ public class EsEnter {
                 }
             }
             if (numerico == 1) {
-                System.out.println("És enter");
+                System.out.println("És enter1");
             }
             else {
                 System.out.println("No és enter1");
