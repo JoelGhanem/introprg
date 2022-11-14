@@ -7,12 +7,10 @@ public class CadenaContinua {
             System.out.println("error");
         }
         System.out.println("Nombre?");
-        if (text.isEmpty()) {
-            System.out.println("error");
-        }
-        int nombre = Integer.parseInt(Entrada.readLine());
-        for (int num = 0; num <= nombre; num ++) {
-            if (num > nombre) {
+        String nombre = Entrada.readLine();
+        int numero = Integer.parseInt(nombre);
+        for (int num = 0; num <= numero; num ++) {
+            if (num > numero) {
                 num = 0;
                 System.out.println(text.charAt(num));
             }
