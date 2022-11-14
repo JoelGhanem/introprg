@@ -4,7 +4,7 @@ public class EsEnter {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String numero = Entrada.readLine();
         int largo = numero.length();
-        int numerico = 1;
+        int numerico = 2;
         char cero = numero.charAt(0);
         while (!numero.isEmpty()) {
             for (int num = 1; num < largo; num ++) {
@@ -18,14 +18,14 @@ public class EsEnter {
                         }
                     }
                 }
-                if (numerico == 1) {
-                    System.out.println("És enter");
-                }
-                else {
-                    System.out.println("No és enter");
-                }
+            if (numerico == 1) {
+                System.out.println("És enter");
+            }
+            else {
+                System.out.println("No és enter");
             }
             numero = Entrada.readLine();
+        }
         }
         System.out.println("Adéu");
     }
