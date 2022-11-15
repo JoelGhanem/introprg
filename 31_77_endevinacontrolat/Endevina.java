@@ -7,11 +7,9 @@ public class Endevina {
         int numero = 1;
         int numeroPensat = 42;
         String valor;
-        System.out.println("Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat");
-        System.out.println("Introdueix un valor");
+        System.out.println("Nombre?");
         valor = Entrada.readLine();
         numero = Integer.parseInt(valor);
-        System.out.println(numero);
         while (numero != numeroPensat) {
             if (numero <= 0) {
                 System.out.println("Com a mínim 1");
