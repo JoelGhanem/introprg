@@ -8,7 +8,7 @@ public class VocalsMajuscules {
         arreglao = text;
             if(text.charAt(num) == 'a' || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
                 Character.toUpperCase(num);
-                arreglao = Character.toString(text.charAt(num));
+                arreglao = arreglao + text.charAt(num);
             }else {
                 Character.toLowerCase(num);
             }
