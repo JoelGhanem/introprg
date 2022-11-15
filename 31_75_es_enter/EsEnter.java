@@ -8,7 +8,7 @@ public class EsEnter {
         int si = 1;
         while (!numero.isEmpty()) {
             for (int num = 1; num < largo; num ++) {
-                if (Character.isDigit(numero.charAt(num))) {
+                if (!Character.isLetter(numero.charAt(num))) {
                     si = (si * 1);
                 }else {
                     si = (si * 0);
