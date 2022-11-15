@@ -4,25 +4,15 @@ public class EsEnter {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String numero = Entrada.readLine();
         int largo = numero.length();
-        int numerico = 2;
         char cero = numero.charAt(0);
         while (!numero.isEmpty()) {
             for (int num = 1; num < largo; num ++) {
                 if (!numero.isEmpty()) {
-                    if (cero == '-') {
-                        if (Character.isDigit(numero.charAt(num))) {
-                            numerico = (numerico * 1);
-                        }
-                        else {
-                            numerico = (numerico * 0);
-                        }
+                    if (Character.isDigit(numero.charAt(num))) {
+                        System.out.println("És enter");
+                    } else  {
+                        System.out.println("No és enter");
                     }
-                }
-                if (numerico == 1) {
-                    System.out.println("És enter");
-                }
-                else if (numerico == 0) {
-                    System.out.println("No és enter");
                 }
             }
             numero = Entrada.readLine();
