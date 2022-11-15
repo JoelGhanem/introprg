@@ -6,11 +6,9 @@ public class VocalsMajuscules {
         String arreglao = "";
         char algo;
         for (int num = 0; num < text.length();num++) {
-            if (Character.isLowerCase(text.charAt(num))) {
                 if(text.charAt(num) == 'a' || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
                     algo = Character.toUpperCase(text.charAt(num));
                     arreglao = arreglao + algo;
-                }
             }else {
                 algo = Character.toLowerCase(text.charAt(num));
                 arreglao = arreglao + algo;
