@@ -8,12 +8,14 @@ public class NomesLletres {
         String cadenaFinal = "";
         char letra;
         int largo = text.length();
+        boolean check = false;
         for (int num = 0; num < largo; num++) {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
                 cadena  = cadena + letra;
-                if (letra == cadena.charAt(0)) {
+                if (check == false) {
                     System.out.print(letra);
+                    check = true;
                 }else {
                     System.out.print(", " + letra);
                 }
