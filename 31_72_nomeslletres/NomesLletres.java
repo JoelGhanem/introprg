@@ -5,7 +5,7 @@ public class NomesLletres {
         System.out.println("Text?");
         String text = Entrada.readLine();
         System.out.print(text.charAt(0));
-        for (int num = 0; num < text.length(); num++) {
+        for (int num = 1; num < text.length(); num++) {
             if (Character.isLetter(text.charAt(num))) {
                 System.out.print(", " + text.charAt(num));
             }
