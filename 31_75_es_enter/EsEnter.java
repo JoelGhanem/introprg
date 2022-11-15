@@ -25,11 +25,14 @@ public class EsEnter {
                     correcto = true;
                 }
             }
+            // si es cierto que hay simbolo
             if (simbolo == true) {
                 System.out.println("No és enter");
+                //si es cierto que hay una letra
             } else if(letra == true)  {
                 System.out.println("No és enter");
-            } else if (correcto == true) {
+                //si es cierto que es un digito
+            } else {
                 System.out.println("És enter");
             }
             numero = Entrada.readLine();
