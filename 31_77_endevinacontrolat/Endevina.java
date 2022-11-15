@@ -13,22 +13,22 @@ public class Endevina {
         while (numero != numeroPensat) {
             if (numero <= 0) {
                 System.out.println("Com a mínim 1");
-                System.out.println("Introdueix un valor");
+                System.out.println("Nombre?");
                 numero = Integer.parseInt(Entrada.readLine());
             }
             else if (numero > 100) {
                 System.out.println("Com a màxim 100");
-                System.out.println("Introdueix un valor");
+                System.out.println("Nombre?");
                 numero = Integer.parseInt(Entrada.readLine());
             }
             else if (numero > numeroPensat) {
                 System.out.println("És més petit que " + numero);
-                System.out.println("Introdueix un valor");
+                System.out.println("Nombre?");
                 numero = Integer.parseInt(Entrada.readLine());
             }
             else if (numero < numeroPensat) {
                 System.out.println("Massa petit");
-                System.out.println("Introdueix un valor");
+                System.out.println("Nombre?");
                 numero = Integer.parseInt(Entrada.readLine());
             } 
         }
