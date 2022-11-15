@@ -2,7 +2,7 @@
 public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
-        int numero = 1;
+        int numero;
         String text = Entrada.readLine();
         int largo = text.length();
         if (text.isEmpty()) {
