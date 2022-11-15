@@ -5,24 +5,29 @@ public class EsEnter {
         String numero = Entrada.readLine();
         int largo = numero.length()-1;
         char cero = numero.charAt(0);
-        boolean check = false;
+        boolean letra = false;
+        boolean simbolo = false;
+        boolean correcto = false;
         int numSimbols = 0;
         while (!numero.isEmpty()) {
             for (int num = 0; num < largo; num ++) {
                 if (Character.isLetter(numero.charAt(num))) {
-                    check = false;
+                    letra = true;
                 }else if (numero.charAt(num) == '+' || numero.charAt(num) == '-') {
                     numSimbols = numSimbols + 1;
+                    if (numSimbols > 1) {
+                        simbolo= true;
+                    }
                 }else {
-                    check = true;
+                    correcto = true;
                 }
             }
-            if (numSimbols > 1) {
+            if (simbolo == true) {
                 System.out.println("No és enter");
             }
-            else if (check == true) {
+            else if (correcto == true) {
                 System.out.println("És enter");
-            } else if(check == false)  {
+            } else if(letra == true)  {
                 System.out.println("No és enter");
             }
             numero = Entrada.readLine();
