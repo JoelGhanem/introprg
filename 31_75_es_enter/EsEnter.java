@@ -8,7 +8,7 @@ public class EsEnter {
         boolean check = false;
         while (!numero.isEmpty()) {
             for (int num = 0; num < largo; num ++) {
-                if (Character.isLetter(numero.charAt(num))) {
+                if (Character.isLetter(numero.charAt(num)) || !Character.isDigit(2)) {
                     check = false;
                 }else {
                     check = true;
