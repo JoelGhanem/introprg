@@ -12,7 +12,7 @@ public class CadenaContinua {
         else {
             System.out.println("Nombre?");
             numero = Integer.parseInt(Entrada.readLine());
-            for (int num = 0; num <= numero; num ++) {
+            for (int num = 1; num <= numero; num ++) {
                 posicion = posicion + 1;
                 if (posicion >= largo) {
                     posicion = 0;
