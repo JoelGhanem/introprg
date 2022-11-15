@@ -5,15 +5,21 @@ public class EsEnter {
         String numero = Entrada.readLine();
         int largo = numero.length();
         char cero = numero.charAt(0);
+        int si = 1;
         while (!numero.isEmpty()) {
             for (int num = 1; num < largo; num ++) {
                 if (!numero.isEmpty()) {
                     if (Character.isDigit(numero.charAt(num))) {
-                        System.out.println("És enter");
-                    } else  {
-                        System.out.println("No és enter");
+                        si = (si * 1);
+                    }else {
+                        si = (si * 0);
                     }
                 }
+            }
+            if (si == 1) {
+                System.out.println("És enter");
+            } else  {
+                System.out.println("No és enter");
             }
             numero = Entrada.readLine();
         }
