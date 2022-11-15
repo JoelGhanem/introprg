@@ -10,7 +10,8 @@ public class VocalsMajuscules {
                 algo = Character.toUpperCase(text.charAt(num));
                 arreglao = arreglao + algo;
             }else {
-                Character.toLowerCase(num);
+                algo = Character.toLowerCase(text.charAt(num));
+                arreglao = arreglao + algo;
             }
         }
         System.out.print(arreglao);
