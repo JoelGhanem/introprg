@@ -9,11 +9,10 @@ public class EsEnter {
         int numSimbols = 0;
         while (!numero.isEmpty()) {
             for (int num = 0; num < largo; num ++) {
-                if (numero.charAt(num) == '+' || numero.charAt(num) == '-') {
-                    numSimbols = numSimbols + 1;
-                }
                 if (Character.isLetter(numero.charAt(num))) {
                     check = false;
+                }else if (numero.charAt(num) == '+' || numero.charAt(num) == '-') {
+                    numSimbols = numSimbols + 1;
                 }else {
                     check = true;
                 }
