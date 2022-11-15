@@ -6,13 +6,14 @@ public class ConteDarrer {
         boolean conte = false;
         char ultimo = text.charAt(text.length()-1);
         String ultimoLower = Character.toString(ultimo);
-        if (!text.isEmpty()) {
+        while (!text.isEmpty()) {
             for (int num = 0; num < text.length();num++) {
                 if (text.charAt(num) == ultimo ||text.charAt(num) == ultimoLower.charAt(0)) {
                     System.out.println("bé");
                     break;
                 }
             }
+            text = Entrada.readLine();
         }
         System.out.println("Adéu");
     }
