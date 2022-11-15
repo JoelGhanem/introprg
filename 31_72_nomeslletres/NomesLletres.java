@@ -12,8 +12,9 @@ public class NomesLletres {
         for (int num = 1; num < text.length(); num++) {
             if (Character.isLetter(text.charAt(num))) {
                 if (check == 1) {
-                    System.out.print(", " + text.charAt(num));
+                    System.out.print(", ");
                 }
+                System.out.print(text.charAt(num));
             }
         }
     }
