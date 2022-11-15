@@ -15,6 +15,7 @@ public class CadenaContinua {
                 if (num > largo) {
                     num = 0;
                 }
+                    System.out.println(text.charAt(num));
             }
         }
     }
