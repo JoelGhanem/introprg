@@ -14,7 +14,7 @@ public class CadenaContinua {
             numero = Integer.parseInt(Entrada.readLine());
             for (int num = 1; num <= numero; num ++) {
                 posicion = posicion + 1;
-                if (posicion >= largo) {
+                if (posicion > largo) {
                     posicion = 0;
                 }if(numero > 0) {
                     System.out.print(text.charAt(posicion));
