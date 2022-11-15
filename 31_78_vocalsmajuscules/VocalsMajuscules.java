@@ -9,7 +9,7 @@ public class VocalsMajuscules {
                 if(text.charAt(num) == 'a' || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
                     algo = Character.toUpperCase(text.charAt(num));
                     arreglao = arreglao + algo;
-            }else {
+            }else if (text.charAt(num) != 'A' || text.charAt(num) != 'E' || text.charAt(num) != 'O' || text.charAt(num) != 'A' || text.charAt(num) != 'U')  {
                 algo = Character.toLowerCase(text.charAt(num));
                 arreglao = arreglao + algo;
             }
