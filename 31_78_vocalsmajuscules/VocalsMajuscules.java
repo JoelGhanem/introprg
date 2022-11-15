@@ -7,12 +7,11 @@ public class VocalsMajuscules {
         for (int num = 0; num < text.length();num++) {
             if(text.charAt(num) == 97 || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
                 Character.toUpperCase(num);
-                arreglao = text;
             }else {
                 Character.toLowerCase(num);
-                arreglao = text;
             }
         }
+        arreglao = text;
         System.out.print(arreglao);
     }
 }
