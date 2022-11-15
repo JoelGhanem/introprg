@@ -5,15 +5,19 @@ public class NomesLletres {
         System.out.println("Text?");
         String text = Entrada.readLine();
         String cadena = "";
+        String cadenaFinal = "";
         char letra;
         int largo = text.length();
         for (int num = 0; num < largo; num++) {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
                 cadena  = cadena + letra;
-                System.out.print(letra + ", ");
+                if (letra == cadena.charAt(0)) {
+                    System.out.print(letra);
+                }else {
+                    System.out.print(", " + letra);
+                }
             }
         }
-                System.out.print(cadena.charAt(cadena.length()-1));
     }
 }
