@@ -12,15 +12,17 @@ public class EsEnter {
                     check = false;
                 }else if (!Character.isDigit(numero.charAt(2)))  {
                     check = true;
+                }else {
+                    check = true;
                 }
+                if (check == true) {
+                    System.out.println("És enter");
+                } else  {
+                    System.out.println("No és enter");
+                }
+                numero = Entrada.readLine();
             }
-            if (check == true) {
-                System.out.println("És enter");
-            } else  {
-                System.out.println("No és enter");
-            }
-            numero = Entrada.readLine();
+            System.out.println("Adéu");
         }
-        System.out.println("Adéu");
     }
 }
