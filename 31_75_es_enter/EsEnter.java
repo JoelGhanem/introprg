@@ -3,14 +3,13 @@ public class EsEnter {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String numero = Entrada.readLine();
-        int largo = numero.length()-1;
         char cero = numero.charAt(0);
         boolean letra = false;
         boolean simbolo = false;
         boolean correcto = false;
         int numSimbols = 0;
         while (!numero.isEmpty()) {
-            for (int num = 0; num < largo; num ++) {
+            for (int num = 0; num < numero.length(); num ++) {
                 //si es letra
                 if (Character.isLetter(numero.charAt(num))) {
                     letra = true;
