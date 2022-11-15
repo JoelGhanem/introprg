@@ -6,11 +6,11 @@ public class NomesLletres {
         String text = Entrada.readLine();
         String cadena = "";
         char letra;
-        for (int num = 0; num < text.length(); num++) {
+        for (int num = 0; num < (text.length()-1); num++) {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
                 cadena = cadena + letra;
-                System.out.print(cadena.length()-1);
+                System.out.print(cadena.charAt(num));
                 System.out.print(", ");
             }
         }
