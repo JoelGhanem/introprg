@@ -8,12 +8,10 @@ public class EsEnter {
         int si = 1;
         while (!numero.isEmpty()) {
             for (int num = 1; num < largo; num ++) {
-                if (!numero.isEmpty()) {
-                    if (Character.isDigit(numero.charAt(num))) {
-                        si = (si * 1);
-                    }else {
-                        si = (si * 0);
-                    }
+                if (Character.isDigit(numero.charAt(num))) {
+                    si = (si * 1);
+                }else {
+                    si = (si * 0);
                 }
             }
             if (si == 1) {
