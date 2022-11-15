@@ -3,11 +3,12 @@ public class VocalsMajuscules {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
+        String arreglao = "";
         for (int num = 0; num < text.length();num++) {
             if(text.charAt(num) == 97 || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
                 Character.toUpperCase(num);
+                arreglao = text;
             }
-            System.out.print(text.charAt(num));
         }
     }
 }
