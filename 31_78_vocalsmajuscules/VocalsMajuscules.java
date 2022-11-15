@@ -5,7 +5,7 @@ public class VocalsMajuscules {
         String text = Entrada.readLine();
         String arreglao = "";
         for (int num = 0; num < text.length();num++) {
-            if(text.charAt(num) == 97 || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
+            if(text.charAt(num) == 'a' || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117) {
                 Character.toUpperCase(num);
             }else {
                 Character.toLowerCase(num);
