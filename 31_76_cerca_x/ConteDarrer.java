@@ -3,12 +3,13 @@ public class ConteDarrer {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
-        boolean conte = false;
+        boolean conte = true;
         char ultimo = text.charAt(text.length()-1);
         String ultimoLower = Character.toString(ultimo);
-        while (!text.isEmpty()) {
+        while (!text.isEmpty() && conte == true) {
             for (int num = 0; num < text.length();num++) {
                 if (text.charAt(num) == ultimo ||text.charAt(num) == ultimoLower.charAt(0)) {
+                    conte = false;
                     break;
                 }
             }
