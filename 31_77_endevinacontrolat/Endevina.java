@@ -33,7 +33,7 @@ public class Endevina {
             } 
         }
         if (numero == numeroPensat) {
-            System.out.println("Has encertat!");
+            System.out.println("Encertat!");
         }
         else {
             System.out.println("Només nombres");
