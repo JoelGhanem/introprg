@@ -9,10 +9,10 @@ public class ConteDarrer {
         while (!text.isEmpty()) {
             for (int num = 0; num < text.length();num++) {
                 if (text.charAt(num) == ultimo ||text.charAt(num) == ultimoLower.charAt(0)) {
-                    System.out.println("bé");
                     break;
                 }
             }
+            System.out.println("bé");
             text = Entrada.readLine();
         }
         System.out.println("Adéu");
