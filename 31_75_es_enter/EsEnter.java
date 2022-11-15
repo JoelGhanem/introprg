@@ -18,7 +18,7 @@ public class EsEnter {
                 }else if (numero.charAt(num) == '+' || numero.charAt(num) == '-') {
                     numSimbols = numSimbols + 1;
                     if (numSimbols > 1) {
-                        simbolo= true;
+                        simbolo = true;
                     }
                     //todo lo demas    
                 }else {
