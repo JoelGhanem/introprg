@@ -10,7 +10,7 @@ public class EsEnter {
             for (int num = 0; num < largo; num ++) {
                 if (Character.isLetter(numero.charAt(num))) {
                     check = false;
-                }else {
+                }else if (!Character.isDigit(numero.charAt(2)))  {
                     check = true;
                 }
             }
