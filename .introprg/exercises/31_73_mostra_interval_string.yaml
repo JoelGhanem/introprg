@@ -67,24 +67,24 @@ _version: '2223'
   - ''
 '05':
   stdin:
-  - hola
+  - adéu
   - '-2'
   - '-1'
   stdout:
   - text?
   - inici?
   - final?
-  - ''
+  - a
 '06':
   stdin:
-  - hola
+  - drap
   - '-2'
   - '0'
   stdout:
   - text?
   - inici?
   - final?
-  - h
+  - d
 '07':
   stdin:
   - hola
@@ -99,14 +99,14 @@ _version: '2223'
   - l
 08:
   stdin:
-  - hola
+  - Holand
   - '-2'
   - '3'
   stdout:
   - text?
   - inici?
   - final?
-  - h
+  - H
   - o
   - l
   - a
@@ -208,14 +208,14 @@ _version: '2223'
   - a
 '17':
   stdin:
-  - hola
-  - '-1'
-  - '-2'
+  - Java
+  - '4'
+  - '3'
   stdout:
   - text?
   - inici?
   - final?
-  - ''
+  - 'a'
 '18':
   stdin:
   - hola
