@@ -7,7 +7,6 @@ public class NomesLletres {
         String cadena = "";
         char letra;
         int largo = text.length();
-        largo = largo - 2;
         for (int num = 0; num < largo; num++) {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
