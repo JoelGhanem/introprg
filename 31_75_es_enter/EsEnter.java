@@ -11,24 +11,26 @@ public class EsEnter {
         int numSimbols = 0;
         while (!numero.isEmpty()) {
             for (int num = 0; num < largo; num ++) {
+                //si es letra
                 if (Character.isLetter(numero.charAt(num))) {
                     letra = true;
+                    //si es simbolo    
                 }else if (numero.charAt(num) == '+' || numero.charAt(num) == '-') {
                     numSimbols = numSimbols + 1;
                     if (numSimbols > 1) {
                         simbolo= true;
                     }
+                    //todo lo demas    
                 }else {
                     correcto = true;
                 }
             }
             if (simbolo == true) {
                 System.out.println("No és enter");
-            }
-            else if (correcto == true) {
-                System.out.println("És enter");
             } else if(letra == true)  {
                 System.out.println("No és enter");
+            } else if (correcto == true) {
+                System.out.println("És enter");
             }
             numero = Entrada.readLine();
         }
