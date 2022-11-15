@@ -5,7 +5,7 @@ public class CadenaContinua {
         int numero;
         String text = Entrada.readLine();
         int largo = text.length()-1;
-        int cantidad = -2;
+        int cantidad = -1;
         if (text.isEmpty()) {
             System.out.println("error");
         }
