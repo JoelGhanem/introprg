@@ -12,14 +12,14 @@ public class CadenaContinua {
         else {
             System.out.println("Nombre?");
             numero = Integer.parseInt(Entrada.readLine());
-            for (int num = 0; num <= numero; num ++) {
+            for (int num = 1; num <= numero; num ++) {
                 cantidad = cantidad + 1;
                 if (num > largo) {
-                    num = 0;
+                    num = 1;
                     break;
                 }
                 if (cantidad <= numero) {
-                    System.out.print(text.charAt(num));
+                    System.out.print(text.charAt(num-1));
                 }
             }
         }
