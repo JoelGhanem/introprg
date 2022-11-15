@@ -10,7 +10,7 @@ public class NomesLletres {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
                 cadena = cadena + letra;
-                System.out.print(cadena.charAt(num));
+                System.out.print(cadena);
                 System.out.print(", ");
             }
         }
