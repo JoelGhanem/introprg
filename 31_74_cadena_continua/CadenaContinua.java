@@ -7,14 +7,14 @@ public class CadenaContinua {
         if (text.isEmpty()) {
             System.out.println("error");
         }
-        if (!text.isEmpty()) {
+        else {
             System.out.println("Nombre?");
             numero = Integer.parseInt(Entrada.readLine());
-        }
-        for (int num = 0; num <= numero; num ++) {
-            if (num > numero) {
-                num = 0;
-                System.out.println(text.charAt(num));
+            for (int num = 0; num <= numero; num ++) {
+                if (num > text.length()) {
+                    num = 0;
+                    System.out.println(text.charAt(num));
+                }
             }
         }
     }
