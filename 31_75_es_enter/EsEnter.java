@@ -5,16 +5,16 @@ public class EsEnter {
         String numero = Entrada.readLine();
         int largo = numero.length();
         char cero = numero.charAt(0);
-        int si = 1;
+        boolean check = false;
         while (!numero.isEmpty()) {
-            for (int num = 1; num < largo; num ++) {
-                if (!Character.isLetter(numero.charAt(num))) {
-                    si = (si * 1);
+            for (int num = 0; num < largo; num ++) {
+                if (Character.isLetter(numero.charAt(num))) {
+                    check = false;
                 }else {
-                    si = (si * 0);
+                    check = true;
                 }
             }
-            if (si == 1) {
+            if (check == true) {
                 System.out.println("És enter");
             } else  {
                 System.out.println("No és enter");
