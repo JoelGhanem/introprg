@@ -9,8 +9,8 @@ public class VocalsMajuscules {
                 Character.toUpperCase(num);
                 arreglao = text;
             }
-                System.out.print(arreglao);
         }
+                System.out.print(arreglao);
     }
 }
 
