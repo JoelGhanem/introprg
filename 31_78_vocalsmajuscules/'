@@ -11,7 +11,7 @@ public class VocalsMajuscules {
                     algo = Character.toUpperCase(text.charAt(num));
                     arreglao = arreglao + algo;
                 }
-            }else {
+            }else if (!text.charAt(num) =='A' || text{
                 algo = Character.toLowerCase(text.charAt(num));
                 arreglao = arreglao + algo;
             }
