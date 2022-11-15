@@ -10,19 +10,17 @@ public class EsEnter {
             for (int num = 0; num < largo; num ++) {
                 if (Character.isLetter(numero.charAt(num))) {
                     check = false;
-                }else if (!Character.isDigit(numero.charAt(2)))  {
-                    check = true;
                 }else {
                     check = true;
                 }
-                if (check == true) {
-                    System.out.println("És enter");
-                } else  {
-                    System.out.println("No és enter");
-                }
-                numero = Entrada.readLine();
             }
-            System.out.println("Adéu");
+            if (check == true) {
+                System.out.println("És enter");
+            } else  {
+                System.out.println("No és enter");
+            }
+            numero = Entrada.readLine();
         }
+        System.out.println("Adéu");
     }
 }
