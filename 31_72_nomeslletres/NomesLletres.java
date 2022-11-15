@@ -4,14 +4,16 @@ public class NomesLletres {
         String limpia;
         System.out.println("Text?");
         String text = Entrada.readLine();
-        String cadena;
+        String cadena = "";
         char letra;
-        char letra1;
         for (int num = 0; num < text.length(); num++) {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
-                System.out.print(letra);
+                cadena = cadena + letra;
+                System.out.print(cadena.length()-1);
+                System.out.print(", ");
             }
         }
+                System.out.print(cadena.charAt(cadena.length()-1));
     }
 }

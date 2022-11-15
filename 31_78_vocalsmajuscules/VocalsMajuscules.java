@@ -6,7 +6,7 @@ public class VocalsMajuscules {
         String arreglao = "";
         char algo;
         for (int num = 0; num < text.length();num++) {
-                if(text.charAt(num) == 'a' || text.charAt(num) == 101 || text.charAt(num) == 105 || text.charAt(num) == 111 || text.charAt(num) == 117 || text.charAt(num) == 'A' || text.charAt(num) == 'E' || text.charAt(num) == 'O' || text.charAt(num) == 'I' || text.charAt(num) == 'U') {
+                if(text.charAt(num) == 'a' || text.charAt(num) == 'e' || text.charAt(num) == 'i' || text.charAt(num) == 'o' || text.charAt(num) == 'u' || text.charAt(num) == 'A' || text.charAt(num) == 'E' || text.charAt(num) == 'I' || text.charAt(num) == 'O' || text.charAt(num) == 'U') {
                     algo = Character.toUpperCase(text.charAt(num));
                     arreglao = arreglao + algo;
             }else {
