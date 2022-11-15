@@ -12,12 +12,12 @@ public class Endevina {
         numero = Integer.parseInt(valor);
         while (numero != numeroPensat) {
             if (numero <= 0) {
-                System.out.println("Com a mínim 1");
+                System.out.println("Fora de rang");
                 System.out.println("Nombre?");
                 numero = Integer.parseInt(Entrada.readLine());
             }
             else if (numero > 100) {
-                System.out.println("Com a màxim 100");
+                System.out.println("Fora de rang");
                 System.out.println("Nombre?");
                 numero = Integer.parseInt(Entrada.readLine());
             }
