@@ -12,7 +12,6 @@ public class ConteDarrer {
                     System.out.println("bé");
                     break;
                 }
-                text = Entrada.readLine();
             }
         }
         System.out.println("Adéu");
