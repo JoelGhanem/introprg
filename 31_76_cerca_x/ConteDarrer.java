@@ -8,7 +8,7 @@ public class ConteDarrer {
         String ultimoLower = Character.toString(ultimo);
         System.out.println("bé");
         text = Entrada.readLine();
-        while (!text.isEmpty() && conte == true) {
+        while (!text.isEmpty() && conte == false) {
             for (int num = 0; num < text.length();num++) {
                 if (text.charAt(num) == ultimo ||text.charAt(num) == ultimoLower.charAt(0)) {
                     conte = false;
