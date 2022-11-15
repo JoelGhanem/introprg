@@ -10,10 +10,12 @@ public class NomesLletres {
         for (int num = 0; num < largo; num++) {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
-                System.out.print(letra + ", ");
                 cadena  = cadena + letra;
+                if (letra != cadena.charAt(cadena.length()-1)) {
+                    System.out.print(letra + ", ");
+                }
             }
+            System.out.print(cadena.charAt(cadena.length()-1));
         }
-                System.out.print(cadena.charAt(cadena.length()-1));
     }
 }
