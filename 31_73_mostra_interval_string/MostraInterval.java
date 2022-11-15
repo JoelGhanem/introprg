@@ -10,7 +10,7 @@ public class MostraInterval {
         if (inici < 0) {
             inici = 0;
         }
-        else if (inici > text.length()) {
+        if (inici > text.length()) {
             inici = (text.length()-1);
         }
         if (fi < 0) {
@@ -24,7 +24,7 @@ public class MostraInterval {
             for (int num = inici; num <= fi; num ++) {
                 System.out.println(text.charAt(num)); 
             }
-            //cuando inici es igual o mayor a fi
+        //cuando inici es igual o mayor a fi
         }else if (inici >= fi) {
             for (int num = inici; num >= fi; num --) {
                 System.out.println(text.charAt(num));
