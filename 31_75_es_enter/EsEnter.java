@@ -22,7 +22,7 @@ public class EsEnter {
             }
             else if (check == true) {
                 System.out.println("És enter");
-            } else  {
+            } else if(check == false)  {
                 System.out.println("No és enter");
             }
             numero = Entrada.readLine();
