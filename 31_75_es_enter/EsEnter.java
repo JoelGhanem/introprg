@@ -3,7 +3,7 @@ public class EsEnter {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String numero = Entrada.readLine();
-        int largo = numero.length();
+        int largo = numero.length()-1;
         char cero = numero.charAt(0);
         boolean check = false;
         int numSimbols = 0;
