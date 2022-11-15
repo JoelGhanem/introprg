@@ -5,6 +5,7 @@ public class ConteDarrer {
         String text = Entrada.readLine();
         boolean conte = false;
         char ultimo = text.charAt(text.length()-1);
+        String ultimisimo= ultimo ;
         if (!text.isEmpty()) {
             for (int num = 0; num < text.length();num++) {
                 if (text.charAt(num) == ultimo) {
