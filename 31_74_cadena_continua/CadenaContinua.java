@@ -4,6 +4,7 @@ public class CadenaContinua {
         System.out.println("Text?");
         int numero = 1;
         String text = Entrada.readLine();
+        int largo = text.length();
         if (text.isEmpty()) {
             System.out.println("error");
         }
@@ -11,7 +12,7 @@ public class CadenaContinua {
             System.out.println("Nombre?");
             numero = Integer.parseInt(Entrada.readLine());
             for (int num = 0; num <= numero; num ++) {
-                if (num > text.length()) {
+                if (num > largo) {
                     num = 0;
                     System.out.println(text.charAt(num));
                 }
