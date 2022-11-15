@@ -1,0 +1,21 @@
+//Desenvolupa un programa que demani un text i mostri totes les lletres en minúscules excepte les vocals, que hauran d'estar en majúscules.
+public class VocalMajuscules {
+    public static void main(String[] args) {
+        System.out.println("Text?");
+        String text = Entrada.readLine();
+        char a = 'a';
+        char e = 'e';
+        char i = 'i';
+        char o = 'o';
+        char u = 'u';
+        while (!text.isEmpty()) {
+            for (int num = 0; num < text.length();num++) {
+                if(Character.is(a) || Character.is(e) || Character.is(i) || Character.is(o) || Character.is(u)) {
+                    Character.toUpperCase(num);
+                }
+                System.out.println(text.charAt(num));
+            }
+        }
+    }
+}
+
