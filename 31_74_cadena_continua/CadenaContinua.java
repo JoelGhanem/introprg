@@ -16,6 +16,7 @@ public class CadenaContinua {
                 cantidad = cantidad + 1;
                 if (num > largo) {
                     num = 1;
+                    break;
                 }
                 if (cantidad <= numero) {
                     System.out.print(text.charAt(num-1));
