@@ -14,8 +14,6 @@ public class CadenaContinua {
             for (int num = 0; num <= numero; num ++) {
                 if (num > largo) {
                     num = 0;
-                    System.out.println(text.charAt(num));
-                            System.out.print(",");
                 }
             }
         }
