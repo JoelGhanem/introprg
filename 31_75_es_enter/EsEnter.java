@@ -36,6 +36,10 @@ public class EsEnter {
                 System.out.println("És enter");
             }
             numero = Entrada.readLine();
+            //reestablezco los valores para que no hayan errores
+            letra = false;
+            simbolo = false;
+            correcto = false;
         }
         System.out.println("Adéu");
     }
