@@ -11,11 +11,9 @@ public class NomesLletres {
             if (Character.isLetter(text.charAt(num))) {
                 letra = text.charAt(num);
                 cadena  = cadena + letra;
-                if (letra != cadena.charAt(cadena.length()-1)) {
-                    System.out.print(letra + ", ");
-                }
+                System.out.print(letra + ", ");
             }
-            System.out.print(cadena.charAt(cadena.length()-1));
         }
+                System.out.print(cadena.charAt(cadena.length()-1));
     }
 }
