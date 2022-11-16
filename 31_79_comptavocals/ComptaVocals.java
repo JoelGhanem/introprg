@@ -4,11 +4,11 @@ public class ComptaVocals {
         System.out.println("Text?");
         String text = Entrada.readLine();
         String vocals = ("aeiouàéèíïóòúü");
-        int numero = 1;
+        int numero = 0;
         for (int i = 0;i < text.length();i++) {
             for (int j = 0;j < vocals.length(); j++) {
                 if (text.charAt(i) == vocals.charAt(j)) {
-                    numero +=1;
+                    numero = numero + 1;
                 }
             }
         }
