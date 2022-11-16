@@ -4,8 +4,7 @@ public class ComptaVocals {
         System.out.println("Text?");
         String text = Entrada.readLine();
         String vocals = ("aeiouàéèíïóòúü");
-        int numero = 0;
-        int numeroFinal = 0;
+        int numero = 1;
         for (int i = 0;i < text.length();i++) {
             for (int j = 0;j < vocals.length(); j++) {
                 if (text.charAt(i) == vocals.charAt(j)) {
