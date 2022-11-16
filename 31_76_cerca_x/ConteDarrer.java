@@ -24,6 +24,8 @@ public class ConteDarrer {
                 System.out.println("bé");
                 text = Entrada.readLine();
                 text = text.toLowerCase();
+            }else {
+                break;
             }
         }
         System.out.println("Adéu");
