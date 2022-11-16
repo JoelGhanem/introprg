@@ -10,7 +10,7 @@ public class Endevina {
         System.out.println("Nombre?");
         valor = Entrada.readLine();
         numero = Integer.parseInt(valor);
-        while (numero != numeroPensat && valor != "") {
+        while (!valor.isEmpty() && numero != numeroPensat) {
             if (numero <= 0) {
                 System.out.println("Fora de rang");
                 System.out.println("Nombre?");
