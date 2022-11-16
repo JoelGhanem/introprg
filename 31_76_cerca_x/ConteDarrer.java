@@ -4,13 +4,17 @@ public class ConteDarrer {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
         System.out.println("bé");
-        text = Entrada.readLine();
-        if (!text.isEmpty()) {
-            text = text.toLowerCase();
-        }
         char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = true;
         while (correcto == true) {
+            text = Entrada.readLine();
+            // Mientras el texto no est'e vacio pasalo a minusculas
+            if (!text.isEmpty()) {
+                // paso el texto a minusculas
+                text = text.toLowerCase();
+                // Vuelvo a declarar la ultima letra
+                ultimaLetra = text.charAt(text.length()-1);
+            }
             // Paso el boolean a falso para asegurasrme de q esta bien hecho
             correcto = false;
             // Hago un for para que me revise todas las letras en busca de la ultima letra
@@ -24,13 +28,6 @@ public class ConteDarrer {
             //Si una de las letras es la ultima de antes 
             if (correcto == true) {
                 System.out.println("bé");
-                //Vuelvo a pedir el texto 
-                text = Entrada.readLine();
-                // paso el texto a minusculas
-                text = text.toLowerCase();
-                // Vuelvo a declarar la ultima letra
-                ultimaLetra = text.charAt(text.length()-1);
-                // Si no es correcto acaba
             }else {
                 break;
             }
