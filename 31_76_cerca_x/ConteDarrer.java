@@ -21,7 +21,6 @@ public class ConteDarrer {
             }
             if (correcto == true) {
                 System.out.println("bé");
-                System.out.println(ultimaLetra + (num +ultimaLetra));
                 text = Entrada.readLine();
             }
         }
