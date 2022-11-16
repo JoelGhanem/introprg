@@ -4,9 +4,10 @@ public class ConteDarrer {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
         System.out.println("bé");
+        text = Entrada.readLine();
         char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = true;
-        while (!text.isEmpty() && correcto == true) {
+        while (correcto == true) {
             for (int i = 0; i < text.length(); i++) {
                 if (text.charAt(i) == (ultimaLetra + 32)) {
                     correcto = true;
