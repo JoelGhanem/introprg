@@ -6,9 +6,11 @@ public class ComptaVocals {
         String vocals = ("aeiouàéèíïóòúü");
         int numero = 0;
         for (int i = 0;i < text.length();i++) {
-            if (text.charAt(i) == vocals.charAt(i)) {
-            numero +=1;
-            System.out.println(numero);
+            for (int j = 0;j < vocals.length(); j++) {
+                if (text.charAt(i) == vocals.charAt(j)) {
+                    numero +=1;
+                    System.out.println(numero);
+                }
             }
         }
     }
