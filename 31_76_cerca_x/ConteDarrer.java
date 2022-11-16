@@ -9,15 +9,14 @@ public class ConteDarrer {
         boolean correcto = true;
         while (correcto == true) {
             for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == (ultimaLetra + 32) || text.charAt(i) == ultimaLetra) {
-                    correcto = true;
-                }else {
+                if ((text.charAt(i) == (ultimaLetra + 32)) == false || (text.charAt(i) == ultimaLetra == false)) {
                     correcto = false;
+                }else {
+                    correcto = true;
                 }
             }
             if (correcto == true) {
                 System.out.println("bé");
-                System.out.println(ultimaLetra + (ultimaLetra + 32));
                 text = Entrada.readLine();
             }
         }
