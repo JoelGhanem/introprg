@@ -5,12 +5,15 @@ public class ConteDarrer {
         String text = Entrada.readLine();
         System.out.println("bé");
         text = Entrada.readLine();
+        if (!text.isEmpty()) {
+            text = text.toLowerCase();
+        }
         char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = true;
         int num = 32;
         while (correcto == true) {
             for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == (num + ultimaLetra) || text.charAt(i) == ultimaLetra) {
+                if (text.charAt(i) == ultimaLetra) {
                     correcto = true;
                 }else {
                     correcto = false;
