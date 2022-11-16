@@ -6,13 +6,11 @@ public class ConteDarrer {
         System.out.println("bé");
         text = Entrada.readLine();
         char ultimaLetra = text.charAt(text.length()-1);
-        boolean correcto = true;
+        boolean correcto = false;
         while (correcto == true) {
             for (int i = 0; i < text.length(); i++) {
                 if (text.charAt(i) == (ultimaLetra + 32) || text.charAt(i) == ultimaLetra) {
                     correcto = true;
-                }else {
-                    correcto = false;
                 }
             }
             if (correcto == true) {
