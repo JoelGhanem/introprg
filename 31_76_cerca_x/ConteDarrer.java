@@ -7,9 +7,10 @@ public class ConteDarrer {
         text = Entrada.readLine();
         char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = true;
+        int num = 32;
         while (correcto == true) {
             for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == (ultimaLetra + 32) || text.charAt(i) == ultimaLetra) {
+                if (text.charAt(i) == (ultimaLetra + num) || text.charAt(i) == ultimaLetra) {
                     correcto = true;
                 }else {
                     correcto = false;
@@ -17,7 +18,7 @@ public class ConteDarrer {
             }
             if (correcto == true) {
                 System.out.println("bé");
-                System.out.println(ultimaLetra + (ultimaLetra + 32));
+                System.out.println(ultimaLetra + (ultimaLetra + num));
                 text = Entrada.readLine();
             }
         }
