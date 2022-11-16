@@ -9,8 +9,8 @@ public class ConteDarrer {
             text = text.toLowerCase();
         }
         char ultimaLetra = text.charAt(text.length()-1);
-        boolean correcto = false;
-        while (!text.isEmpty()) {
+        boolean correcto = true;
+        while (correcto == true) {
             correcto = false;
             for (int i = 0; i < text.length(); i++) {
                 if (text.charAt(i) == ultimaLetra) {
