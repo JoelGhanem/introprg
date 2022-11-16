@@ -9,7 +9,7 @@ public class ConteDarrer {
         boolean correcto = true;
         while (correcto == true) {
             for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == (ultimaLetra + 32)) {
+                if (text.charAt(i) == (ultimaLetra + 32) || text.charAt(i) == ultimaLetra) {
                     correcto = true;
                 }else {
                     correcto = false;
