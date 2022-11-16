@@ -10,7 +10,6 @@ public class ConteDarrer {
         }
         char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = false;
-        int num = 32;
         while (!text.isEmpty()) {
             correcto = false;
             for (int i = 0; i < text.length(); i++) {
@@ -24,6 +23,7 @@ public class ConteDarrer {
                 System.out.println("bé");
                 text = Entrada.readLine();
                 text = text.toLowerCase();
+                ultimaLetra = text.charAt(text.length()-1);
             }else {
                 break;
             }
