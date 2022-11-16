@@ -3,6 +3,7 @@ public class ConteDarrer {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
+        System.out.println("bé");
         char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = true;
         while (!text.isEmpty() && correcto == true) {
