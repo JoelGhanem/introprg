@@ -3,21 +3,21 @@ public class ConteDarrer {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
-        boolean conte = true;
-        char ultimo = text.charAt(text.length()-1);
-        String ultimoLower = Character.toString(ultimo);
-        System.out.println("bé");
-        text = Entrada.readLine();
-        while (!text.isEmpty()) {
-            for (int num = 0; num < text.length();num++) {
-                if (text.charAt(num) == ultimo ||text.charAt(num) == ultimoLower.charAt(0)) {
-                    conte = false;
-                    break;
+        char ultimaLetra = text.charAt(text.length()-1);
+        boolean correcto = true;
+        while (!text.isEmpty() && correcto == true) {
+            for (int i = 0; i < text.length(); i++) {
+                if (text.charAt(i) == (ultimaLetra + 32)) {
+                    correcto = true;
+                }else {
+                    correcto = false;
                 }
             }
-            System.out.println("bé");
-            text = Entrada.readLine();
+            if (correcto == true) {
+                System.out.println("bé");
+                text = Entrada.readLine();
+            }
         }
         System.out.println("Adéu");
     }
-}  
+}
