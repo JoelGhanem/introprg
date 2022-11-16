@@ -14,6 +14,7 @@ public class ConteDarrer {
                 text = text.toLowerCase();
                 // Vuelvo a declarar la ultima letra
                 ultimaLetra = text.charAt(text.length()-1);
+                System.out.println(ultimaLetra);
             }
             // Paso el boolean a falso para asegurasrme de q esta bien hecho
             correcto = false;
