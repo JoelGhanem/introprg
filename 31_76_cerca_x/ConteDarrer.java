@@ -22,6 +22,7 @@ public class ConteDarrer {
             for (int i = 0; i < text.length(); i++) {
                 if (text.charAt(i) == ultimaLetra) {
                     correcto = true;
+                    break;
                 }else {
                     correcto = false;
                 }
