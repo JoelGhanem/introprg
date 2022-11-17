@@ -7,6 +7,7 @@ public class TextReves {
         String reverso = "";
         char letra;
         char letraReves;
+        boolean check = true;
         for (int i = 0;i < text.length();i++) {
             letra = text.charAt(i);
             auxiliar = auxiliar + letra; 
@@ -14,10 +15,12 @@ public class TextReves {
         for (int i = 0;i < auxiliar.length();i++) {
             letraReves = auxiliar.charAt(auxiliar.length()-i);
             reverso = reverso + letraReves;
-        }
-            System.out.print(auxiliar.charAt(0));
-        if (!auxiliar.charAt(0)) {
-            System.out.print(", " + letraReves);
+            if (check) {
+                System.out.print(letraReves);
+                check = false;
+            } else {
+                System.out.print(", " + letraReves);
+            }
         }
     }
 }
