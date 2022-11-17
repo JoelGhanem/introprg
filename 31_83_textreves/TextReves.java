@@ -12,7 +12,7 @@ public class TextReves {
             letra = text.charAt(i);
             auxiliar = auxiliar + letra; 
         }
-        for (int i = 0;i < auxiliar.length();i++) {
+        for (int i = 1;i < auxiliar.length();i++) {
             letraReves = auxiliar.charAt(auxiliar.length()-i);
             reverso = reverso + letraReves;
             if (check) {
