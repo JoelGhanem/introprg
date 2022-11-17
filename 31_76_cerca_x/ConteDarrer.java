@@ -12,8 +12,6 @@ public class ConteDarrer {
                 System.out.println("bé");
                 text = Entrada.readLine(); // paso el texto a minusculas
                 text = text.toLowerCase(); // Vuelvo a declarar la ultima letra
-                                           //ultimaLetra = text.charAt(text.length()-1);
-                                           //System.out.println("XXX ultimaLetra=" + ultimaLetra); // Hago un for para que me revise todas las letras en busca de la ultima letra
                 for (int i = 0; i < text.length(); i++) {
                     if (text.charAt(i) == ultimaLetra) {
                         correcto = true;
