@@ -13,13 +13,17 @@ public class TextReves {
             auxiliar = auxiliar + letra; 
         }
         for (int i = 1;i < auxiliar.length();i++) {
-            letraReves = auxiliar.charAt(auxiliar.length()-i);
-            reverso = reverso + letraReves;
-            if (check) {
-                System.out.print(letraReves);
-                check = false;
+            if (i == 1) {
+                System.out.println(text.charAt(0));
             } else {
-                System.out.print(", " + letraReves);
+                letraReves = auxiliar.charAt(auxiliar.length()-i);
+                reverso = reverso + letraReves;
+                if (check) {
+                    System.out.print(letraReves);
+                    check = false;
+                } else {
+                    System.out.print(", " + letraReves);
+                }
             }
         }
     }
