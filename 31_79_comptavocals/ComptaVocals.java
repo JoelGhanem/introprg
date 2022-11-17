@@ -3,7 +3,7 @@ public class ComptaVocals {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        String vocals = ("aeiouàéèíïóòúü");
+        String vocals = ("aeiouàáéèíïóòúü");
         int numero = 0;
         for (int i = 0;i < text.length();i++) {
             for (int j = 0;j < vocals.length(); j++) {
