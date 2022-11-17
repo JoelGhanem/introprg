@@ -3,17 +3,17 @@ public class ConteDarrer {
     public static void main(String[] args) {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
-        char ultimaLetra = text.charAt(text.length()-1);
         boolean correcto = true;
         if (text.isEmpty()) {
             System.out.println("Adéu");
         } else {
-            while (correcto == true) {
+            char ultimaLetra = text.charAt(text.length()-1);
+            while (correcto) {
                 System.out.println("bé");
                 text = Entrada.readLine(); // paso el texto a minusculas
                 text = text.toLowerCase(); // Vuelvo a declarar la ultima letra
-                ultimaLetra = text.charAt(text.length()-1);
-                System.out.println(ultimaLetra); // Hago un for para que me revise todas las letras en busca de la ultima letra
+                                           //ultimaLetra = text.charAt(text.length()-1);
+                                           //System.out.println("XXX ultimaLetra=" + ultimaLetra); // Hago un for para que me revise todas las letras en busca de la ultima letra
                 for (int i = 0; i < text.length(); i++) {
                     if (text.charAt(i) == ultimaLetra) {
                         correcto = true;
@@ -25,6 +25,8 @@ public class ConteDarrer {
                 }
             }
         }
-        System.out.println("Adéu");
+        if (!text.isEmpty()) {
+            System.out.println("Adéu");
+        }
     }
 }
