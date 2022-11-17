@@ -5,6 +5,7 @@ public class ComptaVocals {
         String text = Entrada.readLine();
         String vocals = ("aeiouàáéèíïóòúü");
         int numero = 0;
+        text = text.toLowerCase();
         for (int i = 0;i < text.length();i++) {
             for (int j = 0;j < vocals.length(); j++) {
                 if (text.charAt(i) == vocals.charAt(j)) {
