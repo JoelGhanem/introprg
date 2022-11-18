@@ -13,7 +13,6 @@ public class TextReves {
         for (int i = 0;i < text.length();i++) {
             letra = text.charAt(i);
             auxiliar = auxiliar + letra; 
-            //System.out.println(auxiliar);
         }
         for (int i = auxiliar.length()-1;i >= 0;i--) {
             letraReves = auxiliar.charAt(i);
