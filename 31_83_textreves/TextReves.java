@@ -14,7 +14,7 @@ public class TextReves {
         }
         for (int i = 1;i < auxiliar.length();i++) {
             if (i == 1) {
-                System.out.println(text.charAt(0));
+                System.out.print(text.charAt(0));
             } else {
                 letraReves = auxiliar.charAt(auxiliar.length()-i);
                 reverso = reverso + letraReves;
