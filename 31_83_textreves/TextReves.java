@@ -15,16 +15,16 @@ public class TextReves {
             auxiliar = auxiliar + letra; 
             //System.out.println(auxiliar);
         }
-        for (int i = auxiliar.length()-1;i >= 1;i--) {
+        for (int i = auxiliar.length()-1;i >= 0;i--) {
             letraReves = auxiliar.charAt(i);
             reverso = reverso + letraReves;
-            System.out.print(letraReves);
-        }
-        if (check) {
-            //System.out.print(letraReves);
-            check = false;
-        } else {
-            //   System.out.print(", " + letraReves);
+            if (check) {
+                System.out.print(auxiliar.charAt(auxiliar.length()-1));
+                check = false;
+            }
+            else {
+                System.out.print(", " + letraReves);
+            }
         }
     }
 }
