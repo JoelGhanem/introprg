@@ -9,8 +9,10 @@ public class Capicua {
         //leo las palabras
         for (int i = 0; i < text.length(); i++) {
             letra = text.charAt(i);
+            System.out.print(letra);
             for (int j = text.length()-1; j >= 0; j--) {
                 letraReves = text.charAt(j);
+                System.out.print(letraReves);
                 if (letra == letraReves) {
                     check = true;
                 } else {
