@@ -8,9 +8,11 @@ public class TextReves {
         char letra;
         char letraReves;
         boolean check = true;
+        //pillo cada letra y creo un stirng auxiliar
         for (int i = 0;i < text.length();i++) {
             letra = text.charAt(i);
             auxiliar = auxiliar + letra; 
+            System.out.println("XXX prova auxiliar" + auxiliar);
         }
         for (int i = 1;i < auxiliar.length();i++) {
             if (i == 1) {
