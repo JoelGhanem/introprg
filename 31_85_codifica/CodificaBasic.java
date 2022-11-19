@@ -8,19 +8,23 @@ public class CodificaBasic {
         char letra;
         char letter;
         int num = 1;
+        int contador = 0;
         boolean check = true;
         for (int i = 0; i < text.length(); i++) {
+            contador = contador + 1;
             letra = text.charAt(i);
-            letter = letras.charAt(i);
-            if (letra == letter) {
-                if (letra == 'z') {
-                    letra = ((char)96);
+            if (Character.isLetter(text.charAt(i))) {
+                letter = letras.charAt(i);
+                if (letra == letter) {
+                    if (letra == 'z') {
+                        letra = ((char)96);
+                    }
+                    letra = ((char)(letra + 1));
+                    salida = salida + letra;
+                    check = true;
+                } else {
+                    check = false;
                 }
-                letra = ((char)(letra + 1));
-                salida = salida + letra;
-                check = true;
-            } else {
-                check = false;
             }
         }
         if (check) {
