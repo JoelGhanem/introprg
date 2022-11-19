@@ -13,7 +13,7 @@ public class CodificaBasic {
         for (int i = 0; i < text.length(); i++) {
             contador = contador + 1;
             letra = text.charAt(i);
-            if (i > letras.length()) {
+            if (i >= letras.length()) {
                 contador = 0;
             }
             letter = letras.charAt(contador);
