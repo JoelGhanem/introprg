@@ -8,15 +8,10 @@ public class CodificaBasic {
         char letra;
         char letter;
         int num = 1;
-        int contador = 0;
         boolean check = true;
         for (int i = 0; i < text.length(); i++) {
-            contador = contador + 1;
             letra = text.charAt(i);
-            if (i >= letras.length()) {
-                contador = 0;
-            }
-            letter = letras.charAt(contador);
+            letter = letras.charAt(i);
             if (letra == letter) {
                 if (letra == 'z') {
                     letra = ((char)96);
