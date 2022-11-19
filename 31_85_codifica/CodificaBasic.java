@@ -14,7 +14,7 @@ public class CodificaBasic {
             letter = letras.charAt(i);
             if (letra == letter) {
                 if (letra == 'z') {
-                    letra = 'a';
+                    letra = ((char)96);
                 }
                 letra = ((char)(letra + 1));
                 salida = salida + letra;
