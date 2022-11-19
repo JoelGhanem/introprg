@@ -16,7 +16,7 @@ public class CodificaBasic {
                 if (letra == 'z') {
                     letra = 'a';
                 }
-                letra = ((char) (num + '0'));
+                letra = ((char)(letra + 1));
                 salida = salida + letra;
                 check = true;
             } else {
