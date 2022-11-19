@@ -5,19 +5,25 @@ public class Capicua {
         String text = Entrada.readLine();
         char letra;
         char letraReves;
+        char comprovador;
+        String auxiliar = "";
         boolean check = true;
+        int contador = 0;
         //leo las palabras
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 1; i < text.length(); i++) {
+            //pillo todas las letras en orden
             letra = text.charAt(i);
-            System.out.print(letra);
-            for (int j = text.length()-1; j >= 0; j--) {
-                letraReves = text.charAt(j);
-                System.out.print(letraReves);
-                if (letra == letraReves) {
-                    check = true;
-                } else {
-                    check = false;
-                }
+            //le doy la vuelta a las palabras
+            letraReves = text.charAt(text.length()-i + 1);
+            auxiliar = auxiliar + letraReves;
+            System.out.print(letraReves);
+            if (text.charAt(0) == text.charAt(0)) {
+                check = true;
+            }
+            if (letra == letraReves) {
+                check = true;
+            } else {
+                check = false;
             }
         }
         if (check) {
@@ -27,4 +33,3 @@ public class Capicua {
         }
     }
 }
-
