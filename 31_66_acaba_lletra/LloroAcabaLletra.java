@@ -21,7 +21,7 @@ public class LloroAcabaLletra {
                 }
             }
         } else { 
-            System.out.println("Adéu");
+            System.out.print("Adéu");
         }
     }
 }
