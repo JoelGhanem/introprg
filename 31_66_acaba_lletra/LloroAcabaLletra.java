@@ -9,7 +9,7 @@ public class LloroAcabaLletra {
         while (!paraula.isEmpty()) {
             fin = paraula.charAt(paraula.length()-1);
             if (Character.isLetter(fin)) {
-                if (fin != 'i' && fin != 'a' && fin != 'e' && fin != 'o' && fin != 'u') {
+                if (fin != 'i' && fin != 'a' && fin != 'e' && fin != 'o' && fin != 'u' && fin != 'A' && fin != 'E' && fin != 'o' && fin != 'U') {
                     System.out.println(" El lloro diu: " + paraula);
                 }
                 System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
