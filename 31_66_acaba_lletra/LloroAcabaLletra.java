@@ -10,13 +10,11 @@ public class LloroAcabaLletra {
             fin = paraula.charAt(paraula.length()-1);
             // si la palabra no esta vacia
             while (!paraula.isEmpty()) {
-                for (int i = 0; i < vocals.length(); i++) {
-                    if (fin == vocals.charAt(i)) {
-                        System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
-                    } else {
-                        System.out.println(" El lloro diu: " + paraula);
-                        System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
-                    }
+                if (fin == 'i' && fin == 'a' && fin == 'e' && fin == 'o' && fin == 'u') {
+                    System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
+                } else {
+                    System.out.println(" El lloro diu: " + paraula);
+                    System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
                 }
             }
         } else { 
