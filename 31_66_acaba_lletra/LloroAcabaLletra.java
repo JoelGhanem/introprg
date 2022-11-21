@@ -20,6 +20,8 @@ public class LloroAcabaLletra {
                     }
                 }
             }
+        } else { 
+            System.out.println("Adéu");
         }
     }
 }
