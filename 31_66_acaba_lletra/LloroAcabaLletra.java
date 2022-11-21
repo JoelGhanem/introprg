@@ -3,19 +3,18 @@ public class LloroAcabaLletra {
     public static void main (String[] args) {
         String paraula;
         char fin;
-        String vocals = ("aeiou");
         System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
         paraula = Entrada.readLine();
         if (!paraula.isEmpty()) {
             fin = paraula.charAt(paraula.length()-1);
             // si la palabra no esta vacia
             while (!paraula.isEmpty()) {
-                if (fin == 'i' && fin == 'a' && fin == 'e' && fin == 'o' && fin == 'u') {
+                if (fin != 'i' && fin != 'a' && fin != 'e' && fin != 'o' && fin != 'u') {
                     System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
-                } else {
+                } 
                     System.out.println(" El lloro diu: " + paraula);
                     System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
-                }
+                
             }
         } else { 
             System.out.print("Adéu");
