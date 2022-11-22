@@ -6,23 +6,27 @@ public class MajusculitzaInicials {
         String cadena = "";
         char letra;
         char mayus;
-        if (Character.isLetter(text.charAt(0))) {
-            letra = Character.toUpperCase(text.charAt(0));
-            cadena = cadena + letra;
-        } else {
-            letra = text.charAt(0);
-            cadena = cadena + letra;
-        }
-        for (int i = 1; i < text.length();i++) {
-            // Si no es letra haces la sigueinte mayuscula
-            if (!Character.isLetter(text.charAt(i -1))) {
-                mayus = Character.toUpperCase(text.charAt(i));
-                cadena = cadena + mayus;
+        if (!text.isEmpty()) {
+            if (Character.isLetter(text.charAt(0))) {
+                letra = Character.toUpperCase(text.charAt(0));
+                cadena = cadena + letra;
             } else {
-                letra = Character.toLowerCase(text.charAt(i));
+                letra = text.charAt(0);
                 cadena = cadena + letra;
             }
+            for (int i = 1; i < text.length();i++) {
+                // Si no es letra haces la sigueinte mayuscula
+                if (!Character.isLetter(text.charAt(i -1))) {
+                    mayus = Character.toUpperCase(text.charAt(i));
+                    cadena = cadena + mayus;
+                } else {
+                    letra = Character.toLowerCase(text.charAt(i));
+                    cadena = cadena + letra;
+                }
+            }
+            System.out.println(cadena);
+        } else {
+            System.out.println("KK");
         }
-        System.out.println(cadena);
     }
 }
