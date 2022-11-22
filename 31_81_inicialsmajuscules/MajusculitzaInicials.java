@@ -18,7 +18,7 @@ public class MajusculitzaInicials {
                 mayus = Character.toUpperCase(text.charAt(i + 1));
                 cadena = cadena + mayus;
             } else {
-                letra = Character.toLowerCase(text.charAt(i));
+                letra = Character.toLowerCase(text.charAt(i + 1));
                 cadena = cadena + letra;
             }
         }
