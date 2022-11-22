@@ -7,7 +7,7 @@ public class MajusculitzaInicials {
         char letra;
         char mayus;
         if (Character.isLetter(text.charAt(0))) {
-            letra = Character.toLowerCase(text.charAt(0));
+            letra = Character.toUpperCase(text.charAt(0));
             cadena = cadena + letra;
         } 
         for (int i = 0; i < text.length();i++) {
