@@ -25,9 +25,7 @@ public class TransformaText {
             }
             if (check) {
                 vocal = text.charAt(i);
-                vocales = vocales + vocal;
-                vocales = vocales.toLowerCase();
-                cadena = cadena + vocales;
+                cadena = cadena + vocal;
             } 
             for (int j = 0; j < numero.length(); j++) {
                 if (text.charAt(i) == numero.charAt(j)) {
