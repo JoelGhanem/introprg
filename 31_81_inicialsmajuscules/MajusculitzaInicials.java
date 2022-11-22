@@ -25,8 +25,6 @@ public class MajusculitzaInicials {
                 }
             }
             System.out.println(cadena);
-        } else {
-            System.out.println("KK");
         }
     }
 }
