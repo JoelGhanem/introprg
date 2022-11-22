@@ -22,10 +22,10 @@ public class TransformaText {
                 } else {
                     check = false;
                 }
-            }
-            if (check) {
-                vocal = text.charAt(i);
-                cadena = cadena + vocal;
+                if (check) {
+                    vocal = text.charAt(j);
+                    cadena = cadena + vocal;
+                }
             } 
             for (int j = 0; j < numero.length(); j++) {
                 if (text.charAt(i) == numero.charAt(j)) {
