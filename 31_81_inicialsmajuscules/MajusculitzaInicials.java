@@ -10,13 +10,16 @@ public class MajusculitzaInicials {
             letra = Character.toUpperCase(text.charAt(0));
             cadena = cadena + letra;
         } 
-        for (int i = 0; i < text.length();i++) {
+        for (int i = 1; i < text.length();i++) {
             // Si no es letra haces la sigueinte mayuscula
-            if (!Character.isLetter(text.charAt(i))) {
+            if (!Character.isLetter(text.charAt(i -1))) {
                 letra = text.charAt(i);
                 cadena = cadena + letra;
                 mayus = Character.toUpperCase(text.charAt(i + 1));
                 cadena = cadena + mayus;
+            } else {
+                letra = Character.toLowerCase(text.charAt(i));
+                cadena = cadena + letra;
             }
         }
         System.out.println(cadena);
