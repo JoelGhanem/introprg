@@ -1,0 +1,32 @@
+_mainclass: Quadrats
+_version: '2223'
+'01':
+  stdin: '1'
+  stdout:
+  - Quants?
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+'02':
+  stdin: '2'
+  stdout:
+  - Quants?
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ''
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+  - ' X X X X X'
+'03':
+  stdin: '0'
+  stdout: Quants?
+'04':
+  stdin: '-1'
+  stdout: Quants?
