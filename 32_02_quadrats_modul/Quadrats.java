@@ -7,7 +7,7 @@ public class Quadrats {
         System.out.println("Quants?");
         String numero = Entrada.readLine();
         if (!numero.isEmpty()) {
-            int quants = Integer.parseInt(Entrada.readLine());
+            int quants = Integer.parseInt(numero);
             if (quants > 0) {
                 for (int q = 0; q < quants; q++){
                     for (int li = 0; li < 5; li++) {
