@@ -7,16 +7,18 @@ public class Quadrats {
         System.out.println("Quants?");
         String numero = Entrada.readLine();
         if (!numero.isEmpty()) {
-            int quants = Integer.parseInt(numero);
-            if (quants > 0) {
-                for (int q = 0; q < quants; q++){
-                    for (int li = 0; li < 5; li++) {
-                        for (int co = 0; co < 5; co++) {
-                            System.out.print(" X");
+            if (!Character.isLetter(numero.charAt(0))) {
+                int quants = Integer.parseInt(numero);
+                if (quants > 0) {
+                    for (int q = 0; q < quants; q++){
+                        for (int li = 0; li < 5; li++) {
+                            for (int co = 0; co < 5; co++) {
+                                System.out.print(" X");
+                            }
+                            System.out.println();
                         }
                         System.out.println();
                     }
-                    System.out.println();
                 }
             }
         }
