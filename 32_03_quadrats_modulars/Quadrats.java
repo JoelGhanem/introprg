@@ -2,7 +2,6 @@
 public class Quadrats {
     public static void main(String[] args) {
         dibuixaQuadrats();
-        dibuixaQuadrat();
     }
     public static void dibuixaQuadrats() {
         System.out.println("Quants?");
@@ -10,7 +9,7 @@ public class Quadrats {
         if (!texto.isEmpty()) {
             int quants = Integer.parseInt(texto);
             if (quants > 0) {
-                for (int q = 1; q < quants; q++) {
+                for (int q = 0; q < quants; q++) {
                     dibuixaQuadrat();
                 }
             }
