@@ -1,9 +1,9 @@
 //Desenvolupa una nova versió del programa anterior. Aquest cop, des de main es cridarà un mòdul anomenat dibuixaQuadrats() que farà la feina de demanar el número de quadrats a dibuixar i els dibuixarà.
 public class Quadrats {
     public static void main(String[] args) {
-        dibuixaQuadrat();
+        dibuixaQuadrats();
     }
-    public static void dibuixaQuadrat() {
+    public static void dibuixaQuadrats() {
         System.out.println("Quants?");
         String numero = Entrada.readLine();
         if (!numero.isEmpty()) {
