@@ -5,16 +5,19 @@ public class Quadrats {
     }
     public static void dibuixaQuadrat() {
         System.out.println("Quants?");
-        int quants = Integer.parseInt(Entrada.readLine());
-        if (quants > 0) {
-            for (int q = 0; q < quants; q++){
-                for (int li = 0; li < 5; li++) {
-                    for (int co = 0; co < 5; co++) {
-                        System.out.print(" X");
+        String numero = Entrada.readLine();
+        if (!numero.isEmpty()) {
+            int quants = Integer.parseInt(Entrada.readLine());
+            if (quants > 0) {
+                for (int q = 0; q < quants; q++){
+                    for (int li = 0; li < 5; li++) {
+                        for (int co = 0; co < 5; co++) {
+                            System.out.print(" X");
+                        }
+                        System.out.println();
                     }
                     System.out.println();
                 }
-                System.out.println();
             }
         }
     }
