@@ -25,10 +25,8 @@ public class LloroQuadrat {
         }
     }
     public static void rectangle() {
-        for (int li = 0; li < 5; li++) {
             quadrat();
             quadrat();
             System.out.println();
-        }
     }
 }
