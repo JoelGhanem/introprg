@@ -1,7 +1,7 @@
 //Desenvolupa una versió del lloro que, com és tradicional, vagi demanant texts i els repeteixi fins que arribi un text en blanc o buit.
 public class LloroQuadrat {
     public static void main(String[] args) {
-        System.out.print("El lloro espera paraula:");
+        System.out.println("El lloro espera paraula:");
         String paraula = Entrada.readLine();
         while (!paraula.isEmpty()) {
             if (paraula.equals("dibuixa quadrat")) {
