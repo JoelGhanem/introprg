@@ -5,7 +5,7 @@ public class LloroQuadrat {
         String paraula = Entrada.readLine();
         while (!paraula.isEmpty()) {
             if (paraula.equals("dibuixa quadrat")) {
-                quadrat();
+                dibuixaQuadrat();
             } else if (paraula.equals("dibuixa rectangle")) {
                 rectangle();
             } else {
@@ -16,7 +16,7 @@ public class LloroQuadrat {
         }
         System.out.println("Adéu");
     }
-    public static void quadrat() {
+    public static void dibuixaQuadrat() {
         for (int li = 0; li < 5; li++) {
             dibuixaLin();
             System.out.println();
