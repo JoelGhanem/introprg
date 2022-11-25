@@ -9,9 +9,10 @@ public class LloroQuadrat {
             } else if (paraula.equals("dibuixa rectangle")) {
                 rectangle();
             } else {
-                System.out.print("El lloro repeteix :" + paraula);
+                System.out.println("El lloro repeteix: " + paraula);
             }
             System.out.print("El lloro espera paraula:");
+            paraula = Entrada.readLine();
         }
         adeu();
     }
