@@ -7,7 +7,7 @@ public class LloroQuadrat {
             if (paraula.equals("dibuixa quadrat")) {
                 dibuixaQuadrat();
             } else if (paraula.equals("dibuixa rectangle")) {
-                rectangle();
+                dibuixaRectangle();
             } else {
                 System.out.println("El lloro repeteix: " + paraula);
             }
@@ -22,7 +22,7 @@ public class LloroQuadrat {
             System.out.println();
         }
     }
-    public static void rectangle() {
+    public static void dibuixaRectangle() {
         for (int li = 0; li < 5; li++) {
             dibuixaLin();
             dibuixaLin();
