@@ -14,7 +14,7 @@ public class LloroQuadrat {
             System.out.println("El lloro espera paraula:");
             paraula = Entrada.readLine();
         }
-        adeu();
+        System.out.println("Adéu");
     }
     public static void quadrat() {
         for (int li = 0; li < 5; li++) {
@@ -25,10 +25,10 @@ public class LloroQuadrat {
         }
     }
     public static void rectangle() {
-        quadrat();
-        quadrat();
-    }
-    public static void adeu() {
-        System.out.println("Adéu");
+        for (int li = 0; li < 5; li++) {
+            quadrat();
+            quadrat();
+            System.out.println();
+        }
     }
 }
