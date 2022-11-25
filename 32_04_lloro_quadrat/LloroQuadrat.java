@@ -18,15 +18,20 @@ public class LloroQuadrat {
     }
     public static void quadrat() {
         for (int li = 0; li < 5; li++) {
-            for (int co = 0; co < 5; co++) {
-                System.out.print(" X");
-            }
-            System.out.println();
+            dibuixaLin();
         }
+        System.out.println();
     }
     public static void rectangle() {
-            quadrat();
-            quadrat();
-            System.out.println();
+        for (int li = 0; li < 5; li++) {
+            dibuixaLin();
+            dibuixaLin();
+        }
+        System.out.println();
+    }
+    public static void dibuixaLin() {
+        for (int co = 0; co < 5; co++) {
+            System.out.print(" X");
+        }
     }
 }
