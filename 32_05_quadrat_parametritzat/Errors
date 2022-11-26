@@ -1,0 +1,18 @@
+//cabecera//
+public class Quadrat {
+    public static void main(String[] args) {
+        int (numero = Integer.parseInt(args[0]);
+        for (int li = 0; li < numero; li++) {
+            dibuixaLinia();
+        }
+
+    public static dibuixaLinia() {
+        for (int co = 0; co < numero; co++) {
+            System.out.print(" X");
+        }
+    }
+
+No he fet el nom que tocava
+No he fet l'argument i el parametre be
+Me he dejado claves de cierre 
+

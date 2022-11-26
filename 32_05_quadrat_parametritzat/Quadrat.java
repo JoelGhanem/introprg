@@ -3,11 +3,11 @@ public class Quadrat {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
         for (int li = 0; li < numero; li++) {
-            dibuixaLinia(numero);
+            dibuixaQuadrat(numero);
             System.out.println();
         }
     }
-    public static void dibuixaLinia(int numero) {
+    public static void dibuixaQuadrat(int numero) {
         for (int co = 0; co < numero; co++) {
             System.out.print(" X");
         }
