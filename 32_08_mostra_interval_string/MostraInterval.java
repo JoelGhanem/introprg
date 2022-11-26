@@ -9,6 +9,8 @@ public class MostraInterval {
         int fi = Integer.parseInt(Entrada.readLine());
         if (fi >= text.length()) {
             fi = (text.length()-1);
+        } else if (fi < 0) {
+            fi = 0;
         }
         if (inici < 0) {
             inici = 0;
