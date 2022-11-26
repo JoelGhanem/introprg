@@ -12,6 +12,8 @@ public class MostraInterval {
         }
         if (inici < 0) {
             inici = 0;
+        } else if (inici >= text.length()) {
+            inici = (text.length()-1);
         }
         mostraInterval(text, inici, fi);
     }
