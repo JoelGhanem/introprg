@@ -1,4 +1,4 @@
-// Cabecera//
+//Farem ara una nova versió del quadrat parametritzat. En aquesta ocasió, el programa serà capaç de mostrar un caràcter diferent de X a partir del que main() rebi a args[1]//
 public class Quadrat {
     public static void main(String[] args) {
         int costat = Integer.parseInt(args[0]);
