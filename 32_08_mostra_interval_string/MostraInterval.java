@@ -10,16 +10,17 @@ public class MostraInterval {
         if (fi >= text.length()) {
             fi = (text.length()-1);
         }
+        System.out.println(fi);
         mostraInterval(text, inici, fi);
     }
     public static void mostraInterval(String text, int inici, int fi) {
-        if (inici > fi) {
+        if (inici >= fi) {
             for (int i = inici; i >= fi; i--) {
-                System.out.println(i);
+                System.out.println(text.charAt(i));
             }
-        } else if (inici <= fi) {
-            for (int i = inici; inici <= fi; i++){
-                System.out.println(i);
+        } else if (inici < fi) {
+            for (int i = inici; i <= fi; i++) {
+                System.out.println(text.charAt(i));
             }
         }
     }
