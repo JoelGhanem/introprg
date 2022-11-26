@@ -1,0 +1,23 @@
+// Cabecera//
+public class Quadrat {
+    public static void main(String[] args) {
+        int costat = Integer.parseInt(args[0]);
+        char caracter = args.charAt(1);
+        dibuixaQuadrat();
+    }
+    public static void dibuixaQuadrat(int costat, char caracter) {
+        for (int li = 0; li < costat; li++) {
+            dibuixaLinia();
+            System.out.prinln();
+        }
+    }
+    public static void dibuixaLinia(int costat, char caracter) {
+        for (int co = 0; co < costat; co++) {
+            System.out.print(" " + caracter);
+        }
+    }
+}
+
+
+li 5, No he definido bien como coger el char del args.
+li 6, No he definido los valores del cuadrado.
