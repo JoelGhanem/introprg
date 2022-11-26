@@ -30,3 +30,13 @@ public class AnalitzaCaracter {
         }
     }
 }
+
+li 20Tenia q haber puesto el analitza caracter dentro de los ifs para que me detectase las restricciones sin porblemas
+
+li 9 Tenia que ser num +1 ya que  la longitud siempre es diferente por q empieza en 0
+
+li 20 hay que poner caracter dentro de analitza
+
+li 23 hay q poner char caracter
+
+

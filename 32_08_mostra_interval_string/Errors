@@ -1,0 +1,26 @@
+//cabecera//
+public class MostraInterval {
+    public static void main(String[] args) {
+        System.out.println("text?");
+        String text = Entrada.readLine();
+        System.out.println("inici?");
+        int inici = Integer.parseInt(Entrada.readLine());
+        System.out.println("final?");
+        int final = Integer.parseInt(Entrada.readLine());
+        if (final >= text.length()) {
+            final = (text.length()-1);
+        }
+        mostraInterval(text, inici, final);
+    }
+    public static void mostraInterval(String text, int inici, int final) {
+        if (inici > final) {
+            for (int i = inici; i >= final; i--) {
+                System.out.println(i);
+            }
+        } else if (inici <= final) {
+            for (int i = inici; inici <= final; i++){
+                System.out.println(i);
+            }
+        }
+    }
+}
