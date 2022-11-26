@@ -13,6 +13,7 @@ public class AnalitzaCaracter {
                 System.out.println("Fora de rang");
             } else {
                 caracter = text.charAt(text.length()-Math.abs(num));
+                analitzaCaracter(caracter);
             }
         } else {
             caracter = text.charAt(num);
