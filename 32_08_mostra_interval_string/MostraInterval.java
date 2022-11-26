@@ -10,6 +10,9 @@ public class MostraInterval {
         if (fi >= text.length()) {
             fi = (text.length()-1);
         }
+        if (inici < 0) {
+            inici = 0;
+        }
         mostraInterval(text, inici, fi);
     }
     public static void mostraInterval(String text, int inici, int fi) {
