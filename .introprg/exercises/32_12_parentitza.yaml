@@ -1,3 +1,5 @@
+_mainclass: Parentitza
+_version: '2223'
 '01':
   stdin:
   - I have an apple.
@@ -10,5 +12,9 @@
   stdout:
   - Text?
   - (P)(r)(e)(g)(u)(n)(t)(a)'(t) (s)(e)(m)(p)(r)(e) "(e)(s)(t)(à) (b)(e)(n) (c)(o)(m)(e)(n)(t)(a)(t)?".
-_mainclass: Parentitza
-_version: '2223'
+'03':
+  stdin:
+  - "Exercici 31_71. Epistemiologia"
+  stdout:
+  - Text?
+  - (E)(x)(e)(r)(c)(i)(c)(i) 31_71. (E)(p)(i)(s)(t)(e)(m)(i)(o)(l)(o)(g)(i)(a)

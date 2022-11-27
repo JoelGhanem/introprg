@@ -1,8 +1,11 @@
+_mainclass: MostraInterval
+_version: '2223'
 '01':
   stdin:
   - Java rocks!
   - '5'
   - '7'
+  - ''
   stdout:
   - text?
   - inici?
@@ -10,11 +13,13 @@
   - r
   - o
   - c
+  - ''
 '02':
   stdin:
   - Rocks Java
   - '8'
   - '6'
+  - ''
   stdout:
   - text?
   - inici?
@@ -22,11 +27,13 @@
   - v
   - a
   - J
+  - ''
 '03':
   stdin:
   - Java rocks!
   - '-5'
   - '9'
+  - ''
   stdout:
   - text?
   - inici?
@@ -41,11 +48,13 @@
   - c
   - k
   - s
+  - ''
 '04':
   stdin:
   - Java mola!
   - '15'
   - '5'
+  - ''
   stdout:
   - text?
   - inici?
@@ -55,25 +64,27 @@
   - l
   - o
   - m
+  - ''
 '05':
   stdin:
-  - hola
+  - adéu
   - '-2'
   - '-1'
   stdout:
   - text?
   - inici?
   - final?
+  - a
 '06':
   stdin:
-  - hola
+  - drap
   - '-2'
   - '0'
   stdout:
   - text?
   - inici?
   - final?
-  - h
+  - d
 '07':
   stdin:
   - hola
@@ -88,14 +99,14 @@
   - l
 08:
   stdin:
-  - hola
+  - Holand
   - '-2'
   - '3'
   stdout:
   - text?
   - inici?
   - final?
-  - h
+  - H
   - o
   - l
   - a
@@ -197,13 +208,14 @@
   - a
 '17':
   stdin:
-  - hola
-  - '-1'
-  - '-2'
+  - Java
+  - '4'
+  - '3'
   stdout:
   - text?
   - inici?
   - final?
+  - 'a'
 '18':
   stdin:
   - hola
@@ -335,5 +347,29 @@
   - a
   - l
   - o
-_mainclass: MostraInterval
-_version: '2223'
+'29':
+  stdin:
+  - Exercici 31_73. Paeonia broteri
+  - '13'
+  - '29'
+  stdout:
+  - text?
+  - inici?
+  - final?
+  - '3'
+  - '.'
+  - ' '
+  - 'P'
+  - 'a'
+  - 'e'
+  - 'o'
+  - 'n'
+  - 'i'
+  - 'a'
+  - ' '
+  - 'b'
+  - 'r'
+  - 'o'
+  - 't'
+  - 'e'
+  - 'r'

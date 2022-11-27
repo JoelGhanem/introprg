@@ -4,7 +4,6 @@
   stdout:
   - Text?
   - a
-  - ''
 '02':
   stdin:
   - ab
@@ -12,7 +11,6 @@
   - Text?
   - b, a
   - a
-  - ''
 '03':
   stdin:
   - abc
@@ -21,7 +19,6 @@
   - c, b, a
   - b, a
   - a
-  - ''
 '04':
   stdin:
   - Romualda
@@ -35,14 +32,10 @@
   - m, o, R
   - o, R
   - R
-  - ''
 '05':
   stdin:
   - ''
-  - ''
   stdout:
   - Text?
-  - ''
-  - ''
 _mainclass: TriangleLletresInvertit
 _version: '2223'

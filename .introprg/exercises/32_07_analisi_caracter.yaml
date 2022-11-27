@@ -1,3 +1,5 @@
+_mainclass: AnalitzaCaracter
+_version: '2223'
 '01':
   stdin:
   - Tinc 3 gats!
@@ -46,5 +48,11 @@
   - Text?
   - Posició?
   - Fora de rang
-_mainclass: AnalitzaCaracter
-_version: '2223'
+'07':
+  stdin:
+  - "Exercici 31_70. Analísis d'un caràcter a un String"
+  - '-17'
+  stdout:
+  - Text?
+  - Posició?
+  - '''à'' és una lletra'

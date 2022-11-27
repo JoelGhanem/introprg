@@ -1,3 +1,5 @@
+_mainclass: NomesLletres
+_version: '2223'
 '01':
   stdin:
   - Els 4 genets de l'Apocalipsi!
@@ -16,5 +18,9 @@
   stdout:
   - Text?
   - h, o, l, a
-_mainclass: NomesLletres
-_version: '2223'
+'04':
+  stdin:
+  - Maniquí 1987 Original title: Mannequin
+  stdout:
+  - Text?
+  - M, a, n, i, q, u, í, O, r, i, g, i, n, a, l, t, i, t, l, e, M, a, n, n, e, q, u, i, n

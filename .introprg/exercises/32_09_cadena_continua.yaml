@@ -1,6 +1,7 @@
+_mainclass: CadenaContinua
+_version: '2223'
 '01':
   stdin:
-  - ''
   - ''
   stdout:
   - Text?
@@ -52,7 +53,7 @@
   - Text?
   - Nombre?
   - kurumakuruma
-08:
+'08':
   stdin:
   - kuruma
   - '13'
@@ -60,7 +61,7 @@
   - Text?
   - Nombre?
   - kurumakurumak
-09:
+'09':
   stdin:
   - kuruma
   - '25'
@@ -68,5 +69,11 @@
   - Text?
   - Nombre?
   - kurumakurumakurumakurumak
-_mainclass: CadenaContinua
-_version: '2223'
+'10':
+  stdin:
+  - Agamenon
+  - '55'
+  stdout:
+  - Text?
+  - Nombre?
+  - AgamenonAgamenonAgamenonAgamenonAgamenonAgamenonAgameno
