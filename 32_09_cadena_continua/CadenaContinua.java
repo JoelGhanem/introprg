@@ -3,9 +3,13 @@ public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        System.out.println("Nombre?");
-        int longitud = Integer.parseInt(Entrada.readLine());
-        mostraCadenaContinua(text, longitud);
+        if (!text.isEmpty()) {
+            System.out.println("error");
+        } else {
+            System.out.println("Nombre?");
+            int longitud = Integer.parseInt(Entrada.readLine());
+            mostraCadenaContinua(text, longitud);
+        }
     }
     public static void mostraCadenaContinua(String text, int longitud) {
         int contador = -1;
