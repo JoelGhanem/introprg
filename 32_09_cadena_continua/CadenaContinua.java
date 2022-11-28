@@ -3,7 +3,7 @@ public class CadenaContinua {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
-        if (!text.isEmpty()) {
+        if (text.isEmpty()) {
             System.out.println("error");
         } else {
             System.out.println("Nombre?");
