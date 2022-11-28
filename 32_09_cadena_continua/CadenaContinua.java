@@ -15,7 +15,7 @@ public class CadenaContinua {
         int contador = -1;
         for (int i = 0; i < longitud; i++) {
             contador = contador + 1;
-            if (contador > text.length()) {
+            if (contador == text.length()) {
                 contador = 0; 
             }
             System.out.print(text.charAt(contador));
