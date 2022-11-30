@@ -7,7 +7,7 @@ public class TriangleLletres {
     }
     public static void dibuixaTriangle(String text) {
         int linia = 1;
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 1; i < text.length(); i++) {
             dibuixaLinia(text, linia);
             linia += 1;
             System.out.println();
