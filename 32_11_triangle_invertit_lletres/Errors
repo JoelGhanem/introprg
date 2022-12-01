@@ -1,0 +1,25 @@
+//Desenvolupa una nova versió de l'exercici que dibuixava un triangle de lletres invertit.//
+public class TriangleInvertit {
+    public static void main(String[] args) {
+        System.out.println("Text?");
+        String text = Entrada.readLine();
+        dibuixaTriangleInvertit(text);
+    }
+    public static void dibuixaTriangleInvertit(String text) {
+        int linia = (text.length()-1);
+        for (int i = (text.length()-1); i >= 0; i--) {
+            dibuixaLiniaInvertida(text, linia);
+            linia -= 1;
+            System.out.println();
+        }
+    }
+    public static void dibuixaLiniaInvertida(String text, int linia) {
+        for (int j = (text.length()-1); j >= 0; j--) {
+            if (j == linia) {
+                System.out.print(text.charAt(j));
+            } else {
+                System.out.print(text.charAt(j) + ", ");
+            }
+        }
+    }
+}
