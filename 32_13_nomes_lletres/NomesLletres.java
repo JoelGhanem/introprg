@@ -8,13 +8,16 @@ public class NomesLletres {
     public static void filtraLletres(String text) {
         String cadena = "";
         boolean check = false;
+        char letra;
         for(int i = 0; i < text.length(); i++) {
             if (Character.isLetter(text.charAt(i))) {
-                cadena = cadena + text.charAt(i);
+                letra = text.charAt(i);
+                cadena = cadena + letra;
                 if (check == false) {
-                    System.out.print(cadena.charAt(i));
+                    System.out.print(letra);
+                    check = true;
                 } else {
-                    System.out.print(", " + cadena.charAt(i));
+                    System.out.print(", " + letra);
                 }
             }
         }
