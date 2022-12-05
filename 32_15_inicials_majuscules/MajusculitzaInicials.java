@@ -9,11 +9,14 @@ public class MajusculitzaInicials {
         String cadena = "";
         char inicial;
         char letra;
+        if (Character.isLetter(text.charAt(0))) {
+            inicial = Character.toUpperCase(text.charAt(0));
+            cadena = cadena + inicial;
+        } else {
+            letra = text.charAt(0);
+            cadena = cadena + letra;
+        }
         for (int i = 1; i < text.length(); i++) {
-            if (Character.isLetter(text.charAt(0))) {
-                inicial = Character.toUpperCase(text.charAt(0));
-                cadena = cadena + inicial;
-            }
             if (!Character.isLetter(text.charAt(i)-1)) {
                 letra = Character.toUpperCase(text.charAt(i));
                 cadena = cadena + letra;
