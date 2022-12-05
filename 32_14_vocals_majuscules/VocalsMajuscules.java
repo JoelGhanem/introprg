@@ -6,18 +6,15 @@ public class VocalsMajuscules {
         majusculitzaVocals(text);
     }
     public static void majusculitzaVocals(String text) {
-        char letra;
         char mayus;
         char minus;
         String cadena = "";
         for (int i = 0; i < text.length(); i++) {
-            letra = text.charAt(i);
-            Character.toLowerCase(letra);
-            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
-                mayus = Character.toUpperCase(letra);
+            if (text.charAt(i) == 'a' || text.charAt(i) == 'e' || text.charAt(i) == 'i' || text.charAt(i) == 'o' || text.charAt(i) == 'u' || text.charAt(i) == 'A' || text.charAt(i) == 'E' || text.charAt(i) == 'I' || text.charAt(i) == 'O' || text.charAt(i) == 'U') {
+                mayus = Character.toUpperCase(text.charAt(i));
                 cadena = cadena + mayus; 
             } else {
-                minus = Character.toLowerCase(letra);
+                minus = Character.toLowerCase(text.charAt(i));
                 cadena = cadena + minus; 
             }
         }
