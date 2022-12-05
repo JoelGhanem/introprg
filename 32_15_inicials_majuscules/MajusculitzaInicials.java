@@ -7,11 +7,12 @@ public class MajusculitzaInicials {
     }
     public static void majusculitzaInicials(String text) {
         String cadena = "";
+        char inicial;
         char letra;
         for (int i = 1; i < text.length(); i++) {
             if (Character.isLetter(text.charAt(0))) {
-                letra = Character.toUpperCase(text.charAt(0));
-                cadena = cadena + letra;
+                inicial = Character.toUpperCase(text.charAt(0));
+                cadena = cadena + inicial;
             }
             if (!Character.isLetter(text.charAt(i)-1)) {
                 letra = Character.toUpperCase(text.charAt(i));
