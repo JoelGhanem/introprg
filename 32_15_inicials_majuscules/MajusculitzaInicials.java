@@ -9,23 +9,25 @@ public class MajusculitzaInicials {
         String cadena = "";
         char inicial;
         char letra;
-        if (Character.isLetter(text.charAt(0))) {
-            inicial = Character.toUpperCase(text.charAt(0));
-            cadena = cadena + inicial;
-        } else {
-            letra = text.charAt(0);
-            cadena = cadena + letra;
-        }
-        for (int i = 1; i < text.length(); i++) {
-            if (!Character.isLetter(text.charAt(i -1))) {
-                letra = Character.toUpperCase(text.charAt(i));
-                cadena = cadena + letra;
+        if (!text.isEmpty()) {
+            if (Character.isLetter(text.charAt(0))) {
+                inicial = Character.toUpperCase(text.charAt(0));
+                cadena = cadena + inicial;
             } else {
-                letra = Character.toLowerCase(text.charAt(i));
+                letra = text.charAt(0);
                 cadena = cadena + letra;
             }
+            for (int i = 1; i < text.length(); i++) {
+                if (!Character.isLetter(text.charAt(i -1))) {
+                    letra = Character.toUpperCase(text.charAt(i));
+                    cadena = cadena + letra;
+                } else {
+                    letra = Character.toLowerCase(text.charAt(i));
+                    cadena = cadena + letra;
+                }
+            }
+            System.out.println(cadena);
         }
-        System.out.println(cadena);
     }
 }
 
