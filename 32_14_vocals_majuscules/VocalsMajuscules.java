@@ -12,6 +12,7 @@ public class VocalsMajuscules {
         String cadena = "";
         for (int i = 0; i < text.length(); i++) {
             letra = text.charAt(i);
+            Character.toLowerCase(letra);
             if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
                 mayus = Character.toUpperCase(letra);
                 cadena = cadena + mayus; 
