@@ -1,0 +1,137 @@
+/*
+ * Unit testing methods for an exercise
+ */
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Type;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TestExercise {
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "'', false",
+        "'   ', false",
+        "1,true",
+        "-1,true",
+        "+1,true",
+        "123,true",
+        "-456,true",
+        "-4a6,false",
+        "' 1',false",
+        "'1 ',false",
+    })
+    @DisplayName("test mètode UtilString.esEnter(String)")
+    public void esEnterEstricte(String text, boolean esperat) {
+        boolean obtingut = UtilString.esEnter(text);
+        assertEquals(esperat, obtingut, "Revisa el cas esEnter(\"" + text + "\")");
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "'', false",
+        "'   ', false",
+        "1,true",
+        "-1,true",
+        "+1,true",
+        "123,true",
+        "-456,true",
+        "-4a6,false",
+        "' 1',false",
+        "'1 ',false",
+    })
+    @DisplayName("test mètode UtilString.esEnter(String, boolean) amb estricte true")
+    public void esEnterFlexibilitzat(String text, boolean esperat) {
+        boolean obtingut = UtilString.esEnter(text, true);
+        assertEquals(esperat, obtingut, "Revisa el cas esEnter(\"" + text + "\")");
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "'', false",
+        "'   ', false",
+        "1,true",
+        "-1,true",
+        "+1,true",
+        "123,true",
+        "-456,true",
+        "-4a6,false",
+        "' 1',true",
+        "'1 ',true",
+    })
+    @DisplayName("test mètode UtilString.esEnter(String, boolean) amb estricte false")
+    public void esEnterFlexible(String text, boolean esperat) {
+        boolean obtingut = UtilString.esEnter(text, false);
+        assertEquals(esperat, obtingut, "Revisa el cas esEnter(\"" + text + "\")");
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "1,1",
+        "-1,-1",
+        "+1,1",
+        "123,123",
+        "-456,-456",
+        "' 1',1",
+        "'2 ',2",
+        "'   234   ',234",
+    })
+    @DisplayName("test mètode UtilString.aEnter(String, boolean) amb estricte false")
+    public void aEnterFalse(String text, int esperat) {
+        int obtingut = UtilString.aEnter(text, false);
+        assertEquals(esperat, obtingut, "Revisa el cas esEnter(\"" + text + "\")");
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "1,1",
+        "-1,-1",
+        "+1,1",
+        "123,123",
+        "-456,-456",
+    })
+    @DisplayName("test mètode UtilString.aEnter(String, boolean) amb estricte true")
+    public void aEnterTrue(String text, int esperat) {
+        int obtingut = UtilString.aEnter(text, true);
+        assertEquals(esperat, obtingut, "Revisa el cas esEnter(\"" + text + "\")");
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "''",
+        "'   '",
+        "-4a6",
+        "' 1'",
+        "'1 '",
+        "'   234   '",
+    })
+    @DisplayName("test mètode UtilString.aEnter(String, boolean) amb estricte true")
+    public void aEnterTrueException(String text) {
+        assertThrows(NumberFormatException.class, () -> {
+            UtilString.aEnter(text, true);
+        });
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+        "''",
+        "'   '",
+        "-4a6",
+    })
+    @DisplayName("test mètode UtilString.aEnter(String, boolean) amb estricte false")
+    public void aEnterFalseException(String text) {
+        assertThrows(NumberFormatException.class, () -> {
+            UtilString.aEnter(text, false);
+        });
+    }
+}
