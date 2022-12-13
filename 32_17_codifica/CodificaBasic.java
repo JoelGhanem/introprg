@@ -12,17 +12,20 @@ public class CodificaBasic {
         String cadena = "";
         char letra;
         if (quants >= 0) {
-            cadena = cadena + text.charAt(0);
-            for (int i = 1; i < text.length(); i++) {
-                letra = text.charAt(i);
-                if (Character.isLetter(letra)) {
-                    if (letra == 'z') {
-                        letra = ((char)96);
+            if (Character.isUpperCase(text.charAt(0))) {
+                cadena = cadena + text.charAt(0);
+            } else {
+                for (int i = 1; i < text.length(); i++) {
+                    letra = text.charAt(i);
+                    if (Character.isLetter(letra)) {
+                        if (letra == 'z') {
+                            letra = ((char)96);
+                        }
+                        letra = ((char)(letra + quants));
+                        cadena = cadena + letra;
+                    } else {
+                        cadena = cadena + letra;
                     }
-                    letra = ((char)(letra + quants));
-                    cadena = cadena + letra;
-                } else {
-                    cadena = cadena + letra;
                 }
             }
             System.out.println(cadena);
