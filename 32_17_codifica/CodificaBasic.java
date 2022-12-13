@@ -14,7 +14,7 @@ public class CodificaBasic {
         String accents = "áàéèíìóòúù";
         char letra = text.charAt(0);
         if (!text.isEmpty()) {
-            if (quants >= 0) {
+            if (quants > 0) {
                 //Separo la primer letra para poder tratarla mejor
                 if (Character.isUpperCase(text.charAt(0))) {
                     cadena = cadena + text.charAt(0);
@@ -40,6 +40,8 @@ public class CodificaBasic {
                     }
                 }
                 System.out.println(cadena);
+            } else if (quants == 0) {
+                System.out.print(text);
             } else {
                 System.out.println("No s'accepten números negatius");
             }
