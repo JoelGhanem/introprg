@@ -5,7 +5,9 @@ public class CodificaBasic {
         String text = Entrada.readLine();
         System.out.println("Quants?");
         int quants = Integer.parseInt(Entrada.readLine());
-        codifica(text, quants);
+        if (!text.isEmpty()) {
+            codifica(text, quants);
+        }
     }
     public static void codifica(String text, int quants) {
         String cadena = "";
