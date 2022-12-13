@@ -8,24 +8,25 @@ public class CodificaBasic {
         codifica(text, quants);
     }
     public static void codifica(String text, int quants) {
-        boolean check = true;
         String cadena = "";
-        char letra;
+        char letra = text.charAt(0);
         if (quants >= 0) {
             if (Character.isUpperCase(text.charAt(0))) {
                 cadena = cadena + text.charAt(0);
             } else {
-                for (int i = 1; i < text.length(); i++) {
-                    letra = text.charAt(i);
-                    if (Character.isLetter(letra)) {
-                        if (letra == 'z') {
-                            letra = ((char)96);
-                        }
-                        letra = ((char)(letra + quants));
-                        cadena = cadena + letra;
-                    } else {
-                        cadena = cadena + letra;
+                letra = ((char)(letra + quants));
+                cadena = cadena + letra;
+            }
+            for (int i = 0; i < text.length(); i++) {
+                letra = text.charAt(i);
+                if (Character.isLetter(letra)) {
+                    if (letra == 'z') {
+                        letra = ((char)96);
                     }
+                    letra = ((char)(letra + quants));
+                    cadena = cadena + letra;
+                } else {
+                    cadena = cadena + letra;
                 }
             }
             System.out.println(cadena);
