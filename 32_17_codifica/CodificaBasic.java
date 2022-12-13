@@ -18,10 +18,12 @@ public class CodificaBasic {
                     if (letra == 'z') {
                         letra = ((char)96);
                     }
-                    letra = ((char)(letra + quants));
-                    cadena = cadena + letra;
-                } else {
-                    cadena = cadena + letra;
+                    if (letra != 0) {
+                        letra = ((char)(letra + quants));
+                        cadena = cadena + letra;
+                    } else {
+                        cadena = cadena + letra;
+                    }
                 }
             }
             System.out.println(cadena);
