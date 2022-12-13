@@ -20,6 +20,8 @@ public class CodificaBasic {
                     }
                     letra = ((char)(letra + quants));
                     cadena = cadena + letra;
+                } else {
+                    cadena = cadena + letra;
                 }
             }
             System.out.println(cadena);
