@@ -9,22 +9,29 @@ public class CodificaBasic {
     }
     public static void codifica(String text, int quants) {
         String cadena = "";
+        String accents = "áàéèíìóòúù";
         char letra = text.charAt(0);
         if (quants >= 0) {
+            //Separo la primer letra para poder tratarla mejor
             if (Character.isUpperCase(text.charAt(0))) {
                 cadena = cadena + text.charAt(0);
             } else {
                 letra = ((char)(letra + quants));
                 cadena = cadena + letra;
             }
+            // Recorro toda la cadena para cambiar los valores
             for (int i = 1; i < text.length(); i++) {
                 letra = text.charAt(i);
                 if (Character.isLetter(letra)) {
                     if (letra == 'z') {
                         letra = ((char)96);
                     }
-                    letra = ((char)(letra + quants));
-                    cadena = cadena + letra;
+                    if (letra != 'à' && letra != 'á' && letra != 'è' && letra != 'é' && letra != 'í' && letra != 'ó' && letra != 'ò' && letra != 'ú') {
+                        letra = ((char)(letra + quants));
+                        cadena = cadena + letra;
+                    } else {
+                        cadena = cadena + letra;
+                    }
                 } else {
                     cadena = cadena + letra;
                 }
