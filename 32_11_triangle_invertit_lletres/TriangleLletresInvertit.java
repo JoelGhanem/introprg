@@ -10,7 +10,6 @@ public class TriangleLletresInvertit {
         for (int i = 0; i < text.length(); i++) {
             dibuixaLiniaInvertida(text, linia);
             linia += 1;
-            System.out.println(linia);
             System.out.println();
         }
     }
