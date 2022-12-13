@@ -27,7 +27,7 @@ public class CodificaBasic {
                     letra = text.charAt(i);
                     if (Character.isLetter(letra)) {
                         if (letra == 'z') {
-                            letra = ((char)96);
+                            letra = 'y';
                         }
                         if (letra != 'à' && letra != 'á' && letra != 'è' && letra != 'é' && letra != 'í' && letra != 'ó' && letra != 'ò' && letra != 'ú') {
                             letra = ((char)(letra + quants));
