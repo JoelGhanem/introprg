@@ -1,5 +1,5 @@
 //Desenvolupa una nova versió de l'exercici que dibuixava un triangle de lletres invertit.//
-public class TriangleInvertit {
+public class TriangleLletresInvertit {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = Entrada.readLine();
@@ -17,7 +17,7 @@ public class TriangleInvertit {
     public static void dibuixaLiniaInvertida(String text, int linia) {
         for (int j = (text.length()-1); j >= linia; j--) {
             if (j == 0){
-                Syste.out.print(text.charAt(0));
+                System.out.print(text.charAt(0));
             } else {
                 System.out.print(text.charAt(j) + ", ");
             }
