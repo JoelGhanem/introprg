@@ -11,6 +11,7 @@ public class CodificaBasic {
     }
     public static void codifica(String text, int quants) {
         String cadena = "";
+        String accents = "áàéèíìóòúù";
         char letra = text.charAt(0);
         if (!text.isEmpty()) {
             if (quants > 0) {
@@ -25,7 +26,7 @@ public class CodificaBasic {
                 for (int i = 1; i < text.length(); i++) {
                     letra = text.charAt(i);
                     if (Character.isLetter(letra)) {
-                        if (letra >= 'z') {
+                        if (letra == 'z') {
                             letra = ((char)96);
                         } else {
                             cadena = cadena + letra;
