@@ -20,18 +20,18 @@ public class CodificaBasic {
                 } else {
                     letra = ((char)(letra + quants));
                     cadena = cadena + letra;
-                }
-                // Recorro toda la cadena para cambiar los valores
-                for (int i = 1; i < text.length(); i++) {
-                    letra = text.charAt(i);
-                    if (Character.isLetter(letra)) {
-                        if (letra >= 'z') {
-                            letra = ((char)96);
+                    // Recorro toda la cadena para cambiar los valores
+                    for (int i = 1; i < text.length(); i++) {
+                        letra = text.charAt(i);
+                        if (Character.isLetter(letra)) {
+                            if (letra >= 'z') {
+                                letra = ((char)96);
+                            } else {
+                                cadena = cadena + letra;
+                            }
                         } else {
                             cadena = cadena + letra;
                         }
-                    } else {
-                        cadena = cadena + letra;
                     }
                 }
                 System.out.println(cadena);
