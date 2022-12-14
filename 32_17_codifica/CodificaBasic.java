@@ -33,7 +33,7 @@ public class CodificaBasic {
                         } else {
                             cadena = cadena + letra;
                         }
-                        if (letra == 'z') {
+                        if (letra >= 'z') {
                             letra = ((char)96);
                         }
                     } else {
