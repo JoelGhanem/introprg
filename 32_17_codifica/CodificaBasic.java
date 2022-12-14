@@ -25,13 +25,8 @@ public class CodificaBasic {
                 for (int i = 1; i < text.length(); i++) {
                     letra = text.charAt(i);
                     if (Character.isLetter(letra)) {
-                        if (letra == 'z') {
+                        if (letra >= 'z') {
                             letra = ((char)96);
-                        }
-                        // Separo los acentos para que no cambien al sumar valores
-                        if (letra != 'à' && letra != 'á' && letra != 'è' && letra != 'é' && letra != 'í' && letra != 'ó' && letra != 'ò' && letra != 'ú') {
-                            letra = ((char)(letra + quants));
-                            cadena = cadena + letra;
                         } else {
                             cadena = cadena + letra;
                         }
