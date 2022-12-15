@@ -22,7 +22,6 @@ public class CodificaBasic {
                 cadena = cadena + letra;
                 break;
             }
-            cadena = cadena + letra;
         }
         System.out.println(cadena);
     }
