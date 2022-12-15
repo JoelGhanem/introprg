@@ -14,7 +14,7 @@ public class CodificaBasic {
         char letra;
         for (int i = 0; i < text.length(); i++) {
             letra = text.charAt(i);
-            if (Character.isLetter(letra)) {
+            if (letra >= 'a' && letra <= 'z') {
                 for (int j = 1; j <= quants; j++) {
                     letra = ((char)(letra + j));
                     if (letra > 'z') {
