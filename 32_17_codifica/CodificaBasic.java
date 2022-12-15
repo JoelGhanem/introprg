@@ -12,12 +12,11 @@ public class CodificaBasic {
     public static void codifica(String text, int quants) {
         String cadena = "";
         char letra;
-        char tmp;
         if (quants > 0) {
             for (int i = 0; i < text.length(); i++) {
                 letra = text.charAt(i);
                 if (letra >= 'a' && letra <= 'z') {
-                    for (int j = 1; j <= quants; j++) {
+                    for (int j = 0; j <= quants; j++) {
                         letra = ((char)(letra + j));
                         if (letra > 'z') {
                             letra = 'a';
