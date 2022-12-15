@@ -10,3 +10,17 @@ public class CodificaBasic {
         }
     }
     public static void codifica(String text, int quants) {
+        String cadena = "";
+        char letra;
+        for (int i = 0; i < text.length(); i++) {
+            for (int j = 0; j <= quants; j++) {
+                letra = ((char) + j);
+                if (letra > 'z') {
+                    letra = 'a';
+                }
+                cadena = cadena + letra;
+            }
+        }
+        System.out.println(cadena);
+    }
+}
