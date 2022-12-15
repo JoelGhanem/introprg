@@ -13,6 +13,7 @@ public class CodificaBasic {
         String cadena = "";
         char letra;
         for (int i = 0; i < text.length(); i++) {
+            letra = text.charAt(i);
             for (int j = 0; j <= quants; j++) {
                 letra = ((char) + j);
                 if (letra > 'z') {
@@ -20,6 +21,7 @@ public class CodificaBasic {
                 }
                 cadena = cadena + letra;
             }
+            cadena = cadena + letra;
         }
         System.out.println(cadena);
     }
