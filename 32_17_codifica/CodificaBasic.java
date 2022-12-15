@@ -41,8 +41,6 @@ public class CodificaBasic {
                         }
                     }
                     cadena = cadena + letra;
-                } else {
-                    cadena = cadena + letra;
                 }
             }
         }
