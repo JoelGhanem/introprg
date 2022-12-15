@@ -12,22 +12,14 @@ public class CodificaBasic {
     public static void codifica(String text, int quants) {
         String cadena = "";
         char letra;
-        if (Character.isUpperCase(text.charAt(0))) {
-            letra = text.charAt(0);
-            cadena = cadena + letra;
-        } else if (Character.isLowerCase(text.charAt(0))) {
-            letra = text.charAt(0);
-            letra = ((char) (letra + quants));
-        }
-        for (int i = 1; i < text.length(); i++) {
+        for (int i = 0; i < text.length(); i++) {
             letra = text.charAt(i);
-            for (int j = 0; j <= quants; j++) {
-                letra = ((char) (letra + j));
+            for (int j = 1; j <= quants; j++) {
+                letra = ((char)(letra + j));
                 if (letra > 'z') {
                     letra = 'a';
                 }
                 cadena = cadena + letra;
-                break;
             }
         }
         System.out.println(cadena);
