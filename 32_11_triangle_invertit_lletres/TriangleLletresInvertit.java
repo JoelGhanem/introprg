@@ -16,7 +16,7 @@ public class TriangleLletresInvertit {
     public static void dibuixaLiniaInvertida(String text, int linia) {
         int largo = (text.length()-1);
         for (int j = largo; j >= linia; j--) {
-            largo -= 1;
+            largo = largo - 1;
             if (j == 0){
                 System.out.print(text.charAt(0));
             } else {
