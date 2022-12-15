@@ -20,6 +20,7 @@ public class CodificaBasic {
                     letra = 'a';
                 }
                 cadena = cadena + letra;
+                return;
             }
             cadena = cadena + letra;
         }
