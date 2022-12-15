@@ -12,6 +12,7 @@ public class CodificaBasic {
     public static void codifica(String text, int quants) {
         String cadena = "";
         char letra;
+        char tmp;
         if (quants > 0) {
             for (int i = 0; i < text.length(); i++) {
                 letra = text.charAt(i);
@@ -21,8 +22,8 @@ public class CodificaBasic {
                         if (letra > 'z') {
                             letra = 'a';
                         }
-                        cadena = cadena + letra;
                     }
+                    cadena = cadena + letra;
                 } else {
                     cadena = cadena + letra;
                 }
