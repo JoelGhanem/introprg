@@ -14,11 +14,15 @@ public class CodificaBasic {
         char letra;
         for (int i = 0; i < text.length(); i++) {
             letra = text.charAt(i);
-            for (int j = 1; j <= quants; j++) {
-                letra = ((char)(letra + j));
-                if (letra > 'z') {
-                    letra = 'a';
+            if (Character.isLetter(letra)) {
+                for (int j = 1; j <= quants; j++) {
+                    letra = ((char)(letra + j));
+                    if (letra > 'z') {
+                        letra = 'a';
+                    }
+                    cadena = cadena + letra;
                 }
+            } else {
                 cadena = cadena + letra;
             }
         }
