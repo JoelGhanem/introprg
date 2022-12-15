@@ -14,7 +14,7 @@ public class ComptaAiEs {
                 comptador += 1;
             }
         }
-        System.out.println("Nombre de '" + lletra + "'S: " + comptador);
+        System.out.println("Nombre de '" + lletra + "'s: " + comptador);
     }
     public static void comparaOcurrencies(String text, char lletra1, char lletra2) {
         int comptadorA = 0;
