@@ -28,6 +28,8 @@ public class CodificaBasic {
                 }
             }
             System.out.println(cadena);
+        } else {
+            System.out.println(text);
         }
     }
 }
