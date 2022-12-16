@@ -10,7 +10,7 @@ public class ComptaVocals {
         }
     }
     public static void mostraOcurrencies(char lletra, int quantes) {
-        System.out.println("nombre de '" + lletra + "'s: " + quantes);
+        System.out.println("Nombre de '" + lletra + "'s: " + quantes);
     }
     public static int quantesOcurrencies(String text, char lletra) {
         int comptador = 0;
