@@ -6,6 +6,7 @@ public class ComptaVocals {
         String vocals = ("aàeéèiíïoóòuúü");
         for (int j = 0; j < vocals.length(); j++) {
             int num = quantesOcurrencies(text, vocals.charAt(j));
+            mostraOcurrencies(vocals.charAt(j), num);
         }
     }
     public static void mostraOcurrencies(char lletra, int quantes) {
