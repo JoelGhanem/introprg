@@ -3,7 +3,7 @@ public class ComptaVocals {
     public static void main (String[] args) {
         System.out.println("Introdueix un text");
         String text = Entrada.readLine();
-        String vocals = ("aàeéèiíïoóòuúü");
+        String vocals = ("aàeèéiíïoóòuúü");
         for (int j = 0; j < vocals.length(); j++) {
             int num = quantesOcurrencies(text, vocals.charAt(j));
             mostraOcurrencies(vocals.charAt(j), num);
