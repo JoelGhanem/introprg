@@ -1,0 +1,138 @@
+/*
+ * Unit testing methods for an exercise
+ */
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TestExercise {
+
+    /* ************************************************************************* *
+     *  Test UtilTaula.inicialitzaTaula()
+     * ************************************************************************* */
+    @Nested
+    @DisplayName("Tests de UtilTaula.inicialitzaTaula()")
+    class SobreInicialitzaTaula {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaTaula() per 1x1 amb valor 1")
+        public void taula1x1() {
+            int[][] taula = new int[1][1];
+            int[][] expected = {{1}};
+            UtilTaula.inicialitzaTaula(taula, 1);
+            assertArrayEquals(expected, taula, "Revisa el cas inicialitzaTaula() rep una taula 1x1");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaTaula() per 2x3 amb valor 42")
+        public void taula2x3() {
+            int[][] taula = new int[2][3];
+            int[][] expected = {{42, 42, 42}, {42, 42, 42}};
+            UtilTaula.inicialitzaTaula(taula, 42);
+            assertArrayEquals(expected, taula, "Revisa el cas inicialitzaTaula() rep una taula 2x3");
+        }
+    }
+
+    /* ************************************************************************* *
+     *  Test UtilTaula.inicialitzaSequencial()
+     * ************************************************************************* */
+    @Nested
+    @DisplayName("Tests de UtilTaula.inicialitzaSequencial()")
+    class SobreInicialitzaTaulaSequencial {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSequencial() per 1x1 amb valor 1")
+        public void taula1x1() {
+            int[][] taula = new int[1][1];
+            int[][] expected = {{1}};
+            UtilTaula.inicialitzaSequencial(taula, 1);
+            assertArrayEquals(expected, taula, "Revisa el cas inicialitzaSequencial() rep una taula 1x1");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSequencial() per 2x2 amb valor 3")
+        public void taula2x2() {
+            int[][] taula = new int[2][2];
+            int[][] expected = {{3, 4}, {5, 6}};
+            UtilTaula.inicialitzaSequencial(taula, 3);
+            assertArrayEquals(expected, taula, "Revisa el cas inicialitzaSequencial() rep una taula 2x2");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSequencial() per 2x3 amb valor 42")
+        public void taula2x3() {
+            int[][] taula = new int[2][3];
+            int[][] expected = {{42, 43, 44}, {45, 46, 47}};
+            UtilTaula.inicialitzaSequencial(taula, 42);
+            assertArrayEquals(expected, taula, "Revisa el cas inicialitzaSequencial() rep una taula 2x3");
+        }
+    }
+
+    /* ************************************************************************* *
+     *  Test UtilTaula.taulaToString()
+     * ************************************************************************* */
+    @Nested
+    @DisplayName("Tests de UtilTaula.taulaToString()")
+    class SobreTaulaToString{
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 1x1")
+        public void taula1x1() {
+            int[][] taula = {{1}};
+            String expected = "       1\n";
+            String found = UtilTaula.taulaToString(taula);
+            assertEquals(expected, found, "Revisa el cas taulaToString() rep una taula 1x1");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 1x1 valor gran")
+        public void taula1x1big() {
+            int[][] taula = {{123}};
+            String expected = "     123\n";
+            String found = UtilTaula.taulaToString(taula);
+            assertEquals(expected, found, "Revisa el cas taulaToString() rep una taula 1x1 amb un valor gran");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 2x3")
+        public void taula2x3() {
+            int[][] taula = {{41, 143, 12}, {4, 5, 42}};
+            String expected = "      41     143      12\n       4       5      42\n";
+            String found = UtilTaula.taulaToString(taula);
+            assertEquals(expected, found, "Revisa el cas taulaToString() rep una taula 2x3");
+        }
+    }
+    /* ************************************************************************* *
+     *  Test TaulaEnterAString.obteFiles() i obteColumnes()
+     * ************************************************************************* */
+    @Nested
+    @DisplayName("Tests de TaulaEnterAString.obteFiles() i obteColumnes()")
+    class SobreTaulaEnterAString {
+
+        @ParameterizedTest
+        @CsvSource(value={
+        "'', -1, -1",
+        "'abc', -1, -1",
+        "'axc', -1, -1",
+        "'ax1', -1, -1",
+        "'ax99', -1, -1",
+        "'2xa', -1, -1",
+        "'98xa', -1, -1",
+        "'97x16', 97, 16",
+        "'x15', -1, -1",
+        "'14x', -1, -1",
+        "'141x1', -1, -1",
+        "'41x100', -1, -1",
+        })
+        @DisplayName("test processament correcte de dimensions") 
+        public void dimensions(String especificacio, int filesEsperades, int columnesEsperades) {
+            int filesTrobades = TaulaEnterAString.obteFiles(especificacio);
+            int columnesTrobades = TaulaEnterAString.obteColumnes(especificacio);
+            assertAll(
+                    () -> assertEquals(filesEsperades, filesTrobades, "Revisa obteFiles(\"" + especificacio + "\")"),
+                    () -> assertEquals(columnesEsperades, columnesTrobades, "Revisa obteColumnes(\"" + especificacio + "\")")
+                    );
+        }
+    }
+}

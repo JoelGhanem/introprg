@@ -1,20 +1,16 @@
 /*
- * Unit testing methods for an exercise
+ * Unit testing for UtilTaula.sustitueix()
  */
 
-import java.lang.reflect.Method;
-import java.lang.reflect.Type;
-import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestExercise {
-
     @Test
     public void substitueixQuan1x1SenseOcurrencies() {
         char[][] origen = new char[][] { {'c'} };
         char[][] esperat = new char[][] { {'c'} };
-        char[][] obtingut = UtilFormes.substitueix(origen, 'a', 'b');
+        char[][] obtingut = UtilTaula.substitueix(origen, 'a', 'b');
         String msg = "Revisa substitueix() quan origen és una taula 1x1";
         afirmaIguals(origen, esperat, obtingut, msg);
     }
@@ -23,7 +19,7 @@ public class TestExercise {
     public void substitueixQuan1x1AmbOcurrencies() {
         char[][] origen = new char[][] { {'a'} };
         char[][] esperat = new char[][] { {'b'} };
-        char[][] obtingut = UtilFormes.substitueix(origen, 'a', 'b');
+        char[][] obtingut = UtilTaula.substitueix(origen, 'a', 'b');
         String msg = "Revisa substitueix() quan origen és una taula 1x1";
         afirmaIguals(origen, esperat, obtingut, msg);
     }
@@ -32,7 +28,7 @@ public class TestExercise {
     public void substitueixQuan3x3ab() {
         char[][] origen = new char[][] { {'a', 'b', 'c'}, {'a', 'a', 'a'}, {'b', 'a', 'c'}  };
         char[][] esperat = new char[][] { {'b', 'b', 'c'}, {'b', 'b', 'b'}, {'b', 'b', 'c'}  };
-        char[][] obtingut = UtilFormes.substitueix(origen, 'a', 'b');
+        char[][] obtingut = UtilTaula.substitueix(origen, 'a', 'b');
         String msg = "Revisa substitueix() quan origen és una taula 3x3";
         afirmaIguals(origen, esperat, obtingut, msg);
     }
@@ -41,7 +37,7 @@ public class TestExercise {
     public void substitueixQuan3x3bc() {
         char[][] origen = new char[][] { {'a', 'b', 'c'}, {'b', 'a', 'b'}, {'b', 'a', 'c'}  };
         char[][] esperat = new char[][] { {'a', 'C', 'c'}, {'C', 'a', 'C'}, {'C', 'a', 'c'}  };
-        char[][] obtingut = UtilFormes.substitueix(origen, 'b', 'C');
+        char[][] obtingut = UtilTaula.substitueix(origen, 'b', 'C');
         String msg = "Revisa substitueix() quan origen és una taula 3x3";
         afirmaIguals(origen, esperat, obtingut, msg);
     }
@@ -50,7 +46,7 @@ public class TestExercise {
     public void substitueixQuan1x4() {
         char[][] origen = new char[][] { {'a', 'b', 'c', 'a'} };
         char[][] esperat = new char[][] { {'b', 'b', 'c', 'b'} };
-        char[][] obtingut = UtilFormes.substitueix(origen, 'a', 'b');
+        char[][] obtingut = UtilTaula.substitueix(origen, 'a', 'b');
         String msg = "Revisa substitueix() quan origen és una taula 1x4";
         afirmaIguals(origen, esperat, obtingut, msg);
     }
@@ -59,11 +55,10 @@ public class TestExercise {
     public void substitueixQuan4x1() {
         char[][] origen = new char[][] { {'a'}, {'b'}, {'c'}, {'a'} };
         char[][] esperat = new char[][] { {'b'}, {'b'}, {'c'}, {'b'} };
-        char[][] obtingut = UtilFormes.substitueix(origen, 'a', 'b');
+        char[][] obtingut = UtilTaula.substitueix(origen, 'a', 'b');
         String msg = "Revisa substitueix() quan origen és una taula 1x4";
         afirmaIguals(origen, esperat, obtingut, msg);
     }
-
 
     private void afirmaIguals(char[][] origen, char[][] esperat, char[][] obtingut, String msg) {
         assertFalse(origen == obtingut, msg + ". No s'ha de retornar la taula d'origen");

@@ -1,0 +1,2362 @@
+/*
+ * Unit testing methods for an exercise
+ */
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TestExercise {
+
+    /* ************************************************************************* *
+     *  Test UtilTaula.taulaToString()
+     * ************************************************************************* */
+    @Nested
+    @DisplayName("Tests de UtilTaula.taulaToString()")
+    class SobreTaulaToString{
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 1x1 true amb X·")
+        public void taula1x1TrueXPunt() {
+            boolean[][] taula = {{true}};
+            String expected = "X\n";
+            String found = UtilTaula.taulaToString(taula, 'X', '·');
+            assertEquals(expected, found, "Revisa el cas taulaToString() rep una taula 1x1");
+        }
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 1x1 false amb X·")
+        public void taula1x1FalseXPunt() {
+            boolean[][] taula = {{false}};
+            String expected = "·\n";
+            String found = UtilTaula.taulaToString(taula, 'X', '·');
+            assertEquals(expected, found, "Revisa el cas taulaToString() rep una taula 1x1");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 1x1 true amb AB")
+        public void taula1x1TrueAB() {
+            boolean[][] taula = {{true}};
+            String expected = "A\n";
+            String found = UtilTaula.taulaToString(taula, 'A', 'B');
+            assertEquals(expected, found, "Revisa el cas taulaToString() rebi caràcters A i B");
+        }
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per 1x1 false amb AB")
+        public void taula1x1FalseAB() {
+            boolean[][] taula = {{false}};
+            String expected = "B\n";
+            String found = UtilTaula.taulaToString(taula, 'A', 'B');
+            assertEquals(expected, found, "Revisa el cas taulaToString() rebi caràcters A i B");
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.taulaToString() per escacs 3x4")
+        public void taulaEscacs() {
+            boolean[][] taula = {
+                {true, false, true, false},
+                {false, true, false, true},
+                {true, false, true, false}
+            };
+            String expected = "X·X·\n·X·X\nX·X·\n";
+            String found = UtilTaula.taulaToString(taula, 'X', '·');
+            assertEquals(expected, found, "Revisa el cas taulaToString() rep una taula 3x4");
+        }
+    }
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaPrimeraDiagonal()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaPrimeraDiagonal()")
+    class SobreinicialitzaPrimeraDiagonal {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPrimeraDiagonal() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaPrimeraDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPrimeraDiagonal() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = {{false, true}, {true, false}};
+            boolean[][] expected = {{true, false}, {false, true}};
+            UtilTaula.inicialitzaPrimeraDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPrimeraDiagonal() per 3x2")
+        public void taula3x2() {
+            boolean[][] taula = {{false, true}, {true, false}, {true, false}};
+            boolean[][] expected = {{true, false}, {false, true}, {false, false}};
+            UtilTaula.inicialitzaPrimeraDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPrimeraDiagonal() per 5x6")
+        public void taula5x6() {
+            boolean[][] taula = {
+                {false,true,true,true,true,true},
+                {true,false,true,true,true,false},
+                {true,true,false,true,false,false},
+                {true,true,true,false,false,false},
+                {true,true,true,true,false,false}
+            };
+            boolean[][] expected = {
+                {true,false,false,false,false,false},
+                {false,true,false,false,false,false},
+                {false,false,true,false,false,false},
+                {false,false,false,true,false,false},
+                {false,false,false,false,true,false}
+            };
+            UtilTaula.inicialitzaPrimeraDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaSegonaDiagonal()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaSegonaDiagonal()")
+    class SobreinicialitzaSegonaDiagonal {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSegonaDiagonal() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaSegonaDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSegonaDiagonal() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = {{true, false}, {false, true}};
+            boolean[][] expected = {{false, true}, {true, false}};
+            UtilTaula.inicialitzaSegonaDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSegonaDiagonal() per 3x2")
+        public void taula3x2() {
+            boolean[][] taula = new boolean[3][2];
+            boolean[][] expected = {{false, true}, {true, false}, {false, false}};
+            UtilTaula.inicialitzaSegonaDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSegonaDiagonal() per 5x6")
+        public void taula5x6() {
+            boolean[][] taula = {
+                {true,true,true,true,true,true},
+                {true,true,false,true,true,true},
+                {true,true,false,true,true,true},
+                {true,true,false,true,true,true},
+                {true,true,false,true,true,true}
+            };
+            boolean[][] expected = {
+                {false,false,false,false,false,true},
+                {false,false,false,false,true,false},
+                {false,false,false,true,false,false},
+                {false,false,true,false,false,false},
+                {false,true,false,false,false,false}
+            };
+            UtilTaula.inicialitzaSegonaDiagonal(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaVerticalMig()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaVerticalMig()")
+    class SobreinicialitzaVerticalMig {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMig() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaVerticalMig(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMig() per columnes parelles")
+        public void taulaParelles() {
+            boolean[][] taula = {
+                {true,true,true,true},
+                {false,false,false,false},
+                {true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,true,false,false},
+                {false,true,false,false},
+                {false,true,false,false},
+            };
+            UtilTaula.inicialitzaVerticalMig(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMig() per columnes senars")
+        public void taulaSenars() {
+            boolean[][] taula = {
+                {true,true,true,true,true},
+                {false,false,false,false,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaVerticalMig(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaHoritzontalMig()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaHoritzontalMig()")
+    class SobreinicialitzaHoritzontalMig {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMig() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaHoritzontalMig(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMig() per files senars")
+        public void taulaSenars() {
+            boolean[][] taula = {
+                {true,true,true,true},
+                {false,false,false,false},
+                {true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false,false},
+                {true,true,true,true},
+                {false,false,false,false},
+            };
+            UtilTaula.inicialitzaHoritzontalMig(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMig() per files parelles")
+        public void taulaParelles() {
+            boolean[][] taula = {
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {true,true,true,true,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaHoritzontalMig(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaPrimeraDiagonalPrimerPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaPrimeraDiagonalPrimerPle()")
+    class SobreinicialitzaPrimeraDiagonalPrimerPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPrimeraDiagonalPrimerPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaPrimeraDiagonalPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaPrimeraDiagonalSegonPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaPrimeraDiagonalSegonPle()")
+    class SobreinicialitzaPrimeraDiagonalSegonPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPrimeraDiagonalSegonPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaPrimeraDiagonalSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaSegonaDiagonalPrimerPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaSegonaDiagonalPrimerPle()")
+    class SobreinicialitzaSegonaDiagonalPrimerPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSegonaDiagonalPrimerPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaSegonaDiagonalPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaSegonaDiagonalSegonPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaSegonaDiagonalSegonPle()")
+    class SobreinicialitzaSegonaDiagonalSegonPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaSegonaDiagonalSegonPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaSegonaDiagonalSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaVerticalMigPrimerPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaVerticalMigPrimerPle()")
+    class SobreinicialitzaVerticalMigPrimerPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMigPrimerPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaVerticalMigPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMigPrimerPle() per columnes parelles")
+        public void taulaParelles() {
+            boolean[][] taula = {
+                {true,true,true,true},
+                {false,false,false,false},
+                {true,true,true,true},
+            };
+            boolean[][] expected = {
+                {true,true,false,false},
+                {true,true,false,false},
+                {true,true,false,false},
+            };
+            UtilTaula.inicialitzaVerticalMigPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMigPrimerPle() per columnes senars")
+        public void taulaSenars() {
+            boolean[][] taula = {
+                {true,true,true,true,true},
+                {false,false,false,false,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaVerticalMigPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaVerticalMigSegonPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaVerticalMigSegonPle()")
+    class SobreinicialitzaVerticalMigSegonPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMigSegonPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaVerticalMigSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMigSegonPle() per columnes parelles")
+        public void taulaParelles() {
+            boolean[][] taula = {
+                {true,true,true,true},
+                {false,false,false,false},
+                {true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,true,true,true},
+                {false,true,true,true},
+                {false,true,true,true},
+            };
+            UtilTaula.inicialitzaVerticalMigSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaVerticalMigSegonPle() per columnes senars")
+        public void taulaSenars() {
+            boolean[][] taula = {
+                {false,true,true,true,true,true,true},
+                {false,true,false,false,false,false,true},
+                {false,true,true,true,true,true,true},
+                {false,true,true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false,true,true,true,true},
+                {false,false,false,true,true,true,true},
+                {false,false,false,true,true,true,true},
+                {false,false,false,true,true,true,true},
+            };
+            UtilTaula.inicialitzaVerticalMigSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaHoritzontalMigPrimerPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaHoritzontalMigPrimerPle()")
+    class SobreinicialitzaHoritzontalMigPrimerPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMigPrimerPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaHoritzontalMigPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMigPrimerPle() per files senars")
+        public void taulaSenars() {
+            boolean[][] taula = {
+                {true,true,true,true},
+                {false,false,false,false},
+                {true,true,true,true},
+            };
+            boolean[][] expected = {
+                {true,true,true,true},
+                {true,true,true,true},
+                {false,false,false,false},
+            };
+            UtilTaula.inicialitzaHoritzontalMigPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMigPrimerPle() per files parelles")
+        public void taulaParelles() {
+            boolean[][] taula = {
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaHoritzontalMigPrimerPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaHoritzontalMigSegonPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaHoritzontalMigSegonPle()")
+    class SobreinicialitzaHoritzontalMigSegonPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMigSegonPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaHoritzontalMigSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMigSegonPle() per files senars")
+        public void taulaSenars() {
+            boolean[][] taula = {
+                {true,true,true,true},
+                {false,false,false,false},
+                {true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false,false},
+                {true,true,true,true},
+                {true,true,true,true},
+            };
+            UtilTaula.inicialitzaHoritzontalMigSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaHoritzontalMigSegonPle() per files parelles")
+        public void taulaParelles() {
+            boolean[][] taula = {
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaHoritzontalMigSegonPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaPasVianants()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaPasVianants()")
+    class SobreinicialitzaPasVianants {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPasVianants() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{false}};
+            UtilTaula.inicialitzaPasVianants(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPasVianants() per 6x1")
+        public void taula6x1() {
+            boolean[][] taula = {{false}, {false}, {false}, {false}, {false}, {false}};
+            boolean[][] expected = {{false}, {true}, {false}, {true}, {false}, {true}};
+            UtilTaula.inicialitzaPasVianants(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPasVianants() per 5x3")
+        public void taula5x3() {
+            boolean[][] taula = {
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+            };
+            UtilTaula.inicialitzaPasVianants(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaPasVianants() per 10x3")
+        public void taula10x3() {
+            boolean[][] taula = {
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+                {false,false,false},
+                {true,true,true},
+            };
+            UtilTaula.inicialitzaPasVianants(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaZebra()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaZebra()")
+    class SobreinicialitzaZebra {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaZebra() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{false}};
+            UtilTaula.inicialitzaZebra(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaZebra() per 1x6")
+        public void taula1x6() {
+            boolean[][] taula = {{false, false, false, false, false, false}};
+            boolean[][] expected = {{false, true, false, true, false, true}};
+            UtilTaula.inicialitzaZebra(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaZebra() per 3x5")
+        public void taula3x5() {
+            boolean[][] taula = {
+                {true,true,true,true,true},
+                {false,false,false,false,false},
+                {true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,true,false,true,false},
+                {false,true,false,true,false},
+                {false,true,false,true,false},
+            };
+            UtilTaula.inicialitzaZebra(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaZebra() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = {
+                {true,true,true,true,true, true,true,true,true,true},
+                {false,false,false,false,false,false,false,false,false,false},
+                {true,true,true,true,true, true,true,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,true,false,true,false,true,false,true,false,true},
+                {false,true,false,true,false,true,false,true,false,true},
+                {false,true,false,true,false,true,false,true,false,true},
+            };
+            UtilTaula.inicialitzaZebra(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaEscacs()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaEscacs()")
+    class SobreinicialitzaEscacs {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaEscacs() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{false}};
+            UtilTaula.inicialitzaEscacs(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaEscacs() per 1x10")
+        public void taula1x10() {
+            boolean[][] taula = {{false,false,false,false,false,false,false,false,false,false}};
+            boolean[][] expected = {{false,true,false,true,false,true,false,true,false,true}};
+            UtilTaula.inicialitzaEscacs(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaEscacs() per 8x1")
+        public void taula8x1() {
+            boolean[][] taula = {
+                {true},
+                {false},
+                {true},
+                {false},
+                {true},
+                {false},
+                {true},
+                {false},
+            };
+            boolean[][] expected = {
+                {false},
+                {true},
+                {false},
+                {true},
+                {false},
+                {true},
+                {false},
+                {true},
+            };
+            UtilTaula.inicialitzaEscacs(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaEscacs() per 7x6")
+        public void taula7x6() {
+            boolean[][] taula = {
+                {true,false,true,false,true,false},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {true,false,true,false,true,false},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+            };
+            boolean[][] expected = {
+                {false,true,false,true,false,true},
+                {true,false,true,false,true,false},
+                {false,true,false,true,false,true},
+                {true,false,true,false,true,false},
+                {false,true,false,true,false,true},
+                {true,false,true,false,true,false},
+                {false,true,false,true,false,true},
+            };
+            UtilTaula.inicialitzaEscacs(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuarts()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuarts()")
+    class SobreinicialitzaQuarts {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuarts() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuarts(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuarts() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = {{true, true}, {true, true}};
+            boolean[][] expected = {{true, true}, {true, false}};
+            UtilTaula.inicialitzaQuarts(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuarts() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = {{true, false, true}, {false, false, true}, {true, true, true}};
+            boolean[][] expected = {{false, true, false}, {true, true, true}, {false, true, false}};
+            UtilTaula.inicialitzaQuarts(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuarts() per 4x6")
+        public void taula4x6() {
+            boolean[][] taula = {
+                {true,true,true,false,false,false},
+                {true,true,true,true,true,true},
+                {true,true,true,false,false,false},
+                {false,false,false,true,true,true},
+            };
+            boolean[][] expected = {
+                {false,false,true,false,false,false},
+                {true,true,true,true,true,true},
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+            };
+            UtilTaula.inicialitzaQuarts(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuarts() per 3x7")
+        public void taula3x7() {
+            boolean[][] taula = {
+                {true,false,false,true,false,true,true},
+                {true,true,true,true,true,true,true},
+                {true,true,false,true,false,false,true},
+            };
+            boolean[][] expected = {
+                {false,false,false,true,false,false,false},
+                {true,true,true,true,true,true,true},
+                {false,false,false,true,false,false,false},
+            };
+            UtilTaula.inicialitzaQuarts(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuartsNOPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuartsNOPle()")
+    class SobreinicialitzaQuartsNOPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = { {true,true}, {true,false}, };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,true,false},
+                {true,true,true},
+                {false,true,false},
+            };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,true,false,false},
+                {true,true,true,true},
+                {false,true,false,false},
+                {false,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,true,true},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,true,true,false,false,false},
+                {true,true,true,false,false,false},
+                {true,true,true,true,true,true},
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = new boolean[3][10];
+            boolean[][] expected = {
+                {true,true,true,true,true,false,false,false,false,false},
+                {true,true,true,true,true,true,true,true,true,true},
+                {false,false,false,false,true,false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOPle() per 10x5")
+        public void taula10x5() {
+            boolean[][] taula = new boolean[10][5];
+            boolean[][] expected = {
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,true,true},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuartsSOPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuartsSOPle()")
+    class SobreinicialitzaQuartsSOPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {false,true,false},
+                {true,true,true},
+                {true,true,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {false,true,false,false},
+                {true,true,true,true},
+                {true,true,false,false},
+                {true,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {true,true,true,true,true},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+                {true,true,true,true,true,true},
+                {true,true,true,false,false,false},
+                {true,true,true,false,false,false},
+                {true,true,true,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = new boolean[3][10];
+            boolean[][] expected = {
+                {false,false,false,false,true,false,false,false,false,false},
+                {true,true,true,true,true,true,true,true,true,true},
+                {true,true,true,true,true,false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSOPle() per 10x5")
+        public void taula10x5() {
+            boolean[][] taula = new boolean[10][5];
+            boolean[][] expected = {
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {true,true,true,true,true},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+    }
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuartsNEPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuartsNEPle()")
+    class SobreinicialitzaQuartsNEPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {false,true,true},
+                {true,true,true},
+                {false,true,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {false,true,true,true},
+                {true,true,true,true},
+                {false,true,false,false},
+                {false,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {true,true,true,true,true},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+                {true,true,true,true,true,true},
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = new boolean[3][10];
+            boolean[][] expected = {
+                {false,false,false,false,true,true,true,true,true,true},
+                {true,true,true,true,true,true,true,true,true,true},
+                {false,false,false,false,true,false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNEPle() per 10x5")
+        public void taula10x5() {
+            boolean[][] taula = new boolean[10][5];
+            boolean[][] expected = {
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {true,true,true,true,true},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsNEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+    }
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuartsSEPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuartsSEPle()")
+    class SobreinicialitzaQuartsSEPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {false,true,false},
+                {true,true,true},
+                {false,true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {false,true,false,false},
+                {true,true,true,true},
+                {false,true,true,true},
+                {false,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {true,true,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {false,false,true,false,false,false},
+                {false,false,true,false,false,false},
+                {true,true,true,true,true,true},
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = new boolean[3][10];
+            boolean[][] expected = {
+                {false,false,false,false,true,false,false,false,false,false},
+                {true,true,true,true,true,true,true,true,true,true},
+                {false,false,false,false,true,true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSEPle() per 10x5")
+        public void taula10x5() {
+            boolean[][] taula = new boolean[10][5];
+            boolean[][] expected = {
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {false,false,true,false,false},
+                {true,true,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsSEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuartsNOSEPlens()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuartsNOSEPlens()")
+    class SobreinicialitzaQuartsNOSEPlens {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 1x1")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,true,false},
+                {true,true,true},
+                {false,true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,true,false,false},
+                {true,true,true,true},
+                {false,true,true,true},
+                {false,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,true,true,false,false,false},
+                {true,true,true,false,false,false},
+                {true,true,true,true,true,true},
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = new boolean[3][10];
+            boolean[][] expected = {
+                {true,true,true,true,true,false,false,false,false,false},
+                {true,true,true,true,true,true,true,true,true,true},
+                {false,false,false,false,true,true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsNOSEPlens() per 10x5")
+        public void taula10x5() {
+            boolean[][] taula = new boolean[10][5];
+            boolean[][] expected = {
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaQuartsNOSEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaQuartsSONEPlens()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaQuartsSONEPlens()")
+    class SobreinicialitzaQuartsSONEPlens {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {false,true,true},
+                {true,true,true},
+                {true,true,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {false,true,true,true},
+                {true,true,true,true},
+                {true,true,false,false},
+                {true,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+                {true,true,true,true,true,true},
+                {true,true,true,false,false,false},
+                {true,true,true,false,false,false},
+                {true,true,true,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 3x10")
+        public void taula3x10() {
+            boolean[][] taula = new boolean[3][10];
+            boolean[][] expected = {
+                {false,false,false,false,true,true,true,true,true,true},
+                {true,true,true,true,true,true,true,true,true,true},
+                {true,true,true,true,true,false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaQuartsSONEPlens() per 10x5")
+        public void taula10x5() {
+            boolean[][] taula = new boolean[10][5];
+            boolean[][] expected = {
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {false,false,true,true,true},
+                {true,true,true,true,true},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+                {true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaQuartsSONEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreu()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreu()")
+    class SobreinicialitzaCreu {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreu1x1() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreu(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreu7x7()")
+        public void taula7x7() {
+            boolean[][] taula = {
+                {false,true,false,true,false,true,false},
+                {false,true,false,true,false,true,false},
+                {false,true,false,true,false,true,false},
+                {false,true,false,true,false,true,false},
+                {false,true,false,true,false,true,false},
+                {false,true,false,true,false,true,false},
+                {false,true,false,true,false,true,false},
+            };
+            boolean[][] expected = {
+                {true,false,false,false,false,false,true},
+                {false,true,false,false,false,true,false},
+                {false,false,true,false,true,false,false},
+                {false,false,false,true,false,false,false},
+                {false,false,true,false,true,false,false},
+                {false,true,false,false,false,true,false},
+                {true,false,false,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreu(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreu5x5()")
+        public void taula5x5() {
+            boolean[][] taula = {
+                {false,true,false,true,false},
+                {false,true,false,true,false},
+                {false,true,false,true,false},
+                {false,true,false,true,false},
+                {false,true,false,true,false},
+            };
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {false,true,false,true,false},
+                {false,false,true,false,false},
+                {false,true,false,true,false},
+                {true,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreu(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreu6x6()")
+        public void taula6x6() {
+            boolean[][] taula = {
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+            };
+            boolean[][] expected = {
+                {true,false,false,false,false,true},
+                {false,true,false,false,true,false},
+                {false,false,true,true,false,false},
+                {false,false,true,true,false,false},
+                {false,true,false,false,true,false},
+                {true,false,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreu(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreu4x6()")
+        public void taula4x6() {
+            boolean[][] taula = {
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+                {false,true,false,true,false,true},
+            };
+            boolean[][] expected = {
+                {true,false,false,false,false,true},
+                {false,true,false,false,true,false},
+                {false,false,true,true,false,false},
+                {false,false,true,true,false,false},
+            };
+            UtilTaula.inicialitzaCreu(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreuNPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreuNPle()")
+    class SobreinicialitzaCreuNPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,true,true},
+                {false,true,false},
+                {true,false,true},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,true,true,true},
+                {false,true,true,false},
+                {false,true,true,false},
+                {true,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,true,true,true,true},
+                {false,true,true,true,false},
+                {false,false,true,false,false},
+                {false,true,false,true,false},
+                {true,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,true,true,true,true,true},
+                {false,true,true,true,true,false},
+                {false,false,true,true,false,false},
+                {false,false,true,true,false,false},
+                {false,true,false,false,true,false},
+                {true,false,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 6x8")
+        public void taula6x8() {
+            boolean[][] taula = new boolean[6][8];
+            boolean[][] expected = {
+                {true,true,true,true,true,true,true,true},
+                {false,true,true,true,true,true,true,false},
+                {false,false,true,true,true,true,false,false},
+                {false,false,false,true,true,false,false,false},
+                {false,false,false,true,true,false,false,false},
+                {false,false,true,false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 3x9")
+        public void taula3x9() {
+            boolean[][] taula = new boolean[3][9];
+            boolean[][] expected = {
+                {true,true,true,true,true,true,true,true,true},
+                {false,true,true,true,true,true,true,true,false},
+                {false,false,true,true,true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNPle() per 8x5")
+        public void taula8x5() {
+            boolean[][] taula = new boolean[8][5];
+            boolean[][] expected = {
+                {true,true,true,true,true},
+                {false,true,true,true,false},
+                {false,false,true,false,false},
+                {false,true,false,true,false},
+                {true,false,false,false,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaCreuNPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreuOPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreuOPle()")
+    class SobreinicialitzaCreuOPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,false,true},
+                {true,true,false},
+                {true,false,true},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,false,false,true},
+                {true,true,true,false},
+                {true,true,true,false},
+                {true,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {true,true,false,true,false},
+                {true,true,true,false,false},
+                {true,true,false,true,false},
+                {true,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,false,false,false,false,true},
+                {true,true,false,false,true,false},
+                {true,true,true,true,false,false},
+                {true,true,true,true,false,false},
+                {true,true,false,false,true,false},
+                {true,false,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 6x8")
+        public void taula6x8() {
+            boolean[][] taula = new boolean[6][8];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,true},
+                {true,true,false,false,false,false,true,false},
+                {true,true,true,false,false,true,false,false},
+                {true,true,true,true,true,false,false,false},
+                {true,true,true,true,true,false,false,false},
+                {true,true,true,false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 3x9")
+        public void taula3x9() {
+            boolean[][] taula = new boolean[3][9];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,false,true},
+                {true,true,false,false,false,false,false,true,false},
+                {true,true,true,false,false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOPle() per 8x5")
+        public void taula8x5() {
+            boolean[][] taula = new boolean[8][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {true,true,false,true,false},
+                {true,true,true,false,false},
+                {true,true,false,true,false},
+                {true,false,false,false,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaCreuOPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreuSPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreuSPle()")
+    class SobreinicialitzaCreuSPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,false,true},
+                {false,true,false},
+                {true,true,true},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,false,false,true},
+                {false,true,true,false},
+                {false,true,true,false},
+                {true,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {false,true,false,true,false},
+                {false,false,true,false,false},
+                {false,true,true,true,false},
+                {true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,false,false,false,false,true},
+                {false,true,false,false,true,false},
+                {false,false,true,true,false,false},
+                {false,false,true,true,false,false},
+                {false,true,true,true,true,false},
+                {true,true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 6x8")
+        public void taula6x8() {
+            boolean[][] taula = new boolean[6][8];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,true},
+                {false,true,false,false,false,false,true,false},
+                {false,false,true,false,false,true,false,false},
+                {false,false,false,true,true,false,false,false},
+                {false,false,false,true,true,false,false,false},
+                {false,false,true,true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 3x9")
+        public void taula3x9() {
+            boolean[][] taula = new boolean[3][9];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,false,true},
+                {false,true,false,false,false,false,false,true,false},
+                {false,false,true,false,false,false,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuSPle() per 8x5")
+        public void taula8x5() {
+            boolean[][] taula = new boolean[8][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {false,true,false,true,false},
+                {false,false,true,false,false},
+                {false,true,true,true,false},
+                {true,true,true,true,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaCreuSPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreuEPle()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreuEPle()")
+    class SobreinicialitzaCreuEPle {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,false,true},
+                {false,true,true},
+                {true,false,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,false,false,true},
+                {false,true,true,true},
+                {false,true,true,true},
+                {true,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {false,true,false,true,true},
+                {false,false,true,true,true},
+                {false,true,false,true,true},
+                {true,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,false,false,false,false,true},
+                {false,true,false,false,true,true},
+                {false,false,true,true,true,true},
+                {false,false,true,true,true,true},
+                {false,true,false,false,true,true},
+                {true,false,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 6x8")
+        public void taula6x8() {
+            boolean[][] taula = new boolean[6][8];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,true},
+                {false,true,false,false,false,false,true,true},
+                {false,false,true,false,false,true,true,true},
+                {false,false,false,true,true,true,true,true},
+                {false,false,false,true,true,true,true,true},
+                {false,false,true,false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 3x9")
+        public void taula3x9() {
+            boolean[][] taula = new boolean[3][9];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,false,true},
+                {false,true,false,false,false,false,false,true,true},
+                {false,false,true,false,false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuEPle() per 8x5")
+        public void taula8x5() {
+            boolean[][] taula = new boolean[8][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {false,true,false,true,true},
+                {false,false,true,true,true},
+                {false,true,false,true,true},
+                {true,false,false,false,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaCreuEPle(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreuNSPlens()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreuNSPlens()")
+    class SobreinicialitzaCreuNSPlens {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,true,true},
+                {false,true,false},
+                {true,true,true},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,true,true,true},
+                {false,true,true,false},
+                {false,true,true,false},
+                {true,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,true,true,true,true},
+                {false,true,true,true,false},
+                {false,false,true,false,false},
+                {false,true,true,true,false},
+                {true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,true,true,true,true,true},
+                {false,true,true,true,true,false},
+                {false,false,true,true,false,false},
+                {false,false,true,true,false,false},
+                {false,true,true,true,true,false},
+                {true,true,true,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 6x8")
+        public void taula6x8() {
+            boolean[][] taula = new boolean[6][8];
+            boolean[][] expected = {
+                {true,true,true,true,true,true,true,true},
+                {false,true,true,true,true,true,true,false},
+                {false,false,true,true,true,true,false,false},
+                {false,false,false,true,true,false,false,false},
+                {false,false,false,true,true,false,false,false},
+                {false,false,true,true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 3x9")
+        public void taula3x9() {
+            boolean[][] taula = new boolean[3][9];
+            boolean[][] expected = {
+                {true,true,true,true,true,true,true,true,true},
+                {false,true,true,true,true,true,true,true,false},
+                {false,false,true,true,true,true,true,false,false},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuNSPlens() per 8x5")
+        public void taula8x5() {
+            boolean[][] taula = new boolean[8][5];
+            boolean[][] expected = {
+                {true,true,true,true,true},
+                {false,true,true,true,false},
+                {false,false,true,false,false},
+                {false,true,true,true,false},
+                {true,true,true,true,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaCreuNSPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+
+
+    /* ************************************************************ *
+     * Test UtilTaula.inicialitzaCreuOEPlens()
+     * ************************************************************ */
+    @Nested
+    @DisplayName("Test de UtilTaula.inicialitzaCreuOEPlens()")
+    class SobreinicialitzaCreuOEPlens {
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 1x1")
+        public void taula1x1() {
+            boolean[][] taula = {{false}};
+            boolean[][] expected = {{true}};
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 2x2")
+        public void taula2x2() {
+            boolean[][] taula = new boolean[2][2];
+            boolean[][] expected = {
+                {true,true},
+                {true,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 3x3")
+        public void taula3x3() {
+            boolean[][] taula = new boolean[3][3];
+            boolean[][] expected = {
+                {true,false,true},
+                {true,true,true},
+                {true,false,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 4x4")
+        public void taula4x4() {
+            boolean[][] taula = new boolean[4][4];
+            boolean[][] expected = {
+                {true,false,false,true},
+                {true,true,true,true},
+                {true,true,true,true},
+                {true,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 5x5")
+        public void taula5x5() {
+            boolean[][] taula = new boolean[5][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {true,true,false,true,true},
+                {true,true,true,true,true},
+                {true,true,false,true,true},
+                {true,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 6x6")
+        public void taula6x6() {
+            boolean[][] taula = new boolean[6][6];
+            boolean[][] expected = {
+                {true,false,false,false,false,true},
+                {true,true,false,false,true,true},
+                {true,true,true,true,true,true},
+                {true,true,true,true,true,true},
+                {true,true,false,false,true,true},
+                {true,false,false,false,false,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 6x8")
+        public void taula6x8() {
+            boolean[][] taula = new boolean[6][8];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,true},
+                {true,true,false,false,false,false,true,true},
+                {true,true,true,false,false,true,true,true},
+                {true,true,true,true,true,true,true,true},
+                {true,true,true,true,true,true,true,true},
+                {true,true,true,false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 3x9")
+        public void taula3x9() {
+            boolean[][] taula = new boolean[3][9];
+            boolean[][] expected = {
+                {true,false,false,false,false,false,false,false,true},
+                {true,true,false,false,false,false,false,true,true},
+                {true,true,true,false,false,false,true,true,true},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+        @Test
+        @DisplayName("test UtilTaula.inicialitzaCreuOEPlens() per 8x5")
+        public void taula8x5() {
+            boolean[][] taula = new boolean[8][5];
+            boolean[][] expected = {
+                {true,false,false,false,true},
+                {true,true,false,true,true},
+                {true,true,true,true,true},
+                {true,true,false,true,true},
+                {true,false,false,false,true},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+                {false,false,false,false,false},
+            };
+            UtilTaula.inicialitzaCreuOEPlens(taula);
+            assertArrayEquals(expected, taula);
+        }
+    }
+}

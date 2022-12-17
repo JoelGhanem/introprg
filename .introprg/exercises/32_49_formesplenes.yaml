@@ -1,0 +1,210 @@
+_mainclass: Formes
+_version: '2223'
+'13':
+  argsin: '6x6*\'
+  stdout:
+  - '6x6*\'
+  - 'XXXXXX'
+  - '·XXXXX'
+  - '··XXXX'
+  - '···XXX'
+  - '····XX'
+  - '·····X'
+'14':
+  argsin: '6x6\*'
+  stdout:
+  - '6x6\*'
+  - 'X·····'
+  - 'XX····'
+  - 'XXX···'
+  - 'XXXX··'
+  - 'XXXXX·'
+  - 'XXXXXX'
+'15':
+  argsin: '6x6*/'
+  stdout:
+  - '6x6*/'
+  - 'XXXXXX'
+  - 'XXXXX·'
+  - 'XXXX··'
+  - 'XXX···'
+  - 'XX····'
+  - 'X·····'
+'16':
+  argsin: '6x6/*'
+  stdout:
+  - '6x6/*'
+  - '·····X'
+  - '····XX'
+  - '···XXX'
+  - '··XXXX'
+  - '·XXXXX'
+  - 'XXXXXX'
+'17':
+  argsin: '5x5*|'
+  stdout:
+  - '5x5*|'
+  - 'XXX··'
+  - 'XXX··'
+  - 'XXX··'
+  - 'XXX··'
+  - 'XXX··'
+'18':
+  argsin: '5x5|*'
+  stdout:
+  - '5x5|*'
+  - '··XXX'
+  - '··XXX'
+  - '··XXX'
+  - '··XXX'
+  - '··XXX'
+'19':
+  argsin: '5x5*-'
+  stdout:
+  - '5x5*-'
+  - 'XXXXX'
+  - 'XXXXX'
+  - 'XXXXX'
+  - '·····'
+  - '·····'
+'20':
+  argsin: '5x5-*'
+  stdout:
+  - '5x5-*'
+  - '·····'
+  - '·····'
+  - 'XXXXX'
+  - 'XXXXX'
+  - 'XXXXX'
+'21':
+  argsin: '7x7*+'
+  stdout:
+  - '7x7*+'
+  - 'XXXX···'
+  - 'XXXX···'
+  - 'XXXX···'
+  - 'XXXXXXX'
+  - '···X···'
+  - '···X···'
+  - '···X···'
+'22':
+  argsin: '7x7**+'
+  stdout:
+  - '7x7**+'
+  - '···X···'
+  - '···X···'
+  - '···X···'
+  - 'XXXXXXX'
+  - 'XXXX···'
+  - 'XXXX···'
+  - 'XXXX···'
+'23':
+  argsin: '7x7+*'
+  stdout:
+  - '7x7+*'
+  - '···XXXX'
+  - '···XXXX'
+  - '···XXXX'
+  - 'XXXXXXX'
+  - '···X···'
+  - '···X···'
+  - '···X···'
+'24':
+  argsin: '7x7+**'
+  stdout:
+  - '7x7+**'
+  - '···X···'
+  - '···X···'
+  - '···X···'
+  - 'XXXXXXX'
+  - '···XXXX'
+  - '···XXXX'
+  - '···XXXX'
+'25':
+  argsin: '7x7*+**'
+  stdout:
+  - '7x7*+**'
+  - 'XXXX···'
+  - 'XXXX···'
+  - 'XXXX···'
+  - 'XXXXXXX'
+  - '···XXXX'
+  - '···XXXX'
+  - '···XXXX'
+'26':
+  argsin: '7x7**+*'
+  stdout:
+  - '7x7**+*'
+  - '···XXXX'
+  - '···XXXX'
+  - '···XXXX'
+  - 'XXXXXXX'
+  - 'XXXX···'
+  - 'XXXX···'
+  - 'XXXX···'
+'27':
+  argsin: '7x7*x'
+  stdout:
+  - '7x7*x'
+  - 'XXXXXXX'
+  - '·XXXXX·'
+  - '··XXX··'
+  - '···X···'
+  - '··X·X··'
+  - '·X···X·'
+  - 'X·····X'
+'28':
+  argsin: '7x7**x'
+  stdout:
+  - '7x7**x'
+  - 'X·····X'
+  - 'XX···X·'
+  - 'XXX·X··'
+  - 'XXXX···'
+  - 'XXX·X··'
+  - 'XX···X·'
+  - 'X·····X'
+'27':
+  argsin: '7x7x*'
+  stdout:
+  - '7x7x*'
+  - 'X·····X'
+  - '·X···X·'
+  - '··X·X··'
+  - '···X···'
+  - '··XXX··'
+  - '·XXXXX·'
+  - 'XXXXXXX'
+'30':
+  argsin: '7x7x**'
+  stdout:
+  - '7x7x**'
+  - 'X·····X'
+  - '·X···XX'
+  - '··X·XXX'
+  - '···XXXX'
+  - '··X·XXX'
+  - '·X···XX'
+  - 'X·····X'
+'31':
+  argsin: '7x7*x*'
+  stdout:
+  - '7x7*x*'
+  - 'XXXXXXX'
+  - '·XXXXX·'
+  - '··XXX··'
+  - '···X···'
+  - '··XXX··'
+  - '·XXXXX·'
+  - 'XXXXXXX'
+'32':
+  argsin: '7x7**x**'
+  stdout:
+  - '7x7**x**'
+  - 'X·····X'
+  - 'XX···XX'
+  - 'XXX·XXX'
+  - 'XXXXXXX'
+  - 'XXX·XXX'
+  - 'XX···XX'
+  - 'X·····X'
