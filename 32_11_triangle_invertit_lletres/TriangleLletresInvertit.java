@@ -14,13 +14,13 @@ public class TriangleLletresInvertit {
         }
     }
     public static void dibuixaLiniaInvertida(String text, int linia) {
-        int largo = (text.length()-1);
-        for (int j = largo; j >= linia; j--) {
-            largo = largo - 1;
-            if (j == 0){
-                System.out.print(text.charAt(0));
-            } else {
-                System.out.print(text.charAt(j) + ", ");
+        for (int j = text.length()-1; j >= 0; j--) {
+            if (j <= text.length()-1-linia) {
+                if (j == 0){
+                    System.out.print(text.charAt(0));
+                } else {
+                    System.out.print(text.charAt(j) + ", ");
+                }
             }
         }
     }
