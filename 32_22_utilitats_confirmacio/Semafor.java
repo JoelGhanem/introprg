@@ -4,9 +4,12 @@ public class Semafor {
         System.out.println("Ets major d'edat?");
         String resposta = Entrada.readLine();
         UtilitatsConfirmacio.respostaABoolean(resposta);
-        System.out.println("Color?");
-        String color = Entrada.readLine();
-        colorSemaforo(color);
+        boolean check = UtilitatsConfirmacio.respostaABoolean(resposta);
+        if (check != false) {
+            System.out.println("Color?");
+            String color = Entrada.readLine();
+            colorSemaforo(color);
+        }
     }
     public static void colorSemaforo(String color) {
         if (color.equals("groc")) {
