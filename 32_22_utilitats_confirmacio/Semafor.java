@@ -9,6 +9,8 @@ public class Semafor {
             System.out.println("Color?");
             String color = Entrada.readLine();
             colorSemaforo(color);
+        } else {
+            System.out.println("No pots fer servir aquest programa sense supervisió");
         }
     }
     public static void colorSemaforo(String color) {
