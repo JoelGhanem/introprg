@@ -11,7 +11,7 @@ public class LloroVocalIniciFi {
         UtilString.esVocal(text);
         boolean checkVocal = UtilString.esVocal(text);
         if (checkVocal != false) {
-            System.out.println(text);
+            System.out.println("El lloro diu: " + text);
         } else {
             System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
         }
