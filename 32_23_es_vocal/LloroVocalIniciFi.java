@@ -10,9 +10,13 @@ public class LloroVocalIniciFi {
         boolean checkConfirmacio = UtilitatsConfirmacio.textABoolean(text);
         UtilString.esVocal(text);
         boolean checkVocal = UtilString.esVocal(text);
-        if (checkVocal != false) {
-            System.out.println("El lloro diu: " + text);
-        } else {
+        while (checkConfirmacio == false) {
+            if (checkVocal != false) {
+                System.out.println("El lloro diu: " + text);
+            } else if (checkVocal == false) {
+            }else {
+                System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
+            }
             System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
         }
     }
