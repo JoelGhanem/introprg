@@ -3,5 +3,17 @@ public class LloroVocalIniciFi {
     public static void main(String[] args) {
         System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
         String text = Entrada.readLine();
-        LloroVocalIniciFi(String text);
-
+        LloroVocalIniciFi(text);
+    }
+    public static void LloroVocalIniciFi(String text) {
+        UtilitatsConfirmacio.textABoolean(text);
+        boolean checkConfirmacio = UtilitatsConfirmacio.textABoolean(text);
+        UtilString.esVocal(text);
+        boolean checkVocal = UtilString.esVocal(text);
+        if (checkVocal != false) {
+            System.out.println(text);
+        } else {
+            System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
+        }
+    }
+}
