@@ -58,6 +58,8 @@ public class UtilString {
             for (int i = inici; i >= fi; i--) {
                 interval = interval + text.charAt(i);
             }
+        } else if (inici == fi) {
+            interval = interval + text.charAt(0);
         }
         return interval;
     }
