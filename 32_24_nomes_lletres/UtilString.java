@@ -13,16 +13,17 @@ public class UtilString {
         return false;
     }
     /*Funció que em deixa només les lletres*/
-    public static void nomesLletres(String text) {
+    public static String nomesLletres(String text) {
         String nomesLletres = "";
         for (int i = 0; i< text.length(); i++) {
             if (Character.isLetter(text.charAt(i))) {
                 nomesLletres = nomesLletres + text.charAt(i);
             }
         }
+        return nomesLletres;
     }
     /*Funció que em separa les lletres per espais i comes*/
-    public static void lletresSeparades(String nomesLletres) {
+    public static String lletresSeparades(String nomesLletres) {
         String separades = "";
         for (int i = 0; i < nomesLletres.length(); i++) {
             if (i == 0) {
@@ -31,5 +32,6 @@ public class UtilString {
                 separades = separades + ", " + nomesLletres.charAt(i);
             }
         }
+        return separades;
     }
 }
