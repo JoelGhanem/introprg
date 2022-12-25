@@ -46,7 +46,7 @@ public class UtilString {
         if (fi < 0) {
             fi = 0;
         }
-        if (fi >= text.length()) {
+        if (fi > text.length()) {
             fi = (text.length()-1);
         }
         /*Cuando inci es menor a fi*/
@@ -54,12 +54,10 @@ public class UtilString {
             for (int i = inici; i <= fi; i++) {
                 interval = interval + text.charAt(i);
             }
-        } else if (inici > fi) {
+        } else if (inici >= fi) {
             for (int i = inici; i >= fi; i--) {
                 interval = interval + text.charAt(i);
             }
-        } else if (inici == fi) {
-            interval = interval + text.charAt(0);
         }
         return interval;
     }
