@@ -5,25 +5,25 @@
  */
 public class UtilitatsConfirmacio {
     /*
-     * Donada una text textual, aquesta funció tradueix la text a
+     * Donada una resposta respostaual, aquesta funció tradueix la resposta a
      * un booleà.
-     * Considera true quan la text és, independentment de majúscules i
+     * Considera true quan la resposta és, independentment de majúscules i
      * sense considerar espais a l'inici ni al final,
      * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
      * Altrament considera false.
      */
-    public static boolean textABoolean(String text) {
-        if (null == text) {     // si la text és null, la donem com a false
+    public static boolean respostaABoolean(String resposta) {
+        if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
         }
-        text = text.toLowerCase();
-        if (text.equals("s") || text.equals("y")) {
+        resposta = resposta.toLowerCase();
+        if (resposta.equals("s") || resposta.equals("y")) {
             return true;
         }
-        if (text.equals("sí") || text.equals("yes")) {
+        if (resposta.equals("sí") || resposta.equals("yes")) {
             return true;
         }
-        if (text.equals("si") || text.equals("vale") || text.equals("yeah")) {
+        if (resposta.equals("si") || resposta.equals("vale") || resposta.equals("yeah")) {
             return true;
         }
         return false;
