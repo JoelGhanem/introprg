@@ -12,7 +12,7 @@ public class LloroVocalIniciFi {
                 if (checkIniciFi(paraula)) {
                     System.out.println("El lloro diu: " + paraula);
                 }
-                System.out.println("El lloro demana paraula amb vocal al inici o/i final");
+                System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
                 paraula = Entrada.readLine();
             }
             System.out.println("El lloro demana confirmació per finalitzar");
