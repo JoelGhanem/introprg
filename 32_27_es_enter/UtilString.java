@@ -76,7 +76,7 @@ public class UtilString {
                     if (numSimbols > 1) {
                         simbol = true;
                     }
-                } else { 
+                } else if (!simbol || !lletra) { 
                     correcte = true;
                 }
             }
