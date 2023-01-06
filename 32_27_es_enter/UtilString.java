@@ -63,28 +63,21 @@ public class UtilString {
     }
     /*Funció que em diu si un String és enter*/
     public static boolean esEnter(String text) {
-        boolean lletra = false;
-        boolean correcte = false;
-        boolean simbol = false;
-        int numSimbols = 0;
-        while (!text.isEmpty()) {
+        if (text.isEmpty()) {
+            return false;
+        } else {
             for (int i = 0; i < text.length(); i++) {
-                if (Character.isLetter(text.charAt(i))) {
-                    lletra = true;
-                } else if (text.charAt(i) == '+' || text.charAt(i) == '-') {
-                    numSimbols += 1;
-                    if (numSimbols > 1) {
-                        simbol = true;
+                if (i == 0) {
+                    if (!(Character.isDigit(text.charAt(i)) || text.charAt(i) == '-' || text.charAt(i) == '+')) {
+                        return false;
                     }
-                } else if (!simbol || !lletra) { 
-                    correcte = true;
+                } else {
+                    if (!Character.isDigit(text.charAt(i))) {
+                        return false;
+                    }
                 }
             }
         }
-        if (correcte) {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 }
