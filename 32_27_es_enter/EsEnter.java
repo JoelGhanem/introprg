@@ -5,10 +5,13 @@ public class EsEnter {
         String text = Entrada.readLine();
         text = text.strip();
         UtilString.esEnter(text);
-        if (UtilString.esEnter(text)) {
-            System.out.println("És enter");
-        } else {
-            System.out.println("No és enter");
+        while (!text.isEmpty()) {
+            if (UtilString.esEnter(text)) {
+                System.out.println("És enter");
+            } else {
+                System.out.println("No és enter");
+            }
+            text = Entrada.readLine();
         }
         System.out.println("Adéu");
     }
