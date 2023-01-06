@@ -12,6 +12,7 @@ public class EsEnter {
                 System.out.println("No és enter");
             }
             text = Entrada.readLine();
+            text = text.strip();
         }
         System.out.println("Adéu");
     }
