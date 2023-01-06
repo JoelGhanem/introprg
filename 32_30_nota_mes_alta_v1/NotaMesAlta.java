@@ -3,10 +3,9 @@ public class NotaMesAlta {
     public static void main(String[] args) {
         System.out.println("Introdueix les notes (-1 per finalitzar)");
         int nota = Integer.parseInt(Entrada.readLine());
-        int a = -1;
+        int a = nota;
         int comptador = 1;
         while (nota > 0) { 
-            a = nota;
             nota = Integer.parseInt(Entrada.readLine());
             comptador += 1;
             if (nota >= a) {
