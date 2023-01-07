@@ -5,7 +5,7 @@ public class EntersEntreComes {
         valors = new int[5];
         int valor; 
         for (int i = 0; i < valors.length; i++) {
-            System.out.println("Valor" + (i + 1) + "?");
+            System.out.println("Valor " + (i + 1) + "?");
             valor = Integer.parseInt(Entrada.readLine());
             valors [i] = valor;
             if (i == valors.length-1) {
