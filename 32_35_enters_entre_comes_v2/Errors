@@ -1,0 +1,26 @@
+/*Una nova versió del programa enters entre comes On els valors son escollits pels usuaris i l array sera sempre de 5*/
+public class EntersEntreComes {
+    public static void main (String[] args) {
+        valors = new int [5];
+        int valor; 
+        for (int i = 0; i < valors.length; i++) {
+        System.out.println("Valor  + (i + 1) + ?");
+            valor = Entrada.readLine();
+            valors [i] = valor;
+            if (i == 0) {
+            System.out.print(valors[i]);
+            } else {
+                System.out.print(", " + valors[i]);
+            }
+        }
+    }
+}
+
+
+No he hecho un segundo for para mostrar los numeros donde toca en vez de en medio de las preguntas
+
+Me he dejado las comillas en la linia 7
+
+
+
+
