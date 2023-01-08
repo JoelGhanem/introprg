@@ -3,19 +3,23 @@ public class EntersEntreComes {
     public static void main (String[] args) {
         System.out.println("Quants?");
         int quants = Integer.parseInt(Entrada.readLine());
-        int valors[];
-        valors = new int[quants];
-        int valor; 
-        for (int i = 0; i < valors.length; i++) {
-            System.out.println("Valor " + (i + 1) + "?");
-            valor = Integer.parseInt(Entrada.readLine());
-            valors [i] = valor;
-            if (i == valors.length-1) {
-                for (int j = 0; j < valors.length; j++){
-                    if ( j == 0) {
-                        System.out.print(valors[j]);
-                    } else {
-                        System.out.print(", " + valors[j]);
+        if (quants < 0) {
+            System.out.println("Res a fer");
+        } else {
+            int valors[];
+            valors = new int[quants];
+            int valor; 
+            for (int i = 0; i < valors.length; i++) {
+                System.out.println("Valor " + (i + 1) + "?");
+                valor = Integer.parseInt(Entrada.readLine());
+                valors [i] = valor;
+                if (i == valors.length-1) {
+                    for (int j = 0; j < valors.length; j++){
+                        if ( j == 0) {
+                            System.out.print(valors[j]);
+                        } else {
+                            System.out.print(", " + valors[j]);
+                        }
                     }
                 }
             }
