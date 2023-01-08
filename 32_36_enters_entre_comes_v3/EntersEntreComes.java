@@ -1,8 +1,10 @@
 /*Una nova versió del programa enters entre comes On els valors son escollits pels usuaris i l array sera sempre de 5*/
 public class EntersEntreComes {
     public static void main (String[] args) {
+        System.out.println("Quants?");
+        int quants = Integer.parseInt(Entrada.readLine());
         int valors[];
-        valors = new int[5];
+        valors = new int[quants];
         int valor; 
         for (int i = 0; i < valors.length; i++) {
             System.out.println("Valor " + (i + 1) + "?");
