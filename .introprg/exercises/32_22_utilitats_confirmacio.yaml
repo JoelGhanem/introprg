@@ -1,3 +1,5 @@
+_mainclass: Semafor
+_version: '2223'
 '1':
   stdin:
   - Sí
@@ -36,5 +38,3 @@
   stdout:
   - Ets major d'edat?
   - No pots fer servir aquest programa sense supervisió
-_mainclass: Semafor
-_version: '2223'
