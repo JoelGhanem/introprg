@@ -8,9 +8,9 @@ public class Arguments {
             } else {
                 String part = "";
                 for (int i = 0; i < text.length(); i++) {
-                    if (Character.isWhiteSpace(text.charAt(i))) {
+                    if (Character.isWhitespace(text.charAt(i))) {
                         for (int j = i + 1; j < text.length(); j++) {
-                            if (Character.isWhiteSpace(text.charAt(j))) {
+                            if (Character.isWhitespace(text.charAt(j))) {
                                 int inici = text.charAt(i);
                                 int fi = text.charAt(j);
                                 UtilString.intervalString(text, inici, fi);
