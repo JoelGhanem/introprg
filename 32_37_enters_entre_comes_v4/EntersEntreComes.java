@@ -15,7 +15,12 @@ public class EntersEntreComes {
         } else {
             System.out.println("Separador?");
             String separador = Entrada.readLine();
-            char caracter = separador.charAt(0);
+            char caracter;
+            if (!separador.isEmpty()) {
+                caracter = separador.charAt(0);
+            } else {
+                caracter = ',';
+            }
             /*Creo un array para poder mostrar los valores despues*/
             int valors[];
             valors = new int[quants];
