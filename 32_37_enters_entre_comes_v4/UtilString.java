@@ -87,7 +87,7 @@ public class UtilString {
             if (i == 0) {
                 resultat = resultat + array[0];
             } else {
-                resultat = resultat + caracter + " " + array[1];
+                resultat = resultat + caracter + " " + array[i];
             }
         }
         return resultat;

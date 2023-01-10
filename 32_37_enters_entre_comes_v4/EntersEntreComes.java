@@ -6,6 +6,7 @@ public class EntersEntreComes {
         UtilString.esEnter(quantsString);
         while (!UtilString.esEnter(quantsString)) {
             System.out.println("Per favor, un valor enter");
+            quantsString = Entrada.readLine();
             UtilString.esEnter(quantsString);
         } 
         int quants = Integer.parseInt(quantsString);
@@ -26,9 +27,10 @@ public class EntersEntreComes {
                 UtilString.esEnter(valorString);
                 while (!UtilString.esEnter(valorString)) {
                     System.out.println("Per favor, un valor enter");
+                    valorString = Entrada.readLine();
                     UtilString.esEnter(valorString);
                 }
-                valor = Integer.parseInt(Entrada.readLine());
+                valor = Integer.parseInt(valorString);
                 valors[i] = valor;
             }
             UtilString.entreComes(valors, caracter);
