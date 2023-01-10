@@ -3,7 +3,7 @@ public class Arguments {
     public static void main(String[] args){
         for (int k = 0; k < args.length; k++) {
             String text = args[k];
-            if (text.isEmpty()) {
+            if (text == ""){
                 System.out.println("Cap argument");
             } else {
                 String part = "";
