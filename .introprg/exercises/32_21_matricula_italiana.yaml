@@ -1,3 +1,5 @@
+_mainclass: MatriculaValida
+_version: '2223'
 '01':
   stdin: DD029YJ
   stdout:
@@ -33,12 +35,12 @@
   stdout:
   - Introduïu una matrícula
   - No és una matrícula italiana vàlida
-08:
+'08':
   stdin: As000AA
   stdout:
   - Introduïu una matrícula
   - No és una matrícula italiana vàlida
-09:
+'09':
   stdin: AA000kA
   stdout:
   - Introduïu una matrícula
@@ -148,5 +150,3 @@
   stdout:
   - Introduïu una matrícula
   - No és una matrícula italiana vàlida
-_mainclass: MatriculaValida
-_version: '2223'
