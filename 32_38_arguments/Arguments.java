@@ -7,7 +7,7 @@ public class Arguments {
             String enter = "";
             for (int i = 0; i < args.length; i++) {
                 if (UtilString.esEnter(args[i])) {
-                    System.out.println("[" + i + "] \"" + args[i] + "\":és enter");
+                    System.out.println("[" + i + "] \"" + args[i] + "\": és enter");
                 } else {
                     System.out.println("[" + i + "] \"" + args[i] + "\": no és enter");
                 }
