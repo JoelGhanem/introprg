@@ -3,7 +3,6 @@ public class Semafor {
     public static void main(String[] args) {
         System.out.println("Ets major d'edat?");
         String resposta = Entrada.readLine();
-        UtilitatsConfirmacio.respostaABoolean(resposta);
         boolean check = UtilitatsConfirmacio.respostaABoolean(resposta);
         if (check != false) {
             System.out.println("Color?");
