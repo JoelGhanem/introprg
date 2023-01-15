@@ -21,22 +21,22 @@ public class TresEnRatlla {
     // Módul que determina quin jugador gaunya
     public static boolean jugadorGuanya(char[][]taulell, char jugador) {
         for (int i = 0; i < taulell.length; i++) {
-            boolean guanya = false;
+            boolean guanya = true;
             for (int j = 0; j < taulell.length; j++) {
                 //files
-                if ((taulell[i][j]) ==(jugador)) {
-                    guanya = true;
+                if ((taulell[i][j]) !=(jugador)) {
+                    guanya = false;
                 } 
                 //columnes
-                if (taulell[j][i] == (jugador)) {
-                    guanya = true;
+                if (taulell[j][i] != (jugador)) {
+                    guanya = false;
                 }
                 //diagonals
-                if (taulell[1][1] == (jugador) && taulell[0][0] == (jugador) && taulell[2][2] == (jugador)) {
-                    guanya = true;
+                if (taulell[1][1] != (jugador) && taulell[0][0] != (jugador) && taulell[2][2] != (jugador)) {
+                    guanya = false;
                 } 
-                if (taulell[0][2] == jugador && taulell[1][1]  == jugador && taulell[2][0] == (jugador)) {
-                    guanya = true;
+                if (taulell[0][2] != jugador && taulell[1][1]  != jugador && taulell[2][0] != (jugador)) {
+                    guanya = false;
                 }
             } 
             if(guanya == true) {
@@ -103,26 +103,26 @@ public class TresEnRatlla {
 
             // comprova jugador guanya
             //System.out.println("chivato antes jugadorGuanya");
-            if (!jugadorGuanya(taulell, jugador)) {
+            if (jugadorGuanya(taulell, jugador)) {
                 mostraTaulell(taulell);
                 System.out.println(jugador + " guanya");
                 return;
-            } 
-            // comprova empat
-            //System.out.println("chivato antes hihaempat");
-            if (hiHaEmpat(taulell)) {
-                mostraTaulell(taulell);
-                System.out.println(jugador + " Hi ha empat");
-                return;
             }
-            // passa torn a l'altre jugador
-            // System.out.println("chivato antes empat");
+        } 
+        // comprova empat
+        System.out.println("chivato antes hihaempat");
+        if (hiHaEmpat(taulell)) {
+            mostraTaulell(taulell);
+            System.out.println(jugador + " Hi ha empat");
+            return;
+        }
+        // passa torn a l'altre jugador
+        // System.out.println("chivato antes empat");
 
-            if (jugador == 'X') {
-                jugador = 'O';
-            } else {
-                jugador = 'X';
-            }
+        if (jugador == 'X') {
+            jugador = 'O';
+        } else {
+            jugador = 'X';
         }
     }
 }
