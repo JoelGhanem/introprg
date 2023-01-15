@@ -67,8 +67,8 @@ public class TresEnRatlla {
 
 
     public static void main(String[] args) {
-        int fila = 9;
-        int columna = 9;
+        int fila;
+        int columna;
         char jugador = 'X'; 
 
 
@@ -103,27 +103,26 @@ public class TresEnRatlla {
             if (casellaOcupada(taulell, fila, columna)) {
                 System.out.println("Ocupada");
                 //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
-            } else {
-                // realitza el moviment
-                //System.out.println("chivato antes taulell");
-                taulell[fila][columna] = jugador; 
-                // comprova jugador guanya
-                //System.out.println("chivato antes jugadorGuanya");
-                if (jugadorGuanya(taulell, jugador)) {
-                    mostraTaulell(taulell);
-                    System.out.println(jugador + " guanya");
-                    return;
-                }
-                // comprova empat
-                if (hiHaEmpat(taulell)) {
-                    mostraTaulell(taulell);
-                    System.out.println(jugador + " Hi ha empat");
-                    return;
-                }
-                // passa torn a l'altre jugador
-                // System.out.println("chivato antes empat");
-                jugador = (jugador == 'X') ? 'O' : 'X';
             }
+            // realitza el moviment
+            //System.out.println("chivato antes taulell");
+            taulell[fila][columna] = jugador; 
+            // comprova jugador guanya
+            //System.out.println("chivato antes jugadorGuanya");
+            if (jugadorGuanya(taulell, jugador)) {
+                mostraTaulell(taulell);
+                System.out.println(jugador + " guanya");
+                return;
+            }
+            // comprova empat
+            if (hiHaEmpat(taulell)) {
+                mostraTaulell(taulell);
+                System.out.println(jugador + " Hi ha empat");
+                return;
+            }
+            // passa torn a l'altre jugador
+            // System.out.println("chivato antes empat");
+            jugador = (jugador == 'X') ? 'O' : 'X';
         }
     }
 }
