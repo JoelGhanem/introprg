@@ -92,7 +92,7 @@ public class TresEnRatlla {
             System.out.println(jugador + "?");
             // comprova abandonament
             String posicion = Entrada.readLine();
-            if (posicion == "a") {
+            if (posicion.equals("a")) {
                 abandonament = true;
             } else {
                 // obté coordenades del moviment
