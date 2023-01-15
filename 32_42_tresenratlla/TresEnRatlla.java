@@ -121,20 +121,19 @@ public class TresEnRatlla {
                 System.out.println(jugador + " guanya");
                 return;
             }
-        } 
-        // comprova empat
-        if (hiHaEmpat(taulell)) {
-            mostraTaulell(taulell);
-            System.out.println(jugador + " Hi ha empat");
-            return;
-        }
-        // passa torn a l'altre jugador
-        // System.out.println("chivato antes empat");
-
-        if (jugador == 'X') {
-            jugador = 'O';
-        } else {
-            jugador = 'X';
+            // comprova empat
+            if (hiHaEmpat(taulell)) {
+                mostraTaulell(taulell);
+                System.out.println(jugador + " Hi ha empat");
+                return;
+            }
+            // passa torn a l'altre jugador
+            // System.out.println("chivato antes empat");
+            if (jugador == 'X') {
+                jugador = 'O';
+            } else {
+                jugador = 'X';
+            }
         }
     }
 }
