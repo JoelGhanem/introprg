@@ -110,7 +110,6 @@ public class TresEnRatlla {
             }
         } 
         // comprova empat
-        System.out.println("chivato antes hihaempat");
         if (hiHaEmpat(taulell)) {
             mostraTaulell(taulell);
             System.out.println(jugador + " Hi ha empat");
