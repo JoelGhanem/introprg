@@ -4,22 +4,22 @@ _version: '2223'
   argsin: '6x6*\'
   stdout:
   - '6x6*\'
-  - 'XXXXXX'
-  - '·XXXXX'
-  - '··XXXX'
-  - '···XXX'
-  - '····XX'
-  - '·····X'
-'14':
-  argsin: '6x6\*'
-  stdout:
-  - '6x6\*'
   - 'X·····'
   - 'XX····'
   - 'XXX···'
   - 'XXXX··'
   - 'XXXXX·'
   - 'XXXXXX'
+'14':
+  argsin: '6x6\*'
+  stdout:
+  - '6x6\*'
+  - 'XXXXXX'
+  - '·XXXXX'
+  - '··XXXX'
+  - '···XXX'
+  - '····XX'
+  - '·····X'
 '15':
   argsin: '6x6*/'
   stdout:
