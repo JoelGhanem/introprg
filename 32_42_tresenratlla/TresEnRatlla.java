@@ -111,6 +111,7 @@ public class TresEnRatlla {
             // comprova si la casella està ocupada
             if (casellaOcupada(taulell, fila, columna)) {
                 System.out.println("Ocupada");
+                continue;
                 //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
             }
             // realitza el moviment
