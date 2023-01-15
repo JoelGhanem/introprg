@@ -15,7 +15,7 @@ public class TresEnRatlla {
     //Mòdul que diu si la casella está ocupada
     public static boolean casellaOcupada(char[][]taulell , int fila, int columna) {
         //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
-        if (Character.isLetter(taulell[fila][columna])) {
+        if (taulell[fila][columna] != '·') {
             return true;
         } else {
             return false;
@@ -24,21 +24,21 @@ public class TresEnRatlla {
 
     // Módul que determina quin jugador gaunya
     public static boolean jugadorGuanya(char[][]taulell, char jugador) {
-        boolean victoria = false;
+        boolean guanya = false;
         for (int i = 0; i < taulell.length; i++) {
             for (int j = 0; j < taulell.length; j++) {
                 if ((taulell[i][j]) ==(jugador)) {
-                    victoria = true;
+                    guanya = true;
                     break;
                 } else if (taulell[j][i] == (jugador)) {
-                    victoria = true;
+                    guanya = true;
                     break;
                 } else { 
-                    victoria = false;
+                    guanya = false;
                 }
             }
         }
-        if (victoria) {
+        if (guanya) {
             return true;
         } else {
             return false;
@@ -66,7 +66,6 @@ public class TresEnRatlla {
 
 
     public static void main(String[] args) {
-        boolean ocupada = false;
         boolean guanya = false;
         boolean empat = false;
         boolean abandonament = false;
@@ -98,8 +97,7 @@ public class TresEnRatlla {
                 // obté coordenades del moviment
                 //System.out.println("XXX Entrada rebuda es " + posicion);
                 fila = Character.getNumericValue(posicion.charAt(0));
-                columna = posicion.charAt(1);
-                columna = Character.getNumericValue(columna);
+                columna = Character.getNumericValue(posicion.charAt(1));
                 //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
 
                 // comprova si la casella està ocupada
@@ -113,8 +111,8 @@ public class TresEnRatlla {
                     if (posicion.equals("a")) {
                         abandonament = true;
                     }
-                    fila = posicion.charAt(0);
-                    columna = posicion.charAt(1);
+                    fila = Character.getNumericValue(posicion.charAt(0));
+                    columna = Character.getNumericValue(posicion.charAt(1));
                 }
 
                 // realitza el moviment
