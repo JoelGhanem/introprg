@@ -43,6 +43,19 @@ public class TresEnRatlla {
                 return true;
             }
         }
+        boolean victoriaDiagonal1 = true;
+        boolean victoriaDiagonal2 = true;
+        for (int i = 0; i < taulell.length; i++) {
+            if (taulell[i][i] != jugador) {
+                victoriaDiagonal1 = false;
+            }
+            if (taulell[i][taulell.length - i - 1] != jugador) {
+                victoriaDiagonal2 = false;
+            }
+            if (victoriaDiagonal1 || victoriaDiagonal2) {
+                return true;
+            }
+        }
         return false;
     }
 
