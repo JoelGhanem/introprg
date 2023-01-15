@@ -122,7 +122,7 @@ public class TresEnRatlla {
                     empat = true;
                 }
                 // passa torn a l'altre jugador
-                System.out.println("chivato antes empat");
+               // System.out.println("chivato antes empat");
 
                 if (jugador == 'X') {
                     jugador = 'O';
