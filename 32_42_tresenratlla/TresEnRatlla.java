@@ -112,9 +112,9 @@ public class TresEnRatlla {
                     if (posicion.equals("a")) {
                         abandonament = true;
                     }
-                fila = Character.getNumericValue(posicion.charAt(0));
-                columna = posicion.charAt(1);
-                columna = Character.getNumericValue(columna);
+                    fila = Character.getNumericValue(posicion.charAt(0));
+                    columna = posicion.charAt(1);
+                    columna = Character.getNumericValue(columna);
                 }
 
                 // realitza el moviment
@@ -138,7 +138,7 @@ public class TresEnRatlla {
                 } else {
                     jugador = 'X';
                 }
-
+                mostraTaulell(taulell);
                 System.out.println(jugador + "?");
             }
         }
