@@ -27,41 +27,35 @@ public class TresEnRatlla {
         boolean guanya = false;
         for (int i = 0; i < taulell.length; i++) {
             for (int j = 0; j < taulell.length; j++) {
+                //files
                 if ((taulell[i][j]) ==(jugador)) {
-                    guanya = true;
-                    break;
-                } else if (taulell[j][i] == (jugador)) {
-                    guanya = true;
-                    break;
-                } else { 
-                    guanya = false;
+                    return  true;
+                } 
+                //columnes
+                if (taulell[j][i] == (jugador)) {
+                    return  true;
                 }
+                //diagonals
+            } if (taulell[1][1] == (jugador) && taulell[0][0] == (jugador) && taulell[2][2] == (jugador)) {
+                return true;
+            } 
+            if (taulell[0][2] == jugador && taulell[1][1]  == jugador && taulell[2][0] == (jugador)) {
+                return true;
             }
         }
-        if (guanya) {
-            return true;
-        } else {
-            return false;
-        }
+        return false;
     }
 
     //Modul que determina si la partida es un empat
     public static boolean hiHaEmpat(char[][] taulell) {
-        boolean empate = false;
         for (int li = 0; li <taulell.length; li++) {
             for (int col = 0; col <taulell.length; col++) {
-                if (!Character.isLetter(taulell[li][col])) {
-                    empate = true;
-                } else { 
-                    empate = false;
+                if (taulell[li][col] == '·') {
+                    return false;
                 }
             }
         }
-        if (empate == true) {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 
 
@@ -95,10 +89,10 @@ public class TresEnRatlla {
                 abandonament = true;
             } else {
                 // obté coordenades del moviment
-                //System.out.println("XXX Entrada rebuda es " + posicion);
-                fila = Character.getNumericValue(posicion.charAt(0))-1;
-                columna = Character.getNumericValue(posicion.charAt(1))-1;
-                //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
+                System.out.println("XXX Entrada rebuda es " + posicion);
+                fila = Character.getNumericValue(posicion.charAt(0));
+                columna = Character.getNumericValue(posicion.charAt(1));
+                System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
 
                 // comprova si la casella està ocupada
                 casellaOcupada(taulell, fila, columna);
@@ -111,25 +105,25 @@ public class TresEnRatlla {
                     if (posicion.equals("a")) {
                         abandonament = true;
                     }
-                fila = Character.getNumericValue(posicion.charAt(0))-1;
-                columna = Character.getNumericValue(posicion.charAt(1))-1;
+                    fila = Character.getNumericValue(posicion.charAt(0));
+                    columna = Character.getNumericValue(posicion.charAt(1));
                 }
-
                 // realitza el moviment
                 //System.out.println("chivato antes taulell");
                 taulell[fila][columna] = jugador; 
 
                 // comprova jugador guanya
-                //System.out.println("chivato antes jugadorGuanya");
+                System.out.println("chivato antes jugadorGuanya");
                 jugadorGuanya(taulell, jugador);
 
                 // comprova empat
-                //System.out.println("chivato antes hihaempat");
-                if (!hiHaEmpat(taulell)) {
+                System.out.println("chivato antes hihaempat");
+                hiHaEmpat(taulell);
+                if (hiHaEmpat(taulell)) {
                     break;
                 }
                 // passa torn a l'altre jugador
-                //System.out.println("chivato antes hihaempat");
+                System.out.println("chivato antes empat");
 
                 if (jugador == 'X') {
                     jugador = 'O';
