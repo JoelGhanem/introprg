@@ -89,10 +89,10 @@ public class TresEnRatlla {
                 abandonament = true;
             } else {
                 // obté coordenades del moviment
-                System.out.println("XXX Entrada rebuda es " + posicion);
+                //System.out.println("XXX Entrada rebuda es " + posicion);
                 fila = Character.getNumericValue(posicion.charAt(0));
                 columna = Character.getNumericValue(posicion.charAt(1));
-                System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
+                //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
 
                 // comprova si la casella està ocupada
                 casellaOcupada(taulell, fila, columna);
@@ -113,17 +113,20 @@ public class TresEnRatlla {
                 taulell[fila][columna] = jugador; 
 
                 // comprova jugador guanya
-                System.out.println("chivato antes jugadorGuanya");
+                //System.out.println("chivato antes jugadorGuanya");
                 jugadorGuanya(taulell, jugador);
+                if (jugadorGuanya(taulell, jugador)) {
+                    guanya = true;
+                }
 
                 // comprova empat
-                System.out.println("chivato antes hihaempat");
+                //System.out.println("chivato antes hihaempat");
                 hiHaEmpat(taulell);
                 if (hiHaEmpat(taulell)) {
-                    break;
+                    empat = true;
                 }
                 // passa torn a l'altre jugador
-                System.out.println("chivato antes empat");
+                //System.out.println("chivato antes empat");
 
                 if (jugador == 'X') {
                     jugador = 'O';
