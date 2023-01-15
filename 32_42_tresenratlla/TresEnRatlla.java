@@ -35,11 +35,12 @@ public class TresEnRatlla {
                     return  true;
                 }
                 //diagonals
-            } if (taulell[1][1] == (jugador) && taulell[0][0] == (jugador) && taulell[2][2] == (jugador)) {
-                return true;
-            } 
-            if (taulell[0][2] == jugador && taulell[1][1]  == jugador && taulell[2][0] == (jugador)) {
-                return true;
+                if (taulell[1][1] == (jugador) && taulell[0][0] == (jugador) && taulell[2][2] == (jugador)) {
+                    return true;
+                } 
+                if (taulell[0][2] == jugador && taulell[1][1]  == jugador && taulell[2][0] == (jugador)) {
+                    return true;
+                }
             }
         }
         return false;
@@ -47,10 +48,10 @@ public class TresEnRatlla {
 
     //Modul que determina si la partida es un empat
     public static boolean hiHaEmpat(char[][] taulell) {
-        for (int li = 0; li <taulell.length; li++) {
-            for (int col = 0; col <taulell.length; col++) {
-                if (taulell[li][col] == '·') {
-                    return false;
+        for (int i = 0; i <taulell.length; i++) {
+            for (int j = 0; j <taulell.length; j++) {
+                if (taulell[i][j] == '·') {
+                    return  false;
                 }
             }
         }
@@ -113,16 +114,16 @@ public class TresEnRatlla {
 
                 // comprova jugador guanya
                 //System.out.println("chivato antes jugadorGuanya");
-                jugadorGuanya(taulell, jugador);
-
+                if (jugadorGuanya(taulell, jugador)) {
+                    guanya = true;
+                } 
                 // comprova empat
                 //System.out.println("chivato antes hihaempat");
-                hiHaEmpat(taulell);
                 if (hiHaEmpat(taulell)) {
                     empat = true;
                 }
                 // passa torn a l'altre jugador
-               // System.out.println("chivato antes empat");
+                // System.out.println("chivato antes empat");
 
                 if (jugador == 'X') {
                     jugador = 'O';
@@ -134,7 +135,7 @@ public class TresEnRatlla {
         if (abandonament) {
             System.out.println(jugador + " abandona");
         }
-        if (jugadorGuanya(taulell, jugador)) {
+        if (guanya) {
             System.out.println(jugador + " guanya");
         }
         if (empat) {
