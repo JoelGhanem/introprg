@@ -138,8 +138,6 @@ public class TresEnRatlla {
                 } else {
                     jugador = 'X';
                 }
-
-                System.out.println(jugador + "?");
             }
         }
         if (abandonament) {
