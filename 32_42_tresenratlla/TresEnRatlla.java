@@ -84,6 +84,7 @@ public class TresEnRatlla {
             String posicion = Entrada.readLine();
             if (posicion.equals("a")) {
                 System.out.print(jugador + " abandona");
+                break;
             }
             // obté coordenades del moviment
             //System.out.println("XXX Entrada rebuda es " + posicion);
