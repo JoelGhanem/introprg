@@ -39,22 +39,18 @@ public class TresEnRatlla {
             }
         }
         //diagonals
-        boolean victoriaDiagonal1 = true;
-        boolean victoriaDiagonal2 = true;
+        boolean guanya = true;
         for (int i = 0; i < taulell.length; i++) {
             if (taulell[i][i] != jugador) {
-                victoriaDiagonal1 = false;
+                guanya = false;
                 break;
             }
             if (taulell[i][taulell.length - i - 1] != jugador) {
-                victoriaDiagonal2 = false;
+                guanya = false;
                 break;
             }
-            if (victoriaDiagonal1 || victoriaDiagonal2) {
-                return true;
-            }
         }
-        return false;
+        return guanya;
     }
 
     //Modul que determina si la partida es un empat
