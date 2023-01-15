@@ -109,11 +109,11 @@ public class TresEnRatlla {
             if (casellaOcupada(taulell, fila, columna)) {
                 System.out.println("Ocupada");
                 //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
-            }
+            } else {
             // realitza el moviment
             //System.out.println("chivato antes taulell");
             taulell[fila][columna] = jugador; 
-
+            }
             // comprova jugador guanya
             //System.out.println("chivato antes jugadorGuanya");
             if (jugadorGuanya(taulell, jugador)) {
