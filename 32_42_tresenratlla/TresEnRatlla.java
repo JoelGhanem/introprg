@@ -64,37 +64,37 @@ public class TresEnRatlla {
         }
     }
 
-    
-        public static void main(String[] args) {
-            boolean ocupada = false;
-            boolean guanya = false;
-            boolean empat = false;
-            boolean abandonament = false;
-            int fila = 9;
-            int columna = 9;
-            char jugador = 'X'; 
+
+    public static void main(String[] args) {
+        boolean ocupada = false;
+        boolean guanya = false;
+        boolean empat = false;
+        boolean abandonament = false;
+        int fila = 9;
+        int columna = 9;
+        char jugador = 'X'; 
 
 
-            // declara i inicialitza el taulell
-            char[][] taulell = new char[3][3];
-            for (int i = 0; i < taulell.length; i++) {
-                for (int j = 0; j < taulell.length; j++) {
-                    taulell[i][j] = '·';
-                }
+        // declara i inicialitza el taulell
+        char[][] taulell = new char[3][3];
+        for (int i = 0; i < taulell.length; i++) {
+            for (int j = 0; j < taulell.length; j++) {
+                taulell[i][j] = '·';
             }
-            System.out.println("Comença el joc");
-            // indica quin és el jugador que té el torn
+        }
+        System.out.println("Comença el joc");
+        // indica quin és el jugador que té el torn
 
-            while (guanya == false && ocupada == false && empat == false && abandonament == false) {
-                mostraTaulell(taulell);
+        while (guanya == false && ocupada == false && empat == false && abandonament == false) {
+            mostraTaulell(taulell);
 
-                // obté el moviment del jugador actual
-                System.out.println(jugador + "?");
-                // comprova abandonament
-                String posicion = Entrada.readLine();
-                if (posicion == "a") {
-                    abandonament = true;
-                }
+            // obté el moviment del jugador actual
+            System.out.println(jugador + "?");
+            // comprova abandonament
+            String posicion = Entrada.readLine();
+            if (posicion == "a") {
+                abandonament = true;
+            } else {
                 // obté coordenades del moviment
                 //System.out.println("XXX Entrada rebuda es " + posicion);
                 fila = Character.getNumericValue(posicion.charAt(0));
@@ -142,4 +142,5 @@ public class TresEnRatlla {
                 System.out.println(jugador + "?");
             }
         }
+    }
 }
