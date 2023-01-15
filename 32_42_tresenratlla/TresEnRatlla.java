@@ -15,11 +15,7 @@ public class TresEnRatlla {
     //Mòdul que diu si la casella está ocupada
     public static boolean casellaOcupada(char[][]taulell , int fila, int columna) {
         //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
-        if (taulell[fila][columna] != '·') {
-            return true;
-        } else {
-            return false;
-        }
+        return taulell[fila][columna] != '·' ? true : false;
     }
 
     // Módul que determina quin jugador gaunya
