@@ -143,7 +143,7 @@ public class TresEnRatlla {
             }
         }
         if (abandonament) {
-            System.out.println(jugador + "abandona");
+            System.out.println(jugador + " abandona");
         }
     }
 }
