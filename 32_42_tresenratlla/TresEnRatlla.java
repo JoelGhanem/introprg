@@ -97,7 +97,8 @@ public class TresEnRatlla {
                 // obté coordenades del moviment
                 //System.out.println("XXX Entrada rebuda es " + posicion);
                 fila = Character.getNumericValue(posicion.charAt(0));
-                columna = Character.getNumericValue(posicion.charAt(1));
+                columna = posicion.charAt(1);
+                columna = Character.getNumericValue(columna);
                 //System.out.printf("XXX fila:%d columna%d%n" ,fila,columna);
 
                 // comprova si la casella està ocupada
@@ -111,8 +112,9 @@ public class TresEnRatlla {
                     if (posicion.equals("a")) {
                         abandonament = true;
                     }
-                    fila = Character.getNumericValue(posicion.charAt(0));
-                    columna = Character.getNumericValue(posicion.charAt(1));
+                fila = Character.getNumericValue(posicion.charAt(0));
+                columna = posicion.charAt(1);
+                columna = Character.getNumericValue(columna);
                 }
 
                 // realitza el moviment
