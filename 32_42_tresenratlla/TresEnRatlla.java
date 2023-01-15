@@ -132,6 +132,7 @@ public class TresEnRatlla {
                 } else {
                     jugador = 'X';
                 }
+                guanya = false;
             }
         }
         if (abandonament) {
