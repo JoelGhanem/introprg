@@ -24,7 +24,6 @@ public class TresEnRatlla {
 
     // Módul que determina quin jugador gaunya
     public static boolean jugadorGuanya(char[][]taulell, char jugador) {
-        boolean guanya = false;
         for (int i = 0; i < taulell.length; i++) {
             for (int j = 0; j < taulell.length; j++) {
                 //files
