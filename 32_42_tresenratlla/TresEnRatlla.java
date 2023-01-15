@@ -45,12 +45,21 @@ public class TresEnRatlla {
                 guanya = false;
                 break;
             }
+        }
+        if (guanya) {
+            return true;
+        }
+        guanya = true;
+        for (int i = 0; i < taulell.length; i++) {
             if (taulell[i][taulell.length - i - 1] != jugador) {
                 guanya = false;
                 break;
             }
         }
-        return guanya;
+        if (guanya) { 
+            return true;
+        }
+        return false;
     }
 
     //Modul que determina si la partida es un empat
@@ -67,8 +76,8 @@ public class TresEnRatlla {
 
 
     public static void main(String[] args) {
-        int fila;
-        int columna;
+        int fila = 0;
+        int columna = 0;
         char jugador = 'X'; 
 
 
