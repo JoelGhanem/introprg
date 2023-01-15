@@ -103,7 +103,7 @@ public class TresEnRatlla {
 
             // comprova jugador guanya
             //System.out.println("chivato antes jugadorGuanya");
-            if (jugadorGuanya(taulell, jugador)) {
+            if (!jugadorGuanya(taulell, jugador)) {
                 mostraTaulell(taulell);
                 System.out.println(jugador + " guanya");
                 return;
