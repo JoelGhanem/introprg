@@ -26,31 +26,29 @@ public class TresEnRatlla {
                 //files
                 if ((taulell[i][j]) !=(jugador)) {
                     guanya = false;
+                    break;
                 } 
                 //columnes
                 if (taulell[j][i] != (jugador)) {
                     guanya = false;
-                }
-                //diagonals
-                if (taulell[1][1] != (jugador) && taulell[0][0] != (jugador) && taulell[2][2] != (jugador)) {
-                    guanya = false;
-                } 
-                if (taulell[0][2] != jugador && taulell[1][1]  != jugador && taulell[2][0] != (jugador)) {
-                    guanya = false;
+                    break;
                 }
             } 
-            if(guanya == true) {
+            if(guanya) {
                 return true;
             }
         }
+        //diagonals
         boolean victoriaDiagonal1 = true;
         boolean victoriaDiagonal2 = true;
         for (int i = 0; i < taulell.length; i++) {
             if (taulell[i][i] != jugador) {
                 victoriaDiagonal1 = false;
+                break;
             }
             if (taulell[i][taulell.length - i - 1] != jugador) {
                 victoriaDiagonal2 = false;
+                break;
             }
             if (victoriaDiagonal1 || victoriaDiagonal2) {
                 return true;
