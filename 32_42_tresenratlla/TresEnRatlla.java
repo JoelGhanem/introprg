@@ -21,45 +21,45 @@ public class TresEnRatlla {
     // Módul que determina quin jugador gaunya
     public static boolean jugadorGuanya(char[][]taulell, char jugador) {
         for (int i = 0; i < taulell.length; i++) {
-            boolean guanya = false;
+            boolean guanya = true;
             for (int j = 0; j < taulell.length; j++) {
                 //files
                 if ((taulell[i][j]) !=(jugador)) {
-                    guanya = true;
+                    guanya = false;
                     break;
                 } 
                 //columnes
                 if (taulell[j][i] != (jugador)) {
-                    guanya = true;
+                    guanya = false;
                     break;
                 }
             } 
             if(guanya) {
-                return false;
+                return true;
             }
         }
         //diagonals
-        boolean guanya = false;
+        boolean guanya = true;
         for (int i = 0; i < taulell.length; i++) {
             if (taulell[i][i] != jugador) {
-                guanya = true;
+                guanya = false;
                 break;
             }
         }
         if (guanya) {
-            return false;
+            return true;
         }
-        guanya = false;
+        guanya = true;
         for (int i = 0; i < taulell.length; i++) {
             if (taulell[i][taulell.length - i - 1] != jugador) {
-                guanya = true;
+                guanya = false;
                 break;
             }
         }
         if (guanya) { 
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     //Modul que determina si la partida es un empat
