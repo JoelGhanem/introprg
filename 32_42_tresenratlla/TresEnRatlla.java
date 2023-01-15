@@ -85,7 +85,7 @@ public class TresEnRatlla {
         System.out.println("Comença el joc");
         // indica quin és el jugador que té el torn
 
-        while (guanya == false && ocupada == false && empat == false && abandonament == false) {
+        while (guanya == false && empat == false && abandonament == false) {
             mostraTaulell(taulell);
 
             // obté el moviment del jugador actual
@@ -144,6 +144,12 @@ public class TresEnRatlla {
         }
         if (abandonament) {
             System.out.println(jugador + " abandona");
+        }
+        if (guanya) {
+            System.out.println(jugador + " guanya");
+        }
+        if (empat) {
+            System.out.println("hi ha empat");
         }
     }
 }
