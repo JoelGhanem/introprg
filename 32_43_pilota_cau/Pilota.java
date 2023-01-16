@@ -1,6 +1,6 @@
 public class Pilota {
-    public static final int n_Files = 9;
-    public static final int n_Col = 13;
+    public static final int N_FILES = 9;
+    public static final int N_COLS = 13;
     public static void netejaPantalla() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
@@ -37,7 +37,7 @@ public class Pilota {
         return actual;
     }
     public static void main(String[] args)  {
-        char[][] camp = new char[n_Files][n_Col];
+        char[][] camp = new char[N_FILES][N_COLS];
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 13; j++) {
                 camp[i][j] = '·';
