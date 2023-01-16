@@ -55,7 +55,7 @@ public class DigitArt {
         char[][] desti = UtilTaula.substitueix(origen, 'X', ch);
         for (int i = 0; i < origen.length; i++) {
             for (int j = 0; j < origen[0].length; j++) {
-                System.out.print(origen[i][j]);// + " -> " + */resultat[i][j]);
+                System.out.print(desti[i][j]);// + " -> " + */resultat[i][j]);
             }
         }
         mostraResultat(origen, desti);
