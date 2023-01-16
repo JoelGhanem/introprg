@@ -60,9 +60,11 @@ public class DigitArt {
         if (args.length > 0) {
             /* XXX */
             // processa cada argument
+            String argumentos = "";
             for (int i = 0; i < args.length; i++) {
-                processaArgument(args[i]);
+                argumentos = argumentos + args[i];
             }
+            processaArgument(argumentos);
         }
     }
 }
