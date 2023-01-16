@@ -52,15 +52,17 @@ public class DigitArt {
         System.out.println();
     }
     public static void processaArgument(String arg) {
-        for (int i = 0; i < args.length; i++) {
-            processaCaracter (args[i]);
+        for (int i = 0; i < arg.length(); i++) {
+            processaCaracter (arg.charAt(i));
         }
     }
     public static void main(String[] args){
         if (args.length > 0) {
             /* XXX */
             // processa cada argument
-            processaArgument(args[].class);
+            for (int i = 0; i < args.length; i++) {
+                processaArgument(args[i]);
+            }
         }
     }
 }
