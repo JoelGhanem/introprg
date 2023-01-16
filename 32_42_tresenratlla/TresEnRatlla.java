@@ -89,7 +89,7 @@ public class TresEnRatlla {
             }
         }
         System.out.println("Comença el joc");
-        // indica quin és el jugador que té el torn
+j        // indica quin és el jugador que té el torn
 
         while (true) {
             mostraTaulell(taulell);
