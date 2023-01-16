@@ -1,13 +1,13 @@
 public class Pilota {
-    public static final int n_files = 10;
-    public static final int n_col = 10;
+    public static final int n_files = 9;
+    public static final int n_col = 13;
     public static void netejaPantalla() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
     public static void mostraCamp(char[][] camp) {
-        for (int i=0; i<10; i++) {
-            for (int j=0; j<10; j++) {
+        for (int i=0; i<9; i++) {
+            for (int j=0; j<13; j++) {
                 System.out.print(camp[i][j]);
             }
             System.out.println();
@@ -21,24 +21,23 @@ public class Pilota {
     }
     public static void posicionaPilota(char[][] camp, int fila, int col) {
         camp[fila][col] = 'O';
-
     }
     public static int seguentFila(int actual) {
         actual = actual + 1;
-        if (actual >= 10) {
+        if (actual >= 9) {
             actual = 0;
         }
         return actual;
     }
     public static int seguentCol(int actual) {
         actual = actual + 1;
-        if (actual >= 10) {
+        if (actual >= 13) {
             actual = 0;
         }
         return actual;
     }
     public static void main(String[] args)  {
-        char[][] camp = new char[10][10];
+        char[][] camp = new char[9][13];
         for (int i = 0; i < camp.length; i++) {
             for (int j = 0; j < camp.length; j++) {
                 camp[i][j] = '·';
