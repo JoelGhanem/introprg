@@ -74,6 +74,8 @@ public class DigitArt {
                 argumentos = argumentos + args[i];
             }
             processaArgument(argumentos);
+        } else {
+            System.out.println("Especifiqueu un o més dígits en la línia de comandes");
         }
     }
-}
+    }
