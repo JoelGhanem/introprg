@@ -38,6 +38,7 @@ public class DigitArt {
             for (int j = 0; j < origen[i].length; j++) {
                 System.out.print(origen[i][j] + " -> " + resultat[i][j]);
             }
+            System.out.println();
         }
     }
     public static void processaCaracter(char ch) {
