@@ -37,8 +37,10 @@ public class DigitArt {
         for (int i = 0; i < origen.length; i++) {
             for (int j = 0; j < origen[0].length; j++) {
                 System.out.print(origen[i][j]);
-        //        System.out.print(" -> ");
-         //       System.out.print(resultat[i][j]);
+            }
+            System.out.print(" -> ");
+            for (int j = 0; j < origen[0].length; j++) {
+                System.out.print(resultat[i][j]);
             }
             System.out.println();
         }
