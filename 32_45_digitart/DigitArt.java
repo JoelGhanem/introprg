@@ -1,4 +1,3 @@
-/* XXX */
 public class DigitArt {
     public static char[][] construeix1() {
         return new char[][] {
@@ -78,4 +77,4 @@ public class DigitArt {
             System.out.println("Especifiqueu un o més dígits en la línia de comandes");
         }
     }
-    }
+}
