@@ -10,7 +10,7 @@ public class TaulaEnterAString {
 				int[][] taula  = new int[files][columnes];
 				UtilTaula.inicialitzaTaula(taula, 1);
 				String resultat = UtilTaula.taulaToString(taula);
-				System.out.println(resultat);
+				System.out.println(resultat + "%8d");
 				System.out.println();
 			}
 		}
