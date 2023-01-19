@@ -10,7 +10,9 @@ public class ExtreuNombres {
     public static String extreuNombres(String text) {
         String num = "";
         String restaNum = "";
-        String nulo = "nulo";
+        if (text.length() <= 0) {
+            return num;
+        }
         char primer = text.charAt(0);
         if (Character.isDigit(primer)) {
             num = num + primer;
