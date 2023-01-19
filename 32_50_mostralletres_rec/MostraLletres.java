@@ -8,12 +8,15 @@ public class MostraLletres {
     }
     // mostra només les lletres de text
     public static void mostraLletres(String text) {
+        String limpio = "";
         if (text.length() > 0) {      
             char primer = text.charAt(0);
-            text.substring(1);
+            if (Character.isLetter(primer)) {
+                limpio = limpio + text.charAt(0); 
+            }
             // considerem les lletres que conté la resta del text
-            String restaText = text.substring(1); 
-            System.out.println(restaText);
+            String restaText = text.substring(1);
+            System.out.println(limpio);
             mostraLletres(restaText);      // crida recursiva
         }
     }
