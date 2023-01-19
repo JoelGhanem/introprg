@@ -13,7 +13,7 @@ public class ExtreuNombres {
         if (text.length() > 0) {
             char primer = text.charAt(0);
             if (Character.isDigit(primer)) {
-                num = num + primer;
+                num = num + text.charAt(primer);
             }
             restaNum = text.substring(1);
             extreuNombres(restaNum);
