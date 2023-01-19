@@ -15,7 +15,7 @@ public class SumaDigits {
         } 
         char primer = text.charAt(0);
         if (Character.isDigit(primer)) {
-            num = num + Character.getNumericValue(text.charAt(0)); 
+            num = num + ((int)(text.charAt(0)));
         }
         restaNum = text.substring(1);
         return num + sumaDigits(restaNum);
