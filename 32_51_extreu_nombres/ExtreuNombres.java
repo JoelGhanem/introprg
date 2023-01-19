@@ -1,4 +1,4 @@
-//Desenvolupa un programa que demani un text i mostri només els valors numèrics que conté.
+//Desenvolupa un programa que demani un text i mostri només els valors limpioèrics que conté.
 public class ExtreuNombres {
     public static void main(String[] args){
         System.out.println("Text?");
@@ -8,15 +8,15 @@ public class ExtreuNombres {
     }
     // extreu els nombres i els retorna concatenats
     public static String extreuNombres(String text) {
-        String num = "";
+        String limpio = "";
         if (text.length() > 0) {
             char primer = text.charAt(0);
             if (Character.isDigit(primer)) {
-                num = num + text.charAt(primer);
+                limpio = limpio + text.charAt(primer);
             }
             String restaNum = text.substring(1);
             extreuNombres(restaNum);
         }
-        return num;
+        return limpio;
     }
 }
