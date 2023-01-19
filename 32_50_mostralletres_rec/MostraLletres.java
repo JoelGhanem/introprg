@@ -16,7 +16,7 @@ public class MostraLletres {
             }
             // considerem les lletres que conté la resta del text
             String restaText = text.substring(1);
-            System.out.println(limpio);
+            System.out.print(limpio);
             mostraLletres(restaText);      // crida recursiva
         }
     }
