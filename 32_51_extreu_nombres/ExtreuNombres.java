@@ -14,8 +14,9 @@ public class ExtreuNombres {
             if (Character.isDigit(primer)) {
                 limpio = limpio + text.charAt(primer);
             }
-            String restaNum = text.substring(1);
-            extreuNombres(restaNum);
+            String restaText = text.substring(1);
+            extreuNombres(restaText);
+            System.out.println(limpio);
         }
         return limpio;
     }
