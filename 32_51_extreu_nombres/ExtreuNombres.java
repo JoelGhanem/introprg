@@ -11,15 +11,14 @@ public class ExtreuNombres {
         String num = "";
         String restaNum = "";
         String nulo = "nulo";
-        if (text.length() <= 0) {
-            return nulo;
+        if (text.length() > 0) {
+            char primer = text.charAt(0);
+            if (Character.isDigit(primer)) {
+                num = num + primer;
+            }
+            restaNum = text.substring(1);
+            extreuNombres(restaNum);
         }
-        char primer = text.charAt(0);
-        if (Character.isDigit(primer)) {
-            num = num + primer;
-        }
-        restaNum = text.substring(1);
-        extreuNombres(restaNum);
         return num;
     }
 }
