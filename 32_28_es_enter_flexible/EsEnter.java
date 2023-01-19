@@ -4,7 +4,7 @@ public class EsEnter {
         System.out.println("Introdueix texts (enter sol per finalitzar)");
         String text = Entrada.readLine();
         text = text.strip();
-        UtilString.esEnter(text);
+       UtilString.esEnter(text);
         while (!text.isEmpty()) {
             if (UtilString.esEnter(text)) {
                 System.out.println("És enter");
