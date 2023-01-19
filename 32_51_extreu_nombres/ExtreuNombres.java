@@ -15,7 +15,6 @@ public class ExtreuNombres {
                 limpio = limpio + text.charAt(primer);
             }
             String restaText = text.substring(1);
-            extreuNombres(restaText);
             System.out.println(limpio);
         }
         return limpio;
