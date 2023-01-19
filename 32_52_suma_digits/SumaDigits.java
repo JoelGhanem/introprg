@@ -18,6 +18,6 @@ public class SumaDigits {
             num = num + Character.getNumericValue(text.charAt(0)); 
         }
         restaNum = text.substring(1);
-        return num;
+        return num + sumaDigits(restaNum);
     }
 }
