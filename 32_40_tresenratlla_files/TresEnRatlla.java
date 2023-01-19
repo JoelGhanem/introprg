@@ -1,6 +1,4 @@
-/*
- *  Programa que representa una partida de tres en ratlla
- */
+//Programa que representa una partida de tres en raya
 public class TresEnRatlla {
     public static void main(String[] args){
         // declaració de les files
