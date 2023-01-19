@@ -10,9 +10,7 @@ public class MostraLletres {
     public static void mostraLletres(String text) {
         if (text.length() > 0) {      
             char primer = text.charAt(0);
-            if (!Character.isLetter(primer)) {
-                text.substring(1);
-            }
+            text.substring(1);
             // considerem les lletres que conté la resta del text
             String restaText = text.substring(1); 
             System.out.println(restaText);
