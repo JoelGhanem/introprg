@@ -11,9 +11,6 @@ public class ExtreuNombres {
         String num = "";
         String restaNum = "";
         String nulo = "nulo";
-        if (text.length() <= 0) {
-            return nulo;
-        }
         char primer = text.charAt(0);
         if (Character.isDigit(primer)) {
             num = num + primer;
