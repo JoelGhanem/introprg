@@ -8,15 +8,16 @@ public class SumaDigits {
     }
     // XXX
     public static int sumaDigits(String text) {
-        int algo = 0;
-        // cas base
-        // XXX
-        // tracta pas actual
-        // XXX
-        // tracta pas recursiu
-        // XXX
-        // composa resultat
-        // XXX
-        return algo;
+        int num = 0;
+        String restaNum = "";
+        if (text.length() <= 0) {
+            return num;
+        } 
+        char primer = text.charAt(0);
+        if (Character.isDigit(primer)) {
+            num = num + Character.getNumericValue(text.charAt(0)); 
+        }
+        restaNum = text.substring(1);
+        return num;
     }
 }
