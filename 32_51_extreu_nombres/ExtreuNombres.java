@@ -14,10 +14,11 @@ public class ExtreuNombres {
             char primer = text.charAt(0);
             if (Character.isDigit(primer)) {
                 num = num + primer;
+            System.out.print(num);
             }
             restaNum = text.substring(1);
             extreuNombres(restaNum);
         }
-        return restaNum;
+        return num;
     }
 }
