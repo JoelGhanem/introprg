@@ -7,7 +7,7 @@ public class Subcadenes {
         mostraText(text, text.length());
     }
     public static String netejaText(String text) {
-        if (text.length() <= 0){
+        if (text.length() == 0){
             return "";
         }
         char primer = text.charAt(0);
