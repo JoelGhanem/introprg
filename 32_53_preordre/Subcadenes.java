@@ -14,7 +14,7 @@ public class Subcadenes {
         if(!Character.isLetter(primer)) {
             primer = ' ';
         }
-        String textNetejat = text.substring(1);
+        String textNetejat = netejaText(text.substring(1));
         return primer + textNetejat;
     }
     public static void mostraText(String text, int largo) {
