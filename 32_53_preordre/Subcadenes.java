@@ -12,7 +12,7 @@ public class Subcadenes {
         }
         char primer = text.charAt(0);
         if(!Character.isLetter(primer)) {
-            primer = ' ';
+            primer = 127;
         }
         String textNetejat = netejaText(text.substring(1));
         return primer + textNetejat;
