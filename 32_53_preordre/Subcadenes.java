@@ -10,9 +10,10 @@ public class Subcadenes {
         if (text.length() == 0){
             return "";
         }
-        char primer = text.charAt(0);
-        if(!Character.isLetter(primer)) {
-            primer = 127;
+        String primer = "";
+        char primeraPosicio = text.charAt(0);
+        if(!Character.isLetter(text.charAt(0))) {
+            primer = "";
         }
         String textNetejat = netejaText(text.substring(1));
         return primer + textNetejat;
