@@ -1,43 +1,45 @@
 //Desenvolupa un programa que demani a l'usuari una matrícula i li digui si el que li ha introduït correspon a una matrícula italiana vàlida en el format vigent.//
 public class MatriculaValida {
-    public static void main(String[] args) {
-        System.out.println("Introduïu una matrícula");
-        String matricula = Entrada.readLine();
-        esLletraValidaPerMatriculaItaliana(matricula);
-    }
-    public static void esLletraValidaPerMatriculaItaliana(String matricula) {
-        if (matricula.length() == 7) {
-            char cero = matricula.charAt(0);
-            char uno = matricula.charAt(1);
-            char dos = matricula.charAt(2);
-            char tres = matricula.charAt(3);
-            char cuatro = matricula.charAt(4);
-            char cinco = matricula.charAt(5);
-            char seis = matricula.charAt(6);
-            if (Character.isUpperCase(cero) && (Character.isUpperCase(uno))  && (Character.isDigit(dos)) &&(Character.isDigit(tres)) && (Character.isDigit(cuatro)) && (Character.isUpperCase(cinco)) && (Character.isUpperCase(seis))) {
-                if (cero < 65 || cero == 73 || cero ==  79 || cero == 81 || cero == 85 || cero > 90) {
-                    System.out.println("No és una matrícula italiana vàlida");
-                }
-                else if (uno < 65 || uno == 73 || uno ==  79 || uno == 81 || uno == 85 || uno > 90) {
-                    System.out.println("No és una matrícula italiana vàlida");
-                }
-                else if (cinco < 65 || cinco == 73 || cinco ==  79 || cinco == 81 || cinco == 85 || cinco > 90) {
-                    System.out.println("No és una matrícula italiana vàlida");
-                }
-                else if (seis < 65 || seis == 73 || seis ==  79 || seis == 81 || seis == 85 || seis > 90) {
-                    System.out.println("No és una matrícula italiana vàlida");
-                }
-                else {
-                    System.out.println("És una matrícula italiana vàlida");
-                }
-            }
-            else {
-                System.out.println("No és una matrícula italiana vàlida");
-            }
-        }
-        else {
-            System.out.println("No és una matrícula italiana vàlida");
-        }
-    }
-}
+	public static void main(String[] args) {
 
+		System.out.println("Introduïu una matrícula");
+		String matriculaItaliana = Entrada.readLine();
+		if (matriculaItaliana.length() != 7) {
+			System.out.println("No és una matrícula italiana vàlida");
+			return;
+		}
+		if (!((esLletraValidaPerMatriculaItaliana(matriculaItaliana.charAt(0))) && (esLletraValidaPerMatriculaItaliana(matriculaItaliana.charAt(1))))) {
+				System.out.println("No és una matrícula italiana vàlida");
+				return;
+		}
+		if (!((Character.isDigit(matriculaItaliana.charAt(2))) && Character.isDigit(matriculaItaliana.charAt(3)) && Character.isDigit(matriculaItaliana.charAt(4)))) {
+				System.out.println("No és una matrícula italiana vàlida");
+				return;
+		}
+		for (int i = 5; i < matriculaItaliana.length(); i++) {
+
+			if (!(esLletraValidaPerMatriculaItaliana(matriculaItaliana.charAt(i)))) {
+				System.out.println("No és una matrícula italiana vàlida");
+				return;
+			}
+		}
+		System.out.println("És una matrícula italiana vàlida");
+	}
+
+	public static boolean esLletraValidaPerMatriculaItaliana(char lletra) {
+ 
+		if (lletra < 65 || lletra > 90) {
+			return false;
+		}
+		
+		String noEsLletraValida = "I,O,Q,U";
+		
+		for (int i = 0; i < noEsLletraValida.length(); i++) {
+			if (noEsLletraValida.charAt(i) == lletra) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+}
