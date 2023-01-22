@@ -15,16 +15,12 @@ public class Pilota {
         }
     }
     public static void netejaCamp(char[][] camp) {
-        for (int i = 0; i < N_FILES; i++) {
-            for (int j = 0; j < N_COLS; j++) {
-                camp[i][j] = ' ';
-            }
-        }
+        System.out.flush();
     }
     public static void netejaPosicio(char[][] camp, int[] posicio) {
         int fila = obteFila(posicio);
         int col = obteCol(posicio);
-        camp[fila][col] = ' ';
+        camp[fila][col] = '·';
     }
     public static void posicionaPilota(char[][] camp, int[] posicio) {
         int fila = obteFila(posicio);
