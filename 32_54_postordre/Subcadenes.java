@@ -1,5 +1,6 @@
 //En aquesta ocasió, desenvoluparàs un programa que obtindrà un text per entrada estàndard i mostrarà per sortida estàndard totes les subcadenes possibles, tenint en comptes només les lletres.
 public class Subcadenes {
+    private static int lletrasMostrades = 0;
     public static void main(String[] args) {
         System.out.printf("Text?%n");
         String text = Entrada.readLine();
@@ -22,7 +23,7 @@ public class Subcadenes {
             return;
         }
         if (largo == 1) {
-            System.out.printf("%4d: %s%n", largo, text.substring(0, largo));
+            System.out.printf("%4d: %s%n", ++lletrasMostrades, text.substring(0, largo));
             mostraText(text, largo+1);
         } else { 
             System.out.printf("%4d: %s%n", largo, text.substring(0, largo));
