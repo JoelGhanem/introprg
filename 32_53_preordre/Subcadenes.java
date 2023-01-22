@@ -10,12 +10,13 @@ public class Subcadenes {
         if (text.length() == 0){
             return "";
         }
+        String vacio = "";
         char primer = text.charAt(0);
         if(!Character.isLetter(primer)) {
-            primer = 127;
+            vacio = "";
         }
         String textNetejat = netejaText(text.substring(1));
-        return primer + textNetejat;
+        return vacio + textNetejat;
     }
     public static void mostraText(String text, int largo) {
         if (largo <= 1) {
