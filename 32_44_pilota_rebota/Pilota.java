@@ -76,6 +76,11 @@ public class Pilota {
     }
     public static void main(String[] args)  {
         char[][] camp = new char[N_FILES][N_COLS];
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 14; j++) {
+                camp[i][j] = '·';
+            }
+        }
         netejaCamp(camp);
         int[] posicio = new int[2];         // fila, col
         canviaPosicio(posicio, 0, 0);       // posició inicial (0, 0)
