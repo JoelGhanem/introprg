@@ -1,4 +1,4 @@
-public class TresEnRatlla {
+ublic class TresEnRatlla {
     // mòduls de suport
     public static void mostraTaulell(char[][] taulell) {
         // mostra el contingut del taulell
