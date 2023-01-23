@@ -1,3 +1,4 @@
+//Programa que pasa un int a una tabla de valores en ala que cambias X por el numero que decida el usuario
 public class DigitArt {
     public static char[][] construeix1() {
         return new char[][] {

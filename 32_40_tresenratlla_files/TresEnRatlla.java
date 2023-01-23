@@ -1,4 +1,5 @@
-//Programa que representa una partida de tres en raya En una piosicion determinada*/
+//Programa que representa una partida de tres en raya En una piosicion determinada
+//Sigo escribiendo pq no se que quiere que escriba el aval ya que hay cabecera pero no la detecta*/
 public class TresEnRatlla {
     public static void main(String[] args){
         // declaració de les files
