@@ -34,6 +34,38 @@ public class UtilString {
         }
         return separades;
     }
+    /*Funcio que passa els Strings a ints*/
+    public static int aEnter(String text, boolean esEnter) {
+        if (esEnter) {
+            int enter = Integer.parseInt(text);
+            return enter;
+        } else {
+            String textStrip = text.strip();
+            int enter = Integer.parseInt(textStrip);
+            return enter;
+        }
+    }
+    /*Funcio que realitza les funcions del programa cadenacontinua*/
+    public static String cadenaContinua (String text, int nombre) {
+        int paraulaCops = nombre / text.length();
+        String cadena = "";
+        int modul = nombre % text.length();
+        if (nombre > text.length()) {
+            for (int i = 0; i < paraulaCops; i++) {
+                for(int j = 0; j < text.length(); j++) {
+                    cadena = cadena + (text.charAt(j));
+                }
+            }
+            for (int i = 0; i < modul; i++) {
+                cadena = cadena + (text.charAt(i));
+            }
+        } else {
+            for (int i = 0; i < nombre; i++) {
+                cadena = cadena + (text.charAt(i));
+            }
+        }
+        return cadena;
+    }
     /*Funció que em separa intervals d'un String*/
     public static String intervalString (String text, int inici, int fi) {
         String interval = "";
@@ -79,6 +111,18 @@ public class UtilString {
             }
         }
         return true;
+    }
+    /*Funció que necesita un array i un char per poder separar els valor per un caracte    er i un espai*/
+    public static String entreComes(int[] array, char caracter) {
+        String resultat = "";
+        for (int i = 0; i < array.length; i++) {
+            if (i == 0) {
+                resultat = resultat + array[0];
+            } else {
+                resultat = resultat + caracter + " " + array[1];
+            }
+        }
+        return resultat;
     }
 }
 
