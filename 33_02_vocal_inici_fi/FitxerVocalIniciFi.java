@@ -6,8 +6,8 @@ public class FitxerVocalIniciFi {
     public static void main(String[] args) throws IOException {
         String cami = "frases.txt";
         BufferedReader linia = new BufferedReader(new FileReader(cami));
-        String paraula = linia.readLine();
         while (true) {
+        String paraula = linia.readLine();
             if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
                 System.out.println(paraula);
                 break;
