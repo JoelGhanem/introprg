@@ -8,8 +8,10 @@ public class FitxerVocalIniciFi {
         BufferedReader input = new BufferedReader(new FileReader(cami));
         while (input != null) {
             String paraula = input.readLine();
-            if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
-                System.out.println(paraula);
+            if (paraula.length() >0) {
+                if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
+                    System.out.println(paraula);
+                }
             }
         }
         input.close();
