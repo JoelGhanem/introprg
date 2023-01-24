@@ -2,7 +2,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-public class FitxerVocalIniciFi {
+public class elBueno {
     public static void main(String[] args) throws IOException {
         String cami = "frases.txt";
         BufferedReader input = new BufferedReader(new FileReader(cami));
