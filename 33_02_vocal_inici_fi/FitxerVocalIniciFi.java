@@ -5,12 +5,9 @@ import java.io.IOException;
 public class FitxerVocalIniciFi {
     public static void main(String[] args) throws IOException {
         String cami = "frases.txt";
-        BufferedReader linia = new BufferedReader(new FileReader(cami));
-        while (true) {
-            String paraula = linia.readLine();
-            if (linia == null) {
-                break;
-            }
+        BufferedReader input = new BufferedReader(new FileReader(cami));
+        while (input != null) {
+            String paraula = input.readLine();
             if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
                 System.out.println(paraula);
             }
