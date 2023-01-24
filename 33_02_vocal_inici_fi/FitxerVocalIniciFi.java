@@ -10,7 +10,6 @@ public class FitxerVocalIniciFi {
         String paraula = linia.readLine();
             if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
                 System.out.println(paraula);
-                break;
             }
             if (linia == null) {
                 break;
