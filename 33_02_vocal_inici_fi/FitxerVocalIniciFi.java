@@ -6,9 +6,19 @@ public class FitxerVocalIniciFi {
     public static void main(String[] args) throws IOException {
         String cami = "frases.txt";
         BufferedReader input = new BufferedReader(new FileReader(cami));
-        System.out.println(input.readLine());       // escriu: primera línia
-        System.out.println(input.readLine());       // escriu: segona línia
-        System.out.println(input.readLine());       // escriu: null
+        int linies = 0;
+        while (true) {
+            String linia = input.readLine();
+            linies += 1;
+            if (null == linia) break;
+        }
+        String[] paraules = new String[linies];
+        String primeraParaula = paraules[0];
+        for (int i = 0; i < primeraParaula.length(); i++) {
+            if (UtilString.esVocal(primeraParaula.charAt(i))) {
+                System.out.println(primeraParaula);       // escriu: primera línia
+            }
+        }
         input.close();
     }
 }
