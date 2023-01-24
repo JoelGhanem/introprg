@@ -9,14 +9,14 @@ public class FitxerVocalIniciFi {
         int linies = 0;
         while (true) {
             String linia = input.readLine();
-            linies += 1;
             if (null == linia) break;
+            linies += 1;
         }
         String[] paraules = new String[linies];
-        String primeraParaula = paraules[0];
-        for (int i = 0; i < primeraParaula.length(); i++) {
-            if (UtilString.esVocal(primeraParaula.charAt(i))) {
-                System.out.println(primeraParaula);       // escriu: primera línia
+        for (int i = 0; i < paraules.length; i++) {
+            paraules[i] = input.readLine();
+            if (UtilString.esVocal(paraules[i].charAt(0)) || UtilString.esVocal(paraules[i].charAt((paraules.length)-1))) {
+                System.out.println(paraules);       // escriu: paraula q comenca o acaba amb vocal
             }
         }
         input.close();
