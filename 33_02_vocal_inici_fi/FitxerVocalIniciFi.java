@@ -12,5 +12,6 @@ public class FitxerVocalIniciFi {
                 System.out.println(paraula);
             }
         }
+        input.close();
     }
 }
