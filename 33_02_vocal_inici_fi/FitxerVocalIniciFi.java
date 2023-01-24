@@ -15,7 +15,10 @@ public class FitxerVocalIniciFi {
         String[] paraules = new String[linies];
         for (int i = 0; i < paraules.length; i++) {
             paraules[i] = input.readLine();
-            if (UtilString.esVocal(paraules[i].charAt(0)) || UtilString.esVocal(paraules[i].charAt((paraules.length)-1))) {
+            if (UtilString.esVocal(paraules[i].charAt(0))) { 
+                System.out.println(paraules);       // escriu: paraula q comenca amb vocal
+            }
+            if (UtilString.esVocal(paraules[i].charAt((paraules.length)-1))) {
                 System.out.println(paraules);       // escriu: paraula q comenca o acaba amb vocal
             }
         }
