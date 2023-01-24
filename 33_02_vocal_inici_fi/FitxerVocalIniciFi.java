@@ -5,23 +5,16 @@ import java.io.IOException;
 public class FitxerVocalIniciFi {
     public static void main(String[] args) throws IOException {
         String cami = "frases.txt";
-        BufferedReader input = new BufferedReader(new FileReader(cami));
-        int linies = 0;
+        BufferedReader linia = new BufferedReader(new FileReader(cami));
+        String paraula = linia.readLine();
         while (true) {
-            String linia = input.readLine();
-            if (null == linia) break;
-            linies += 1;
-        }
-        String[] paraules = new String[linies];
-        for (int i = 0; i < paraules.length; i++) {
-            paraules[i] = input.readLine();
-            if (UtilString.esVocal(paraules[i].charAt(0))) { 
-                System.out.println(paraules);       // escriu: paraula q comenca amb vocal
+            if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
+                System.out.println(paraula);
+                break;
             }
-            if (UtilString.esVocal(paraules[i].charAt((paraules.length)-1))) {
-                System.out.println(paraules);       // escriu: paraula q comenca o acaba amb vocal
+            if (linia == null) {
+                break;
             }
         }
-        input.close();
     }
 }
