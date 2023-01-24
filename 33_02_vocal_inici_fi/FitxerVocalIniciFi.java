@@ -7,12 +7,12 @@ public class FitxerVocalIniciFi {
         String cami = "frases.txt";
         BufferedReader linia = new BufferedReader(new FileReader(cami));
         while (true) {
-        String paraula = linia.readLine();
-            if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
-                System.out.println(paraula);
-            }
+            String paraula = linia.readLine();
             if (linia == null) {
                 break;
+            }
+            if (UtilString.esVocal(paraula.charAt(0)) || UtilString.esVocal(paraula.charAt(paraula.length()-1))) {
+                System.out.println(paraula);
             }
         }
     }
