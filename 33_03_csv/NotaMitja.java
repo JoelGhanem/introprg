@@ -6,9 +6,10 @@ public class NotaMitja {
     public static void main(String[] args) throws IOException {
         String cami = "notes.csv";
         BufferedReader input = new BufferedReader(new FileReader(cami));
-        int numero = 0;
-        int suma = 0;
+        String useless = input.readLine();
         while (true) {
+        double numero = 0;
+        double suma = 0;
             String paraula = input.readLine();
             if (paraula == null) {
                 break;
@@ -16,13 +17,12 @@ public class NotaMitja {
             String [] elements = paraula.split(",");
             for (int i = 0; i < elements.length; i++) {
                 if (Character.isDigit(elements[i].charAt(0))) {
-                    numero = Integer.parseInt(elements[i]);
+                    numero = Double.parseDouble(elements[i]);
                     suma = suma + numero; 
                 }
             }
-            int mitja = (int) (suma/6.0);
-            System.out.println(elements[0] + " (" + mitja + " )");
-            if (null == input) break;
+            double mitja = (suma/6.00);
+            System.out.printf("%s (%.02f)%n",elements[0], mitja);
         }
         input.close();
     }
