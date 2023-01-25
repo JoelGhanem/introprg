@@ -6,7 +6,11 @@ public class NotaMitja {
     public static void main(String[] args) throws IOException {
         String cami = "notes.csv";
         BufferedReader input = new BufferedReader(new FileReader(cami));
-        String useless = input.readLine();
+        String primera = input.readLine();
+        String[] useless = primera.split(",");
+        if(useless[0].equals("alumne")) {
+            System.out.println("Cap entrada");
+        }
         while (true) {
         double numero = 0;
         double suma = 0;
