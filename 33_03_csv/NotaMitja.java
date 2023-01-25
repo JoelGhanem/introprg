@@ -19,6 +19,7 @@ public class NotaMitja {
             }
             int mitja = (int) (suma/6.0);
             System.out.println(elements[0] + " (" + mitja + " )");
+            input.close();
         }
     }
 }
