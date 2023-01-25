@@ -23,8 +23,10 @@ public class NotaMitja {
                 }
             }
             double mitja = (suma/6.00);
-            System.out.printf("%s (%.02f)%n",elements[0], mitja);
-            print = true;
+            if (mitja != 0) {
+                System.out.printf("%s (%.02f)%n",elements[0], mitja);
+                print = true;
+            }
             if (print == false) {
                 System.out.println("Cap entrada");
             }
