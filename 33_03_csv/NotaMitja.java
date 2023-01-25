@@ -7,13 +7,10 @@ public class NotaMitja {
         String cami = "notes.csv";
         BufferedReader input = new BufferedReader(new FileReader(cami));
         String primera = input.readLine();
-        String[] useless = primera.split(",");
-        if(useless[0].equals("alumne")) {
-            System.out.println("Cap entrada");
-        }
         while (true) {
-        double numero = 0;
-        double suma = 0;
+            double numero = 0;
+            double suma = 0;
+            boolean print = false;
             String paraula = input.readLine();
             if (paraula == null) {
                 break;
@@ -27,6 +24,10 @@ public class NotaMitja {
             }
             double mitja = (suma/6.00);
             System.out.printf("%s (%.02f)%n",elements[0], mitja);
+            print = true;
+            if (print == false) {
+                System.out.println("Cap entrada");
+            }
         }
         input.close();
     }
