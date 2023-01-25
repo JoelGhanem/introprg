@@ -8,7 +8,7 @@ public class NotaMitja {
         BufferedReader input = new BufferedReader(new FileReader(cami));
         int numero = 0;
         int suma = 0;
-        while (input != null) {
+        while (true) {
             String paraula = input.readLine();
             String [] elements = paraula.split(",");
             for (int i = 0; i < elements.length; i++) {
@@ -19,7 +19,8 @@ public class NotaMitja {
             }
             int mitja = (int) (suma/6.0);
             System.out.println(elements[0] + " (" + mitja + " )");
-            input.close();
+            if (null == input) break;
         }
+        input.close();
     }
 }
