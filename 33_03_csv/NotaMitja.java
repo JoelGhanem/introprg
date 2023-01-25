@@ -15,7 +15,7 @@ public class NotaMitja {
             numerito = numerito + 1;
             System.out.println(numerito);
             if (paraula == null) {
-                if (numerito == 1) {
+                if (numerito == 0) {
                     System.out.println("Cap entrada");
                 }
                 break;
