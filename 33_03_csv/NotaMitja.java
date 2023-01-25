@@ -11,9 +11,6 @@ public class NotaMitja {
             double numero = 0;
             double suma = 0;
             String paraula = input.readLine();
-            if (paraula.isEmpty()) {
-                System.out.println("Cap entrada");
-            }
             if (paraula == null) {
                 break;
             }
