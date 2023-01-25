@@ -10,8 +10,13 @@ public class NotaMitja {
         while (true) {
             double numero = 0;
             double suma = 0;
+            int numerito = 0;
             String paraula = input.readLine();
+                numerito ++;
             if (paraula == null) {
+                if (numerito == 1) {
+                    System.out.println("Cap entrada");
+                }
                 break;
             }
             String [] elements = paraula.split(",");
