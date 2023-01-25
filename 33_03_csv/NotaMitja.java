@@ -7,15 +7,15 @@ public class NotaMitja {
         String cami = "notes.csv";
         BufferedReader input = new BufferedReader(new FileReader(cami));
         String primera = input.readLine();
+        int numerito = 0;
         while (true) {
             double numero = 0;
             double suma = 0;
-            int numerito = 0;
             String paraula = input.readLine();
             numerito = numerito + 1;
             System.out.println(numerito);
             if (paraula == null) {
-                if (numerito == 0) {
+                if (numerito == 1) {
                     System.out.println("Cap entrada");
                 }
                 break;
