@@ -10,6 +10,9 @@ public class NotaMitja {
         int suma = 0;
         while (true) {
             String paraula = input.readLine();
+            if (paraula == null) {
+                break;
+            }
             String [] elements = paraula.split(",");
             for (int i = 0; i < elements.length; i++) {
                 if (Character.isDigit(elements[i].charAt(0))) {
