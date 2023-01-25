@@ -10,10 +10,12 @@ public class NotaMitja {
         while (true) {
             double numero = 0;
             double suma = 0;
-            boolean print = false;
             String paraula = input.readLine();
             if (paraula == null) {
                 break;
+            }
+            if (paraula.isEmpty()) {
+                System.out.println("Cap entrada");
             }
             String [] elements = paraula.split(",");
             for (int i = 0; i < elements.length; i++) {
@@ -23,13 +25,7 @@ public class NotaMitja {
                 }
             }
             double mitja = (suma/6.00);
-            if (mitja != 0) {
-                System.out.printf("%s (%.02f)%n",elements[0], mitja);
-                print = true;
-            }
-            if (print == false) {
-                System.out.println("Cap entrada");
-            }
+            System.out.printf("%s (%.02f)%n",elements[0], mitja);
         }
         input.close();
     }
