@@ -11,11 +11,11 @@ public class NotaMitja {
             double numero = 0;
             double suma = 0;
             String paraula = input.readLine();
-            if (paraula == null) {
-                break;
-            }
             if (paraula.isEmpty()) {
                 System.out.println("Cap entrada");
+            }
+            if (paraula == null) {
+                break;
             }
             String [] elements = paraula.split(",");
             for (int i = 0; i < elements.length; i++) {
