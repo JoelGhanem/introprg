@@ -13,7 +13,6 @@ public class NotaMitja {
             double suma = 0;
             String paraula = input.readLine();
             numerito = numerito + 1;
-            System.out.println(numerito);
             if (paraula == null) {
                 if (numerito == 1) {
                     System.out.println("Cap entrada");
