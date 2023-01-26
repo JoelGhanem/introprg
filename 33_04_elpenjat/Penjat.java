@@ -41,11 +41,22 @@ public class Penjat {
         System.out.println("Introdueix una lletra");
         String paraula = Entrada.readLine();
         if (paraula.equals("prou")) {
+            prou();
             break;
         }
         if (paraula.length() == 0) {
             char letra = paraula.charAt(0);
             return letra;
         }
+    }
+    public static void prou() {
+        System.out.println("Vols finalitzar?");
+        System.out.println("Sí");
+        System.out.println("Paraules jugades: ");
+        System.out.println("Paraules encertades: ");
+        System.out.println("Paraules fallades: ");
+        System.out.println("Paraules cancel·lades: ");
+        System.out.println("Espero que t'hagis divertit");
+        break;
     }
 }
