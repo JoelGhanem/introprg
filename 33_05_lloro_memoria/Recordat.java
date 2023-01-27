@@ -12,28 +12,37 @@ public class Recordat {
         mostraRecords(cami);
     }
     public static void processaEntrada(String cami) {
-        FileWriter fileWriter = new FileWriter(cami);
-        BufferedWriter sortida = new BufferedWriter((fileWriter));
-        while (true) {
-            System.out.println("El lloro pregunta paraula:");
-            String paraula = Entrada.readLine();
-            if (paraula.isEmpty()) {
-                break;
+        try {
+            FileWriter fileWriter = new FileWriter(cami);
+            BufferedWriter sortida = new BufferedWriter((fileWriter));
+            while (true) {
+                System.out.println("El lloro pregunta paraula:");
+                String paraula = Entrada.readLine();
+                if (paraula.isEmpty()) {
+                    break;
+                }
+                System.out.println("El lloro registra: " + paraula);
+                sortida.write(paraula);
+                sortida.newLine();
             }
-            System.out.println("El lloro registra: " + paraula);
-            sortida.write(paraula);
-            sortida.newLine();
+            sortida.close();
+        } catch (IOException e) {
+            System.out.println("problemo" + e.getMessage());
         }
-        sortida.close();
     }
     public static void mostraRecords(String cami) {
-        FileReader fileReader = new FileReader(cami);
-        BufferedReader input = new BufferedReader(fileReader);
-        while (true) {
-            String linia = input.readLine();
-            if (null == linia) break;
-            System.out.println("El lloro recorda: " + linia);
+        try {
+            FileReader fileReader = new FileReader(cami);
+            BufferedReader input = new BufferedReader(fileReader);
+            while (true) {
+                String linia = input.readLine();
+                if (null == linia) break;
+                System.out.println("El lloro recorda: " + linia);
+            }
+            System.out.println("Adéu");
+            input.close();
+        } catch (IOException e) {
+            System.out.println("problemo" + e.getMessage());
         }
-        System.out.println("Adéu");
     }
 }
