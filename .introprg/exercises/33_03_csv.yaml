@@ -33,7 +33,7 @@
   - filename: notes.csv
     lines: alumne,uf1,uf2,uf3,uf4,uf5,uf6
   stdout: Cap entrada
-_mainclass: NotaMitja
+_main: NotaMitja
 _tr:
 - ','
 - .

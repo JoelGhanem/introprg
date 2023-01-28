@@ -1044,7 +1044,7 @@
   - 'Paraules fallades: 0'
   - 'Paraules cancel·lades: 1'
   - Espero que t'hagis divertit
-_mainclass: Penjat
+_main: Penjat
 _version: '2223'
 _wafiles:
 - recursos/figura0.txt

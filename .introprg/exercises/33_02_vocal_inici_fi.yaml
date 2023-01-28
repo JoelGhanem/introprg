@@ -1,3 +1,7 @@
+_main: FitxerVocalIniciFi
+_version: '2223'
+_wafiles:
+- frases.txt
 '01':
   filein:
   - filename: frases.txt
@@ -16,7 +20,3 @@
 '03':
   filein:
   - filename: frases.txt
-_mainclass: FitxerVocalIniciFi
-_version: '2223'
-_wafiles:
-- frases.txt
