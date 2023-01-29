@@ -32,21 +32,20 @@ public class Recordat {
     }
     public static void mostraRecords(String cami) {
         try {
-            int numerito = 0;
+            boolean vacio = true; 
             FileReader fileReader = new FileReader(cami);
             BufferedReader input = new BufferedReader(fileReader);
             while (true) {
                 String linia = input.readLine();
-                if (!linia.isEmpty()) {
-                    numerito = numerito + 1;
-                }
                 if (null == linia) {
-                    if (numerito == 0) {
-                        System.out.println("El lloro no recorda res");
-                    }
                     break;
+                } else {
+                    vacio = false;
                 }
                 System.out.println("El lloro recorda: " + linia);
+            }
+            if (vacio) {
+                System.out.println("El lloro no recorda res");
             }
             System.out.println("Adéu");
             input.close();
