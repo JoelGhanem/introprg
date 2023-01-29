@@ -21,6 +21,13 @@ public class Recordat {
                 if (paraula.isEmpty()) {
                     break;
                 }
+                while (true) {
+                    if (paraula.charAt(0) == ' ') { 
+                        paraula.substring(1);
+                    } else {
+                        break;
+                    }
+                }
                 System.out.println("El lloro registra: " + paraula);
                 sortida.write(paraula);
                 sortida.newLine();
