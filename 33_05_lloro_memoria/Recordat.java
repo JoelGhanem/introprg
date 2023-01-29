@@ -15,17 +15,11 @@ public class Recordat {
         try {
             FileWriter fileWriter = new FileWriter(cami);
             BufferedWriter sortida = new BufferedWriter((fileWriter));
-            int numerito = 0;
             while (true) {
                 System.out.println("El lloro pregunta paraula:");
                 String paraula = Entrada.readLine();
                 if (paraula.isEmpty()) {
-                    if (numerito == 0) {
-                        System.out.println("El lloro no recorda res");
-                    }
                     break;
-                } else {
-                    numerito = numerito + 1;
                 }
                 System.out.println("El lloro registra: " + paraula);
                 sortida.write(paraula);
@@ -38,11 +32,20 @@ public class Recordat {
     }
     public static void mostraRecords(String cami) {
         try {
+            int numerito = 0;
             FileReader fileReader = new FileReader(cami);
             BufferedReader input = new BufferedReader(fileReader);
             while (true) {
                 String linia = input.readLine();
-                if (null == linia) break;
+                if (!linia.isEmpty()) {
+                    numerito = numerito + 1;
+                }
+                if (null == linia) {
+                    if (numerito == 0) {
+                        System.out.println("El lloro no recorda res");
+                    }
+                    break;
+                }
                 System.out.println("El lloro recorda: " + linia);
             }
             System.out.println("Adéu");
