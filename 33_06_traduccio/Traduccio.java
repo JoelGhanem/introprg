@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 public class Traduccio {
     public static void main(String[] args) throws IOException {
-        if (args.length != 2) {
+        if (args.length != 3) {
             System.out.println("ERROR: Cal especificar els fitxers origen, traduccio i destinació");
         } else {
             String fitxerOrigen = args[0];
@@ -17,19 +17,31 @@ public class Traduccio {
     }
     //aquest modul rep els camins i tradueix
     public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) { 
-        BufferedReader origen = new BufferedReader(new FileReader(fitxerOrigen));
-        BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
-        BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
-        while (true) {
-            if (origen == null) {
-                break;
-            } else if (traduccio == null) {
-                break;
-            }
-        }
-        public static String tradueixLinia(String linia, String fitxerTraduccio) {
+        try {
+            BufferedReader origen = new BufferedReader(new FileReader(fitxerOrigen));
+            BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
+            BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
             while (true) {
-            String linia = traduit.readLine();
-            return traduit;
+                if (origen == null) {
+                    break;
+                } else if (traduccio == null) {
+                    break;
+                }
+                String linia = traduccio.readLine();
+                String traduit = tradueixLinia(linia, fitxerTraduccio);
+                sortidaDestinacio.write(traduit);
+            }
+        } catch (IOException e) {
+            System.out.println("problemo " + e.getMessage());
         }
     }
+    // tengo que ir input por input replacing cada apartado por lo que diga en el traduccio.txt
+    public static String tradueixLinia(String linia, String fitxerTraduccio) {
+        while (true) {
+            String [] liniaArray = linia.split(",");
+            linia.replace(liniaArray[0],liniaArray[1]);
+            break;
+        }
+        return linia;
+    }
+}
