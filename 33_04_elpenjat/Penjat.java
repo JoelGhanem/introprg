@@ -56,7 +56,7 @@ public class Penjat {
     }
     public static void intentsDisponibles() {
         int intents = 10;
-        System.out.println(intents);
+        System.out.println("Intents disponibles: " + intents);
     }
     public static char introdueixLletra() {
         System.out.println("Introdueix una lletra");
