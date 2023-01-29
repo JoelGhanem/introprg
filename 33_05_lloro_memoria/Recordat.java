@@ -25,6 +25,9 @@ public class Recordat {
                     if (paraula.charAt(0) == ' ') { 
                         paraula.substring(1);
                         paraula = paraula.substring(1);
+                    } else if (paraula.charAt(paraula.length()-1) == ' ') {
+                        paraula.substring(0,paraula.length());
+                        paraula = paraula.substring(0,paraula.length());
                     } else {
                         break;
                     }
