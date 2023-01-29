@@ -11,6 +11,7 @@ public class Penjat {
         String paraulaEnJoc = input.readLine();
         while (true) {
             //Función que imprime la palabra en juego 
+            ystem.out.println("la letra es " + letra);
             paraulaEnJocJoc(paraulaEnJoc, letra);
             //Función que imprime las letras utilizadas
             if (letra == '$') {
@@ -22,9 +23,6 @@ public class Penjat {
             intentsDisponibles();
             //Función que pide la letra, mira si es prou o no y la devuelve para que siga en juego
             letra = introdueixLletra();
-            if (prou()) {
-                break;
-            }
         }
     }
     // hay que hacer 2 strings para que se vaya mostrando la palabrta con y sion censura
@@ -62,11 +60,7 @@ public class Penjat {
         char letra = '$';
         System.out.println("Introdueix una lletra");
         String paraula = Entrada.readLine();
-        if (!paraula.equals("prou")) {
-            letra = paraula.charAt(0);
-        } else {
-            prou();
-        }
+        letra = paraula.charAt(0);
         return letra;
     }
     public static boolean prou() {
