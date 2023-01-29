@@ -69,7 +69,6 @@ public class Penjat {
     }
     public static boolean prou() {
         System.out.println("Vols finalitzar?");
-        System.out.println("Sí");
         System.out.println("Paraules jugades: ");
         System.out.println("Paraules encertades: ");
         System.out.println("Paraules fallades: ");
