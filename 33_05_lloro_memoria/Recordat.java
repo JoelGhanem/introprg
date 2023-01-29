@@ -15,11 +15,17 @@ public class Recordat {
         try {
             FileWriter fileWriter = new FileWriter(cami);
             BufferedWriter sortida = new BufferedWriter((fileWriter));
+            int numerito = 0;
             while (true) {
                 System.out.println("El lloro pregunta paraula:");
                 String paraula = Entrada.readLine();
                 if (paraula.isEmpty()) {
+                    if (numerito == 0) {
+                        System.out.println("El lloro no recorda res");
+                    }
                     break;
+                } else {
+                    numerito = numerito + 1;
                 }
                 System.out.println("El lloro registra: " + paraula);
                 sortida.write(paraula);
