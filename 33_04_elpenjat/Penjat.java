@@ -59,12 +59,14 @@ public class Penjat {
         System.out.println("Intents disponibles: " + intents);
     }
     public static char introdueixLletra() {
+        char letra = '$';
         System.out.println("Introdueix una lletra");
         String paraula = Entrada.readLine();
-        if (paraula.equals("prou")) {
+        if (!paraula.equals("prou")) {
+            letra = paraula.charAt(0);
+        } else {
             prou();
         }
-        char letra = paraula.charAt(0);
         return letra;
     }
     public static boolean prou() {
