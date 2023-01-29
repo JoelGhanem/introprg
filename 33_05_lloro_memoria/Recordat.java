@@ -24,6 +24,7 @@ public class Recordat {
                 while (true) {
                     if (paraula.charAt(0) == ' ') { 
                         paraula.substring(1);
+                        paraula = paraula.substring(1);
                     } else {
                         break;
                     }
