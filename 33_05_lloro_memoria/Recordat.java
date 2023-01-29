@@ -18,18 +18,18 @@ public class Recordat {
             while (true) {
                 System.out.println("El lloro pregunta paraula:");
                 String paraula = Entrada.readLine();
-                int largo = paraula.length()-1;
+                int inicio = 0;
+                int fin = paraula.length()-1;
                 if (paraula.isEmpty()) {
                     break;
                 }
-                while (true) {
-                    if (paraula.charAt(0) == ' ' || paraula.charAt(largo) == ' ') { 
-                        paraula.substring(1,largo);
-                        paraula = paraula.substring(1, largo);
-                    } else {
-                        break;
-                    }
+                while (paraula.charAt(inicio) == ' ') {
+                    inicio ++;
+                } 
+                while (paraula.charAt(fin) == ' ') {
+                    fin --;
                 }
+                paraula = paraula.substring(inicio, fin + 1);
                 System.out.println("El lloro registra: " + paraula);
                 sortida.write(paraula);
                 sortida.newLine();
