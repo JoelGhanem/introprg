@@ -10,9 +10,6 @@ public class Penjat {
         System.out.printf("Comencem a jugar%n");
         String paraulaEnJoc = input.readLine();
         while (true) {
-            System.out.println("Introdueix una lletra");
-            String entrada = Entrada.readLine();
-            letra = entrada.charAt(0);
             //Función que imprime la palabra en juego 
             paraulaEnJocJoc(paraulaEnJoc, letra);
             //Función que imprime las letras utilizadas
