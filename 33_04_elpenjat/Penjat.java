@@ -10,6 +10,7 @@ public class Penjat {
         System.out.printf("Comencem a jugar%n");
         String paraulaEnJoc = input.readLine();
         String utilitzades = "";
+        boolean acaba = false;
         int numero = 0;
         int intents = 11;
         while (true) {
@@ -25,6 +26,10 @@ public class Penjat {
             intents = intentsDisponibles(intents);
             //Función que pide la letra, mira si es prou o no y la devuelve para que siga en juego
             letra = introdueixLletra();
+            if (letra == 'ñ') {
+                prou();
+            }
+            break;
         }
     }
     // hay que hacer 2 strings para que se vaya mostrando la palabrta con y sion censura
@@ -85,15 +90,27 @@ public class Penjat {
         System.out.println("Introdueix una lletra");
         String paraula = Entrada.readLine();
         letra = paraula.charAt(0);
+        if (paraula.equals("prou")) {
+            letra = 'ñ';
+        }
+        if (letra == 'ñ') {
+            return letra;
+        } 
         return letra;
     }
     public static boolean prou() {
+        boolean prou = false;
+        String finalitza = "";
         System.out.println("Vols finalitzar?");
-        System.out.println("Paraules jugades: ");
-        System.out.println("Paraules encertades: ");
-        System.out.println("Paraules fallades: ");
-        System.out.println("Paraules cancel·lades: ");
-        System.out.println("Espero que t'hagis divertit");
-        return true;
+        finalitza = Entrada.readLine();
+        if (finalitza.equals("sí")) {
+            System.out.println("Paraules jugades: ");
+            System.out.println("Paraules encertades: ");
+            System.out.println("Paraules fallades: ");
+            System.out.println("Paraules cancel·lades: ");
+            System.out.println("Espero que t'hagis divertit");
+            prou = true;
+        }
+        return prou ;
     }
 }
