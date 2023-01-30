@@ -13,6 +13,10 @@ public class Penjat {
         boolean acaba = false;
         int numero = 0;
         int intents = 11;
+        int ganadas = 0;
+        int jugadas = 1;
+        int perdidas = 0;
+        int canceladas = 0;
         while (true) {
             //Función que imprime la palabra en juego 
             numero = paraulaEnJocJoc(numero, paraulaEnJoc, letra);
@@ -27,7 +31,7 @@ public class Penjat {
             //Función que pide la letra, mira si es prou o no y la devuelve para que siga en juego
             letra = introdueixLletra();
             if (letra == 'ñ') {
-                prou();
+                prou(jugadas, ganadas, perdidas, canceladas);
             }
             break;
         }
@@ -98,16 +102,17 @@ public class Penjat {
         } 
         return letra;
     }
-    public static boolean prou() {
+    public static boolean prou(int jugadas, int ganadas, int perdidas, int canceladas) {
         boolean prou = false;
+        canceladas = 1;
         String finalitza = "";
         System.out.println("Vols finalitzar?");
         finalitza = Entrada.readLine();
         if (finalitza.equals("sí")) {
-            System.out.println("Paraules jugades: ");
-            System.out.println("Paraules encertades: ");
-            System.out.println("Paraules fallades: ");
-            System.out.println("Paraules cancel·lades: ");
+            System.out.println("Paraules jugades: " + jugadas);
+            System.out.println("Paraules encertades: " + ganadas);
+            System.out.println("Paraules fallades: " + perdidas);
+            System.out.println("Paraules cancel·lades: " + canceladas);
             System.out.println("Espero que t'hagis divertit");
             prou = true;
         }
