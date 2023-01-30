@@ -25,7 +25,6 @@ public class Penjat {
             intents = intentsDisponibles(intents);
             //Función que pide la letra, mira si es prou o no y la devuelve para que siga en juego
             letra = introdueixLletra();
-            System.out.println("la letra es " + letra);
         }
     }
     // hay que hacer 2 strings para que se vaya mostrando la palabrta con y sion censura
