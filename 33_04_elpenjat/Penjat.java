@@ -90,9 +90,17 @@ public class Penjat {
         return tiradas;
     }
     public static char introdueixLletra() {
+        String letras = "abcdefghijklmnopqrstuvwxyz";
         char letra = '$';
         System.out.println("Introdueix una lletra");
         String paraula = Entrada.readLine();
+        for (int i = 0; i < paraula.length(); i++) {
+            for ( int j = 0; j < paraula.length(); j++) {
+                if (paraula.charAt(i) != letras.charAt(j)) {
+                    System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                }
+            }
+        }
         letra = paraula.charAt(0);
         if (paraula.equals("prou")) {
             letra = 'ñ';
