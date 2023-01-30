@@ -1,0 +1,4 @@
+prou()
+el problema qes que devuelve un true entonces cada vez que lo compruebas corta el programa,
+creo que lo que hay que hacer es ejecutarlo todo en el introdueix Lletra para que solo acabe si 
+se escribe prou y luego se compruebe en el main el prou() para que se acabe todo el programa

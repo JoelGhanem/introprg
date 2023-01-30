@@ -9,26 +9,28 @@ public class Penjat {
         BufferedReader input = new BufferedReader(new FileReader(cami));
         System.out.printf("Comencem a jugar%n");
         String paraulaEnJoc = input.readLine();
+        String utilitzades = "";
+        int numero = 0;
+        int intents = 11;
         while (true) {
             //Función que imprime la palabra en juego 
-            ystem.out.println("la letra es " + letra);
-            paraulaEnJocJoc(paraulaEnJoc, letra);
+            System.out.println("la letra es " + letra);
+            numero = paraulaEnJocJoc(numero, paraulaEnJoc, letra);
             //Función que imprime las letras utilizadas
             if (letra == '$') {
                 System.out.println("Utilitzades: cap");
             } else {
-                lletresUtilitzades(letra);
+                utilitzades = lletresUtilitzades(utilitzades, letra);
             }
             //Función que imprime los intentos disponibles
-            intentsDisponibles();
+            intents = intentsDisponibles(intents);
             //Función que pide la letra, mira si es prou o no y la devuelve para que siga en juego
             letra = introdueixLletra();
         }
     }
     // hay que hacer 2 strings para que se vaya mostrando la palabrta con y sion censura
-    public static void paraulaEnJocJoc(String paraulaEnJoc, char letra) {
+    public static int paraulaEnJocJoc(int numero, String paraulaEnJoc, char letra) {
         boolean encertat = false;
-        int numeroDeTiradas = 0;
         String oculto = ""; 
         String muestra = "";
         for (int i = 0; i < paraulaEnJoc.length(); i++) {
@@ -36,8 +38,8 @@ public class Penjat {
         }
         System.out.println("Paraula: " + oculto);
         oculto = "";
-        numeroDeTiradas = numeroDeTiradas + 1;
-        if (numeroDeTiradas != 0) {
+        numero = numero + 1;
+        if (numero != 0) {
             for (int i = 0; i < paraulaEnJoc.length(); i++) {
                 if (paraulaEnJoc.charAt(i) == letra) {
                     oculto = oculto +  letra;
@@ -46,15 +48,38 @@ public class Penjat {
                 }
             }
         }
+        return numero;
     }
-    public static void lletresUtilitzades(char letra) {
-        String utilitzades = "";
-        utilitzades = utilitzades + Character.toUpperCase(letra);
-        System.out.println("Utilitzades: " + utilitzades);
+    public static String lletresUtilitzades(String utilitzades, char letra) {
+        char mayus = '$';
+        mayus = Character.toUpperCase(letra);
+        utilitzades = utilitzades + mayus;
+        // primera letra
+        if (utilitzades.length() == 1) {
+            System.out.println("Utilitzades: " + utilitzades);
+        } else if (utilitzades.length() == 2) {
+            // 2 letras
+            System.out.println("Utilitzades: " + utilitzades.charAt(0) + " i " + utilitzades.charAt(1));
+            // si hay mas de 2 letras
+        } else if (utilitzades.length() > 2) {
+            for (int i = 0; i < utilitzades.length(); i++) {
+                if (i == 0) {
+                    System.out.print("Utilitzades: " + utilitzades.charAt(0));
+                } else if (i == utilitzades.length()-2)  {
+                    System.out.print(utilitzades.charAt(utilitzades.length()-2) + " i " + utilitzades.charAt(utilitzades.length()-1));
+                    break;
+                } else { 
+                    System.out.print(", " + utilitzades.charAt(i));
+                }
+            }
+        }
+        return utilitzades;
     }
-    public static void intentsDisponibles() {
-        int intents = 10;
-        System.out.println("Intents disponibles: " + intents);
+    public static int intentsDisponibles(int intents) {
+        int tiradas = intents;
+        tiradas -=1;
+        System.out.println("Intents disponibles: " + tiradas);
+        return tiradas;
     }
     public static char introdueixLletra() {
         char letra = '$';
