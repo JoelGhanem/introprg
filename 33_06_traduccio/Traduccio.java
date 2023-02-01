@@ -29,7 +29,6 @@ public class Traduccio {
                     break;
                 }
                 String linia = traduccio.readLine();
-                System.out.println(linia);
                 String traduit = tradueixLinia(linia, fitxerTraduccio);
                 sortidaDestinacio.write(traduit);
             }
