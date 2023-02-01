@@ -20,10 +20,10 @@ public class Traduccio {
         BufferedReader origen = new BufferedReader(new FileReader(fitxerOrigen));
         BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
         while (true) {
+            String original = origen.readLine();
             if (origen == null) {
                 break;
             } 
-            String original = origen.readLine();
             String traduit = tradueixLinia(original, fitxerTraduccio);
             sortidaDestinacio.write(traduit);
         }
@@ -34,16 +34,12 @@ public class Traduccio {
     public static String tradueixLinia(String original, String fitxerTraduccio) throws IOException{
         BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
         while (true) {
+            String linia = traduccio.readLine();
             if (traduccio == null) {
                 break;
             }
-            String linia = traduccio.readLine();
             String [] liniaArray = linia.split(",");
             linia.replace(liniaArray[0],liniaArray[1].trim());
-            for (int i = 0; i < liniaArray.length; i++) {
-                System.out.println(liniaArray[i]);
-            }
-            break;
         }
         return original;
     }
