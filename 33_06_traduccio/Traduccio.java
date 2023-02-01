@@ -41,6 +41,9 @@ public class Traduccio {
         while (true) {
             String [] liniaArray = linia.split(",");
             linia.replace(liniaArray[0],liniaArray[1]);
+            for (int i = 0; i < liniaArray.length; i++) {
+                System.out.println(liniaArray[i]);
+            }
             break;
         }
         System.out.println(linia);
