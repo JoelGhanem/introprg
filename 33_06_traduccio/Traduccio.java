@@ -24,7 +24,8 @@ public class Traduccio {
             while (true) {
                 if (origen == null) {
                     break;
-                } else if (traduccio == null) {
+                } 
+                if (traduccio == null) {
                     break;
                 }
                 String linia = traduccio.readLine();
