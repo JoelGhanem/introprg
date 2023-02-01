@@ -44,6 +44,7 @@ public class Traduccio {
             linia.replace(liniaArray[0],liniaArray[1]);
             break;
         }
+        System.out.println(linia);
         return linia;
     }
 }
