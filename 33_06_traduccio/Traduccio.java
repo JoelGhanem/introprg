@@ -16,28 +16,24 @@ public class Traduccio {
         }
     }
     //aquest modul rep els camins i tradueix
-    public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) { 
-        try {
-            BufferedReader origen = new BufferedReader(new FileReader(fitxerOrigen));
-            BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
-            BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
-            while (true) {
-                if (origen == null) {
-                    break;
-                } 
-                if (traduccio == null) {
-                    break;
-                }
-                String linia = traduccio.readLine();
-                String traduit = tradueixLinia(linia, fitxerTraduccio);
-                sortidaDestinacio.write(traduit);
+    public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException{ 
+        BufferedReader origen = new BufferedReader(new FileReader(fitxerOrigen));
+        BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
+        BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
+        while (true) {
+            if (origen == null) {
+                break;
+            } 
+            if (traduccio == null) {
+                break;
             }
-        } catch (IOException e) {
-            System.out.println("problemo " + e.getMessage());
+            String linia = traduccio.readLine();
+            String traduit = tradueixLinia(linia, fitxerTraduccio);
+            sortidaDestinacio.write(traduit);
         }
     }
     // tengo que ir input por input replacing cada apartado por lo que diga en el traduccio.txt
-    public static String tradueixLinia(String linia, String fitxerTraduccio) {
+    public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException{
         while (true) {
             String [] liniaArray = linia.split(",");
             linia.replace(liniaArray[0],liniaArray[1]);
