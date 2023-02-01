@@ -21,7 +21,7 @@ public class Traduccio {
         BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
         while (true) {
             String original = origen.readLine();
-            if (origen == null) {
+            if (original == null) {
                 break;
             } 
             String traduit = tradueixLinia(original, fitxerTraduccio);
@@ -35,7 +35,7 @@ public class Traduccio {
         BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
         while (true) {
             String linia = traduccio.readLine();
-            if (traduccio == null) {
+            if (linia == null) {
                 break;
             }
             String [] liniaArray = linia.split(",");
