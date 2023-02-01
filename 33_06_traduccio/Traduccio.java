@@ -18,30 +18,33 @@ public class Traduccio {
     //aquest modul rep els camins i tradueix
     public static void tradueix(String fitxerOrigen, String fitxerTraduccio, String fitxerDestinacio) throws IOException{ 
         BufferedReader origen = new BufferedReader(new FileReader(fitxerOrigen));
-        BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
         BufferedWriter sortidaDestinacio = new BufferedWriter(new FileWriter(fitxerDestinacio));
         while (true) {
             if (origen == null) {
                 break;
             } 
+            String original = origen.readLine();
+            String traduit = tradueixLinia(original, fitxerTraduccio);
+            sortidaDestinacio.write(traduit);
+        }
+        origen.close();
+        sortidaDestinacio.close();
+    }
+    // tengo que ir input por input replacing cada apartado por lo que diga en el traduccio.txt
+    public static String tradueixLinia(String original, String fitxerTraduccio) throws IOException{
+        BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
+        while (true) {
             if (traduccio == null) {
                 break;
             }
             String linia = traduccio.readLine();
-            String traduit = tradueixLinia(linia, fitxerTraduccio);
-            sortidaDestinacio.write(traduit);
-        }
-    }
-    // tengo que ir input por input replacing cada apartado por lo que diga en el traduccio.txt
-    public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException{
-        while (true) {
             String [] liniaArray = linia.split(",");
-            linia.replace(liniaArray[0],liniaArray[1]);
+            linia.replace(liniaArray[0],liniaArray[1].trim());
             for (int i = 0; i < liniaArray.length; i++) {
                 System.out.println(liniaArray[i]);
             }
             break;
         }
-        return linia;
+        return original;
     }
 }
