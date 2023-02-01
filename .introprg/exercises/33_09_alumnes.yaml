@@ -1,0 +1,121 @@
+'01':
+  argsin: elef
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9
+    - Daniel Carrasco Macadàmia,daniel.carrasco@iesjoandaustria.org,21,true,5,4,5,2,NP,NP
+    - Gabriela Cirerer Nasal,gabriela.cirerer@iesjoandaustria.org,20,false,6,7,5,8,9,5
+  stdout:
+  - 'Alumne: Eleftèria Ortiz Luján'
+  - '- email: elefteria.ortiz@iesjoandaustria.org'
+  - '- edat: 10'
+  - '- és oïent: No'
+  - '- notes: 7,8,5,7,8,9'
+'02':
+  argsin: ria
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9
+    - Daniel Carrasco Macadàmia,daniel.carrasco@iesjoandaustria.org,21,true,5,4,5,2,NP,NP
+    - Gabriela Cirerer Nasal,gabriela.cirerer@iesjoandaustria.org,20,false,6,7,5,8,9,5
+  stdout:
+  - 'Alumne: Eleftèria Ortiz Luján'
+  - '- email: elefteria.ortiz@iesjoandaustria.org'
+  - '- edat: 10'
+  - '- és oïent: No'
+  - '- notes: 7,8,5,7,8,9'
+  - 'Alumne: Daniel Carrasco Macadàmia'
+  - '- email: daniel.carrasco@iesjoandaustria.org'
+  - '- edat: 21'
+  - '- és oïent: Sí'
+  - '- notes: 5,4,5,2,NP,NP'
+  - 'Alumne: Gabriela Cirerer Nasal'
+  - '- email: gabriela.cirerer@iesjoandaustria.org'
+  - '- edat: 20'
+  - '- és oïent: No'
+  - '- notes: 6,7,5,8,9,5'
+'03':
+  argsin: as
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9
+    - Daniel Carrasco Macadàmia,daniel.carrasco@iesjoandaustria.org,21,true,5,4,5,2,NP,NP
+    - Gabriela Cirerer Nasal,gabriela.cirerer@iesjoandaustria.org,20,false,6,7,5,8,9,5
+  stdout:
+  - 'Alumne: Daniel Carrasco Macadàmia'
+  - '- email: daniel.carrasco@iesjoandaustria.org'
+  - '- edat: 21'
+  - '- és oïent: Sí'
+  - '- notes: 5,4,5,2,NP,NP'
+  - 'Alumne: Gabriela Cirerer Nasal'
+  - '- email: gabriela.cirerer@iesjoandaustria.org'
+  - '- edat: 20'
+  - '- és oïent: No'
+  - '- notes: 6,7,5,8,9,5'
+'04':
+  argsin: elvira
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9
+    - Daniel Carrasco Macadàmia,daniel.carrasco@iesjoandaustria.org,21,true,5,4,5,2,NP,NP
+    - Gabriela Cirerer Nasal,gabriela.cirerer@iesjoandaustria.org,20,false,6,7,5,8,9,5
+  stdout: Cap alumne
+'05':
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9
+    - Daniel Carrasco Macadàmia,daniel.carrasco@iesjoandaustria.org,21,true,5,4,5,2,NP,NP
+    - Gabriela Cirerer Nasal,gabriela.cirerer@iesjoandaustria.org,20,false,6,7,5,8,9,5
+  stdout: 'Error: indica el criteri de cerca'
+'06':
+  argsin: a
+  filein:
+  - filename: alumnes.csv
+    lines: nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+  stdout: Cap alumne
+'07':
+  argsin: x
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - a,a@a.org,10,false,10,10,10,10,10,10
+    - x,b@b.org,21,false,10,10,10,10,10,10
+    - c,c@c.org,20,false,10,10,10,10,10,10
+    - d,d@d.org,20,false,10,10,10,10,10,10
+  stdout:
+  - 'Alumne: x'
+  - '- email: b@b.org'
+  - '- edat: 21'
+  - '- és oïent: No'
+  - '- notes: 10,10,10,10,10,10'
+08:
+  argsin: x
+  filein:
+  - filename: alumnes.csv
+    lines:
+    - nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
+    - a,a@a.org,10,false,10,10,10,10,10,10
+    - b,x@b.org,21,false,10,10,10,10,10,10
+    - c,c@c.org,20,false,10,10,10,10,10,10
+    - d,d@d.org,20,false,10,10,10,10,10,10
+  stdout:
+  - 'Alumne: b'
+  - '- email: x@b.org'
+  - '- edat: 21'
+  - '- és oïent: No'
+  - '- notes: 10,10,10,10,10,10'
+_main: CercaAlumnes
+_version: '2223'
+_wofiles:
+- alumnes.csv

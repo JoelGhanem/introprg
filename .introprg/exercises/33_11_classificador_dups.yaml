@@ -1,0 +1,94 @@
+_main: ClassificaMatricules
+_version: '2223'
+'01':
+  filein:
+  - filename: llegides.txt
+    lines: DD029YJ
+  fileout:
+  - filename: italianes.txt
+    lines: DD029YJ
+  - filename: desconegudes.txt
+'02':
+  filein:
+  - filename: llegides.txt
+    lines: B2993NV
+  fileout:
+  - filename: italianes.txt
+  - filename: desconegudes.txt
+    lines: B2993NV
+'03':
+  filein:
+  - filename: llegides.txt
+    lines:
+    - BC123FG
+    - B2993NV
+    - FRV5996
+    - PR444RP
+    - 4563BBB
+    - CHUCKY
+    - JK432HJ
+  fileout:
+  - filename: italianes.txt
+    lines:
+    - BC123FG
+    - PR444RP
+    - JK432HJ
+  - filename: desconegudes.txt
+    lines:
+    - B2993NV
+    - FRV5996
+    - 4563BBB
+    - CHUCKY
+'04':
+  filein:
+    - filename: llegides.txt
+      lines:
+      - BC456FG
+      - JK432HJ
+      - BC456FG
+      - JK432HJ
+      - BC456FG
+      - JK432HJ
+      - BC456FG
+      - JK432HJ
+      - BC456FG
+      - JK432HJ
+  fileout:
+    - filename: italianes.txt
+      lines:
+        - BC456FG
+        - JK432HJ
+    - filename: desconegudes.txt
+'05':
+  filein:
+  - filename: llegides.txt
+    lines:
+    - '    BC123FG    '
+    - B2993NV
+    - ''
+    - FRV5996
+    - PR444RP
+    - '   '
+    - 4563BBB
+    - BC123FG
+    - '   CHUCKY    '
+    - B2993NV
+    - JK432HJ
+  fileout:
+  - filename: italianes.txt
+    lines:
+    - BC123FG
+    - PR444RP
+    - JK432HJ
+  - filename: desconegudes.txt
+    lines:
+    - B2993NV
+    - FRV5996
+    - 4563BBB
+    - CHUCKY
+'06':
+  filein:
+  - filename: llegides.txt
+  fileout:
+  - filename: italianes.txt
+  - filename: desconegudes.txt
