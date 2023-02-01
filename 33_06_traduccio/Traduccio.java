@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Traduccio {
     public static void main(String[] args) throws IOException {
         if (args.length != 3) {
-            System.out.println("ERROR: Cal especificar els fitxers origen, traduccio i destinacióa");
+            System.out.println("ERROR: Cal especificar els fitxers origen, traduccio i destinació");
         } else {
             String fitxerOrigen = args[0];
             String fitxerTraduccio = args[1];
