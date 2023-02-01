@@ -46,7 +46,6 @@ public class Traduccio {
             }
             break;
         }
-        System.out.println(linia);
         return linia;
     }
 }
