@@ -30,7 +30,7 @@ public class TestExercise {
     })
     @DisplayName("test matriculaItalianaValida() quan no ho és")
     public void matriculaItalianaValidaQuanNo(String valor) {
-        boolean obtingut = TriaMatricules.matriculaItalianaValida(valor);
+        boolean obtingut = ClassificaMatricules.matriculaItalianaValida(valor);
         assertFalse(obtingut, "Revisa matriculaItalianaValida(\"" + valor+ "\")");
     }
 
@@ -41,7 +41,7 @@ public class TestExercise {
     })
     @DisplayName("test matriculaItalianaValida() quan ho és")
     public void matriculaItalianaValidaQuanSi(String valor) {
-        boolean obtingut = TriaMatricules.matriculaItalianaValida(valor);
+        boolean obtingut = ClassificaMatricules.matriculaItalianaValida(valor);
         assertTrue(obtingut, "Revisa matriculaItalianaValida(\"" + valor+ "\")");
     }
 
