@@ -8,7 +8,13 @@ Canvia el nom del fitxer de la línia 11 per ``inexistent.txt``. Compila
 i intenta executar el programa.
 L'error que genera és: ::
     $ java Mostrat
-    XXX
+    Exception in thread "main" java.io.FileNotFoundException: inexistent.txt (No existe el archivo o el directorio)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at Mostrat.main(Mostrat.java:12)
 Trapelleria 2. Fitxer protegit
 ==============================
 Crea ara un fitxer anomenat ``existent.txt`` però protegeix-lo perquè
@@ -18,10 +24,23 @@ Aquí tens unes instruccions que t'ajudaran: ::
     $ chmod -r existent.txt
 L'error que genera és: ::
     $ java Mostrat
-    XXX
+    Exception in thread "main" java.io.FileNotFoundException: existent.txt (Permiso denegado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at Mostrat.main(Mostrat.java:12)
 Trapelleria 3. Un directori en comptes d'un fitxer
 ==================================================
 Canvia el nom de ``existent.txt`` per ``/tmp``. Compila i torna a
 intentar executar-ho i copia aquí el que et genera: ::
     $ java Mostrat
-    XXX
+    Exception in thread "main" java.io.FileNotFoundException: /tmp (Es un directorio)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at Mostrat.main(Mostrat.java:12)
+
