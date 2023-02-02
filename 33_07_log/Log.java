@@ -9,11 +9,11 @@ public class Log {
     public static String printError(String text) throws IOException {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
-        BufferedReader lectura = new BufferedReader(new FileReader(cami));
         sortida.write("[" + comptador + "]" + " ERROR: " + text);
         comptador++;
         sortida.newLine();
         sortida.close();
+        BufferedReader lectura = new BufferedReader(new FileReader(cami));
         String leido = lectura.readLine();
         lectura.close();
         return leido;
@@ -26,7 +26,10 @@ public class Log {
         comptador++;
         sortida.newLine();
         sortida.close();
-        return algo;
+        BufferedReader lectura = new BufferedReader(new FileReader(cami));
+        String leido = lectura.readLine();
+        lectura.close();
+        return leido;
     }
     public static String printInfo(String text) throws IOException {
         String algo = "";
@@ -36,7 +39,10 @@ public class Log {
         comptador++;
         sortida.newLine();
         sortida.close();
-        return algo;
+        BufferedReader lectura = new BufferedReader(new FileReader(cami));
+        String leido = lectura.readLine();
+        lectura.close();
+        return leido;
     }
     public static String printDebug(String text)  throws IOException {
         String algo = "";
@@ -46,7 +52,10 @@ public class Log {
         comptador++;
         sortida.newLine();
         sortida.close();
-        return algo;
+        BufferedReader lectura = new BufferedReader(new FileReader(cami));
+        String leido = lectura.readLine();
+        lectura.close();
+        return leido;
     }
     public static void reset() {
         comptador = 1;
