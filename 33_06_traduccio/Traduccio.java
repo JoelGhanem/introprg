@@ -42,6 +42,7 @@ public class Traduccio {
             String [] liniaArray = linia.split(",");
             linia.replace(liniaArray[0],liniaArray[1].trim());
         }
+        traduccio.close();
         return linia;
     }
 }
