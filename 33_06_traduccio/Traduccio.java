@@ -33,7 +33,7 @@ public class Traduccio {
     // tengo que ir input por input replacing cada apartado por lo que diga en el traduccio.txt
     public static String tradueixLinia(String original, String fitxerTraduccio) throws IOException{
         BufferedReader traduccio = new BufferedReader(new FileReader(fitxerTraduccio));
-        String linia = "";
+        String linia = "algo";
         while (true) {
             linia = traduccio.readLine();
             if (linia == null) {
