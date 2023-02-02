@@ -8,6 +8,7 @@ public class Log {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
         sortida.write("[" + comptador + "]" + " ERROR: " + text);
+        comptador++;
         sortida.newLine();
         sortida.close();
     }
@@ -15,6 +16,7 @@ public class Log {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
         sortida.write("[" + comptador + "]" + " WARNING: " + text);
+        comptador++;
         sortida.newLine();
         sortida.close();
     }
@@ -22,6 +24,7 @@ public class Log {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
         sortida.write("[" + comptador + "]" + " DEBU: " + text);
+        comptador++;
         sortida.newLine();
         sortida.close();
     }
@@ -29,6 +32,7 @@ public class Log {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
         sortida.write("[" + comptador + "]" + " DEBUG: " + text);
+        comptador++;
         sortida.newLine();
         sortida.close();
     }
