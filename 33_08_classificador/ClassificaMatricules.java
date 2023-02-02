@@ -58,9 +58,13 @@ public class ClassificaMatricules{
     public static void matriculesItalianes(String text) throws IOException{
         String italianes = "italianes.txt";
         BufferedWriter eItalianes = new BufferedWriter(new FileWriter(italianes));
+        eItalianes.write(text);
+        eItalianes.newLine();
     }
     public static void matriculesDesconegudes(String text) throws IOException{
         String desconegudes = "desconegudes.txt";
         BufferedWriter eDesconegudes = new BufferedWriter(new FileWriter(desconegudes));
+        eDesconegudes.write(text);
+        eDesconegudes.newLine();
     }
 }
