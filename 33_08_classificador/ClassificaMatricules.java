@@ -10,6 +10,9 @@ public class ClassificaMatricules{
         BufferedReader lectura = new BufferedReader(new FileReader(cami));
         while (true) {
             String leido = lectura.readLine();
+            if (leido == null) {
+                break;
+            }
             if (italiana(leido)) {
                 matriculesItalianes(leido);
             } else {
