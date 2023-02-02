@@ -39,11 +39,11 @@ public class Log {
         return ("[" + comptador + "]" + " INFO: " + text);
     }
     public static String printDebug(String text)  throws IOException {
+        comptador++;
         String algo = "";
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
         sortida.write("[" + comptador + "]" + " DEBUG: " + text);
-        comptador++;
         sortida.newLine();
         sortida.close();
         return ("[" + comptador + "]" + " DEBUG: " + text);
