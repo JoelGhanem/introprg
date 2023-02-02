@@ -24,7 +24,9 @@ public class Traduccio {
             if (original == null) {
                 break;
             } 
+//            System.out.println("XXX Original: " + original);
             String traduit = tradueixLinia(original, fitxerTraduccio);
+//            System.out.println("XXX traduit: " + traduit);
             sortidaDestinacio.write(traduit);
             sortidaDestinacio.newLine();
         }
@@ -39,8 +41,11 @@ public class Traduccio {
             if (linia == null) {
                 break;
             }
+//            System.out.println("XXX linia: " + linia);
             String [] liniaArray = linia.split(",");
-            original = linia.replace(liniaArray[0],liniaArray[1].trim());
+            String primer = liniaArray[0];
+            String segon = liniaArray[1].trim();
+            original = original.replace(primer,segon);
         }
         traduccio.close();
         return original;
