@@ -23,7 +23,7 @@ public class Log {
     public static void printInfo(String text) throws IOException {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
-        sortida.write("[" + comptador + "]" + " DEBU: " + text);
+        sortida.write("[" + comptador + "]" + " INFO: " + text);
         comptador++;
         sortida.newLine();
         sortida.close();
