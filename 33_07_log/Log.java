@@ -7,28 +7,28 @@ public class Log {
     public static void printError(String text) throws IOException {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
-        sortida.write(text);
+        sortida.write("[" + comptador + "]" + " ERROR: " + text);
         sortida.newLine();
         sortida.close();
     }
     public static void printWarning(String text) throws IOException {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
-        sortida.write(text);
+        sortida.write("[" + comptador + "]" + " WARNING: " + text);
         sortida.newLine();
         sortida.close();
     }
     public static void printInfo(String text) throws IOException {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
-        sortida.write(text);
+        sortida.write("[" + comptador + "]" + " DEBU: " + text);
         sortida.newLine();
         sortida.close();
     }
     public static void printDebug(String text)  throws IOException {
         String cami = "./log.txt";
         BufferedWriter sortida = new BufferedWriter(new FileWriter(cami,true));
-        sortida.write(text);
+        sortida.write("[" + comptador + "]" + " DEBUG: " + text);
         sortida.newLine();
         sortida.close();
     }
