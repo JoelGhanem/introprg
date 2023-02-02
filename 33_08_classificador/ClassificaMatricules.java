@@ -14,10 +14,8 @@ public class ClassificaMatricules{
                 break;
             }
             if (italiana(leido)) {
-                System.out.println("És una matrícula italiana vàlida");
                 matriculesItalianes(leido);
             } else {
-                System.out.println("No és una matrícula italiana vàlida");
                 matriculesDesconegudes(leido);
             }
         }
