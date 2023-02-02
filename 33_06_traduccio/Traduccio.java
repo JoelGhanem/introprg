@@ -26,6 +26,7 @@ public class Traduccio {
             } 
             String traduit = tradueixLinia(original, fitxerTraduccio);
             sortidaDestinacio.write(traduit);
+            sortidaDestinacio.newLine();
         }
         origen.close();
         sortidaDestinacio.close();
