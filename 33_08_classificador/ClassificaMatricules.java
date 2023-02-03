@@ -36,13 +36,14 @@ public class ClassificaMatricules{
         if (matricula.length() == 7) { //solo si la matricual es mayor a 7
             for (int i = 0; i < matricula.length(); i++) {
                 char sitio = matricula.charAt(i);
-                if ( i == 0 || i == 1) {
-                    if (!Character.isUpperCase(matricula.charAt(i))) {
+                if ( i == 0 || i == 1) { //comprueba que estas en el numero que toca
+                    if (Character.isUpperCase(matricula.charAt(i))) {
                         if (sitio == 'I' || sitio == 'O'|| sitio == 'U' || sitio == 'Q') {
                             return italiana;
                         }
+                    } else { 
+                        return italiana;
                     }
-                    return italiana;
                 }
                 if (i == 2 || i == 3 || i == 4) {
                     if (!Character.isDigit(matricula.charAt(i))) {
@@ -54,8 +55,9 @@ public class ClassificaMatricules{
                         if (sitio == 'I' || sitio == 'O'|| sitio == 'U' || sitio == 'Q') {
                             return italiana;
                         }
+                    } else {
+                        return italiana;
                     }
-                    return italiana;
                 }
             }
         } else {
