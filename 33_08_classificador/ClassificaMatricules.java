@@ -33,15 +33,16 @@ public class ClassificaMatricules{
     public static boolean italiana(String matricula) throws IOException{
         matricula.trim();
         boolean italiana = false;
-        if (matricula.length() == 7) { //solo si la matricual es mayor a 7
+        String confuses = "IOQU";
+        if (matricula.length() == 7) {
             for (int i = 0; i < matricula.length(); i++) {
-                char sitio = matricula.charAt(i);
-                if ( i == 0 || i == 1) { //comprueba que estas en el numero que toca
-                    if (Character.isUpperCase(matricula.charAt(i))) {
-                        if (sitio == 'I' || sitio == 'O'|| sitio == 'U' || sitio == 'Q') {
-                            return italiana;
+                if ( i == 0 || i == 1) {
+                    if (!Character.isUpperCase(matricula.charAt(i))) {
+                        for (int j = 0; j < confuses.length(); j++) {
+                            if (matricula.charAt(i) == matricula.charAt(j)) {
+                                return italiana;
+                            }
                         }
-                    } else { 
                         return italiana;
                     }
                 }
@@ -52,10 +53,11 @@ public class ClassificaMatricules{
                 }
                 if (i == 5 || i == 6) {
                     if (!Character.isUpperCase(matricula.charAt(i))) {
-                        if (sitio == 'I' || sitio == 'O'|| sitio == 'U' || sitio == 'Q') {
-                            return italiana;
+                        for (int j = 0; j < confuses.length(); j++) {
+                            if (matricula.charAt(i) == confuses.charAt(j)) {
+                                return italiana;
+                            }
                         }
-                    } else {
                         return italiana;
                     }
                 }
