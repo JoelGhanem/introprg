@@ -18,7 +18,7 @@ public class ClassificaMatricules{
                 break;
             }
             leido = leido.trim();
-            if (italiana(leido)) {
+            if (matriculaItalianaValida(leido)) {
                 eItalianes.write(leido.trim());
                 eItalianes.newLine();
             } else {
@@ -30,7 +30,7 @@ public class ClassificaMatricules{
         eDesconegudes.close();
         eItalianes.close();
     }
-    public static boolean italiana(String matricula) {
+    public static boolean matriculaItalianaValida(String matricula) {
         boolean esItaliana = false;
         String confusas = "IOQU";
         if (matricula.length() != 7) {
