@@ -18,10 +18,10 @@ public class ClassificaMatricules{
                 break;
             }
             if (italiana(leido)) {
-                eItalianes.write(leido);
+                eItalianes.write(leido.trim());
                 eItalianes.newLine();
             } else {
-                eDesconegudes.write(leido);
+                eDesconegudes.write(leido.trim());
                 eDesconegudes.newLine();
             }
         }
