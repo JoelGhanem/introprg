@@ -60,6 +60,8 @@ public class ClassificaMatricules{
                     }
                 }
             }
+        } else {
+            return false;
         }
         italiana = true;
         return italiana;
