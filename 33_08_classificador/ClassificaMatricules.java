@@ -17,6 +17,7 @@ public class ClassificaMatricules{
             if (leido == null) {
                 break;
             }
+            leido = leido.trim();
             if (italiana(leido)) {
                 eItalianes.write(leido.trim());
                 eItalianes.newLine();
@@ -31,7 +32,6 @@ public class ClassificaMatricules{
     }
     public static boolean italiana(String matricula) throws IOException{
         matricula.trim();
-        System.out.println(matricula);
         boolean italiana = false;
         String confuses = "IOQU";
         if (matricula.length() == 7) {
