@@ -40,8 +40,6 @@ public class ClassificaMatricules{
                     if (!Character.isUpperCase(matricula.charAt(i))) {
                         for (int j = 0; j < confuses.length(); j++) {
                             if (matricula.charAt(i) == matricula.charAt(j)) {
-                                System.out.println("i: " + matricula.charAt(i));
-                                System.out.println("j: " + matricula.charAt(j));
                                 return italiana;
                             }
                         }
