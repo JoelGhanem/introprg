@@ -39,7 +39,7 @@ public class ClassificaMatricules{
                 if ( i == 0 || i == 1) {
                     if (!Character.isUpperCase(matricula.charAt(i))) {
                         for (int j = 0; j < confuses.length(); j++) {
-                            if (matricula.charAt(i) == matricula.charAt(j)) {
+                            if (matricula.charAt(i) == 'I' || matricula.charAt(i) == 'O' || matricula.charAt(i) == 'Q' || matricula.charAt(i) == 'U') {
                                 return italiana;
                             }
                         }
@@ -53,13 +53,11 @@ public class ClassificaMatricules{
                 }
                 if (i == 5 || i == 6) {
                     if (!Character.isUpperCase(matricula.charAt(i))) {
-                        for (int j = 0; j < confuses.length(); j++) {
-                            if (matricula.charAt(i) == confuses.charAt(j)) {
-                                return italiana;
-                            }
+                        if (matricula.charAt(i) == 'I' || matricula.charAt(i) == 'O' || matricula.charAt(i) == 'Q' || matricula.charAt(i) == 'U') {
+                            return italiana;
                         }
-                        return italiana;
                     }
+                    return italiana;
                 }
             }
         } else {
