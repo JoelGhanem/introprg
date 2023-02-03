@@ -30,6 +30,7 @@ public class ClassificaMatricules{
         eItalianes.close();
     }
     public static boolean italiana(String matricula) throws IOException{
+        matricula.trim();
         boolean italiana = false;
         String confuses = "IOQU";
         if (matricula.length() == 7) {
