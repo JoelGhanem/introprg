@@ -56,6 +56,11 @@ public class ClassificaMatricules{
         if (!Character.isUpperCase(matricula.charAt(5)) || !Character.isUpperCase(matricula.charAt(6))) {
             return esItaliana;
         }
+        for (int i = 0; i < confusas.length(); i++) {
+            if (matricula.charAt(5) == confusas.charAt(i) || matricula.charAt(6) == confusas.charAt(i)) {
+                return esItaliana;
+            }
+        }
         esItaliana = true;
         return esItaliana;
     }
