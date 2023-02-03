@@ -33,15 +33,19 @@ public class ClassificaMatricules{
     public static boolean italiana(String matricula) throws IOException{
         matricula.trim();
         boolean italiana = false;
+        String confuses = "IOQU";
         if (matricula.length() == 7) {
             for (int i = 0; i < matricula.length(); i++) {
                 if ( i == 0 || i == 1) {
-                    if (!Character.isUpperCase(matricula.charAt(i))) {
-                        if (matricula.charAt(i) == 'I' || matricula.charAt(i) == 'O' || matricula.charAt(i) == 'Q' || matricula.charAt(i) == 'U') {
-                            return italiana;
+                    if (Character.isUpperCase(matricula.charAt(i))) {
+                        for (int j = 0; j < confuses.length(); j++) {
+                            if (matricula.charAt(i) == matricula.charAt(j)) {
+                                return italiana;
+                            }
                         }
+                    } else {
+                        return italiana;
                     }
-                    return italiana;
                 }
                 if (i == 2 || i == 3 || i == 4) {
                     if (!Character.isDigit(matricula.charAt(i))) {
@@ -49,10 +53,13 @@ public class ClassificaMatricules{
                     }
                 }
                 if (i == 5 || i == 6) {
-                    if (!Character.isUpperCase(matricula.charAt(i))) {
-                        if (matricula.charAt(i) == 'I' || matricula.charAt(i) == 'O' || matricula.charAt(i) == 'Q' || matricula.charAt(i) == 'U') {
-                            return italiana;
+                    if (Character.isUpperCase(matricula.charAt(i))) {
+                        for (int j = 0; j < confuses.length(); j++) {
+                            if (matricula.charAt(i) == confuses.charAt(j)) {
+                                return italiana;
+                            }
                         }
+                    }else {
                         return italiana;
                     }
                 }
