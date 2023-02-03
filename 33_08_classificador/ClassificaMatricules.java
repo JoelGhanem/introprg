@@ -6,19 +6,28 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 public class ClassificaMatricules{ 
     public static void main (String[] args) throws IOException{
+        String desconegudes = "desconegudes.txt";
+        BufferedWriter eDesconegudes = new BufferedWriter(new FileWriter(desconegudes));
         String cami = "llegides.txt";
         BufferedReader lectura = new BufferedReader(new FileReader(cami));
+        String italianes = "italianes.txt";
+        BufferedWriter eItalianes = new BufferedWriter(new FileWriter(italianes));
         while (true) {
             String leido = lectura.readLine();
             if (leido == null) {
                 break;
             }
             if (italiana(leido)) {
-                matriculesItalianes(leido);
+                eItalianes.write(leido);
+                eItalianes.newLine();
             } else {
-                matriculesDesconegudes(leido);
+                eDesconegudes.write(leido);
+                eDesconegudes.newLine();
             }
         }
+        lectura.close();
+        eDesconegudes.close();
+        eItalianes.close();
     }
     public static boolean italiana(String matricula) throws IOException{
         boolean italiana = false;
@@ -54,19 +63,5 @@ public class ClassificaMatricules{
         }
         italiana = true;
         return italiana;
-    }
-    public static void matriculesItalianes(String text) throws IOException{
-        String italianes = "italianes.txt";
-        BufferedWriter eItalianes = new BufferedWriter(new FileWriter(italianes));
-        eItalianes.write(text);
-        eItalianes.newLine();
-        eItalianes.close();
-    }
-    public static void matriculesDesconegudes(String text) throws IOException{
-        String desconegudes = "desconegudes.txt";
-        BufferedWriter eDesconegudes = new BufferedWriter(new FileWriter(desconegudes));
-        eDesconegudes.write(text);
-        eDesconegudes.newLine();
-        eDesconegudes.close();
     }
 }
