@@ -32,16 +32,22 @@ public class CercaAlumnes {
     // Té en comptes els valors NP com a -1
     public static String notesACsv(int[] notes) {
         // XXX a completar
+        return "hola";
     }
     public static String alumneACsv(Alumne alumne) {
         // XXX a completar encara que no es fa servir en aquest programa
+        return "hola";
     }
     public static Alumne csvAAlumne(String csv) {
         // XXX a completar
+        return null;
     }
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
-        // XXX a completar
+        if (args.length < 1) {
+            System.out.println("Error: indica el criteri de cerca");
+        } else {
+
         // declaracions, inicialitzacions, apertura de fitxer, ignora línia de capçaleres, etc.
         // XXX a completar
         while (true) {
@@ -55,5 +61,6 @@ public class CercaAlumnes {
         }
         // consideracions finals com ara el tancament del fitxer
         // XXX a completar
+        }
     }
 }
