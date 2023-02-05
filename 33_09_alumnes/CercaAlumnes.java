@@ -31,36 +31,83 @@ public class CercaAlumnes {
     // converteix un array de notes a CSV
     // Té en comptes els valors NP com a -1
     public static String notesACsv(int[] notes) {
-        // XXX a completar
-        return "hola";
+        String notas = "";
+        for (int i = 0; i < notes.length; i++) {
+            if (!Character.isDigit(notes[i])) {
+                notes[i] = -1;
+            }
+            if (i == 0) {
+                notas = notas + notes[0];
+            } else {
+                notas = notas + "," + notes[i];
+            }
+        }
+        return notas;
     }
     public static String alumneACsv(Alumne alumne) {
-        // XXX a completar encara que no es fa servir en aquest programa
-        return "hola";
+        String alumneEscrit = "";
+        int edat = alumne.edat;
+        String[] array = new String[10];
+        array[0] = alumne.nom;
+        array[1] = alumne.email;
+        array[2] = String.valueOf(edat);
+        array[3] = String.valueOf(alumne.esOient);
+        for (int i = 4; i < 10; i++) {
+            array[i] = String.valueOf(alumne.notes[i]);
+        }
+        for (int i = 0; i < 10; i++) {
+            alumneEscrit = alumneEscrit + array[i];
+        }
+        return alumneEscrit;
     }
     public static Alumne csvAAlumne(String csv) {
-        // XXX a completar
-        return null;
+        String[] array = csv.split(",");
+        int[] notas = new int[6];
+        Alumne alumne = new Alumne();
+        alumne.nom = array[0];
+        alumne.email = array[1];
+        alumne.edat = Integer.valueOf(array[2]);
+        alumne.esOient = Boolean.valueOf(array[3]);
+        notas[0] = Integer.parseInt(array[4]);
+        notas[1] = Integer.parseInt(array[5]);
+        notas[2] = Integer.parseInt(array[6]);
+        notas[3] = Integer.parseInt(array[7]);
+        notas[4] = Integer.parseInt(array[8]);
+        notas[5] = Integer.parseInt(array[9]);
+        alumne.notes = notas;
+            return alumne;
     }
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
         if (args.length < 1) {
             System.out.println("Error: indica el criteri de cerca");
         } else {
-
-        // declaracions, inicialitzacions, apertura de fitxer, ignora línia de capçaleres, etc.
-        // XXX a completar
-        while (true) {
-            // llegeix entrada i finalitza bucle si no en queden més
+            String busqueda = args[0];
+            BufferedReader lectura = new BufferedReader( new FileReader("alumnes.csv"));
+            String linia = lectura.readLine();
+            // declaracions, inicialitzacions, apertura de fitxer, ignora línia de capçaleres, etc.
             // XXX a completar
-            // converteix l'entrada a Alumne
+            while (true) {
+                // llegeix entrada i finalitza bucle si no en queden més
+                linia = lectura.readLine();
+                if (linia == null) {
+                    break;
+                }
+                Alumne alumne = csvAAlumne(linia);
+                // converteix l'entrada a Alumne
+                alumneACsv(alumne);
+                csvAAlumne(linia);
+                notesACsv(alumne.notes);
+                alumneAString(csvAAlumne(linia));
+                if (alumne.nom.contains(busqueda) || alumne.email.contains(busqueda)) {
+                    mostraAlumne(alumne);
+                }
+                // comprova si el criteri de cerca es troba dins del nom o el email. Si és així, mostra'l
+                // XXX a completar
+            }
+            lectura.close();
+            // consideracions finals com ara el tancament del fitxer
             // XXX a completar
-            // comprova si el criteri de cerca es troba dins del nom o
-            // el email. Si és així, mostra'l
-            // XXX a completar
-        }
-        // consideracions finals com ara el tancament del fitxer
-        // XXX a completar
         }
     }
 }
