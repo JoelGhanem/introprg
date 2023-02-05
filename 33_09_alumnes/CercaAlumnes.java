@@ -53,7 +53,7 @@ public class CercaAlumnes {
         array[2] = String.valueOf(edat);
         array[3] = String.valueOf(alumne.esOient);
         for (int i = 4; i < 10; i++) {
-            array[i] = String.valueOf(alumne.notes[i]);
+            array[i] = String.valueOf(alumne.notes);
         }
         for (int i = 0; i < 10; i++) {
             alumneEscrit = alumneEscrit + array[i];
@@ -68,14 +68,15 @@ public class CercaAlumnes {
         alumne.email = array[1];
         alumne.edat = Integer.valueOf(array[2]);
         alumne.esOient = Boolean.valueOf(array[3]);
-        notas[0] = Integer.parseInt(array[4]);
-        notas[1] = Integer.parseInt(array[5]);
-        notas[2] = Integer.parseInt(array[6]);
-        notas[3] = Integer.parseInt(array[7]);
-        notas[4] = Integer.parseInt(array[8]);
-        notas[5] = Integer.parseInt(array[9]);
+        for (int i = 0; i < 6; i ++) {
+            if (!array[i+4].equals("NP")) {
+                notas[i] = Integer.parseInt(array[i+4]);
+            } else {
+                array[i+4] = "-1";
+            }
+        }
         alumne.notes = notas;
-            return alumne;
+        return alumne;
     }
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
