@@ -69,6 +69,7 @@ public class CercaAlumnes {
             if (!array[i+4].equals("NP")) {
                 notas[i] = Integer.parseInt(array[i+4]);
             } else {
+                array[i+4] = "-1";
                 notas[i] = Integer.parseInt(array[i+4]);
             }
         }
