@@ -86,6 +86,7 @@ public class CercaAlumnes {
         return alumne;
     }
     public static void main(String[] args) throws IOException {
+        int contador = 0;
         // assegura que hi ha el criteri de cerca
         if (args.length < 1) {
             System.out.println("Error: indica el criteri de cerca");
@@ -108,7 +109,12 @@ public class CercaAlumnes {
                 notesACsv(alumne.notes);
                 alumneAString(csvAAlumne(linia));
                 if (alumne.nom.contains(busqueda) || alumne.email.contains(busqueda)) {
+                    contador++;
                     mostraAlumne(alumne);
+                } else {
+                    if (contador == 0) {
+                        System.out.println("Cap entrada");
+                    }
                 }
                 // comprova si el criteri de cerca es troba dins del nom o el email. Si és així, mostra'l
                 // XXX a completar
