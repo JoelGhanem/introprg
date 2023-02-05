@@ -33,13 +33,18 @@ public class CercaAlumnes {
     public static String notesACsv(int[] notes) {
         String notas = "";
         for (int i = 0; i < notes.length; i++) {
-            if (notes[i] == -1) {
-                //System.out.print("NP");
-            }
             if (i == 0) {
-                notas = notas + notes[0];
+                if (notes[i] == -1) {
+                    notas = notas + "NP";
+                } else {
+                    notas = notas + notes[0];
+                }
             } else {
-                notas = notas + "," + notes[i];
+                if (notes[i] == -1) {
+                    notas = notas + "NP";
+                } else {
+                    notas = notas + "," + notes[i];
+                }
             }
         }
         return notas;
