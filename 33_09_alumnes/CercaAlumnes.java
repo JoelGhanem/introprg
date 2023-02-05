@@ -31,7 +31,6 @@ public class CercaAlumnes {
     // converteix un array de notes a CSV
     // Té en comptes els valors NP com a -1
     public static String notesACsv(int[] notes) {
-        System.out.println(notes);
         String notas = "";
         for (int i = 0; i < notes.length; i++) {
             if (!Character.isDigit(notes[i])) {
@@ -43,7 +42,6 @@ public class CercaAlumnes {
                 notas = notas + "," + notes[i];
             }
         }
-        System.out.println("notes: " + notas);
         return notas;
     }
     public static String alumneACsv(Alumne alumne) {
@@ -79,6 +77,7 @@ public class CercaAlumnes {
             }
         }
         alumne.notes = notas;
+
         return alumne;
     }
     public static void main(String[] args) throws IOException {
@@ -100,6 +99,7 @@ public class CercaAlumnes {
                 Alumne alumne = csvAAlumne(linia);
                 // converteix l'entrada a Alumne
                 alumneACsv(alumne);
+                System.out.println(alumne);
                 csvAAlumne(linia);
                 notesACsv(alumne.notes);
                 alumneAString(csvAAlumne(linia));
