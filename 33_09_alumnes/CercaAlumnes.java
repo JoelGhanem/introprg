@@ -33,6 +33,9 @@ public class CercaAlumnes {
     public static String notesACsv(int[] notes) {
         String notas = "";
         for (int i = 0; i < notes.length; i++) {
+            if (notes[i] == -1) {
+                System.out.println("NP");
+            }
             if (i == 0) {
                 notas = notas + notes[0];
             } else {
