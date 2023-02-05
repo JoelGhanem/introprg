@@ -99,7 +99,7 @@ public class CercaAlumnes {
                 Alumne alumne = csvAAlumne(linia);
                 // converteix l'entrada a Alumne
                 alumneACsv(alumne);
-                System.out.println(alumne);
+                System.out.println("jopder " + alumne);
                 csvAAlumne(linia);
                 notesACsv(alumne.notes);
                 alumneAString(csvAAlumne(linia));
