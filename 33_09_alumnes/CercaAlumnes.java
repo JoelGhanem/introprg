@@ -34,7 +34,7 @@ public class CercaAlumnes {
         String notas = "";
         for (int i = 0; i < notes.length; i++) {
             if (!Character.isDigit(notes[i])) {
-                notes[i] = 1;
+                System.out.println("notas " + notes[i]);
             }
             if (i == 0) {
                 notas = notas + notes[0];
