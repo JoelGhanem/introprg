@@ -111,10 +111,6 @@ public class CercaAlumnes {
                 if (alumne.nom.contains(busqueda) || alumne.email.contains(busqueda)) {
                     contador++;
                     mostraAlumne(alumne);
-                } else {
-                    if (contador == 0) {
-                        System.out.println("Cap alumne");
-                    }
                 }
                 // comprova si el criteri de cerca es troba dins del nom o el email. Si és així, mostra'l
                 // XXX a completar
