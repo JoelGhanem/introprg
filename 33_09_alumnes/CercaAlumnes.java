@@ -66,7 +66,11 @@ public class CercaAlumnes {
         alumne.edat = Integer.valueOf(array[2]);
         alumne.esOient = Boolean.valueOf(array[3]);
         for (int i = 0; i < 6; i ++) {
-            notas[i] = Integer.parseInt(array[i+4]);
+            if (!array[i+4].equals("NP")) {
+                notas[i] = Integer.parseInt(array[i+4]);
+            } else {
+                notas[i] = Integer.parseInt(array[i+4]);
+            }
         }
         alumne.notes = notas;
 
