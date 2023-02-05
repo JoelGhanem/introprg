@@ -42,6 +42,7 @@ public class CercaAlumnes {
                 notas = notas + "," + notes[i];
             }
         }
+        System.out.println("notes: " + notas);
         return notas;
     }
     public static String alumneACsv(Alumne alumne) {
@@ -77,7 +78,6 @@ public class CercaAlumnes {
             }
         }
         alumne.notes = notas;
-        System.out.println("notes csvAlumne: " +  alumne.notes);
         return alumne;
     }
     public static void main(String[] args) throws IOException {
