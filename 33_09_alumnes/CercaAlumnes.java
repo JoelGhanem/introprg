@@ -100,6 +100,9 @@ public class CercaAlumnes {
                 // llegeix entrada i finalitza bucle si no en queden més
                 linia = lectura.readLine();
                 if (linia == null) {
+                    if (contador == 0) {
+                        System.out.println("Cap alumne");
+                    }
                     break;
                 }
                 Alumne alumne = csvAAlumne(linia);
