@@ -77,6 +77,7 @@ public class CercaAlumnes {
             }
         }
         alumne.notes = notas;
+        System.out.println("notes csvAlumne: " +  alumne.notes);
         return alumne;
     }
     public static void main(String[] args) throws IOException {
