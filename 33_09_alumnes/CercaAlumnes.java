@@ -31,6 +31,7 @@ public class CercaAlumnes {
     // converteix un array de notes a CSV
     // Té en comptes els valors NP com a -1
     public static String notesACsv(int[] notes) {
+        System.out.println(notes);
         String notas = "";
         for (int i = 0; i < notes.length; i++) {
             if (!Character.isDigit(notes[i])) {
