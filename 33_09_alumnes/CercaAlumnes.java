@@ -41,9 +41,9 @@ public class CercaAlumnes {
                 }
             } else {
                 if (notes[i] == -1) {
-                    notas = notas + ", NP";
+                    notas = notas + ",NP";
                 } else {
-                    notas = notas + ", " + notes[i];
+                    notas = notas + "," + notes[i];
                 }
             }
         }
