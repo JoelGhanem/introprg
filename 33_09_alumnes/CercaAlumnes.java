@@ -73,6 +73,7 @@ public class CercaAlumnes {
                 notas[i] = Integer.parseInt(array[i+4]);
             } else {
                 array[i+4] = "-1";
+                notas[i] = Integer.parseInt(array[i+4]);
             }
         }
         alumne.notes = notas;
