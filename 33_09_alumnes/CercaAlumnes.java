@@ -33,9 +33,6 @@ public class CercaAlumnes {
     public static String notesACsv(int[] notes) {
         String notas = "";
         for (int i = 0; i < notes.length; i++) {
-            if (!Character.isDigit(notes[i])) {
-                System.out.println(notes[i]);
-            }
             if (i == 0) {
                 notas = notas + notes[0];
             } else {
