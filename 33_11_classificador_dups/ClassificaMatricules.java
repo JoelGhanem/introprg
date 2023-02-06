@@ -78,8 +78,8 @@ public class ClassificaMatricules {
     }
     public static void desconeguda(String linia) throws IOException{
         String cami = "desconegudes.txt";
-        BufferedReader desconegudaRead = new BufferedReader(new FileReader(cami));
         BufferedWriter desconegudesWrite = new BufferedWriter(new FileWriter(cami));
+        BufferedReader desconegudaRead = new BufferedReader(new FileReader(cami));
         if (contador == 0) {
             desconegudesWrite.write(linia.trim());
             desconegudesWrite.newLine();
