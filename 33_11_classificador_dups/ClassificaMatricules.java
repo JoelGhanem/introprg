@@ -74,6 +74,7 @@ public class ClassificaMatricules {
         System.out.println("Llega a repetidaI");
         while (true) {
             String italiana = italianesR.readLine();
+        System.out.println("Llega a antes de null");
             if (italiana == null) {
                 return false;
             }
