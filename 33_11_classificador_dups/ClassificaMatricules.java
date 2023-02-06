@@ -76,7 +76,9 @@ public class ClassificaMatricules {
             if (italiana == null) {
                 return false;
             }
+            System.out.println("italiana no null");
             if (italiana.equals(linia)) {
+                System.out.println("italiana: " + italiana + "linia: " + linia);
                 return true;
             }
         }
@@ -87,7 +89,9 @@ public class ClassificaMatricules {
             if (desconeguda == null) {
                 return false;
             }
+            System.out.println("desconeguda no null");
             if (desconeguda.equals(linia)) {
+                System.out.println("desconeguda: " + desconeguda + "linia: " + linia);
                 return true;
             }
         }
