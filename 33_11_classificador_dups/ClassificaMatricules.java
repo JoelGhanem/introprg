@@ -16,7 +16,9 @@ public class ClassificaMatricules {
             }
             if (esItaliana(linia)) {
                 italiana(linia);
+                System.out.println("italiana: " + linia);
             } else {
+                System.out.println("desconeguda: " + linia);
                 desconeguda(linia);
             }
         }
@@ -50,46 +52,50 @@ public class ClassificaMatricules {
         }
         return true;
     }
+    //  PROBLEMAS
+    //  1- No escribe nada
     public static void italiana(String linia) throws IOException{
         String cami = "italianes.txt";
         BufferedReader italianaRead = new BufferedReader(new FileReader(cami));
         BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(cami));
+        if (contador == 0) {
+            italianaWrite.write(linia.trim());
+            italianaWrite.newLine();
+        }
         while(true) {
-            if (contador == 0) {
+            String italianaR = italianaRead.readLine();
+            if (italianaR == null) {
+                break;
+            }
+            if (!italianaR.equals(linia)) {
                 italianaWrite.write(linia.trim());
                 italianaWrite.newLine();
             } else {
-                String italianaR = italianaRead.readLine();
-                if (italianaR == null) {
-                    break;
-                }
-                if (!italianaR.equals(linia)) {
-                    italianaWrite.write(linia.trim());
-                    italianaWrite.newLine();
-                }
+                break;
             }
-            contador++;
         }
+        contador++;
     }
     public static void desconeguda(String linia) throws IOException{
         String cami = "desconegudes.txt";
         BufferedReader desconegudaRead = new BufferedReader(new FileReader(cami));
         BufferedWriter desconegudesWrite = new BufferedWriter(new FileWriter(cami));
+        if (contador == 0) {
+            desconegudesWrite.write(linia.trim());
+            desconegudesWrite.newLine();
+        }
         while(true) {
-            if (contador == 0) {
+            String desconegudaR = desconegudaRead.readLine();
+            if (desconegudaRead == null) {
+                break;
+            }
+            if (!desconegudaRead.equals(linia)) {
                 desconegudesWrite.write(linia.trim());
                 desconegudesWrite.newLine();
             } else {
-                String desconegudaR = desconegudaRead.readLine();
-                if (desconegudaRead == null) {
-                    break;
-                }
-                if (!desconegudaRead.equals(linia)) {
-                    desconegudesWrite.write(linia.trim());
-                    desconegudesWrite.newLine();
-                }
+                break;
             }
-            contador++;
         }
+        contador++;
     }
 }
