@@ -53,8 +53,8 @@ public class CercaAlumnes {
         String alumneEscrit = "";
         int edat = alumne.edat;
         String[] array = new String[10];
-        array[0] = alumne.nom;
-        array[1] = alumne.email;
+        array[0] = String.valueOf(alumne.nom);
+        array[1] = String.valueOf(alumne.email);
         array[2] = String.valueOf(edat);
         array[3] = String.valueOf(alumne.esOient);
         for (int i = 4; i < 10; i++) {

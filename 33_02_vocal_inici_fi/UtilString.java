@@ -28,7 +28,7 @@ public class UtilString {
         for (int i = 0; i < nomesLletres.length(); i++) {
             if (i == 0) {
                 separades = separades + nomesLletres.charAt(0);
-            } else {
+           } else {
                 separades = separades + ", " + nomesLletres.charAt(i);
             }
         }
