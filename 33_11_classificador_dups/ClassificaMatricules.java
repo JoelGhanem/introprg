@@ -16,9 +16,9 @@ public class ClassificaMatricules {
             }
             if (esItaliana(linia)) {
                 italiana(linia);
-        //        System.out.println("italiana: " + linia);
+                //        System.out.println("italiana: " + linia);
             } else {
-         //       System.out.println("desconeguda: " + linia);
+                //       System.out.println("desconeguda: " + linia);
                 desconeguda(linia);
             }
         }
@@ -73,8 +73,8 @@ public class ClassificaMatricules {
             } else {
                 break;
             }
+            contador++;
         }
-        contador++;
     }
     public static void desconeguda(String linia) throws IOException{
         String cami = "desconegudes.txt";
@@ -95,7 +95,7 @@ public class ClassificaMatricules {
             } else {
                 break;
             }
+            contador++;
         }
-        contador++;
     }
 }
