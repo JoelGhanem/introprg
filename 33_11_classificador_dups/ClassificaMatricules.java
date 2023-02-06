@@ -19,16 +19,23 @@ public class ClassificaMatricules {
             linia = linia.trim();
             if (esItaliana(linia)) {
                 if (!repetidaI(linia, italianesR)) {
+                    System.out.println("italiana: " + linia);
                     italianes.write(linia);
                     italianes.newLine();
                 }
             } else {
                 if (!repetidaD(linia, desconegudesR)) {
+                    System.out.println("desconeguda: " + linia);
                     desconegudes.write(linia);
                     desconegudes.newLine();
                 }
             }
         }
+        llegides.close();
+        italianes.close();
+        italianesR.close();
+        desconegudes.close();
+        desconegudesR.close();
     }
     public static boolean esItaliana(String linia) {
         String confuses = "IOQU";
