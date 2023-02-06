@@ -6,47 +6,40 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
     public static void main(String[] args) throws IOException{
-        String camis = "italianes.txt";
-        BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(camis));
-        BufferedReader italianaRead = new BufferedReader(new FileReader(camis));
-        String cami = "desconegudes.txt";
-        BufferedWriter desconegudesWrite = new BufferedWriter(new FileWriter(cami));
-        BufferedReader desconegudaRead = new BufferedReader(new FileReader(cami));
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
-        int contadorI = 0;
-        int contadorD = 0;
+        BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
+        BufferedReader italianesR = new BufferedReader(new FileReader("italianes.txt"));
+        BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
+        BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
-            if (linia == null) {
+            if (llegides == null) {
                 break;
             }
+            linia = linia.trim();
             if (esItaliana(linia)) {
-                if (contadorI == 0) {
-                    contadorI++;
-                    italianaPrimer(linia, italianaRead, italianaWrite);
-                } else {
-                    System.out.println("italiana: " + linia);
-                    italiana(linia, italianaRead, italianaWrite);
+                if (!repetidaI(linia, italianesR)) {
+                    italianes.write(linia);
+                    italianes.newLine();
                 }
             } else {
-                if (contadorD == 0) {
-                    contadorD++;
-                    desconegudaPrimer(linia, desconegudaRead, desconegudesWrite);
-                } else {
-                    System.out.println("desconeguda: " + linia);
-                    desconeguda(linia, desconegudaRead, desconegudesWrite);
+                if (!repetidaD(linia, desconegudesR)) {
+                    desconegudes.write(linia);
+                    desconegudes.newLine();
                 }
             }
         }
     }
-    public static boolean esItaliana(String linia) throws IOException {
-        String malas = "IOQU";
-        if (!Character.isUpperCase(linia.charAt(0)) || !Character.isUpperCase(linia.charAt(1))) {
-            return false;
+    public static boolean esItaliana(String linia) {
+        String confuses = "IOQU";
+        for (int i = 0; i < 2; i++) {
+            if (!Character.isUpperCase(linia.charAt(i))) {
+                return false;
+            }
         }
         for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < malas.length(); j++) {
-                if (linia.charAt(i) == malas.charAt(j)) {
+            for (int j = 0; j < confuses.length(); j++) {
+                if (linia.charAt(i) == confuses.charAt(j)) {
                     return false;
                 }
             }
@@ -56,61 +49,40 @@ public class ClassificaMatricules {
                 return false;
             }
         }
-        if (!Character.isUpperCase(linia.charAt(5)) || !Character.isUpperCase(linia.charAt(6))) {
-            return false;
+        for (int i = 5; i < 7; i++) {
+            if (!Character.isUpperCase(linia.charAt(i))) {
+                return false;
+            }
         }
         for (int i = 5; i < 7; i++) {
-            for (int j = 0; j < malas.length(); j++) {
-                if (linia.charAt(i) == malas.charAt(j)) {
+            for (int j = 0; j < confuses.length(); j++) {
+                if (linia.charAt(i) == confuses.charAt(j)) {
                     return false;
                 }
             }
         }
         return true;
     }
-    //  PROBLEMAS
-    //  1- No escribe nada
-    public static void italiana(String linia, BufferedReader italianaRead, BufferedWriter italianaWrite) throws IOException{
-        String leido = linia.trim();
-        while(true) {
-            String italianaR = italianaRead.readLine();
-            if (italianaR == null) {
-                break;
+    public static boolean repetidaI(String linia, BufferedReader italianesR) throws IOException{
+        while (true) {
+            String italiana = italianesR.readLine();
+            if (italiana == null) {
+                return false;
             }
-            if (!italianaR.equals(leido)) {
-                italianaWrite.write(leido.trim());
-                italianaWrite.newLine();
-            } else {
-                break;
+            if (italiana.equals(linia)) {
+                return true;
             }
         }
     }
-    public static void desconeguda(String linia, BufferedReader desconegudaRead, BufferedWriter desconegudesWrite) throws IOException{
-        String leido = linia.trim();
-        while(true) {
-            String desconegudaR = desconegudaRead.readLine();
-            if (desconegudaR == null) {
-                break;
+    public static boolean repetidaD(String linia, BufferedReader desconegudesR) throws IOException{
+        while (true) {
+            String desconeguda = desconegudesR.readLine();
+            if (desconeguda == null) {
+                return false;
             }
-            if (!desconegudaR.equals(leido)) {
-                desconegudesWrite.write(leido.trim());
-                desconegudesWrite.newLine();
-            } else {
-                break;
+            if (desconeguda.equals(linia)) {
+                return true;
             }
         }
-        desconegudesWrite.close();
-    }
-    public static void italianaPrimer(String linia, BufferedReader italianaRead,BufferedWriter italianaWrite) throws IOException {
-        String leido = linia.trim();
-        italianaWrite.write(leido.trim());
-        italianaWrite.newLine();
-        italianaWrite.close();
-    }
-    public static void desconegudaPrimer(String linia, BufferedReader desconegudaRead, BufferedWriter desconegudesWrite) throws IOException {
-        String leido = linia.trim();
-        desconegudesWrite.write(leido);
-        desconegudesWrite.newLine();
-        desconegudesWrite.close();
     }
 }
