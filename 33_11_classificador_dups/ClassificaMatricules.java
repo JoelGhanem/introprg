@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
     private static int contador = 0;
-
     public static void main(String[] args) throws IOException{
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
@@ -97,6 +96,5 @@ public class ClassificaMatricules {
             }
             contador++;
         }
-
     }
 }
