@@ -103,14 +103,12 @@ public class ClassificaMatricules {
     }
     public static void italianaPrimer(String linia, BufferedReader italianaRead,BufferedWriter italianaWrite) throws IOException {
         String leido = linia.trim();
-        String cami = "italianes.txt";
         italianaWrite.write(leido.trim());
         italianaWrite.newLine();
         italianaWrite.close();
     }
     public static void desconegudaPrimer(String linia, BufferedReader desconegudaRead, BufferedWriter desconegudesWrite) throws IOException {
         String leido = linia.trim();
-        String cami = "desconegudes.txt";
         desconegudesWrite.write(leido);
         desconegudesWrite.newLine();
         desconegudesWrite.close();
