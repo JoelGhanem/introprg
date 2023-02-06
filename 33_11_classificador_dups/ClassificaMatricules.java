@@ -16,9 +16,9 @@ public class ClassificaMatricules {
             }
             if (esItaliana(linia)) {
                 italiana(linia);
-                //        System.out.println("italiana: " + linia);
+                System.out.println("italiana: " + linia);
             } else {
-                //       System.out.println("desconeguda: " + linia);
+                System.out.println("desconeguda: " + linia);
                 desconeguda(linia);
             }
         }
@@ -58,10 +58,8 @@ public class ClassificaMatricules {
         String cami = "italianes.txt";
         BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(cami));
         BufferedReader italianaRead = new BufferedReader(new FileReader(cami));
-        if (contador == 0) {
-            italianaWrite.write(linia.trim());
-            italianaWrite.newLine();
-        }
+        italianaWrite.write(linia.trim());
+        italianaWrite.newLine();
         while(true) {
             String italianaR = italianaRead.readLine();
             if (italianaR == null) {
