@@ -16,9 +16,9 @@ public class ClassificaMatricules {
             }
             if (esItaliana(linia)) {
                 italiana(linia);
-                System.out.println("italiana: " + linia);
+        //        System.out.println("italiana: " + linia);
             } else {
-                System.out.println("desconeguda: " + linia);
+         //       System.out.println("desconeguda: " + linia);
                 desconeguda(linia);
             }
         }
