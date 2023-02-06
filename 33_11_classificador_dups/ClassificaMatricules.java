@@ -19,13 +19,13 @@ public class ClassificaMatricules {
             linia = linia.trim();
             if (esItaliana(linia)) {
                 if (!repetidaI(linia, italianesR)) {
-                    System.out.println("italiana: " + linia);
+                    //System.out.println("italiana: " + linia);
                     italianes.write(linia);
                     italianes.newLine();
                 }
             } else {
                 if (!repetidaD(linia, desconegudesR)) {
-                    System.out.println("desconeguda: " + linia);
+                    //System.out.println("desconeguda: " + linia);
                     desconegudes.write(linia);
                     desconegudes.newLine();
                 }
