@@ -13,7 +13,7 @@ public class ClassificaMatricules {
         BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
-            if (llegides == null) {
+            if (linia == null) {
                 break;
             }
             linia = linia.trim();
