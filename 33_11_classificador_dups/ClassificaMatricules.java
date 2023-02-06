@@ -56,8 +56,8 @@ public class ClassificaMatricules {
     //  1- No escribe nada
     public static void italiana(String linia) throws IOException{
         String cami = "italianes.txt";
-        BufferedReader italianaRead = new BufferedReader(new FileReader(cami));
         BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(cami));
+        BufferedReader italianaRead = new BufferedReader(new FileReader(cami));
         if (contador == 0) {
             italianaWrite.write(linia.trim());
             italianaWrite.newLine();
