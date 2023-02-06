@@ -58,7 +58,7 @@ public class CercaAlumnes {
         array[2] = String.valueOf(edat);
         array[3] = String.valueOf(alumne.esOient);
         for (int i = 4; i < 10; i++) {
-            array[i] = String.valueOf(alumne.notes);
+           array[i] = String.valueOf(alumne.notes);
         }
         for (int i = 0; i < 10; i++) {
             alumneEscrit = alumneEscrit + array[i];

@@ -15,9 +15,9 @@ public class ClassificaMatricules {
             }
             if (esItaliana(linia)) {
                 italiana(linia);
-                //System.out.println("italiana: " + linia);
+                System.out.println("italiana: " + linia);
             } else {
-                //System.out.println("desconeguda: " + linia);
+                System.out.println("desconeguda: " + linia);
                 desconeguda(linia);
             }
         }
@@ -85,12 +85,12 @@ public class ClassificaMatricules {
         }
         while(true) {
             String desconegudaR = desconegudaRead.readLine();
+            if (desconegudaR == null) {
+                break;
+            }
             if (!desconegudaR.equals(leido)) {
-                if (desconegudaR == null) {
-                    desconegudesWrite.write(leido.trim());
-                    desconegudesWrite.newLine();
-                    break;
-                }
+                desconegudesWrite.write(leido.trim());
+                desconegudesWrite.newLine();
             } else {
                 break;
             }
