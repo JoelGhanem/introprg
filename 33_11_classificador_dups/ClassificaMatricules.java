@@ -99,7 +99,7 @@ public class ClassificaMatricules {
                 break;
             }
         }
-
+        desconegudesWrite.close();
     }
     public static void italianaPrimer(String linia, BufferedReader italianaRead,BufferedWriter italianaWrite) throws IOException {
         String leido = linia.trim();
