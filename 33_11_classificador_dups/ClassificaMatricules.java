@@ -5,20 +5,31 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
-    private static int contador = 0;
     public static void main(String[] args) throws IOException{
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
+        int contadorI = 0;
+        int contadorD = 0;
         while (true) {
             String linia = llegides.readLine();
             if (linia == null) {
                 break;
             }
             if (esItaliana(linia)) {
-                italiana(linia);
-                System.out.println("italiana: " + linia);
+                if (contadorI == 0) {
+                    contadorI++;
+                    italianaPrimer(linia);
+                } else {
+                    System.out.println("italiana: " + linia);
+                    italiana(linia);
+                }
             } else {
-                System.out.println("desconeguda: " + linia);
-                desconeguda(linia);
+                if (contadorD == 0) {
+                    contadorD++;
+                    desconegudaPrimer(linia);
+                } else {
+                    System.out.println("desconeguda: " + linia);
+                    desconeguda(linia);
+                }
             }
         }
     }
@@ -58,8 +69,6 @@ public class ClassificaMatricules {
         String cami = "italianes.txt";
         BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(cami));
         BufferedReader italianaRead = new BufferedReader(new FileReader(cami));
-        italianaWrite.write(leido.trim());
-        italianaWrite.newLine();
         while(true) {
             String italianaR = italianaRead.readLine();
             if (italianaR == null) {
@@ -71,7 +80,6 @@ public class ClassificaMatricules {
             } else {
                 break;
             }
-            contador++;
         }
     }
     public static void desconeguda(String linia) throws IOException{
@@ -79,10 +87,6 @@ public class ClassificaMatricules {
         String cami = "desconegudes.txt";
         BufferedWriter desconegudesWrite = new BufferedWriter(new FileWriter(cami));
         BufferedReader desconegudaRead = new BufferedReader(new FileReader(cami));
-        if (contador == 0) {
-            desconegudesWrite.write(leido);
-            desconegudesWrite.newLine();
-        }
         while(true) {
             String desconegudaR = desconegudaRead.readLine();
             if (desconegudaR == null) {
@@ -94,7 +98,20 @@ public class ClassificaMatricules {
             } else {
                 break;
             }
-            contador++;
         }
+    }
+    public static void italianaPrimer(String linia) throws IOException {
+        String leido = linia.trim();
+        String cami = "italianes.txt";
+        BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(cami));
+        italianaWrite.write(leido.trim());
+        italianaWrite.newLine();
+    }
+    public static void desconegudaPrimer(String linia) throws IOException {
+        String leido = linia.trim();
+        String cami = "desconegudes.txt";
+        BufferedWriter desconegudesWrite = new BufferedWriter(new FileWriter(cami));
+        desconegudesWrite.write(leido);
+        desconegudesWrite.newLine();
     }
 }
