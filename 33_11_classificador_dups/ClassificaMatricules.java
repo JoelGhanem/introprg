@@ -86,10 +86,10 @@ public class ClassificaMatricules {
         }
         while(true) {
             String desconegudaR = desconegudaRead.readLine();
-            if (desconegudaRead == null) {
+            if (desconegudaR == null) {
                 break;
             }
-            if (!desconegudaRead.equals(linia)) {
+            if (!desconegudaR.equals(linia)) {
                 desconegudesWrite.write(linia.trim());
                 desconegudesWrite.newLine();
             } else {
