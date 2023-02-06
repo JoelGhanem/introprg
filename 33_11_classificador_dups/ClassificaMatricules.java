@@ -71,6 +71,7 @@ public class ClassificaMatricules {
         return true;
     }
     public static boolean repetidaI(String linia, BufferedReader italianesR) throws IOException{
+        System.out.println("Llega a repetidaI");
         while (true) {
             String italiana = italianesR.readLine();
             if (italiana == null) {
