@@ -55,18 +55,19 @@ public class ClassificaMatricules {
     //  PROBLEMAS
     //  1- No escribe nada
     public static void italiana(String linia) throws IOException{
+        String leido = linia.trim();
         String cami = "italianes.txt";
         BufferedWriter italianaWrite = new BufferedWriter(new FileWriter(cami));
         BufferedReader italianaRead = new BufferedReader(new FileReader(cami));
-        italianaWrite.write(linia.trim());
+        italianaWrite.write(leido.trim());
         italianaWrite.newLine();
         while(true) {
             String italianaR = italianaRead.readLine();
             if (italianaR == null) {
                 break;
             }
-            if (!italianaR.equals(linia)) {
-                italianaWrite.write(linia.trim());
+            if (!italianaR.equals(leido)) {
+                italianaWrite.write(leido.trim());
                 italianaWrite.newLine();
             } else {
                 break;
@@ -75,11 +76,12 @@ public class ClassificaMatricules {
         }
     }
     public static void desconeguda(String linia) throws IOException{
+        String leido = linia.trim();
         String cami = "desconegudes.txt";
         BufferedWriter desconegudesWrite = new BufferedWriter(new FileWriter(cami));
         BufferedReader desconegudaRead = new BufferedReader(new FileReader(cami));
         if (contador == 0) {
-            desconegudesWrite.write(linia.trim());
+            desconegudesWrite.write(leido);
             desconegudesWrite.newLine();
         }
         while(true) {
@@ -87,8 +89,8 @@ public class ClassificaMatricules {
             if (desconegudaR == null) {
                 break;
             }
-            if (!desconegudaR.equals(linia)) {
-                desconegudesWrite.write(linia.trim());
+            if (!desconegudaR.equals(leido)) {
+                desconegudesWrite.write(leido.trim());
                 desconegudesWrite.newLine();
             } else {
                 break;
