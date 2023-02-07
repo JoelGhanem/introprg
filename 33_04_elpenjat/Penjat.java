@@ -88,7 +88,10 @@ public class Penjat {
                 } else if (utilitzades.length() == 1) {
                     utilitzades += " i " + Character.toUpperCase(lletra);
                 } else {
+                    for (int i = 0; i < utilitzades.length(); i++) {
+
                     utilitzades += " , " + Character.toUpperCase(lletra);
+                }
                 }
             }
             boolean encert = false;
