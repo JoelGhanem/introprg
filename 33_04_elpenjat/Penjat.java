@@ -107,7 +107,7 @@ public class Penjat {
                 System.out.println("Intents disponibles: " + intents);
                 continue;
             } else {
-                System.out.println("Has encertat! la paraula era " + paraula);
+                System.out.println("Has encertat! La paraula era " + paraula);
                 intents = 10;
                 ganadas++;
                 paraulaEncertada = true;
