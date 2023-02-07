@@ -59,8 +59,7 @@ public class Inspecciona {
                 resultado += "buit";
             }else {
                 long bytes = file.length(); 
-                resultado += "de mida en bytes: " + bytes;
-                resultado += "Amb els continguts:";
+                resultado += "de mida en bytes: " + bytes + " Amb els continguts:";
                 BufferedReader llegida2 = new BufferedReader(new FileReader(arg));
                 while (true) {
                     String linia = llegida2.readLine();
