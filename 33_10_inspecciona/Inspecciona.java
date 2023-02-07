@@ -46,8 +46,8 @@ public class Inspecciona {
                     else resultado += ", " + caracter;
                 }
             }
-            System.out.println(resultado);
         } else {
+            contador ++;
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             long bytes = file.length(); 
@@ -65,6 +65,9 @@ public class Inspecciona {
                     System.out.println("|" + linia + "|");
                 }
             }
+        }
+        if (contador == 0) {
+            System.out.println(resultado);
         }
     }
 }
