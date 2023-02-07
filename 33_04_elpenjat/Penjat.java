@@ -121,4 +121,15 @@ public class Penjat {
         }
         return false;
     }
+    public static void mostraFigura(int intentsDisponibles) throws IOException {
+        int fitxer = 9 - intentsDisponibles;
+        String cami = "recursos/figura" + fitxer + ".txt";
+        BufferedReader figura = new BufferedReader(new FileReader(cami));
+        while(true) {
+            String linia = figura.readLine();
+            if (linia == null) break;
+            System.out.println(linia);
+        }
+        figura.close();
+    }
 }
