@@ -43,7 +43,7 @@ public class Penjat {
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
             if(entrada.equals("prou")) {
-                System.out.println("Vols sortir?");
+                System.out.println("Vols finalitzar?");
                 String resposta = Entrada.readLine();
                 if(respostaABoolean(resposta)) {
                     canceladas++;
