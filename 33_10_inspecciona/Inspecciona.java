@@ -6,12 +6,12 @@ import java.io.IOException;
 import java.util.Arrays;
 public class Inspecciona {
     public static void main(String[] args) throws IOException{
+            boolean noResultado = false;
         for (String arg : args) {
             procesaArgument(arg);
         }
     }
     public static void procesaArgument(String arg) throws IOException{
-        boolean noResultado = true;
         int contador = 0;
         System.out.println();
         String proceso = "Processant argument: " + arg;
@@ -47,7 +47,6 @@ public class Inspecciona {
                 }
             }
         } else {
-            noResultado = false;
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             long bytes = file.length(); 
@@ -66,8 +65,6 @@ public class Inspecciona {
                 }
             }
         }
-        if (noResultado) {
-            System.out.println(resultado);
-        }
+        System.out.println(resultado);
     }
 }
