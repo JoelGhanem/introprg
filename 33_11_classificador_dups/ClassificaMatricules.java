@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
-    private static int contador = 1;
+    private static int contador = 0;
     public static void main(String[] args) throws IOException{
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
