@@ -11,6 +11,7 @@ public class Inspecciona {
         }
     }
     public static void procesaArgument(String arg) throws IOException{
+        int contador = 0;
         System.out.println();
         String proceso = "Processant argument: " + arg;
         System.out.println(proceso);
@@ -49,8 +50,12 @@ public class Inspecciona {
             while (true) {
                 String linia = llegida.readLine();
                 if (linia == null) {
+                    if (contador == 0) {
+                        System.out.println("buit");
+                    }
                     break;
                 }
+                contador++;
                 if (linia.length() == 0) {
                     resultado += "buit";
                 }else {
