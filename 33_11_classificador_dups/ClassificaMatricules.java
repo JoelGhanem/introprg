@@ -17,7 +17,7 @@ public class ClassificaMatricules {
             }
             linia = linia.trim();
             if (!repetida(linia)) {
-                if (esItaliana(linia)) {
+                if (matriculaItalianaValida(linia)) {
                     italianes.write(linia);
                     italianes.newLine();
                 } else {
@@ -30,7 +30,7 @@ public class ClassificaMatricules {
         italianes.close();
         desconegudes.close();
     }
-    public static boolean esItaliana(String linia) {
+    public static boolean matriculaItalianaValida(String linia) {
         String confuses = "IOQU";
         if (linia.length() != 7) {
             return false;
