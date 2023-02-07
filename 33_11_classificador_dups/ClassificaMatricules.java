@@ -68,17 +68,17 @@ public class ClassificaMatricules {
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
             String italiana = llegida.readLine();
-            //System.out.println("antes de null: " + italiana);
+            System.out.println("antes de null: " + italiana);
             if (italiana == null) {
                 llegida.close();
                 return false;
             }
             italiana = italiana.trim();
-            //System.out.println("despues de null: " + italiana);
+            System.out.println("despues de null: " + italiana);
             for (int i = 1; i < contador; i++) {
-                //System.out.println("dentro del for: " + italiana);
+                System.out.println("dentro del for: " + italiana);
                 if (italiana.equals(linia)) {
-                    //System.out.println("equals: " +  linia);
+                    System.out.println("equals: " +  linia);
                     llegida.close();
                     return true;
                 } else {
