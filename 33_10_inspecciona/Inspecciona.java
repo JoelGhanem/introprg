@@ -45,6 +45,7 @@ public class Inspecciona {
                     else resultado += ", " + caracter;
                 }
             }
+            System.out.println(resultado);
         } else {
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
@@ -64,6 +65,5 @@ public class Inspecciona {
                 }
             }
         }
-        System.out.println(resultado);
     }
 }
