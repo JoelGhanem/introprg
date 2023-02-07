@@ -13,6 +13,7 @@ public class ClassificaMatricules {
         BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
+            contador++;
             if (linia == null) {
                 break;
             }
@@ -69,7 +70,6 @@ public class ClassificaMatricules {
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
             String italiana = llegida.readLine();
-            contador++;
             if (italiana == null) {
                 return false;
             }
