@@ -1,36 +1,40 @@
 //Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fitxerimport java.io.File;
+import java.io.File;
+import java.util.Arrays;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.File;
-import java.util.Arrays;
 public class Inspecciona {
-    public static void main(String[] args) {
-        for (String arg : args) {
-            procesaArgument(arg);
+    public static void main(String[] args) throws IOException {
+        for (int i = 0; i < args.length; i++) {
+            procesaArgument(args[i]);
         }
     }
-    public static void procesaArgument(String arg) {
+    public static void procesaArgument(String args) throws IOException {
         System.out.println();
-        System.out.println("Processant argument: " + arg);
-        System.out.println("=============================");
+        String resultado = "";
+        String procesa = "Processant argument: " + args;
+        System.out.println(procesa);
+        for (int i = 0; i < procesa.length(); i++) {
+            System.out.print("=");
+        }
         System.out.println();
-        File file = new File(arg);
-        if (!file.exists()) {
+        System.out.println();
+        File fitxer = new File(args);
+        if (!fitxer.exists()) {
             System.out.println("No trobat");
             return;
         }
-        String resultado = "";
-        if (file.canRead()) resultado += "r";
+        if (fitxer.canRead()) resultado += "r";
         else resultado += "-";
-        if (file.canWrite()) resultado += "w";
+        if (fitxer.canWrite()) resultado += "w";
         else resultado += "-";
-        if (file.canExecute()) resultado += "x";
+        if (fitxer.canExecute()) resultado += "x";
         else resultado += "-";
-        if (file.isDirectory()) {
-            resultado += " directori ";
-            String[] contenido = file.list();
-            if (contenido == null || contenido.length == 0) resultado += "buit";
+        if (fitxer.isDirectory()) {
+            resultado += " directori "; 
+            String[] contenido = fitxer.list();
+            if (contenido.length == 0) resultado += "buit";
             else {
                 resultado += "que conté: ";
                 Arrays.sort(contenido);
@@ -40,8 +44,6 @@ public class Inspecciona {
                     else resultado += ", " + caracter;
                 }
             }
-        } else {
-            resultado += " fitxer";
         }
         System.out.println(resultado);
     }
