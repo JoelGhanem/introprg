@@ -62,9 +62,12 @@ public class Inspecciona {
                         break;
                     }
                     System.out.println("|" + linia + "|");
+                    contador++;
                 }
             }
         }
-        System.out.println(resultado);
+        if (contador == 0) {
+            System.out.println(resultado);
+        }
     }
 }
