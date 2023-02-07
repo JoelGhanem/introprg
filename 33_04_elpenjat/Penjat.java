@@ -25,6 +25,7 @@ public class Penjat {
                 break;
             }
         }
+        input.close();
         resumPartida();
     }
     public static boolean jugaParaula(String paraula) throws IOException {
@@ -49,16 +50,18 @@ public class Penjat {
                     canceladas++;
                     return false;
                 }
+                System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                System.out.println("Utilitzades: cap");
+                System.out.println("Intents disponibles: " + intents);
+                continue;
+
             }
             if(entrada.equals("glups")) {
-                System.out.println("Vols passar a la següent paraula?");
-                String resposta = Entrada.readLine();
-                if(respostaABoolean(resposta)) {
-                    canceladas++;
-                    break;
-                }
+                canceladas++;
+                intents = 10;
+                break;
             }
-            if (entrada.length() > 1) {
+            if (entrada.length() > 1 || entrada.isEmpty()) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
                 System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
                 System.out.println("Utilitzades: cap");
@@ -73,40 +76,40 @@ public class Penjat {
             boolean repetit = false;
             for (int i = 0; i < utilitzades.length(); i++) {
                 if (Character.toUpperCase(lletra) == utilitzades.charAt(i)) {
+
                     System.out.println("La lletra ja ha estat utilitzada");
                     System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                    System.out.println("Utilitzades: " + utilitzades);
+                    System.out.println("Utilitzades: " + entreComas(utilitzades));
                     System.out.println("Intents disponibles: " + intents);
                     repetit = true;
                     break;
                 }
+
             }
             if(repetit) continue;
             if(!repetit) {
-                if (utilitzades.length() == 0) {
-                    utilitzades += Character.toUpperCase(lletra);
-                } else if (utilitzades.length() == 1) {
-                    utilitzades += " i " + Character.toUpperCase(lletra);
-                } else {
-                    for (int i = 0; i < utilitzades.length(); i++) {
-
-                    utilitzades += " , " + Character.toUpperCase(lletra);
-                }
-                }
+                utilitzades += Character.toUpperCase(lletra);
             }
             boolean encert = false;
             for (int i=0; i < longitud; i++) {
                 if(paraula.charAt(i) == lletra) {
-                    encert = true; paraulaXifrada[i] = lletra;             
+                    encert = true;
+                    paraulaXifrada[i] = lletra;             
                 }
             }
             if(!encert) {
                 intents--;
                 mostraFigura(intents);
             }
+            if(intents == 0) {
+                System.out.println("Has mort");
+                intents = 10;
+                falladas++;
+                break;
+            }
             if(String.valueOf(paraulaXifrada).contains("*")) {
                 System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                System.out.println("Utilitzades: " + utilitzades);
+                System.out.println("Utilitzades: " + entreComas(utilitzades));
                 System.out.println("Intents disponibles: " + intents);
                 continue;
             } else {
@@ -118,6 +121,25 @@ public class Penjat {
         }
         return true;
     }
+    public static String entreComas(String text) {
+        if (text.length() == 1) return text;
+        String textComas = "";
+
+        for(int i =0; i < text.length(); i++) {
+
+            if(i != text.length() -2) {
+                textComas += text.charAt(i) + ", ";
+
+            } else {
+                textComas += text.charAt(i) + " i " + text.charAt(i+1);
+                break;
+            }
+        }
+        return textComas;
+
+    }
+
+
     public static void mostraFigura(int intentsDisponibles) throws IOException {
         int fitxer = 9 - intentsDisponibles;
         String cami = "recursos/figura" + fitxer + ".txt";
@@ -137,13 +159,13 @@ public class Penjat {
         System.out.println("Espero que t'hagis divertit");
     }
     /*
-     * Donada una resposta textual, aquesta funció tradueix la resposta a
+* Donada una resposta textual, aquesta funció tradueix la resposta a
      * un booleà.
      * Considera true quan la resposta és, independentment de majúscules i
      * sense considerar espais a l'inici ni al final,
      * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
      * Altrament considera false.
-     */
+    */
     public static boolean respostaABoolean(String resposta) {
         if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
