@@ -47,7 +47,7 @@ public class Inspecciona {
                 }
             }
         } else {
-            contador ++;
+            contador  = 100000;
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             long bytes = file.length(); 
