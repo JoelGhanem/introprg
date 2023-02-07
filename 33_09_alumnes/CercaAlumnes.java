@@ -1,4 +1,4 @@
-//Programa que et busca alumnes amb la funcio contains
+//Programa que et busca alumnes amb la funcio contains i tels mostra, en aquest exercici hem vist el primer objecte 
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
