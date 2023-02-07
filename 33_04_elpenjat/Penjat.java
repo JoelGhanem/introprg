@@ -42,6 +42,9 @@ public class Penjat {
         while(!paraulaEncertada) {
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
+            if (entrada.isEmpty()) {
+                System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+            }
             if(entrada.equals("prou")) {
                 System.out.println("Vols finalitzar?");
                 String resposta = Entrada.readLine();
