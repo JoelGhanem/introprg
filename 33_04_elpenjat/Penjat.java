@@ -64,6 +64,7 @@ public class Penjat {
             char lletra = entrada.charAt(0);
             if (entrada.length() > 1) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                jugaParaula(paraula);
                 continue;
             }
             utilitzades += Character.toUpperCase(lletra);
