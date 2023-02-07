@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 public class Inspecciona {
     public static void main(String[] args) throws IOException{
-        boolean noResultado = false;
+            boolean noResultado = false;
         for (String arg : args) {
             procesaArgument(arg);
         }
@@ -47,7 +47,7 @@ public class Inspecciona {
                 }
             }
         } else {
-            contador  = 100000;
+            contador ++;
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             long bytes = file.length(); 
@@ -66,8 +66,6 @@ public class Inspecciona {
                 }
             }
         }
-        if (contador == 0) {
-            System.out.println(resultado);
-        }
+        System.out.println(resultado);
     }
 }
