@@ -76,7 +76,7 @@ public class ClassificaMatricules {
             }
             italiana = italiana.trim();
             //System.out.println("despues de null: " + italiana);
-            for (int i = 0; i < contador; i++) {
+            for (int i = 1; i < contador; i++) {
                 //System.out.println("dentro del for: " + italiana);
                 if (italiana.equals(linia)) {
                     //System.out.println("equals: " +  linia);
