@@ -53,7 +53,7 @@ public class Inspecciona {
                 resultado += "buit";
             } else {
                 resultado += "de mida en bytes: " + bytes;
-                resultado += " Amb els continguts:";
+                System.out.println(" Amb els continguts:");
                 while (true) {
                     String linia = llegida.readLine();
                     if (linia == null) {
