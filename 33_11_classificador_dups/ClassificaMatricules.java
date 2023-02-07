@@ -1,4 +1,4 @@
-/Aquest exercici és una versió ampliada de l'exercici anterior. La ampliació consisteix en evitar que els fitxers de sortida tinguin repetits.
+//Aquest exercici és una versió ampliada de l'exercici anterior. La ampliació consisteix en evitar que els fitxers de sortida tinguin repetits.
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
