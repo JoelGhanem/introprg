@@ -36,10 +36,10 @@ public class Penjat {
         for (int i = 0; i < longitud; i++) {
             paraulaXifrada[i] = '*';
         }
-        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-        System.out.println("Utilitzades: cap");
-        System.out.println("Intents disponibles: " + intents);
         while(!paraulaEncertada) {
+            System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+            System.out.println("Utilitzades: cap");
+            System.out.println("Intents disponibles: " + intents);
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
             if (entrada.isEmpty()) {
@@ -64,7 +64,6 @@ public class Penjat {
             char lletra = entrada.charAt(0);
             if (entrada.length() > 1) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
-                jugaParaula(paraula);
                 continue;
             }
             utilitzades += Character.toUpperCase(lletra);
@@ -105,7 +104,7 @@ public class Penjat {
      * sense considerar espais a l'inici ni al final,
      * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
      * Altrament considera false.
-    */
+     */
     public static boolean respostaABoolean(String resposta) {
         if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
