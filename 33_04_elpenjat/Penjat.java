@@ -36,10 +36,10 @@ public class Penjat {
         for (int i = 0; i < longitud; i++) {
             paraulaXifrada[i] = '*';
         }
-        while(!paraulaEncertada) {
             System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
             System.out.println("Utilitzades: cap");
             System.out.println("Intents disponibles: " + intents);
+        while(!paraulaEncertada) {
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
             if (entrada.isEmpty()) {
@@ -64,6 +64,7 @@ public class Penjat {
             char lletra = entrada.charAt(0);
             if (entrada.length() > 1) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                jugaParaula(paraula);
                 continue;
             }
             utilitzades += Character.toUpperCase(lletra);
