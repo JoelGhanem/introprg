@@ -1,13 +1,16 @@
 //Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fitxerimport java.io.File;
 import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 public class Inspecciona {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         for (String arg : args) {
             procesaArgument(arg);
         }
     }
-    public static void procesaArgument(String arg) {
+    public static void procesaArgument(String arg) throws IOException{
         System.out.println();
         String proceso = "Processant argument: " + arg;
         System.out.println(proceso);
@@ -41,8 +44,23 @@ public class Inspecciona {
                 }
             }
         } else {
-            resultado += " fitxer buit";
+            resultado += " fitxer ";
+            BufferedReader llegida = new BufferedReader(new FileReader(arg));
+            while (true) {
+                String linia = llegida.readLine();
+                if (linia == null) {
+                    break;
+                }
+                if (linia.length() == 0) {
+                    resultado += "buit";
+                }else {
+                    long bytes = file.length(); 
+                    resultado += "de mida en bytes: " + bytes;
+                    System.out.println("Amb els continguts:");
+                    System.out.println("|" + linia + "|");
+                }
+            }
+            System.out.println(resultado);
         }
-        System.out.println(resultado);
     }
 }
