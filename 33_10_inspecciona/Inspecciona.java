@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+
 public class Inspecciona {
     public static void main(String[] args) throws IOException{
         for (String arg : args) {
@@ -46,9 +47,6 @@ public class Inspecciona {
             }
         } else {
             resultado += " fitxer ";
-            if (contador == 0) {
-                resultado += "buit";
-            }
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             while (true) {
                 String linia = llegida.readLine();
@@ -56,12 +54,19 @@ public class Inspecciona {
                     break;
                 }
                 contador++;
-                if (linia.length() == 0) {
-                    resultado += "buit";
-                }else {
-                    long bytes = file.length(); 
-                    resultado += "de mida en bytes: " + bytes;
-                    System.out.println("Amb els continguts:");
+            }
+            if (contador == 0) {
+                resultado += "buit";
+            }else {
+                long bytes = file.length(); 
+                resultado += "de mida en bytes: " + bytes;
+                System.out.println("Amb els continguts:");
+                BufferedReader llegida2 = new BufferedReader(new FileReader(arg));
+                while (true) {
+                    String linia = llegida2.readLine();
+                    if (linia == null) {
+                        break;
+                    }
                     System.out.println("|" + linia + "|");
                 }
             }
