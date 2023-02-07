@@ -27,7 +27,7 @@ public class Penjat {
         }
         resumPartida();
     }
-    public static boolean jugaParaula(String paraula) {
+    public static boolean jugaParaula(String paraula) throws IOException{
         boolean paraulaEncertada = false;
         paraula = paraula.toLowerCase();
         int longitud = paraula.length();
@@ -75,6 +75,7 @@ public class Penjat {
             }
             if(!encert) {
                 intents--;
+                mostraFigura(intents);
             }
             if(String.valueOf(paraulaXifrada).contains("*")) {
                 System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
