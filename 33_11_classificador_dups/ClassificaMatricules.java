@@ -28,10 +28,8 @@ public class ClassificaMatricules {
                 }
             }
         }
-        llegides.close();
         italianes.close();
         desconegudes.close();
-        desconegudesR.close();
     }
     public static boolean esItaliana(String linia) {
         String confuses = "IOQU";
