@@ -38,7 +38,7 @@ public class Inspecciona {
                 }
             }
         } else {
-            resultado += " fitxer";
+            resultado += " fitxer buit";
         }
         System.out.println(resultado);
     }
