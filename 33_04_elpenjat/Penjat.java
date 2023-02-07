@@ -70,24 +70,27 @@ public class Penjat {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
                 continue;
             }
-            if (utilitzades.length() == 0) {
-                utilitzades += Character.toUpperCase(lletra);
-            }
-            for (int i = 0; i < utilitzades.length(); i++) {
-                if (lletra == utilitzades.charAt(i)) {
-                    System.out.println("La lletra ja ha estat utilitzada");
-                    System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                    System.out.println("Utilitzades: " + utilitzades);
-                    System.out.println("Intents disponibles: " + intents);
-                } else {
-                    utilitzades += Character.toUpperCase(lletra);
+            if (utilitzades.length() != 0) {
+                for (int i = 0; i < utilitzades.length(); i++) {
+                    if (lletra == utilitzades.charAt(i)) {
+                        System.out.println("La lletra ja ha estat utilitzada");
+                        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                        System.out.println("Utilitzades: " + utilitzades);
+                        System.out.println("Intents disponibles: " + intents);
+                    } else {
+                        utilitzades += Character.toUpperCase(lletra);
+                    }
                 }
+            } else {
+                utilitzades += Character.toUpperCase(lletra);
+                continue;
             }
             boolean encert = false;
             for (int i=0; i < longitud; i++) {
                 if(paraula.charAt(i) == lletra) {
                     encert = true;
-                    paraulaXifrada[i] = lletra;                }
+                    paraulaXifrada[i] = lletra;             
+                }
             }
             if(!encert) {
                 intents--;
