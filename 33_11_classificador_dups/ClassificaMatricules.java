@@ -70,6 +70,7 @@ public class ClassificaMatricules {
             String italiana = llegida.readLine();
             //System.out.println("antes de null: " + italiana);
             if (italiana == null) {
+                llegida.close();
                 return false;
             }
             italiana = italiana.trim();
