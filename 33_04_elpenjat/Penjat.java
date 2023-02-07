@@ -94,8 +94,7 @@ public class Penjat {
             boolean encert = false;
             for (int i=0; i < longitud; i++) {
                 if(paraula.charAt(i) == lletra) {
-                    encert = true;
-                    paraulaXifrada[i] = lletra;             
+                    encert = true; paraulaXifrada[i] = lletra;             
                 }
             }
             if(!encert) {
@@ -108,7 +107,7 @@ public class Penjat {
                 System.out.println("Intents disponibles: " + intents);
                 continue;
             } else {
-                System.out.println("Has encertat la paraula era: " + paraula);
+                System.out.println("Has encertat! la paraula era: " + paraula);
                 intents = 10;
                 ganadas++;
                 paraulaEncertada = true;
