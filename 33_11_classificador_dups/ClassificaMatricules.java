@@ -70,10 +70,12 @@ public class ClassificaMatricules {
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
             String italiana = llegida.readLine();
+            System.out.println("antes de null: " + italiana);
             if (italiana == null) {
                 return false;
             }
             italiana = italiana.trim();
+            System.out.println("despues de null: " + italiana);
             for (int i = 1; i < contador; i++) {
                 if (italiana.equals(linia)) {
                     System.out.println(linia);
