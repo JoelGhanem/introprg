@@ -10,7 +10,7 @@ public class Inspecciona {
     public static void procesaArgument(String arg) {
         System.out.println();
         System.out.println("Processant argument: " + arg);
-        System.out.println("======================");
+        System.out.println("===========================");
         System.out.println();
         File file = new File(arg);
         if (!file.exists()) {
