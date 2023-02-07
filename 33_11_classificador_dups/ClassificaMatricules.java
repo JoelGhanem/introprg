@@ -77,6 +77,8 @@ public class ClassificaMatricules {
                 if (italiana.equals(linia)) {
                     llegida.close();
                     return true;
+                } else {
+                    return false;
                 }
             }
         }
