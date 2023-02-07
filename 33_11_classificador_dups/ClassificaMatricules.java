@@ -81,6 +81,8 @@ public class ClassificaMatricules {
                     //System.out.println("equals: " +  linia);
                     llegida.close();
                     return true;
+                } else {
+                    italiana = llegida.readLine();
                 }
             }
             return false;
