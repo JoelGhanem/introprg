@@ -46,13 +46,13 @@ public class Inspecciona {
             }
         } else {
             resultado += " fitxer ";
+            if (contador == 0) {
+                System.out.println("buit");
+            }
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             while (true) {
                 String linia = llegida.readLine();
                 if (linia == null) {
-                    if (contador == 0) {
-                        System.out.println("buit");
-                    }
                     break;
                 }
                 contador++;
