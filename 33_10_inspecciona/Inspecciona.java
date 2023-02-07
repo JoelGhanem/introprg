@@ -55,8 +55,9 @@ public class Inspecciona {
             } else {
                 resultado += "de mida en bytes: " + bytes;
                 System.out.println(resultado);
+                contador++;
                 String[] tipo = new String[1];
-                    tipo = arg.split("\\.");
+                tipo = arg.split("\\.");
                 if (tipo[1].equals("txt") || tipo[1].equals("java")) {
                     System.out.println("Amb els continguts:");
                     while (true) {
