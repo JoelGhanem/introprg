@@ -74,7 +74,7 @@ public class Penjat {
                 if (lletra == utilitzades.charAt(i)) {
                     System.out.println("La lletra ja ha estat utilitzada");
                     System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                    System.out.println("Utilitzades: cap");
+                    System.out.println("Utilitzades: " + utilitzades);
                     System.out.println("Intents disponibles: " + intents);
                 } else {
                     utilitzades += Character.toUpperCase(lletra);
