@@ -47,7 +47,7 @@ public class Inspecciona {
         } else {
             resultado += " fitxer ";
             if (contador == 0) {
-                System.out.println("buit");
+                resultado += "buit";
             }
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             while (true) {
