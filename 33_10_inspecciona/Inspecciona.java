@@ -9,8 +9,10 @@ public class Inspecciona {
     }
     public static void procesaArgument(String arg) {
         System.out.println();
-        System.out.println("Processant argument: " + arg);
-        System.out.println("=============================");
+        String proceso = "Processant argument: " + arg;
+        for (int i = 0; i < proceso.length(); i++) {
+            System.out.print("=");
+        }
         System.out.println();
         File file = new File(arg);
         if (!file.exists()) {
