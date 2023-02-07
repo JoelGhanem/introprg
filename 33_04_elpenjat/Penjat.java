@@ -73,7 +73,6 @@ public class Penjat {
             boolean repetit = false;
             for (int i = 0; i < utilitzades.length(); i++) {
                 if (Character.toUpperCase(lletra) == utilitzades.charAt(i)) {
-
                     System.out.println("La lletra ja ha estat utilitzada");
                     System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
                     System.out.println("Utilitzades: " + utilitzades);
@@ -81,11 +80,16 @@ public class Penjat {
                     repetit = true;
                     break;
                 }
-                    
             }
             if(repetit) continue;
             if(!repetit) {
-                utilitzades += Character.toUpperCase(lletra);
+                if (utilitzades.length() == 0) {
+                    utilitzades += Character.toUpperCase(lletra);
+                } else if (utilitzades.length() == 1) {
+                    utilitzades += " i " + Character.toUpperCase(lletra);
+                } else {
+                    utilitzades += " , " + Character.toUpperCase(lletra);
+                }
             }
             boolean encert = false;
             for (int i=0; i < longitud; i++) {
