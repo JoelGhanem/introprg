@@ -1,15 +1,16 @@
-//Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fitxerimport java.io.File;
+//Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fitxer
 import java.io.File;
 import java.util.Arrays;
-
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 public class Inspecciona {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         for (int i = 0; i < args.length; i++) {
             procesaArgument(args[i]);
         }
     }
-
-    public static void procesaArgument(String args) {
+    public static void procesaArgument(String args) throws IOException {
         System.out.println();
         String resultado = "";
         String procesa = "Processant argument: " + args;
@@ -33,10 +34,6 @@ public class Inspecciona {
         if (fitxer.isDirectory()) {
             resultado += " directori "; 
             String[] contenido = fitxer.list();
-            if (contenido == null) {
-                System.out.println("Error al acceder al contenido del directorio");
-                return;
-            }
             if (contenido.length == 0) resultado += "buit";
             else {
                 resultado += "que conté: ";
@@ -48,6 +45,5 @@ public class Inspecciona {
                 }
             }
         }
-        System.out.println(resultado);
     }
 }
