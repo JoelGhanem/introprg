@@ -5,16 +5,17 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
+    private static int contador = 0;
     public static void main(String[] args) throws IOException{
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
-        BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
             if (linia == null) {
                 break;
             }
+            contador++;
             linia = linia.trim();
             if (!repetida(linia)) {
                 if (esItaliana(linia)) {
@@ -26,10 +27,8 @@ public class ClassificaMatricules {
                 }
             }
         }
-        llegides.close();
         italianes.close();
         desconegudes.close();
-        desconegudesR.close();
     }
     public static boolean esItaliana(String linia) {
         String confuses = "IOQU";
@@ -67,7 +66,7 @@ public class ClassificaMatricules {
     public static boolean repetida(String linia) throws IOException{
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
-            for (int i = 1; i < 1000; i++) {
+            for (int i = 1; i < contador; i++) {
             String italiana = llegida.readLine();
             //System.out.println("antes de null: " + italiana);
             if (italiana == null) {
