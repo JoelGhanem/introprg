@@ -55,14 +55,18 @@ public class Inspecciona {
             } else {
                 resultado += "de mida en bytes: " + bytes;
                 System.out.println(resultado);
-                System.out.println("Amb els continguts:");
-                while (true) {
-                    String linia = llegida.readLine();
-                    if (linia == null) {
-                        break;
+                String[] tipo = new String[2];
+                    tipo = arg.split(".");
+                if (tipo[1].equals("txt") || tipo[1].equals("java")) {
+                    System.out.println("Amb els continguts:");
+                    while (true) {
+                        String linia = llegida.readLine();
+                        if (linia == null) {
+                            break;
+                        }
+                        System.out.println("|" + linia + "|");
+                        contador++;
                     }
-                    System.out.println("|" + linia + "|");
-                    contador++;
                 }
             }
         }
