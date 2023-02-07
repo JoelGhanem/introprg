@@ -1,4 +1,4 @@
-//Programa que et busca alumnes 
+//Programa que et busca alumnes amb la funcio contains
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
