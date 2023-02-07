@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-public class Penjat {
+public class tupu {
     private static int intents = 10;
     private static int jugadas = 0;
     private static int ganadas = 0;
@@ -70,22 +70,23 @@ public class Penjat {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
                 continue;
             }
-            boolean repetit = false;
-            for (int i = 0; i < utilitzades.length(); i++) {
-                if (Character.toUpperCase(lletra) == utilitzades.charAt(i)) {
-
-                    System.out.println("La lletra ja ha estat utilitzada");
-                    System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                    System.out.println("Utilitzades: " + utilitzades);
-                    System.out.println("Intents disponibles: " + intents);
-                    repetit = true;
-                    break;
+            if (utilitzades.length() != 0) {
+                for (int i = 0; i <= utilitzades.length(); i++) {
+                    if (lletra == utilitzades.charAt(i)) {
+                        System.out.println("La lletra ja ha estat utilitzada");
+                        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                        System.out.println("Utilitzades: " + utilitzades);
+                        System.out.println("Intents disponibles: " + intents);
+                    } else {
+                        utilitzades += Character.toUpperCase(lletra);
+                    }
                 }
-                    
-            }
-            if(repetit) continue;
-            if(!repetit) {
+            } else {
                 utilitzades += Character.toUpperCase(lletra);
+                System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                System.out.println("Utilitzades: " + utilitzades);
+                System.out.println("Intents disponibles: " + intents);
+                continue;
             }
             boolean encert = false;
             for (int i=0; i < longitud; i++) {
