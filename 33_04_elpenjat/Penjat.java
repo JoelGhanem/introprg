@@ -43,7 +43,7 @@ public class Penjat {
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
             if(entrada.equals("prou")) {
-                System.out.println("Vols sortir?");
+                System.out.println("Vols finalitzar?");
                 String resposta = Entrada.readLine();
                 if(respostaABoolean(resposta)) {
                     canceladas++;
@@ -99,11 +99,6 @@ public class Penjat {
         }
         figura.close();
     }
-        
-
-
-
-
     public static void resumPartida() {
         System.out.println("Paraules jugades: " + jugadas);
         System.out.println("Paraules encertades: " + ganadas);
@@ -118,7 +113,7 @@ public class Penjat {
      * sense considerar espais a l'inici ni al final,
      * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
      * Altrament considera false.
-    */
+     */
     public static boolean respostaABoolean(String resposta) {
         if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
