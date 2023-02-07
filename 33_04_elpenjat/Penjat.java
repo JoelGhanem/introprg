@@ -1,3 +1,4 @@
+//Joc del Penjat amb l'Alex :)
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
