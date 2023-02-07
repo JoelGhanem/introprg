@@ -1,4 +1,4 @@
-//Joc del Penjat amb l'Alex :)
+//Joc del Penjat amb l'Alex :) es juguen paraules fins que et quedes sense paraules per jugar o fins que li dius prou i ho confirmes
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
