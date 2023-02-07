@@ -52,7 +52,8 @@ public class Inspecciona {
             if (bytes == 0) {
                 resultado += "buit";
             } else {
-                resultado += "de mida en bytes: " + bytes + " Amb els continguts:";
+                resultado += "de mida en bytes: " + bytes;
+                resultado += " Amb els continguts:";
                 while (true) {
                     String linia = llegida.readLine();
                     if (linia == null) {
