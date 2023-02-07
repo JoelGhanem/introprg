@@ -16,7 +16,6 @@ public class ClassificaMatricules {
             if (linia == null) {
                 break;
             }
-            contador++;
             linia = linia.trim();
             if (!repetida(linia)) {
                 if (esItaliana(linia)) {
@@ -67,25 +66,23 @@ public class ClassificaMatricules {
     public static boolean repetida(String linia) throws IOException{
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
-            String italiana = llegida.readLine();
-            System.out.println("antes de null: " + italiana);
+            contador++; String italiana = llegida.readLine();
+            //System.out.println("antes de null: " + italiana);
             if (italiana == null) {
                 llegida.close();
                 return false;
             }
             italiana = italiana.trim();
-            System.out.println("despues de null: " + italiana);
+            //System.out.println("despues de null: " + italiana);
             for (int i = 1; i < contador; i++) {
-                System.out.println("dentro del for: " + italiana);
+                //System.out.println("dentro del for: " + italiana);
                 if (italiana.equals(linia)) {
-                    System.out.println("equals: " +  linia);
+                    //System.out.println("equals: " +  linia);
                     llegida.close();
                     return true;
-                } else {
-                    llegida.close();
-                    return false;
                 }
             }
+            return false;
         }
     }
 }
