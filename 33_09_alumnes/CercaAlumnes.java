@@ -1,3 +1,4 @@
+//Programa que et busca alumnes 
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
