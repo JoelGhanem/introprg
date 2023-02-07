@@ -21,10 +21,10 @@ public class ClassificaMatricules {
                 if (esItaliana(linia)) {
                     italianes.write(linia);
                     italianes.newLine();
+                } else {
+                    desconegudes.write(linia);
+                    desconegudes.newLine();
                 }
-            } else {
-                desconegudes.write(linia);
-                desconegudes.newLine();
             }
         }
         llegides.close();
