@@ -18,13 +18,11 @@ public class ClassificaMatricules {
             linia = linia.trim();
             if (esItaliana(linia)) {
                 if (!repetidaI(linia)) {
-                    //System.out.println("italiana: " + linia);
                     italianes.write(linia);
                     italianes.newLine();
                 }
             } else {
                 if (!repetidaD(linia, desconegudesR)) {
-                    //System.out.println("desconeguda: " + linia);
                     desconegudes.write(linia);
                     desconegudes.newLine();
                 }
@@ -72,7 +70,6 @@ public class ClassificaMatricules {
         BufferedReader italianesR = new BufferedReader(new FileReader("italianes.txt"));
         while (true) {
             String italiana = italianesR.readLine();
-            System.out.println(italiana);
             if (italiana == null) {
                 return false;
             }
