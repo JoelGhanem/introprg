@@ -8,7 +8,6 @@ public class ClassificaMatricules {
     public static void main(String[] args) throws IOException{
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
-        BufferedReader italianesR = new BufferedReader(new FileReader("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
         BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
@@ -18,7 +17,7 @@ public class ClassificaMatricules {
             }
             linia = linia.trim();
             if (esItaliana(linia)) {
-                if (!repetidaI(linia, italianesR)) {
+                if (!repetidaI(linia)) {
                     //System.out.println("italiana: " + linia);
                     italianes.write(linia);
                     italianes.newLine();
@@ -33,7 +32,6 @@ public class ClassificaMatricules {
         }
         llegides.close();
         italianes.close();
-        italianesR.close();
         desconegudes.close();
         desconegudesR.close();
     }
@@ -70,18 +68,15 @@ public class ClassificaMatricules {
         }
         return true;
     }
-    public static boolean repetidaI(String linia, BufferedReader italianesR) throws IOException{
-        System.out.println("Llega a repetidaI");
+    public static boolean repetidaI(String linia) throws IOException{
+        BufferedReader italianesR = new BufferedReader(new FileReader("italianes.txt"));
         while (true) {
             String italiana = italianesR.readLine();
             System.out.println(italiana);
-        System.out.println("Llega a antes de null");
             if (italiana == null) {
                 return false;
             }
-            System.out.println("italiana no null");
             if (italiana.equals(linia)) {
-                System.out.println("italiana: " + italiana + "linia: " + linia);
                 return true;
             }
         }
