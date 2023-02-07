@@ -55,7 +55,7 @@ public class Inspecciona {
             } else {
                 resultado += "de mida en bytes: " + bytes;
                 System.out.println(resultado);
-                String[] tipo = new String[2];
+                String[] tipo = new String[1];
                     tipo = arg.split(".");
                     System.out.println(tipo[1]);
                     System.out.println(tipo[0]);
