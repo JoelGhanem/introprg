@@ -10,6 +10,7 @@ public class Inspecciona {
     public static void procesaArgument(String arg) {
         System.out.println();
         String proceso = "Processant argument: " + arg;
+        System.out.println(proceso);
         for (int i = 0; i < proceso.length(); i++) {
             System.out.print("=");
         }
