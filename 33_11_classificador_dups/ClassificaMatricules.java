@@ -16,6 +16,7 @@ public class ClassificaMatricules {
             if (linia == null) {
                 break;
             }
+            contador++;
             linia = linia.trim();
             if (!repetida(linia)) {
                 if (esItaliana(linia)) {
@@ -26,7 +27,6 @@ public class ClassificaMatricules {
                     desconegudes.newLine();
                 }
             }
-            contador++;
         }
         llegides.close();
         italianes.close();
