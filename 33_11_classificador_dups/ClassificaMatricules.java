@@ -71,17 +71,19 @@ public class ClassificaMatricules {
         while (true) {
             String italiana = llegida.readLine();
             if (italiana == null) {
-                break;
+                return false;
             }
             italiana = italiana.trim();
             for (int i = 1; i < contador; i++) {
                 if (italiana.contains(linia)) {
+                    System.out.println(linia);
                     llegida.close();
                     return true;
+                } else {
+                    llegida.close();
+                    return false;
                 }
             }
         }
-            llegida.close();
-            return false;
     }
 }
