@@ -13,7 +13,7 @@ public class Inspecciona {
     public static void procesaArgument(String args) throws IOException {
         System.out.println();
         String resultado = "";
-        String procesa = "Processant args: " + args;
+        String procesa = "Processant argument: " + args;
         System.out.println(procesa);
         for (int i = 0; i < procesa.length(); i++) {
             System.out.print("=");
