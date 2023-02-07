@@ -79,7 +79,7 @@ public class Penjat {
             }
             if(String.valueOf(paraulaXifrada).contains("*")) {
                 System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                System.out.println("Utlitzades: " + utilitzades);
+                System.out.println("Utilitzades: " + utilitzades);
                 System.out.println("Intents disponibles: " + intents);
                 continue;
             } else {
