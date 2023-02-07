@@ -13,7 +13,6 @@ public class ClassificaMatricules {
         BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
-            contador++;
             if (linia == null) {
                 break;
             }
@@ -27,6 +26,7 @@ public class ClassificaMatricules {
                     desconegudes.newLine();
                 }
             }
+            contador++;
         }
         llegides.close();
         italianes.close();
