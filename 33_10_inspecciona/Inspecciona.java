@@ -1,4 +1,4 @@
-//Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fichero
+//Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fitxer
 import java.io.File;
 import java.util.Arrays;
 import java.io.FileReader;
@@ -20,20 +20,20 @@ public class Inspecciona {
         }
         System.out.println();
         System.out.println();
-        File fichero = new File(args);
-        if (!fichero.exists()) {
+        File fitxer = new File(args);
+        if (!fitxer.exists()) {
             System.out.println("No trobat");
             return;
         }
-        if (fichero.canRead()) resultado += "r";
+        if (fitxer.canRead()) resultado += "r";
         else resultado += "-";
-        if (fichero.canWrite()) resultado += "w";
+        if (fitxer.canWrite()) resultado += "w";
         else resultado += "-";
-        if (fichero.canExecute()) resultado += "x";
+        if (fitxer.canExecute()) resultado += "x";
         else resultado += "-";
-        if (fichero.isDirectory()) {
+        if (fitxer.isDirectory()) {
             resultado += " directori "; 
-            String[] contenido = fichero.list();
+            String[] contenido = fitxer.list();
             if (contenido.length == 0) resultado += "buit";
             else {
                 resultado += "que conté: ";
