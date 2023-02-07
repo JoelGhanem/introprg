@@ -47,15 +47,16 @@ public class Inspecciona {
                 }
             }
         } else {
+            String resultat = "";
             contador ++;
-            resultado += " fitxer ";
+            resultat += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             long bytes = file.length(); 
             if (bytes == 0) {
-                resultado += "buit";
+                resultat += "buit";
             } else {
-                resultado += "de mida en bytes: " + bytes;
-                System.out.println(resultado);
+                resultat += "de mida en bytes: " + bytes;
+                System.out.println(resultat);
                 System.out.println("Amb els continguts:");
                 while (true) {
                     String linia = llegida.readLine();
