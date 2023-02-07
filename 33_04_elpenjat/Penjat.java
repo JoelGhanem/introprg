@@ -36,9 +36,9 @@ public class Penjat {
         for (int i = 0; i < longitud; i++) {
             paraulaXifrada[i] = '*';
         }
-            System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-            System.out.println("Utilitzades: cap");
-            System.out.println("Intents disponibles: " + intents);
+        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+        System.out.println("Utilitzades: cap");
+        System.out.println("Intents disponibles: " + intents);
         while(!paraulaEncertada) {
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
@@ -60,9 +60,9 @@ public class Penjat {
             }
             if (entrada.length() > 1) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
-            System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-            System.out.println("Utilitzades: cap");
-            System.out.println("Intents disponibles: " + intents);
+                System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                System.out.println("Utilitzades: cap");
+                System.out.println("Intents disponibles: " + intents);
                 continue;
             }
             char lletra = entrada.charAt(0);
@@ -70,7 +70,16 @@ public class Penjat {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
                 continue;
             }
-            utilitzades += Character.toUpperCase(lletra);
+            for (int i = 0; i < utilitzades.length(); i++) {
+                if (lletra == utilitzades.charAt(i)) {
+                    System.out.println("La lletra ja ha estat utilitzada");
+                    System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                    System.out.println("Utilitzades: cap");
+                    System.out.println("Intents disponibles: " + intents);
+                } else {
+                    utilitzades += Character.toUpperCase(lletra);
+                }
+            }
             boolean encert = false;
             for (int i=0; i < longitud; i++) {
                 if(paraula.charAt(i) == lletra) {
