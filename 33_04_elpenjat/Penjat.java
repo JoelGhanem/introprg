@@ -1,136 +1,121 @@
-/*Joc del penjat en java*/
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 public class Penjat {
+    private static int intents = 10;
+    private static int jugadas = 0;
+    private static int ganadas = 0;
+    private static int falladas = 0;
+    private static int canceladas = 0;
     public static void main(String[] args) throws IOException {
-        char letra = '$'; 
         String cami = "paraules.txt";
         BufferedReader input = new BufferedReader(new FileReader(cami));
-        System.out.printf("Comencem a jugar%n");
         String paraulaEnJoc = input.readLine();
-        String utilitzades = "";
-        boolean acaba = false;
-        int numero = 0;
-        int intents = 11;
-        int ganadas = 0;
-        int jugadas = 1;
-        int perdidas = 0;
-        int canceladas = 0;
+        if(paraulaEnJoc == null) {
+            System.out.println("No tinc paraules per jugar");
+            return;
+        }
+        System.out.printf("Comencem a jugar%n");
         while (true) {
-            //Función que imprime la palabra en juego 
-            numero = paraulaEnJocJoc(numero, paraulaEnJoc, letra);
-            //Función que imprime las letras utilizadas
-            if (letra == '$') {
-                System.out.println("Utilitzades: cap");
-            } else {
-                utilitzades = lletresUtilitzades(utilitzades, letra);
+            jugadas++;
+            if(!jugaParaula(paraulaEnJoc)) break;
+            paraulaEnJoc = input.readLine();
+            if(paraulaEnJoc == null) {
+                System.out.println("No queden més paraules");
+                break;
             }
-            //Función que imprime los intentos disponibles
-            intents = intentsDisponibles(intents);
-            //Función que pide la letra, mira si es prou o no y la devuelve para que siga en juego
-            letra = introdueixLletra();
-            if (letra == 'ñ') {
-                prou(jugadas, ganadas, perdidas, canceladas);
-            }
-            break;
         }
+        resumPartida();
     }
-    // hay que hacer 2 strings para que se vaya mostrando la palabrta con y sion censura
-    public static int paraulaEnJocJoc(int numero, String paraulaEnJoc, char letra) {
-        boolean encertat = false;
-        String oculto = ""; 
-        String muestra = "";
-        for (int i = 0; i < paraulaEnJoc.length(); i++) {
-            oculto = oculto + "*";
+    public static boolean jugaParaula(String paraula) {
+        boolean paraulaEncertada = false;
+        paraula = paraula.toLowerCase();
+        int longitud = paraula.length();
+        char[] paraulaXifrada = paraula.toCharArray();
+        String utilitzades = "";
+        for (int i = 0; i < longitud; i++) {
+            paraulaXifrada[i] = '*';
         }
-        System.out.println("Paraula: " + oculto);
-        oculto = "";
-        numero = numero + 1;
-        if (numero != 0) {
-            for (int i = 0; i < paraulaEnJoc.length(); i++) {
-                if (paraulaEnJoc.charAt(i) == letra) {
-                    oculto = oculto +  letra;
-                } else { 
-                    oculto = oculto + "*";
+        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+        System.out.println("Utilitzades: cap");
+        System.out.println("Intents disponibles: " + intents);
+        while(!paraulaEncertada) {
+            System.out.println("Introdueix una lletra");
+            String entrada = Entrada.readLine().toLowerCase();
+            if(entrada.equals("prou")) {
+                System.out.println("Vols sortir?");
+                String resposta = Entrada.readLine();
+                if(respostaABoolean(resposta)) {
+                    canceladas++;
+                    return false;
                 }
             }
-        }
-        return numero;
-    }
-    public static String lletresUtilitzades(String utilitzades, char letra) {
-        char mayus = '$';
-        mayus = Character.toUpperCase(letra);
-        utilitzades = utilitzades + mayus;
-        // primera letra
-        if (utilitzades.length() == 1) {
-            System.out.println("Utilitzades: " + utilitzades);
-        } else if (utilitzades.length() == 2) {
-            // 2 letras
-            System.out.println("Utilitzades: " + utilitzades.charAt(0) + " i " + utilitzades.charAt(1));
-            // si hay mas de 2 letras
-        } else if (utilitzades.length() > 2) {
-            for (int i = 0; i < utilitzades.length(); i++) {
-                if (i == 0) {
-                    System.out.print("Utilitzades: " + utilitzades.charAt(0));
-                } else if (i == utilitzades.length()-2)  {
-                    System.out.print(utilitzades.charAt(utilitzades.length()-2) + " i " + utilitzades.charAt(utilitzades.length()-1));
+            if(entrada.equals("glups")) {
+                System.out.println("Vols passar a la següent paraula?");
+                String resposta = Entrada.readLine();
+                if(respostaABoolean(resposta)) {
+                    canceladas++;
                     break;
-                } else { 
-                    System.out.print(", " + utilitzades.charAt(i));
                 }
             }
-        }
-        return utilitzades;
-    }
-    public static int intentsDisponibles(int intents) {
-        int tiradas = intents;
-        tiradas -=1;
-        System.out.println("Intents disponibles: " + tiradas);
-        return tiradas;
-    }
-    public static char introdueixLletra() {
-        boolean no = false;
-        String letras = "abcdefghijklmnopqrstuvwxyz";
-        char letra = '$';
-        System.out.println("Introdueix una lletra");
-        String paraula = Entrada.readLine();
-        if (!paraula.equals("prou")) {
-        }else if (!paraula.equals("glups")) {
-            for (int i = 0; i < paraula.length(); i++) {
-                for ( int j = 0; j < paraula.length(); j++) {
-                    if (paraula.charAt(i) != letras.charAt(j)) {
-                        no = true;
-                    }
-                }
-            }
-            if (no) {
+            char lletra = entrada.charAt(0);
+            if (!Character.isLetter(lletra)) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                continue;
+            }
+            utilitzades += Character.toUpperCase(lletra);
+            boolean encert = false;
+            for (int i=0; i < longitud; i++) {
+                if(paraula.charAt(i) == lletra) {
+                    encert = true;
+                    paraulaXifrada[i] = lletra;                }
+            }
+            if(!encert) {
+                intents--;
+            }
+            if(String.valueOf(paraulaXifrada).contains("*")) {
+                System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                System.out.println("Utlitzades: " + utilitzades);
+                System.out.println("Intents disponibles: " + intents);
+                continue;
+            } else {
+                System.out.println("Has encertat la paraula era: " + paraula);
+                intents = 10;
+                ganadas++;
+                paraulaEncertada = true;
             }
         }
-        letra = paraula.charAt(0);
-        if (paraula.equals("prou")) {
-            letra = 'ñ';
-        }
-        if (letra == 'ñ') {
-            return letra;
-        } 
-        return letra;
+        return true;
     }
-    public static boolean prou(int jugadas, int ganadas, int perdidas, int canceladas) {
-        boolean prou = false;
-        canceladas = 1;
-        String finalitza = "";
-        System.out.println("Vols finalitzar?");
-        finalitza = Entrada.readLine();
-        if (finalitza.equals("sí")) {
-            System.out.println("Paraules jugades: " + jugadas);
-            System.out.println("Paraules encertades: " + ganadas);
-            System.out.println("Paraules fallades: " + perdidas);
-            System.out.println("Paraules cancel·lades: " + canceladas);
-            System.out.println("Espero que t'hagis divertit");
-            prou = true;
+    public static void resumPartida() {
+        System.out.println("Paraules jugades: " + jugadas);
+        System.out.println("Paraules encertades: " + ganadas);
+        System.out.println("Paraules fallades: " + falladas);
+        System.out.println("Paraules cancel·lades: " + canceladas);
+        System.out.println("Espero que t'hagis divertit");
+    }
+    /*
+     * Donada una resposta textual, aquesta funció tradueix la resposta a
+     * un booleà.
+     * Considera true quan la resposta és, independentment de majúscules i
+     * sense considerar espais a l'inici ni al final,
+     * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
+     * Altrament considera false.
+    */
+    public static boolean respostaABoolean(String resposta) {
+        if (null == resposta) {     // si la resposta és null, la donem com a false
+            return false;
         }
-        return prou ;
+        resposta = resposta.toLowerCase();
+        if (resposta.equals("s") || resposta.equals("y")) {
+            return true;
+        }
+        if (resposta.equals("sí") || resposta.equals("yes")) {
+            return true;
+        }
+        if (resposta.equals("si") || resposta.equals("vale") || resposta.equals("yeah")) {
+            return true;
+        }
+        return false;
     }
 }
