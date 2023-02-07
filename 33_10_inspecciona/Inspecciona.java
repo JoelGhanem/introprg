@@ -48,18 +48,18 @@ public class Inspecciona {
         } else {
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
-            while (true) {
-                String linia = llegida.readLine();
-                if (linia == null) {
-                    break;
-                }
-                contador++;
-            }
             if (contador == 0) {
                 resultado += "buit";
             }else {
                 long bytes = file.length(); 
                 resultado += "de mida en bytes: " + bytes + " Amb els continguts:";
+                while (true) {
+                    String linia = llegida.readLine();
+                    if (linia == null) {
+                        break;
+                    }
+                    contador++;
+                }
                 BufferedReader llegida2 = new BufferedReader(new FileReader(arg));
                 while (true) {
                     String linia = llegida2.readLine();
