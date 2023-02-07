@@ -59,7 +59,6 @@ public class Penjat {
                 }
             }
             if (paraula.length() > 1) {
-                jugaParaula(paraula);
                 continue;
             }
             char lletra = entrada.charAt(0);
