@@ -12,6 +12,9 @@ public class ClassificaMatricules {
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
+            if (linia.isEmpty()) {
+                linia= llegides.readLine();
+            }
             if (linia == null) {
                 break;
             }
