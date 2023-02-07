@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
+    private static int contador = 0;
     public static void main(String[] args) throws IOException{
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
@@ -16,16 +17,14 @@ public class ClassificaMatricules {
                 break;
             }
             linia = linia.trim();
-            if (esItaliana(linia)) {
-                if (!repetidaI(linia)) {
+            if (!repetida(linia)) {
+                if (esItaliana(linia)) {
                     italianes.write(linia);
                     italianes.newLine();
                 }
             } else {
-                if (!repetidaD(linia, desconegudesR)) {
-                    desconegudes.write(linia);
-                    desconegudes.newLine();
-                }
+                desconegudes.write(linia);
+                desconegudes.newLine();
             }
         }
         llegides.close();
@@ -66,27 +65,19 @@ public class ClassificaMatricules {
         }
         return true;
     }
-    public static boolean repetidaI(String linia) throws IOException{
-        BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
-                while (true) {
-                    String italiana = llegida.readLine();
-                    if (italiana == null) {
-                        return false;
-                    }
-                    if (italiana.equals(linia)) {
-                        return true;
-                    }
-                }
-    }
-    public static boolean repetidaD(String linia, BufferedReader desconegudesR) throws IOException{
+    public static boolean repetida(String linia) throws IOException{
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
-            String desconeguda = llegida.readLine();
-            if (desconeguda == null) {
+            String italiana = llegida.readLine();
+            contador++;
+            if (italiana == null) {
                 return false;
             }
-            if (desconeguda.equals(linia)) {
-                return true;
+            for (int i = 1; i < contador; i++) {
+                if (italiana.equals(linia)) {
+                    llegida.close();
+                    return true;
+                }
             }
         }
     }
