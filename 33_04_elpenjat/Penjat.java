@@ -36,10 +36,10 @@ public class Penjat {
         for (int i = 0; i < longitud; i++) {
             paraulaXifrada[i] = '*';
         }
-        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-        System.out.println("Utilitzades: cap");
-        System.out.println("Intents disponibles: " + intents);
         while(!paraulaEncertada) {
+            System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+            System.out.println("Utilitzades: cap");
+            System.out.println("Intents disponibles: " + intents);
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
             if(entrada.equals("prou")) {
