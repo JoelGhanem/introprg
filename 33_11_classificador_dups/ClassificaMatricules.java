@@ -32,6 +32,9 @@ public class ClassificaMatricules {
     }
     public static boolean esItaliana(String linia) {
         String confuses = "IOQU";
+        if (linia.length() != 7) {
+            return false;
+        }
         for (int i = 0; i < 2; i++) {
             if (!Character.isUpperCase(linia.charAt(i))) {
                 return false;
@@ -72,9 +75,6 @@ public class ClassificaMatricules {
             if (italiana == null) {
                 llegida.close();
                 return false;
-            }
-            if (linia.isEmpty()) {
-                linia = llegida.readLine();
             }
             italiana = italiana.trim();
             //System.out.println("despues de null: " + italiana);
