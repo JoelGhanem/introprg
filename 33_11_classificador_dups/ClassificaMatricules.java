@@ -79,6 +79,7 @@ public class ClassificaMatricules {
                     llegida.close();
                     return true;
                 } else {
+                    llegida.close();
                     return false;
                 }
             }
