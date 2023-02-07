@@ -11,7 +11,7 @@ public class Inspecciona {
         }
     }
     public static void procesaArgument(String arg) throws IOException{
-        boolean noResultado = false;
+        boolean noResultado = true;
         int contador = 0;
         System.out.println();
         String proceso = "Processant argument: " + arg;
@@ -47,7 +47,7 @@ public class Inspecciona {
                 }
             }
         } else {
-            noResultado = true;
+            noResultado = false;
             resultado += " fitxer ";
             BufferedReader llegida = new BufferedReader(new FileReader(arg));
             long bytes = file.length(); 
@@ -66,7 +66,7 @@ public class Inspecciona {
                 }
             }
         }
-        if (!noResultado) {
+        if (noResultado) {
             System.out.println(resultado);
         }
     }
