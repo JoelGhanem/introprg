@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-public class Penjat {
+public class casi {
     private static int intents = 10;
     private static int jugadas = 0;
     private static int ganadas = 0;
@@ -27,7 +27,7 @@ public class Penjat {
         }
         resumPartida();
     }
-    public static boolean jugaParaula(String paraula) throws IOException {
+    public static boolean jugaParaula(String paraula) throws IOException{
         boolean paraulaEncertada = false;
         paraula = paraula.toLowerCase();
         int longitud = paraula.length();
@@ -36,14 +36,17 @@ public class Penjat {
         for (int i = 0; i < longitud; i++) {
             paraulaXifrada[i] = '*';
         }
-        System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-        System.out.println("Utilitzades: cap");
-        System.out.println("Intents disponibles: " + intents);
+            System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+            System.out.println("Utilitzades: cap");
+            System.out.println("Intents disponibles: " + intents);
         while(!paraulaEncertada) {
             System.out.println("Introdueix una lletra");
             String entrada = Entrada.readLine().toLowerCase();
+            if (entrada.isEmpty()) {
+                System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+            }
             if(entrada.equals("prou")) {
-                System.out.println("Vols sortir?");
+                System.out.println("Vols finalitzar?");
                 String resposta = Entrada.readLine();
                 if(respostaABoolean(resposta)) {
                     canceladas++;
@@ -59,8 +62,9 @@ public class Penjat {
                 }
             }
             char lletra = entrada.charAt(0);
-            if (!Character.isLetter(lletra)) {
+            if (entrada.length() > 1) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
+                jugaParaula(paraula);
                 continue;
             }
             utilitzades += Character.toUpperCase(lletra);
@@ -76,7 +80,7 @@ public class Penjat {
             }
             if(String.valueOf(paraulaXifrada).contains("*")) {
                 System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
-                System.out.println("Utlitzades: " + utilitzades);
+                System.out.println("Utilitzades: " + utilitzades);
                 System.out.println("Intents disponibles: " + intents);
                 continue;
             } else {
@@ -88,22 +92,6 @@ public class Penjat {
         }
         return true;
     }
-    public static void mostraFigura(int intentsDisponibles) throws IOException {
-        int fitxer = 9 - intentsDisponibles;
-        String cami = "recursos/figura" + fitxer + ".txt";
-        BufferedReader figura = new BufferedReader(new FileReader(cami));
-        while(true) {
-            String linia = figura.readLine();
-            if (linia == null) break;
-            System.out.println(linia);
-        }
-        figura.close();
-    }
-        
-
-
-
-
     public static void resumPartida() {
         System.out.println("Paraules jugades: " + jugadas);
         System.out.println("Paraules encertades: " + ganadas);
@@ -118,7 +106,7 @@ public class Penjat {
      * sense considerar espais a l'inici ni al final,
      * "sí", "s", "yes" o "y", i algunes variants amb errors ortogràfics.
      * Altrament considera false.
-    */
+     */
     public static boolean respostaABoolean(String resposta) {
         if (null == resposta) {     // si la resposta és null, la donem com a false
             return false;
@@ -134,5 +122,16 @@ public class Penjat {
             return true;
         }
         return false;
+    }
+    public static void mostraFigura(int intentsDisponibles) throws IOException {
+        int fitxer = 9 - intentsDisponibles;
+        String cami = "recursos/figura" + fitxer + ".txt";
+        BufferedReader figura = new BufferedReader(new FileReader(cami));
+        while(true) {
+            String linia = figura.readLine();
+            if (linia == null) break;
+            System.out.println(linia);
+        }
+        figura.close();
     }
 }
