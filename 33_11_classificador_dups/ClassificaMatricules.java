@@ -67,20 +67,22 @@ public class ClassificaMatricules {
         return true;
     }
     public static boolean repetidaI(String linia) throws IOException{
-        BufferedReader italianesR = new BufferedReader(new FileReader("italianes.txt"));
-        while (true) {
-            String italiana = italianesR.readLine();
-            if (italiana == null) {
-                return false;
-            }
-            if (italiana.equals(linia)) {
-                return true;
-            }
-        }
+        BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
+                while (true) {
+                    String italiana = llegida.readLine();
+                    System.out.println(italiana);
+                    if (italiana == null) {
+                        return false;
+                    }
+                    if (italiana.equals(linia)) {
+                        return true;
+                    }
+                }
     }
     public static boolean repetidaD(String linia, BufferedReader desconegudesR) throws IOException{
+        BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
-            String desconeguda = desconegudesR.readLine();
+            String desconeguda = llegida.readLine();
             if (desconeguda == null) {
                 return false;
             }
