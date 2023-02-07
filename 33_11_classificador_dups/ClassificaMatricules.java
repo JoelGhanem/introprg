@@ -12,9 +12,6 @@ public class ClassificaMatricules {
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
-            if (linia.isEmpty()) {
-                linia= llegides.readLine();
-            }
             if (linia == null) {
                 break;
             }
@@ -75,6 +72,9 @@ public class ClassificaMatricules {
             if (italiana == null) {
                 llegida.close();
                 return false;
+            }
+            if (linia.isEmpty()) {
+                linia = llegida.readLine();
             }
             italiana = italiana.trim();
             //System.out.println("despues de null: " + italiana);
