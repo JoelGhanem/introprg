@@ -83,6 +83,9 @@ public class Penjat {
                 }
             } else {
                 utilitzades += Character.toUpperCase(lletra);
+                System.out.println("Paraula: " + String.valueOf(paraulaXifrada));
+                System.out.println("Utilitzades: " + utilitzades);
+                System.out.println("Intents disponibles: " + intents);
                 continue;
             }
             boolean encert = false;
