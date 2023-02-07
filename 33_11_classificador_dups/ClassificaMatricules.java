@@ -75,7 +75,7 @@ public class ClassificaMatricules {
             }
             italiana = italiana.trim();
             for (int i = 1; i < contador; i++) {
-                if (italiana.equals(linia)) {
+                if (italiana.contains(linia)) {
                     llegida.close();
                     return true;
                 } else {
