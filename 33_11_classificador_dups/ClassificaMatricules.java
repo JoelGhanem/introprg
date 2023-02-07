@@ -87,9 +87,7 @@ public class ClassificaMatricules {
             if (desconeguda == null) {
                 return false;
             }
-            System.out.println("desconeguda no null");
             if (desconeguda.equals(linia)) {
-                System.out.println("desconeguda: " + desconeguda + "linia: " + linia);
                 return true;
             }
         }
