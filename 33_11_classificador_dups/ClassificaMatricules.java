@@ -5,8 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 public class ClassificaMatricules {
-    private static int contador = 0;
     public static void main(String[] args) throws IOException{
+        int contador = 0;
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
@@ -18,7 +18,7 @@ public class ClassificaMatricules {
             }
             contador++;
             linia = linia.trim();
-            if (!repetida(linia)) {
+            if (!repetida(linia, contador)) {
                 if (esItaliana(linia)) {
                     italianes.write(linia);
                     italianes.newLine();
@@ -66,19 +66,20 @@ public class ClassificaMatricules {
         }
         return true;
     }
-    public static boolean repetida(String linia) throws IOException{
+    public static boolean repetida(String linia, int contador) throws IOException{
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
+            for (int i = 1; i < contador; i++) {
             String italiana = llegida.readLine();
             System.out.println("antes de null: " + italiana);
             if (italiana == null) {
-                return false;
+                break;
             }
             italiana = italiana.trim();
             System.out.println("despues de null: " + italiana);
-            for (int i = 1; i < contador; i++) {
+            System.out.println("dentro del for: " + italiana);
                 if (italiana.equals(linia)) {
-                    System.out.println(linia);
+                    System.out.println("equals: " +  linia);
                     llegida.close();
                     return true;
                 } else {
