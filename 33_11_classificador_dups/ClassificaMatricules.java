@@ -10,7 +10,6 @@ public class ClassificaMatricules {
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
-        BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
             if (linia == null) {
@@ -27,6 +26,7 @@ public class ClassificaMatricules {
                 }
             }
         }
+        llegides.close();
         italianes.close();
         desconegudes.close();
     }
@@ -66,7 +66,8 @@ public class ClassificaMatricules {
     public static boolean repetida(String linia) throws IOException{
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
-            contador++; String italiana = llegida.readLine();
+            contador++;
+            String italiana = llegida.readLine();
             //System.out.println("antes de null: " + italiana);
             if (italiana == null) {
                 llegida.close();
