@@ -1,4 +1,7 @@
 //Programa que ens permet veure els argss de la linia de comandes com si fossin els camins del sistema de fitxerimport java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.File;
 import java.util.Arrays;
 public class Inspecciona {
