@@ -1,4 +1,4 @@
-/*Biblioteca que ens ajuda a fer un log*/
+/*Biblioteca que ens ajuda a fer un log de tots els errors i avisos Programa fet per mi*/
 import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;

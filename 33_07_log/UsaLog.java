@@ -1,4 +1,4 @@
-//Programa que ens ajuda a visualitzar el Log
+//Programa que ens ajuda a visualitzar el Log fet pel millor profe del mon Moises Gomez (aprueame porfavor)
 import java.io.IOException;
 public class UsaLog {
     public static void main(String[] args) throws IOException {
