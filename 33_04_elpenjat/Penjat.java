@@ -62,7 +62,7 @@ public class Penjat {
                 }
             }
             char lletra = entrada.charAt(0);
-            if (!Character.isLetter(lletra) || entrada.isEmpty()) {
+            if (entrada.length() > 1) {
                 System.out.println("Error: cal una lletra entre 'a' i 'z', 'prou' o 'glups'");
                 continue;
             }
