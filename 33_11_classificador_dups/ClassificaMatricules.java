@@ -10,6 +10,7 @@ public class ClassificaMatricules {
         BufferedReader llegides = new BufferedReader(new FileReader("llegides.txt"));
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
+        BufferedReader desconegudesR = new BufferedReader(new FileReader("desconegudes.txt"));
         while (true) {
             String linia = llegides.readLine();
             if (linia == null) {
@@ -27,8 +28,10 @@ public class ClassificaMatricules {
                 }
             }
         }
+        llegides.close();
         italianes.close();
         desconegudes.close();
+        desconegudesR.close();
     }
     public static boolean esItaliana(String linia) {
         String confuses = "IOQU";
@@ -66,7 +69,6 @@ public class ClassificaMatricules {
     public static boolean repetida(String linia) throws IOException{
         BufferedReader llegida = new BufferedReader(new FileReader("llegides.txt"));
         while (true) {
-            for (int i = 1; i < contador; i++) {
             String italiana = llegida.readLine();
             //System.out.println("antes de null: " + italiana);
             if (italiana == null) {
@@ -74,6 +76,7 @@ public class ClassificaMatricules {
             }
             italiana = italiana.trim();
             //System.out.println("despues de null: " + italiana);
+            for (int i = 1; i < contador; i++) {
                 //System.out.println("dentro del for: " + italiana);
                 if (italiana.equals(linia)) {
                     //System.out.println("equals: " +  linia);
