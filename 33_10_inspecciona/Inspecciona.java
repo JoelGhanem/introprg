@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-
 public class Inspecciona {
     public static void main(String[] args) throws IOException{
         for (String arg : args) {
@@ -35,8 +34,9 @@ public class Inspecciona {
         if (file.isDirectory()) {
             resultado += " directori ";
             String[] contenido = file.list();
-            if (contenido == null || contenido.length == 0) resultado += "buit";
-            else {
+            if (contenido == null || contenido.length == 0) {
+                resultado += "buit" ;
+            } else {
                 resultado += "que conté: ";
                 Arrays.sort(contenido);
                 for (int i = 0; i < contenido.length; i++) {
@@ -70,7 +70,7 @@ public class Inspecciona {
                     System.out.println("|" + linia + "|");
                 }
             }
-            System.out.println(resultado);
         }
+        System.out.println(resultado);
     }
 }
