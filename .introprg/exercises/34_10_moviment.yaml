@@ -1,0 +1,9 @@
+'01':
+  stdin:
+  - ''
+  stdout:
+  - 'Pis inicial: -1'
+  - 'Moviment inicial: aturat'
+  - 'Moviment final: pujant'
+_main: UsaAscensor
+_version: '2223'

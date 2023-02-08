@@ -1,0 +1,6 @@
+'01':
+  stdout:
+  - L'ascensor inicialment està a la planta -1
+  - L'ascensor finalment està a la planta 0
+_main: Ascensor
+_version: '2223'
