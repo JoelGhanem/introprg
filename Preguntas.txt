@@ -1,0 +1,13 @@
+1. GatRenat.java;
+2. Li queden 7 vides;
+3. A la linia 4;
+4. A la linia 2;
+5. 0 pq a esas cosas se les aplica el balor base;
+6. Error no compila pq no esta inicialitzada;
+7. Pq fa referencia al espai de memoria, es un puntero, no totes les variables son referencia ni totes les referencies son variables;
+8. 
+9. La instancia es el resultat de renat
+
+La classe es una d
+La instancia es el valor de gat renat que entres coses es vides = 7 la instancia es l'espai reservat es el que retorna el gat;
+Un objecte es una instancia d'una classe;
