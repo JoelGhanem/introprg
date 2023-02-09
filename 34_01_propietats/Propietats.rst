@@ -2,9 +2,9 @@
 Anotacions sobre propietats
 ###########################
 
-* Autor/a: XXX
+* Autor/a: Joel Ghanem
 
-* Data: XXX
+* Data: 09/02/2023
 
 Introducció
 ===========
@@ -29,7 +29,7 @@ Pregunta 1. El nom del fitxer
 =============================
 
 Per que funcioni, el nom del fitxer que contingui el programa anterior ha
-de ser ``XXX``.
+de ser ``GatRenat``.
 
 Si reanomeno el fitxer anterior a ``UnNomQualsevol.java``, em trobo el
 següent resultat a l'hora de compilar:
@@ -37,7 +37,8 @@ següent resultat a l'hora de compilar:
 ::
 
     $ javac UnNomQualsevol.java
-    XXX
+    UnNomQualsevol.java:2: error: class GatRenat is public, should be declared in a file named GatRenat.java
+
 
 Pregunta 2. Sortida
 ===================
@@ -47,18 +48,19 @@ En executar el programa ``GatRenat`` m'ha generat la següent sortida:
 ::
 
     $ java GatRenat
-    XXX
+    Al gat Renat li queden 7 vides
+
 
 Pregunta 3. Declaració de ``renat``.
 ====================================
 
 La línia en que està declarada la variable ``renat`` que apareix a la
-línia 6 és XXX.
+línia 6 és en la linia 4.
 
 Pregunta 4. Inicialització
 ==========================
 
-El valor que es mostra per pantalla, és assignat a la línia XXX.
+El valor que es mostra per pantalla, és assignat a la línia 2.
 
 Pregunta 5. No inicialització
 =============================
@@ -67,16 +69,15 @@ Si a la línia especificada per la pregunta anterior no li assignem cap
 valor, el que es mostrarà per pantalla és:
 
 ::
+    Al gat Renat li queden 0 vides
 
-    XXX
-
+    
 Pregunta 6. Eliminem la línia 5
 ===============================
 
 En cas que la línia 5 no hi sigui (per exemple, si la comento), es
 produeix el següent resultat:
 
-XXX
 
 Penso que passa això perquè XXX.
 
@@ -109,4 +110,4 @@ Les diferències presenta la variable ``vides`` respecte les
 
 1. XXX
 
-2. XXX
+. XXX
