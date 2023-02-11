@@ -7,9 +7,11 @@ public class Ascensor {
     public static Ascensor[] creaAscensors(int quants) {
         Ascensor[] ascensor = new Ascensor[quants];
         ascensor[0] = new Ascensor();
-        for (int i = 1; i < quants; i++) {
-            ascensor[i] = new Ascensor();
-            ascensor[i].pis = ascensor[0].pis+i;
+        if (quants > 0) {
+            for (int i = 1; i < quants; i++) {
+                ascensor[i] = new Ascensor();
+                ascensor[i].pis = ascensor[0].pis+i;
+            }
         }
         return ascensor;
     }
