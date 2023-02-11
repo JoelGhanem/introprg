@@ -30,9 +30,11 @@ public class Ascensor {
             String cantidad = args[0];
             if (cuantos(cantidad)) {
                 int quants = Integer.parseInt(cantidad);
-                Ascensor[] ascensors = creaAscensors(quants);
-                for (int i = 0; i < ascensors.length; i++) {
-                    System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
+                if (quants > 0) {
+                    Ascensor[] ascensors = creaAscensors(quants);
+                    for (int i = 0; i < ascensors.length; i++) {
+                        System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
+                    }
                 }
             } else {
                 System.out.println("Cap ascensor");
