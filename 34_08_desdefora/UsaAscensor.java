@@ -22,19 +22,9 @@ public class UsaAscensor {
     }
 
     public static void main(String[] args) {
-        String cantidad = args[0];
-        if (cuantos(cantidad)) {
-            int quants = Integer.parseInt(cantidad);
-            if (quants > 0) {
-                Ascensor[] ascensors = creaAscensors(quants);
-                for (int i = 0; i < ascensors.length; i++) {
-                    System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
-                }
-            } else {
-                System.out.println("Cap ascensor");
-            }
-        } else {
-            System.out.println("Cap ascensor");
+        Ascensor[] ascensors = creaAscensors(1);
+        for (int i = 0; i < ascensors.length; i++) {
+            System.out.printf("Ascensor %d al pis %d%n", i, ascensors[i].pis);
         }
     }
 }
