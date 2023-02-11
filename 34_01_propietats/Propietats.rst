@@ -78,15 +78,19 @@ Pregunta 6. Eliminem la línia 5
 En cas que la línia 5 no hi sigui (per exemple, si la comento), es
 produeix el següent resultat:
 
+GatRenat.java:7: error: variable renat might not have been initialized
+        System.out.println("Al gat Renat li queden " + renat.vides + " vides");
+                                                       ^
+1 error
 
-Penso que passa això perquè XXX.
+Penso que passa això perquè no s'ha inicialitzat la variable renat.
 
 Pregunta 7. Referència
 ======================
 
-Penso que el el comentari de la línia 4 parla de *referència* perquè XXX.
+Penso que el el comentari de la línia 4 parla de *referència* perquè renat = new GatRenat(); necessita una referència per poder funcionar.
 
-Crec que la  relació entre *referència* i *variable* és: XXX.
+Crec que la  relació entre *referència* i *variable* és: La variable depen de la referència per poder funcionar ja que sino no pot ser aplicada.
 
 
 Pregunta 8. Instància
