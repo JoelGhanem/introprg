@@ -8,6 +8,6 @@ public class UsaAscensor {
     }
     public static void main(String[] args) {
         Ascensor[] ascensors = creaAscensors(1);
-        System.out.println("L'ascensor creat des de fora está al pis " + ascensors[0].pis);
+        System.out.println("L'ascensor creat des de fora està al pis " + ascensors[0].pis);
     }
 }
