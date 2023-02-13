@@ -11,3 +11,4 @@ public class UsaLog {
         Log.printDebug("Aquí s'acaba el main()");
     }
 }
+
