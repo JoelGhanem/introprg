@@ -6,8 +6,8 @@ public class Ascensor {
     public int pis = 0;
     public static Ascensor[] creaAscensors(int quants) {
         Ascensor[] ascensor = new Ascensor[quants];
-        ascensor[0] = new Ascensor();
         if (quants > 0) {
+            ascensor[0] = new Ascensor();
             for (int i = 1; i < quants; i++) {
                 ascensor[i] = new Ascensor();
                 ascensor[i].pis = ascensor[0].pis+i;
