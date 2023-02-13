@@ -6,18 +6,8 @@ public class UsaAscensor {
         ascensor[0].pis -=1;
         return ascensor;
     }
-
-    public static boolean cuantos(String cantidad){
-        for (int i = 0; i < cantidad.length(); i++) {
-            if (!Character.isDigit(cantidad.charAt(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
         Ascensor[] ascensors = creaAscensors(1);
-        System.out.println("L'ascensor creat desde fora está al pis " + ascensor[0].pis);
+        System.out.println("L'ascensor creat desde fora está al pis " + ascensors[0].pis);
     }
 }

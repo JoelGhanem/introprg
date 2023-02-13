@@ -1,0 +1,4 @@
+1. Dona error a la compilacio pq es una propietat priivada
+2. Muestra qel gat renat tiene 7 vidas
+3. Donant-li el valor per la linia de comandes
+4. Que no retorna res
