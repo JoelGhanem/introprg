@@ -1,0 +1,24 @@
+import java.lang.reflect.Modifier;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.Arrays;
+
+public class TestExercise {
+
+    @Test
+    @DisplayName("test Renat neix estirat")
+    public void testRenatNeixEstirat() {
+        assertEquals("estirat", new GatRenat().getPosicio());
+    }
+
+    @Test
+    @DisplayName("test Renat té la propietat privada posicio")
+    public void testRenatTePosicio() {
+        assertTrue(Arrays.stream(GatRenat.class.getDeclaredFields())
+            .anyMatch(p -> p.getName().equals("posicio") &&
+                    Modifier.isPrivate(p.getModifiers())),
+            "No compleixes els requeriments sobre la propietat posicio");
+
+    }
+}

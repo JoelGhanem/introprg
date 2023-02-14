@@ -1,0 +1,250 @@
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TestExercise {
+
+    @Test
+    @DisplayName("test constructor per defecte")
+    public void constructorDefecte() {
+        Hora hora = new Hora();
+        String msg = String.format(
+                "Hora() hauria de ser '0:0:0' però és '%d:%d:%d'",
+                hora.getHores(), hora.getMinuts(), hora.getSegons());
+        String titol = "testHoraPerDefecte000";
+        assertHoraEsperada(0, 0, 0, hora, titol, msg);
+    }
+
+    @ParameterizedTest
+    @CsvSource(value={
+    "1,2,3,1,2,3",
+    "23,59,59,23,59,59",
+    "24,2,3,0,0,0",
+    "-24,3,4,0,0,0",
+    "23,60,4,0,0,0",
+    "22,-6,5,0,0,0",
+    "21,6,60,0,0,0",
+    "20,7,-13,0,0,0",
+    })
+    @DisplayName("test constructor específic")
+    public void constructorEspecific(
+            int ho, int mo, int so,
+            int hd, int md, int sd) {
+        Hora hora = new Hora(ho, mo, so);
+        String msg = String.format(
+                "Hora('%d:%d:%d') hauria de ser '%d:%d:%d' però és '%d:%d:%d'",
+                ho, mo, so, hd, md, sd,
+                hora.getHores(), hora.getMinuts(), hora.getSegons());
+        String titol = "testHoraConstructorEspecific";
+        assertHoraEsperada(hd, md, sd, hora, titol, msg);
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+    "0,0,0,0,0,1",
+    "1,2,3,1,2,4",
+    "2,3,59,2,4,0",
+    "3,59,59,4,0,0",
+    "23,59,59,0,0,0",
+    })
+    @DisplayName("test Hora.incrementa()")
+    public void incrementa1(
+            int ho, int mo, int so,
+            int hd, int md, int sd) {
+        Hora hora = new Hora(ho, mo, so);
+        hora.incrementa();
+        String msg = String.format(
+                "'%d:%d:%d'.incrementa() hauria de ser '%d:%d:%d' però és '%d:%d:%d'",
+                ho, mo, so, hd, md, sd,
+                hora.getHores(), hora.getMinuts(), hora.getSegons());
+        String titol = "testIncrementaUnSegon";
+        assertHoraEsperada(hd, md, sd, hora, titol, msg);
+    }
+
+    // test compareTo
+    @Test
+    @DisplayName("test hora compareTo() quan menor-major")
+    public void testCompareToReconeixMenorMajor() {
+        Hora horaMenor = new Hora(1, 2, 3);
+        Hora horaMajor = new Hora(1, 2, 4);
+        assertTrue(horaMenor.compareTo(horaMajor)<0);
+    }
+
+    @Test
+    @DisplayName("test hora compareTo() quan major-menor")
+    public void testCompareToReconeixMajorMenor() {
+        Hora horaMenor = new Hora(1, 2, 3);
+        Hora horaMajor = new Hora(1, 2, 4);
+        assertTrue(horaMajor.compareTo(horaMenor)>0);
+    }
+
+    @Test
+    @DisplayName("test hora compareTo() quan iguals")
+    public void testCompareToReconeixHoresIguals() {
+        Hora hora1 = new Hora(1, 2, 3);
+        Hora hora2 = new Hora(1, 2, 3);
+        assertEquals(0, hora1.compareTo(hora2));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value={
+    "1,2,4,1,2,3",
+    "5,6,8,5,6,7",
+    "2,3,0,2,2,59",
+    "3,0,0,2,59,59",
+    "0,0,0,23,59,59",
+    })
+    @DisplayName("test Hora.decrementa()")
+    public void decrementa1(
+            int ho, int mo, int so,
+            int hd, int md, int sd) {
+        Hora hora = new Hora(ho, mo, so);
+        hora.decrementa();
+        String msg = String.format(
+                "'%d:%d:%d'.decrementa() hauria de ser '%d:%d:%d' però és '%d:%d:%d'",
+                ho, mo, so, hd, md, sd,
+                hora.getHores(), hora.getMinuts(), hora.getSegons());
+        String titol = "testDecrementaUnSegon";
+        assertHoraEsperada(hd, md, sd, hora, titol, msg);
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+    "0,0,1,1,0,0,2",
+    "0,1,0,1,0,1,1",
+    "1,0,0,1,1,0,1",
+    "0,0,0,1,0,0,1",
+    "1,2,5,2,1,2,7",
+    "0,0,0,59,0,0,59",
+    "3,2,4,59,3,3,3",
+    "0,0,0,60,0,1,0",
+    "4,5,6,60,4,6,6",
+    "0,0,0,3600,1,0,0",
+    "9,8,7,3600,10,8,7",
+    "0,0,0,82739,22,58,59",
+    "1,2,3,82739,0,1,2",
+    "0,0,0,172737,23,58,57",
+    "1,2,3,172737,1,1,0",
+    "9,8,7,172737,9,7,4",
+    "1,2,3,3599,2,2,2",
+    "0,0,0,3599,0,59,59",
+    "0,0,0,432001,0,0,1",
+    "12,21,52,432001,12,21,53",
+    "0,0,0,86399,23,59,59",
+    "1,2,3,86399,1,2,2",
+    "23,59,59,86399,23,59,58",
+    "0,0,0,2147397247,3,14,7",
+    "1,2,3,2147397247,4,16,10",
+    "3,2,1,2147397247,6,16,8",
+    "0,0,1,-1,0,0,0",
+    "0,1,0,-1,0,0,59",
+    "1,0,0,-1,0,59,59",
+    "0,0,0,-1,23,59,59",
+    "1,2,5,-2,1,2,3",
+    "3,2,4,-60,3,1,4",
+    "1,2,3,-3600,0,2,3",
+    "0,0,0,-3600,23,0,0",
+    "0,0,0,-432001,23,59,59",
+    "12,21,52,-432001,12,21,51",
+    "0,0,0,-86399,0,0,1",
+    "1,2,3,-86399,1,2,4",
+    "23,59,59,-86399,0,0,0",
+    "0,0,0,-2147397248,20,45,52",
+    "1,2,3,-2147397248,21,47,55",
+    "3,2,1,-2147397248,23,47,53",
+    })
+    @DisplayName("test hora incrementa N")
+    public void incrementaN(
+            int ho, int mo, int so,
+            int delta,
+            int hd, int md, int sd) {
+        Hora hora = new Hora(ho, mo, so);
+        hora.incrementa(delta);
+        String msg = String.format("'%d:%d:%d'.incrementa(%d) hauria de ser '%d:%d:%d' però és '%d:%d:%d'",
+                ho, mo, so, delta, hd, md, sd, hora.getHores(), hora.getMinuts(), hora.getSegons());
+        String titol = "testHoraIncrementaN";
+        assertHoraEsperada(hd, md, sd, hora, titol, msg);
+            }
+
+
+    @ParameterizedTest
+    @CsvSource(value={
+    "0,0,1,1,0,0,0",
+    "0,1,0,1,0,0,59",
+    "1,0,0,1,0,59,59",
+    "0,0,0,1,23,59,59",
+    "1,2,5,2,1,2,3",
+    "3,2,4,60,3,1,4",
+    "1,2,3,3600,0,2,3",
+    "0,0,0,3600,23,0,0",
+    "0,0,0,432001,23,59,59",
+    "12,21,52,432001,12,21,51",
+    "0,0,0,86399,0,0,1",
+    "1,2,3,86399,1,2,4",
+    "23,59,59,86399,0,0,0",
+    "0,0,0,2147397247,20,45,53",
+    "1,2,3,2147397247,21,47,56",
+    "3,2,1,2147397247,23,47,54",
+    "0,0,1,-1,0,0,2",
+    "0,1,0,-1,0,1,1",
+    "1,0,0,-1,1,0,1",
+    "0,0,0,-1,0,0,1",
+    "1,2,5,-2,1,2,7",
+    "3,2,4,-60,3,3,4",
+    "1,2,3,-3600,2,2,3",
+    "0,0,0,-3600,1,0,0",
+    "0,0,0,-432001,0,0,1",
+    "12,21,52,-432001,12,21,53",
+    "0,0,0,-86399,23,59,59",
+    "1,2,3,-86399,1,2,2",
+    "23,59,59,-86399,23,59,58",
+    "0,0,0,-2147397248,3,14,8",
+    "1,2,3,-2147397248,4,16,11",
+    "3,2,1,-2147397248,6,16,9",
+    })
+    @DisplayName("test hora decrementa N")
+    public void decrementaN(
+            int ho, int mo, int so,
+            int delta,
+            int hd, int md, int sd) {
+        Hora hora = new Hora(ho, mo, so);
+        hora.decrementa(delta);
+        String msg = String.format("'%d:%d:%d'.decrementa(%d) hauria de ser '%d:%d:%d' però és '%d:%d:%d'",
+                ho, mo, so, delta, hd, md, sd, hora.getHores(), hora.getMinuts(), hora.getSegons());
+        String titol = "testHoraDecrementaN";
+        assertHoraEsperada(hd, md, sd, hora, titol, msg);
+            }
+
+    //  test de toString()
+    @Test
+    @DisplayName("test hora toString() cas general")
+    public void testHoraToStringGeneral() {
+        Hora hora = new Hora(11, 21, 31);
+        String expected = "11:21:31";
+        assertEquals(expected, hora.toString());
+    }
+
+    @Test
+    @DisplayName("test hora toString() amb zeros")
+    public void testHoraToStringLeadingZeros() {
+        Hora hora = new Hora(1, 2, 3);
+        String expected = "1:02:03";
+        assertEquals(expected, hora.toString());
+    }
+
+    private void assertHoraEsperada(
+            int he, int me, int se,
+            Hora hora,
+            String titol,
+            String msg) {
+        assertAll(titol,
+                () -> assertEquals(he, hora.getHores(), msg),
+                () -> assertEquals(me, hora.getMinuts(), msg),
+                () -> assertEquals(se, hora.getSegons(), msg)
+                );
+    }
+}
