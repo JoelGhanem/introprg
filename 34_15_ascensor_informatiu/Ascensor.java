@@ -45,6 +45,7 @@ public class Ascensor {
     }
     public void setMoviment(String nouMoviment) {
         if (nouMoviment.equals("pujant")) {
+            amunt = true;
             pujant = true;
             abaix = false;
             aturat = false;
@@ -52,6 +53,7 @@ public class Ascensor {
             moviment = nouMoviment;
         } else if (nouMoviment.equals("baixant")) {
             baixant = true;
+            amunt = true;
             movent = true;
             abaix = false;
             aturat = false;
