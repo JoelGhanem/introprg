@@ -1,7 +1,7 @@
 //Afegeix al repertori de mètodes de Ascensor els següents: estaAbaix() i estaAmunt() retornen cert quan l'ascensor es troba al primer i al darrer pis respectivament. estaMovent() retorna cert quan està pujant o baixant. comEsta() retorna un String amb el moviment i el pis. Per exemple, si està pujant en el pis 1, el missatge serà pujant al pis 1.//
 public class Ascensor {
     private boolean abaix = true;
-    private boolean amunt = true;
+    private boolean amunt = false;
     private boolean aturat = true;
     private boolean movent = false;
     private boolean pujant = false;
@@ -35,10 +35,7 @@ public class Ascensor {
     public void setPis(int nouPis) {
         if (nouPis >= -1 && nouPis <= 10) {
             if (nouPis == 10) amunt = true; abaix = false;
-            if (nouPis == -1) {
-                abaix = true;
-                amunt = false;
-            }
+            if (nouPis == -1) abaix = true; amunt = false;
             if (nouPis > -1 && nouPis < 10) abaix = false; 
             if (nouPis > pis) pujant = true;
             if (nouPis < pis) baixant = true;
