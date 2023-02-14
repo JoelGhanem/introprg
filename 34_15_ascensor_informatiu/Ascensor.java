@@ -9,6 +9,24 @@ public class Ascensor {
     private String esta = "";
     private int pis = -1;
     private String moviment = "aturat";
+    public boolean estaAturat() {
+        return aturat;
+    }
+    public boolean estaPujant() {
+        return pujant;
+    }
+    public boolean estaBaixant() {
+        return baixant;
+    }
+    public boolean estaMovent() {
+        return movent;
+    }
+    public boolean estaAbaix() {
+        return abaix;
+    }
+    public boolean estaAmunt() {
+        return amunt;
+    }
     public int getPis() {
         return pis;
     }
