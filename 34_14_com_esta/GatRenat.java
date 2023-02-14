@@ -7,7 +7,7 @@ public class GatRenat {
     private boolean estirat = true;
     private int vides = 7;
     private String posicio = "estirat";
-    public boolean getViu() {
+    public boolean estaViu() {
         return viu;
     }
     public boolean getDret() {
