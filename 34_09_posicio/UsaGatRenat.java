@@ -4,8 +4,6 @@ public class UsaGatRenat {
         GatRenat renat = new GatRenat();
         return renat;
     }
-    public static void posicioGat() {
-    }
 
     public static void main(String[] args) {
         GatRenat renat = creaGat();
