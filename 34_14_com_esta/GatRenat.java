@@ -10,13 +10,13 @@ public class GatRenat {
     public boolean estaViu() {
         return viu;
     }
-    public boolean getDret() {
+    public boolean estaDret() {
         return dret;
     }
-    public boolean getAssegut() {
+    public boolean estaAssegut() {
         return assegut;
     }
-    public boolean getEstirat() {
+    public boolean estaEstirat() {
         return estirat;
     }
     public int getVides() {
