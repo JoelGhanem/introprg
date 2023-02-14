@@ -19,14 +19,14 @@ public class GatRenat {
     public boolean estaEstirat() {
         return estirat;
     }
-    public int getVides() {
+    public int estaEstirat() {
         return vides;
-    }
-    public void setVides(int novesVides) {
-        if (novesVides <= 0) viu = false; vides = novesVides;
     }
     public String getPosicio() {
         return posicio;
+    }
+    public void setVides(int novesVides) {
+        if (novesVides <= 0) viu = false; vides = novesVides;
     }
     public void setPosicio(String novaPosicio) {
         if (novaPosicio.equals("assegut")) {
