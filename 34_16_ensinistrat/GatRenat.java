@@ -5,13 +5,18 @@ public class GatRenat {
     private String estiratS = "m'estiro";
     public String aixecat() { return aixecat; }
     public String seu() { return seu; }
-    public String estirat() { return estiratS; }
     private boolean viu = true;
     private boolean dret = false;
     private boolean assegut = false;
-    private boolean estirat = true;
+    private boolean estirat = false;
     private int vides = 7;
     private String posicio = "estirat";
+
+    public String estirat() {
+        if (estirat) estiratS = "no faig res";
+        estirat = true;
+        return estiratS; 
+    }
     public boolean estaViu() {
         return viu;
     }
