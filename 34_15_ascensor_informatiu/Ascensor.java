@@ -38,6 +38,8 @@ public class Ascensor {
             if (nouPis > pis) pujant = true;
             if (nouPis < pis) baixant = true;
             if (nouPis == pis) aturat = true;
+            if (nouPis == 10) amunt = true; abaix = false;
+            if (nouPis == -1) abaix = false; amunt = false;
             pis = nouPis;
         }
     }
