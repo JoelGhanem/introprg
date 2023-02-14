@@ -49,6 +49,7 @@ public class Ascensor {
             abaix = false;
             aturat = false;
             moviment = nouMoviment;
+            System.out.println(amunt);
         } else if (nouMoviment.equals("baixant")) {
             baixant = true;
             abaix = false;
