@@ -6,7 +6,6 @@ public class Ascensor {
     private boolean movent = false;
     private boolean pujant = false;
     private boolean baixant = false;
-    private String esta = "";
     private int pis = -1;
     private String moviment = "aturat";
     public boolean estaAturat() {
@@ -45,10 +44,12 @@ public class Ascensor {
     public void setMoviment(String nouMoviment) {
         if (nouMoviment.equals("pujant")) {
             pujant = true;
+            abaix = false;
             aturat = false;
             moviment = nouMoviment;
         } else if (nouMoviment.equals("baixant")) {
             baixant = true;
+            abaix = false;
             aturat = false;
             moviment = nouMoviment;
         }
