@@ -20,11 +20,13 @@ public class GatRenat {
     public boolean estaViu() {
         return viu;
     }
-    public boolean estaDret() {
-        return dret;
+    public String estaDret() {
+        if (dret) aixecat = "no faig res";
+        return aixecat;
     }
-    public boolean estaAssegut() {
-        return assegut;
+    public String estaAssegut() {
+        if (assegut) seu = "no faig res";
+        return seu;
     }
     public boolean estaEstirat() {
         return estirat;
