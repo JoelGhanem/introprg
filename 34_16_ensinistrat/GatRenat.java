@@ -9,14 +9,11 @@ public class GatRenat {
     private boolean estirat = false;
     private int vides = 7;
     private String posicio = "estirat";
-
+    //Strings
     public String estirat() {
         if (estirat) estiratS = "no faig res";
         estirat = true;
         return estiratS; 
-    }
-    public boolean estaViu() {
-        return viu;
     }
     public String aixecat() {
         if (dret) aixecatS = "no faig res";
@@ -28,12 +25,19 @@ public class GatRenat {
         assegut = true;
         return seuS;
     }
-    public boolean estaEstirat() {
-        return estirat;
-    }
-    public String getPosicio() {
-        return posicio;
-    }
+
+    public String getPosicio() { return posicio; }
+
+    //booleans
+    public boolean estaViu() { return viu; }
+
+    public boolean estaEstirat() { return estirat; }
+
+    public boolean estaDret() {return dret;}
+
+    public boolean estAssegut() { return assegut;}
+
+
     public void setVides(int novesVides) {
         if (novesVides <= 0) viu = false; vides = novesVides;
     }
