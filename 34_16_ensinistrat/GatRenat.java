@@ -4,7 +4,7 @@ public class GatRenat {
     private String seuS = "m'assec"; 
     private String estiratS = "m'estiro";
     private boolean viu = true;
-    private boolean dret = false;
+    private boolean dret = true;
     private boolean assegut = false;
     private boolean estirat = false;
     private int vides = 7;
