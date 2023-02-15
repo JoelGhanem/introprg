@@ -32,13 +32,13 @@ Pregunta 1. Obtenir
 ===================
 
 Per consultar (llegir, obtenir) el valor d'una propietat de la instància,
-cal 
+cal cridar la variable vides dins de la instancia renat 
 
 Pregunta 2. Assignar
 ====================
 
 Per canviar (escriure, assignar) el valor d'una propietat de la instància,
-cal XXX
+cal modificar la variable vides de la instancia, en aquest cas renat.vides
 
 Pregunta 3. Valors absurds
 ==========================
@@ -50,4 +50,4 @@ A la pregunta següent:
     evitar fent servir els coneixements de programació estructurada i
     modular que hem treballat fins ara?
 
-La meva resposta és: XXX
+La meva resposta és: Sí que es possible modificant la variable vides, No és molt desitjable ja que podria ocasionar errors al nostre codi. Es podria evitar cridant a un modul que ens retornes el valor de la variable.

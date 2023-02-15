@@ -98,13 +98,13 @@ Pregunta 8. Instància
 
 Respecte la línia 5:
 
-* la instància és: XXX
+* la instància és: renat
 
-* la variable és: XXX
+* la variable és: vides
 
-* la referència és: XXX
+* la referència és: Gat renat
 
-* la classe és: XXX
+* la classe és: GatRenat
 
 Pregunta 9. ``vides`` i variables globals
 =========================================
