@@ -1,7 +1,6 @@
 //GatRenat per aquest exercici//
 public class GatRenat {
     public int vides = 7;   // vides disponibles del gat Renat
-
     public static void main(String[] args) {
         GatRenat renatI;
         renatI = new GatRenat();               // crea un primer gat Renat
