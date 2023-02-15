@@ -22,10 +22,12 @@ public class GatRenat {
     }
     public String estaDret() {
         if (dret) aixecat = "no faig res";
+        dret = true;
         return aixecat;
     }
     public String estaAssegut() {
         if (assegut) seu = "no faig res";
+        assegut = true;
         return seu;
     }
     public boolean estaEstirat() {
