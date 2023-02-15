@@ -76,4 +76,3 @@ Pregunta 6. Diferents directoris
 
 Després de moure el fitxer ``UsaGatRenat.java`` a una carpeta diferent d'on es
 troba ``GatRenat.java``, m'he trobat que Em retorna que Al gat Renat li queden 7 vides
-
