@@ -15,9 +15,9 @@ public class GatRenat {
         estirat = true;
         return estiratS; 
     }
-    //public boolean estaViu() {
-    //  return viu;
-    //}
+    public boolean estaViu() {
+        return viu;
+    }
     public String aixecat() {
         if (dret) aixecatS = "no faig res";
         dret = true;
@@ -28,24 +28,24 @@ public class GatRenat {
         assegut = true;
         return seuS;
     }
-    //public boolean estaEstirat() {
-    //return estirat;
-    //}
-    //public String getPosicio() {
-    //return posicio;
-    //}
-    //public void setVides(int novesVides) {
-    //if (novesVides <= 0) viu = false; vides = novesVides;
-    //}
-    //public void setPosicio(String novaPosicio) {
-    //if (novaPosicio.equals("assegut")) {
-    //posicio = novaPosicio;
-    //assegut = true;
-    //estirat = false;
-    //} else if (novaPosicio.equals("dret")){
-    //posicio = novaPosicio;
-    //dret = true;
-    //estirat = false;
-    //}
-    //}
+    public boolean estaEstirat() {
+        return estirat;
+    }
+    public String getPosicio() {
+        return posicio;
+    }
+    public void setVides(int novesVides) {
+        if (novesVides <= 0) viu = false; vides = novesVides;
+    }
+    public void setPosicio(String novaPosicio) {
+        if (novaPosicio.equals("assegut")) {
+            posicio = novaPosicio;
+            assegut = true;
+            estirat = false;
+        } else if (novaPosicio.equals("dret")){
+            posicio = novaPosicio;
+            dret = true;
+            estirat = false;
+        }
+    }
 }
