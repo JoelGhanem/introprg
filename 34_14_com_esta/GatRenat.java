@@ -19,9 +19,6 @@ public class GatRenat {
     public boolean estaEstirat() {
         return estirat;
     }
-    public int estaEstirat() {
-        return vides;
-    }
     public String getPosicio() {
         return posicio;
     }
