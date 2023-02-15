@@ -35,7 +35,7 @@ public class GatRenat {
 
     public boolean estaDret() {return dret;}
 
-    public boolean estAssegut() { return assegut;}
+    public boolean estaAssegut() { return assegut;}
 
 
     public void setVides(int novesVides) {
