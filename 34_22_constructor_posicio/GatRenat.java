@@ -4,6 +4,7 @@ public class GatRenat {
     private String posicio;
     public GatRenat(int vides, String posicio) {
         setVides(vides);
+        setPosicio(posicio);
     }
     public int getVides() { return vides; }
     public void setVides(int novesVides) {
