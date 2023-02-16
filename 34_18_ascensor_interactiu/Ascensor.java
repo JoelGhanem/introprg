@@ -22,10 +22,10 @@ public class Ascensor {
 
     public boolean arrencaAbaix() {
         if (!pujant) {
-            pujant = false;
-            baixant = true;
-            movent = true;
-            moviment = "baixant";
+        pujant = false;
+        baixant = true;
+        movent = true;
+        moviment = "baixant";
         }
         return baixant;
     }
@@ -63,7 +63,9 @@ public class Ascensor {
             pis = nouPis;
             return pis;
         } if (nouPis == -2) {
+            abaix = true;
             moviment = "aturat";
+            return pis;
         }
         pis = nouPis;
         return pis;
