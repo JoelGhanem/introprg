@@ -18,7 +18,7 @@ public class GatRenat {
     public String seu() {
         if (posicio.equals("m'assento")) {
             posicio = "no faig res";
-        } else { posicio = "m'assento";}
+        } else { posicio = "m'assec";}
         return posicio;
     }
 
