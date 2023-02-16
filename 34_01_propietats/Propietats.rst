@@ -112,6 +112,6 @@ Pregunta 9. ``vides`` i variables globals
 Les diferències presenta la variable ``vides`` respecte les 
 *variables globals* són:
 
-1. XXX
+1. La diferència principal és que la variable vides no es statica
 
-. XXX
+. Una diferència important és la manera d'accedir-hi, per accedir necessites un objecte, com renat
