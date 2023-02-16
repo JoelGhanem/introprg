@@ -11,7 +11,7 @@ public  class UsaAscensor {
         Ascensor ascensor = new Ascensor();
         System.out.println("Pis inicial");
         ascensor.setPis(llegeixEnter());
-        System.out.printf("Inicialment l'ascensor està %s%n", ascensor.comEsta());
+        System.out.printf("Inicialment l'ascensor està %s%n", ascensor.seguentPis());
         // aturat a pujant
         boolean resposta = ascensor.arrencaAmunt();
         System.out.printf("En arrencar amunt l'ascensor respon %b i està %s%n",
