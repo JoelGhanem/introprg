@@ -4,18 +4,21 @@ public class GatRenat {
     private String posicio = "estirat";
     //Strings
     public String estirat() {
+        posicio = "estirat";
         if (posicio.equals("estirat")) {
             posicio = "no faig res";
         }
         return posicio; 
     }
     public String aixecat() {
+        posicio = "aixecat";
         if (posicio.equals("aixecat")) {
             posicio = "no faig res";
         }
         return posicio;
     }
     public String seu() {
+        posicio = "seu";
         if (posicio.equals("aixecat")) {
             posicio = "no faig res";
         }
