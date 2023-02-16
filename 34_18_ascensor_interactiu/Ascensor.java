@@ -13,6 +13,18 @@ public class Ascensor {
         aturat = true;
         return aturat;
     }
+    public boolean arrencaAmunt() {
+        baixant = false;
+        pujant = true;
+        return true;
+    }
+
+    public boolean arrencaAbaix() {
+        pujant = false;
+        baixant = true;
+        return true;
+    }
+
     public boolean estaAturat() {
         return aturat;
     }
@@ -32,7 +44,8 @@ public class Ascensor {
         return amunt;
     }
     //public ints
-    public int seguentPis(int nouPis) {
+    public int seguentPis() {
+        int nouPis = pis;
         nouPis +=1;
         if (nouPis == 10) {
             nouPis = 9; 
