@@ -1,6 +1,6 @@
 //Aquest exercici torna a revisar l'ascensor que hem fet en exercicis anteriors. En aquesta ocasió ampliaràs els mètodes que ofereix l'ascensor de manera que aquest sigui més usable.//
 public class Ascensor {
-    private boolean abaix = true;
+    private boolean abaix = false;
     private boolean amunt = false;
     private boolean aturat = true;
     private boolean movent = false;
