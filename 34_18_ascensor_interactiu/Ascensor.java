@@ -14,18 +14,18 @@ public class Ascensor {
         return aturat;
     }
     public boolean arrencaAmunt() {
-        baixant = false;
-        pujant = true;
+        //baixant = false;
+        //pujant = true;
         moviment = "pujant";
-        return true;
+        return amunt;
     }
 
     public boolean arrencaAbaix() {
-        pujant = false;
-        baixant = true;
-        movent = true;
+        //pujant = false;
+        //baixant = true;
+        //movent = true;
         moviment = "baixant";
-        return true;
+        return baixant;
     }
 
     public boolean estaAturat() {
