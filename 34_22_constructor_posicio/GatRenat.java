@@ -1,7 +1,7 @@
 //Implementa una nova versió que ofereixi la inicialització del gat Renat amb la posició indicada. En cas que la posició que rebi el constructor no sigui vàlida, el gat Renat resultant estarà en la seva posició favorita, estirat.
 public class GatRenat {
     private int vides = 7;
-    private String posicio;
+    private String posicio = "estirat";
     public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
