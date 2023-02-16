@@ -16,16 +16,22 @@ public class Ascensor {
     public boolean arrencaAmunt() {
         baixant = false;
         pujant = true;
+        moviment = "pujant";
         return true;
     }
 
     public boolean arrencaAbaix() {
         pujant = false;
         baixant = true;
+        movent = true;
+        moviment = "baixant";
         return true;
     }
 
     public boolean estaAturat() {
+        aturat = true;
+        baixant = false;
+        movent = true;
         return aturat;
     }
     public boolean estaPujant() {
