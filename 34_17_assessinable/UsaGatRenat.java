@@ -18,6 +18,7 @@ public class UsaGatRenat {
             }
             System.out.println("muerto");
             System.out.println("Renat diu: " + renat.mor());    // per rematar-ho!
+            System.out.println(vides);
             System.out.println("Renat diu: " + renat.resuscita(vides));
         }
     }
