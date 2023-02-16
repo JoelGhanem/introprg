@@ -43,7 +43,7 @@ Disposem ara de dos fitxers amb codi:
 Pregunta 1. On està el ``main()``
 =================================
 
-El punt d'entrada ``main()`` d'aquest programa es troba al fitxer UsaGatRenat.java 
+El punt d'entrada ``main()`` d'aquest programa es troba al fitxer GatRenat.java i al fitxerUsaGatRenat.java 
 
 Pregunta 2. Distingint dos ``main()``
 =====================================

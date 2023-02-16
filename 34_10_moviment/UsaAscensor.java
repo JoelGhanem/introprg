@@ -13,3 +13,4 @@ public class UsaAscensor {
         System.out.println("Moviment final: " + ascensor.moviment);
     }
 }
+
