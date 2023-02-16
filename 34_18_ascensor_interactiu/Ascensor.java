@@ -65,7 +65,6 @@ public class Ascensor {
         } if (nouPis == -2) {
             abaix = true;
             moviment = "aturat";
-            return pis;
         }
         pis = nouPis;
         return pis;
