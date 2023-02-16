@@ -59,14 +59,13 @@ public class Ascensor {
         if (nouPis == 11) {
             nouPis = 9; 
             amunt = false; 
-            abaix = true;
             moviment = "baixant";
             pis = nouPis;
             return pis;
-        } else if (nouPis == -1) {
+        } else if (nouPis == -2) {
             nouPis = 0;
             amunt = true;
-            abaix = false;
+            abaix = true;
             pis = nouPis;
             return pis;
         }
