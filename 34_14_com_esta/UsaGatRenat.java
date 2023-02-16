@@ -10,7 +10,7 @@ public class UsaGatRenat {
         String nuevasVidas = Entrada.readLine();
         if (Character.isDigit(nuevasVidas.charAt(0))) {
             renat.setVides(Integer.parseInt(nuevasVidas));
-        g
+        }
         System.out.println("Introdueix nova posició:");
         renat.setPosicio((Entrada.readLine()));
         System.out.println("Finalment renat.estaViu(): " + renat.estaViu());
