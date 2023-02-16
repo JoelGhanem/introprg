@@ -21,7 +21,7 @@ public class Ascensor {
     }
 
     public boolean arrencaAbaix() {
-        if (pujant) {
+        if (!pujant) {
         pujant = false;
         baixant = true;
         movent = true;
