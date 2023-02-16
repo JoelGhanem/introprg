@@ -55,7 +55,7 @@ public class Ascensor {
     public int seguentPis() {
         int nouPis = pis;
         nouPis +=1;
-        if (nouPis == 10) {
+        if (nouPis == 11) {
             nouPis = 9; 
             amunt = false; 
             abaix = true;
