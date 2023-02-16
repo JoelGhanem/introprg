@@ -2,37 +2,45 @@
 public class GatRenat {
     private int vides = 7;
     private String posicio = "";
+    private boolean viu = true;
+    private boolean dret = false;
+    private boolean estirat = false;
+    private boolean assegut = false;
+
     //Strings
     public String estirat() {
         if (posicio.equals("m'estiro")) {
             posicio = "no faig res";
-        } else { posicio = "m'estiro";}
+            estirat = true;
+        } else { posicio = "m'estiro"; estirat = true;}
         return posicio; 
     }
     public String aixecat() {
         if (posicio.equals("m'aixeco")) {
             posicio = "no faig res";
-        } else { posicio = "m'aixeco"; }
+            dret = true;
+        } else { posicio = "m'aixeco"; dret = true;}
         return posicio;
     }
     public String seu() {
         if (posicio.equals("m'assento")) {
             posicio = "no faig res";
-        } else { posicio = "m'assec";}
+            assegut = true;
+        } else { posicio = "m'assec";assegut = true;}
         return posicio;
     }
 
     public String getPosicio() { return posicio; }
 
     //booleans
-    //public boolean estaViu() { return viu; }
-    //
-    //public boolean estaEstirat() { return estirat; }
-    //
-    //public boolean estaDret() {return dret;}
-    //
-    //public boolean estaAssegut() { return assegut;}
-    //
+    public boolean estaViu() { return viu; }
+
+    public boolean estaEstirat() { return estirat; }
+
+    public boolean estaDret() {return dret;}
+
+    public boolean estaAssegut() { return assegut;}
+
 
     public void setVides(int novesVides) {
         //if (novesVides <= 0) //viu = false; vides = novesVides;
