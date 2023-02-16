@@ -10,10 +10,13 @@
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
+        //lo resucita 3 veces
         for (int vides = 1; vides <= 3; vides++) {
+            //le pega mientras esta vivo
             while (renat.estaViu()) {
                 System.out.println("Renat diu: " + renat.mor());
             }
+            System.out.println("muerto");
             System.out.println("Renat diu: " + renat.mor());    // per rematar-ho!
             System.out.println("Renat diu: " + renat.resuscita(vides));
         }
