@@ -6,7 +6,7 @@ public class GatRenat {
     private boolean viu = true;
     private boolean dret = false;
     private boolean assegut = false;
-    private boolean estirat = true;
+    private boolean estirat = false;
     private int vides = 7;
     private String posicio = "estirat";
     //Strings
