@@ -66,7 +66,6 @@ public class Ascensor {
             amunt = true;
             abaix = true;
             moviment = "aturat";
-            pis = nouPis;
             return pis;
         }
         pis = nouPis;
