@@ -37,7 +37,10 @@ public class GatRenat {
 
     public boolean estaAssegut() { return assegut;}
 
-
+    public int getVides(int novesVides) {
+        novesVides = vides;
+        return novesVides;
+    }
     public void setVides(int novesVides) {
         if (novesVides <= 0) viu = false; vides = novesVides;
     }
