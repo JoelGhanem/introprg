@@ -54,11 +54,13 @@ public class Ascensor {
     //public ints
     public int seguentPis() {
         int nouPis = pis;
-        nouPis +=1;
+        if (moviment.equals("pujant")) { nouPis ++;}
+        else if (moviment.equals("baixant")) { nouPis --;}
         if (nouPis == 11) {
             nouPis = 9; 
             amunt = false; 
             abaix = true;
+            moviment = "baixant";
             pis = nouPis;
             return pis;
         } else if (nouPis == -1) {
