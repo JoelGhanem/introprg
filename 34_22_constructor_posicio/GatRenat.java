@@ -13,7 +13,7 @@ public class GatRenat {
     }
     public String getPosicio() {return posicio; }
     public void setPosicio(String novaPosicio) {
-        if (novaPosicio.equals("dret")) {posicio = novaPosicio;}
+        if (posicio.equals("dret")) { posicio = novaPosicio;}
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
