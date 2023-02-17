@@ -1,7 +1,7 @@
 //Posem en pràctica la possibilitat d'afegir més d'un constructor al nostre amic Renat. En concret, ens interessarà permetre crear instàncies de les següents maneresVols fer-ho molt modulat? Implementa-ho de manera que tots els constructors excepte un facin ús de this(), i que el que no fa ús de this(), fa us dels setters.:
 public class GatRenat {
     private int vides = 7;
-    private String posicio = "estirat";
+    private String posicio = "assegut";
     public GatRenat() {
         getVides();
         getPosicio();
