@@ -2,6 +2,18 @@
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
+    public GatRenat() {
+        getVides();
+        getPosicio();
+    }
+    public GatRenat(int vides) {
+        setVides(vides);
+        getPosicio();
+    }
+    public GatRenat(String posicio) {
+        getVides();
+        setPosicio(posicio);
+    }
     public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
