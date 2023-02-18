@@ -1,4 +1,4 @@
-//Programa que canvia la posicio del gat renat segons la entrada rebuda//
+//Programa que canvia la posicio del gat renat segons la entrada rebuda  i et dona uiuna respostas idferent segons en quina posicio estava//
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();

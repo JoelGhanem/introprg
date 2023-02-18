@@ -1,4 +1,4 @@
-/*Afegeix al repertori de mètodes del Renat els següents:*/
+/*Afegeix al repertori de mètodes del Renat els següents: en els que canvia la posicio segons la posicio donada per l'usuari*/
 public class GatRenat {
 
     private boolean viu = true;
