@@ -9,7 +9,7 @@ public class GatRenat {
 
     //Strings
     public String estirat() {
-        if (posicio.equals("m'estiro")) {
+        if (estirat) {
             posicio = "no faig res";
             estirat = true;
         } else { posicio = "m'estiro"; estirat = true;}
