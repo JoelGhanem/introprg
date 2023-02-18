@@ -3,9 +3,9 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "";
     private boolean viu = true;
-    private boolean dret = false;
-    private boolean estirat = false;
-    private boolean assegut = false;
+    private boolean dret = true;
+    private boolean estirat = true;
+    private boolean assegut = true;
 
     //Strings
     public String estirat() {
