@@ -3,9 +3,9 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "";
     private boolean viu = true;
-    private boolean dret = false;
-    private boolean estirat = false;
-    private boolean assegut = false;
+    private boolean dret = true;
+    private boolean estirat = true;
+    private boolean assegut = true;
 
     //Strings
     public String estirat() {
@@ -16,14 +16,14 @@ public class GatRenat {
         return posicio; 
     }
     public String aixecat() {
-        if (posicio.equals("m'aixeco")) {
+        if (dret) {
             posicio = "no faig res";
             dret = true;
         } else { posicio = "m'aixeco"; dret = true;}
         return posicio;
     }
     public String seu() {
-        if (posicio.equals("m'assec")) {
+        if (assegut) {
             posicio = "no faig res";
             assegut = true;
         } else { posicio = "m'assec";assegut = true;}
