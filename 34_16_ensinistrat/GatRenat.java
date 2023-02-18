@@ -23,7 +23,7 @@ public class GatRenat {
         return posicio;
     }
     public String seu() {
-        if (posicio.equals("m'assento")) {
+        if (posicio.equals("m'assec")) {
             posicio = "no faig res";
             assegut = true;
         } else { posicio = "m'assec";assegut = true;}
