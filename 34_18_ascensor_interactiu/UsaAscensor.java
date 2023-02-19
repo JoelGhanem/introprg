@@ -27,6 +27,6 @@ public  class UsaAscensor {
             System.out.println("\t ara està "+ ascensor.comEsta());
         }
         ascensor.aturat();
-        System.out.printf("Està %s. Final de trajecte!%n", ascensor.comEsta());
+        System.out.printf("Està %s. Final de trajecte!%n", acensor.comEsta());
     }
 }
