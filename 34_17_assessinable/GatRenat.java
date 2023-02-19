@@ -67,6 +67,9 @@ public class GatRenat {
             return "...";
         }
     }
+    public String resuscita() {
+        return "mierda";
+    }
     public String resuscita(int numVides) {
         viu = true;
         vides = vides + numVides;
