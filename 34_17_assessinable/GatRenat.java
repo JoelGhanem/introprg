@@ -40,9 +40,8 @@ public class GatRenat {
 
     public boolean estaAssegut() { return posicio.equals("assegut");}
 
-    public int getVides(int novesVides) {
-        novesVides = vides;
-        return novesVides;
+    public int getVides() {
+        return vides;
     }
     public void setVides(int novesVides) {
         if (novesVides <= 0) viu = false; vides = novesVides;
