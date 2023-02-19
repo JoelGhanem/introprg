@@ -4,7 +4,7 @@ public class GatRenat {
     private String posicio = "estirat";
     public GatRenat(int vides, String posicio) {
         setVides(vides);
-        this.setPosicio(posicio);
+        setPosicio(posicio);
     }
     public int getVides() { return vides; }
     public void setVides(int novesVides) {
@@ -12,12 +12,10 @@ public class GatRenat {
             vides = novesVides;
         }
     }
-    public String getPosicio() {return this.posicio; }
+    public String getPosicio() {return posicio; }
     public void setPosicio(String posicio) {
         if (posicio.equals("dret")) { 
-            System.out.println(posicio);
-            System.out.println(this.posicio);
-            posicio = this.posicio;
+            this.posicio = posicio;
         }
     }
     @Override
