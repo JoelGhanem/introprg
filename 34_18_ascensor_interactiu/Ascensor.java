@@ -25,22 +25,20 @@ public class Ascensor {
             moviment = "pujant";
             return true;
         } else {
+            movent = true;
             return false;
         }
     }
 
     public boolean arrencaAbaix() {
-        if (!pujant) {
-            pujant = false;
-            baixant = true;
-            movent = true;
+        if (aturat) {
             moviment = "baixant";
+            return true;
         } 
-        if (baixant) { 
+        else {
             movent = true;
             return false;
         }
-        return baixant;
     }
 
     public boolean estaAturat() {
