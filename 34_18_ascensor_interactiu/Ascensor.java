@@ -14,6 +14,7 @@ public class Ascensor {
             pujant = false;
             baixant = false;
             movent = false;
+            moviment = "aturat";
             return false;
         } else {
             movent = false;
