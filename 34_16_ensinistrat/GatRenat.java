@@ -3,31 +3,34 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "";
     private boolean viu = true;
-    private boolean dret = true;
-    private boolean estirat = true;
-    private boolean assegut = true;
+    private boolean dret = false;
+    private boolean estirat = false;
+    private boolean assegut = false;
 
     //Strings
     public String estirat() {
         if (estirat) {
-            posicio = "no faig res";
+            return "no faig res";
+        } else { 
             estirat = true;
-        } else { posicio = "m'estiro"; estirat = true;}
-        return posicio; 
+            return "m'estiro";
+        }
     }
     public String aixecat() {
         if (dret) {
-            posicio = "no faig res";
+            return  "no faig res";
+        } else { 
             dret = true;
-        } else { posicio = "m'aixeco"; dret = true;}
-        return posicio;
+            return  "m'aixeco"; 
+        }
     }
     public String seu() {
         if (assegut) {
-            posicio = "no faig res";
+            return  "no faig res";
+        } else { 
             assegut = true;
-        } else { posicio = "m'assec";assegut = true;}
-        return posicio;
+            return  "m'assec";
+        }
     }
 
     public String getPosicio() { return posicio; }
