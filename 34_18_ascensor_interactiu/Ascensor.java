@@ -27,7 +27,6 @@ public class Ascensor {
             movent = true;
             moviment = "baixant";
         } 
-        if (aturat) { return true;}
         if (baixant) { return false;}
         return baixant;
     }
