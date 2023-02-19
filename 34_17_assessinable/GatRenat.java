@@ -71,6 +71,7 @@ public class GatRenat {
         return "guai!";
     }
     public String resuscita(int numVides) {
+        if (viu) { return "..."; }
         viu = true;
         vides = vides + numVides;
         return "guai!";
