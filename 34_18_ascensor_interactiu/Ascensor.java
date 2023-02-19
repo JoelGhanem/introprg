@@ -55,7 +55,8 @@ public class Ascensor {
         return baixant;
     }
     public boolean estaMovent() {
-        return movent;
+        if (aturat) { return false; }
+        else { return true;}
     }
     public boolean estaAbaix() {
         if (abaix) { moviment = "aturat";}
