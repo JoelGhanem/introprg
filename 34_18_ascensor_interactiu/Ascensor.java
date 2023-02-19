@@ -43,10 +43,8 @@ public class Ascensor {
     }
 
     public boolean estaAturat() {
-        aturat = true;
-        baixant = false;
-        movent = true;
-        return aturat;
+        if(aturat) { return true;}
+        else { return false;}
     }
     public boolean estaPujant() {
         return pujant;
