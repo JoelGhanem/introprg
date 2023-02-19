@@ -5,7 +5,7 @@ public class GatRenat {
     private boolean viu = true;
     private boolean dret = false;
     private boolean estirat = false;
-    private boolean assegut = true;
+    private boolean assegut = false;
 
     //Strings
     public String estirat() {
