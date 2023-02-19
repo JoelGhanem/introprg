@@ -14,8 +14,9 @@ public class Ascensor {
             pujant = false;
             baixant = false;
             return false;
+        } else {
+            return true;
         }
-        return aturat;
     }
     public boolean arrencaAmunt() {
         baixant = false;
