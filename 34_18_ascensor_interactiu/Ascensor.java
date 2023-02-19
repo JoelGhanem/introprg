@@ -76,10 +76,7 @@ public class Ascensor {
             pis = nouPis;
         } 
         if (nouPis == -2) {
-            nouPis = 0;
-            moviment = "pujant";
             abaix = true;
-            pis = nouPis;
         }
         pis = nouPis;
         return pis;
