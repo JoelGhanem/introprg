@@ -11,6 +11,7 @@ public class Ascensor {
     //booleans
     public boolean aturat() {
         if (aturat) { return false;}
+        if (pujant) { return false;}
         return aturat;
     }
     public boolean arrencaAmunt() {
