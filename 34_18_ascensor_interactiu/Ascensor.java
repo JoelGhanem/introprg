@@ -17,6 +17,7 @@ public class Ascensor {
             moviment = "aturat";
             return false;
         } else {
+            moviment = "aturat";
             movent = false;
             return true;
         }
