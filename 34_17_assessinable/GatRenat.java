@@ -72,6 +72,7 @@ public class GatRenat {
     }
     public String resuscita(int numVides) {
         if (viu) { return "..."; }
+        if (vides < -1) { return "..."; }
         viu = true;
         vides = vides + numVides;
         return "guai!";
