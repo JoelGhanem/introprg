@@ -13,14 +13,17 @@ public class Ascensor {
         if (aturat) {
             pujant = false;
             baixant = false;
+            movent = false;
             return false;
         } else {
+            movent = false;
             return true;
         }
     }
     public boolean arrencaAmunt() {
         baixant = false;
         pujant = true;
+        movent = true;
         moviment = "pujant";
         return pujant;
     }
@@ -32,7 +35,10 @@ public class Ascensor {
             movent = true;
             moviment = "baixant";
         } 
-        if (baixant) { return false;}
+        if (baixant) { 
+            movent = true;
+            return false;
+        }
         return baixant;
     }
 
