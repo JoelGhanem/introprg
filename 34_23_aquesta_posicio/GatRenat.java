@@ -16,6 +16,7 @@ public class GatRenat {
     public void setPosicio(String posicio) {
         if (posicio.equals("dret")) { 
             System.out.println(posicio);
+            System.out.println(this.posicio);
             posicio = this.posicio;
         }
     }
