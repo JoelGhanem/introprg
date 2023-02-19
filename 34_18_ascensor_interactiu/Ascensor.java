@@ -21,11 +21,12 @@ public class Ascensor {
         }
     }
     public boolean arrencaAmunt() {
-        baixant = false;
-        pujant = true;
-        movent = true;
-        moviment = "pujant";
-        return pujant;
+        if(aturat) { 
+            moviment = "pujant";
+            return pujant;
+        } else {
+            return false;
+        }
     }
 
     public boolean arrencaAbaix() {
