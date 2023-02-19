@@ -23,7 +23,7 @@ public class Ascensor {
     public boolean arrencaAmunt() {
         if(aturat) { 
             moviment = "pujant";
-            return pujant;
+            return true;
         } else {
             return false;
         }
