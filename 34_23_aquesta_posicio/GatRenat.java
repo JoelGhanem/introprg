@@ -4,7 +4,7 @@ public class GatRenat {
     private String posicio = "estirat";
     public GatRenat(int vides, String posicio) {
         setVides(vides);
-        setPosicio(posicio);
+        this.setPosicio(posicio);
     }
     public int getVides() { return vides; }
     public void setVides(int novesVides) {
@@ -12,9 +12,11 @@ public class GatRenat {
             vides = novesVides;
         }
     }
-    public String getPosicio() {return posicio; }
+    public String getPosicio() {return this.posicio; }
     public void setPosicio(String posicio) {
-        if (posicio.equals("dret")) { posicio = this.posicio;}
+        if (posicio.equals("dret")) { 
+            posicio = this.posicio;
+        }
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
