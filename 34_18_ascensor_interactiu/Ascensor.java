@@ -10,8 +10,11 @@ public class Ascensor {
     private String moviment = "aturat";
     //booleans
     public boolean aturat() {
-        if (aturat) { return false;}
-        if (pujant) { return false;}
+        if (aturat) {
+            pujant = false;
+            baixant = false;
+            return false;
+        }
         return aturat;
     }
     public boolean arrencaAmunt() {
