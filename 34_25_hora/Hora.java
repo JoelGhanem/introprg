@@ -23,7 +23,7 @@ public class Hora {
         if (this.hores == 23) {
             this.hores = 0;
         } else {
-        this.hores += hores;
+            this.hores += hores;
         }
         return this.hores;
     }
@@ -31,6 +31,9 @@ public class Hora {
         if (this.minuts == 59) {
             setHores(1);
             this.minuts = 0;
+        } else if (this.minuts == 0) {
+            this.minuts = 59;
+            setHores(-1);
         } else {
             this.minuts += minuts;
         }
@@ -59,7 +62,7 @@ public class Hora {
             setMinuts(-1);
             this.segons = 59;
         } else {
-        this.segons--;
+            this.segons--;
         }
     }
     public void decrementa(int segons) {
