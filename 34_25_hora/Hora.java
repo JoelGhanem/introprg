@@ -28,7 +28,7 @@ public class Hora {
 
             setHores(1);
         }
-        this.minuts = minuts;
+        this.minuts += minuts;
         return this.minuts;
     }
     public int setSegons(int segons) {
