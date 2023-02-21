@@ -36,6 +36,10 @@ public class Hora {
         return this.segons;
     }
     public void incrementa() {
+        if (this.segons == 59) {
+            setMinuts(1);
+            this.segons = 0;
+        }
         this.segons++;
     }
     public void incrementa(int segons) {
