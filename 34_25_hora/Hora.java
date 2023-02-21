@@ -22,6 +22,8 @@ public class Hora {
     public int setHores(int hores) {
         if (this.hores == 23) {
             this.hores = 0;
+        } else if (hores == 0) {
+            this.hores = 0;
         } else {
             this.hores += hores;
         }
