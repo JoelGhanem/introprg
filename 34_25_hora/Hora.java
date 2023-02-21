@@ -20,7 +20,7 @@ public class Hora {
     public int getSegons() { return segons; }
 
     public int setHores(int hores) {
-        this.hores = hores;
+        this.hores += hores;
         return this.hores;
     }
     public int setMinuts(int minuts) {
