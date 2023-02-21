@@ -27,7 +27,7 @@ public class Hora {
                 this.hores += hores;
             }
         } else {
-            if (hores == 0) {
+            if(this.hores - hores <= 0) {
                 this.hores = 23;
             } else {
                 this.hores--;
