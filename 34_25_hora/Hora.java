@@ -24,6 +24,9 @@ public class Hora {
         return this.hores;
     }
     public int setMinuts(int minuts) {
+        if (minuts > 60) {
+            setHores(1);
+        }
         this.minuts = minuts;
         return this.minuts;
     }
