@@ -20,12 +20,18 @@ public class Hora {
     public int getSegons() { return segons; }
 
     public int setHores(int hores) {
-        if (this.hores == 23) {
-            this.hores = 0;
-        } else if (hores == 0) {
-            this.hores = 23;
+        if (hores >= 0) {
+            if (this.hores == 23) {
+                this.hores = 0;
+            } else {
+                this.hores += hores;
+            }
         } else {
-            this.hores += hores;
+            if (hores == 0) {
+                this.hores = 23;
+            } else {
+                this.hores--;
+            }
         }
         return this.hores;
     }
