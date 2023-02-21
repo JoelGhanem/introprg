@@ -54,7 +54,7 @@ public class Hora {
     }
     @Override
     public String toString() {
-        return String.format("%d %02d %02d", this.hores, this.minuts, this.segons);
+        return String.format("%d: %02d: %02d", this.hores, this.minuts, this.segons);
     }
     private static String composaOperadorComparacio(Hora hora1, Hora hora2) {
         int comparacio = hora1.compareTo(hora2);
