@@ -29,6 +29,9 @@ public class Hora {
         } else {
             if(this.hores - hores <= 0) {
                 this.hores = 23;
+            }
+            if (this.hores == 0) {
+                this.hores = 23;
             } else {
                 this.hores--;
             }
