@@ -23,7 +23,7 @@ public class Hora {
         if (this.hores == 23) {
             this.hores = 0;
         } else if (hores == 0) {
-            this.hores = 0;
+            this.hores = 23;
         } else {
             this.hores += hores;
         }
