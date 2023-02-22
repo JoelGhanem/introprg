@@ -76,7 +76,7 @@ public class Hora {
             if (minuts >= 60) {
                 int hores = minuts / 60;
                 setMinuts(minuts);
-                this.segons = suma - 3600;
+                this.segons = suma - (3600 * hores);
             } else {
 
             }
