@@ -45,8 +45,9 @@ public class Hora {
             if (this.minuts + minuts >= 60) {
                 setHores(1);
                 this.minuts = 0;
-            }
+            } else {
             this.minuts += minuts;
+            }
             //valor negativo
         } else {
             if (this.minuts - Math.abs(minuts) <= 0) {
