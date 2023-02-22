@@ -64,6 +64,9 @@ public class Hora {
     }
     public void incrementa(int segons) {
         if (this.segons + segons > 60) {
+            int suma = this.segons + segons;
+            int minuts = suma / 60;
+            setMinuts(minuts);
         } else {
             this.segons += segons;
         }
