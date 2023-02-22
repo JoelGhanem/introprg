@@ -41,7 +41,7 @@ public class Hora {
         if(minuts >= 0) {
             this.minuts = minuts;
         } else {
-            this.minuts -= minuts;
+            this.minuts += minuts;
         }
     }
     public void setSegons(int segons) {
