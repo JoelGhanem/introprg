@@ -20,12 +20,14 @@ public class Hora {
     public int getSegons() { return segons; }
 
     public void setHores(int hores) {
+        //valor Positivo
         if (hores >= 0) {
             if (this.hores == 23) {
                 this.hores = 0;
             } else {
                 this.hores += hores;
             }
+            //valor negativo
         } else {
             if(this.hores - hores <= 0) {
                 this.hores = 23;
@@ -43,7 +45,7 @@ public class Hora {
             this.minuts = minuts;
             //valor negativo
         } else {
-            if (this.minuts <= 0) {
+            if (this.minuts - minuts <= 0) {
                 this.minuts = 59;
             }
             this.minuts -= Math.abs(minuts);
