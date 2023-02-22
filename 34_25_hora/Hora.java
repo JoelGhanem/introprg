@@ -93,6 +93,7 @@ public class Hora {
         //calcula cuantas horas
         if (segons >= 3600) {
             tiempo = (segons /3600) % 24;
+            System.out.println("TIEMPO == " + tiempo);
             setHores((segons/3600) *-1);
         // calcula cuantos minutos
         } else if (segons >= 60) {
