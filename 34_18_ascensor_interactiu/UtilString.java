@@ -1,3 +1,4 @@
+//Biblioteca que ens permet fer proves sobre els Strings en un arxiu java//
 public class UtilString {
     public static boolean esVocal(char lletra) {
         String vocals = "aàeèéiíïoòóuúü";
