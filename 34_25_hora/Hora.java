@@ -19,7 +19,7 @@ public class Hora {
 
     public int getSegons() { return segons; }
 
-    public int setHores(int hores) {
+    public void setHores(int hores) {
         if (hores >= 0) {
             if (this.hores == 23) {
                 this.hores = 0;
@@ -38,7 +38,7 @@ public class Hora {
         }
         return this.hores;
     }
-    public int setMinuts(int minuts) {
+    public void setMinuts(int minuts) {
         if (this.minuts == 59) {
             setHores(1);
             this.minuts = 0;
@@ -50,9 +50,8 @@ public class Hora {
         }
         return this.minuts;
     }
-    public int setSegons(int segons) {
+    public void setSegons(int segons) {
         this.segons = segons;
-        return this.segons;
     }
     public void incrementa() {
         if (this.segons == 59) {
