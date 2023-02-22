@@ -77,7 +77,11 @@ public class Hora {
         }
     }
     public void decrementa(int segons) {
-        this.segons = this.segons - segons;
+        if (this.segons - segons <= 0) {
+            this.segons = 60 - segons;
+        } else {
+            this.segons = this.segons - segons;
+        }
     }
     public int compareTo(Hora hora2) {
         if (this.hores > hora2.hores) return 1;
