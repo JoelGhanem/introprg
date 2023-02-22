@@ -38,17 +38,23 @@ public class Hora {
         }
     }
     public void setMinuts(int minuts) {
-       
+        this.minuts = minuts;
     }
     public void setSegons(int segons) {
         this.segons = segons;
     }
     public void incrementa() {
         if (this.segons == 59) {
-            setMinuts(1);
-            this.segons = 0;
-        } else {
-            this.segons++;
+            setSegons(0);
+            if (this.minuts == 59) {
+                setMinuts(0);
+                if (this.hores == 23) {
+                    setHores(0);
+                }
+                this.segons = 0;
+            } else {
+                this.segons++;
+            }
         }
     }
     public void incrementa(int segons) {
