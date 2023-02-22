@@ -78,7 +78,7 @@ public class Hora {
     }
     public void decrementa(int segons) {
         if (this.segons - segons <= 0) {
-            this.segons = 60 - segons;
+            this.segons = 59 - segons;
         } else {
             this.segons = this.segons - segons;
         }
