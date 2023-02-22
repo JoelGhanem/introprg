@@ -72,8 +72,14 @@ public class Hora {
         if (this.segons + segons > 60) {
             int suma = this.segons + segons;
             int minuts = suma / 60;
-            setMinuts(minuts);
-            this.segons = suma - 60;
+            //si hay horas
+            if (minuts >= 60) {
+                int hores = minuts / 60;
+                setMinuts(minuts);
+                this.segons = suma - 3600;
+            } else {
+
+            }
         } else if (this.segons + segons == 60) {
             this.segons = 0;
             setMinuts(1);
@@ -94,9 +100,8 @@ public class Hora {
         //calcula cuantas horas
         if (segons >= 3600) {
             tiempo = (segons /3600) % 24;
-            System.out.println("TIEMPO == " + tiempo);
             setHores((segons/3600) *-1);
-        // calcula cuantos minutos
+            // calcula cuantos minutos
         } else if (segons >= 60) {
             tiempo = (segons/60)%60;
         }
