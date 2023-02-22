@@ -42,6 +42,9 @@ public class Hora {
     public void setMinuts(int minuts) {
         //valor positivo
         if(minuts >= 0) {
+            if (this.minuts + minuts >= 60) {
+                setHores(1);
+            }
             this.minuts += minuts;
             //valor negativo
         } else {
