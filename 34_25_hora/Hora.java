@@ -45,7 +45,7 @@ public class Hora {
             this.minuts = minuts;
             //valor negativo
         } else {
-            if (this.minuts - minuts <= 0) {
+            if (this.minuts - Math.abs(minuts) <= 0) {
                 setHores(-1);
                 this.minuts = 60;
             }
