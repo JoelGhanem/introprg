@@ -73,6 +73,7 @@ public class Hora {
             int suma = this.segons + segons;
             int minuts = suma / 60;
             setMinuts(minuts);
+            this.segons = suma - 60;
         } else if (this.segons + segons == 60) {
             this.segons = 0;
             setMinuts(1);
