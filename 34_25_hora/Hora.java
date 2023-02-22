@@ -36,7 +36,6 @@ public class Hora {
                 this.hores--;
             }
         }
-        return this.hores;
     }
     public void setMinuts(int minuts) {
        
