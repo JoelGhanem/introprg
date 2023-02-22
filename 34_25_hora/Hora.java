@@ -46,7 +46,7 @@ public class Hora {
                 setHores(1);
                 this.minuts = 0;
             } else {
-            this.minuts += minuts;
+                this.minuts += minuts;
             }
             //valor negativo
         } else {
@@ -89,6 +89,14 @@ public class Hora {
         }
     }
     public void decrementa(int segons) {
+        int tiempo;
+        //calcula cuantas horas
+        if (segons >= 3600) {
+            tiempo = (segons /3600) % 24;
+        // calcula cuantos minutos
+        } else if (segons >= 60) {
+            tiempo = (segons/60)%60;
+        }
         if (this.segons - segons < 0) {
             this.segons = 60 - segons;
         } else {
