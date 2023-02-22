@@ -38,7 +38,7 @@ public class Hora {
         }
     }
     public void setMinuts(int minuts) {
-       
+      this.minuts = minuts;
     }
     public void setSegons(int segons) {
         this.segons = segons;
