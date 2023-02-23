@@ -20,43 +20,10 @@ public class Hora {
     public int getSegons() { return segons; }
 
     public void setHores(int hores) {
-        //valor Positivo
-        if (hores >= 0) {
-            if (this.hores == 23) {
-                this.hores = 0;
-            } else {
-                this.hores += hores;
-            }
-            //valor negativo
-        } else {
-            if(this.hores - hores <= 0) {
-                this.hores = 23;
-            }
-            if (this.hores == 0) {
-                this.hores = 23;
-            } else {
-                this.hores--;
-            }
-        }
+        this.hores = hores;
     }
     public void setMinuts(int minuts) {
-        //valor positivo
-        if(minuts >= 0) {
-            // si es mas de una hora
-            if (this.minuts + minuts >= 60) {
-               this.minuts = minuts; 
-               //si es menor a una hora
-            } else {
-                this.minuts = this.minuts + minuts;
-            }
-            //valor negativo
-        } else {
-            if (this.minuts - Math.abs(minuts) <= 0) {
-                setHores(-1);
-                this.minuts = 60;
-            }
-            this.minuts -= Math.abs(minuts);
-        }
+        this.minuts = minuts;
     }
     public void setSegons(int segons) {
         this.segons = segons;
