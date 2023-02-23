@@ -77,12 +77,11 @@ public class Hora {
         //si se aumenta mas de 1 minuto
         if (this.segons + segons > 60) {
             int suma = this.segons + segons;
-            int minuts = suma / 60;
             //si hay horas
-            if (minuts >= 60) {
-                int hores = minuts / 60;
-                int minutsRestants = (hores/60);
-                setMinuts(minutsRestants);
+            if (suma >= 3600) {
+                int hores = suma / 3600;
+                int minuts = (suma/3600) /60;
+                setMinuts(minuts);
                 setHores(hores);
                 this.segons = suma - (3600 * hores);
                 //si hay minutos
