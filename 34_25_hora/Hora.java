@@ -69,7 +69,7 @@ public class Hora {
     }
     public void decrementa() {
         if (this.segons == 0) {
-            setMinuts(-1);
+            setMinuts(this.minuts - 1);
             this.segons = 59;
         } else {
             this.segons--;
