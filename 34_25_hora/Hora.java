@@ -86,8 +86,10 @@ public class Hora {
                 this.segons = suma - (3600 * hores);
                 //si hay minutos
             } else {
-                setMinuts(minuts);
-                this.segons = suma - (60 * minuts);
+                minuts = suma;
+                minuts = suma/60;
+                setHores(minuts);
+                this.segons = minuts - (60 * segons);
             }
             // si no se aumenta mas de un minuto
         } else if (this.segons + segons == 60) {
