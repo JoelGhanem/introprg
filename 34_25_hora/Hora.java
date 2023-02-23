@@ -85,7 +85,7 @@ public class Hora {
                 int segonsRestants = (minuts/60) %60;
                 setHores(hores);
                 setMinuts(minutsRestants);
-                setSegons(segonsRestants);
+                this.segons = suma - (3600 * hores);
                 //si hay minutos
             } else {
                 setMinuts(minuts);
