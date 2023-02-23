@@ -71,6 +71,11 @@ public class Hora {
         if (this.segons == 0) {
             setMinuts(this.minuts - 1);
             this.segons = 59;
+        } else if(this.hores > 0) {
+            if (this.minuts == 0) {
+                setMinuts(59);
+                setHores(this.hores -1);
+            }
         } else {
             this.segons--;
         }
