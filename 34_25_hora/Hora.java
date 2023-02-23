@@ -44,8 +44,8 @@ public class Hora {
         if(minuts >= 0) {
             // si es mas de una hora
             if (this.minuts + minuts >= 60) {
-                this.minuts = minuts; 
-                //si es menor a una hora
+               this.minuts = minuts; 
+               //si es menor a una hora
             } else {
                 this.minuts = this.minuts + minuts;
             }
@@ -82,8 +82,7 @@ public class Hora {
             //si hay horas
             if (suma >= 3600) {
                 int hores = suma / 3600;
-                suma = suma - hores * 3600;
-                int minuts = suma/60;
+                int minuts = (suma/3600) /60;
                 setMinuts(minuts);
                 setHores(hores);
                 this.segons = suma - (3600 * hores);
@@ -95,12 +94,8 @@ public class Hora {
             }
             // si no se aumenta mas de un minuto
         } else if (this.segons + segons == 60) {
-            if (this.segons == 0) {
-                this.segons = segons;
-            } else {
-                this.segons = 0;
-                setMinuts(1);
-            }
+            this.segons = 0;
+            setMinuts(1);
         } else {
             this.segons += segons;
         }
