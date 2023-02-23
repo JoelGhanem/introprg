@@ -43,7 +43,7 @@ public class Hora {
         //valor positivo
         if(minuts >= 0) {
             if (this.minuts + minuts >= 60) {
-                
+               this.minuts = minuts; 
             } else {
                 this.minuts += minuts;
             }
@@ -82,9 +82,8 @@ public class Hora {
             if (minuts >= 60) {
                 int hores = minuts / 60;
                 int minutsRestants = (hores/60) % 60;
-                int segonsRestants = (minuts/60) %60;
-                setHores(hores);
                 setMinuts(minutsRestants);
+                setHores(hores);
                 this.segons = suma - (3600 * hores);
                 //si hay minutos
             } else {
