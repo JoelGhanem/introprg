@@ -42,10 +42,12 @@ public class Hora {
     public void setMinuts(int minuts) {
         //valor positivo
         if(minuts >= 0) {
+            // si es mas de una hora
             if (this.minuts + minuts >= 60) {
                this.minuts = minuts; 
+               //si es menor a una hora
             } else {
-                this.minuts += minuts;
+                this.minuts = this.minuts + minuts;
             }
             //valor negativo
         } else {
@@ -86,7 +88,6 @@ public class Hora {
                 this.segons = suma - (3600 * hores);
                 //si hay minutos
             } else {
-                minuts = suma;
                 minuts = suma/60;
                 setMinuts(minuts);
                 this.segons = suma - (60 * minuts);
