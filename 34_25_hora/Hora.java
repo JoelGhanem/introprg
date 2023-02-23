@@ -86,7 +86,6 @@ public class Hora {
                 this.segons = suma - (3600 * hores);
                 //si hay minutos
             } else {
-                minuts = suma;
                 minuts = suma/60;
                 setMinuts(minuts);
                 this.segons = suma - (60 * minuts);
