@@ -2,6 +2,21 @@
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
+    public static GatRenat instancia() {
+        return renats;
+    }
+    public static GatRenat getInstancia() {
+        return instancia;
+    }
+    public static GatRenat getInstancia(int instancia) {
+        return instancia;
+    }
+    public static GatRenat getInstancia(String algo) {
+        return instancia;
+    }
+    public static GatRenat getInstancia(int instancia, String algo) {
+        return instancia;
+    }
     public GatRenat() {
         getVides();
         getPosicio();
