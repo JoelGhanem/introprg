@@ -1,0 +1,7 @@
+'01':
+  stdout:
+  - 'Quan està estirat: false + false'
+  - 'Quan està assegut: true + false'
+  - 'Quan està dret: true + true'
+_main: GatRenat
+_version: '2223'

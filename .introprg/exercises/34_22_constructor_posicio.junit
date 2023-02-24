@@ -8,12 +8,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestExercise {
 
+
     @Test
-    @DisplayName("test Renat inicialitzar a estirat si error")
-    public void testRenatNeixEstirat() {
+    @DisplayName("test Renat inicialitzar a estirat quan constructor específic rep moviment desconegut")
+    public void testRenatNeixEstiratQuanConstructorErroniCorrent() {
         GatRenat renat = new GatRenat(5, "corrent");
         assertAll("estirat",
                 () -> assertEquals(5, renat.getVides()),
+                () -> assertEquals("estirat", renat.getPosicio())
+                );
+    }
+
+    @Test
+    @DisplayName("test Renat inicialitzar a estirat quan constructor específic rep moviment desconegut")
+    public void testRenatNeixEstiratQuanConstructorErroniSaltant() {
+        GatRenat renat = new GatRenat(12, "saltimbanquejant");
+        assertAll("estirat",
+                () -> assertEquals(12, renat.getVides()),
                 () -> assertEquals("estirat", renat.getPosicio())
                 );
     }
@@ -28,4 +39,23 @@ public class TestExercise {
                 );
     }
 
+    @Test
+    @DisplayName("test Renat pot inicialitzar assegut")
+    public void testRenatNeixAssegut() {
+        GatRenat renat = new GatRenat(6, "assegut");
+        assertAll("assegut",
+                () -> assertEquals(6, renat.getVides()),
+                () -> assertEquals("assegut", renat.getPosicio())
+                );
+    }
+
+    @Test
+    @DisplayName("test Renat pot inicialitzar estirat")
+    public void testRenatNeixEstirat() {
+        GatRenat renat = new GatRenat(6, "estirat");
+        assertAll("estirat",
+                () -> assertEquals(6, renat.getVides()),
+                () -> assertEquals("estirat", renat.getPosicio())
+                );
+    }
 }
