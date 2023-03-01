@@ -59,7 +59,7 @@ public class Hora {
                 setMinuts(getMinuts() + minutsHores);
                 setHores(getHores() + hores);
                 if (getHores() > 24) setHores(getHores() % 24);
-                if (getMinuts() > 24) setMinuts(getMinuts() % 60);
+                if (getMinuts() > 60) setMinuts(getMinuts() % 60);
                     setSegons( segonsHores);
                 //si hay minutos
             } else {
