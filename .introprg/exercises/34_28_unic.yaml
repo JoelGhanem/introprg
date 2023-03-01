@@ -1,5 +1,17 @@
 '01':
   argsin:
+  - dret
+  - assegut
+  - estirat
+  - dret
+  stdout:
+  - Inicialment Renat està estirat
+  - Ara està dret
+  - Ara està assegut
+  - Ara està estirat
+  - Ara està dret
+'02':
+  argsin:
   - '3'
   - '2'
   - '1'
@@ -10,9 +22,29 @@
   - Ara està assegut
   - Ara està estirat
   - Ara està dret
-'02':
-  stdout: Inicialment Renat està estirat
 '03':
+  argsin:
+  - '3'
+  - estirat
+  - '2'
+  - dret
+  - '1'
+  - estirat
+  - dret
+  - estirat
+  stdout:
+  - Inicialment Renat està estirat
+  - Ara està dret
+  - Ara està estirat
+  - Ara està assegut
+  - Ara està dret
+  - Ara està estirat
+  - Ara està estirat
+  - Ara està dret
+  - Ara està estirat
+'04':
+  stdout: Inicialment Renat està estirat
+'05':
   argsin:
   - '4'
   - corre
