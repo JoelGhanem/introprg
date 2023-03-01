@@ -115,8 +115,9 @@ public class Hora {
             int resta = getSegons() - segons;
             while(resta < 0) {
                 setMinuts(getMinuts() - 1);
-                segons += 60;
+                resta += 60;
             }
+            setSegons(resta);
             while(minuts < 0) {
                 setHores(getHores() -1);
                 minuts += 60;
