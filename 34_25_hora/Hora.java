@@ -58,13 +58,13 @@ public class Hora {
                 int segonsHores = suma;
                 setMinuts(getMinuts() + minutsHores);
                 setHores(getHores() + hores);
-                setSegons(getSegons() + segonsHores);
+                setSegons( segonsHores);
                 //si hay minutos
             } else {
                 int minutsMinuts = (suma/60);
                 suma = (suma - (minutsMinuts * 60));
                 setMinuts(getMinuts() + minutsMinuts);
-                setSegons(getSegons() + suma);
+                setSegons(suma);
             }
             // si no se aumenta mas de un minuto
         } else if (getSegons() + segons == 60) {
