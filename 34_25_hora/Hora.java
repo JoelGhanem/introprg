@@ -9,9 +9,15 @@ public class Hora {
         segons = 0;
     }
     public Hora(int hores, int minuts, int segons) {
-        this.hores = hores;
-        this.minuts = minuts;
-        this.segons = segons;
+        if (hores > 23 || hores < 0 || minuts >= 60 || minuts < 0 || segons >= 60 || segons < 0) {
+            this.hores = 0;
+            this.minuts = 0;
+            this.segons = 0;
+        } else {
+            this.hores = hores;
+            this.minuts = minuts;
+            this.segons = segons;
+        }
     }
     public int getHores() { return hores;}
 
