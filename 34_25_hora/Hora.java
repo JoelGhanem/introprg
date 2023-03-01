@@ -52,37 +52,42 @@ public class Hora {
         }
     }
     public void incrementa(int segons) {
-        //si se aumenta mas de 1 minuto
-        if (getSegons() + segons > 60) {
-            int suma = (getSegons() + segons);
-            //si hay horas
-            if (suma >= 3600) {
-                int hores = (suma / 3600);
-                suma = (suma - (hores * 3600));
-                int minutsHores = (suma / 60);
-                suma = (suma - (minutsHores * 60));
-                int segonsHores = suma;
-                setMinuts(getMinuts() + minutsHores);
-                setHores(getHores() + hores);
-                if (getMinuts() >= 60){ 
-                    setMinuts(getMinuts() % 60); 
-                    setHores(getHores() + 1);
-                }
-                if (getHores() >= 24) setHores(getHores() % 24);
-                setSegons( segonsHores);
-                //si hay minutos
-            } else {
-                int minutsMinuts = (suma/60);
-                suma = (suma - (minutsMinuts * 60));
-                setMinuts(getMinuts() + minutsMinuts);
-                setSegons(suma);
-            }
-            // si no se aumenta mas de un minuto
-        } else if (getSegons() + segons == 60) {
-            setSegons(0); 
-            setMinuts(getMinuts() + 1);
+        if (segons < 0) {
+            segons = segons * -1;
+            decrementa(segons);
         } else {
-            setSegons(getSegons() + segons);
+            //si se aumenta mas de 1 minuto
+            if (getSegons() + segons > 60) {
+                int suma = (getSegons() + segons);
+                //si hay horas
+                if (suma >= 3600) {
+                    int hores = (suma / 3600);
+                    suma = (suma - (hores * 3600));
+                    int minutsHores = (suma / 60);
+                    suma = (suma - (minutsHores * 60));
+                    int segonsHores = suma;
+                    setMinuts(getMinuts() + minutsHores);
+                    setHores(getHores() + hores);
+                    if (getMinuts() >= 60){ 
+                        setMinuts(getMinuts() % 60); 
+                        setHores(getHores() + 1);
+                    }
+                    if (getHores() >= 24) setHores(getHores() % 24);
+                    setSegons( segonsHores);
+                    //si hay minutos
+                } else {
+                    int minutsMinuts = (suma/60);
+                    suma = (suma - (minutsMinuts * 60));
+                    setMinuts(getMinuts() + minutsMinuts);
+                    setSegons(suma);
+                }
+                // si no se aumenta mas de un minuto
+            } else if (getSegons() + segons == 60) {
+                setSegons(0); 
+                setMinuts(getMinuts() + 1);
+            } else {
+                setSegons(getSegons() + segons);
+            }
         }
     }
     public void decrementa() {
@@ -103,6 +108,24 @@ public class Hora {
         }
     }
     public void decrementa(int segons) {
+        if (segons < 0) {
+            segons = segons * -1;
+            incrementa(segons);
+        } else {
+            int resta = getSegons() - segons;
+            while(resta < 0) {
+                setMinuts(getMinuts() - 1);
+                resta += 60;
+            }
+            while(minuts < 0) {
+                setHores(getHores() -1);
+                minuts += 60;
+            }
+            while(hores < 0) {
+                setHores(getHores() -1);
+                hores += 24;
+            }
+        }
     }
     public int compareTo(Hora hora2) {
         if (this.hores > hora2.hores) return 1;
