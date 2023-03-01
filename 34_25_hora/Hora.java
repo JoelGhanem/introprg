@@ -52,16 +52,19 @@ public class Hora {
             //si hay horas
             if (suma >= 3600) {
                 int hores = (suma / 3600);
-                int minutsHores = (suma - (hores * 3600));
-                int segonsHores = (minutsHores - (3600 * minutsHores));
+                suma = (suma - (hores * 3600));
+                int minutsHores = (suma / 3600);
+                suma = (suma - (minutsHores * 60));
+                int segonsHores = suma;
                 setMinuts(getMinuts() + minutsHores);
                 setHores(getHores() + hores);
                 setSegons(getSegons() + segonsHores);
                 //si hay minutos
             } else {
-                minuts = suma/60;
-                setMinuts(minuts);
-                this.segons = suma - (60 * minuts);
+                int minutsMinuts = (suma/60);
+                suma = (suma - (minutsMinuts * 60));
+                setMinuts(minutsMinuts);
+                setSegons(suma);
             }
             // si no se aumenta mas de un minuto
         } else if (getSegons() + segons == 60) {
