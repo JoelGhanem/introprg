@@ -53,7 +53,7 @@ public class Hora {
             if (suma >= 3600) {
                 int hores = (suma / 3600);
                 suma = (suma - (hores * 3600));
-                int minutsHores = (suma / 3600);
+                int minutsHores = (suma / 60);
                 suma = (suma - (minutsHores * 60));
                 int segonsHores = suma;
                 setMinuts(getMinuts() + minutsHores);
