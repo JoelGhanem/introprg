@@ -123,7 +123,6 @@ public class Hora {
                 minuts += 60;
             }
             while(hores < 0) {
-                setHores(getHores() -1);
                 hores += 24;
             }
         }
