@@ -44,15 +44,16 @@ public class Hora {
     }
     public void incrementa(int segons) {
         //si se aumenta mas de 1 minuto
-        if (this.segons + segons > 60) {
-            int suma = this.segons + segons;
+        if (getSegons()+ segons > 60) {
+            int suma = (getSegons() + segons);
             //si hay horas
             if (suma >= 3600) {
-                int hores = suma / 3600;
-                int minutsHores = (suma - hores * 3600);
+                int hores = (suma / 3600);
+                int minutsHores = (suma - (hores * 3600));
+                int segonsHores = (minutsHores - (3600 * minutsHores));
                 setMinuts(minutsHores);
                 setHores(hores);
-                setSegons(minutsHores - (3600 * minutsHores));
+                setSegons(segonsHores);
                 //si hay minutos
             } else {
                 minuts = suma/60;
@@ -72,23 +73,8 @@ public class Hora {
         if (this.segons <0) {
             setSegons(59);
         }
-
     }
     public void decrementa(int segons) {
-        int tiempo;
-        //calcula cuantas horas
-        if (segons >= 3600) {
-            tiempo = (segons /3600) % 24;
-            setHores((segons/3600) *-1);
-            // calcula cuantos minutos
-        } else if (segons >= 60) {
-            tiempo = (segons/60)%60;
-        }
-        if (this.segons - segons < 0) {
-            this.segons = 60 - segons;
-        } else {
-            this.segons = this.segons - segons;
-        }
     }
     public int compareTo(Hora hora2) {
         if (this.hores > hora2.hores) return 1;
