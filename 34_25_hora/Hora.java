@@ -29,17 +29,19 @@ public class Hora {
         this.segons = segons;
     }
     public void incrementa() {
-        if (this.segons == 59) {
-            if (this.minuts == 59) {
-                setHores(1);
-                this.minuts = 0;
-                this.segons = 0;
+        if (getSegons() == 59) {
+            setSegons(0);
+            if (getMinuts()== 59) {
+                if(getHores() == 23) {
+                    setHores(0);
+                } else {
+                    setHores(getHores() + 1);
+                }
             } else {
-                setMinuts(1);
-                this.segons = 0;
+                setMinuts(getMinuts() + 1);
             }
         } else {
-            this.segons++;
+            setSegons(getSegons() + 1); 
         }
     }
     public void incrementa(int segons) {
