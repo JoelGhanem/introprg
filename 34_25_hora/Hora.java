@@ -51,16 +51,19 @@ public class Hora {
             int suma = (getSegons() + segons);
             //si hay horas
             if (suma >= 3600) {
-                int hores =Math.round(suma / 3600);
+                int hores = (suma / 3600);
                 suma = (suma - (hores * 3600));
-                int minutsHores = Math.round(suma / 60);
+                int minutsHores = (suma / 60);
                 suma = (suma - (minutsHores * 60));
                 int segonsHores = suma;
                 setMinuts(getMinuts() + minutsHores);
                 setHores(getHores() + hores);
+                if (getMinuts() >= 60){ 
+                    setMinuts(getMinuts() % 60); 
+                    setHores(getHores() + 1);
+                }
                 if (getHores() >= 24) setHores(getHores() % 24);
-                if (getMinuts() >= 60) setMinuts(getMinuts() % 60);
-                    setSegons( segonsHores);
+                setSegons( segonsHores);
                 //si hay minutos
             } else {
                 int minutsMinuts = (suma/60);
