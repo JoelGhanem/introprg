@@ -1,6 +1,6 @@
 //En aquest exercici li posarem un picarol al gat Renat
 public class GatRenat {
-    public Picarol posaPicarol(picarol) {
+    public Picarol posaPicarol(Picarol picarol) {
     }
     public Picarol treuPicarol() {
     } 
