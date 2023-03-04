@@ -1,20 +1,57 @@
-//Implementem la classe ull de gat
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
-    public GatRenat() {
-        getVides();
-        getPosicio();
+    private static GatRenat instancia;
+
+    private GatRenat() {
+        int vides = 7;
+        String posicio = getPosicio(); 
     }
-    public GatRenat(int vides) {
+
+    public static GatRenat getInstancia() {
+        if (instancia == null) {
+            instancia = new GatRenat();
+        }
+        return instancia;
+    }
+
+    public static GatRenat getInstancia(int vides) {
+        if (instancia== null) {
+            instancia = new GatRenat();
+            return instancia;
+        }
+        instancia.setVides(vides);
+        return instancia;
+    }
+
+    public static GatRenat getInstancia(String algo) {
+        if (instancia== null) {
+            instancia = new GatRenat();
+            return instancia;
+        }
+        instancia.setPosicio(algo);
+        return instancia;
+    }
+
+    public static GatRenat getInstancia(int vides, String algo) {
+        if (instancia== null) {
+            instancia = new GatRenat(vides, algo);
+            return instancia;
+        }
+        instancia.setVides(vides);
+        instancia.setPosicio(algo);
+        return instancia;
+    }
+
+    private GatRenat(int vides) {
         setVides(vides);
         getPosicio();
     }
-    public GatRenat(String posicio) {
+    private GatRenat(String posicio) {
         getVides();
         setPosicio(posicio);
     }
-    public GatRenat(int vides, String posicio) {
+    private GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
     }
@@ -24,23 +61,13 @@ public class GatRenat {
             this.vides = vides;
         }
     }
-    public String getPosicio() {return posicio; }
+    public String getPosicio() {return this.posicio; }
     public void setPosicio(String posicio) {
-        if (posicio.equals("dret") || posicio.equals("assegut")) { this.posicio = posicio;}
+        if (posicio.equals("dret") || posicio.equals("assegut") || posicio.equals("estirat")) { this.posicio = posicio;}
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
-    public static void main(String[] args) {
-        GatRenat[] renats = {
-            new GatRenat(),         // tot per defecte
-            new GatRenat(8),        // 8 vides i posició per defecte
-            new GatRenat("dret"),   // posició dret i vides per defecte
-            new GatRenat(8, "dret") // 8 vides i posició dret
-        };
-        for (GatRenat renat: renats) {
-            System.out.println(renat);
-        }
-    }
+
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
         UllDeGat ullDret = renat.getUllDret();
@@ -60,4 +87,33 @@ public class GatRenat {
                 renat.getUllDret().estaObert(),
                 renat.getUllEsquerre().estaObert());
     }
+    //Novedades
+    public UllDeGat getUllDret(){
+        UllDeGat dret = new UllDeGat();
+        if (getPosicio().equals("dret")|| getPosicio().equals("assegut")) { 
+            dret.posicio = "obert";
+        } else {
+            dret.posicio = "tancat";
+        }
+        return dret;
+    }
+    public UllDeGat getUllEsquerre() {
+        UllDeGat esquerra = new UllDeGat();
+        if (getPosicio().equals("dret")){ 
+            esquerra.posicio = "obert";
+        } else {
+            esquerra.posicio = "tancat";
+        }
+        return esquerra;
+    }
+    public String aixecat() {
+        return "dret";
+    }
+    public String seu() {
+        return "assegut";
+    }
+    public String estirat() {
+        return "estirat";
+    }
 }
+
