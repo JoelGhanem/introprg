@@ -2,6 +2,7 @@
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
+    private static GatRenat instancia;
 
     private static GatRenat instancia() {
         GatRenat renat = new GatRenat();
@@ -17,42 +18,37 @@ public class GatRenat {
 
     public static GatRenat getInstancia() {
         if (instancia() == null) {
-            GatRenat instancia = new GatRenat(instancia().vides, instancia().posicio);
-            return instancia;
-        } else {
-            GatRenat renat = new GatRenat(instancia().vides, instancia().posicio);
-            return renat;
+            GatRenat instancia = new GatRenat();
         }
+        return instancia;
     }
 
     public static GatRenat getInstancia(int vides) {
         if (instancia() == null) {
-            GatRenat instancia = new GatRenat(vides, instancia().posicio);
+            GatRenat instancia = new GatRenat();
             return instancia;
-        } else {
-            GatRenat renat = new GatRenat(vides, instancia().posicio);
-            return renat;
         }
+        instancia.setVides(vides);
+        return instancia;
     }
 
     public static GatRenat getInstancia(String algo) {
         if (instancia() == null) {
             GatRenat instancia = new GatRenat(instancia().vides, algo);
             return instancia;
-        } else {
-            GatRenat renat = new GatRenat(instancia().vides, algo);
-            return renat;
         }
+        instancia.setPosicio(algo);
+        return instancia;
     }
 
     public static GatRenat getInstancia(int vides, String algo) {
         if (instancia() == null) {
             GatRenat instancia = new GatRenat(vides, algo);
             return instancia;
-        } else {
-            GatRenat renat = new GatRenat(vides, algo);
-            return renat;
         }
+        instancia.setVides(vides);
+        instancia.setPosicio(algo);
+        return instancia;
     }
 
     public GatRenat(int vides) {
