@@ -19,6 +19,28 @@ public class Hora {
             this.segons = segons;
         }
     }
+    public static boolean esValida(int hores, int minuts, int segons) {
+        if(hores >23 || hores < 0) return false;
+        if(minuts >59 || minuts < 0) return false;
+        if(segons >59 || segons < 0) return false;
+        return true;
+    }
+    public static int compareTo(Hora hora1, Hora hora2) {
+        if (hora1.hores > hora2.hores) { return 1;}
+        if (hora1.hores < hora2.hores) { return -1;}
+        if (hora1.minuts > hora2.minuts) { return 1;}
+        if (hora1.minuts < hora2.minuts) { return -1;}
+        if (hora1.segons > hora2.segons) { return 1;}
+        if (hora1.segons < hora2.segons) { return -1;}
+        return 0;
+    }
+    public Hora duplica() {
+        Hora hora3 = new Hora(this.hores, this.minuts, this.segons);
+        return hora3;
+    }
+    public static Hora duplica(Hora hora) {
+        return hora;
+    }
     public int getHores() { return hores;}
 
     public int getMinuts() { return minuts; }
@@ -158,11 +180,5 @@ public class Hora {
         hora1.incrementa();
         hora2.decrementa();
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",hora1, composaOperadorComparacio(hora1,hora2),hora2);
-    }
-    public boolean esValida(int hores, int minuts, int segons) {
-        if(hores >23 || hores < 0) return false;
-        if(minuts >59 || minuts < 0) return false;
-        if(segons >59 || segons < 0) return false;
-        return true;
     }
 }
