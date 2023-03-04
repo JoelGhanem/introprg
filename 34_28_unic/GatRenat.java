@@ -6,7 +6,7 @@ public class GatRenat {
     private static GatRenat instancia() {
         GatRenat renat = new GatRenat();
         int vides = 7;
-        String posicio = "estirat";
+        String posicio = renat.getPosicio();
         return renat;
     }
 
