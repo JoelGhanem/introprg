@@ -44,15 +44,15 @@ public class GatRenat {
         return instancia;
     }
 
-    public GatRenat(int vides) {
+    private GatRenat(int vides) {
         setVides(vides);
         getPosicio();
     }
-    public GatRenat(String posicio) {
+    private GatRenat(String posicio) {
         getVides();
         setPosicio(posicio);
     }
-    public GatRenat(int vides, String posicio) {
+    private GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
     }
