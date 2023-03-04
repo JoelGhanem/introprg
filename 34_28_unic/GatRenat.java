@@ -11,14 +11,14 @@ public class GatRenat {
 
     public static GatRenat getInstancia() {
         if (instancia == null) {
-            GatRenat instancia = new GatRenat();
+            instancia = new GatRenat();
         }
         return instancia;
     }
 
     public static GatRenat getInstancia(int vides) {
         if (instancia== null) {
-            GatRenat instancia = new GatRenat();
+            instancia = new GatRenat();
             return instancia;
         }
         instancia.setVides(vides);
@@ -27,7 +27,7 @@ public class GatRenat {
 
     public static GatRenat getInstancia(String algo) {
         if (instancia== null) {
-            GatRenat instancia = new GatRenat();
+            instancia = new GatRenat();
             return instancia;
         }
         instancia.setPosicio(algo);
@@ -36,7 +36,7 @@ public class GatRenat {
 
     public static GatRenat getInstancia(int vides, String algo) {
         if (instancia== null) {
-            GatRenat instancia = new GatRenat(vides, algo);
+            instancia = new GatRenat(vides, algo);
             return instancia;
         }
         instancia.setVides(vides);
