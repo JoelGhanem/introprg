@@ -6,7 +6,7 @@ public class GatRenat {
 
     public GatRenat() {
         int vides = 7;
-        String posicio = getPosicio(); 
+        String posicio = "estirat"; 
     }
 
     public static GatRenat getInstancia() {
