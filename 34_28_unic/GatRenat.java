@@ -6,7 +6,7 @@ public class GatRenat {
 
     public GatRenat() {
         int vides = 7;
-        String posicio = "estirat"; 
+        String posicio = getPosicio(); 
     }
 
     public static GatRenat getInstancia() {
@@ -62,7 +62,7 @@ public class GatRenat {
             this.vides = vides;
         }
     }
-    public String getPosicio() {return posicio; }
+    public String getPosicio() {return this.posicio; }
     public void setPosicio(String posicio) {
         if (posicio.equals("dret") || posicio.equals("assegut")) { this.posicio = posicio;}
     }
