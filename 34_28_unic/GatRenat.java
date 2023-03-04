@@ -4,14 +4,7 @@ public class GatRenat {
     private String posicio = "estirat";
     private static GatRenat instancia;
 
-//    private static GatRenat instancia() {
- //       GatRenat renat = new GatRenat();
-  //      int vides = 7;
-   //     String posicio = renat.getPosicio();
-    //    return renat;
-    //}
-
-    private GatRenat() {
+    public GatRenat() {
         int vides = 7;
         String posicio = getPosicio(); 
     }
