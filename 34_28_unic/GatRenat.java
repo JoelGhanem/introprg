@@ -66,8 +66,8 @@ public class GatRenat {
     public void setPosicio(String posicio) {
         if (posicio.equals("dret") || posicio.equals("assegut")) { this.posicio = posicio;}
     }
-    //@Override
-    //public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
+    @Override
+    public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
     public static void main(String[] args) {
         GatRenat[] renats = {
             new GatRenat(),         // tot per defecte
