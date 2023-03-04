@@ -39,7 +39,7 @@ public class Hora {
         return hora3;
     }
     public static Hora duplica(Hora hora) {
-        return hora;
+        return new Hora(hora.hores, hora.minuts, hora.segons);
     }
     public int getHores() { return hores;}
 
