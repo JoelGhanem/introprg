@@ -159,4 +159,10 @@ public class Hora {
         hora2.decrementa();
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",hora1, composaOperadorComparacio(hora1,hora2),hora2);
     }
+    public boolean esValida(int hores, int minuts, int segons) {
+        if(hores >23 || hores < 0) return false;
+        if(minuts >59 || minuts < 0) return false;
+        if(segons >59 || segons < 0) return false;
+        return true;
+    }
 }
