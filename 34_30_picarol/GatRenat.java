@@ -90,7 +90,6 @@ public class GatRenat {
         if (this.picarol == null) {
             return null;
         }
-        this.picarol = null;
         return this.picarol;
     } 
     public boolean tePicarol() {
