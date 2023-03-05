@@ -3,7 +3,7 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
     private static GatRenat instancia;
-    Picarol picarol = null;
+    private Picarol picarol = null;
 
     public GatRenat() {
         String posicio = getPosicio(); 
