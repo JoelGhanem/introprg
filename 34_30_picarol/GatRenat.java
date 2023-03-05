@@ -91,14 +91,14 @@ public class GatRenat {
         }
     }
     public Picarol treuPicarol() {
-        if (picarol == null) {
+        if (this.picarol == null) {
             return null;
         }
         picarol = null;
-        return picarol;
+        return this.picarol;
     } 
     public boolean tePicarol() {
-        if(picarol == null) {
+        if(this.picarol == null) {
             return false;
         } else {
             return true;
