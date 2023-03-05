@@ -1,6 +1,6 @@
 //fem l'ull de gat
 public class UllDeGat {
-    public static String estadoOjo;
+    public static String estadoOjo = "obert";
     public static  void obert() {
         estadoOjo = "obert";
     }
