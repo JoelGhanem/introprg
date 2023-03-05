@@ -68,6 +68,7 @@ public class GatRenat {
         if (getPosicio().equals("estirat")) {
             return "estirat";
         } else {
+            setPosicio("estirat");
             picarol.sona();
             return "estirat";
         }
@@ -77,6 +78,7 @@ public class GatRenat {
             return "aixecat";
         } else {
             picarol.sona();
+            setPosicio("aixecat");
             return "aixecat";
         }
     }
@@ -85,6 +87,7 @@ public class GatRenat {
             return "assegut";
         } else {
             picarol.sona();
+            setPosicio("assegut");
             return "assegut";
         }
     }
