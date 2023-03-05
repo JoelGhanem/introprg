@@ -1,4 +1,4 @@
-//arxiu que ens permet utilitzar el GatREnat.java//
+//Arxiu que executar'a el programa GatRenat i li donara una sortida diferent a a del programa
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = GatRenat.getInstancia();
