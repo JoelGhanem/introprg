@@ -37,7 +37,10 @@ public class GatRenat {
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
     //nuevo
-
+    public GatRenat(String posicio) {
+        getVides();
+        setPosicio(posicio);
+    }
     public Picarol posaPicarol(Picarol picarol) {
         if (picarol != null) {
             Picarol picarol2 = new Picarol();
