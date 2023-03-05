@@ -91,6 +91,7 @@ public class GatRenat {
             return null;
         }
         Picarol picarolTmp = new Picarol();
+        picarolTmp = this.picarol;
         picarol = null;
         return picarolTmp;
     } 
