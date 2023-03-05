@@ -46,10 +46,10 @@ public class GatRenat {
         return instancia;
     }
 
-    private GatRenat(int vides) {
-        setVides(vides);
-        getPosicio();
-    }
+    //private GatRenat(int vides) {
+        //setVides(vides);
+        //getPosicio();
+    //}
     private GatRenat(String posicio) {
         getVides();
         setPosicio(posicio);
