@@ -60,6 +60,7 @@ public class GatRenat {
     public static void main(String[] args) {
         Picarol picarol = new Picarol();
         picarol.sona();   // el picarol funciona fins i tot sense gat!
+        picarol.sona();
         GatRenat renat = new GatRenat();
         renat.aixecat();
         renat.posaPicarol(picarol);
