@@ -83,7 +83,6 @@ public class GatRenat {
         if (picarol != null) {
             Picarol picarolTmp = new Picarol();
             picarolTmp = picarol;
-            picarol = null;
             Picarol picarol2 = new Picarol();
             picarol2 = picarolTmp;
             return picarol;
