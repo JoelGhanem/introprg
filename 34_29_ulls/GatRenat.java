@@ -92,8 +92,8 @@ public class GatRenat {
     }
     //Novedades
     public UllDeGat getUllDret() {
-        UllDeGat dret = new UllDeGat();
-        dret = this.ullDret;
+        boolean estadoOjo = ullDret.getEstadoOjo();
+        UllDeGat dret = new UllDeGat(estadoOjo);
         return dret;
     }
     public UllDeGat getUllEsquerre() {
