@@ -4,7 +4,7 @@ public class Picarol {
     public void sona() {
         //String posicio
         System.out.println("clink-clink");
-        this.cops++;
+        this.cops = this.cops + 1;
     }
     public int quantsCops() {
         return this.cops;
