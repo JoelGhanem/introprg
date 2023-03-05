@@ -2,13 +2,12 @@
 public class Gat {
     private int vides = 7;
     private String posicio = "estirat";
-    public boolean viu = true;
 
     public int getVides() {
         return vides;
     }
     public void setVides(int vides) {
-        if (vides <= 0) viu = false; this.vides = vides;
+        this.vides = vides;
     }
     public String getPosicio() { 
         return posicio;
