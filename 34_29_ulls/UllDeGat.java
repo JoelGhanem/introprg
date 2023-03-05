@@ -1,7 +1,7 @@
 //fem l'ull de gat
 public class UllDeGat {
     public String estadoOjo = "tancat";
-    public void obert() {
+    public void obret() {
         this.estadoOjo = "obert";
     }
     public void tancat() {
