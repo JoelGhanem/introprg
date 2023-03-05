@@ -97,8 +97,8 @@ public class GatRenat {
         return dret;
     }
     public UllDeGat getUllEsquerre() {
-        UllDeGat esquerre = new UllDeGat();
-        esquerre = this.ullEsquerre;
+        boolean estadoOjo = ullEsquerre.getEstadoOjo();
+        UllDeGat esquerre = new UllDeGat(estadoOjo);
         return esquerre;
     }
     public String aixecat() {
