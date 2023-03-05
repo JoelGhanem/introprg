@@ -1,4 +1,4 @@
-//fem l'ull de gat
+//fem l'ull de gat que varia segons la posicio del gatRenat
 public class UllDeGat {
     private boolean estadoOjo = false;
     public UllDeGat() {

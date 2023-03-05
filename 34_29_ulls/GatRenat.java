@@ -1,4 +1,4 @@
-// Arxiu que imula un gat que en aquest cas te dos ulls i varies posicions        
+// Arxiu que imula un gat que en aquest cas te dos ulls i varies posicions que van canviant, cosa que altera els ulls de dit feli virtual
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
