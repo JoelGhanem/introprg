@@ -27,15 +27,12 @@ public class GatRenat {
     }
     public void aixecat() {
         setPosicio("dret");
-        picarol.sona();
     }
     public void seu() {
         setPosicio("assegut");
-        picarol.sona();
     }
     public void estirat() {
         setPosicio("estirat");
-        picarol.sona();
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
