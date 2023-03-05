@@ -3,6 +3,7 @@
 public class GatRenat extends Gat {
     private int vides = 7;
     private String posicio = "estirat";
+    public boolean viu = true;
 
     //Strings
     public String estirat() {
@@ -33,7 +34,7 @@ public class GatRenat extends Gat {
     public String getPosicio() { return posicio; }
 
     //booleans
-    //public boolean estaViu() { return viu; }
+    public boolean estaViu() { return viu; }
 
     public boolean estaEstirat() { return posicio.equals("estirat"); }
 
@@ -43,7 +44,7 @@ public class GatRenat extends Gat {
 
 
     public void setVides(int novesVides) {
-        //if (novesVides <= 0) //viu = false; vides = novesVides;
+        if (novesVides <= 0) viu = false; vides = novesVides;
     }
     public void setPosicio(String novaPosicio) {
         if (novaPosicio.equals("assegut")) {
