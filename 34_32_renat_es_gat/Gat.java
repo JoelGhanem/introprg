@@ -11,5 +11,8 @@ public class Gat {
         return posicio;
     }
     public void setPosicio(String posicio) {
+        if (posicio.equals("assegut")) {
+            this.posicio = posicio;
+        }
     }
 }
