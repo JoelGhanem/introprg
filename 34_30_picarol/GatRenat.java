@@ -91,7 +91,6 @@ public class GatRenat {
             return null;
         }
         Picarol picarolTmp = new Picarol();
-        picarol = null;
         return picarolTmp;
     } 
     public boolean tePicarol() {
