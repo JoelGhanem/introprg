@@ -6,7 +6,7 @@ public class GatRenat {
     public UllDeGat ullDret = new UllDeGat();
     public UllDeGat ullEsquerre = new UllDeGat();
 
-    private GatRenat() {
+    public GatRenat() {
         int vides = 7;
         String posicio = getPosicio(); 
     }
