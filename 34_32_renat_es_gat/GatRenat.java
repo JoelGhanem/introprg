@@ -33,7 +33,13 @@ public class GatRenat extends Gat {
 
 
     //booleans
-    public boolean estaViu() { return viu; }
+    public boolean estaViu() { 
+        if (getVides() <= 0) {
+            return false; 
+        } else {
+            return viu; 
+        }
+    }
 
     public boolean estaEstirat() { return getPosicio().equals("estirat"); }
 
