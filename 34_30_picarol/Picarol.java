@@ -2,10 +2,11 @@
 public class Picarol {
     private int cops = 0;
     public void sona() {
+        //String posicio
         System.out.println("clink-clink");
+        this.cops++;
     }
     public int quantsCops() {
-        this.cops++;
         return this.cops;
     }
 }
