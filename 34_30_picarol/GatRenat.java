@@ -80,12 +80,12 @@ public class GatRenat {
         setPosicio(posicio);
     }
     public Picarol posaPicarol(Picarol picarol) {
-        if (picarol != null) {
+        if (this.picarol != null) {
             Picarol picarolTmp = new Picarol();
             picarolTmp = picarol;
             Picarol picarol2 = new Picarol();
             picarol2 = picarolTmp;
-            return picarol;
+            return this.picarol;
         } else {
             return null;
         }
