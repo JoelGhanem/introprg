@@ -38,8 +38,12 @@ public class GatRenat {
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
     public Picarol posaPicarol(Picarol picarol) {
-
-        return picarol;
+        if (picarol != null) {
+            Picarol picarol2 = new Picarol();
+            return picarol;
+        } else {
+            return null;
+        }
     }
     public Picarol treuPicarol() {
         picarol = null;
