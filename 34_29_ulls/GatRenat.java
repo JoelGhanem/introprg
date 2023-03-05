@@ -47,12 +47,22 @@ public class GatRenat {
     }
 
     //private GatRenat(int vides) {
-        //setVides(vides);
-        //getPosicio();
+    //setVides(vides);
+    //getPosicio();
     //}
     public GatRenat(String posicio) {
         getVides();
         setPosicio(posicio);
+        if (getPosicio().equals("dret")) {
+            ullDret.obret();
+            ullEsquerre.obret();
+        } else if (getPosicio().equals("assegut")) {
+            ullDret.obret();
+            ullEsquerre.tancat();
+        } else {
+            ullDret.tancat();
+            ullEsquerre.tancat();
+        }
     }
     public GatRenat(int vides, String posicio) {
         setVides(vides);
