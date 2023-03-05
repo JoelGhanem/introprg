@@ -1,8 +1,7 @@
 //Implementa una nova verios del GatRenat, que disposara de funcionalitats com les impleentades a exercicis previs com ara el de Renat ensinistrat
 
 public class GatRenat extends Gat {
-    private int vides = 7;
-    private String posicio = "estirat";
+   
     public boolean viu = true;
 
     //Strings
@@ -31,7 +30,7 @@ public class GatRenat extends Gat {
         }
     }
 
-    public String getPosicio() { return posicio; }
+
 
     //booleans
     public boolean estaViu() { return viu; }
