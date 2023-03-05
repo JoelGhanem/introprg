@@ -3,7 +3,7 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
     private static GatRenat instancia;
-    public Picarol picarol = new Picarol();
+    Picarol picarol = new Picarol();
 
     public GatRenat() {
         String posicio = getPosicio(); 
@@ -81,13 +81,18 @@ public class GatRenat {
     }
     public Picarol posaPicarol(Picarol picarol) {
         if (picarol != null) {
+            Picarol picarolTmp = new Picarol();
+            picarolTmp = picarol;
+            picarol = null;
             Picarol picarol2 = new Picarol();
+            picarol2 = picarolTmp;
             return picarol;
         } else {
             return null;
         }
     }
     public Picarol treuPicarol() {
+        picarol = null;
         return picarol;
     } 
     public boolean tePicarol() {
