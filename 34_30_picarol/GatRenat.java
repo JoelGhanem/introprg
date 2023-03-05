@@ -56,7 +56,7 @@ public class GatRenat {
     }
     public String getPosicio() {return this.posicio; }
     public void setPosicio(String posicio) {
-        if (posicio.equals("dret") || posicio.equals("assegut") || posicio.equals("estirat")) { this.posicio = posicio;}
+        if (posicio.equals("dret") || posicio.equals("assegut") || posicio.equals("estirat")) { this.posicio = posicio; picarol.sona();}
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
