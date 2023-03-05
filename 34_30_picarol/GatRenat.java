@@ -71,9 +71,6 @@ public class GatRenat {
         return "caca";
     }
 
-
-
-
     //nuevo
     public GatRenat(String posicio) {
         getVides();
