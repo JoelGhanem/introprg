@@ -104,9 +104,11 @@ public class GatRenat {
     public String aixecat() {
         if (getPosicio().equals("dret")) {
             ullDret.obret();
+            ullEsquerre.obret();
             return "no faig res";
         } else {
             ullDret.obret();
+            ullEsquerre.obret();
             setPosicio("dret");
             return "m'aixeco";
         }
