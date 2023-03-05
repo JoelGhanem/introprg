@@ -3,7 +3,6 @@ public class GatRenat {
     public GatRenat() {
         int vides = 7;
         String posicio = "estirat";
-        Picarol picarol;
     }
     private Picarol picarol;
     private int vides = 7;
@@ -40,6 +39,8 @@ public class GatRenat {
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
+    //nuevo
+
     public Picarol posaPicarol(Picarol picarol) {
         if (picarol != null) {
             Picarol picarol2 = new Picarol();
