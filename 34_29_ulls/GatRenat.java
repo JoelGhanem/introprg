@@ -3,8 +3,8 @@ public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
     private static GatRenat instancia;
-    private UllDeGat ullDret = new UllDeGat();
-    private UllDeGat ullEsquerre = new UllDeGat();
+    public UllDeGat ullDret = new UllDeGat();
+    public UllDeGat ullEsquerre = new UllDeGat();
 
     private GatRenat() {
         int vides = 7;
@@ -92,15 +92,19 @@ public class GatRenat {
     }
     //Novedades
     public UllDeGat getUllDret() {
-        return this.ullDret;
+        UllDeGat dret = new UllDeGat();
+        dret = this.ullDret;
+        return dret;
     }
     public UllDeGat getUllEsquerre() {
-        return this.ullEsquerre;
+        UllDeGat esquerre = new UllDeGat();
+        esquerre = this.ullEsquerre;
+        return esquerre;
     }
     public String aixecat() {
         if (getPosicio().equals("dret")) {
             ullDret.estadoOjo = "obert";
-            UllDeGat.obert();
+            ullDret.obert();
             ullEsquerre.estadoOjo = "obert";
             return "no faig res";
         } else {
@@ -111,9 +115,9 @@ public class GatRenat {
     public String seu() {
         if (getPosicio().equals("assegut")) {
             ullDret.estadoOjo = "obert";
-            UllDeGat.obert();
+            ullDret.obert();
             ullEsquerre.estadoOjo = "tancat";
-            UllDeGat.tancat();
+            ullEsquerre.tancat();
             return "no faig res";
         } else {
             setPosicio("assegut");
@@ -123,9 +127,9 @@ public class GatRenat {
     public String estirat() {
         if(getPosicio().equals("estirat")) {
             ullDret.estadoOjo = "tancat";
-            UllDeGat.tancat();
+            ullDret.tancat();
             ullEsquerre.estadoOjo = "tancat";
-            UllDeGat.tancat();
+            ullEsquerre.tancat();
             return "no faig res";
         } else {
             setPosicio("estirat");
