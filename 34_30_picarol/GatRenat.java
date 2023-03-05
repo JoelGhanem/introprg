@@ -91,6 +91,9 @@ public class GatRenat {
         }
     }
     public Picarol treuPicarol() {
+        if (picarol == null) {
+            return null;
+        }
         picarol = null;
         return picarol;
     } 
