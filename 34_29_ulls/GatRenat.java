@@ -50,11 +50,11 @@ public class GatRenat {
         //setVides(vides);
         //getPosicio();
     //}
-    private GatRenat(String posicio) {
+    public GatRenat(String posicio) {
         getVides();
         setPosicio(posicio);
     }
-    private GatRenat(int vides, String posicio) {
+    public GatRenat(int vides, String posicio) {
         setVides(vides);
         setPosicio(posicio);
     }
