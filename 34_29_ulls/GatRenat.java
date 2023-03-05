@@ -99,7 +99,7 @@ public class GatRenat {
     public UllDeGat getUllEsquerre() {
         UllDeGat esquerre = new UllDeGat();
         esquerre = this.ullEsquerre;
-        return ullEsquerre;
+        return esquerre;
     }
     public String aixecat() {
         if (getPosicio().equals("dret")) {
