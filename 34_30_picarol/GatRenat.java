@@ -58,22 +58,35 @@ public class GatRenat {
     public void setPosicio(String posicio) {
         if (posicio.equals("dret") || posicio.equals("assegut") || posicio.equals("estirat")) { 
             this.posicio = posicio;
-            if (tePicarol()) {
-                picarol.sona();
-            }
+            picarol.sona();
         }
     }
     @Override
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
 
     public String estirat() {
-        return "caca";
+        if (getPosicio().equals("estirat")) {
+            return "estirat";
+        } else {
+            picarol.sona();
+            return "estirat";
+        }
     }
     public String aixecat() {
-        return "caca";
+        if (getPosicio().equals("aixecat")) {
+            return "aixecat";
+        } else {
+            picarol.sona();
+            return "aixecat";
+        }
     }
     public String seu() {
-        return "caca";
+        if (getPosicio().equals("assegut")) {
+            return "assegut";
+        } else {
+            picarol.sona();
+            return "assegut";
+        }
     }
 
     //nuevo
@@ -113,6 +126,7 @@ public class GatRenat {
         GatRenat renat = new GatRenat();
         renat.aixecat();
         renat.posaPicarol(picarol);
+        System.out.println("tendrias q sonar");
         renat.seu();      // ha de sonar el picarol
         renat.seu();      // no sona el picarol doncs no es mou!
         renat.treuPicarol();
