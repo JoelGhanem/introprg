@@ -50,7 +50,7 @@ public class GatRenat {
         }
     }
     public Picarol treuPicarol() {
-        return null;
+        return picarol;
     } 
     public boolean tePicarol() {
         if(picarol == null) {
