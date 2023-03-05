@@ -1,14 +1,14 @@
 //fem l'ull de gat
 public class UllDeGat {
-    public void obert() {
-        this.posicio = "obert";
-
+    public static String estadoOjo;
+    public static  void obert() {
+        estadoOjo = "obert";
     }
-    public void tancat() {
-        this.posicio = "tancat";
+    public static void tancat() {
+        estadoOjo = "tancat";
     }
 
     public boolean estaObert() {
-        return posicio.equals("obert");
+        return estadoOjo.equals("obert");
     }
 }

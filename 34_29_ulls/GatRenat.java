@@ -1,7 +1,10 @@
+// Arxiu que imula un gat que en aquest cas te dos ulls i varies posicions        
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
     private static GatRenat instancia;
+    private UllDeGat ullDret = new UllDeGat();
+    private UllDeGat ullEsquerre = new UllDeGat();
 
     private GatRenat() {
         int vides = 7;
@@ -88,32 +91,46 @@ public class GatRenat {
                 renat.getUllEsquerre().estaObert());
     }
     //Novedades
-    public UllDeGat getUllDret(){
-        UllDeGat dret = new UllDeGat();
-        if (getPosicio().equals("dret")|| getPosicio().equals("assegut")) { 
-            dret.posicio = "obert";
-        } else {
-            dret.posicio = "tancat";
-        }
-        return dret;
+    public UllDeGat getUllDret() {
+        return this.ullDret;
     }
     public UllDeGat getUllEsquerre() {
-        UllDeGat esquerra = new UllDeGat();
-        if (getPosicio().equals("dret")){ 
-            esquerra.posicio = "obert";
-        } else {
-            esquerra.posicio = "tancat";
-        }
-        return esquerra;
+        return this.ullEsquerre;
     }
     public String aixecat() {
-        return "dret";
+        if (getPosicio().equals("dret")) {
+            ullDret.estadoOjo = "obert";
+            UllDeGat.obert();
+            ullEsquerre.estadoOjo = "obert";
+            return "no faig res";
+        } else {
+            setPosicio("dret");
+            return "m'aixeco";
+        }
     }
     public String seu() {
-        return "assegut";
+        if (getPosicio().equals("assegut")) {
+            ullDret.estadoOjo = "obert";
+            UllDeGat.obert();
+            ullEsquerre.estadoOjo = "tancat";
+            UllDeGat.tancat();
+            return "no faig res";
+        } else {
+            setPosicio("assegut");
+            return "m'assec";
+        }
     }
     public String estirat() {
-        return "estirat";
+        if(getPosicio().equals("estirat")) {
+            ullDret.estadoOjo = "tancat";
+            UllDeGat.tancat();
+            ullEsquerre.estadoOjo = "tancat";
+            UllDeGat.tancat();
+            return "no faig res";
+        } else {
+            setPosicio("estirat");
+            return "estirat";
+        }
     }
 }
 
