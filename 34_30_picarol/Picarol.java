@@ -21,7 +21,7 @@ public class Picarol {
     public void sona() {
         //String posicio
         System.out.println("clink-clink");
-        this.cops = this.cops + 1;
+        this.cops ++;
         try {
             File fitxer = new File("picarol.wav");
             AudioInputStream stream = AudioSystem.getAudioInputStream(fitxer);
