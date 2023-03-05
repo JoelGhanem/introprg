@@ -35,10 +35,10 @@ public class GatRenat extends Gat {
     //booleans
     public boolean estaViu() { return viu; }
 
-    public boolean estaEstirat() { return posicio.equals("estirat"); }
+    public boolean estaEstirat() { return getPosicio().equals("estirat"); }
 
-    public boolean estaDret() {return posicio.equals("dret");}
+    public boolean estaDret() {return getPosicio().equals("dret");}
 
-    public boolean estaAssegut() { return posicio.equals("assegut");}
+    public boolean estaAssegut() { return getPosicio().equals("assegut");}
 }
 

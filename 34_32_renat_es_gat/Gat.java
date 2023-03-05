@@ -1,8 +1,9 @@
 //clase pare de GatRenat que defineix els accesors de vida i posicio
 public class Gat {
-    public int vides = 7;
-    public String posicio = "estirat";
+    private int vides = 7;
+    private String posicio = "estirat";
     public boolean viu = true;
+
     public int getVides() {
         return vides;
     }
