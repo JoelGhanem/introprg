@@ -58,7 +58,6 @@ public class GatRenat {
     public void setPosicio(String posicio) {
         if (posicio.equals("dret") || posicio.equals("assegut") || posicio.equals("estirat")) { 
             this.posicio = posicio;
-            picarol.sona();
         }
     }
     @Override
@@ -135,7 +134,6 @@ public class GatRenat {
         GatRenat renat = new GatRenat();
         renat.aixecat();
         renat.posaPicarol(picarol);
-        System.out.println("tendrias q sonar");
         renat.seu();      // ha de sonar el picarol
         renat.seu();      // no sona el picarol doncs no es mou!
         renat.treuPicarol();
