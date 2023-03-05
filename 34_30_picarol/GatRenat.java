@@ -69,7 +69,9 @@ public class GatRenat {
             return "estirat";
         } else {
             setPosicio("estirat");
-            picarol.sona();
+            if (tePicarol()) {
+                picarol.sona();
+            }
             return "estirat";
         }
     }
@@ -77,7 +79,9 @@ public class GatRenat {
         if (getPosicio().equals("aixecat")) {
             return "aixecat";
         } else {
-            picarol.sona();
+            if (tePicarol()) {
+                picarol.sona();
+            }
             setPosicio("aixecat");
             return "aixecat";
         }
@@ -86,7 +90,9 @@ public class GatRenat {
         if (getPosicio().equals("assegut")) {
             return "assegut";
         } else {
-            picarol.sona();
+            if(tePicarol()) {
+                picarol.sona();
+            }
             setPosicio("assegut");
             return "assegut";
         }
