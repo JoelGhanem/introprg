@@ -75,14 +75,14 @@ public class GatRenat {
         }
     }
     public String aixecat() {
-        if (getPosicio().equals("aixecat")) {
-            return "aixecat";
+        if (getPosicio().equals("dret")) {
+            return "dret";
         } else {
             if (tePicarol()) {
                 picarol.sona();
             }
-            setPosicio("aixecat");
-            return "aixecat";
+            setPosicio("dret");
+            return "dret";
         }
     }
     public String seu() {
