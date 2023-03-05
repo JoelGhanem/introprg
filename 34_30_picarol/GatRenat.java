@@ -82,9 +82,9 @@ public class GatRenat {
             picarolTmp = picarol;
             this.picarol = picarol2;
             return picarolTmp;
-        } else {
-            return null;
         }
+        this.picarol = picarol2;
+        return null;
     }
     public Picarol treuPicarol() {
         if (this.picarol == null) {
