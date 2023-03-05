@@ -39,13 +39,18 @@ public class GatRenat {
     public String toString() { return String.format("Vides: %d. Posició: %s", vides, posicio); }
     public Picarol posaPicarol(Picarol picarol) {
 
-        return picarol 
+        return picarol;
     }
     public Picarol treuPicarol() {
-        if 
+        picarol = null;
         return picarol;
     } 
     public boolean tePicarol() {
+        if(picarol == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
     public static void main(String[] args) {
         Picarol picarol = new Picarol();
