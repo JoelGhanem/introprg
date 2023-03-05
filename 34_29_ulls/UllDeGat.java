@@ -1,14 +1,24 @@
 //fem l'ull de gat
 public class UllDeGat {
-    public String estadoOjo = "tancat";
+    private boolean estadoOjo = false;
+    public UllDeGat() {
+    }
+    public UllDeGat(boolean estadoOjo) {
+        this.estadoOjo = estadoOjo;
+    }
     public void obret() {
-        this.estadoOjo = "obert";
+        setEstadoOjo(true);
     }
     public void tancat() {
-        this.estadoOjo = "tancat";
+        setEstadoOjo(false);
     }
-
     public boolean estaObert() {
-        return estadoOjo.equals("obert");
+        return getEstadoOjo();
+    }
+    public boolean getEstadoOjo() {
+        return estadoOjo;
+    }
+    public void setEstadoOjo(boolean estadoOjo) {
+        this.estadoOjo = estadoOjo;
     }
 }
