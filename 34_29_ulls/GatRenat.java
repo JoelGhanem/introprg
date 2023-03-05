@@ -108,6 +108,9 @@ public class GatRenat {
             ullEsquerre.estadoOjo = "obert";
             return "no faig res";
         } else {
+            ullDret.estadoOjo = "obert";
+            ullDret.obert();
+            ullEsquerre.estadoOjo = "obert";
             setPosicio("dret");
             return "m'aixeco";
         }
@@ -120,6 +123,10 @@ public class GatRenat {
             ullEsquerre.tancat();
             return "no faig res";
         } else {
+            ullDret.estadoOjo = "obert";
+            ullDret.obert();
+            ullEsquerre.estadoOjo = "tancat";
+            ullEsquerre.tancat();
             setPosicio("assegut");
             return "m'assec";
         }
@@ -132,6 +139,10 @@ public class GatRenat {
             ullEsquerre.tancat();
             return "no faig res";
         } else {
+            ullDret.estadoOjo = "tancat";
+            ullDret.tancat();
+            ullEsquerre.estadoOjo = "tancat";
+            ullEsquerre.tancat();
             setPosicio("estirat");
             return "estirat";
         }
