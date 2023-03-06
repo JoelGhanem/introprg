@@ -1,4 +1,4 @@
-//arxiu que ens permet utilitzar el gatrenat
+//arxiu que ens permet utilitzar el gatrenat, execua els arxius GatRenat i Gat
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
