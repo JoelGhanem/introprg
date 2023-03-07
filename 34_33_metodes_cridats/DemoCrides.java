@@ -9,5 +9,6 @@ class DemoCrides {
         gat.miola();
         renat.miola();
         Menjar menjar = new Menjar("bacallà");
+        felix.menja(menjar);
     }
 }
