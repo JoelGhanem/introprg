@@ -11,6 +11,6 @@ class DemoCrides {
         Menjar menjar = new Menjar("bacallà");
         renat.menja(menjar);
         felix.menja(menjar);
-        gat.menja(menjar);
+        //gat.menja(menjar);
     }
 }
