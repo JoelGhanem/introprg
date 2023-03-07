@@ -10,6 +10,7 @@ class DemoCrides {
         renat.miola();
         Menjar menjar = new Menjar("bacallà");
         renat.menja(menjar);
+        //No hacen falta los dos de abajo porque una vez llamas al hijo todos los padres salen tambien
         //felix.menja(menjar);
         //gat.menja(menjar);
     }
