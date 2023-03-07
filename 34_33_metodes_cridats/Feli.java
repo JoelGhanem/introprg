@@ -1,4 +1,4 @@
-// En aquest exercici analitzare els metodes que es criden realment quan hi ha una herencia pel mig.
+// En aquest exercici analitzare els metodes que es criden realment quan hi ha una herencia pel mig. Tenim 3 arxius en un, tots son de la mateixa linea d'heritatge, tenim la superclasse Feli, la subclasse Gat i la sub sub classe GatRenat, totes fan el mateix pero una es fuilla de l'altre
 
 class Feli {
     public Feli() {

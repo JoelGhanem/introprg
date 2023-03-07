@@ -1,3 +1,4 @@
+//L'Arxiu DemoCrides.java em permet cridar a qualsevol gat de l'Arxiu Feli.java. Aquest exercici m'ha ajudat a entendre el funcionament de l'heritatge
 class DemoCrides {
     public static void main(String[] args) {
         Feli felix = new Feli();
