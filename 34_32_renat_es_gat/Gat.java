@@ -1,4 +1,5 @@
 //clase pare de GatRenat que defineix els accesors de vida i posicio
+//aquest programa interactua amb GatRenat.java i UsaGatRenat.java
 public class Gat {
     private int vides = 7;
     private String posicio = "estirat";
