@@ -8,4 +8,4 @@ public class UsaGatRenat {
         System.out.println("El Renat diu: "+ renat.estirat());
         System.out.println("El Renat diu: "+ renat.estirat());
     }
-
+}
