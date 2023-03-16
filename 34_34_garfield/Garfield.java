@@ -13,5 +13,28 @@ class Garfield extends Gat {
 						this.vides = vides;
 				}
 		}
+		@Override
+		public String aixecat() {	
+				if (this.posicio.equals("assegut")) {
+						setPosicio("dret");
+						return "m'assec";
+				} else if (estaDret()) {
+						return "no faig res";
+				} else {
+						return "bai maitea, bai";
+				}
+		}
+		@Override
+		public String estirat() {	
+				if (this.posicio.equals("assegut")) {
+						setPosicio("estirat");
+						return "m'estiro";
+				} else if (estaEstirat()) {
+						return "no faig res";
+				} else {
+						return "bai maitea, bai";
+				}
+		}
 }
+
 
