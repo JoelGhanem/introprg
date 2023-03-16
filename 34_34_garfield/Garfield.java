@@ -15,6 +15,7 @@ class Garfield extends Gat {
 		}
 		@Override
 		public String aixecat() {	
+				System.out.println(this.posicio);
 				if (this.posicio.equals("assegut")) {
 						setPosicio("dret");
 						return "m'assec";
@@ -26,6 +27,7 @@ class Garfield extends Gat {
 		}
 		@Override
 		public String estirat() {	
+				System.out.println(this.posicio);
 				if (this.posicio.equals("assegut")) {
 						setPosicio("estirat");
 						return "m'estiro";
@@ -34,10 +36,6 @@ class Garfield extends Gat {
 				} else {
 						return "bai maitea, bai";
 				}
-		}
-		@Override
-		public String getPosicio() {
-				return this.posicio;
 		}
 }
 
