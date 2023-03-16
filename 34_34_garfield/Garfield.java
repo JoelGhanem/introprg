@@ -22,7 +22,7 @@ class Garfield extends Gat {
 				} else if (estaDret()) {
 						return "no faig res";
 				} else {
-						return "bai maitea, bai";
+						return "Bai maitea, bai";
 				}
 		}
 		@Override
@@ -34,7 +34,7 @@ class Garfield extends Gat {
 				} else if (estaEstirat()) {
 						return "no faig res";
 				} else {
-						return "bai maitea, bai";
+						return "Bai maitea, bai";
 				}
 		}
 		@Override
