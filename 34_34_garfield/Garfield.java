@@ -18,7 +18,7 @@ class Garfield extends Gat {
 				System.out.println(this.posicio);
 				if (this.posicio.equals("assegut")) {
 						setPosicio("dret");
-						return "m'assec";
+						return "m'aixeco";
 				} else if (estaDret()) {
 						return "no faig res";
 				} else {
