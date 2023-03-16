@@ -35,6 +35,10 @@ class Garfield extends Gat {
 						return "bai maitea, bai";
 				}
 		}
+		@Override
+		public String getPosicio() {
+				return this.posicio;
+		}
 }
 
 
