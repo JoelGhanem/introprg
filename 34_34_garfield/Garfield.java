@@ -37,6 +37,11 @@ class Garfield extends Gat {
 						return "bai maitea, bai";
 				}
 		}
+		@Override
+		public String setPosicio(String posicio) {
+				this.posicio = posicio;
+				return posicio;
+		}
 }
 
 
