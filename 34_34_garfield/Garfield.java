@@ -3,12 +3,12 @@ class Garfield extends Gat {
 		private String nom = "Garfield";
 		private String posicio = "estirat";
 		private int vides = 9;
-		public Garfield() {
-				super();
-		}
-		public Garfield(String nom, String posicio) {
-				super(nom, posicio);
-		}
+//		public Garfield() {
+//				super();
+//		}
+//		public Garfield(String nom, int vides) {
+//				super(nom, vides);
+//		}
 		public String getNom() {
 				return this.nom;
 		}
