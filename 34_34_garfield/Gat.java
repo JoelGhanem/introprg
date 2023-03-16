@@ -15,6 +15,10 @@ class Gat {
 				this.nom = nom;
 				this.posicio = posicio;
 		}
+		public Gat (String nom, int vides) {
+				this.nom = nom;
+				this.vides = vides;
+		}
 		public Gat(String nom, int vides, String posicio) {
 				this.nom = nom;
 				this.vides = vides;
