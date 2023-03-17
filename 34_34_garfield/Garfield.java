@@ -3,12 +3,12 @@ class Garfield extends Gat {
 		private String nom = "Garfield";
 		private String posicio = "estirat";
 		private int vides = 9;
-//		public Garfield() {
-//				super();
-//		}
-//		public Garfield(String nom, int vides) {
-//				super(nom, vides);
-//		}
+		//		public Garfield() {
+		//				super();
+		//		}
+		//		public Garfield(String nom, int vides) {
+		//				super(nom, vides);
+		//		}
 		public String getNom() {
 				return this.nom;
 		}
@@ -39,8 +39,10 @@ class Garfield extends Gat {
 						return "m'estiro";
 				} else if (estaEstirat()) {
 						return "no faig res";
-				} else {
+				} else if(this.posicio.equals("dret")){
 						return "Bai Maitea, bai";
+				} else {
+						return "a ver";
 				}
 		}
 		@Override
