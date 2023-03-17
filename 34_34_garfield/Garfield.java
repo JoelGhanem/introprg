@@ -46,6 +46,15 @@ class Garfield extends Gat {
 				}
 		}
 		@Override
+		public String seu() {
+				if (estaAssegut()) {
+						return "no faig res";
+				} else {
+						setPosicio("assegut");
+						return "m'assento";
+				}
+		}
+		@Override
 		public String setPosicio(String posicio) {
 				this.posicio = posicio;
 				return this.posicio;
