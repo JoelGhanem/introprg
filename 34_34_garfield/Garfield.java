@@ -48,7 +48,7 @@ class Garfield extends Gat {
 		@Override
 		public String setPosicio(String posicio) {
 				this.posicio = posicio;
-				return posicio;
+				return this.posicio;
 		}
 		@Override 
 		public boolean estaDret() {
