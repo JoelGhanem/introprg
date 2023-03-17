@@ -51,7 +51,7 @@ class Garfield extends Gat {
 						return "no faig res";
 				} else {
 						setPosicio("assegut");
-						return "m'assento";
+						return "m'assec";
 				}
 		}
 		@Override
