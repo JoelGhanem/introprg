@@ -36,9 +36,8 @@ class Gat {
 		public String getPosicio() {
 				return this.posicio;
 		}
-		public String setPosicio(String posicio) {
+		public void setPosicio(String posicio) {
 				this.posicio = posicio;
-				return posicio;
 		}
 		public boolean estaViu() {
 				return getVides() > 0;
