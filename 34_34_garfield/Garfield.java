@@ -35,7 +35,7 @@ class Garfield extends Gat {
 		public String estirat() {	
 				//System.out.println(this.posicio);
 				if (this.posicio.equals("assegut")) {
-						setPosicio("estirat");
+						this.posicio = "estirat";
 						return "m'estiro";
 				} else if (estaEstirat()) {
 						return "no faig res";
