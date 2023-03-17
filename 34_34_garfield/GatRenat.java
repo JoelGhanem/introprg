@@ -15,4 +15,8 @@ class GatRenat extends Gat{
 				this.vides = vides;
 				this.posicio = posicio;
 		}
+		@Override
+		public String getNom() {
+				return this.nom;
+		}
 }
