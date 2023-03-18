@@ -45,6 +45,7 @@ class Garfield extends Gat {
 		}
 		@Override
 		public String seu() {
+				System.out.println(this.posicio);
 				if (estaAssegut()) {
 						return "no faig res";
 				} else {
