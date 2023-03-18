@@ -6,13 +6,13 @@ class GatRenat extends Gat{
 		public GatRenat() {
 				super("Renat",7,"estirat");
 		}
-		//public GatRenat(int vides) {
-				//super(7);
-		//}
-		//public GatRenat(String posicio) {
-				//super("estirat");
-		//}
-		//public GatRenat(int vides, String posicio) {
-				//super(7,"estirat");
-		//}
+		public GatRenat(int vides) {
+				super(7);
+		}
+		public GatRenat(String posicio) {
+				super("estirat");
+		}
+		public GatRenat(int vides, String posicio) {
+				super(7,"estirat");
+		}
 }
