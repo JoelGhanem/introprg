@@ -65,7 +65,9 @@ class Gat {
 				return this.vides;
 		}
 		public void setVides(int vides) {
+				if (vides < 10) {
 				this.vides = vides;
+				}
 		}
 		public String getPosicio() {
 				return this.posicio;
