@@ -1,5 +1,6 @@
 /*Aquesta es la superclasse Gat que implementa EsserViu i que defineix el GatRenat el Garfield i el GatSalvatge*/
 class Gat implements EsserViu {
+
 		private int vides = 7;
 		private String nom = "anònim";
 		public Gat(String nom){
@@ -38,6 +39,7 @@ class Gat implements EsserViu {
 				if (getVides() < 0) {
 						return "ja l'he espifiada";
 				}
+				setVides(-20);
 				return "adéu món cruel";
 		}
 
