@@ -6,9 +6,9 @@ class Garfield extends Gat {
 		public Garfield() {
 				super("Garfield",9,"estirat");
 		}
-		public String getNom() {
-				return "Garfield";
-		}
+		//public String getNom() {
+				//return "Garfield";
+		//}
 		//@Override 
 		//public String getPosicio() {
 		//return this.posicio;
