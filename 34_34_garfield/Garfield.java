@@ -21,10 +21,10 @@ class Garfield extends Gat {
 		}
 		@Override
 		public String aixecat() {	
-				System.out.println(this.posicio);
+				//System.out.println(this.posicio);
 				if (estaAssegut()){
 						setPosicio("dret");
-				System.out.println("despues del setter de aixecat "  +this.posicio);
+				//System.out.println("despues del setter de aixecat "  +this.posicio);
 						return "m'aixeco";
 				} else if (estaDret()) {
 						return "no faig res";
@@ -34,10 +34,10 @@ class Garfield extends Gat {
 		}
 		@Override
 		public String estirat() {	
-				System.out.println(this.posicio);
+				//System.out.println(this.posicio);
 				if (this.posicio.equals("assegut")) {
-						this.posicio = "estirat";
-				System.out.println("despues del setter de estirat " + this.posicio);
+						setPosicio("estirat");
+				//System.out.println("despues del setter de estirat " + this.posicio);
 						return "m'estiro";
 				} else if (estaEstirat()) {
 						return "no faig res";
@@ -47,12 +47,12 @@ class Garfield extends Gat {
 		}
 		@Override
 		public String seu() {
-				System.out.println(this.posicio);
+				//System.out.println(this.posicio);
 				if (estaAssegut()) {
 						return "no faig res";
 				} else {
 						setPosicio("assegut");
-				System.out.println("despues del setter de seu " +this.posicio);
+				//System.out.println("despues del setter de seu " +this.posicio);
 						return "m'assec";
 				}
 		}
