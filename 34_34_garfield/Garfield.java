@@ -53,7 +53,7 @@ class Garfield extends Gat {
 		public String seu() {
 				//System.out.println(this.posicio);
 				if (estaAssegut()) {
-						boolean algo = estaDret();
+						boolean algo = estaAssegut();
 						System.out.println("algo sentat " +algo);
 						return "no faig res";
 				} else {
