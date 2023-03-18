@@ -13,6 +13,10 @@ class Garfield extends Gat {
 				return this.nom;
 		}
 		@Override 
+		public String getPosicio() {
+				return this.posicio;
+		}
+		@Override 
 		public void setVides(int vides) {
 				if(vides > 9) {
 				} else {
