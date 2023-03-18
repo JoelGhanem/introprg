@@ -4,17 +4,17 @@ class GatRenat extends Gat{
 		private String posicio = "estirat";
 		private String nom = "Renat";
 		public GatRenat() {
+				super("Renat",7,"estirat");
 		}
 		public GatRenat(int vides) {
-				this.vides = vides;
+				super(7);
 		}
 		public GatRenat(String posicio) {
-				this.posicio = posicio;
+				super("estirat");
 		}
-		public GatRenat(int vides, String posicio) {
-				this.vides = vides;
-				this.posicio = posicio;
-		}
+		//public GatRenat(int vides, String posicio) {
+				//super(7,"estirat");
+		//}
 		@Override
 		public String getNom() {
 				return this.nom;

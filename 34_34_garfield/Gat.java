@@ -3,8 +3,6 @@ class Gat {
 		private String nom = "gat";
 		private int vides = 7;
 		private String posicio = "estirat";
-		public Gat() {
-		}
 		public Gat(String nom) {
 				if( nom==null) {
 						this.nom = "anònim";
