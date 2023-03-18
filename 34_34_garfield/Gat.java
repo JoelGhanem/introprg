@@ -6,6 +6,8 @@ class Gat {
 		public Gat(String nom) {
 				if( nom==null) {
 						this.nom = "anònim";
+				} else if(nom.isEmpty()) {
+						this.nom = "anònim";
 				} else {
 						this.nom = nom;
 				}
