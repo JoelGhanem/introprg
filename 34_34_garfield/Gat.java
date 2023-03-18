@@ -6,7 +6,11 @@ class Gat {
 		public Gat() {
 		}
 		public Gat(String nom) {
-				this.nom = nom;
+				if( nom==null) {
+						this.nom = "anònim";
+				} else {
+						this.nom = nom;
+				}
 		}
 		public Gat(int vides) {
 				this.vides = vides;
