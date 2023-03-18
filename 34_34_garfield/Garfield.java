@@ -22,7 +22,7 @@ class Garfield extends Gat {
 		@Override
 		public String aixecat() {	
 				//System.out.println(this.posicio);
-				if (this.posicio.equals("assegut")) {
+				if (estaAssegut()){
 						setPosicio("dret");
 						return "m'aixeco";
 				} else if (estaDret()) {
