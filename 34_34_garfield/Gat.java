@@ -8,6 +8,8 @@ class Gat {
 						this.nom = "anònim";
 				} else if(nom.isEmpty()) {
 						this.nom = "anònim";
+				} else if (nom.equals("   ")){
+						this.nom = "anònim";
 				} else {
 						this.nom = nom;
 				}
