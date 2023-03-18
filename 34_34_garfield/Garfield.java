@@ -6,9 +6,6 @@ class Garfield extends Gat {
 				public Garfield() {
 						super("Garfield",9,"estirat");
 			}
-		//		public Garfield(String nom, int vides) {
-		//				super(nom, vides);
-		//		}
 		public String getNom() {
 				return this.nom;
 		}
