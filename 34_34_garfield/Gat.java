@@ -30,7 +30,15 @@ class Gat {
 				this.posicio = posicio;
 		}
 		public Gat (String nom, int vides) {
-				this.nom = nom;
+				if( nom==null) {
+						this.nom = "anònim";
+				} else if(nom.isEmpty()) {
+						this.nom = "anònim";
+				} else if (nom.equals("   ")){
+						this.nom = "anònim";
+				} else {
+						this.nom = nom;
+				}
 				this.vides = vides;
 		}
 		public Gat(int vides, String posicio) {
@@ -38,7 +46,15 @@ class Gat {
 				this.posicio = posicio;
 		}
 		public Gat(String nom, int vides, String posicio) {
-				this.nom = nom;
+				if( nom==null) {
+						this.nom = "anònim";
+				} else if(nom.isEmpty()) {
+						this.nom = "anònim";
+				} else if (nom.equals("   ")){
+						this.nom = "anònim";
+				} else {
+						this.nom = nom;
+				}
 				this.vides = vides;
 				this.posicio = posicio;
 		}
