@@ -58,11 +58,15 @@ class Garfield extends Gat {
 		}
 		@Override 
 		public boolean estaDret() {
-				return this.posicio.equals("dret");
+				if(this.posicio.equals("dret")) {
+						return true;
+				} return false;
 		}
 		@Override
 		public boolean estaAssegut() {
-				return this.posicio.equals("assegut");
+				if (this.posicio.equals("assegut")){
+						return true;
+				} return false;
 		}
 		@Override
 		public boolean estaEstirat() {
