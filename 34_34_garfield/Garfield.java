@@ -39,10 +39,8 @@ class Garfield extends Gat {
 						return "m'estiro";
 				} else if (estaEstirat()) {
 						return "no faig res";
-				} else if(this.posicio.equals("dret")){
-						return "Bai Maitea, bai";
 				} else {
-						return "a ver";
+						return "Bai Maitea, bai";
 				}
 		}
 		@Override
