@@ -12,11 +12,7 @@ class GatRenat extends Gat{
 		public GatRenat(String posicio) {
 				super("estirat");
 		}
-		//public GatRenat(int vides, String posicio) {
-				//super(7,"estirat");
-		//}
-		@Override
-		public String getNom() {
-				return this.nom;
+		public GatRenat(int vides, String posicio) {
+				super(7,"estirat");
 		}
 }
