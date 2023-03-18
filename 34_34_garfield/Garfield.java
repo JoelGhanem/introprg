@@ -24,6 +24,7 @@ class Garfield extends Gat {
 				//System.out.println(this.posicio);
 				if (estaAssegut()){
 						boolean algo = estaDret();
+						System.out.println(algo);
 						setPosicio("dret");
 				//System.out.println("despues del setter de aixecat "  +this.posicio);
 						return "m'aixeco";
@@ -51,6 +52,7 @@ class Garfield extends Gat {
 				//System.out.println(this.posicio);
 				if (estaAssegut()) {
 						boolean algo = estaDret();
+						System.out.println(algo);
 						return "no faig res";
 				} else {
 						setPosicio("assegut");
