@@ -23,8 +23,8 @@ class Garfield extends Gat {
 		public String aixecat() {	
 				//System.out.println(this.posicio);
 				if (estaAssegut()){
-						boolean algo = estaDret();
-						System.out.println("algo dret " +algo);
+						//boolean algo = estaDret();
+						//System.out.println("algo dret " +algo);
 						setPosicio("dret");
 				//System.out.println("despues del setter de aixecat "  +this.posicio);
 						return "m'aixeco";
@@ -39,8 +39,8 @@ class Garfield extends Gat {
 				//System.out.println(this.posicio);
 				if (estaAssegut()) {
 						setPosicio("estirat");
-						boolean algo = estaDret();
-						System.out.println("algo estirat " +algo);
+						//boolean algo = estaDret();
+						//System.out.println("algo estirat " +algo);
 				//System.out.println("despues del setter de estirat " + this.posicio);
 						return "m'estiro";
 				} else if (estaEstirat()) {
@@ -53,8 +53,8 @@ class Garfield extends Gat {
 		public String seu() {
 				//System.out.println(this.posicio);
 				if (estaAssegut()) {
-						boolean algo = estaDret();
-						System.out.println("algo sentat " +algo);
+						//boolean algo = estaDret();
+						//System.out.println("algo sentat " +algo);
 						return "no faig res";
 				} else {
 						setPosicio("assegut");
@@ -69,21 +69,21 @@ class Garfield extends Gat {
 		@Override 
 		public boolean estaDret() {
 				if(this.posicio.equals("dret")) {
-						System.out.println("estaDret " + true);
+						//System.out.println("estaDret " + true);
 						return true;
 				} return false;
 		}
 		@Override
 		public boolean estaAssegut() {
 				if (this.posicio.equals("assegut")){
-						System.out.println("estaAssegut " + true);
+						//System.out.println("estaAssegut " + true);
 						return true;
 				} return false;
 		}
 		@Override
 		public boolean estaEstirat() {
 				if(this.posicio.equals("estirat")) {
-						System.out.println("estaEstirat " + true);
+						//System.out.println("estaEstirat " + true);
 						return true;
 				}
 				return false;
