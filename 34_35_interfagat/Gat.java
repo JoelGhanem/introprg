@@ -29,7 +29,7 @@ class Gat implements EsserViu {
 		@Override
 		public String ressuscita() {
 				if (getVides() < 0) {
-						setVides(1);
+						setVides(8);
 						return "guai!";
 				} 
 				return "encara miolo";
@@ -39,7 +39,7 @@ class Gat implements EsserViu {
 				if (getVides() < 0) {
 						return "ja l'he espifiada";
 				}
-				setVides(-20);
+				setVides(-8);
 				return "adéu món cruel";
 		}
 
