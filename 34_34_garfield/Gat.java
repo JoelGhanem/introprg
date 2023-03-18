@@ -18,7 +18,15 @@ class Gat {
 				this.vides = vides;
 		}
 		public Gat(String nom, String posicio) {
-				this.nom = nom;
+				if( nom==null) {
+						this.nom = "anònim";
+				} else if(nom.isEmpty()) {
+						this.nom = "anònim";
+				} else if (nom.equals("   ")){
+						this.nom = "anònim";
+				} else {
+						this.nom = nom;
+				}
 				this.posicio = posicio;
 		}
 		public Gat (String nom, int vides) {
