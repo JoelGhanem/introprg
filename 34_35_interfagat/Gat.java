@@ -30,7 +30,7 @@ class Gat implements EsserViu {
 		public String ressuscita() {
 				if (getVides() < 0) {
 						setVides(1);
-						return "gaui!";
+						return "guai!";
 				} 
 				return "encara miolo";
 		}
