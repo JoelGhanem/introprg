@@ -65,7 +65,7 @@ class Gat {
 				return this.vides;
 		}
 		public void setVides(int vides) {
-				if (vides < 10) {
+				if (vides < 10 && vides >= 0) {
 				this.vides = vides;
 				}
 		}
