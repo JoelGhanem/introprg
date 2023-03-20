@@ -36,7 +36,7 @@ class Gat implements EsserViu {
 	}
 	@Override 
 	public String mor() {
-		if (getVides() < 0) {
+		if (getVides() <= 0) {
 			return "ja l'he espifiada";
 		}
 		setVides(getVides()-1);
