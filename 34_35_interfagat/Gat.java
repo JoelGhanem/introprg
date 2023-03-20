@@ -1,5 +1,5 @@
 /*Aquesta es la superclasse Gat que implementa EsserViu i que defineix el GatRenat el Garfield i el GatSalvatge*/
-class Gat implements EsserViu {
+public class Gat implements EsserViu {
 
 	private int vides = 7;
 	private String nom = "anònim";
