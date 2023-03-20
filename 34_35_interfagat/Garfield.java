@@ -1,4 +1,4 @@
-/*Aquesta es la classe Garfield que implementa AnimalDeCompanyia i extends la superclasse Gat*/
+/*Aquesta es la classe Garfield que implementa AnimalDeCompanyia i extends la superclasse Gat Garfield té 9 vides i no es deixa estimar mass*/
 public class Garfield extends Gat implements AnimalDeCompanyia {
 		public Garfield() {
 				super("Garfield",9);

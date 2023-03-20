@@ -1,4 +1,4 @@
-/*Aquesta es la interfac3e Ensinistrable que es utilitzada pel GatRenat, conté els mètodes: estaDret, estaAssegut, estaEstirat, aixecat, seu, estirat*/
+/*Aquesta es la interface Ensinistrable que es utilitzada pel GatRenat, conté els mètodes: estaDret, estaAssegut, estaEstirat, aixecat, seu i estirat*/
 public interface Ensinistrable {
 		public boolean estaDret() ;
 		public boolean estaAssegut() ;

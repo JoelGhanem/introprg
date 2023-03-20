@@ -1,4 +1,4 @@
-/*Gat Renat és una subclasse de Gat que implementa Ensinistrable i  AnimalDeCompayia a part déxtendre la superclasse Gat*/
+/*Gat Renat és una subclasse de Gat que implementa Ensinistrable i  AnimalDeCompayia a part d' extendre la superclasse Gat i fa bastats overrides a molts mètodes de la superclasse gat*/
 class GatRenat extends Gat implements Ensinistrable, AnimalDeCompanyia {
 		private String posicio = "estirat";
 		public GatRenat() {

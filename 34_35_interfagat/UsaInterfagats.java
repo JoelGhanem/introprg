@@ -1,3 +1,4 @@
+/*Aquest arxiu és el que fa que es puguin veure els resultats dels diferents metodes i classes per pantalla, conté les classes Gat, GatRenat, GatSalvatge, AnimalDeCompanyia,Ensinistrable i EsserViu */
 public class UsaInterfagats {
 		public static void main(String[] args) {
 				GatRenat renat = new GatRenat();
