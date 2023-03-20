@@ -39,7 +39,7 @@ class Gat implements EsserViu {
 		if (getVides() < 0) {
 			return "ja l'he espifiada";
 		}
-		setVides(-1);
+		setVides(getVides()-1);
 		return "adéu món cruel";
 	}
 
