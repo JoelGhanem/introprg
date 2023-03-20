@@ -28,7 +28,7 @@ class Gat implements EsserViu {
 	}
 	@Override
 	public String ressuscita() {
-		if (getVides() < 0) {
+		if (getVides() <= 0) {
 			setVides(1);
 			return "guai!";
 		} 
