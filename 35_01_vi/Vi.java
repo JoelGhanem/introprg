@@ -7,6 +7,7 @@ public class Vi {
     //constructors
     public Vi(String nom, int preu) {
         this.estoc = 0;
+		normalitzaNom(nom);
         this.nom = nom;
         if (preu > 0) {
             this.preu = preu;
@@ -64,6 +65,7 @@ public class Vi {
     public static String normalitzaNom(String nom) {
         nom.trim();
         if (nom.length() < 0) {
+				nom = "NOM NO VÀLID!";
             return nom;
         }
         return nom;
