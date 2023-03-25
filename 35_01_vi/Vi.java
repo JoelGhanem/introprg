@@ -68,6 +68,10 @@ public class Vi {
 				nom = "NOM NO VÀLID!";
             return nom;
         }
+        if (nom.isBlank()) {
+				nom = "NOM NO VÀLID!";
+            return nom;
+        }
         return nom;
     }
 
