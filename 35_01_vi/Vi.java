@@ -7,7 +7,7 @@ public class Vi {
     //constructors
     public Vi(String nom, int preu) {
         this.estoc = 0;
-		normalitzaNom(nom);
+		nom = normalitzaNom(nom);
         this.nom = nom;
         if (preu > 0) {
             this.preu = preu;
