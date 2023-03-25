@@ -65,6 +65,7 @@ public class Vi {
 		}
 
 		public static String normalitzaNom(String nom) {
+				String nomTrimmed = "";
 				nom.trim();
 				if (nom.isEmpty()) {
 						nom = "NOM NO VÀLID!";
@@ -74,7 +75,14 @@ public class Vi {
 						nom = "NOM NO VÀLID!";
 						return nom;
 				}
-				return nom;
+				for (int i = 0; i < nom.length(); i++) {
+						if (Character.isWhitespace(nom.charAt(i)) && Character.isWhitespace(nom.charAt(i+1))) {
+								nomTrimmed += nom.charAt(i+1);
+						} else {
+						nomTrimmed += nom.charAt(i);
+						}
+				}
+				return nomTrimmed;
 		}
 
 		@Override 
