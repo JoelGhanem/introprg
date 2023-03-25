@@ -8,7 +8,7 @@ public class Vi {
 		public Vi(String nom, int preu) {
 				this.estoc = 0;
 				nom = normalitzaNom(nom);
-				//System.out.println("nom despues del normaliza " + nom);
+				System.out.println("nom despues del normaliza " + nom);
 				this.nom = nom;
 				if (preu > 0) {
 						this.preu = preu;
