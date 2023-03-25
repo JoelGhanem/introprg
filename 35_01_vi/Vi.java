@@ -75,13 +75,7 @@ public class Vi {
 						nom = "NOM NO VÀLID!";
 						return nom;
 				}
-				for (int i = 0; i < nom.length(); i++) {
-						if (Character.isWhitespace(nom.charAt(i)) && Character.isWhitespace(nom.charAt(i+1))) {
-								nomTrimmed += nom.charAt(i+1);
-						} else {
-						nomTrimmed += nom.charAt(i);
-						}
-				}
+				nom.trim().replaceAll("\\s+", " ");
 				return nomTrimmed;
 		}
 
