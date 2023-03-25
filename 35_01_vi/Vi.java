@@ -19,8 +19,6 @@ public class Vi {
 				String nombreBien;
 				nombreBien = normalitzaNom(nom);
 				//System.out.println("nom despues del normaliza " + nom);
-				System.out.println("nom despues del normaliza " + nom);
-				System.out.println("nom despues del normaliza " + this.nom);
 				this.nom = nombreBien;
 				if (preu > 0) {
 						this.preu = preu;
