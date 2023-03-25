@@ -65,7 +65,6 @@ public class Vi {
 		}
 
 		public static String normalitzaNom(String nom) {
-				String nomTrimmed = "";
 				nom.trim();
 				if (nom.isEmpty()) {
 						nom = "NOM NO VÀLID!";
@@ -76,7 +75,7 @@ public class Vi {
 						return nom;
 				}
 				nom.trim().replaceAll("\\s+", " ");
-				return nomTrimmed;
+				return nom;
 		}
 
 		@Override 
