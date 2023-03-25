@@ -71,7 +71,7 @@ public class Vi {
 
     @Override 
     public String toString() {
-			String paraula = String.format("%n Vi: %s" ,nom);
+			String paraula = String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n" ,nom,preu,estoc);
 			return paraula;
     }
 }
