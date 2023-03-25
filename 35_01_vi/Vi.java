@@ -6,10 +6,9 @@ public class Vi {
 
 		//constructors
 		public Vi(String nom, int preu) {
-				this.estoc = 0;
-				nom = normalitzaNom(nom);
-				System.out.println("nom despues del normaliza " + nom);
-				this.nom = nom;
+				this.nom = normalitzaNom(nom);
+				//System.out.println("nom despues del normaliza " + nom);
+				System.out.println("nom despues del normaliza " + this.nom);
 				if (preu > 0) {
 						this.preu = preu;
 				} else {
@@ -17,9 +16,10 @@ public class Vi {
 				}
 		}
 		public Vi(String nom, int preu, int estoc) {
-				nom = normalitzaNom(nom);
+				String nombreBien;
+				nombreBien = normalitzaNom(nom);
 				//System.out.println("nom despues del normaliza " + nom);
-				this.nom = nom;
+				this.nom = nombreBien;
 				if (preu > 0) {
 						this.preu = preu;
 				} else {
@@ -67,6 +67,7 @@ public class Vi {
 		}
 
 		public static String normalitzaNom(String nom) {
+				String nomBien;
 				nom.trim();
 				if (nom.isEmpty()) {
 						nom = "NOM NO VÀLID!";
@@ -76,13 +77,13 @@ public class Vi {
 						nom = "NOM NO VÀLID!";
 						return nom;
 				}
-				nom.trim().replaceAll("\\s+", " ");
-				return nom;
+				nomBien = nom.trim().replaceAll("\\s+", " ");
+				return nomBien;
 		}
 
 		@Override 
 		public String toString() {
-				String paraula = String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n" ,nom,preu,estoc);
+				String paraula = String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n" ,this.nom,preu,estoc);
 				return paraula;
 		}
 }
