@@ -1,4 +1,4 @@
-/*Una botiga de vi sense vi no és res. Així que començarem implementant aquesta classe tant important.*/
+/*Una botiga de vi sense vi no és res. Així que començarem implementant aquesta classe tant important. Aquesta classe es la classe Vi on veiem els noms, els preus i la quantitat d'estoc segones el vi*/
 public class Vi {
 		private String nom;
 		private int preu;
