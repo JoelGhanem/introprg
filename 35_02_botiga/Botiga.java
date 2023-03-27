@@ -39,7 +39,7 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 										char lletra = Character.toLowerCase(vins[i].getNom().charAt(j));
 										nom += lletra;
 								}
-								if (vins[i].getNom().equals(elimina)) {
+								if (nom.equals(elimina)) {
 										Vi vinito = new Vi();
 										vinito = vins[i];
 										vins[i] = null;
