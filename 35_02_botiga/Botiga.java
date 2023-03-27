@@ -34,12 +34,9 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 		public Vi elimina(String elimina) {
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null) {
-								String nom = ""; 
-								for (int j = 0; j < vins[j].getNom().length(); j ++) {
-										char lletra = Character.toLowerCase(vins[i].getNom().charAt(j));
-										nom += lletra;
-								}
-								if (nom.equals(elimina)) {
+								String nomEnMinuscules = vins[i].getNom().toLowerCase();
+								String nomBuscatEnMinuscules = elimina.toLowerCase();
+								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										Vi vinito = new Vi();
 										vinito = vins[i];
 										vins[i] = null;
