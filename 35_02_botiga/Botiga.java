@@ -5,7 +5,7 @@ public class Botiga {
 		public Botiga() {
 		}
 		public Botiga(int maxVins) {
-				//this.vins = vins[maxVins];
+				this.vins = new Vi[maxVins];
 		}
 		public Vi afegeix(Vi vi){
 				for (int i = 0; i < vins.length; i++) {
@@ -25,8 +25,10 @@ public class Botiga {
 		}
 		public Vi elimina(String elimina) {
 				for (int i = 0; i < vins.length; i++) {
-						if (vins[i].equals(elimina)) {
-								vins[i] = null;
+						if (vins[i] != null) {
+								if (vins[i].getNom().equals(elimina)) {
+										vins[i] = null;
+								}
 						}
 				}
 				return null;
