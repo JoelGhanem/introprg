@@ -8,6 +8,9 @@ public class Botiga {
 				this.vins = new Vi[maxVins];
 		}
 		public Vi afegeix(Vi vi){
+				if (vi.getPreu() < 0) {
+						return null;
+				}
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null)  {
 								if (vins[i].equals(vi)) {
