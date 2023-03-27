@@ -1,7 +1,7 @@
 /**/
 public class Botiga {
 		private int DEFAULT_MAX_VINS = 10;
-		private Vi[] vins;
+		private Vi[] vins = new Vi[10];
 		public Botiga() {
 		}
 		public Botiga(int maxVins) {
