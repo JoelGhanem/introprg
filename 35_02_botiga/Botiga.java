@@ -50,7 +50,7 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null) {
 								String nomNormalitzat = Vi.normalitzaNom(vins[i].getNom());
-								String nomBuscadorNormalitzat = Vi.normalitzaNom(vins[i].getNom());
+								String nomBuscadorNormalitzat = Vi.normalitzaNom(nom);
 								if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
 										return vins[i];
 								}
