@@ -19,6 +19,9 @@ public class Botiga {
 								if (vins[i].getNom().equals(vi.getNom())) {
 										return null;
 								}
+								if (vins[i].getNom().equals("NOM NO VÀLID!")) {
+										return null;
+								}
 						}
 				}
 				for(int i = 0; i < vins.length; i++) {
