@@ -5,6 +5,8 @@ public class Vi {
 		private int estoc = 0;
 
 		//constructors
+		public Vi() {
+		}
 		public Vi(String nom, int preu) {
 				this.nom = normalitzaNom(nom);
 				//System.out.println("nom despues del normaliza " + nom);
