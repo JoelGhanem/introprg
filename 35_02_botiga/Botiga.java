@@ -11,6 +11,9 @@ public class Botiga {
 				if (vi.getPreu() < 0) {
 						return null;
 				}
+				if (vi.getEstoc() < 0) {
+						return null;
+				}
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null)  {
 								if (vins[i].equals(vi)) {
