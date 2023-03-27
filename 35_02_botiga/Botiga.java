@@ -49,8 +49,11 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 		public Vi cerca(String nom) {
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null) {
-						String nomNormalitzat = Vi.normalitzaNom(vins[i].getNom());
-						String nomBuscadorNormalitzat = Vi.normalitzaNom(vins[i].getNom());
+								String nomNormalitzat = Vi.normalitzaNom(vins[i].getNom());
+								String nomBuscadorNormalitzat = Vi.normalitzaNom(vins[i].getNom());
+								if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
+										return vins[i];
+								}
 								String nomEnMinuscules = vins[i].getNom().toLowerCase();
 								String nomBuscatEnMinuscules = nom.toLowerCase();
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
