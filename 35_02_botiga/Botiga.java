@@ -8,8 +8,10 @@ public class Botiga {
 		}
 		public Vi afegeix(Vi vi){
 				for (int i = 0; i < vins.length; i++) {
-						if (vins[i].equals(vi)) {
-								return null;
+						if (vins[i] != null)  {
+								if (vins[i].equals(vi)) {
+										return null;
+								}
 						}
 				}
 				for(int i = 0; i < vins.length; i++) {
