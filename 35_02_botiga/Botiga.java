@@ -16,7 +16,7 @@ public class Botiga {
 				}
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null)  {
-								if (vins[i].equals(vi)) {
+								if (vins[i].getNom().equals(vi)) {
 										return null;
 								}
 						}
