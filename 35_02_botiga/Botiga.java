@@ -1,6 +1,5 @@
 /**/
-public class Botiga {
-		private int DEFAULT_MAX_VINS = 10;
+public class Botiga { private int DEFAULT_MAX_VINS = 10;
 		private Vi[] vins = new Vi[10];
 		public Botiga() {
 		}
@@ -34,6 +33,11 @@ public class Botiga {
 		}
 		public Vi elimina(String elimina) {
 				for (int i = 0; i < vins.length; i++) {
+						String nom = ""; 
+						for (int j = 0; j < vins[j].getNom().length(); j ++) {
+								char lletra = Character.toLowerCase(vins[i].getNom().charAt(j));
+								nom += lletra;
+						}
 						if (vins[i] != null) {
 								if (vins[i].getNom().equals(elimina)) {
 										Vi vinito = new Vi();
