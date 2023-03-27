@@ -5,6 +5,7 @@ public class Botiga {
 		public Botiga() {
 		}
 		public Botiga(int maxVins) {
+				//this.vins = vins[maxVins];
 		}
 		public Vi afegeix(Vi vi){
 				for (int i = 0; i < vins.length; i++) {
