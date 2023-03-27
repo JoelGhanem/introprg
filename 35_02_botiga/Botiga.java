@@ -49,7 +49,9 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 		public Vi cerca(String nom) {
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null) {
-								if (vins[i].getNom().equals(nom)) {
+								String nomEnMinuscules = vins[i].getNom().toLowerCase();
+								String nomBuscatEnMinuscules = nom.toLowerCase();
+								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										return vins[i];
 								}
 						}
