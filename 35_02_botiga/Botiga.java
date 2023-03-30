@@ -34,9 +34,10 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 		public Vi elimina(String elimina) {
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null) {
-								String nomNormalitzat = Vi.normalitzaNom(elimina);
-								String nomEnMinuscules = vins[i].getNom().toLowerCase();
-								String nomBuscatEnMinuscules = elimina.toLowerCase();
+								String eliminaNormalitzat = Vi.normalitzaNom(elimina);
+								String nomNormalitzat = Vi.normalitzaNom(vins[i].getNom());
+								String nomEnMinuscules = nomNormalitzat.toLowerCase();
+								String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										Vi vinito = new Vi();
 										vinito = vins[i];
