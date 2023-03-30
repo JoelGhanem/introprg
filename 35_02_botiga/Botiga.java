@@ -1,5 +1,6 @@
 /**/
-public class Botiga { private int DEFAULT_MAX_VINS = 10;
+public class Botiga { 
+		private int DEFAULT_MAX_VINS = 10;
 		private Vi[] vins = new Vi[10];
 		public Botiga() {
 		}
@@ -41,6 +42,9 @@ public class Botiga { private int DEFAULT_MAX_VINS = 10;
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										Vi vinito = new Vi();
 										vinito = vins[i];
+										if (vinito.getEstoc() > 0) {
+												return null;
+										}
 										vins[i] = null;
 										return vinito;
 								}
