@@ -1,4 +1,4 @@
-/**/
+/*Aqui fem una classe per la botiga de vins on afegim vins eliminem vins i cerquem vins per poder tenir un control sobre la quantitat de vins de la botiga*/
 public class Botiga { 
 		private int DEFAULT_MAX_VINS = 10;
 		private Vi[] vins = new Vi[10];
@@ -35,9 +35,11 @@ public class Botiga {
 		public Vi elimina(String elimina) {
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null) {
+								/*normalitzem els noms dels vins*/
 								String eliminaNormalitzat = Vi.normalitzaNom(elimina);
 								String nomNormalitzat = Vi.normalitzaNom(vins[i].getNom());
 								String nomEnMinuscules = nomNormalitzat.toLowerCase();
+								/*passem a minuscules els noms dels vins*/
 								String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										Vi vinito = new Vi();
