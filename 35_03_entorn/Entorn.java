@@ -81,7 +81,7 @@ public class Entorn {
 								System.out.println("ERROR: ha de ser un enter");
 						}
 				}
-				System.out.println("estoc (enter sense estoc)> ");
+				System.out.print("estoc (enter sense estoc)> ");
 				String estoc = Entrada.readLine();
 				if (estoc.equals("surt")) {
 						mostraComiat();
