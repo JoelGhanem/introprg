@@ -53,7 +53,7 @@ public class Entorn {
 				int estocInt;
 				Vi vino = new Vi();
 				/*Pone el nombre*/
-				System.out.println("nom (enter cancel·la)>");
+				System.out.print("nom (enter cancel·la)>");
 				String nombreVino = Entrada.readLine();
 				/*Mira si el nombre esta vacio, si lo esta sale del metodo afegint*/
 				if (nombreVino.isBlank()) {
