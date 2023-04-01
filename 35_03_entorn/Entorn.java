@@ -105,7 +105,6 @@ public class Entorn {
 						}
 				}
 				System.out.println("Introduït:");
-				vino.toString();
 
 				return null;
 		}
