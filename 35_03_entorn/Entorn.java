@@ -158,6 +158,13 @@ public class Entorn {
 				}
 				System.out.print("estoc (enter " + vino.getEstoc() + ")> ");
 				String estoc = Entrada.readLine();
+						if (!UtilString.esEnter(estoc)) {
+						System.out.println("ERROR: el valor ha de ser un enter positiu");
+						return null;
+				} else {
+					int	stock = Integer.parseInt(estoc);
+						vino.setPreu(stock);
+				};
 				System.out.println("Modificat:");
 				return null;
 		}
