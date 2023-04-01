@@ -122,6 +122,7 @@ public class Entorn {
 				} else {
 						vino.setNom(nombreVino);
 						if (botiga.cerca(vino.getNom())!= null)  {
+								vino = botiga.cerca(vino.getNom());
 								System.out.print("Trobat:");
 								System.out.println(vino.toString());
 						} else {
