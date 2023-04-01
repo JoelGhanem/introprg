@@ -104,7 +104,8 @@ public class Entorn {
 								System.out.println("ERROR: ha de ser un enter");
 						}
 				}
-				System.out.println("Introduït:");
+				//System.out.println("Introduït:");
+				vino.toString();
 
 				return null;
 		}
