@@ -114,6 +114,12 @@ public class Entorn {
 				return null;
 		}
 		public Entorn processaCerca() {
+				Vi vino = new Vi();
+				System.out.print("nom (enter cancel·la)> ");
+				String nombreVino = Entrada.readLine();
+				if (nombreVino.isEmpty()) {
+						return null;
+				}
 				return null;
 		}
 		public Entorn processaModifica() {
