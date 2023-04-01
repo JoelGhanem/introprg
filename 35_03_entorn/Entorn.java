@@ -33,9 +33,9 @@ public class Entorn {
 			System.out.println("adéu");
 			return null;
 	}
-	public static Entorn mostraPrompt() {
-			System.out.print("botiga> ");
-			return null;
+	public static String mostraPrompt() {
+			String missatge = String.format("botiga> ");
+			return missatge;
 	}
 	public static String mostraAjuda() {
 			mostraPrompt();
