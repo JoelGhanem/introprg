@@ -39,7 +39,7 @@ public class Entorn {
 	}
 	public static Entorn mostraAjuda() {
 			mostraPrompt();
-			System.out.format("ajuda %n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
+			System.out.printf("ajuda %n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
 			mostraPrompt();
 			return null;
 	}
