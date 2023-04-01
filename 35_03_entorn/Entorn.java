@@ -100,13 +100,13 @@ public class Entorn {
 										return null;
 								} else {
 										vino.setEstoc(estocInt);
-										System.out.println("Introduït:");
-										System.out.println(vino.toString());
 								}
 						} else {
 								System.out.println("ERROR: ha de ser un enter");
 						}
 				}
+				System.out.println("Introduït:");
+				System.out.println(vino.toString());
 				return null;
 		}
 		public Entorn processaCerca() {
