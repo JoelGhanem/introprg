@@ -39,7 +39,14 @@ public class Entorn {
 	}
 	public static Entorn mostraAjuda() {
 			mostraPrompt();
-			System.out.printf("ajuda%n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
+			System.out.println("ajuda");
+			System.out.println("Comandes disponibles:");
+			System.out.println("ajuda");
+			System.out.println("cerca");
+			System.out.println("afegeix");
+			System.out.println("modifica");
+			System.out.println("elimina");
+			System.out.println("surt");
 			mostraPrompt();
 			return null;
 	}
