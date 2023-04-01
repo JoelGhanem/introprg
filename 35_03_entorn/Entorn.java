@@ -63,6 +63,7 @@ public class Entorn {
 				}
 				vino.setNom(nombreVino);
 				/*Coge el precio del vino*/
+				System.out.println("preu (en cèntims)> ");
 				String precio = Entrada.readLine();
 				/*Checks if price is empty and sets the price to 0*/
 				if (precio.isEmpty()) {
