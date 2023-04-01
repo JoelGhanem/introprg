@@ -144,7 +144,6 @@ public class Entorn {
 						if (vino == null) {
 								System.out.println("No trobat");
 								return null;
-						} else {
 						}
 				} 
 				System.out.print("preu (enter " + vino.getPreu() + ")> ");
@@ -166,6 +165,7 @@ public class Entorn {
 						vino.setEstoc(stock);
 				};
 				System.out.println("Modificat:");
+				System.out.println(vino.toString());
 				return null;
 		}
 		public Entorn processaElimina() {
