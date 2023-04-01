@@ -34,7 +34,7 @@ public class Entorn {
 			return null;
 	}
 	public static Entorn mostraPrompt() {
-			System.out.print("botiga>");
+			System.out.print("botiga> ");
 			return null;
 	}
 	public static Entorn mostraAjuda() {
