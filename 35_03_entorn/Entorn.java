@@ -149,8 +149,15 @@ public class Entorn {
 				} 
 				System.out.print("preu (enter " + vino.getPreu() + ")> ");
 				String preu = Entrada.readLine();
+				if (!UtilString.esEnter(preu)) {
+						System.out.println("ERROR: el valor ha de ser un enter positiu");
+				} else {
+					int	precio = Integer.parseInt(preu);
+						vino.setPreu(precio);
+				}
 				System.out.print("estoc (enter " + vino.getEstoc() + ")> ");
 				String estoc = Entrada.readLine();
+				System.out.println("Modificat:");
 				return null;
 		}
 		public Entorn processaElimina() {
