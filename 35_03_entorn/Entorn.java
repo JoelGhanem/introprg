@@ -73,6 +73,7 @@ public class Entorn {
 								/*If the price is a negative number you skip the procedure and prints an error*/
 								if (precioInt < 0) {
 										System.out.println("ERROR: el valor ha de ser un enter positiu");
+										return null;
 								} else {
 										vino.setPreu(precioInt);
 								}
