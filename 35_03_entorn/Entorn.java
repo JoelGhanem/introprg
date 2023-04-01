@@ -149,6 +149,8 @@ public class Entorn {
 				} 
 				System.out.print("preu (enter " + vino.getPreu() + ")> ");
 				String preu = Entrada.readLine();
+				System.out.print("estoc (enter " + vino.getEstoc() + ")> ");
+				String estoc = Entrada.readLine();
 				return null;
 		}
 		public Entorn processaElimina() {
