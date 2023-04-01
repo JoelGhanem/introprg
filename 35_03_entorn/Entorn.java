@@ -38,8 +38,6 @@ public class Entorn {
 			return null;
 	}
 	public static Entorn mostraAjuda() {
-			mostraPrompt();
-			System.out.println("ajuda");
 			System.out.println("Comandes disponibles:");
 			System.out.println("ajuda");
 			System.out.println("cerca");
