@@ -97,6 +97,7 @@ public class Entorn {
 								/*If the stock is a negativ number you skip the procedure and prints an error*/
 								if (estocInt <0) {
 										System.out.println("ERROR: el valor ha de ser un enter positiu");
+										return null;
 								} else {
 										vino.setEstoc(estocInt);
 										System.out.println("Introduït:");
@@ -106,7 +107,6 @@ public class Entorn {
 								System.out.println("ERROR: ha de ser un enter");
 						}
 				}
-
 				return null;
 		}
 		public Entorn processaCerca() {
