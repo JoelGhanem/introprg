@@ -37,11 +37,11 @@ public class Entorn {
 			System.out.print("botiga> ");
 			return null;
 	}
-	public static Entorn mostraAjuda() {
+	public static String mostraAjuda() {
 			mostraPrompt();
-			System.out.printf("ajuda %n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
+			String missatge = String.format("ajuda %n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
 			mostraPrompt();
-			return null;
+			return missatge;
 	}
 	public Entorn processaAfegeix() {
 				/*Afegeix*/
