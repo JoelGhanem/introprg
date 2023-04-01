@@ -145,9 +145,10 @@ public class Entorn {
 								System.out.println("No trobat");
 								return null;
 						} else {
-								System.out.println(vino.toString());
 						}
-				}
+				} 
+				System.out.print("preu (enter " + vino.getPreu() + ")> ");
+				String preu = Entrada.readLine();
 				return null;
 		}
 		public Entorn processaElimina() {
