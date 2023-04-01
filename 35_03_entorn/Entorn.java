@@ -100,7 +100,7 @@ public class Entorn {
 								} else {
 										vino.setEstoc(estocInt);
 										System.out.println("Introduït:");
-										vino.toString();
+										System.out.println(vino.toString());
 								}
 						} else {
 								System.out.println("ERROR: ha de ser un enter");
