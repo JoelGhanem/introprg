@@ -123,6 +123,9 @@ public class Entorn {
 						vino.setNom(nombreVino);
 						if (botiga.cerca(vino.getNom())!= null)  {
 								System.out.println(vino.toString());
+						} else {
+								System.out.println("No trobat");
+								return null;
 						}
 				}
 				return null;
