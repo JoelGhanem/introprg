@@ -150,10 +150,13 @@ public class Entorn {
 				String preu = Entrada.readLine();
 				if (!preu.isEmpty()) {
 						if (!UtilString.esEnter(preu)) {
-								System.out.println("ERROR: el valor ha de ser un enter positiu");
 								return null;
 						} else {
 								int	precio = Integer.parseInt(preu);
+								if (precio < 0) {
+								System.out.println("ERROR: el valor ha de ser un enter positiu");
+								return null;
+								}
 								vino.setPreu(precio);
 						}
 				}
