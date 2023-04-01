@@ -54,13 +54,14 @@ public class Entorn {
 				Vi vino = new Vi();
 				/*Pone el nombre*/
 				System.out.println("nom (enter cancel·la)>");
-				vino.setNom(Entrada.readLine());
+				String nombreVino = Entrada.readLine();
 				/*Mira si el nombre esta vacio, si lo esta sale del metodo afegint*/
-				if (vino.getNom().isEmpty()) {
+				if (nombreVino.isEmpty()) {
 						mostraPrompt();
 						mostraComiat();
 						return null;
 				}
+				vino.setNom(nombreVino);
 				/*Coge el precio del vino*/
 				String precio = Entrada.readLine();
 				/*Checks if price is empty and sets the price to 0*/
