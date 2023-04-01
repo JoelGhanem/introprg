@@ -119,6 +119,11 @@ public class Entorn {
 				String nombreVino = Entrada.readLine();
 				if (nombreVino.isEmpty()) {
 						return null;
+				} else {
+						vino.setNom(nombreVino);
+						if (botiga.cerca(vino.getNom())!= null)  {
+								System.out.println(vino.toString());
+						}
 				}
 				return null;
 		}
