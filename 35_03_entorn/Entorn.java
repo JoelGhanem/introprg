@@ -166,10 +166,10 @@ public class Entorn {
 						} else {
 								int	stock = Integer.parseInt(estoc);
 								vino.setEstoc(stock);
-						};
+						}
+				}
 						System.out.println("Modificat:");
 						System.out.println(vino.toString());
-				} 
 				return null;
 		}
 		public Entorn processaElimina() {
