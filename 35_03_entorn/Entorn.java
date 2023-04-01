@@ -60,7 +60,6 @@ public class Entorn {
 						System.out.print("botiga> adéu");
 						return null;
 				}
-				System.out.println("pasa del if");
 				vino.setNom(nombreVino);
 				/*Coge el precio del vino*/
 				System.out.println("preu (en cèntims)> ");
