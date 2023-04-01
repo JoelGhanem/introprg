@@ -57,7 +57,8 @@ public class Entorn {
 				String nombreVino = Entrada.readLine();
 				/*Mira si el nombre esta vacio, si lo esta sale del metodo afegint*/
 				if (nombreVino.isBlank()) {
-						System.out.print("botiga> adéu");
+						mostraPrompt();
+						mostraComiat();
 						return null;
 				}
 				vino.setNom(nombreVino);
