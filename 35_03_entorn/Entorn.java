@@ -105,6 +105,10 @@ public class Entorn {
 								System.out.println("ERROR: ha de ser un enter");
 						}
 				}
+				if (botiga.afegeix(vino) == null) {
+						System.out.println("ERROR: no s'ha pogut afegir");
+						return null;
+				}
 				System.out.println("Introduït:");
 				System.out.println(vino.toString());
 				return null;
