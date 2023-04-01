@@ -169,6 +169,9 @@ public class Entorn {
 								return null;
 						} else {
 								int	stock = Integer.parseInt(estoc);
+								if (stock < 0) {
+										System.out.println("ERROR: el valor ha de ser un enter positiu");
+								}
 								vino.setEstoc(stock);
 						}
 				}
