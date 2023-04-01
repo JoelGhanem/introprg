@@ -33,15 +33,15 @@ public class Entorn {
 			System.out.println("adéu");
 			return null;
 	}
-	public static String mostraPrompt() {
-			String missatge = String.format("botiga> ");
-			return missatge;
+	public static Entorn mostraPrompt() {
+			System.out.print("botiga>");
+			return null;
 	}
-	public static String mostraAjuda() {
+	public static Entorn mostraAjuda() {
 			mostraPrompt();
-			String missatge = String.format("ajuda %n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
+			System.out.format("ajuda %n Comandes disponibles:%n ajuda%n cerca%n afegeix%n modifica%n elimina% surt%n");
 			mostraPrompt();
-			return missatge;
+			return null;
 	}
 	public Entorn processaAfegeix() {
 				/*Afegeix*/
