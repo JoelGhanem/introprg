@@ -141,6 +141,12 @@ public class Entorn {
 				} else {
 						vino.setNom(nombreVino);
 						vino = botiga.cerca(vino.getNom());
+						if (vino == null) {
+								System.out.println("No trobat");
+								return null;
+						} else {
+								System.out.println(vino.toString());
+						}
 				}
 				return null;
 		}
