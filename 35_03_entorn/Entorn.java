@@ -163,7 +163,7 @@ public class Entorn {
 						return null;
 				} else {
 					int	stock = Integer.parseInt(estoc);
-						vino.setPreu(stock);
+						vino.setEstoc(stock);
 				};
 				System.out.println("Modificat:");
 				return null;
