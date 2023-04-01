@@ -99,13 +99,13 @@ public class Entorn {
 										System.out.println("ERROR: el valor ha de ser un enter positiu");
 								} else {
 										vino.setEstoc(estocInt);
+										System.out.println("Introduït:");
+										vino.toString();
 								}
 						} else {
 								System.out.println("ERROR: ha de ser un enter");
 						}
 				}
-				//System.out.println("Introduït:");
-				vino.toString();
 
 				return null;
 		}
