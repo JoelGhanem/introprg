@@ -45,7 +45,6 @@ public class Entorn {
 			System.out.println("modifica");
 			System.out.println("elimina");
 			System.out.println("surt");
-			mostraPrompt();
 			return null;
 	}
 	public Entorn processaAfegeix() {
