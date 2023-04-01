@@ -57,6 +57,8 @@ public class Entorn {
 				vino.setNom(Entrada.readLine());
 				/*Mira si el nombre esta vacio, si lo esta sale del metodo afegint*/
 				if (vino.getNom().isEmpty()) {
+						mostraPrompt();
+						mostraComiat();
 						return null;
 				}
 				/*Coge el precio del vino*/
