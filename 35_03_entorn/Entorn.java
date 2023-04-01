@@ -56,7 +56,7 @@ public class Entorn {
 				System.out.println("nom (enter cancel·la)>");
 				String nombreVino = Entrada.readLine();
 				/*Mira si el nombre esta vacio, si lo esta sale del metodo afegint*/
-				if (nombreVino.isEmpty()) {
+				if (nombreVino.isBlank()) {
 						mostraPrompt();
 						mostraComiat();
 						return null;
