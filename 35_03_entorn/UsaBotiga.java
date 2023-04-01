@@ -1,4 +1,3 @@
-/*Classe UsaBotiga, aquesta classe ens permet interactuar amb la botiga, crea, cerca i afegeix vins a la botiga*/
 public class UsaBotiga {
     public static void main(String[] args) {
         System.out.println("Creem uns quants vins");
