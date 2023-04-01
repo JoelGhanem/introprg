@@ -82,6 +82,10 @@ public class Entorn {
 				}
 				System.out.println("estoc (enter sense estoc)> ");
 				String estoc = Entrada.readLine();
+				if (estoc.equals("surt")) {
+						mostraComiat();
+						return null;
+				}
 				/*Checks if stock is empty and sets the price to 0*/
 				if (estoc.isEmpty()) {
 						vino.setEstoc(0);
