@@ -195,7 +195,7 @@ public class Entorn {
 				}
 				System.out.println("A eliminar:");
 				System.out.println(vino.toString());
-				System.out.println("Segur?> ");
+				System.out.print("Segur?> ");
 				String resposta = Entrada.readLine();
 				if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
 						botiga.elimina(vino.getNom());
