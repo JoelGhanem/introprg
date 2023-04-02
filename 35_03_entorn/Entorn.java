@@ -186,6 +186,10 @@ public class Entorn {
 				String nom = Entrada.readLine();
 				vino.setNom(nom);
 				vino = botiga.cerca(vino.getNom());
+				if (vino == null) {
+						System.out.println("ERROR: no s'ha pogut eliminar");
+						return null;
+				}
 				System.out.println("A eliminar: ");
 				vino.toString();
 				System.out.println("Segur?> ");
