@@ -155,8 +155,8 @@ public class Entorn {
 						} else {
 								int	precio = Integer.parseInt(preu);
 								if (precio < 0) {
-								System.out.println("ERROR: el valor ha de ser un enter positiu");
-								return null;
+										System.out.println("ERROR: el valor ha de ser un enter positiu");
+										return null;
 								}
 								vino.setPreu(precio);
 						}
@@ -176,11 +176,23 @@ public class Entorn {
 								vino.setEstoc(stock);
 						}
 				}
-						System.out.println("Modificat:");
-						System.out.println(vino.toString());
+				System.out.println("Modificat:");
+				System.out.println(vino.toString());
 				return null;
 		}
 		public Entorn processaElimina() {
+				Vi vino = new Vi();
+				System.out.println("nom (enter cancel·la)> ");
+				String nom = Entrada.readLine();
+				vino.setNom(nom);
+				vino = botiga.cerca(vino.getNom());
+				System.out.println("A eliminar: ");
+				vino.toString();
+				System.out.println("Segur?> ");
+				String resposta = Entrada.readLine();
+				if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
+						botiga.elimina(vino.getNom());
+				}
 				return null;
 		}
 		public static Entorn mostraErrorComandaDesconeguda() {
