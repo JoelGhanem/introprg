@@ -1,3 +1,4 @@
+/*Biblioteca de creacio propia que ens permet inspeccionar els Strings per veure com son, es pot comprovar si es un enter, si nomes son lletres, es poden separar lletres i molt mes*/
 public class UtilString {
 	public static boolean esVocal(char lletra) {
 		String vocals = "aàeèéiíïoòóuúü";

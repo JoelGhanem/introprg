@@ -1,3 +1,4 @@
+/*Arxiu que executa el main per que es mostrin les respostees per pantalla, crea afegeix, cerca i elimina vins de la nostra botiga*/
 public class UsaBotiga {
     public static void main(String[] args) {
         System.out.println("Creem uns quants vins");
