@@ -193,7 +193,7 @@ public class Entorn {
 						System.out.println("No trobat");
 						return null;
 				}
-				System.out.println("A eliminar: ");
+				System.out.println("A eliminar:");
 				vino.toString();
 				System.out.println("Segur?> ");
 				String resposta = Entrada.readLine();
