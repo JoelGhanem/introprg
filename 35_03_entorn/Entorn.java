@@ -190,7 +190,7 @@ public class Entorn {
 				vino.setNom(nom);
 				vino = botiga.cerca(vino.getNom());
 				if (vino == null) {
-						System.out.println("ERROR: no s'ha pogut eliminar");
+						System.out.println("No trobat");
 						return null;
 				}
 				System.out.println("A eliminar: ");
