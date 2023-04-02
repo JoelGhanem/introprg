@@ -182,7 +182,7 @@ public class Entorn {
 		}
 		public Entorn processaElimina() {
 				Vi vino = new Vi();
-				System.out.println("nom (enter cancel·la)> ");
+				System.out.print("nom (enter cancel·la)> ");
 				String nom = Entrada.readLine();
 				if (nom.isEmpty()) {
 						return null;
