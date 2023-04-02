@@ -194,7 +194,7 @@ public class Entorn {
 						return null;
 				}
 				System.out.println("A eliminar:");
-				vino.toString();
+				System.out.println(vino.toString());
 				System.out.println("Segur?> ");
 				String resposta = Entrada.readLine();
 				if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
