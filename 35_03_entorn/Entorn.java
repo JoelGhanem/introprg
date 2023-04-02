@@ -198,8 +198,9 @@ public class Entorn {
 				System.out.print("Segur?> ");
 				String resposta = Entrada.readLine();
 				if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
-						botiga.elimina(vino.getNom());
-						System.out.println("Eliminat");
+						if (botiga.elimina(vino.getNom()) == null);
+						System.out.println("ERROR: no s'ha pogut eliminar");
+						//System.out.println("Eliminat");
 				} else {
 						System.out.println("No eliminat");
 				}
