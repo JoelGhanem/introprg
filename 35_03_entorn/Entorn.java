@@ -184,6 +184,9 @@ public class Entorn {
 				Vi vino = new Vi();
 				System.out.println("nom (enter cancel·la)> ");
 				String nom = Entrada.readLine();
+				if (nom.isEmpty()) {
+						return null;
+				}
 				vino.setNom(nom);
 				vino = botiga.cerca(vino.getNom());
 				if (vino == null) {
@@ -196,10 +199,14 @@ public class Entorn {
 				String resposta = Entrada.readLine();
 				if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
 						botiga.elimina(vino.getNom());
+						System.out.println("Eliminat");
+				} else {
+						System.out.println("No eliminat");
 				}
 				return null;
 		}
 		public static Entorn mostraErrorComandaDesconeguda() {
+				System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
 				return null;
 		}
 }
