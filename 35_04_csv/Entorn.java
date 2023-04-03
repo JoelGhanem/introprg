@@ -1,11 +1,25 @@
 /*Aquest arxiu és amb el que la senyora Estrella podrá fer servir per interaccionar amb la botiga que tenen les classes Vi i Botiga*/
-import io.Bu
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 public class Entorn {
+		public static int numerito = 0;
 		private final Botiga botiga = new Botiga();
-		public static void main(String[] args) {
+		public static void main(String[] args) throws IOException {
 				Entorn entorn = new Entorn();
 				mostraBenvinguda();
 				while (true) {
+						while(true) {
+								BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
+								String linia = input.readLine();
+								if (linia == null) {
+										break;
+								}
+								numerito++;
+						}
+						System.out.println("Referències llegides: " + numerito);
 						mostraPrompt();
 						String comanda = Entrada.readLine().strip();
 						if (comanda.isEmpty()) continue;
@@ -24,6 +38,10 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
+				//while(true) {
+						//BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
+						//while (
+				//}I//
 				mostraComiat();
 		}
 		public static Entorn mostraBenvinguda() {
@@ -200,9 +218,9 @@ public class Entorn {
 				String resposta = Entrada.readLine();
 				if (UtilitatsConfirmacio.respostaABoolean(resposta)) {
 						if (botiga.elimina(vino.getNom()) == null) {
-						System.out.println("ERROR: no s'ha pogut eliminar");
+								System.out.println("ERROR: no s'ha pogut eliminar");
 						} else {
-						System.out.println("Eliminat");
+								System.out.println("Eliminat");
 						}
 				} else {
 						System.out.println("No eliminat");

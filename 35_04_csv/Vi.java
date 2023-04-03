@@ -91,4 +91,25 @@ public class Vi {
 				String paraula = String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n" ,this.nom,preu,estoc);
 				return paraula;
 		}
+		public static Vi deArrayString(String[] strings) {
+				Vi vinito = new Vi();
+				vinito.setNom(strings[1]);
+				vinito.setPreu(Integer.parseInt(strings[2]));
+				vinito.setEstoc(Integer.parseInt(strings[3]));
+				if(vinito.esValid()) {
+						return vinito;
+				}
+				return null;
+		}
+
+		public String[] aArrayString() {
+				String[] strings = new String[3];
+				Vi vi = new Vi();
+				String preu = Integer.toString(vi.getPreu());
+				String estoc = Integer.toString(vi.getEstoc());
+				strings[1] = vi.getNom();
+				strings[2] = preu;
+				strings[3] = estoc; 
+				return strings;
+		}
 }
