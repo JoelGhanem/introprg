@@ -12,7 +12,8 @@ public class Entorn {
 				mostraBenvinguda();
 				while (true) {
 						while(true) {
-								BufferedReader input = new BufferedReader(new FileReader("botiga.csv"));
+								String cami = "botiga.csv";
+								BufferedReader input = new BufferedReader(new FileReader(cami));
 								String linia = input.readLine();
 								if (linia == null) {
 										break;
