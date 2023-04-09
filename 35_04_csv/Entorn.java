@@ -47,10 +47,10 @@ public class Entorn {
 				}
 				//while(true) {
 				//		for (int i = 0; i < 4; i++) {
-								//output.write(botiga.vins.aArrayString[i]);
-		//						escritas++;
-		//				}
-		//				break;
+				//output.write(botiga.vins.aArrayString[i]);
+				//						escritas++;
+				//				}
+				//				break;
 
 				//}
 				System.out.println("Referències guardades: " + escritas);

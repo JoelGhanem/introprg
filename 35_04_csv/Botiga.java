@@ -71,4 +71,18 @@ public class Botiga {
 				}
 				return null;
 		}
+		public int posicion;
+		public void iniciaRecorregut() {
+				posicion = 0;
+		}
+		public Vi getSeguent() {
+				while (true) {
+						if (vins[posicion] != null) {
+								posicion ++;
+								return vins[posicion - 1];
+						} else if(vins[posicion] == null) {
+								posicion ++;
+						}
+				}
+		}
 }
