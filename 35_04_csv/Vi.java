@@ -93,9 +93,9 @@ public class Vi {
 		}
 		public static Vi deArrayString(String[] strings) {
 				Vi vinito = new Vi();
-				vinito.setNom(strings[1]);
-				vinito.setPreu(Integer.parseInt(strings[2]));
-				vinito.setEstoc(Integer.parseInt(strings[3]));
+				vinito.setNom(strings[0]);
+				vinito.setPreu(Integer.parseInt(strings[1]));
+				vinito.setEstoc(Integer.parseInt(strings[2]));
 				if(vinito.esValid()) {
 						return vinito;
 				}
@@ -107,9 +107,9 @@ public class Vi {
 				Vi vi = new Vi();
 				String preu = Integer.toString(vi.getPreu());
 				String estoc = Integer.toString(vi.getEstoc());
-				strings[1] = vi.getNom();
-				strings[2] = preu;
-				strings[3] = estoc; 
+				strings[0] = vi.getNom();
+				strings[1] = preu;
+				strings[2] = estoc; 
 				return strings;
 		}
 }

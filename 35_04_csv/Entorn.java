@@ -45,9 +45,16 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-						//output.write(aArrayString());
-						System.out.println("Referències guardades: " + escritas);
-						mostraComiat();
+				while(true) {
+						for (int i = 0; i < 4; i++) {
+								//output.write(botiga.vins.aArrayString[i]);
+								escritas++;
+						}
+						break;
+
+				}
+				System.out.println("Referències guardades: " + escritas);
+				mostraComiat();
 		}
 		public static Entorn mostraBenvinguda() {
 				System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
@@ -236,4 +243,5 @@ public class Entorn {
 				System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
 				return null;
 		}
+
 }
