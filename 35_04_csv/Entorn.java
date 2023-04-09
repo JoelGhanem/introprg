@@ -6,7 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 public class Entorn {
 		public static int numerito = 0;
+		public static int escritas = 0;
 		private final Botiga botiga = new Botiga();
+		Vi vi = new Vi();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
 				BufferedWriter output = new BufferedWriter(new FileWriter(cami));
@@ -41,11 +43,12 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-				//while(true) {
-				//BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
-				//while (
-				//}I//
-				mostraComiat();
+				while(true) {
+						System.out.println("Referències guardades: " + escritas);
+						//output.write(aArrayString());
+						mostraComiat();
+						break;
+				}
 		}
 		public static Entorn mostraBenvinguda() {
 				System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
