@@ -45,15 +45,15 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-				while(true) {
-						for (int i = 0; i < 4; i++) {
+				//while(true) {
+				//		for (int i = 0; i < 4; i++) {
 								//output.write(botiga.vins.aArrayString[i]);
-								escritas++;
-						}
-						break;
+		//						escritas++;
+		//				}
+		//				break;
 
-				}
-				//System.out.println("Referències guardades: " + escritas);
+				//}
+				System.out.println("Referències guardades: " + escritas);
 				mostraComiat();
 		}
 		public static Entorn mostraBenvinguda() {
