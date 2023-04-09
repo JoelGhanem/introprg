@@ -43,12 +43,9 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-				while(true) {
 						System.out.println("Referències guardades: " + escritas);
 						//output.write(aArrayString());
 						mostraComiat();
-						break;
-				}
 		}
 		public static Entorn mostraBenvinguda() {
 				System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
