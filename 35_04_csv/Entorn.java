@@ -20,11 +20,11 @@ public class Entorn {
 								BufferedReader input = new BufferedReader(new FileReader(cami));
 								String linia = input.readLine();
 								if (linia == null) {
+						System.out.println("Referències llegides: " + numerito);
 										break;
 								}
 								numerito++;
 						}
-						if (numerito == 0) {System.out.println("Referències llegides: " + numerito);}
 						mostraPrompt();
 						String comanda = Entrada.readLine().strip();
 						if (comanda.isEmpty()) continue;
