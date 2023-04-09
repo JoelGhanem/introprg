@@ -3,6 +3,11 @@ public class Hora {
 		private int hores;
 		private int minuts;
 		private int segons;
+		public Hora() {
+				hores = this.hores;
+				minuts = this.minuts;
+				segons = this.segons;
+		}
 		public int getHores() { return this.hores; }
 		public int getMinuts() { return this.minuts; }
 		public int getSegons() { return this.segons; }
