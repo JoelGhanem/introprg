@@ -15,16 +15,18 @@ public class Entorn {
 				output.close();
 				Entorn entorn = new Entorn();
 				mostraBenvinguda();
+				boolean llegides = true;
 				while (true) {
 						while(true) {
 								BufferedReader input = new BufferedReader(new FileReader(cami));
 								String linia = input.readLine();
 								if (linia == null) {
-						System.out.println("Referències llegides: " + numerito);
 										break;
 								}
 								numerito++;
 						}
+						if (llegides) { System.out.println("Referències llegides: " + numerito);}
+						llegides = false;
 						mostraPrompt();
 						String comanda = Entrada.readLine().strip();
 						if (comanda.isEmpty()) continue;
@@ -43,8 +45,8 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-						System.out.println("Referències guardades: " + escritas);
 						//output.write(aArrayString());
+						System.out.println("Referències guardades: " + escritas);
 						mostraComiat();
 		}
 		public static Entorn mostraBenvinguda() {
