@@ -24,7 +24,7 @@ public class Entorn {
 								}
 								numerito++;
 						}
-						if (numerito <1) {System.out.println("Referències llegides: " + numerito);}
+						if (numerito == 0) {System.out.println("Referències llegides: " + numerito);}
 						mostraPrompt();
 						String comanda = Entrada.readLine().strip();
 						if (comanda.isEmpty()) continue;
