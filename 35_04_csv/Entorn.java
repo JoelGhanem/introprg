@@ -53,7 +53,7 @@ public class Entorn {
 						break;
 
 				}
-				System.out.println("Referències guardades: " + escritas);
+				//System.out.println("Referències guardades: " + escritas);
 				mostraComiat();
 		}
 		public static Entorn mostraBenvinguda() {
