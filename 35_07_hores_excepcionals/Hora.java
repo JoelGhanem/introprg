@@ -9,14 +9,23 @@ public class Hora {
 				minuts = 0;
 				segons = 0;
 		}
-		public Hora(int hores, int minuts, int segons) {
-				if (hores > 23 || hores < 0 || minuts >= 60 || minuts < 0 || segons >= 60 || segons < 0) {
+		public Hora(int hores, int minuts, int segons) throws Exception{
+				if (hores > 23 || hores < 0) {
 						this.hores = 0;
-						this.minuts = 0;
-						this.segons = 0;
+						throw new Exception("hores malament");
 				} else {
 						this.hores = hores;
+				}
+				if (minuts > 59 || minuts < 0) {
+						this.minuts = 0;
+						throw new Exception("minuts malament");
+				} else {
 						this.minuts = minuts;
+				}
+				if (segons > 59 || segons < 0) {
+						this.segons = 0;
+						throw new Exception("segons malament");
+				} else {
 						this.segons = segons;
 				}
 		}
