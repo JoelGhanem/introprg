@@ -8,11 +8,13 @@ public class Entorn {
 		public static int numerito = 0;
 		private final Botiga botiga = new Botiga();
 		public static void main(String[] args) throws IOException {
+				String cami = "botiga.csv";
+				BufferedWriter output = new BufferedWriter(new FileWriter(cami));
+				output.close();
 				Entorn entorn = new Entorn();
 				mostraBenvinguda();
 				while (true) {
 						while(true) {
-								String cami = "botiga.csv";
 								BufferedReader input = new BufferedReader(new FileReader(cami));
 								String linia = input.readLine();
 								if (linia == null) {
@@ -40,8 +42,8 @@ public class Entorn {
 						}
 				}
 				//while(true) {
-						//BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
-						//while (
+				//BufferedWriter output = new BufferedWriter(new FileWriter("botiga.csv"));
+				//while (
 				//}I//
 				mostraComiat();
 		}
