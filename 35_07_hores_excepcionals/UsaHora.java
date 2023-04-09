@@ -4,7 +4,7 @@ public class UsaHora {
 				try {
 						hora.setHores(hores);
 				} catch (Exception e){
-						System.out.println("hores fora de rang: " + hores);
+						System.out.println("java.lang.Exception: hores fora de rang: " + hores);
 				}
 				try {
 						hora.setMinuts(minuts);
