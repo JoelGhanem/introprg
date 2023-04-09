@@ -80,7 +80,7 @@ public class Botiga {
 						if (vins[posicion] != null) {
 								posicion ++;
 								return vins[posicion - 1];
-						} else if(vins[posicion +1] == null) {
+						} else if(vins[posicion] == null) {
 								posicion ++;
 						}
 				}
