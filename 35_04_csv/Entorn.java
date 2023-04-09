@@ -23,8 +23,8 @@ public class Entorn {
 										break;
 								}
 								numerito++;
-						System.out.println("Referències llegides: " + numerito);
 						}
+						if (numerito <1) {System.out.println("Referències llegides: " + numerito);}
 						mostraPrompt();
 						String comanda = Entrada.readLine().strip();
 						if (comanda.isEmpty()) continue;
