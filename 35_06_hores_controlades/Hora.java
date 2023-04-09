@@ -13,7 +13,7 @@ public class Hora {
 		public int getSegons() { return this.segons; }
 
 		public boolean setHores(int hores) {
-				if (hores >= 0 && hores <= 24) {
+				if (hores >= 0 && hores < 24) {
 						this.hores = hores;
 						return true;
 				}
@@ -32,5 +32,9 @@ public class Hora {
 						return true;
 				}
 				return false;
+		}
+		@Override 
+		public String toString() {
+				return String.format("%d:%02d:%02d", this.hores, this.minuts, this.segons);
 		}
 }
