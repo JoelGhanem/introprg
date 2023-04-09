@@ -77,6 +77,9 @@ public class Botiga {
 		}
 		public Vi getSeguent() {
 				while (true) {
+						if (posicion > vins.length) {
+								break;
+						}
 						if (vins[posicion] != null) {
 								posicion ++;
 								return vins[posicion - 1];
@@ -84,5 +87,6 @@ public class Botiga {
 								posicion ++;
 						}
 				}
+				return vins[posicion];
 		}
 }
