@@ -9,22 +9,22 @@ public class Hora {
 				minuts = 0;
 				segons = 0;
 		}
-		public Hora(int hores, int minuts, int segons) throws Exception{
+		public Hora(int hores, int minuts, int segons) throws IllegalArgumentException{
 				if (hores > 23 || hores < 0) {
 						this.hores = 0;
-						throw new Exception("hores fora de rang: " + hores);
+						throw new IllegalArgumentException("hores fora de rang: " + hores);
 				} else {
 						this.hores = hores;
 				}
 				if (minuts > 59 || minuts < 0) {
 						this.minuts = 0;
-						throw new Exception("minuts fora de rang: " + minuts);
+						throw new IllegalArgumentException("minuts fora de rang: " + minuts);
 				} else {
 						this.minuts = minuts;
 				}
 				if (segons > 59 || segons < 0) {
 						this.segons = 0;
-						throw new Exception("segons fora de rang: " + segons);
+						throw new IllegalArgumentException("segons fora de rang: " + segons);
 				} else {
 						this.segons = segons;
 				}
