@@ -46,8 +46,9 @@ public class Entorn {
 						}
 				}
 				botiga.iniciaRecorregut();
+				Vi vinoNuevo = new Vi();
 				while(true) {
-						Vi vinoNuevo = botiga.getSeguent();
+						vinoNuevo = botiga.getSeguent();
 						if (vinoNuevo == null) {
 								break;
 						}
