@@ -36,25 +36,25 @@ public class Hora {
 		public int getSegons() { return this.segons; }
 
 		//Setters
-		public void setHores(int hores) throws Exception{
+		public void setHores(int hores) throws IllegalArgumentException{
 				if (hores >= 0 && hores < 24) {
 						this.hores = hores;
 				} else {
-						throw new Exception("hores fora de rang: " + hores);
+						throw new IllegalArgumentException("hores fora de rang: " + hores);
 				}
 		}
-		public void setMinuts(int minuts) throws Exception{
+		public void setMinuts(int minuts) throws IllegalArgumentException{
 				if (minuts >= 0 && minuts < 60) {
 						this.minuts = minuts;
 				} else {
-						throw new Exception("minuts fora de rang: " + minuts);
+						throw new IllegalArgumentException("minuts fora de rang: " + minuts);
 				}
 		}
-		public void setSegons(int segons) throws Exception{
+		public void setSegons(int segons) throws IllegalArgumentException{
 				if (segons >= 0 && segons < 60) {
 						this.segons = segons;
 				} else {
-						throw new Exception("segons fora de rang: " + segons);
+						throw new IllegalArgumentException("segons fora de rang: " + segons);
 				}
 		}
 		@Override
