@@ -9,12 +9,12 @@ public class UsaHora {
 				try {
 						hora.setMinuts(minuts);
 				} catch (Exception e){
-						System.out.println("minuts fora de rang: " + minuts);
+						System.out.println("java.lang.Exception: minuts fora de rang: " + minuts);
 				}
 				try {
 						hora.setSegons(segons);
 				}catch (Exception e){
-						System.out.println("segons fora de rang: " + segons);
+						System.out.println("java.lang.Exception: segons fora de rang: " + segons);
 				}
 		}
 		public static void main(String[] args) throws Exception{
