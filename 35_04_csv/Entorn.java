@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Entorn {
 		public static int numerito = 0;
 		public static int escritas = 0;
-		private final Botiga botiga = new Botiga();
+		private static final Botiga botiga = new Botiga();
 		Vi vi = new Vi();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
@@ -45,14 +45,19 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-				//while(true) {
-				//		for (int i = 0; i < 4; i++) {
-				//output.write(botiga.vins.aArrayString[i]);
-				//						escritas++;
-				//				}
-				//				break;
+				botiga.iniciaRecorregut();
+				while(true) {
+						Vi vinoNuevo = botiga.getSeguent();
+						if (vinoNuevo == null) {
+								break;
+						}
+						String [] texto = vinoNuevo.aArrayString();
+						String linea = String.join(";", texto);
+						output.write(linea);
+						output.write("\n");
+						escritas++;
+				}
 
-				//}
 				System.out.println("Referències guardades: " + escritas);
 				mostraComiat();
 		}
