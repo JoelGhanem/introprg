@@ -11,8 +11,8 @@ public class Entorn {
 		Vi vi = new Vi();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
-				BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
-				creando.close();
+				//BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
+				//creando.close();
 				Entorn entorn = new Entorn();
 				mostraBenvinguda();
 				boolean llegides = true;
@@ -46,17 +46,18 @@ public class Entorn {
 						}
 				}
 				botiga.iniciaRecorregut();
+				Vi vinoNuevo = new Vi();
 				while(true) {
-						Vi vi = botiga.getSeguent();
-						if (vi == null) {
+						vinoNuevo = botiga.getSeguent();
+						if (vinoNuevo == null) {
 								break;
 						}
-						String [] texto = vi.aArrayString();
+						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
 						BufferedWriter output = new BufferedWriter(new FileWriter(cami));
-						escritas++;
 						output.write(linea);
 						output.write("\n");
+						escritas++;
 				}
 
 				System.out.println("Referències guardades: " + escritas);
