@@ -8,7 +8,6 @@ public class Entorn {
 		public static int numerito = 0;
 		public static int escritas = 0;
 		private static final Botiga botiga = new Botiga();
-		//Vi vi = new Vi();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
 				BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
@@ -21,6 +20,7 @@ public class Entorn {
 								BufferedReader input = new BufferedReader(new FileReader(cami));
 								String linia = input.readLine();
 								if (linia == null) {
+										input.close();
 										break;
 								}
 								numerito++;
