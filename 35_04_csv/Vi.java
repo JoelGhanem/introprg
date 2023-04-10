@@ -105,8 +105,12 @@ public class Vi {
 		public String[] aArrayString() {
 				String[] strings = new String[3];
 				strings[0] = this.nom;
+				strings[0] = this.nom;
 				strings[1]= Integer.toString(this.preu);
 				strings[2] = Integer.toString(this.estoc);
+				for(int i = 0; i < 4; i++) {
+						System.out.println(strings[i]);
+				}
 				return strings;
 		}
 }
