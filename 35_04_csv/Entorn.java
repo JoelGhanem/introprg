@@ -46,7 +46,7 @@ public class Entorn {
 						}
 				}
 				botiga.iniciaRecorregut();
-				BufferedWriter output = new BufferedWriter(new FileWriter(cami));
+				BufferedWriter bw = new BufferedWriter(new FileWriter(cami));
 				Vi vinoNuevo = new Vi();
 				while(true) {
 						vinoNuevo = botiga.getSeguent();
@@ -55,8 +55,8 @@ public class Entorn {
 						}
 						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
-						output.write(linea);
-						output.write("\n");
+						bw.write(linea);
+						bw.write("\n");
 						escritas++;
 				}
 
