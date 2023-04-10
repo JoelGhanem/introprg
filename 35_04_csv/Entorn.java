@@ -55,7 +55,6 @@ public class Entorn {
 						}
 						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
-						System.out.println(linea);
 						output.write(linea);
 						output.write("\n");
 						escritas++;
