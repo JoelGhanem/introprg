@@ -8,7 +8,7 @@ public class Entorn {
 		public static int numerito = 0;
 		public static int escritas = 0;
 		private static final Botiga botiga = new Botiga();
-		Vi vi = new Vi();
+		//Vi vi = new Vi();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
 				BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
@@ -55,6 +55,7 @@ public class Entorn {
 						}
 						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
+						System.out.println(linea);
 						output.write(linea);
 						output.write("\n");
 						escritas++;
