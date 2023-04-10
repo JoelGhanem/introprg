@@ -54,7 +54,7 @@ public class Entorn {
 						}
 						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
-						BufferedWriter output = new BufferedWriter(new FileWriter(cami,true));
+						FileWriter output = new FileWriter(cami);
 						output.write(linea);
 						output.write("\n");
 						escritas++;
