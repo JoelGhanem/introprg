@@ -20,10 +20,10 @@ public class Entorn {
 						while(true) {
 								BufferedReader input = new BufferedReader(new FileReader(cami));
 								String linia = input.readLine();
+								numerito++;
 								if (linia == null) {
 										break;
 								}
-								numerito++;
 						}
 						if (llegides) { System.out.println("Referències llegides: " + numerito);}
 						llegides = false;
