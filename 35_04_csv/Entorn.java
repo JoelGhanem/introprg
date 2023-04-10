@@ -49,6 +49,7 @@ public class Entorn {
 				Vi vinoNuevo = new Vi();
 				while(true) {
 						vinoNuevo = botiga.getSeguent();
+						escritas++;
 						if (vinoNuevo == null) {
 								break;
 						}
@@ -57,7 +58,6 @@ public class Entorn {
 						BufferedWriter output = new BufferedWriter(new FileWriter(cami));
 						output.write(linea);
 						output.write("\n");
-						escritas++;
 				}
 
 				System.out.println("Referències guardades: " + escritas);
