@@ -46,13 +46,12 @@ public class Entorn {
 						}
 				}
 				botiga.iniciaRecorregut();
-				Vi vinoNuevo = new Vi();
 				while(true) {
-						vinoNuevo = botiga.getSeguent();
-						if (vinoNuevo == null) {
+						Vi vi = botiga.getSeguent();
+						if (vi == null) {
 								break;
 						}
-						String [] texto = vinoNuevo.aArrayString();
+						String [] texto = vi.aArrayString();
 						String linea = String.join(";", texto);
 						BufferedWriter output = new BufferedWriter(new FileWriter(cami));
 						escritas++;
