@@ -49,13 +49,13 @@ public class Entorn {
 				Vi vinoNuevo = new Vi();
 				while(true) {
 						vinoNuevo = botiga.getSeguent();
-						escritas++;
 						if (vinoNuevo == null) {
 								break;
 						}
 						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
 						BufferedWriter output = new BufferedWriter(new FileWriter(cami));
+						escritas++;
 						output.write(linea);
 						output.write("\n");
 				}
