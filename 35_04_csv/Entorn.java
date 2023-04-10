@@ -46,8 +46,8 @@ public class Entorn {
 						}
 				}
 				botiga.iniciaRecorregut();
+				BufferedWriter output = new BufferedWriter(new FileWriter(cami));
 				Vi vinoNuevo = new Vi();
-						FileWriter output = new FileWriter(cami);
 				while(true) {
 						vinoNuevo = botiga.getSeguent();
 						if (vinoNuevo == null) {
