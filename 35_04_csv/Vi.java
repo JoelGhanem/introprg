@@ -104,12 +104,9 @@ public class Vi {
 
 		public String[] aArrayString() {
 				String[] strings = new String[3];
-				Vi vi = new Vi();
-				String preu = Integer.toString(vi.getPreu());
-				String estoc = Integer.toString(vi.getEstoc());
-				strings[0] = vi.getNom();
-				strings[1] = preu;
-				strings[2] = estoc; 
+				strings[0] = this.nom;
+				strings[1]= Integer.toString(this.preu);
+				strings[2] = Integer.toString(this.estoc);
 				return strings;
 		}
 }
