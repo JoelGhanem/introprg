@@ -11,8 +11,8 @@ public class Entorn {
 		Vi vi = new Vi();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
-				//BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
-				//creando.close();
+				BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
+				creando.close();
 				Entorn entorn = new Entorn();
 				mostraBenvinguda();
 				boolean llegides = true;
@@ -54,7 +54,7 @@ public class Entorn {
 						}
 						String [] texto = vinoNuevo.aArrayString();
 						String linea = String.join(";", texto);
-						BufferedWriter output = new BufferedWriter(new FileWriter(cami));
+						BufferedWriter output = new BufferedWriter(new FileWriter(cami,true));
 						output.write(linea);
 						output.write("\n");
 						escritas++;
