@@ -83,7 +83,7 @@ public class Botiga {
 										continue;
 								}
 								posicion++;
-								return vins[posicion];
+								return vins[i];
 						}
 				}
 				return null;
