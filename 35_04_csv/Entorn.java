@@ -10,8 +10,6 @@ public class Entorn {
 		private static final Botiga botiga = new Botiga();
 		public static void main(String[] args) throws IOException {
 				String cami = "botiga.csv";
-				BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
-				creando.close();
 				Entorn entorn = new Entorn();
 				mostraBenvinguda();
 				boolean llegides = true;
