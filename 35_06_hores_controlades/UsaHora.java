@@ -1,4 +1,3 @@
-/*Afquesta classe implementa la sortida pel programa Hora.java en el que es comprova si una hora es valida i en el cas de que ho sigui aplica la hora introudida*/
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
