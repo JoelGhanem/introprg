@@ -49,7 +49,7 @@ public class Vi {
 				}
 		}
 
-        :xc
+		public void setEstoc(int estoc) {
 				if (estoc > 0) {
 						this.estoc = estoc;
 				}
