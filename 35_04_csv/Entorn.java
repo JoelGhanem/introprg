@@ -17,18 +17,23 @@ public class Entorn {
 		boolean llegides = true;
 		while (true) {
 			while(true) {
-			BufferedReader input = new BufferedReader(new FileReader(cami));
+				Vi vi = new Vi();
+				BufferedReader input = new BufferedReader(new FileReader(cami));
 				String linia = input.readLine();
+				String liniaArray = vi.aArrayString(); 
 				if (linia == null) {
 					input.close();
 					break;
 				}
+				Vi viAAfegir = new Vi();
+				viAAfegir = vi.deArrayString(liniaArray);
+				botiga.afegeix(viAAfegir);
 				numerito++;
 			}
 			if (llegides) { System.out.println("Referències llegides: " + numerito);}
 			llegides = false;
 			mostraPrompt();
-		String comanda = Entrada.readLine().strip();
+			String comanda = Entrada.readLine().strip();
 			if (comanda.isEmpty()) continue;
 			if (comanda.equals("surt")) break;
 			switch (comanda) {
@@ -80,9 +85,9 @@ public class Entorn {
 		System.out.println("Comandes disponibles:");
 		System.out.println("ajuda");
 		System.out.println("cerca");
-	System.out.println("afegeix");
+		System.out.println("afegeix");
 		System.out.println("modifica");
-	System.out.println("elimina");
+		System.out.println("elimina");
 		System.out.println("surt");
 		return null;
 	}
@@ -167,33 +172,33 @@ public class Entorn {
 			} else {
 				System.out.println("No trobat");
 				return null;
-}
-}
-return null;
+			}
+		}
+		return null;
 	}
 	public Entorn processaModifica() {
 		Vi vino = new Vi();
 		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
 		if (nombreVino.isEmpty()){
-	return null;
-} else {
-	vino.setNom(nombreVino);
-vino = botiga.cerca(vino.getNom());
+			return null;
+		} else {
+			vino.setNom(nombreVino);
+			vino = botiga.cerca(vino.getNom());
 			if (vino == null) {
 				System.out.println("No trobat");
 				return null;
 			}
 		} 
-System.out.print("preu (enter " + vino.getPreu() + ")> ");
+		System.out.print("preu (enter " + vino.getPreu() + ")> ");
 		String preu = Entrada.readLine();
 		if (!preu.isEmpty()) {
 			if (!UtilString.esEnter(preu)) {
 				System.out.println("ERROR: el valor ha de ser un enter positiu");
 				return null;
-} else {
-	int	precio = Integer.parseInt(preu);
-if (precio < 0) {
+			} else {
+				int	precio = Integer.parseInt(preu);
+				if (precio < 0) {
 					System.out.println("ERROR: el valor ha de ser un enter positiu");
 					return null;
 				}
@@ -207,9 +212,9 @@ if (precio < 0) {
 				System.out.println("ERROR: el valor ha de ser un enter positiu");
 				return null;
 			} else {
-	int	stock = Integer.parseInt(estoc);
-if (stock < 0) {
-	System.out.println("ERROR: el valor ha de ser un enter positiu");
+			int	stock = Integer.parseInt(estoc);
+				if (stock < 0) {
+					System.out.println("ERROR: el valor ha de ser un enter positiu");
 					return null;
 				}
 				vino.setEstoc(stock);
@@ -248,7 +253,7 @@ if (stock < 0) {
 		return null;
 	}
 	public static Entorn mostraErrorComandaDesconeguda() {
-System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
+		System.out.println("ERROR: comanda no reconeguda. Escriviu help per ajuda");
 		return null;
 	}
 
