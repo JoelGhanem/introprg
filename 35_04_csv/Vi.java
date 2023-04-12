@@ -93,7 +93,8 @@ public class Vi {
 		}
 		public static Vi deArrayString(String[] strings) {
 		if(strings.length != 3 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
-
+if(Integer.parseInt(strings[1]) < 0) { return null;}
+if(Integer.parseInt(strings[2]) < 0) { return null;}
 				Vi vinito = new Vi();
 				vinito.setNom(normalitzaNom(strings[0]));
 				vinito.setPreu(Integer.parseInt(strings[1]));
