@@ -30,6 +30,7 @@ public class Entorn {
 				 botiga.afegeix(vi);
 				System.out.println("llega al numerito");
 				numerito++;
+				linia = input.readLine();
 				System.out.println("el numero es " + numerito);
 			}
 			if (llegides) { System.out.println("Referències llegides: " + numerito);}
