@@ -11,7 +11,7 @@ public class Entorn {
 	public static void main(String[] args) throws IOException {
 		String cami = "botiga.csv";
 		BufferedWriter creando = new BufferedWriter(new FileWriter(cami,true));
-		creando.close();
+	creando.close();
 		Entorn entorn = new Entorn();
 		mostraBenvinguda();
 		boolean llegides = true;
@@ -22,21 +22,21 @@ public class Entorn {
 			if (linia == null) { input.close(); break; }
 			//System.out.println(linia);
 			String[] liniaArray = linia.split(";"); 
-		vi = vi.deArrayString(liniaArray);
-			if(vi==null) break;
+			vi = vi.deArrayString(liniaArray);
+			if(vi==null) { input.close(); break;}
 			botiga.afegeix(vi);
 			//System.out.println("llega al numerito");
 			numerito++;
 			linia = input.readLine();
 			//System.out.println("el numero es " + numerito);
 		}
-	if (llegides) { System.out.println("Referències llegides: " + numerito);}
+		if (llegides) { System.out.println("Referències llegides: " + numerito);}
 		llegides = false;
 		while (true) {
 
 			mostraPrompt();
 			String comanda = Entrada.readLine().strip();
-			if (comanda.isEmpty()) continue;
+		if (comanda.isEmpty()) continue;
 			if (comanda.equals("surt")) break;
 			switch (comanda) {
 				case "ajuda": mostraAjuda();
@@ -57,7 +57,7 @@ public class Entorn {
 		Vi vinoNuevo = new Vi();
 		while(true) {
 			vinoNuevo = botiga.getSeguent();
-			if (vinoNuevo == null) {
+		if (vinoNuevo == null) {
 				break;
 			}
 			String [] texto = vinoNuevo.aArrayString();
@@ -115,7 +115,7 @@ public class Entorn {
 		} else {
 			/*Checks if the price is an integer*/
 			if (UtilString.esEnter(precio)) {
-				precioInt = Integer.parseInt(precio);
+			precioInt = Integer.parseInt(precio);
 				/*If the price is a negative number you skip the procedure and prints an error*/
 				if (precioInt < 0) {
 					System.out.println("ERROR: el valor ha de ser un enter positiu");
@@ -214,7 +214,7 @@ public class Entorn {
 				System.out.println("ERROR: el valor ha de ser un enter positiu");
 				return null;
 			} else {
-			int	stock = Integer.parseInt(estoc);
+				int	stock = Integer.parseInt(estoc);
 				if (stock < 0) {
 					System.out.println("ERROR: el valor ha de ser un enter positiu");
 					return null;
