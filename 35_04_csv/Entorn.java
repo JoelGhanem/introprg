@@ -26,6 +26,9 @@ public class Entorn {
 				}
 				//System.out.println(linia);
 				String[] liniaArray = linia.split(";"); 
+				if(liniaArray.length != 3) {
+					break;
+				}
 				 vi = vi.deArrayString(liniaArray);
 				 botiga.afegeix(vi);
 				//System.out.println("llega al numerito");
