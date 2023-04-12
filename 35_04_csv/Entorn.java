@@ -26,7 +26,6 @@ public class Entorn {
 					input.close();
 					break;
 				}
-				if (liniaArray!=null) { vi.deArrayString(liniaArray);}
 				Vi viAAfegir = new Vi();
 				viAAfegir = vi.deArrayString(liniaArray);
 				botiga.afegeix(viAAfegir);
