@@ -10,7 +10,7 @@ public class Entorn {
 	private static final Botiga botiga = new Botiga();
 	public static void main(String[] args) throws IOException {
 		String cami = "botiga.csv";
-		BufferedWriter creando = new BufferedWriter(new FileWriter(cami,true));
+		BufferedWriter creando = new BufferedWriter(new FileWriter(cami));
 		creando.close();
 		Entorn entorn = new Entorn();
 		mostraBenvinguda();
@@ -24,9 +24,9 @@ public class Entorn {
 					input.close();
 					break;
 				}
-				//System.out.println(linia);
-				String[] liniaArray = linia.split(";");
-				botiga.afegeix(vi.deArrayString(liniaArray));
+				String[] liniaArray = linia.split(";"); 
+				 vi = vi.deArrayString(liniaArray);
+				 botiga.afegeix(vi);
 				numerito++;
 			}
 			if (llegides) { System.out.println("Referències llegides: " + numerito);}
