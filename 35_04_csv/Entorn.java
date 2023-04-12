@@ -21,11 +21,11 @@ public class Entorn {
 				BufferedReader input = new BufferedReader(new FileReader(cami));
 				String linia = input.readLine();
 				String[] liniaArray = vi.aArrayString(); 
-				vi.deArrayString(liniaArray);
 				if (linia == null) {
 					input.close();
 					break;
 				}
+				vi.deArrayString(liniaArray);
 				Vi viAAfegir = new Vi();
 				viAAfegir = vi.deArrayString(liniaArray);
 				botiga.afegeix(viAAfegir);
