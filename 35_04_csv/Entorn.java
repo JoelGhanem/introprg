@@ -26,7 +26,7 @@ public class Entorn {
 				}
 				//System.out.println(linia);
 				String[] liniaArray = linia.split(";");
-						liniaArray = vi.aArrayString(); 
+				botiga.afegeix(vi.deArrayString(liniaArray));
 				Vi viAAfegir = new Vi();
 				viAAfegir = vi.deArrayString(liniaArray);
 				botiga.afegeix(viAAfegir);
