@@ -25,9 +25,9 @@ public class Entorn {
 			vi = vi.deArrayString(liniaArray);
 			if(vi!=null) { 
 			botiga.afegeix(vi);
-			}
 			//System.out.println("llega al numerito");
 			numerito++;
+			}
 			linia = input.readLine();
 			//System.out.println("el numero es " + numerito);
 		}
