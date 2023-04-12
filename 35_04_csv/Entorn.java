@@ -23,7 +23,7 @@ public class Entorn {
 			//System.out.println(linia);
 			String[] liniaArray = linia.split(";"); 
 		vi = vi.deArrayString(liniaArray);
-			if(vi!=null) break;
+			if(vi==null) break;
 			botiga.afegeix(vi);
 			//System.out.println("llega al numerito");
 			numerito++;
