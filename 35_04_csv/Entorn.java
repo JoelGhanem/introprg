@@ -27,9 +27,6 @@ public class Entorn {
 				//System.out.println(linia);
 				String[] liniaArray = linia.split(";");
 				botiga.afegeix(vi.deArrayString(liniaArray));
-				Vi viAAfegir = new Vi();
-				viAAfegir = vi.deArrayString(liniaArray);
-				botiga.afegeix(viAAfegir);
 				numerito++;
 			}
 			if (llegides) { System.out.println("Referències llegides: " + numerito);}
