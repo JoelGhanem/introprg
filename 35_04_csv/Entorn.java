@@ -24,14 +24,14 @@ public class Entorn {
 					input.close();
 					break;
 				}
-				System.out.println(linia);
+				//System.out.println(linia);
 				String[] liniaArray = linia.split(";"); 
 				 vi = vi.deArrayString(liniaArray);
 				 botiga.afegeix(vi);
-				System.out.println("llega al numerito");
+				//System.out.println("llega al numerito");
 				numerito++;
 				linia = input.readLine();
-				System.out.println("el numero es " + numerito);
+				//System.out.println("el numero es " + numerito);
 			}
 			if (llegides) { System.out.println("Referències llegides: " + numerito);}
 			llegides = false;
