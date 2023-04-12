@@ -22,7 +22,6 @@ public class Entorn {
 			if (linia == null) { input.close(); break; }
 			//System.out.println(linia);
 			String[] liniaArray = linia.split(";"); 
-			if(liniaArray.length != 3) { continue; }
 		vi = vi.deArrayString(liniaArray);
 			if(vi!=null) break;
 			botiga.afegeix(vi);
