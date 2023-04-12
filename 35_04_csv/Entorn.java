@@ -15,29 +15,26 @@ public class Entorn {
 		Entorn entorn = new Entorn();
 		mostraBenvinguda();
 		boolean llegides = true;
-				BufferedReader input = new BufferedReader(new FileReader(cami));
-				String linia = input.readLine();
+		BufferedReader input = new BufferedReader(new FileReader(cami));
+		String linia = input.readLine();
+		while(true) {
+			Vi vi = new Vi();
+			if (linia == null) { input.close(); break; }
+			//System.out.println(linia);
+			String[] liniaArray = linia.split(";"); 
+			if(liniaArray.length != 3) { continue; }
+		vi = vi.deArrayString(liniaArray);
+			if(vi!=null) break;
+			botiga.afegeix(vi);
+			//System.out.println("llega al numerito");
+			numerito++;
+			linia = input.readLine();
+			//System.out.println("el numero es " + numerito);
+		}
+	if (llegides) { System.out.println("Referències llegides: " + numerito);}
+		llegides = false;
 		while (true) {
-			while(true) {
-				Vi vi = new Vi();
-				if (linia == null) {
-					input.close();
-					break;
-				}
-				//System.out.println(linia);
-				String[] liniaArray = linia.split(";"); 
-				if(liniaArray.length != 3) {
-					continue;
-				}
-				 vi = vi.deArrayString(liniaArray);
-				 botiga.afegeix(vi);
-				//System.out.println("llega al numerito");
-				numerito++;
-				linia = input.readLine();
-				//System.out.println("el numero es " + numerito);
-			}
-			if (llegides) { System.out.println("Referències llegides: " + numerito);}
-			llegides = false;
+
 			mostraPrompt();
 			String comanda = Entrada.readLine().strip();
 			if (comanda.isEmpty()) continue;

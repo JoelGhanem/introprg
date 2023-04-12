@@ -92,6 +92,7 @@ public class Vi {
 				return paraula;
 		}
 		public static Vi deArrayString(String[] strings) {
+		if(strings.length != 3 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
 				Vi vinito = new Vi();
 				vinito.setNom(strings[0]);
 				vinito.setPreu(Integer.parseInt(strings[1]));
