@@ -20,6 +20,7 @@ public class Entorn {
 				Vi vi = new Vi();
 				BufferedReader input = new BufferedReader(new FileReader(cami));
 				String linia = input.readLine();
+				System.out.println(linia);
 				String[] liniaArray = vi.aArrayString(); 
 				if (linia == null) {
 					input.close();
