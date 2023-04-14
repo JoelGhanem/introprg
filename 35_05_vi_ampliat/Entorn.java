@@ -18,7 +18,7 @@ public class Entorn {
 		BufferedReader input = new BufferedReader(new FileReader(cami));
 		String linia = input.readLine();
 		while(true) {
-			Vi vi = new Vi();
+			Vi vi = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
 			if (linia == null) { input.close(); break; }
 			//System.out.println(linia);
 			String[] liniaArray = linia.split(";"); 
@@ -55,7 +55,7 @@ public class Entorn {
 		}
 		botiga.iniciaRecorregut();
 		BufferedWriter bw = new BufferedWriter(new FileWriter(cami));
-		Vi vinoNuevo = new Vi();
+		Vi vinoNuevo = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
 		while(true) {
 			vinoNuevo = botiga.getSeguent();
 		if (vinoNuevo == null) {
