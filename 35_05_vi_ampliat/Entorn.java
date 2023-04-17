@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 public class Entorn {
+	public static boolean despedida = true;
 	public static int numerito = 0;
 	public static int escritas = 0;
 	private static final Botiga botiga = new Botiga();
@@ -17,6 +18,9 @@ public class Entorn {
 		boolean llegides = true;
 		BufferedReader input = new BufferedReader(new FileReader(cami));
 		String linia = input.readLine();
+		if(linia.equals("surt")) {
+			despedida = false;
+		}
 		while(true) {
 			Vi vi = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
 			if (linia == null) { input.close(); break; }
@@ -69,7 +73,9 @@ public class Entorn {
 			escritas++;
 		}
 		bw.close();
+		if(despedida) {
 		System.out.println("Referències guardades: " + escritas);
+		}
 		mostraComiat();
 	}
 	public static Entorn mostraBenvinguda() {
