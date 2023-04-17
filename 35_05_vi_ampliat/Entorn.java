@@ -18,6 +18,9 @@ public class Entorn {
 		boolean llegides = true;
 		BufferedReader input = new BufferedReader(new FileReader(cami));
 		String linia = input.readLine();
+			if(linia.equals("surt")) {
+				despedida = false;
+			}
 		while(true) {
 			Vi vi = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
 			if (linia == null) { input.close(); break; }
@@ -30,9 +33,6 @@ public class Entorn {
 			numerito++;
 			}
 			linia = input.readLine();
-			if(linia.equals("surt")) {
-				despedida = false;
-			}
 			//System.out.println("el numero es " + numerito);
 		}
 		if (llegides) { System.out.println("Referències llegides: " + numerito);}
