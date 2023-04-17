@@ -15,10 +15,10 @@ public class UsaList {
         llista.add(valor);
         valor = Entrada.readLine();
         // TODO: afegeix el valor a l'inici de la llista
-        llista.add(1,valor);
+        llista.add(0,valor);
         valor = Entrada.readLine();
         // TODO: afegeix el valor al mig de la llista
-        llista.add(2,valor);
+        llista.add(1,valor);
         System.out.println("Cerquem elements de la llista");
         System.out.println("=============================");
         String text = Entrada.readLine();
@@ -34,19 +34,22 @@ public class UsaList {
         System.out.println("Mostrem les entrades introduïdes");
         System.out.println("================================");
         boolean llistaBuida;
+        //System.out.println(llista);
+        //System.out.println(llista.size());
         // TODO inicialitza llistaBuida de manera que valgui cert si
         // la llista està buida.
-        if(llista.isEmpty()){llistaBuida = true; }
-        else { llistaBuida = false;}
-        while (! llistaBuida) {
-            String entrada;
-            // TODO: inicialitza entrada de manera que contingui el
-            // primer element de la llista
-            entrada = llista.get(0);
-            System.out.println(entrada);
-            // TODO: elimina el primer element de la llista
-            // TODO: actualitza el valor de llistaBuida
-            llista.remove(0);
+        llistaBuida = llista.isEmpty();
+        if(!llista.isEmpty()) {
+            while (! llista.isEmpty()) {
+                String entrada;
+                // TODO: inicialitza entrada de manera que contingui el
+                // primer element de la llista
+                entrada = llista.get(0);
+                System.out.println(entrada);
+                // TODO: elimina el primer element de la llista
+                // TODO: actualitza el valor de llistaBuida
+                llista.remove(0);
+            }
         }
     }
 }
