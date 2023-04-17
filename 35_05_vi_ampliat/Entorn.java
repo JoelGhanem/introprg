@@ -29,6 +29,9 @@ public class Entorn {
 			numerito++;
 			}
 			linia = input.readLine();
+			if(linia.equals("surt")) {
+				break;
+			}
 			//System.out.println("el numero es " + numerito);
 		}
 		if (llegides) { System.out.println("Referències llegides: " + numerito);}
