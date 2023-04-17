@@ -18,11 +18,6 @@ public class Entorn {
 		boolean llegides = true;
 		BufferedReader input = new BufferedReader(new FileReader(cami));
 		String linia = input.readLine();
-		if (linia != null) {
-			if(linia.equals("surt")) {
-				despedida = false;
-			}
-		}
 		while(true) {
 			Vi vi = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
 			if (linia == null) { input.close(); break; }
@@ -43,6 +38,11 @@ public class Entorn {
 
 			mostraPrompt();
 			String comanda = Entrada.readLine().strip();
+		if (comanda != null) {
+			if(comanda.equals("surt")) {
+				despedida = false;
+			}
+		}
 			if (comanda.isEmpty()) continue;
 			if (comanda.equals("surt")) break;
 			switch (comanda) {
