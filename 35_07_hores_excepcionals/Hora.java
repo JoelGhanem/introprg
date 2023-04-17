@@ -24,7 +24,7 @@ public class Hora {
 				}
 				if (segons > 59 || segons < 0) {
 						this.segons = 0;
-						//throw new Exception("segons fora de rang: " + segons);
+						throw new Exception("segons fora de rang: " + segons);
 				} else {
 						this.segons = segons;
 				}
