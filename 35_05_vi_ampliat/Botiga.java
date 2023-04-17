@@ -37,7 +37,7 @@ public Botiga() {
 			if (vins[i] != null) {
 				/*normalitzem els noms dels vins*/
 				String eliminaNormalitzat = Vi.normalitzaString(elimina);
-				String nomNormalitzat = Vi.normalitzaString(vins[i].getNom());
+				String nomNormalitzat = Vi.normalitzaString(vins[i].getRef());
 				String nomEnMinuscules = nomNormalitzat.toLowerCase();
 				/*passem a minuscules els noms dels vins*/
 				String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
@@ -73,22 +73,23 @@ public Botiga() {
 	}
 
 	public Vi cerca(Vi plantilla) {
-		for (int i = 0; i < vins.length; i++) {
-			if (vins[i] != null) {
-				String nomNormalitzat = Vi.normalitzaString(vins[i].getNom());
-				String nomBuscadorNormalitzat = Vi.normalitzaString(plantilla.getNom());
-				if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
-					return vins[i];
-				}
-				String nomEnMinuscules = vins[i].getNom().toLowerCase();
-				String nomBuscatEnMinuscules = plantilla.getNom().toLowerCase();
-				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
-					return vins[i];
-				}
-			}
-		}
-		return null;
-	}
+    for (Vi vi: vins) {
+        if (vi == null) continue;
+        if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
+        if (! plantilla.getNom().isEmpty() && ! plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
+        if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
+	if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() < vi.getEstoc()) continue;
+        if (! plantilla.getLloc().isEmpty() && ! plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
+        if (! plantilla.getOrigen().isEmpty() && ! plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
+        if (! plantilla.getTipus().isEmpty() && ! plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) continue;
+        if (! plantilla.getCollita().isEmpty() && ! plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) continue;
+        return vi;
+
+    }
+
+    return null;
+
+}
 	public int posicion;
 	public void iniciaRecorregut() {
 		posicion = 0;

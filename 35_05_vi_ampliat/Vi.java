@@ -95,7 +95,7 @@ public class Vi {
 		if (getNom() == null) {
 			return false;
 		}
-		if (getLloc()==null) {
+		if (getLloc() == null) {
 			return false;
 		}
 		if (getOrigen() == null) {
@@ -122,7 +122,7 @@ public class Vi {
 
 	@Override 
 	public String toString() {
-		String paraula = String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n" ,this.nom,preu,estoc);
+		String paraula = String.format("%n   Referència:%s%n  Vi: %s%n    Preu: %d%n    Estoc: %d%n    Lloc:%s%n     Origen:%s%n  Tipus:%s%n   Collita%s%n" ,this.ref,this.nom,preu,estoc, this.lloc, this.origen, this.tipus, this.collita);
 		return paraula;
 	}
 	public static Vi deArrayString(String[] strings) {
