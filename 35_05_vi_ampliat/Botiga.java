@@ -42,7 +42,7 @@ public Botiga() {
 				/*passem a minuscules els noms dels vins*/
 				String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
 				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
-					Vi vinito = new Vi();
+					Vi vinito = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 					vinito = vins[i];
 					if (vinito.getEstoc() > 0) {
 						return null;
@@ -76,12 +76,12 @@ public Botiga() {
 		for (int i = 0; i < vins.length; i++) {
 			if (vins[i] != null) {
 				String nomNormalitzat = Vi.normalitzaString(vins[i].getNom());
-				String nomBuscadorNormalitzat = Vi.normalitzaString(nom);
+				String nomBuscadorNormalitzat = Vi.normalitzaString(plantilla.getNom());
 				if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
 					return vins[i];
 				}
 				String nomEnMinuscules = vins[i].getNom().toLowerCase();
-				String nomBuscatEnMinuscules = nom.toLowerCase();
+				String nomBuscatEnMinuscules = plantilla.getNom().toLowerCase();
 				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 					return vins[i];
 				}

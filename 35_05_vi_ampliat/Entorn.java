@@ -98,7 +98,7 @@ public class Entorn {
 		/*Afegeix*/
 		int precioInt;
 		int estocInt;
-		Vi vino = new Vi();
+					Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		/*Pone el nombre*/
 		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
@@ -161,7 +161,7 @@ public class Entorn {
 		return null;
 	}
 	public Entorn processaCerca() {
-		Vi vino = new Vi();
+					Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
 		if (nombreVino.isEmpty()) {
@@ -180,7 +180,7 @@ public class Entorn {
 		return null;
 	}
 	public Entorn processaModifica() {
-		Vi vino = new Vi();
+					Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
 		if (nombreVino.isEmpty()){
@@ -228,7 +228,7 @@ public class Entorn {
 		return null;
 	}
 	public Entorn processaElimina() {
-		Vi vino = new Vi();
+					Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		System.out.print("nom (enter cancel·la)> ");
 		String nom = Entrada.readLine();
 		if (nom.isEmpty()) {

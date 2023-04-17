@@ -83,25 +83,28 @@ public class Vi {
 	}
 	//altres
 	public boolean esValid() {
+		if (getRef() == null) {
+			return false;
+		}
 		if (getPreu() < 0) {
 			return false;
 		}
 		if (getEstoc() < 0) {
 			return false;
 		}
-		if (getNom().equals("null")) {
+		if (getNom() == null) {
 			return false;
 		}
-		if (getLloc().equals("null")) {
+		if (getLloc()==null) {
 			return false;
 		}
-		if (getOrigen().equals("null")) {
+		if (getOrigen() == null) {
 			return false;
 		}
-		if (getTipus().equals("null")) {
+		if (getTipus() == null) {
 			return false;
 		}
-		if (getCollita().equals(null)) {
+		if (getCollita() == null) {
 			return false;
 		}
 		return true;
@@ -126,7 +129,7 @@ public class Vi {
 		if(strings.length != 7 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
 		if(Integer.parseInt(strings[1]) < 0) { return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
-		Vi vinito = new Vi();
+		Vi vinito = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		vinito.setNom(normalitzaString(strings[0]));
 		vinito.setPreu(Integer.parseInt(strings[1]));
 		vinito.setEstoc(Integer.parseInt(strings[2]));
@@ -137,12 +140,16 @@ public class Vi {
 		return null;
 	}
 
-public String[] aArrayString() {
-		String[] strings = new String[3];
-		strings[0] = this.nom;
-		strings[0] = this.nom;
-	strings[1]= Integer.toString(this.preu);
-		strings[2] = Integer.toString(this.estoc);
+	public String[] aArrayString() {
+		String[] strings = new String[7];
+		strings[0] = this.ref;
+		strings[1] = this.nom;
+	strings[2]= Integer.toString(this.preu);
+		strings[3] = Integer.toString(this.estoc);
+		strings[4] = this.lloc;
+		strings[5] = this.origen;
+		strings[6] = this.tipus;
+		strings[7] = this.collita;
 		return strings;
 	}
 }
