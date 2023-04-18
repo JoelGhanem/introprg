@@ -4,6 +4,7 @@ public class GatRenat {
 
 	//constructors
 	public GatRenat() {
+		this.posicio = GatPosicio.fromString("ESTIRAT");
 	}
 	public GatRenat(GatPosicio posicio) {
 		this.posicio = posicio;
