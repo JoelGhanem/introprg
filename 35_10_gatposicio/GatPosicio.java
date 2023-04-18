@@ -5,7 +5,7 @@ public enum GatPosicio {
 		try{
 			return valueOf(algo.toUpperCase());
 		} catch (IllegalArgumentException e){
-			throw new IllegalArgumentException("Valor \" + algo + \" no suportat per GatPosicio");
+			throw new IllegalArgumentException("Valor \"" + algo + "\" no suportat per GatPosicio");
 		}
 	}
 }
