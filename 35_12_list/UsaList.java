@@ -1,3 +1,4 @@
+/*Aquest arxiu ens ajuda a aprendre sobre les llistes, primer hem de crear una llista per posteriorment afegir valors a questa, deprès comprovem els valors guardats, comprovem si la lliosta esta bnuida i si no ho esta la buidem */
 import java.util.List;
 import java.util.ArrayList;
 import java.util.LinkedList;
