@@ -8,6 +8,11 @@ public class EnvoltaString {
         String altreValor = altre.valor.toLowerCase();
         return valor1.equals(altreValor);
     }
+    public boolean equals(String altre) {
+        String valor1 = valor.toLowerCase();
+        String altreValor = altre.toLowerCase();
+        return valor1.equals(altreValor);
+    }
     public static void main(String[] args) {
         String nom1 = "Renat";
         String nom2 = new String("Renat");
