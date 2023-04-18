@@ -7,7 +7,7 @@ public class GatRenat {
 				this.posicio = posicio;
 		}
 		public GatRenat(String algo) {
-				this.posicio = algo;
+				this.posicio = GatPosicio.fromString(algo);
 		}
 
 		//getter
@@ -18,6 +18,6 @@ public class GatRenat {
 				this.posicio = posicio;
 		}
 		public void setPosicio(String algo) {
-				this.posicio = algo;
+				this.posicio = GatPosicio.fromString(algo);
 		}
 }
