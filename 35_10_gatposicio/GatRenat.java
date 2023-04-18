@@ -11,7 +11,7 @@ public class GatRenat {
 		}
 
 		//getter
-		public GatPosicio getPosicio() { return this.posicio; }
+		public GatPosicio getPosicio() { return posicio; }
 
 		//setters
 		public void setPosicio(GatPosicio posicio) {
