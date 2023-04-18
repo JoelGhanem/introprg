@@ -892,6 +892,7 @@ public class TestExercise {
      *  Utilitats                                                                *
      * ************************************************************************* */
     private static void assertVinsIguals(List<Vi> un, List<Vi> dos, String msg) {
+        assertNotNull(dos, msg);
         assertEquals(un.size(), dos.size(), String.format("%s. Nombre de vins esperats %d. Nombre de vins trobats %d",
                     msg, un.size(), dos.size()));
         for (int i=0; i< un.size(); i++) {
@@ -900,6 +901,7 @@ public class TestExercise {
     }
 
     private static void assertVinsIguals(Vi un, Vi dos, String msg) {
+        assertNotNull(dos, msg);
         assertEquals(un.toString(), dos.toString(), msg);
     }
 

@@ -396,6 +396,7 @@ public class TestExercise {
      *  Utilitats                                                                *
      * ************************************************************************* */
     private static void assertVinsIguals(Vi un, Vi dos, String msg) {
+        assertNotNull(dos, msg);
         assertEquals(un.getNom(), dos.getNom(), msg);
     }
 }
