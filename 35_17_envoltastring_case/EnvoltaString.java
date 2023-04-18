@@ -4,9 +4,9 @@ public class EnvoltaString {
     public EnvoltaString(String valor) { this.valor = valor; }
     public String toString() { return String.format("ENVOLTAT(\"%s\")", valor); }
     public boolean equals(EnvoltaString altre) {
-        valor += valor.toLowerCase();
-        altre.valor += altre.valor.toLowerCase();
-        return valor.equals(altre.valor);
+        String valor1 = valor.toLowerCase();
+        String altreValor = altre.valor.toLowerCase();
+        return valor1.equals(altreValor);
     }
     public static void main(String[] args) {
         String nom1 = "Renat";
