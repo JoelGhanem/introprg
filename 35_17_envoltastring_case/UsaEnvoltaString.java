@@ -1,4 +1,5 @@
- public class UsaEnvoltaString {
+/*Aquest arxiu ens permet mostrar pel terminal si un nom es igual a un altre un cop modificat el metode quals()*/ 
+public class UsaEnvoltaString {
      public static void main(String[] args) {
          String nom1 = "Renat";
          String nom2 = args.length > 0 ? args[0] : "nom per defecte";
