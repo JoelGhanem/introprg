@@ -63,7 +63,7 @@ public class ComparaRemove {
     private static final int LONGITUD = 100000;
     private static List<Integer> emplena(List<Integer> llista) {
         // XXX codi que emplena la llista amb enters del 0 a LONGITUD - 1
-        for(int i = 0; i < llista.size()-1; i++) {
+        for(int i = 0; i < LONGITUD; i++) {
             llista.add(i,i);
         }
         return llista;
