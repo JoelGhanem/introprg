@@ -19,7 +19,7 @@ public class Entorn {
 				BufferedReader input = new BufferedReader(new FileReader(cami));
 				String linia = input.readLine();
 				while(true) {
-						Vi vi = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
+						Vi vi = new Vi("","",0,0,"","","","");
 						if (linia == null) { input.close(); break; }
 						//System.out.println(linia);
 						String[] liniaArray = linia.split(";"); 
@@ -180,10 +180,18 @@ public class Entorn {
 						System.out.print("nom> ");
 						if(!nomVino.equals("!")) {
 								vino.setNom(nomVino);
-
-								int vinoPreu = Integer.parseInt(Entrada.readLine());
-								botiga.cerca(vino);
+								String vinoPreu = Entrada.readLine();
+								if(!vinoPreu.equals("!")) {
+										if (UtilString.esEnter(vinoPreu)) {
+												int precio = Integer.parseInt(vinoPreu);
+												vino.setPreu(precio);
+										}
+								}
 						}
+						Vi vinazo = new Vi("","",-1,-1,"","","","");
+						vinazo = botiga.cerca(vino);
+						System.out.print("Trobat:");
+						System.out.println(vinazo.toString());
 				} else if(refVino.equals("!")) {
 						return null;
 				}else {
