@@ -57,12 +57,12 @@ public Botiga() {
 	public Vi cerca(String nom) {
 		for (int i = 0; i < vins.length; i++) {
 			if (vins[i] != null) {
-				String nomNormalitzat = Vi.normalitzaString(vins[i].getNom());
+				String nomNormalitzat = Vi.normalitzaString(vins[i].getRef());
 				String nomBuscadorNormalitzat = Vi.normalitzaString(nom);
 				if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
 					return vins[i];
 				}
-				String nomEnMinuscules = vins[i].getNom().toLowerCase();
+				String nomEnMinuscules = vins[i].getRef().toLowerCase();
 				String nomBuscatEnMinuscules = nom.toLowerCase();
 				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 					return vins[i];
