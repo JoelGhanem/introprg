@@ -126,7 +126,7 @@ public class Vi {
 		return paraula;
 	}
 	public static Vi deArrayString(String[] strings) {
-		if(strings.length != 8 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
+		if(strings.length != 8 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { System.out.println("es nulo a la primera");return null; }
 		if(Integer.parseInt(strings[1]) < 0) { return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
 		Vi vinito = new Vi("","",0,0,"","","","");
