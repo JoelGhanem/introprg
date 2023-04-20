@@ -139,13 +139,21 @@ public class Vi {
 		if(Integer.parseInt(strings[3]) < 0) { return null;}
 		Vi vinito = new Vi(" "," ",-1,-1," "," "," "," ");
 		vinito.setRef(normalitzaString(strings[0]));
+		System.out.println(vinito.getRef());
 		vinito.setNom(normalitzaString(strings[1]));
+		System.out.println(vinito.getNom());
 		vinito.setPreu(Integer.parseInt(strings[2]));
+		System.out.println(vinito.getPreu());
 		vinito.setEstoc(Integer.parseInt(strings[3]));
+		System.out.println(vinito.getEstoc());
 		vinito.setLloc(normalitzaString(strings[4]));
+		System.out.println(vinito.getLloc());
 		vinito.setOrigen(normalitzaString(strings[5]));
+		System.out.println(vinito.getOrigen());
 		vinito.setTipus(normalitzaString(strings[6]));
+		System.out.println(vinito.getTipus());
 		vinito.setCollita(normalitzaString(strings[7]));
+		System.out.println(vinito.getCollita());
 		if(vinito.esValid()) {
 				System.out.println(vinito.esValid());
 				return vinito;
