@@ -6,46 +6,46 @@
     =================
 Comparant l'eficiència de les llistes
 Comparació quan eliminem sempre de l'inici
-test remove(0) LinkedList:     14859 
-test remove(0) ArrayList:      1392
+test remove(0) LinkedList:     4403579 
+test remove(0) ArrayList:      361184616
 Comparació quan eliminem sempre del final
-test remove(últim) LinkedList: 1901
-test remove(últim) ArrayList:  1106
+test remove(últim) LinkedList: 5776202
+test remove(últim) ArrayList:  1630593
 Comparació quan eliminem sempre del mig
-test remove(mig) LinkedList:   1683
-test remove(mig) ArrayList:    991
+test remove(mig) LinkedList:   3018335450 
+test remove(mig) ArrayList:    174198122
         Segona execució:
         ================
 Comparant l'eficiència de les llistes
 Comparació quan eliminem sempre de l'inici
-test remove(0) LinkedList:     8241
-test remove(0) ArrayList:      1220
+test remove(0) LinkedList:     4458428
+test remove(0) ArrayList:      274360279
 Comparació quan eliminem sempre del final
-test remove(últim) LinkedList: 2095
-test remove(últim) ArrayList:  1188
+test remove(últim) LinkedList: 7311582
+test remove(últim) ArrayList:  2421584
 Comparació quan eliminem sempre del mig
-test remove(mig) LinkedList:   1373
-test remove(mig) ArrayList:    1059
+test remove(mig) LinkedList:   3027249752
+test remove(mig) ArrayList:    173698625
         Tercera execució:
         =================
 Comparant l'eficiència de les llistes
 Comparació quan eliminem sempre de l'inici
-test remove(0) LinkedList:     8177
-test remove(0) ArrayList:      1526
+test remove(0) LinkedList:     4605137
+test remove(0) ArrayList:      275154306
 Comparació quan eliminem sempre del final
-test remove(últim) LinkedList: 2577
-test remove(últim) ArrayList:  1427
+test remove(últim) LinkedList: 6677940
+test remove(últim) ArrayList:  1980543
 Comparació quan eliminem sempre del mig
-test remove(mig) LinkedList:   1911
-test remove(mig) ArrayList:    1473
+test remove(mig) LinkedList:   3010875177
+test remove(mig) ArrayList:    174071242
         Resultats
         =========
 ========== ================== ================== ======================================================
 **prova**  **linkedList**      **ArrayList**      **resultat**
 ---------- ------------------ ------------------ ------------------------------------------------------
-inici       10426                 1379              L'ArrayList és un 87% més rápid que el linkedList
-final       2191                  1240              L'ArrayList és un 45% més rápid que el linkedList
-mig         1656                  1174              L'ArrayList és un 29% més rápid que el linkedList
+inici       4489048                 303566400       El linkedListe és un 193% més rápid que l'ArrayList 
+final       6588575                 2010907          L'ArrayList és un 70% més rápid que el linkedList
+mig         3018820126              173989330        L'ArrayList és un 143% més rápid que el linkedList
 ========== ================== ================== ======================================================
     Per calcular cada columna:
     * la cel·la (1, 1) correspon al temps mig de la implementació LinkedList eliminant des de l'inici
