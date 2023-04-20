@@ -126,7 +126,7 @@ public class Vi {
 		return paraula;
 	}
 	public static Vi deArrayString(String[] strings) {
-		if(strings.length != 7 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
+		if(strings.length != 8 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
 		if(Integer.parseInt(strings[1]) < 0) { return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
 		Vi vinito = new Vi("","",0,0,"","","","");
@@ -138,9 +138,8 @@ public class Vi {
 		vinito.setOrigen(normalitzaString(strings[5]));
 		vinito.setTipus(normalitzaString(strings[6]));
 		vinito.setCollita(normalitzaString(strings[7]));
-		System.out.println("llega Al if");
 		if(vinito.esValid()) {
-				System.out.println(vinito.esValid());
+				//System.out.println(vinito.esValid());
 			return vinito;
 		}
 		return null;
