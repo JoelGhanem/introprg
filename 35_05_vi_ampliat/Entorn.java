@@ -183,7 +183,9 @@ public class Entorn {
 				int vinoPreu = Integer.parseInt(Entrada.readLine());
 				botiga.cerca(vino);
 				}
-		} else {
+		} else if(refVino.equals("!")) {
+				return null;
+		}else {
 			vino.setRef(refVino);
 			if (botiga.cerca(vino.getRef())!= null)  {
 				vino = botiga.cerca(vino.getRef());
