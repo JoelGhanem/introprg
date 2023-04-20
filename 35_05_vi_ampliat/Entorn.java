@@ -188,11 +188,9 @@ public class Entorn {
 												vino.setPreu(precio);
 										}
 								}
+						} else {
+						System.out.println(botiga.vi.toString());
 						}
-						Vi vinazo = new Vi(".",".",-1,-1,".",".",".",".");
-						vinazo = botiga.cerca(vino);
-						System.out.print("Trobat:");
-						System.out.println(vinazo.toString());
 				} else if(refVino.equals("!")) {
 						return null;
 				}else {
