@@ -172,7 +172,7 @@ public class Entorn {
 		}
 		public Entorn processaCerca() {
 				//System.out.println("Comanda temporalment no disponible");
-				Vi vino = new Vi(" "," ",-1,-1," "," "," "," ");
+				Vi vino = new Vi(".",".",-1,-1,".",".",".",".");
 				String refVino = Entrada.readLine();
 				vino.setRef(refVino);
 				System.out.print("ref> ");
