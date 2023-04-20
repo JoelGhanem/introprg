@@ -138,7 +138,7 @@ public class Vi {
 		vinito.setOrigen(normalitzaString(strings[5]));
 		vinito.setTipus(normalitzaString(strings[6]));
 		vinito.setCollita(normalitzaString(strings[7]));
-		//vinito.set
+		System.out.println("llega Al if");
 		if(vinito.esValid()) {
 				System.out.println(vinito.esValid());
 			return vinito;
