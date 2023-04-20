@@ -172,15 +172,17 @@ public class Entorn {
 	}
 	public Entorn processaCerca() {
 			//System.out.println("Comanda temporalment no disponible");
-		Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
+		Vi vino = new Vi("","",-1,-1,"","","","");
 		String refVino = Entrada.readLine();
 		System.out.print("ref> ");
 		if (refVino.isEmpty()) {
 				String nomVino = Entrada.readLine();
-				if(nomVino.equals("!")) {
+				if(!nomVino.equals("!")) {
+						vino.setNom(nomVino);
 
-				}
+				int vinoPreu = Integer.parseInt(Entrada.readLine());
 				botiga.cerca(vino);
+				}
 		} else {
 			vino.setRef(refVino);
 			if (botiga.cerca(vino.getRef())!= null)  {
