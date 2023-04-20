@@ -129,10 +129,15 @@ public class Vi {
 		if(strings.length != 7 || !UtilString.esEnter(strings[1]) || !UtilString.esEnter(strings[2])) { return null; }
 		if(Integer.parseInt(strings[1]) < 0) { return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
-		Vi vinito = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
-		vinito.setNom(normalitzaString(strings[0]));
-		vinito.setPreu(Integer.parseInt(strings[1]));
-		vinito.setEstoc(Integer.parseInt(strings[2]));
+		Vi vinito = new Vi("","",0,0,"","","","");
+		vinito.setRef(normalitzaString(strings[0]));
+		vinito.setNom(normalitzaString(strings[1]));
+		vinito.setPreu(Integer.parseInt(strings[2]));
+		vinito.setEstoc(Integer.parseInt(strings[3]));
+		vinito.setLloc(normalitzaString(strings[4]));
+		vinito.setOrigen(normalitzaString(strings[5]));
+		vinito.setTipus(normalitzaString(strings[6]));
+		vinito.setCollita(normalitzaString(strings[7]));
 		//vinito.set
 		if(vinito.esValid()) {
 			return vinito;
