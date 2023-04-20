@@ -127,13 +127,13 @@ public class Vi {
 		}
 		public static Vi deArrayString(String[] strings) {
 				if(strings.length != 8) {
-						System.out.println("es nulo a la primera");
+						//System.out.println("es nulo a la primera");
 				return null;}
 		if (!UtilString.esEnter(strings[2])) {
-				System.out.println("es nulo a la segunda");
+				//System.out.println("es nulo a la segunda");
 				return null;} 
 		if (!UtilString.esEnter(strings[3])) {
-				System.out.println("es nulo a la tercera");
+				//System.out.println("es nulo a la tercera");
 				return null;}
 		if(Integer.parseInt(strings[1]) < 0) { return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
