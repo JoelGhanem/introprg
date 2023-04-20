@@ -192,7 +192,7 @@ public class Entorn {
 						Vi vinazo = new Vi(".",".",-1,-1,".",".",".",".");
 						vinazo = botiga.cerca(vino);
 						System.out.print("Trobat:");
-						System.out.println(vinazo.toString());
+						//System.out.println(vinazo.toString());
 				} else if(refVino.equals("!")) {
 						return null;
 				}else {
