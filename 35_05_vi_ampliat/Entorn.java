@@ -171,8 +171,7 @@ public class Entorn {
 		return null;
 	}
 	public Entorn processaCerca() {
-			System.out.println("Comanda temporalment no disponible");
-		/*
+			//System.out.println("Comanda temporalment no disponible");
 		Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
@@ -189,12 +188,10 @@ public class Entorn {
 				return null;
 			}
 		}
-		*/
 		return null;
 	}
 	public Entorn processaModifica() {
-			System.out.println("Comanda temporalment no disponible");
-		/*
+			//System.out.println("Comanda temporalment no disponible");
 		Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
@@ -240,12 +237,10 @@ public class Entorn {
 		}
 		System.out.println("Modificat:");
 		System.out.println(vino.toString());
-		*/
 		return null;
 	}
 	public Entorn processaElimina() {
-			System.out.println("Comanda temporalment no disponible");
-		/*
+			//System.out.println("Comanda temporalment no disponible");
 		Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
 		System.out.print("nom (enter cancel·la)> ");
 		String nom = Entrada.readLine();
@@ -271,7 +266,6 @@ public class Entorn {
 		} else {
 			System.out.println("No eliminat");
 		}
-		*/
 		return null;
 	}
 	public static Entorn mostraErrorComandaDesconeguda() {
