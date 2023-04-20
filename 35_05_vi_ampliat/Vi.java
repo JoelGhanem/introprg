@@ -137,7 +137,7 @@ public class Vi {
 				return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
 		if(Integer.parseInt(strings[3]) < 0) { return null;}
-		Vi vinito = new Vi("","",0,0,"","","","");
+		Vi vinito = new Vi(" "," ",-1,-1," "," "," "," ");
 		vinito.setRef(normalitzaString(strings[0]));
 		vinito.setNom(normalitzaString(strings[1]));
 		vinito.setPreu(Integer.parseInt(strings[2]));
