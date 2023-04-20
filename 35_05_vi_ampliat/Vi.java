@@ -129,10 +129,10 @@ public class Vi {
 				if(strings.length != 8) {
 						System.out.println("es nulo a la primera");
 				return null;}
-		if (!UtilString.esEnter(strings[1])) {
+		if (!UtilString.esEnter(strings[2])) {
 				System.out.println("es nulo a la segunda");
 				return null;} 
-		if (!UtilString.esEnter(strings[2])) {
+		if (!UtilString.esEnter(strings[3])) {
 				System.out.println("es nulo a la tercera");
 				return null;}
 		if(Integer.parseInt(strings[1]) < 0) { return null;}
