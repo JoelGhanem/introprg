@@ -173,10 +173,9 @@ public class Entorn {
 	public Entorn processaCerca() {
 			//System.out.println("Comanda temporalment no disponible");
 		Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
-		System.out.print("nom (enter cancel·la)> ");
 		String nombreVino = Entrada.readLine();
 		if (nombreVino.isEmpty()) {
-			return null;
+				botiga.cerca(vino);
 		} else {
 			vino.setNom(nombreVino);
 			if (botiga.cerca(vino.getNom())!= null)  {
