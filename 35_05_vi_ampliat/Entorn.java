@@ -174,6 +174,7 @@ public class Entorn {
 				//System.out.println("Comanda temporalment no disponible");
 				Vi vino = new Vi("","",-1,-1,"","","","");
 				String refVino = Entrada.readLine();
+				vino.setRef(refVino);
 				System.out.print("ref> ");
 				if (refVino.isEmpty()) {
 						String nomVino = Entrada.readLine();
