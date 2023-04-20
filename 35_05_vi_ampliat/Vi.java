@@ -135,8 +135,8 @@ public class Vi {
 		if (!UtilString.esEnter(strings[3])) {
 				//System.out.println("es nulo a la tercera");
 				return null;}
-		if(Integer.parseInt(strings[1]) < 0) { return null;}
 		if(Integer.parseInt(strings[2]) < 0) { return null;}
+		if(Integer.parseInt(strings[3]) < 0) { return null;}
 		Vi vinito = new Vi("","",0,0,"","","","");
 		vinito.setRef(normalitzaString(strings[0]));
 		vinito.setNom(normalitzaString(strings[1]));
