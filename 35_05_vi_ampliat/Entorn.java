@@ -189,7 +189,7 @@ public class Entorn {
 										}
 								}
 						} else {
-						System.out.println(botiga.vi.toString());
+						//System.out.println(botiga.vi.toString());
 						}
 				} else if(refVino.equals("!")) {
 						return null;
