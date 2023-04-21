@@ -76,21 +76,21 @@ public Botiga() {
     for (Vi vi: vins) {
         if (vi == null) continue;
         if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
-		System.out.println(plantilla.getRef() + " || + " + vi.getRef());
+		//System.out.println(plantilla.getRef() + " || + " + vi.getRef());
         if (! plantilla.getNom().isEmpty() && ! plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
-		System.out.println(plantilla.getNom() + " || + " + vi.getNom());
+		//System.out.println(plantilla.getNom() + " || + " + vi.getNom());
         if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
-		System.out.println(plantilla.getPreu() + " || + " + vi.getPreu());
+		//System.out.println(plantilla.getPreu() + " || + " + vi.getPreu());
 		if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() < vi.getEstoc()) continue;
-		System.out.println(plantilla.getEstoc() + " || + " + vi.getEstoc());
+		//System.out.println(plantilla.getEstoc() + " || + " + vi.getEstoc());
         if (! plantilla.getLloc().isEmpty() && ! plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
-		System.out.println(plantilla.getLloc() + " || + " + vi.getLloc());
+		//System.out.println(plantilla.getLloc() + " || + " + vi.getLloc());
         if (! plantilla.getOrigen().isEmpty() && ! plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
-		System.out.println(plantilla.getOrigen() + " || + " + vi.getOrigen());
+		//System.out.println(plantilla.getOrigen() + " || + " + vi.getOrigen());
         if (! plantilla.getTipus().isEmpty() && ! plantilla.getTipus().equalsIgnoreCase(vi.getTipus())) continue;
-		System.out.println(plantilla.getTipus() + " || + " + vi.getTipus());
+		//System.out.println(plantilla.getTipus() + " || + " + vi.getTipus());
         if (! plantilla.getCollita().isEmpty() && ! plantilla.getCollita().equalsIgnoreCase(vi.getCollita())) continue;
-		System.out.println(plantilla.getCollita() + " || + " + vi.getCollita());
+		//System.out.println(plantilla.getCollita() + " || + " + vi.getCollita());
         return vi;
     }
 
