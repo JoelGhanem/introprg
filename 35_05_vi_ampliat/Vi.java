@@ -155,7 +155,7 @@ public class Vi {
 		vinito.setCollita(normalitzaString(strings[7]));
 		//System.out.println(vinito.getCollita());
 		if(vinito.esValid()) {
-				System.out.println(vinito.esValid());
+				//System.out.println(vinito.esValid());
 				return vinito;
 		}
 		return null;
