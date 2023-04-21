@@ -176,6 +176,7 @@ public class Entorn {
 				String refVino = Entrada.readLine();
 				vino.setRef(refVino);
 				System.out.print("ref> ");
+		while(true) {
 				if (refVino.isEmpty()) {
 						String nomVino = Entrada.readLine();
 						System.out.print("nom> ");
@@ -189,7 +190,7 @@ public class Entorn {
 										}
 								}
 						} else {
-						//System.out.println(botiga.vi.toString());
+						System.out.println(botiga.vi.toString());
 						}
 				} else if(refVino.equals("!")) {
 						return null;
@@ -205,6 +206,7 @@ public class Entorn {
 						}
 				}
 				return null;
+		}
 		}
 		public Entorn processaModifica() {
 				//System.out.println("Comanda temporalment no disponible");
