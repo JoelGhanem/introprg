@@ -176,8 +176,8 @@ public class Entorn {
 				String refVino = Entrada.readLine();
 				vino.setRef(refVino);
 				System.out.print("ref> ");
-				while(true) {
-						if (refVino.isEmpty()) {
+				if (refVino.isEmpty()) {
+						while(true) {
 								String nomVino = Entrada.readLine();
 								System.out.print("nom> ");
 								if(!nomVino.equals("!")) {
@@ -231,24 +231,23 @@ public class Entorn {
 								} else {
 										break;
 								}
-								botiga.cerca(vino);
-								System.out.println("Trobat:") ;
+						}
+						botiga.cerca(vino);
+						System.out.println("Trobat:") ;
+						System.out.println(vino.toString());
+				} else if(refVino.equals("!")) {
+						return null;
+				}else {
+						vino.setRef(refVino);
+						if (botiga.cerca(vino.getRef())!= null)  {
+								vino = botiga.cerca(vino.getRef());
+								System.out.print("Trobat:");
 								System.out.println(vino.toString());
-								break;
-						} else if(refVino.equals("!")) {
-								return null;
-						}else {
-								vino.setRef(refVino);
-								if (botiga.cerca(vino.getRef())!= null)  {
-										vino = botiga.cerca(vino.getRef());
-										System.out.print("Trobat:");
-										System.out.println(vino.toString());
-								} else {
-										System.out.println("No trobat");
-										return null;
-								}
+						} else {
+								System.out.println("No trobat");
 								return null;
 						}
+						return null;
 				}
 				return null;
 		}
