@@ -183,7 +183,7 @@ public class Entorn {
 								if(!nomVino.equals("!")) {
 										vino.setNom(nomVino);
 								} else {
-										continue;
+										break;
 								}
 								String vinoPreu = Entrada.readLine();
 								if(!vinoPreu.equals("!")) {
@@ -191,10 +191,10 @@ public class Entorn {
 												int precio = Integer.parseInt(vinoPreu);
 												vino.setPreu(precio);
 										} else {
-												continue;
+												break;
 										}
 								} else {
-										continue;
+										break;
 								}
 								String vinoEstoc = Entrada.readLine();
 								if(!vinoEstoc.equals("!")) {
@@ -202,34 +202,34 @@ public class Entorn {
 												int stok = Integer.parseInt(vinoEstoc);
 												vino.setEstoc(stok);
 										} else {
-												continue;
+												break;
 										}
 								} else {
-										continue;
+										break;
 								}
 								String vinoLloc = Entrada.readLine();
 								if(!vinoLloc.equals("!")) {
 										vino.setLloc(vinoLloc);
 								} else {
-										continue;
+										break;
 								}
 								String vinoOrigen = Entrada.readLine();
 								if(!vinoOrigen.equals("!")) {
 										vino.setOrigen(vinoOrigen);
 								} else {
-										continue;
+										break;
 								}
 								String vinoTipus = Entrada.readLine();
 								if(!vinoTipus.equals("!")) {
 										vino.setTipus(vinoTipus);
 								} else {
-										continue;
+										break;
 								}
 								String vinoCollita = Entrada.readLine();
 								if(!vinoCollita.equals("!")) {
 										vino.setCollita(vinoCollita);
 								} else {
-										continue;
+										break;
 								}
 								botiga.cerca(vino);
 								System.out.println("Trobat:") ;
