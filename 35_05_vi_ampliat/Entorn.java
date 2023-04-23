@@ -172,40 +172,85 @@ public class Entorn {
 		}
 		public Entorn processaCerca() {
 				//System.out.println("Comanda temporalment no disponible");
-				Vi vino = new Vi(".",".",-1,-1,".",".",".",".");
+				Vi vino = new Vi("","",-1,-1,"","","","");
 				String refVino = Entrada.readLine();
 				vino.setRef(refVino);
 				System.out.print("ref> ");
-		while(true) {
-				if (refVino.isEmpty()) {
-						String nomVino = Entrada.readLine();
-						System.out.print("nom> ");
-						if(!nomVino.equals("!")) {
-								vino.setNom(nomVino);
+				while(true) {
+						if (refVino.isEmpty()) {
+								String nomVino = Entrada.readLine();
+								System.out.print("nom> ");
+								if(!nomVino.equals("!")) {
+										vino.setNom(nomVino);
+								} else {
+										continue;
+								}
 								String vinoPreu = Entrada.readLine();
 								if(!vinoPreu.equals("!")) {
 										if (UtilString.esEnter(vinoPreu)) {
 												int precio = Integer.parseInt(vinoPreu);
 												vino.setPreu(precio);
+										} else {
+												continue;
 										}
+								} else {
+										continue;
 								}
-						} else {
-						}
-				} else if(refVino.equals("!")) {
-						return null;
-				}else {
-						vino.setRef(refVino);
-						if (botiga.cerca(vino.getRef())!= null)  {
-								vino = botiga.cerca(vino.getRef());
-								System.out.print("Trobat:");
+								String vinoEstoc = Entrada.readLine();
+								if(!vinoEstoc.equals("!")) {
+										if(UtilString.esEnter(vinoEstoc)) {
+												int stok = Integer.parseInt(vinoEstoc);
+												vino.setEstoc(stok);
+										} else {
+												continue;
+										}
+								} else {
+										continue;
+								}
+								String vinoLloc = Entrada.readLine();
+								if(!vinoLloc.equals("!")) {
+										vino.setLloc(vinoLloc);
+								} else {
+										continue;
+								}
+								String vinoOrigen = Entrada.readLine();
+								if(!vinoOrigen.equals("!")) {
+										vino.setOrigen(vinoOrigen);
+								} else {
+										continue;
+								}
+								String vinoTipus = Entrada.readLine();
+								if(!vinoTipus.equals("!")) {
+										vino.setTipus(vinoTipus);
+								} else {
+										continue;
+								}
+								String vinoCollita = Entrada.readLine();
+								if(!vinoCollita.equals("!")) {
+										vino.setCollita(vinoCollita);
+								} else {
+										continue;
+								}
+								botiga.cerca(vino);
+								System.out.println("Trobat:") ;
 								System.out.println(vino.toString());
-						} else {
-								System.out.println("No trobat");
+								break;
+						} else if(refVino.equals("!")) {
+								return null;
+						}else {
+								vino.setRef(refVino);
+								if (botiga.cerca(vino.getRef())!= null)  {
+										vino = botiga.cerca(vino.getRef());
+										System.out.print("Trobat:");
+										System.out.println(vino.toString());
+								} else {
+										System.out.println("No trobat");
+										return null;
+								}
 								return null;
 						}
 				}
 				return null;
-		}
 		}
 		public Entorn processaModifica() {
 				//System.out.println("Comanda temporalment no disponible");
