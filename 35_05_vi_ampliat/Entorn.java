@@ -204,11 +204,13 @@ public class Entorn {
 								System.out.print("estoc min.> ");
 								String vinoEstoc = Entrada.readLine();
 								if(!vinoEstoc.equals("!")) {
+										if(!vinoEstoc.isEmpty()) {
 										if(UtilString.esEnter(vinoEstoc)) {
 												int stok = Integer.parseInt(vinoEstoc);
 												vino.setEstoc(stok);
 										} else {
 												break;
+										}
 										}
 								} else {
 										break;
