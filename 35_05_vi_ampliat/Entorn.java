@@ -233,7 +233,7 @@ public class Entorn {
 								}
 						}
 						botiga.cerca(vino);
-						System.out.println("Trobat:") ;
+						System.out.print("Trobat:") ;
 						System.out.println(vino.toString());
 				} else if(refVino.equals("!")) {
 						return null;
