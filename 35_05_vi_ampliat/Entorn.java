@@ -243,6 +243,7 @@ public class Entorn {
 								} else {
 										break;
 								}
+								break;
 						}
 						if(botiga.cerca(vino) != null) {
 								System.out.print("Trobat:") ;
