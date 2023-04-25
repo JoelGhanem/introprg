@@ -108,7 +108,7 @@ public class Entorn {
 				/*Afegeix*/
 				int precioInt;
 				int estocInt;
-				Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
+				Vi vino = new Vi("","",-1,-1,"","","","");
 				/*Pone el nombre*/
 				System.out.print("nom (enter cancel·la)> ");
 				String nombreVino = Entrada.readLine();
@@ -237,7 +237,9 @@ public class Entorn {
 								}
 						}
 						System.out.print("Trobat:") ;
+						if(botiga.cerca(vino) != null) {
 						System.out.println(botiga.cerca(vino).toString());
+						}
 				} else if(refVino.equals("!")) {
 						return null;
 				}else {
@@ -256,7 +258,7 @@ public class Entorn {
 		}
 		public Entorn processaModifica() {
 				//System.out.println("Comanda temporalment no disponible");
-				Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
+				Vi vino = new Vi("","",-1,-1,"","","","");
 				System.out.print("nom (enter cancel·la)> ");
 				String nombreVino = Entrada.readLine();
 				if (nombreVino.isEmpty()){
@@ -305,7 +307,7 @@ public class Entorn {
 		}
 		public Entorn processaElimina() {
 				//System.out.println("Comanda temporalment no disponible");
-				Vi vino = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
+				Vi vino = new Vi("","",-1,-1,"","","","");
 				System.out.print("nom (enter cancel·la)> ");
 				String nom = Entrada.readLine();
 				if (nom.isEmpty()) {

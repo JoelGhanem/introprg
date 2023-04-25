@@ -42,7 +42,7 @@ public Botiga() {
 				/*passem a minuscules els noms dels vins*/
 				String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
 				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
-					Vi vinito = new Vi("algo","algo",1,1,"algo","algo","algo","algo");
+					Vi vinito = new Vi("","",-1,-1,"","","","");
 					vinito = vins[i];
 					if (vinito.getEstoc() > 0) {
 						return null;
