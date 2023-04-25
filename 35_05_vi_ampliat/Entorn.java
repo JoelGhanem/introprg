@@ -241,7 +241,7 @@ public class Entorn {
 						System.out.print("Trobat:") ;
 						System.out.println(botiga.cerca(vino).toString());
 						} else {
-												System.out.println("ERROR: el valor havia de ser un enter positiu");
+												System.out.println("ERROR: el valor ha de ser un enter positiu");
 						}
 				} else if(refVino.equals("!")) {
 						return null;
