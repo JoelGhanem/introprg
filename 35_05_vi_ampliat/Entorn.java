@@ -213,6 +213,7 @@ public class Entorn {
 								} else {
 										break;
 								}
+								System.out.print("lloc> ");
 								String vinoLloc = Entrada.readLine();
 								if(!vinoLloc.equals("!")) {
 										vino.setLloc(vinoLloc);
