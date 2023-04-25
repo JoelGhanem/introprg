@@ -206,6 +206,7 @@ public class Entorn {
 												int stok = Integer.parseInt(vinoEstoc);
 												vino.setEstoc(stok);
 										} else {
+												System.out.println("ERROR: el valor havia de ser un enter positiu");
 												break;
 										}
 								} else {
