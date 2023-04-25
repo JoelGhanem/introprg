@@ -186,6 +186,7 @@ public class Entorn {
 										break;
 								}
 								String vinoPreu = Entrada.readLine();
+								System.out.println("preu max.> ");
 								if(!vinoPreu.equals("!")) {
 										if (UtilString.esEnter(vinoPreu)) {
 												int precio = Integer.parseInt(vinoPreu);
@@ -197,6 +198,7 @@ public class Entorn {
 										break;
 								}
 								String vinoEstoc = Entrada.readLine();
+								//System.out.println(
 								if(!vinoEstoc.equals("!")) {
 										if(UtilString.esEnter(vinoEstoc)) {
 												int stok = Integer.parseInt(vinoEstoc);
