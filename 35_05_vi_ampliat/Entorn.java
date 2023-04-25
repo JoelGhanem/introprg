@@ -173,34 +173,36 @@ public class Entorn {
 		public Entorn processaCerca() {
 				//System.out.println("Comanda temporalment no disponible");
 				Vi vino = new Vi("","",-1,-1,"","","","");
+				System.out.print("ref> ");
 				String refVino = Entrada.readLine();
 				vino.setRef(refVino);
-				System.out.print("ref> ");
 				if (refVino.isEmpty()) {
 						while(true) {
-								String nomVino = Entrada.readLine();
 								System.out.print("nom> ");
+								String nomVino = Entrada.readLine();
 								if(!nomVino.equals("!")) {
 										vino.setNom(nomVino);
 								} else {
 										break;
 								}
-								String vinoPreu = Entrada.readLine();
 								System.out.print("preu max.> ");
+								String vinoPreu = Entrada.readLine();
 								if(!vinoPreu.equals("!")) {
 										if (vinoPreu != null) {
-										if (UtilString.esEnter(vinoPreu)) {
-												int precio = Integer.parseInt(vinoPreu);
-												vino.setPreu(precio);
-										} else {
-												break;
-										}
+												if(!vinoPreu.isEmpty()) {
+														if (UtilString.esEnter(vinoPreu)) {
+																int precio = Integer.parseInt(vinoPreu);
+																vino.setPreu(precio);
+														} else {
+																break;
+														}
+												}
 										}
 								} else {
 										break;
 								}
+								System.out.print("estoc min.> ");
 								String vinoEstoc = Entrada.readLine();
-								//System.out.println(
 								if(!vinoEstoc.equals("!")) {
 										if(UtilString.esEnter(vinoEstoc)) {
 												int stok = Integer.parseInt(vinoEstoc);
@@ -238,10 +240,10 @@ public class Entorn {
 								}
 						}
 						if(botiga.cerca(vino) != null) {
-						System.out.print("Trobat:") ;
-						System.out.println(botiga.cerca(vino).toString());
+								System.out.print("Trobat:") ;
+								System.out.println(botiga.cerca(vino).toString());
 						} else {
-												System.out.println("ERROR: el valor ha de ser un enter positiu");
+								System.out.println("ERROR: el valor ha de ser un enter positiu");
 						}
 				} else if(refVino.equals("!")) {
 						return null;
