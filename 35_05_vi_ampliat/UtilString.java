@@ -65,6 +65,7 @@ public class UtilString {
 	public static boolean esEnter(String text) {
 		boolean esEnter = true;
 		int i = 1;
+		if (text.length() > 0) {
 		if(text.charAt(0) == '+' || text.charAt(0) == '-' || Character.isDigit(text.charAt(0))) {
 
 			while(esEnter && i < text.length()) { 
@@ -83,6 +84,9 @@ public class UtilString {
 		}else {
 			return false;
 		}	
+	} else {
+			return false;
+	}
 	}
 	public static boolean esEnter(String text, boolean estricte) {
 		if (estricte) {
