@@ -188,19 +188,19 @@ public class Entorn {
 								String vinoPreu = Entrada.readLine();
 								System.out.print("preu max.> ");
 								if(!vinoPreu.equals("!")) {
-										if (vinoPreu != null) {
+										//if (vinoPreu != null) {
 										if (UtilString.esEnter(vinoPreu)) {
 												int precio = Integer.parseInt(vinoPreu);
 												vino.setPreu(precio);
 										} else {
 												break;
 										}
-										}
+										//}
 								} else {
 										break;
 								}
 								String vinoEstoc = Entrada.readLine();
-								System.out.print("estoc min.> ");
+								//System.out.println(
 								if(!vinoEstoc.equals("!")) {
 										if(UtilString.esEnter(vinoEstoc)) {
 												int stok = Integer.parseInt(vinoEstoc);
