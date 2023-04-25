@@ -222,18 +222,21 @@ public class Entorn {
 								} else {
 										break;
 								}
+								System.out.print("D.O.> ");
 								String vinoOrigen = Entrada.readLine();
 								if(!vinoOrigen.equals("!")) {
 										vino.setOrigen(vinoOrigen);
 								} else {
 										break;
 								}
+								System.out.print("tipus> ");
 								String vinoTipus = Entrada.readLine();
 								if(!vinoTipus.equals("!")) {
 										vino.setTipus(vinoTipus);
 								} else {
 										break;
 								}
+								System.out.print("collita> ");
 								String vinoCollita = Entrada.readLine();
 								if(!vinoCollita.equals("!")) {
 										vino.setCollita(vinoCollita);
