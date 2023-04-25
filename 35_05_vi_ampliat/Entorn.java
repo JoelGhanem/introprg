@@ -192,8 +192,8 @@ public class Entorn {
 										if (UtilString.esEnter(vinoPreu)) {
 												int precio = Integer.parseInt(vinoPreu);
 												vino.setPreu(precio);
-										} else {
-												break;
+										//} else {
+												//break;
 										}
 										//}
 								} else {
