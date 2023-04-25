@@ -237,8 +237,8 @@ public class Entorn {
 										break;
 								}
 						}
-						System.out.print("Trobat:") ;
 						if(botiga.cerca(vino) != null) {
+						System.out.print("Trobat:") ;
 						System.out.println(botiga.cerca(vino).toString());
 						} else {
 												System.out.println("ERROR: el valor havia de ser un enter positiu");
