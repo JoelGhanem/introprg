@@ -122,7 +122,7 @@ public class Vi {
 
 		@Override 
 		public String toString() {
-				String paraula = String.format("%n   Referència:%s%n  Vi: %s%n    Preu: %d%n    Estoc: %d%n    Lloc:%s%n     Origen:%s%n  Tipus:%s%n   Collita%s%n" ,this.ref,this.nom,preu,estoc, this.lloc, this.origen, this.tipus, this.collita);
+				String paraula = String.format("%n   Ref:%s%n  Vi: %s%n    Preu: %d%n    Estoc: %d%n    Lloc:%s%n     Origen:%s%n  Tipus:%s%n   Collita%s%n" ,this.ref,this.nom,preu,estoc, this.lloc, this.origen, this.tipus, this.collita);
 				return paraula;
 		}
 		public static Vi deArrayString(String[] strings) {
