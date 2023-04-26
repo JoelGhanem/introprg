@@ -162,7 +162,7 @@ public class Vi {
 }
 
 public String[] aArrayString() {
-		String[] strings = new String[7];
+		String[] strings = new String[8];
 		strings[0] = this.ref;
 		strings[1] = this.nom;
 		strings[2]= Integer.toString(this.preu);
