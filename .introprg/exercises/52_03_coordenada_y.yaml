@@ -1,0 +1,6 @@
+'01':
+  stdout:
+  - punt.getX() -> 0
+  - punt.getY() -> 0
+_main: UsaPunt
+_version: '2223'
