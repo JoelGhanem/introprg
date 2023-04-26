@@ -208,6 +208,7 @@ public class Entorn {
 										if(!vinoEstoc.isEmpty()) {
 										if(UtilString.esEnter(vinoEstoc)) {
 												int stok = Integer.parseInt(vinoEstoc);
+								System.out.println("El stok es " + stok);
 												vino.setEstoc(stok);
 										} else {
 												break;
