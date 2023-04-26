@@ -192,6 +192,7 @@ public class Entorn {
 												if(!vinoPreu.isEmpty()) {
 														if (UtilString.esEnter(vinoPreu)) {
 																int precio = Integer.parseInt(vinoPreu);
+								System.out.println("El precio es " + precio);
 																vino.setPreu(precio);
 														} else {
 																break;
