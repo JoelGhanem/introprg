@@ -85,6 +85,7 @@ public Botiga() {
         if (plantilla.getPreu() >= 0 && plantilla.getPreu() >= vi.getPreu()) continue;
 		}
 		if(plantilla.getEstoc() >= 0) {
+				System.out.println(plantilla.getEstoc() <= vi.getEstoc());
 		if (plantilla.getEstoc() >= 0 && plantilla.getEstoc() <= vi.getEstoc()) continue;
 		}
 		if(plantilla.getLloc() != null) {
