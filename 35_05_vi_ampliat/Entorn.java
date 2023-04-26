@@ -192,7 +192,6 @@ public class Entorn {
 												if(!vinoPreu.isEmpty()) {
 														if (UtilString.esEnter(vinoPreu)) {
 																int precio = Integer.parseInt(vinoPreu);
-								System.out.println("El precio es " + precio);
 																vino.setPreu(precio);
 														} else {
 																break;
@@ -208,7 +207,6 @@ public class Entorn {
 										if(!vinoEstoc.isEmpty()) {
 										if(UtilString.esEnter(vinoEstoc)) {
 												int stok = Integer.parseInt(vinoEstoc);
-								System.out.println("El stok es " + stok);
 												vino.setEstoc(stok);
 										} else {
 												break;
