@@ -105,20 +105,20 @@ public class Botiga {
 				return null;
 
 		}
-
-		int posicioActual;
+		public int posicion;
 		public void iniciaRecorregut() {
-				posicioActual = 0; // inicializar posición al principio
+				posicion = 0;
 		}
-
 		public Vi getSeguent() {
-				if (posicioActual >= 0 && posicioActual <= vins.length - 1) { // verificar que hay elementos en la tienda
-						Vi viActual = vins[posicioActual];
-						posicioActual++;
-						if (posicioActual == vins.length) { // caso para devolver el último vino después de recorrer todos los vinos
-								posicioActual = -1;
+				if (posicion < vins.length) {
+						for(int i = posicion; i < vins.length; i++) {
+								if(vins[i] == null) {
+										posicion++;
+										return vins[i];
+								}
+								posicion++;
+								return vins[i];
 						}
-						return viActual;
 				}
 				return null;
 		}
