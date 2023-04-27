@@ -105,21 +105,22 @@ public class Botiga {
 				return null;
 
 		}
+
 		public int posicion;
+
 		public void iniciaRecorregut() {
-				posicion = 0;
+				posicion = vins.length - 1;
 		}
+
 		public Vi getSeguent() {
-				if (posicion < vins.length) {
-						for(int i = posicion; i < vins.length; i++) {
-								if(vins[i] == null) {
-										posicion++;
-										return vins[i];
+				if (posicion >= 0) { 
+						for (int i = posicion; i >= 0; i--) { 
+								if (vins[i] != null) { 
+										posicion = i - 1;
+										return vins[i]; 
 								}
-								posicion++;
-								return vins[i];
 						}
 				}
-				return null;
+				return null; 
 		}
 }
