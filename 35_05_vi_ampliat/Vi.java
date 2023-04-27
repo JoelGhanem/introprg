@@ -10,7 +10,7 @@ public class Vi {
 		private String collita;
 
 		//constructors
-		public Vi(String referencia, String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita) {
+		public Vi(String ref, String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita) {
 				this.ref= ref;
 				this.nom = normalitzaString(nom);
 				if (preu > 0) {
@@ -49,6 +49,7 @@ public class Vi {
 
 		//setters
 		public void setRef(String ref) {
+				ref = normalitzaString(ref);
 				this.ref = ref;
 		}
 
@@ -140,49 +141,49 @@ public class Vi {
 		public static Vi deArrayString(String[] strings) {
 				if(strings.length != 8) {
 						//System.out.println("es nulo a la primera");
-				return null;}
-		if (!UtilString.esEnter(strings[2])) {
-				//System.out.println("es nulo a la segunda");
-				return null;} 
-		if (!UtilString.esEnter(strings[3])) {
-				//System.out.println("es nulo a la tercera");
-				return null;}
-		if(Integer.parseInt(strings[2]) < 0) { return null;}
-		if(Integer.parseInt(strings[3]) < 0) { return null;}
-		Vi vinito = new Vi(" "," ",-1,-1," "," "," "," ");
-		vinito.setRef(normalitzaString(strings[0]));
-		//System.out.println(vinito.getRef());
-		vinito.setNom(normalitzaString(strings[1]));
-		//System.out.println(vinito.getNom());
-		vinito.setPreu(Integer.parseInt(strings[2]));
-		//System.out.println(vinito.getPreu());
-		vinito.setEstoc(Integer.parseInt(strings[3]));
-		//System.out.println(vinito.getEstoc());
-		vinito.setLloc(normalitzaString(strings[4]));
-		//System.out.println(vinito.getLloc());
-		vinito.setOrigen(normalitzaString(strings[5]));
-		//System.out.println(vinito.getOrigen());
-		vinito.setTipus(normalitzaString(strings[6]));
-		//System.out.println(vinito.getTipus());
-		vinito.setCollita(normalitzaString(strings[7]));
-		//System.out.println(vinito.getCollita());
-		if(vinito.esValid()) {
-				//System.out.println(vinito.esValid());
-				return vinito;
+						return null;}
+				if (!UtilString.esEnter(strings[2])) {
+						//System.out.println("es nulo a la segunda");
+						return null;} 
+				if (!UtilString.esEnter(strings[3])) {
+						//System.out.println("es nulo a la tercera");
+						return null;}
+				if(Integer.parseInt(strings[2]) < 0) { return null;}
+				if(Integer.parseInt(strings[3]) < 0) { return null;}
+				Vi vinito = new Vi(" "," ",-1,-1," "," "," "," ");
+				vinito.setRef(normalitzaString(strings[0]));
+				//System.out.println(vinito.getRef());
+				vinito.setNom(normalitzaString(strings[1]));
+				//System.out.println(vinito.getNom());
+				vinito.setPreu(Integer.parseInt(strings[2]));
+				//System.out.println(vinito.getPreu());
+				vinito.setEstoc(Integer.parseInt(strings[3]));
+				//System.out.println(vinito.getEstoc());
+				vinito.setLloc(normalitzaString(strings[4]));
+				//System.out.println(vinito.getLloc());
+				vinito.setOrigen(normalitzaString(strings[5]));
+				//System.out.println(vinito.getOrigen());
+				vinito.setTipus(normalitzaString(strings[6]));
+				//System.out.println(vinito.getTipus());
+				vinito.setCollita(normalitzaString(strings[7]));
+				//System.out.println(vinito.getCollita());
+				if(vinito.esValid()) {
+						//System.out.println(vinito.esValid());
+						return vinito;
+				}
+				return null;
 		}
-		return null;
-}
 
-public String[] aArrayString() {
-		String[] strings = new String[8];
-		strings[0] = this.ref;
-		strings[1] = this.nom;
-		strings[2]= Integer.toString(this.preu);
-		strings[3] = Integer.toString(this.estoc);
-		strings[4] = this.lloc;
-		strings[5] = this.origen;
-		strings[6] = this.tipus;
-		strings[7] = this.collita;
-		return strings;
-}
+		public String[] aArrayString() {
+				String[] strings = new String[8];
+				strings[0] = this.ref;
+				strings[1] = this.nom;
+				strings[2]= Integer.toString(this.preu);
+				strings[3] = Integer.toString(this.estoc);
+				strings[4] = this.lloc;
+				strings[5] = this.origen;
+				strings[6] = this.tipus;
+				strings[7] = this.collita;
+				return strings;
+		}
 }
