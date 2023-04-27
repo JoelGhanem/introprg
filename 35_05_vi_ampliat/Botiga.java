@@ -43,12 +43,15 @@ public class Botiga {
 								/*passem a minuscules els noms dels vins*/
 								String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
+										//creo una copia del vino que hay que borrar
 										Vi vinito = new Vi("","",-1,-1,"","","","");
 										vinito = vins[i];
 										if (vinito.getEstoc() < 0) {
 												return null;
 										}
+										//borro el vino del array
 										vins[i] = null;
+										//devuelvo el vino que he borrado
 										return vinito;
 								}
 						}
@@ -104,7 +107,7 @@ public class Botiga {
 		}
 		public int posicion;
 		public void iniciaRecorregut() {
-				posicion = 0;
+				posicion = 1;
 		}
 		public Vi getSeguent() {
 				if (posicion < vins.length) {
