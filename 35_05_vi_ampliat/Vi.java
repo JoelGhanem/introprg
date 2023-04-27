@@ -113,7 +113,7 @@ public class Vi {
 
 		public static String normalitzaString(String nom) {
 				String nomBien;
-				if (nom.isEmpty()||nom.isBlank() || nom == null) {
+				if (nom == null || nom.isEmpty()||nom.isBlank()) {
 						return null;
 				}
 				nom.trim();
