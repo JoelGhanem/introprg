@@ -27,9 +27,9 @@ public class Vi {
 				lloc = normalitzaString(lloc);
 				this.lloc = lloc;
 				origen = normalitzaString(origen);
-				this.origen = origen;
-				this.tipus = tipus;
-				this.collita = collita;
+				this.origen = normalitzaNom(origen);
+				this.tipus = normalitzaNom(tipus);
+				this.collita = normalitzaNom(collita);
 		}
 
 		//getters
