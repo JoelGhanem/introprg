@@ -9,7 +9,7 @@ public class Botiga {
 		}
 		public Vi afegeix(Vi vi){
 				boolean plena = true;
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < vins.length; i++) {
 						if(vins[i] == null) {
 								plena = false;
 						}
