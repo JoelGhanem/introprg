@@ -113,10 +113,10 @@ public class Vi {
 
 		public static String normalitzaString(String nom) {
 				String nomBien;
-				nom.trim();
 				if (nom.isEmpty()||nom.isBlank() || nom == null) {
 						return null;
 				}
+				nom.trim();
 				nomBien = nom.trim().replaceAll("\\s+", " ");
 				return nomBien;
 		}
