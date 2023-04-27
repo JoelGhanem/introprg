@@ -23,6 +23,7 @@ public class Vi {
 				} else {
 						this.estoc = -1;
 				}
+				lloc = normalitzaString(lloc);
 				this.lloc = lloc;
 				this.origen = origen;
 				this.tipus = tipus;
