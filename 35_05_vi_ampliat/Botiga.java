@@ -107,7 +107,7 @@ public class Botiga {
 		}
 		public int posicion;
 		public void iniciaRecorregut() {
-				posicion = 1;
+				posicion = -1;
 		}
 		public Vi getSeguent() {
 				if (posicion < vins.length) {
