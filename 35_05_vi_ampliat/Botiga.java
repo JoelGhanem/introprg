@@ -45,7 +45,7 @@ public class Botiga {
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										Vi vinito = new Vi("","",-1,-1,"","","","");
 										vinito = vins[i];
-										if (vinito.getEstoc() > 0) {
+										if (vinito.getEstoc() < 0) {
 												return null;
 										}
 										vins[i] = null;
