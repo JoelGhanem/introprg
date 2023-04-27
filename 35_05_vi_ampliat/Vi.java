@@ -95,6 +95,7 @@ public class Vi {
 				if (getNom() == null) {
 						return false;
 				}
+				if (getNom().equals("null")) { return false;}
 				if (getLloc() == null) {
 						return false;
 				}
