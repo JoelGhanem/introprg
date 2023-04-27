@@ -67,6 +67,7 @@ public class Vi {
 		}
 
 		public void setLloc(String lloc) {
+				lloc = normalitzaString(lloc);
 				this.lloc = lloc;
 		}
 
