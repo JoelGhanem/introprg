@@ -46,8 +46,8 @@ public class Botiga {
 								/*normalitzem els noms dels vins*/
 								String eliminaNormalitzat = Vi.normalitzaString(elimina);
 								String nomNormalitzat = Vi.normalitzaString(vins[i].getRef());
-								String nomEnMinuscules = nomNormalitzat.toLowerCase();
 								/*passem a minuscules els noms dels vins*/
+								String nomEnMinuscules = nomNormalitzat.toLowerCase();
 								String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
 								if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 										//creo una copia del vino que hay que borrar
