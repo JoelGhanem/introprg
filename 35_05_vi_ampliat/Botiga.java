@@ -8,6 +8,13 @@ public class Botiga {
 				this.vins = new Vi[maxVins];
 		}
 		public Vi afegeix(Vi vi){
+				boolean plena = true;
+				for (int i = 0; i < 10; i++) {
+						if(vins[i] == null) {
+								plena = false;
+						}
+				}
+				if (plena) {return null;}
 				if (!vi.esValid()) { return null;}
 				if (vi.getPreu() < 0) {
 						return null;
