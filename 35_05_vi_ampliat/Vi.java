@@ -10,7 +10,8 @@ public class Vi {
 		private String collita;
 
 		//constructors
-		public Vi(String referencia, String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita) {
+		public Vi(String ref, String nom, int preu, int estoc, String lloc, String origen, String tipus, String collita) {
+				ref = normalitzaString(ref);
 				this.ref= ref;
 				this.nom = normalitzaString(nom);
 				if (preu > 0) {
@@ -25,6 +26,7 @@ public class Vi {
 				}
 				lloc = normalitzaString(lloc);
 				this.lloc = lloc;
+				origen = normalitzaString(origen);
 				this.origen = origen;
 				this.tipus = tipus;
 				this.collita = collita;
