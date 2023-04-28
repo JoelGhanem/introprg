@@ -133,20 +133,20 @@ public class Vi {
 		if (getEstoc() < 0) {
 			return false;
 		}
-		if (getNom() == null) {
+		if (getNom() == null || getNom().isEmpty()) {
 			return false;
 		}
 		if (getNom().equals("null")) { return false;}
-		if (getLloc() == null) {
+		if (getLloc() == null || getLloc().isEmpty()) {
 			return false;
 		}
-		if (getOrigen() == null) {
+		if (getOrigen() == null || getOrigen().isEmpty()) {
 			return false;
 		}
-		if (getTipus() == null) {
+		if (getTipus() == null || getTipus().isEmpty()) {
 			return false;
 		}
-		if (getCollita() == null) {
+		if (getCollita() == null || getCollita().isEmpty()) {
 			return false;
 		}
 		return true;
