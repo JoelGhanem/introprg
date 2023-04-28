@@ -105,13 +105,9 @@ public class Botiga {
 		posicion = 0;
 	}
 	public Vi getSeguent() {
-			for(;posicion < vins.length; posicion++) {
-				if(vins[posicion] != null) {
-					return vins[posicion];
-				}
+		while(posicion < vins.length && vins[posicion] == null) {
 			posicion++;
-			}
-		return null;
+		}
+		return posicion < vins.length ? vins[posicion++] : null;
 	}
 }
-
