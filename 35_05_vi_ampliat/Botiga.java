@@ -109,7 +109,7 @@ public class Botiga {
 			for(int i = posicion; i < vins.length; i++) {
 				if(vins[i] == null) {
 					posicion++;
-					return vins[i];
+					return vins[i-1];
 				}
 				posicion++;
 				return vins[i];
