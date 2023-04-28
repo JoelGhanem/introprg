@@ -1,33 +1,55 @@
 '01':
   stdout:
-  - punt.getX() -> 0
-  - punt.getY() -> 0
+  - "El resultat d'executar la classe UsaPunt:"
+  - "punt.getX() -> 0"
+  - "punt.getY() -> 0"
+  - "El resultat d'executar les proves de TestPunt:"
+  - "- Tests passen: 5"
+  - "- Tests fallen: 0"
 '02':
   argsin:
-  - '12'
+  - "12"
   stdout:
-  - punt.getX() -> 12
-  - punt.getY() -> 0
+  - "El resultat d'executar la classe UsaPunt:"
+  - "punt.getX() -> 12"
+  - "punt.getY() -> 0"
+  - "El resultat d'executar les proves de TestPunt:"
+  - "- Tests passen: 5"
+  - "- Tests fallen: 0"
 '03':
   argsin:
-  - '21'
-  - '54'
+  - "21"
+  - "54"
   stdout:
-  - punt.getX() -> 21
-  - punt.getY() -> 54
+  - "El resultat d'executar la classe UsaPunt:"
+  - "punt.getX() -> 21"
+  - "punt.getY() -> 54"
+  - "El resultat d'executar les proves de TestPunt:"
+  - "- Tests passen: 5"
+  - "- Tests fallen: 0"
 '04':
   argsin:
-  - vint-i-u
-  - '37'
+  - "vint-i-u"
+  - "37"
   stdout:
-  - punt.getX() -> 0
-  - punt.getY() -> 37
+  - "El resultat d'executar la classe UsaPunt:"
+  - "punt.getX() -> 0"
+  - "punt.getY() -> 37"
+  - "El resultat d'executar les proves de TestPunt:"
+  - "- Tests passen: 5"
+  - "- Tests fallen: 0"
 '05':
   argsin:
-  - '101'
-  - trenta-set
+  - "101"
+  - "trenta-set"
   stdout:
-  - punt.getX() -> 101
-  - punt.getY() -> 0
-_main: UsaPunt
+  - "El resultat d'executar la classe UsaPunt:"
+  - "punt.getX() -> 101"
+  - "punt.getY() -> 0"
+  - "El resultat d'executar les proves de TestPunt:"
+  - "- Tests passen: 5"
+  - "- Tests fallen: 0"
+_main: ProvaBasica
 _version: '2223'
+_wafiles:
+  - ProvaBasica.java

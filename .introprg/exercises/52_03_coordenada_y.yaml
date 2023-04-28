@@ -1,6 +1,12 @@
 '01':
   stdout:
-  - punt.getX() -> 0
-  - punt.getY() -> 0
-_main: UsaPunt
+  - "El resultat d'executar la classe UsaPunt:"
+  - "punt.getX() -> 0"
+  - "punt.getY() -> 0"
+  - "El resultat d'executar les proves de TestPunt:"
+  - "- Tests passen: 3"
+  - "- Tests fallen: 0"
+_main: ProvaBasica
 _version: '2223'
+_wafiles:
+  - ProvaBasica.java

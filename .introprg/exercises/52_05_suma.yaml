@@ -1,32 +1,48 @@
 '01':
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (0, 0)'
   - 'p2: (0, 0)'
   - 'p1+p2: (0, 0)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 '02':
   argsin:
   - '12'
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (12, 0)'
   - 'p2: (0, 0)'
   - 'p1+p2: (12, 0)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 '03':
   argsin:
   - '21'
   - '54'
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (21, 54)'
   - 'p2: (0, 0)'
   - 'p1+p2: (21, 54)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 '04':
   argsin:
   - '20'
   - '30'
   - '40'
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (20, 30)'
   - 'p2: (40, 0)'
   - 'p1+p2: (60, 30)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 '05':
   argsin:
   - '2'
@@ -34,9 +50,13 @@
   - '4'
   - '5'
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (2, 3)'
   - 'p2: (4, 5)'
   - 'p1+p2: (6, 8)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 '06':
   argsin:
   - dos
@@ -44,9 +64,13 @@
   - '4'
   - '5'
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (0, 3)'
   - 'p2: (4, 5)'
   - 'p1+p2: (4, 8)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 '07':
   argsin:
   - '101'
@@ -54,9 +78,13 @@
   - '4'
   - '5'
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (101, 0)'
   - 'p2: (4, 5)'
   - 'p1+p2: (105, 5)'
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
 08:
   argsin:
   - '101'
@@ -64,8 +92,14 @@
   - quatre
   - cinc
   stdout:
+  - "El resultat d'executar la classe UsaPunt:"
   - 'p1: (101, 202)'
   - 'p2: (0, 0)'
   - 'p1+p2: (101, 202)'
-_main: UsaPunt
+  - "El resultat d'executar les proves de TestPunt:"
+  - '- Tests passen: 7'
+  - '- Tests fallen: 0'
+_main: ProvaBasica
 _version: '2223'
+_wafiles:
+  - ProvaBasica.java
