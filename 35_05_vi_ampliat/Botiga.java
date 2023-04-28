@@ -115,7 +115,7 @@ public class Botiga {
 				return vins[i];
 			}
 		}
-		return null;
+		return vins[vins.length-1];
 	}
 }
 
