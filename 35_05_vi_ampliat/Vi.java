@@ -124,7 +124,7 @@ public class Vi {
 	}
 	//altres
 	public boolean esValid() {
-		if (getRef() == null) {
+		if (getRef() == null || getRef().isEmpty()) {
 			return false;
 		}
 		if (getPreu() < 0) {
