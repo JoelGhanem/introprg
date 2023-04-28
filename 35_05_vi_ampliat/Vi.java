@@ -33,21 +33,55 @@ public class Vi {
 	}
 
 	//getters
-	public String getRef() {return this.ref;}
+	public String getRef() {
+		if (this.ref == null) {
+			return "";
+		}
+		return this.ref;
+	}
 
-	public String getNom() { return this.nom; }
+	public String getNom() { 
+		if (this.nom == null) {
+			return "";
+		}
+		return this.nom; 
+	}
 
-	public int getPreu() { return this.preu; }
+	public int getPreu() {
+		return this.preu; 
+	}
 
-	public int getEstoc() { return this.estoc; }
+	public int getEstoc() {
+		return this.estoc; 
+	}
 
-	public String getLloc() {return this.lloc;}
+	public String getLloc() {
+		if (this.lloc == null) {
+			return "";
+		}
+		return this.lloc;
+	}
 
-	public String getOrigen() { return this.origen;}
+	public String getOrigen() { 
+		if (this.origen == null) {
+			return "";
+		}
+		return this.origen;
+	}
 
-	public String getTipus() { return this.tipus;}
+	public String getTipus() { 
+		if (this.tipus == null) {
+			return "";
+		}
+		return this.tipus;
+	}
 
-	public String getCollita() { return this.collita;}
+	public String getCollita() { 
+		if (this.collita == null) {
+			return "";
+		}
+		return this.collita;
+	}
 
 	//setters
 	public void setRef(String ref) {
