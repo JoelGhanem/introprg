@@ -59,7 +59,6 @@ public class Entorn {
 								default: mostraErrorComandaDesconeguda();
 						}
 				}
-				/*
 				   botiga.iniciaRecorregut();
 				   BufferedWriter bw = new BufferedWriter(new FileWriter(cami));
 				   Vi vinoNuevo = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
@@ -76,7 +75,6 @@ public class Entorn {
 				escritas++;
 				   }
 				   bw.close();
-				   */
 				//if(despedida) {
 				//System.out.println("Referències guardades: " + escritas);
 				//}
