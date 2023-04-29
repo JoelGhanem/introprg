@@ -151,25 +151,8 @@ public class Vi {
 		}
 		return true;
 	}
-	public static String normalitzaNom(String nom) {
-		String nomBien;
-		if (nom == null || nom.isEmpty()||nom.isBlank()) {
-			return null;
-		}
-		nom.trim();
-		nomBien = nom.trim().replaceAll("\\s+", " ");
-		return nomBien;
-	}
 
-	public static String normalitzaString(String nom) {
-		String nomBien;
-		if (nom == null || nom.isEmpty()||nom.isBlank()) {
-			return null;
-		}
-		nom.trim();
-		nomBien = nom.trim().replaceAll("\\s+", " ");
-		return nomBien;
-	}
+
 
 	@Override 
 	public String toString() {
