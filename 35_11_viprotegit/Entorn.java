@@ -190,7 +190,7 @@ public class Entorn {
 								}
 								break;
 						}
-						if(botiga.cerca(vino) != null) {
+						if(botiga.cerca(vino) == null) {
 								System.out.print("Trobat:") ;
 								System.out.println(botiga.cerca(vino).toString());
 						} else {
