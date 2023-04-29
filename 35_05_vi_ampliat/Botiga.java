@@ -73,8 +73,8 @@ public class Botiga {
 				if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
 					return vins[i];
 				}
-				String nomEnMinuscules = vins[i].getRef().toLowerCase();
-				String nomBuscatEnMinuscules = nom.toLowerCase();
+				String nomEnMinuscules = nomNormalitzat.toLowerCase();
+				String nomBuscatEnMinuscules = nomBuscadorNormalitzat.toLowerCase();
 				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
 					return vins[i];
 				}
