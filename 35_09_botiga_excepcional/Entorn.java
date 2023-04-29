@@ -28,6 +28,10 @@ public class Entorn {
 								botiga.afegeix(vi);
 								//System.out.println("llega al numerito");
 								numerito++;
+								if (numerito> 10) {
+										System.out.println("ERROR: massa entrades a botiga.csv");
+										break;
+								}
 						}
 						linia = input.readLine();
 						//System.out.println("el numero es " + numerito);
