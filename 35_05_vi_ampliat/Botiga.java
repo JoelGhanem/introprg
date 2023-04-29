@@ -45,7 +45,7 @@ public class Botiga {
 			if (vins[i] != null) {
 				/*normalitzem els noms dels vins*/
 				String eliminaNormalitzat = Vi.normalitzaString(elimina);
-				String nomNormalitzat = Vi.normalitzaString(vins[i].getNom());
+				String nomNormalitzat = Vi.normalitzaString(vins[i].getRef());
 				/*passem a minuscules els noms dels vins*/
 				String nomEnMinuscules = nomNormalitzat.toLowerCase();
 				String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
@@ -53,7 +53,7 @@ public class Botiga {
 					//creo una copia del vino que hay que borrar
 					Vi vinito = new Vi("","",-1,-1,"","","","");
 					vinito = vins[i];
-					if (vinito.getEstoc() >= 0) {
+					if (vinito.getEstoc() < 0) {
 						return null;
 					}
 					//borro el vino del array
@@ -89,7 +89,7 @@ public class Botiga {
 			if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
 			if (! plantilla.getNom().isEmpty() && ! plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
 			if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
-			//System.out.println("preu plantilla " + plantilla.getPreu() + "Preu vi " +vi.getPreu());
+			System.out.println("preu plantilla " + plantilla.getPreu() + "Preu vi " +vi.getPreu());
 			if (plantilla.getEstoc() > 0 && plantilla.getEstoc() > vi.getEstoc()) continue;
 			if (! plantilla.getLloc().isEmpty() && ! plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
 			if (! plantilla.getOrigen().isEmpty() && ! plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
@@ -106,7 +106,7 @@ public class Botiga {
 		posicion = 0;
 	}
 	public Vi getSeguent() {
-		while(posicion < vins.length && vins[posicion] != null) {
+		while(posicion < vins.length && vins[posicion] == null) {
 			posicion++;
 		}
 		return posicion < vins.length ? vins[posicion++] : null;
