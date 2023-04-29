@@ -88,7 +88,8 @@ public class Botiga {
 			if (vi == null) continue;
 			if (! plantilla.getRef().isEmpty() && ! plantilla.getRef().equalsIgnoreCase(vi.getRef())) continue;
 			if (! plantilla.getNom().isEmpty() && ! plantilla.getNom().equalsIgnoreCase(vi.getNom())) continue;
-			if (plantilla.getPreu() > 0 && plantilla.getPreu() <= vi.getPreu()) continue;
+			if (plantilla.getPreu() >= 0 && plantilla.getPreu() <= vi.getPreu()) continue;
+			System.out.println("preu plantilla " + plantilla.getPreu() + "Preu vi " +vi.getPreu());
 			if (plantilla.getEstoc() > 0 && plantilla.getEstoc() > vi.getEstoc()) continue;
 			if (! plantilla.getLloc().isEmpty() && ! plantilla.getLloc().equalsIgnoreCase(vi.getLloc())) continue;
 			if (! plantilla.getOrigen().isEmpty() && ! plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen())) continue;
@@ -105,7 +106,7 @@ public class Botiga {
 		posicion = 0;
 	}
 	public Vi getSeguent() {
-		while(posicion < vins.length && vins[posicion] == null) {
+		while(posicion < vins.length && vins[posicion] != null) {
 			posicion++;
 		}
 		return posicion < vins.length ? vins[posicion++] : null;

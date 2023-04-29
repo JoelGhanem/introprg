@@ -129,6 +129,7 @@ public class Entorn {
 												if(!vinoPreu.isEmpty()) {
 														if (UtilString.esEnter(vinoPreu)) {
 																int precio = Integer.parseInt(vinoPreu);
+																System.out.println(vinoPreu);
 																vino.setPreu(precio);
 														} else {
 																break;
@@ -182,6 +183,7 @@ public class Entorn {
 								}
 								break;
 						}
+						System.out.println(vino.toString());
 						if(botiga.cerca(vino) != null) {
 								System.out.print("Trobat:") ;
 								System.out.println(botiga.cerca(vino).toString());
