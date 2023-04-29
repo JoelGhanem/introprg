@@ -33,7 +33,7 @@ public class Botiga {
 				}
 				for (int i = 0; i < vins.length; i++) {
 						if (vins[i] != null)  {
-								if (vins[i].getNom().equals(vi.getNom())) {
+								if (vins[i].getRef().equals(vi.getRef())) {
 										throw new IllegalArgumentException("Referència de vi repetida");
 								}
 						}
