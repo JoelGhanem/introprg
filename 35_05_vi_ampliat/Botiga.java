@@ -70,9 +70,6 @@ public class Botiga {
 			if (vins[i] != null) {
 				String nomNormalitzat = Vi.normalitzaString(vins[i].getRef());
 				String nomBuscadorNormalitzat = Vi.normalitzaString(nom);
-				if (nomNormalitzat.equals(nomBuscadorNormalitzat)) {
-					return vins[i];
-				}
 				String nomEnMinuscules = nomNormalitzat.toLowerCase();
 				String nomBuscatEnMinuscules = nomBuscadorNormalitzat.toLowerCase();
 				if(nomEnMinuscules.equals(nomBuscatEnMinuscules)) {
