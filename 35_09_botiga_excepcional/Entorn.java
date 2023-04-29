@@ -28,7 +28,7 @@ public class Entorn {
 								botiga.afegeix(vi);
 								//System.out.println("llega al numerito");
 								numerito++;
-								if (numerito> 10) {
+								if (numerito>= 10) {
 										System.out.println("ERROR: massa entrades a botiga.csv");
 										break;
 								}
