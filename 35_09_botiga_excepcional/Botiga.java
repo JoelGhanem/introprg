@@ -12,7 +12,7 @@ public class Botiga {
 		}
 		public Vi afegeix(Vi vi) throws BotigaException{
 				if(vi == null) {
-						throw new IllegalArgumentException("El vi ha de ser vàlid");
+						throw new IllegalArgumentException("El vi no pot ser null");
 				}
 				boolean plena = true;
 				for (int i = 0; i < vins.length; i++) {
@@ -21,7 +21,7 @@ public class Botiga {
 						}
 				}
 				if (plena) {throw new BotigaException();}
-				if (!vi.esValid()) { return null;}
+				if (!vi.esValid()) { throw new IllegalArgumentException();}
 				if (vi.getPreu() < 0) {
 						return null;
 				}
@@ -62,7 +62,7 @@ public class Botiga {
 										//creo una copia del vino que hay que borrar
 										Vi vinito = new Vi("","",-1,-1,"","","","");
 										vinito = vins[i];
-										if (vinito.getEstoc() > 0) {
+										if (vinito.getEstoc() < 0) {
 												throw new IllegalArgumentException("El vi a eliminar no pot tenir estoc"); 
 										}
 										//borro el vino del array
