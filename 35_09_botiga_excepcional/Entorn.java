@@ -19,7 +19,7 @@ public class Entorn {
 				BufferedReader input = new BufferedReader(new FileReader(cami));
 				String linia = input.readLine();
 				while(true) {
-						Vi vi = new Vi("","",0,0,"","","","");
+						Vi vi = new Vi("","",-1,-1,"","","","");
 						if (linia == null) { input.close(); break; }
 						//System.out.println(linia);
 						String[] liniaArray = linia.split(";"); 
