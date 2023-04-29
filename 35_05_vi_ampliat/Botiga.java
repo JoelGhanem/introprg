@@ -45,7 +45,7 @@ public class Botiga {
 			if (vins[i] != null) {
 				/*normalitzem els noms dels vins*/
 				String eliminaNormalitzat = Vi.normalitzaString(elimina);
-				String nomNormalitzat = Vi.normalitzaString(vins[i].getRef());
+				String nomNormalitzat = Vi.normalitzaString(vins[i].getNom());
 				/*passem a minuscules els noms dels vins*/
 				String nomEnMinuscules = nomNormalitzat.toLowerCase();
 				String nomBuscatEnMinuscules = eliminaNormalitzat.toLowerCase();
