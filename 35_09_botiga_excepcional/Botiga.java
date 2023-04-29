@@ -10,7 +10,7 @@ public class Botiga {
 				}
 				this.vins = new Vi[maxVins];
 		}
-		public Vi afegeix(Vi vi){
+		public Vi afegeix(Vi vi) throws BotigaException{
 				if(vi == null) {
 						throw new IllegalArgumentException("El vi ha de ser vàlid");
 				}
@@ -20,7 +20,7 @@ public class Botiga {
 								plena = false;
 						}
 				}
-				//if (plena) {throw new BotigaException();}
+				if (plena) {throw new BotigaException();}
 				if (!vi.esValid()) { return null;}
 				if (vi.getPreu() < 0) {
 						return null;

@@ -25,7 +25,11 @@ public class Entorn {
 						String[] liniaArray = linia.split(";"); 
 						vi = vi.deArrayString(liniaArray);
 						if(vi!=null) { 
+								try {
 								botiga.afegeix(vi);
+								} catch (BotigaException e) {
+										System.out.println(e);
+								}
 								//System.out.println("llega al numerito");
 								numerito++;
 								if (numerito>= 10) {
