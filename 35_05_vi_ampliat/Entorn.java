@@ -61,7 +61,7 @@ public class Entorn {
 				}
 				   botiga.iniciaRecorregut();
 				   BufferedWriter bw = new BufferedWriter(new FileWriter(cami));
-				   Vi vinoNuevo = new Vi("algo","algo",1,2,"algo","algo","algo","algo");
+				   Vi vinoNuevo = new Vi("","",-1,-1,"","","","");
 				   while(true) {
 				   vinoNuevo = botiga.getSeguent();
 				   if (vinoNuevo == null) {
