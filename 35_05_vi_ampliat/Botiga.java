@@ -53,9 +53,9 @@ public class Botiga {
 										//creo una copia del vino que hay que borrar
 										Vi vinito = new Vi("","",-1,-1,"","","","");
 										vinito = vins[i];
-										if (vinito.getEstoc() > 0) {
-												return null;
-										}
+										//if (vinito.getEstoc() > 0) {
+												//return null;
+										//}
 										//borro el vino del array
 										vins[i] = null;
 										//devuelvo el vino que he borrado
