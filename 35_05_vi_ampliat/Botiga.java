@@ -109,9 +109,10 @@ public class Botiga {
 						if (vins[posicion] != null) {
 								posicion++;
 								return vins[posicion-1];
-						}
-						posicion++;
+						} else {
+								posicion++;
 				return null;
+						}
 				}
 				return null;
 		}
