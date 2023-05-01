@@ -111,6 +111,7 @@ public class Botiga {
 								return vins[posicion-1];
 						}
 						posicion++;
+				return null;
 				}
 				return null;
 		}
