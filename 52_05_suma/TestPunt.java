@@ -35,15 +35,17 @@ public class TestPunt {
 		public void constructorEspecific() {
 				Punt p = new Punt(1,2);
 				assertEquals(1,p.getX());
-				assertEquals(1,p.getY());
+				assertEquals(2,p.getY());
 		}
 		@Test 
 		public void suma() {
 				Punt p1 = new Punt(2,3);
 				Punt p2 = new Punt(3,4);
+				Punt p = new Punt();
+				p1.suma(p2);
 				assertAll(
-				() -> assertEquals(5,p1.getX()),
-				() -> assertEquals(7,p1.getY())
+				() -> assertEquals(5,p2.getX()),
+				() -> assertEquals(7,p2.getY())
 				);
 		}
 }
