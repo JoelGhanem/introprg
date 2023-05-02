@@ -10,7 +10,7 @@ public class UsaPunt {
 								x1 = Integer.parseInt(args[0]);
 						}
 				} 
-				if (args.length == 2) {
+				if (args.length > 1) {
 						if( args[1] != null && !args[1].isEmpty() && UtilString.esEnter(args[1])) {
 								y1 = Integer.parseInt(args[1]);
 						}
