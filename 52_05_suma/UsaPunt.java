@@ -5,7 +5,7 @@ public class UsaPunt {
 				int y1 = 0;
 				int x2 = 0;
 				int y2 = 0;
-				if (args.length == 0) {
+				if (args.length == 1) {
 						if(args[0] != null && !args[0].isEmpty() && UtilString.esEnter(args[0])) {
 								x1 = Integer.parseInt(args[0]);
 						}
