@@ -44,8 +44,8 @@ public class TestPunt {
 				Punt p = new Punt();
 				p1.suma(p2);
 				assertAll(
-				() -> assertEquals(5,p2.getX()),
-				() -> assertEquals(7,p2.getY())
+				() -> assertEquals(5,p1.getX()),
+				() -> assertEquals(7,p1.getY())
 				);
 		}
 }
