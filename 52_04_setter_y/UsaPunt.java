@@ -2,17 +2,15 @@
 public class UsaPunt {
 		public static void main(String[] args){
 				Punt punt = new Punt();
-				int x;
-				int y;
-				if(!args[0].isEmpty() && UtilString.esEnter(args[0])) {
-						x = Integer.parseInt(args[0]);
-				} else {
-						x = 0;
-				}
-				if(!args[1].isEmpty() && UtilString.esEnter(args[1])) {
-						y = Integer.parseInt(args[1]);
-				} else {
-						y = 0;
+				int x = 0;
+				int y = 0;
+				if (args.length == 2) {
+						if(args[0] != null && !args[0].isEmpty() && UtilString.esEnter(args[0])) {
+								x = Integer.parseInt(args[0]);
+						}
+						if( args[1] != null && !args[1].isEmpty() && UtilString.esEnter(args[1])) {
+								y = Integer.parseInt(args[1]);
+						}
 				}
 				punt.setX(x);
 				punt.setY(y);
