@@ -9,4 +9,7 @@ public class Punt {
 		public void setX(int numero) {
 				this.x = numero;
 		}
+		public void setY(int numero) {
+				this.y = numero;
+		}
 }
