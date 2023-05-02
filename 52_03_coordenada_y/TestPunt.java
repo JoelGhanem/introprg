@@ -1,3 +1,4 @@
+/*Aquest arxiu ens crea tests del Junit per l'arxiu del PPunt, comprova que tant x conm y siguin 0 com que punt tingui un constructor per defecte*/
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
