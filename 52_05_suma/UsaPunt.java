@@ -15,12 +15,12 @@ public class UsaPunt {
 								y1 = Integer.parseInt(args[1]);
 						}
 				}
-				if (args.length == 3) {
+				if (args.length > 2) {
 						if( args[2] != null && !args[2].isEmpty() && UtilString.esEnter(args[2])) {
 								x2 = Integer.parseInt(args[2]);
 						}
 				}
-				if (args.length == 4) {
+				if (args.length > 3) {
 						if( args[3] != null && !args[3].isEmpty() && UtilString.esEnter(args[3])) {
 								y2 = Integer.parseInt(args[3]);
 						}
