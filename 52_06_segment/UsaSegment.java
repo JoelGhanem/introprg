@@ -35,7 +35,7 @@ public class UsaSegment {
 				segment2.setP2(segment1.getP1());
 				System.out.printf("p1: Punt(%d, %d)%n", punt1.getX(),punt1.getY());
 				System.out.printf("p2: Punt(%d, %d)%n", punt2.getX(),punt2.getY());
-				System.out.printf("s1:  s1.longitud: %.02f%n",  segment1.longitud());
+				System.out.printf("s1: Segment(Punt(%d, %d), Punt(%d, %d) s1,longitud: %.02f%n",  punt1.getX(),punt1.getY(),punt2.getX(), punt2.getY(),segment1.longitud());
 				System.out.printf("s2:  s2.longitud: %.02f%n",  segment2.longitud());
 		}
 }
