@@ -1,0 +1,17 @@
+'01':
+  stdout:
+  - "Client: Eugènia Salinas Roig"
+  - "        51590695Q"
+  - "        93614214242"
+  - "Lloguers: 3"
+  - "        1. vehicle: Seat 600"
+  - "           dies llogats: 2"
+  - "        2. vehicle: Tata Vista"
+  - "           dies llogats: 5"
+  - "        3. vehicle: Fiat Uno"
+  - "           dies llogats: 3"
+
+_main: ProvaBasica
+_version: '2223'
+_wafiles:
+  - ProvaBasica.java

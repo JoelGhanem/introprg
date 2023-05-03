@@ -1,0 +1,14 @@
+'01':
+  stdout:
+  - 'Client.nif 12341234B'
+  - 'Client.nom Eugènia Salerosa Roig'
+  - 'Client.telefon 93614214243'
+  - 'Client.conte(lloguer) true'
+  - 'Lloguer.dies 5'
+  - 'Vehicle.model Uno'
+  - 'Vehicle.marca Fiat'
+  - 'Vehicle.categoria 3'
+_main: ProvaBasica
+_version: '2223'
+_wafiles:
+  - ProvaBasica.java

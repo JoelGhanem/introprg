@@ -1,0 +1,34 @@
+'01':
+  stdout:
+  - "El resultat d'executar mètodes de la classe GestorLite:"
+  - "Client: Eugènia Salinas Roig"
+  - "        51590695Q"
+  - "        93614214242"
+  - "Lloguers: 3"
+  - "        1. vehicle: Seat 600"
+  - "           dies llogats: 2"
+  - "        2. vehicle: Tata Vista"
+  - "           dies llogats: 5"
+  - "        3. vehicle: Fiat Uno"
+  - "           dies llogats: 3"
+  - "<p>Informe de lloguers del client <em>Eugènia Salinas Roig</em> (<strong>51590695Q</strong>)</p>"
+  - "<table>"
+  - "  <tr>"
+  - "    <td><strong>Marca</strong></td>"
+  - "    <td><strong>Model</strong></td>"
+  - "    <td><strong>Import</strong></td>"
+  - "  </tr>"
+  - "  <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>"
+  - "  <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>"
+  - "  <tr><td>Fiat</td><td>Uno</td><td>540.0€</td></tr>"
+  - "</table>"
+  - "<p>Import a pagar: <em>810.0€</em></p>"
+  - "<p>Punts guanyats: <em>4</em></p>"
+  - "El resultat d'executar les proves de TestGestor:"
+  - "- Tests passen > 16: true"
+  - "- Tests fallen: 0"
+_main: ProvaBasica
+_version: '2223'
+_wafiles:
+  - ProvaBasica.java
+
