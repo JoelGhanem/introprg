@@ -20,7 +20,7 @@ public class Vehicle {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-    public void setMarca(String model) {
+    public void setModel(String model) {
         this.model = model;
     }
     public void setCategoria(int categoria) {

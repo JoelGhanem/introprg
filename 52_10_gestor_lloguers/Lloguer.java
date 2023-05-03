@@ -2,10 +2,11 @@
 public class Lloguer {
     private int dies;
     private Vehicle vehicle;
-    public Lloguer(int dies, Vehicle vehicle) {
+    public Lloguer(Vehicle vehicle, int dies) {
         this.dies = dies;
         this.vehicle = vehicle;
     }
     //getters
     public int getDies() {return this.dies;}
+	public Vehicle getVehicle() {return this.vehicle;}
 }
