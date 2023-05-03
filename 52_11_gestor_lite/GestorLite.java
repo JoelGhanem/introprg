@@ -6,7 +6,7 @@ public static void main(String[] args) {
     mostraClient(demo);
 }
 public static Client creaClientDemo() {
-		Client client = new Client("49297007A", "Joel", "677442280");
+		Client client = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
 		return client;
 		}
 		public static void mostraClient(Client client) {
