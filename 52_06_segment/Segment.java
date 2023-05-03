@@ -22,10 +22,10 @@ public class Segment {
 		public void setP2(Punt p2) { this.p2 = p2;}
 		//Otros
 		public Double longitud() {
-		//int x1 = p1.getX();
-		//int y1 = p1.getY();
-		//int x2 = p2.getX();
-		//int y2 = p2.getY();
+		x1 = p1.getX();
+		y1 = p1.getY();
+		x2 = p2.getX();
+		y2 = p2.getY();
 				double longitud = Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2));
 				return longitud;
 		}
