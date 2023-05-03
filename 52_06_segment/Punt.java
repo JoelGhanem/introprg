@@ -1,10 +1,12 @@
+import java.util.function.ObjLongConsumer;
+
 /*Aquesta classe ens restorna els valors dels punts x i y que son 0 */
 public class Punt {
 		private int x = 0;
 		private int y = 0;
 		//constructors
 		public Punt() {
-				}
+		}
 		public Punt(int x, int y) {
 				this.x = x;
 				this.y = y;
@@ -20,4 +22,16 @@ public class Punt {
 				this.y = numero;
 		}
 		public void suma(Punt p) { x+=p.x; y+=p.y;}
+
+		@Override
+		public boolean equals(Object obj) {
+				if (obj == this) {
+						return true;
+				}
+				if (!(obj instanceof Punt)) {
+						return false;
+				}
+				Punt otro = (Punt) obj;
+				return this.x == otro.x && this.y == otro.y;
+		}
 }
