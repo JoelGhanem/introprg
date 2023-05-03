@@ -10,7 +10,7 @@ public static Client creaClientDemo() {
 		return client;
 		}
 		public static void mostraClient(Client client) {
-				System.out.printf("Client: %s%n        %s%n        %s%nLloguers: %s%n        %sf. vehicle", client.getNom(),client.getNif(),client.getTelefon());
+				System.out.printf("Client: %s%n        %s%n        %s%nLloguers: %s%n        %sf. vehicle", client.getNom(),client.getNif(),client.getTelefon(),client.getLloguers());
 		}
 
 }
