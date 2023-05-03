@@ -30,7 +30,6 @@ public class Segment {
 		}
 		@Override
 		public String toString() {
-				String.format("(%f,%f)%n"x1,y1);
-				return ;
+				return String.format("(%f,%f)%n",x1,y1);
 		}
 }
