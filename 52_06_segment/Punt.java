@@ -1,3 +1,4 @@
+/*Aquesta classe representa un punt amb els eixos x i y, ens permet veure el valor, modificar-lo i sunmar-lo*/
 import java.util.function.ObjLongConsumer;
 
 /*Aquesta classe ens restorna els valors dels punts x i y que son 0 */
