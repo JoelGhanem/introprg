@@ -6,8 +6,8 @@ public class Punt {
 		public Punt() {
 				this.coord = new int[] {0,0};
 }
-		public Punt(int x, int y) {
-				this.coord = new int[] {x,y};
+		public Punt(int punto1, int punto2) {
+				this.coord = new int[] {punto1,punto2};
 		}
 		//getters
 		public int getX() { return coord[0];}
