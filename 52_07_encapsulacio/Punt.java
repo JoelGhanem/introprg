@@ -1,17 +1,17 @@
 /*Aquesta classe ens restorna els valors dels punts x i y que son 0 */
 
 public class Punt {
-		private int[] coord;
+		private int[] coord = new int[2];
 		//constructors
 		public Punt() {
-				this.coord = new int[] {0,0};
 }
 		public Punt(int punto1, int punto2) {
-				this.coord = new int[] {punto1,punto2};
+				this.coord[0] = punto1;
+				this.coord[1] = punto2;
 		}
 		//getters
-		public int getX() { return coord[0];}
-		public int getY() { return coord[1];}
+		public int getX() { return this.coord[0];}
+		public int getY() { return this.coord[1];}
 		//setters
 		public void setX(int numero) {
 				this.coord[0] = numero; 
