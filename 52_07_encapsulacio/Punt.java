@@ -33,6 +33,6 @@ public class Punt {
 						return false;
 				}
 				Punt otro = (Punt) obj;
-				return this.coord[0] ==  otro.coord[0] && this.coord[1] == otro.coord[1]; 
+				return this.coord[0] ==  otro.coord[0] && this.coord[1] == otro.coord[1];
 		}
 }
