@@ -3,8 +3,8 @@ public class Lloguer {
     private int dies;
     private Vehicle vehicle;
     public Lloguer(Vehicle vehicle, int dies) {
-        this.dies = dies;
         this.vehicle = vehicle;
+        this.dies = dies;
     }
     //getters
     public int getDies() {return this.dies;}
