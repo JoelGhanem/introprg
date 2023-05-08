@@ -17,6 +17,7 @@ public class Client {
     public String getNom()     { return nom; }
     public String getTelefon() { return telefon; }
     public Lloguer getLloguers(int posicio) { return lloguers.get(posicio); }
+    public int getSize() { return lloguers.size();}
     public void setNif(String nif) { this.nif = nif; }
     public void setNom(String nom) { this.nom = nom; }
     public void setTelefon(String telefon) { this.telefon = telefon; }
