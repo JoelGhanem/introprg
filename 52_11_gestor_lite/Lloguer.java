@@ -8,5 +8,5 @@ public class Lloguer {
     }
     //getters
     public int getDies() {return this.dies;}
-	public Vehicle getVehicle() {return this.vehicle;}
+    public Vehicle getVehicle() {return this.vehicle;}
 }

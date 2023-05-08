@@ -12,9 +12,9 @@ public class Client {
         this.lloguers = new ArrayList<Lloguer>();
         Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",1), 2);
         lloguers.add(lloguer);
-        Lloguer lloguer1 = new Lloguer(new Vehicle("Tata","Vista",1), 2);
+        Lloguer lloguer1 = new Lloguer(new Vehicle("Tata","Vista",1), 5);
         lloguers.add(lloguer1);
-        Lloguer lloguer2 = new Lloguer(new Vehicle("Fiat","Uno",1), 2);
+        Lloguer lloguer2 = new Lloguer(new Vehicle("Fiat","Uno",1), 3);
         lloguers.add(lloguer2);
     }
     public String getNif()     { return nif; }
