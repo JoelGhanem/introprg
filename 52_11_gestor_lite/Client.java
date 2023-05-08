@@ -10,7 +10,8 @@ public class Client {
         this.nom = nom;
         this.telefon = telefon;
         this.lloguers = new ArrayList<Lloguer>();
-        lloguers(0) = vehicles = "Seat 600", dies = 2;
+        Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",1), 2);
+        lloguers.add(lloguer);
     }
     public String getNif()     { return nif; }
     public String getNom()     { return nom; }
