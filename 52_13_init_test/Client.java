@@ -36,7 +36,7 @@ public class Client {
 						} else {
 								precio = 540.0;
 						}
-						System.out.printf("	%s %s: %f€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio);
+						System.out.printf("	%s %s: %2f€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio);
 				}
 				return "";
 		}
