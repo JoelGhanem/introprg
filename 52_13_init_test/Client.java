@@ -28,7 +28,7 @@ public class Client {
 		public String informe() {
 				System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")");
 				for(int i = 0; i < lloguers.size(); i++) {
-						System.out.printf("  	%s %s: %s€",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),"13");
+						System.out.printf("  	%s %s: %s€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),"13");
 				}
 				return "";
 		}
