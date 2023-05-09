@@ -26,7 +26,7 @@ public class Client {
 		public void setNom(String nom) { this.nom = nom; }
 		public void setTelefon(String telefon) { this.telefon = telefon; }
 		public String informe() {
-				System.out.print("Informe de lloguers del client "+ getNom() + "(" + getNif() + ")");
+				System.out.println("Informe de lloguers del client "+ getNom() + "(" + getNif() + ")");
 				for(int i = 0; i < lloguers.size(); i++) {
 						System.out.printf("  	%s %s: %s€",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),"13");
 				}
