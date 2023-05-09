@@ -38,6 +38,8 @@ public class Client {
 								precio = 540;
 						}
 						System.out.printf("	%s %s: %d%s€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
+						System.out.println("Import a pagar: 810.0€");
+						System.out.println("Punts guanyats: 4");
 				}
 				return "";
 		}
