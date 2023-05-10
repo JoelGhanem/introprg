@@ -22,7 +22,7 @@ public class TestGestor {
 				"	Tata Vista: 180.0€\n" +
 				"	Fiat Uno: 540.0€\n" +
 				"Import a pagar 810.0€\n" +
-				"Punt% Guanyats: 4\n";
+				"Punts Guanyats: 4\n";
 		System.out.println("Test");
 		System.out.println(resultatEsperat);
 		System.out.println("informe");
