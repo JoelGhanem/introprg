@@ -6,7 +6,7 @@ public class TestGestor {
 		private ArrayList<Lloguer> lloguers;
 		@Test
 		public void ProvaDemo() {
-		Client client = new Client("49297007A","Joel","677442280");
+		Client client = new Client("49297007A","Eugènia Salinas Roig","93614214242");
 		Vehicle vehicle1 = new Vehicle("Tata","Aventador",1);
 		Vehicle vehicle2 = new Vehicle("Seat","Fiesta",3);
 		 this.lloguers = new ArrayList<Lloguer>();
@@ -14,7 +14,7 @@ public class TestGestor {
 		Lloguer lloguer2 = new Lloguer(vehicle2,4);
 		lloguers.add(lloguer1);
 		lloguers.add(lloguer2);
-		String resultatEsperat = "Informe de lloguers del client Joel (49297007A)\n "+
+		String resultatEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n "+
 				"	Seat 600: 90€\n" +
 				"	Tata Vista: 180.0€\n" +
 				"	Fiat Uno: 540.0€\n" +
