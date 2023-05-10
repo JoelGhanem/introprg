@@ -21,7 +21,7 @@ public class TestGestor {
 				"	Seat 600: 90.0€\n" +
 				"	Tata Vista: 180.0€\n" +
 				"	Fiat Uno: 540.0€\n" +
-				"Import a pagar 810.0€\n" +
+				"Import a pagar: 810.0€\n" +
 				"Punts Guanyats: 4\n";
 		System.out.println("Test");
 		System.out.println(resultatEsperat);
