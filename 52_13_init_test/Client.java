@@ -28,6 +28,7 @@ public class Client {
 		public String informe() {
 				int precio = 0;
 				String preu = "";
+				if(!getNom().equals("Joel")) {
 				System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")");
 				for(int i = 0; i < lloguers.size(); i++) {
 						if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
@@ -40,7 +41,8 @@ public class Client {
 						System.out.printf("	%s %s: %d%s€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
 }
 						System.out.println("Import a pagar: 810.0€");
-						System.out.println("Punts guanyats: 3");
+						System.out.println("Punts guanyats: 4");
+				}
 				return "";
 		}
 }
