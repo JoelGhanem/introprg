@@ -30,7 +30,7 @@ public class Client {
 				String returnador;
 				String preu = "";
 				if(!getNom().equals("Joel")) {
-						System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")\n");
+						System.out.print("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")\n");
 						for(int i = 0; i < lloguers.size(); i++) {
 								if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
 										precio = 90;
