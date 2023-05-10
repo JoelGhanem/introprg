@@ -7,13 +7,16 @@ public class TestGestor {
 		@Test
 		public void ProvaDemo() {
 		Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
-		Vehicle vehicle1 = new Vehicle("Tata","Aventador",1);
-		Vehicle vehicle2 = new Vehicle("Seat","Fiesta",3);
+		Vehicle vehicle1 = new Vehicle("Seat","600",1);
+		Vehicle vehicle2 = new Vehicle("Tata","Vista",1);
+		Vehicle vehicle3 = new Vehicle("Fiat","Uno",1);
 		 this.lloguers = new ArrayList<Lloguer>();
 		Lloguer lloguer1 = new Lloguer(vehicle1,2);
 		Lloguer lloguer2 = new Lloguer(vehicle2,4);
+		Lloguer lloguer3 = new Lloguer(vehicle3,5);
 		lloguers.add(lloguer1);
 		lloguers.add(lloguer2);
+		lloguers.add(lloguer3);
 		String resultatEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n "+
 				"	Seat 600: 90€\n" +
 				"	Tata Vista: 180.0€\n" +
