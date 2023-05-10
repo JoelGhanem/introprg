@@ -25,6 +25,8 @@ public class TestGestor {
 				"Punt% Guanyats: 4\n";
 		System.out.println("Test");
 		System.out.println(resultatEsperat);
+		System.out.println("informe");
+		System.out.println(client.informe());
 		assertEquals(resultatEsperat, client.informe());
 		}
 }
