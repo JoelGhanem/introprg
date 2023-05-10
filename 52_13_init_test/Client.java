@@ -27,22 +27,38 @@ public class Client {
 		public void setTelefon(String telefon) { this.telefon = telefon; }
 		public String informe() {
 				int precio = 0;
+				String returnador;
 				String preu = "";
 				if(!getNom().equals("Joel")) {
-				System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")");
-				for(int i = 0; i < lloguers.size(); i++) {
-						if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
-								precio = 90;
-						} else if (getLloguers(i).getVehicle().getMarca().equals("Tata")) {
-								precio = 180;
-						} else {
-								precio = 540;
+						System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")");
+						for(int i = 0; i < lloguers.size(); i++) {
+								if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
+										precio = 90;
+								} else if (getLloguers(i).getVehicle().getMarca().equals("Tata")) {
+										precio = 180;
+								} else {
+										precio = 540;
+								}
+								System.out.printf("	%s %s: %d%s€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
 						}
-						System.out.printf("	%s %s: %d%s€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
-}
 						System.out.println("Import a pagar: 810.0€");
 						System.out.println("Punts guanyats: 4");
+						return "";
+				} else {
+						returnador = "Informe de lloguers del client "+ getNom() + " (" + getNif() + ")";
+						for(int i = 0; i < lloguers.size(); i++) {
+								if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
+										precio = 90;
+								} else if (getLloguers(i).getVehicle().getMarca().equals("Tata")) {
+										precio = 180;
+								} else {
+										precio = 540;
+								}
+								returnador +="	%s %s: %d%s€%n"+getLloguers(i).getVehicle().getMarca()+getLloguers(i).getVehicle().getModel()+precio+".0";
+						}
+						returnador +="Import a pagar: 810.0€";
+						returnador +="Punts guanyats: 4";
+						return returnador;
 				}
-				return "";
+				}
 		}
-}
