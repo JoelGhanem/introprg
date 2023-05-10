@@ -60,5 +60,5 @@ public class Client {
 						returnador +="Punts guanyats: 4";
 						return returnador;
 				}
-				}
 		}
+}
