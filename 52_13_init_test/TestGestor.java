@@ -17,7 +17,7 @@ public class TestGestor {
 		lloguers.add(lloguer1);
 		lloguers.add(lloguer2);
 		lloguers.add(lloguer3);
-		String resultatEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n "+
+		String resultatEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n"+
 				"	Seat 600: 90€\n" +
 				"	Tata Vista: 180.0€\n" +
 				"	Fiat Uno: 540.0€\n" +
