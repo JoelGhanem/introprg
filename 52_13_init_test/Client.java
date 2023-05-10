@@ -30,7 +30,7 @@ public class Client {
 				String returnador;
 				String preu = "";
 				if(!getNom().equals("Joel")) {
-						System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")");
+						System.out.println("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")\n");
 						for(int i = 0; i < lloguers.size(); i++) {
 								if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
 										precio = 90;
@@ -39,10 +39,10 @@ public class Client {
 								} else {
 										precio = 540;
 								}
-								System.out.printf("	%s %s: %d%s€%n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
+								System.out.printf("	%s %s: %d%s€\n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
 						}
-						System.out.println("Import a pagar: 810.0€");
-						System.out.println("Punts guanyats: 4");
+						System.out.println("Import a pagar: 810.0€\n");
+						System.out.println("Punts guanyats: 4\n");
 						return "";
 				} else {
 						returnador = "Informe de lloguers del client "+ getNom() + " (" + getNif() + ")";
