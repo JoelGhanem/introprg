@@ -15,8 +15,9 @@ public class TestGestor {
 		lloguers.add(lloguer1);
 		lloguers.add(lloguer2);
 		String resultatEsperat = "Informe de lloguers del client Joel (49297007A)\n "+
-				"	Tata Aventador: 180.0€\n" +
-				"	Seat Fiesta: 90€\n" +
+				"	Seat 600: 90€\n" +
+				"	Tata Vista: 180.0€\n" +
+				"	Fiat Uno: 540.0€\n" +
 				"Import a pagar 810.0€\n" +
 				"Punts Guanyats: 4\n";
 		assertEquals(resultatEsperat, client.informe());
