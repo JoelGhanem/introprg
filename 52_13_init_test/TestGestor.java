@@ -14,7 +14,7 @@ public class TestGestor {
 		Lloguer lloguer2 = new Lloguer(vehicle2,4);
 		lloguers.add(lloguer1);
 		lloguers.add(lloguer2);
-		String resultatEsperat = "Informe de lloguers del client Joel (49297007A)\n "+
+		String resultatEsperat = "Informe de lloguers del client Joel (49397007A)\n "+
 				"	Tata Aventador: 180.0€\n" +
 				"	Seat Fiesta: 90€\n" +
 				"Import a pagar 810.0€\n" +
