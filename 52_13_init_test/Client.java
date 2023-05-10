@@ -39,7 +39,7 @@ public class Client {
 								} else {
 										precio = 540;
 								}
-								System.out.printf("	%s	%s:	%d%s€\n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
+								System.out.printf("	%s %s: %d%s€\n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
 						}
 						System.out.print("Import a pagar: 810.0€\n");
 						System.out.print("Punts guanyats: 4\n");
