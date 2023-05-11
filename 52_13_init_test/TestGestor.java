@@ -17,17 +17,25 @@ public class TestGestor {
 		lloguers.add(lloguer1);
 		lloguers.add(lloguer2);
 		lloguers.add(lloguer3);
-		String resultatEsperat = "Informe de lloguers del client Eugènia Salinas Roig (51590695Q)\n"+
-		"	Seat 600: 90.0€\n" +
-		"	Tata Vista: 180.0€\n" +
-		"	Fiat Uno: 540.0€\n" +
-		"Import a pagar: 810.0€\n" +
-		"Punts guanyats: 4\n";
-		//System.out.println("Test");
-		//System.out.println(resultatEsperat);
-		//System.out.println("informe");
-		//System.out.println(client.informe());
-
+		String resultatEsperat;
+		int suma = 0;
+		int precio = 0;
+		resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
+		for(int i = 0; i < lloguers.size(); i++) {
+			if (client.getLloguers(i).getVehicle().getMarca().equals("Seat")) {
+				precio = 90;
+				suma += precio;
+			} else if (client.getLloguers(i).getVehicle().getMarca().equals("Tata")) {
+				precio = 180;
+				suma += precio;
+			} else {
+				precio = 540;
+				suma += precio;
+			}
+			resultatEsperat += String.format("	%s %s: %d%s€\n",client.getLloguers(i).getVehicle().getMarca(),client.getLloguers(i).getVehicle().getModel(),precio,".0");
+		}
+		resultatEsperat += String.format("Import a pagar: "+suma+".0€\n");
+		resultatEsperat += String.format("Punts guanyats: 4\n");
 		assertEquals(resultatEsperat, client.informe());
 	}
 }
