@@ -10,9 +10,12 @@ public class Client {
 				this.nom = nom;
 				this.telefon = telefon;
 				this.lloguers = new ArrayList<Lloguer>();
-		}
-		public void addLloguer(Lloguer lloguer) {
-				this.lloguers.add(lloguer);
+				Lloguer lloguer = new Lloguer(new Vehicle("Seat","600",1), 2);
+				lloguers.add(lloguer);
+				Lloguer lloguer1 = new Lloguer(new Vehicle("Tata","Vista",1), 5);
+				lloguers.add(lloguer1);
+				Lloguer lloguer2 = new Lloguer(new Vehicle("Fiat","Uno",1), 3);
+				lloguers.add(lloguer2);
 		}
 		public String getNif()     { return nif; }
 		public String getNom()     { return nom; }
@@ -26,7 +29,7 @@ public class Client {
 				int precio = 0;
 				String returnador;
 				String preu = "";
-				returnador ="Informe de lloguers del client "+ getNom() + " (" + getNif() + ")";
+				returnador = String.format("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")\n");
 				for(int i = 0; i < lloguers.size(); i++) {
 						if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
 								precio = 90;
