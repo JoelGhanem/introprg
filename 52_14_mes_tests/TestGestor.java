@@ -18,18 +18,29 @@ public class TestGestor {
 		lloguers.add(lloguer2);
 		lloguers.add(lloguer3);
 		String resultatEsperat;
-		resultatEsperat = String.format("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")\n");
+		int precio = 0;
+		int suma = 0;
+		resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
 		for(int i = 0; i < lloguers.size(); i++) {
-			if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
+			if (client.getLloguers(i).getVehicle().getMarca().equals("Seat")) {
 				precio = 90;
-			} else if (getLloguers(i).getVehicle().getMarca().equals("Tata")) {
+				suma += precio;
+			} else if (client.getLloguers(i).getVehicle().getMarca().equals("Tata")) {
 				precio = 180;
+				suma += precio;
 			} else {
 				precio = 540;
+				suma += precio;
 			}
-			returnador += String.format("	%s %s: %d%s€\n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
+			resultatEsperat += String.format("	%s %s: %d%s€\n",client.getLloguers(i).getVehicle().getMarca(),client.getLloguers(i).getVehicle().getModel(),precio,".0");
 		}
-		resultatEsperat += String.format("Import a pagar: 810.0€\n");
+		resultatEsperat += String.format("Import a pagar: "+ suma+".0€\n");
 		resultatEsperat += String.format("Punts guanyats: 4\n");
+
+	//@Test
+	//public void senseLloguers() {
+			//Client client = new Client("49297007A", "Joel","677442280");
+//
+		//}
 	}
 }
