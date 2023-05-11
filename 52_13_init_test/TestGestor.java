@@ -23,10 +23,10 @@ public class TestGestor {
 						"	Fiat Uno: 540.0€\n" +
 						"Import a pagar: 810.0€\n" +
 						"Punts guanyats: 4\n";
-				System.out.println("Test");
-				System.out.println(resultatEsperat);
-				System.out.println("informe");
-				System.out.println(client.informe());
+				//System.out.println("Test");
+				//System.out.println(resultatEsperat);
+				//System.out.println("informe");
+				//System.out.println(client.informe());
 				assertEquals(resultatEsperat, client.informe());
 		}
 }
