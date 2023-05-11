@@ -6,7 +6,7 @@ public class TestGestor {
 	private ArrayList<Lloguer> lloguers;
 	@Test
 	public void ProvaDemo() {
-		Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+		Client client = new Client("51590695Q","Joel","93614214242");
 		Vehicle vehicle1 = new Vehicle("Seat","600",2);
 		Vehicle vehicle2 = new Vehicle("Tata","Vista",4);
 		Vehicle vehicle3 = new Vehicle("Fiat","Uno",5);
