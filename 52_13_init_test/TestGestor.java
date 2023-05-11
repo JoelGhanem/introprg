@@ -7,9 +7,9 @@ public class TestGestor {
 		@Test
 		public void ProvaDemo() {
 				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
-				Vehicle vehicle1 = new Vehicle("Seat","600",1);
-				Vehicle vehicle2 = new Vehicle("Tata","Vista",1);
-				Vehicle vehicle3 = new Vehicle("Fiat","Uno",1);
+				Vehicle vehicle1 = new Vehicle("Seat","600",2);
+				Vehicle vehicle2 = new Vehicle("Tata","Vista",4);
+				Vehicle vehicle3 = new Vehicle("Fiat","Uno",5);
 				this.lloguers = new ArrayList<Lloguer>();
 				Lloguer lloguer1 = new Lloguer(vehicle1,2);
 				Lloguer lloguer2 = new Lloguer(vehicle2,4);
