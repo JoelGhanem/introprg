@@ -49,6 +49,7 @@ public class Vehicle {
                 this.categoria = Categoria.LUXE;
                 break;
             default:
+				this.categoria = Categoria.BASIC;
         }
     }
 }
