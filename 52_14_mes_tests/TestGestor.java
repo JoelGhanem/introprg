@@ -41,11 +41,11 @@ public class TestGestor {
 		}
 		@Test
 		public void senseLloguers() {
-		Client client = new Client("49297007A", "Joel","677442280");
-		String resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
-		resultatEsperat+="Aquest client no te cap lloguer registrat";
-		assertEquals(resultatEsperat, client.informe());
-		
+				Client client = new Client("49297007A", "Joel","677442280");
+				String resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
+				resultatEsperat+="Aquest client no te cap lloguer registrat";
+				assertEquals(resultatEsperat, client.informe());
+
 		}
 		@Test 
 		public void provaSetNif() {
@@ -202,6 +202,39 @@ public class TestGestor {
 		}
 		@Test
 		public void ProvaDemo4() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+				Vehicle vehicle1 = new Vehicle("Seat","600",2);
+				Vehicle vehicle2 = new Vehicle("Tata","Vista",4);
+				Vehicle vehicle3 = new Vehicle("Fiat","Uno",5);
+				Lloguer lloguer1 = new Lloguer(vehicle1,2);
+				Lloguer lloguer2 = new Lloguer(vehicle2,4);
+				Lloguer lloguer3 = new Lloguer(vehicle3,5);
+				client.setLloguers(lloguer1);
+				client.setLloguers(lloguer2);
+				client.setLloguers(lloguer3);
+				String resultatEsperat;
+				int precio = 0;
+				int suma = 0;
+				resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
+				for(int i = 0; i < client.getSize(); i++) {
+						if (client.getLloguers(i).getVehicle().getMarca().equals("Seat")) {
+								precio = 90;
+								suma += precio;
+						} else if (client.getLloguers(i).getVehicle().getMarca().equals("Tata")) {
+								precio = 180;
+								suma += precio;
+						} else {
+								precio = 540;
+								suma += precio;
+						}
+						resultatEsperat += String.format("	%s %s: %d%s€\n",client.getLloguers(i).getVehicle().getMarca(),client.getLloguers(i).getVehicle().getModel(),precio,".0");
+				}
+				resultatEsperat += String.format("Import a pagar: "+ suma+".0€\n");
+				resultatEsperat += String.format("Punts guanyats: 4\n");
+				assertEquals(resultatEsperat, client.informe());
+		}
+		@Test
+		public void ProvaDemo5() {
 				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
 				Vehicle vehicle1 = new Vehicle("Seat","600",2);
 				Vehicle vehicle2 = new Vehicle("Tata","Vista",4);
