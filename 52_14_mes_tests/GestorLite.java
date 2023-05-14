@@ -11,7 +11,7 @@ public class GestorLite {
 				Vehicle vehicle3 = new Vehicle("Fiat","Uno",5);
 				Lloguer lloguer1 = new Lloguer(vehicle1,2);
 				Lloguer lloguer2 = new Lloguer(vehicle2,5);
-				Lloguer lloguer3 = new Lloguer(vehicle3,5);
+				Lloguer lloguer3 = new Lloguer(vehicle3,3);
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
