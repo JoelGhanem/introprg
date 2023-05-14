@@ -1,29 +1,54 @@
 /*Aquest arxiu es el nostrebehicle que te 3 categories, model i marca*/
+
 public class Vehicle {
-    public static int BASIC = 1;
-    public static int GENERAL = 2;
-    public static int LUXE = 3;
+    public enum Categoria {
+        BASIC,
+        GENERAL,
+        LUXE
+    }
+    
     private String marca;
     private String model;
-    private int categoria;
-    //constructors
+    private Categoria categoria;
+    
     public Vehicle(String marca, String model, int categoria) {
         this.marca = marca;
         this.model = model;
-        this.categoria = categoria;
+        setCategoria(categoria);
     }
-    // getters
-    public String getMarca() { return this.marca;}
-    public String getModel() { return this.model;}
-    public int getCategoria() { return this.categoria;}
-    // setters
+    
+    public String getMarca() {
+        return marca;
+    }
+    
+    public String getModel() {
+        return model;
+    }
+    
+    public Categoria getCategoria() {
+        return categoria;
+    }
+    
     public void setMarca(String marca) {
         this.marca = marca;
     }
+    
     public void setModel(String model) {
         this.model = model;
     }
+    
     public void setCategoria(int categoria) {
-        this.categoria = categoria;
+        switch (categoria) {
+            case 1:
+                this.categoria = Categoria.BASIC;
+                break;
+            case 2:
+                this.categoria = Categoria.GENERAL;
+                break;
+            case 3:
+                this.categoria = Categoria.LUXE;
+                break;
+        }
     }
 }
+

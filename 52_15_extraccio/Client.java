@@ -1,46 +1,64 @@
 /*Aquest arxiu ens representa un client amb un nif, un nom, un telefon i un informe*/
 import java.util.ArrayList;
 public class Client {
-	private String nif;
-	private String nom;
-	private String telefon;
-	ArrayList<Lloguer> lloguers = new ArrayList<Lloguer>();
-	public Client(String nif, String nom, String telefon) {
-		this.nif = nif;
-		this.nom = nom;
-		this.telefon = telefon;
-		this.lloguers = new ArrayList<Lloguer>();
-			}
-	public String getNif()     { return nif; }
-	public String getNom()     { return nom; }
-	public String getTelefon() { return telefon; }
-	public Lloguer getLloguers(int posicio) { return lloguers.get(posicio); }
-	public int getSize() { return lloguers.size();}
-	public void setLloguers(Lloguer lloguer) { this.lloguers.add(lloguer);}
-	public void setNif(String nif) { this.nif = nif; }
-	public void setNom(String nom) { this.nom = nom; }
-	public void setTelefon(String telefon) { this.telefon = telefon; }
-	public String informe() {
-		int precio = 0;
-		String returnador;
-		String preu = "";
-		returnador = String.format("Informe de lloguers del client "+ getNom() + " (" + getNif() + ")\n");
-		if (lloguers.size() == 0) {
-			returnador += "Aquest client no te cap lloguer registrat";
-			return returnador;
+		private String nif;
+		private String nom;
+		private String telefon;
+		ArrayList<Lloguer> lloguers = new ArrayList<Lloguer>();
+		public Client(String nif, String nom, String telefon) {
+				this.nif = nif;
+				this.nom = nom;
+				this.telefon = telefon;
+				this.lloguers = new ArrayList<Lloguer>();
 		}
-		for(int i = 0; i < lloguers.size(); i++) {
-			if (getLloguers(i).getVehicle().getMarca().equals("Seat")) {
-				precio = 90;
-			} else if (getLloguers(i).getVehicle().getMarca().equals("Tata")) {
-				precio = 180;
-			} else {
-				precio = 540;
-			}
-			returnador += String.format("	%s %s: %d%s€\n",getLloguers(i).getVehicle().getMarca(),getLloguers(i).getVehicle().getModel(),precio,".0");
+		public String getNif()     { return nif; }
+		public String getNom()     { return nom; }
+		public String getTelefon() { return telefon; }
+		public Lloguer getLloguers(int posicio) { return lloguers.get(posicio); }
+		public int getSize() { return lloguers.size();}
+		public void setLloguers(Lloguer lloguer) { this.lloguers.add(lloguer);}
+		public void setNif(String nif) { this.nif = nif; }
+		public void setNom(String nom) { this.nom = nom; }
+		public void setTelefon(String telefon) { this.telefon = telefon; }
+		public String informe() {
+				double total = 0;
+				int bonificacions = 0;
+				String resultat = "Informe de lloguers del client " + getNom() + " (" + getNif() + ")\n";
+				for (Lloguer lloguer: lloguers) {
+						double quantitat = quantitatPerLloguer(lloguer);
+						// afegeix lloguers freqüents
+						bonificacions ++;
+						// afegeix bonificació per dos dies de lloguer de Luxe
+						if (lloguer.getVehicle().getCategoria() == Vehicle.Categoria.LUXE && lloguer.getDies()>1 ) {
+								bonificacions ++;
+										}
+						// composa els resultats d'aquest lloguer
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (quantitat * 30) + "€" + "\n";
+						total += quantitat * 30;
+				}
+				// afegeix informació final
+				resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + bonificacions + "\n";
+				return resultat;
 		}
-		returnador += String.format("Import a pagar: 810.0€\n");
-		returnador += String.format("Punts guanyats: 4\n");
-		return returnador;
-	}
+		public Double quantitatPerLloguer(Lloguer lloguer) {
+				double quantitat = 0;
+				switch (lloguer.getVehicle().getCategoria()) {
+						case BASIC:
+								quantitat += 3;
+								if (lloguer.getDies() > 3) {
+										quantitat += (lloguer.getDies() - 3) * 1.5;
+								}
+								break;
+						case GENERAL:
+								quantitat += 4;
+								if (lloguer.getDies() > 2) {
+										quantitat += (lloguer.getDies() - 2) * 2.5;
+								}
+								break;
+						case LUXE:
+								quantitat += lloguer.getDies() * 6;
+								break;
+				}
+				return quantitat;
+		}
 }
