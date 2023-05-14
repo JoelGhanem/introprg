@@ -22,7 +22,7 @@ public class TestGestor {
 				int precio = 0;
 				int suma = 0;
 				resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
-				for(int i = 0; i < client.getSize(); i++) {
+				for(int i = 0; i < client.size(); i++) {
 						if (client.getLloguers(i).getVehicle().getMarca().equals("Seat")) {
 								precio = 90;
 								suma += precio;
