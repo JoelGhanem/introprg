@@ -7,10 +7,10 @@ public class GestorLite {
 		public static Client creaClientDemo() {
 				Client client = new Client("51590695Q", "Eugènia Salinas Roig", "93614214242");
 				Vehicle vehicle1 = new Vehicle("Seat","600",2);
-				Vehicle vehicle2 = new Vehicle("Tata","Vista",5);
+				Vehicle vehicle2 = new Vehicle("Tata","Vista",4);
 				Vehicle vehicle3 = new Vehicle("Fiat","Uno",5);
 				Lloguer lloguer1 = new Lloguer(vehicle1,2);
-				Lloguer lloguer2 = new Lloguer(vehicle2,4);
+				Lloguer lloguer2 = new Lloguer(vehicle2,5);
 				Lloguer lloguer3 = new Lloguer(vehicle3,5);
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
