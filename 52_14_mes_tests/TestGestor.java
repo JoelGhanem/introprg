@@ -1,5 +1,8 @@
 /*Els nous tests unitaris de la M05 UF2 on comprovarem que he fet el constructotr de clienDemo*/
 import org.junit.Test;
+
+import jdk.jfr.Timestamp;
+
 import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 public class TestGestor {
@@ -45,4 +48,30 @@ public class TestGestor {
 		//assertEquals(resultatEsperat, client.informe());
 		//
 		//}
+		@Test 
+		public void provaSetNif() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+				client.setNif("51590695Q");
+				assertEquals("51590695Q",client.getNif());
+		}
+		@Test 
+		public void provaSetNom() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+				client.setNom("Eugènia Salinas Roig");
+				assertEquals("Eugènia Salinas Roig",client.getNom());
+		}
+		@Test 
+		public void provaSetTlf() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242"); 
+				client.setTelefon("93614214242");
+				assertEquals("93614214242",client.getTelefon());
+		}
+		@Test 
+		public void provaSetLloguers() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+				Vehicle vehicle1 = new Vehicle("Seat","600",2);
+				Lloguer lloguer1 = new Lloguer(vehicle1,2);
+				client.setLloguers(lloguer1);
+				assertEquals(1,client.getSize());
+		}
 }
