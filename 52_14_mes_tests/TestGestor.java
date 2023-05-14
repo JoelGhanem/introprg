@@ -40,14 +40,14 @@ public class TestGestor {
 				resultatEsperat += String.format("Punts guanyats: 4\n");
 				assertEquals(resultatEsperat, client.informe());
 		}
-		//@Test
-		//public void senseLloguers() {
-		//Client client = new Client("49297007A", "Joel","677442280");
-		//String resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
-		//resultatEsperat+="Aquest client no te cap lloguer registrat";
-		//assertEquals(resultatEsperat, client.informe());
-		//
-		//}
+		@Test
+		public void senseLloguers() {
+		Client client = new Client("49297007A", "Joel","677442280");
+		String resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
+		resultatEsperat+="Aquest client no te cap lloguer registrat";
+		assertEquals(resultatEsperat, client.informe());
+		
+		}
 		@Test 
 		public void provaSetNif() {
 				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
@@ -67,11 +67,40 @@ public class TestGestor {
 				assertEquals("93614214242",client.getTelefon());
 		}
 		@Test 
-		public void provaSetLloguers() {
+		public void provaSizeLloguers() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
+				assertEquals(0,client.getSize());
+		}
+		@Test 
+		public void provaAddLloguers() {
 				Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
 				Vehicle vehicle1 = new Vehicle("Seat","600",2);
 				Lloguer lloguer1 = new Lloguer(vehicle1,2);
 				client.setLloguers(lloguer1);
 				assertEquals(1,client.getSize());
 		}
+		@Test 
+		public void getLloguers() {
+				Client client = new Client("49297007A", "Joel","677442280");
+				Vehicle vehicle1 = new Vehicle("Seat","600",2);
+				Lloguer lloguer1 = new Lloguer(vehicle1,2);
+				client.setLloguers(lloguer1);
+				assertEquals(lloguer1, client.getLloguers(0));
+		}
+		@Test 
+		public void provaNomBuit() {
+				Client client = new Client("51590695Q","","93614214242"); 
+				assertEquals("",client.getNom());
+		}
+		@Test 
+		public void provaNifBuit() {
+				Client client = new Client("","Eugènia Salinas Roig","93614214242"); 
+				assertEquals("",client.getNif());
+		}
+		@Test 
+		public void provaTlfbuit() {
+				Client client = new Client("51590695Q","Eugènia Salinas Roig","");
+				assertEquals("",client.getTelefon());
+		}
+
 }
