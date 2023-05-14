@@ -48,6 +48,7 @@ public class Vehicle {
             case 3:
                 this.categoria = Categoria.LUXE;
                 break;
+            default:
         }
     }
 }
