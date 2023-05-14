@@ -3,14 +3,13 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 public class TestGestor {
-	private ArrayList<Lloguer> lloguers;
 	@Test
 	public void ProvaDemo() {
 		Client client = new Client("51590695Q","Eugènia Salinas Roig","93614214242");
 		Vehicle vehicle1 = new Vehicle("Seat","600",2);
 		Vehicle vehicle2 = new Vehicle("Tata","Vista",4);
 		Vehicle vehicle3 = new Vehicle("Fiat","Uno",5);
-		this.lloguers = new ArrayList<Lloguer>();
+		ArrayList<Lloguer> lloguers = new ArrayList<Lloguer>();
 		Lloguer lloguer1 = new Lloguer(vehicle1,2);
 		Lloguer lloguer2 = new Lloguer(vehicle2,4);
 		Lloguer lloguer3 = new Lloguer(vehicle3,5);
@@ -36,11 +35,14 @@ public class TestGestor {
 		}
 		resultatEsperat += String.format("Import a pagar: "+ suma+".0€\n");
 		resultatEsperat += String.format("Punts guanyats: 4\n");
+		assertEquals(resultatEsperat, client.informe());
+	}
+	@Test
+	public void senseLloguers() {
+		Client client = new Client("49297007A", "Joel","677442280");
+		String resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
+		resultatEsperat+="Aquest client no te cap lloguer registrat";
+		assertEquals(resultatEsperat, client.informe());
 
-	//@Test
-	//public void senseLloguers() {
-			//Client client = new Client("49297007A", "Joel","677442280");
-//
-		//}
 	}
 }
