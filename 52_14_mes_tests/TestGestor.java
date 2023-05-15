@@ -266,4 +266,5 @@ public class TestGestor {
 				resultatEsperat += String.format("Punts guanyats: 4\n");
 				assertEquals(resultatEsperat, client.informe());
 		}
+}
 
