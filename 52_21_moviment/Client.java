@@ -23,7 +23,6 @@ public class Client {
 	public void setTelefon(String telefon) { this.telefon = telefon; }
 	public String informe() {
 		double total = 0;
-		int bonificacions = 0;
 		String resultat = "Informe de lloguers del client " + getNom() + " (" + getNif() + ")\n";
 		if(lloguers.size() == 0) {
 			resultat += "Aquest client no te cap lloguer registrat";
@@ -31,14 +30,13 @@ public class Client {
 		}
 		for (Lloguer lloguer: lloguers) {
 			// afegeix lloguers freqüents
-			bonificacions += lloguer.bonificacionsDeLloguer(lloguer);
 			// afegeix bonificació per dos dies de lloguer de Luxe
 			// composa els resultats d'aquest lloguer
 			resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
 			total += lloguer.quantitat() * 30;
 		}
 		// afegeix informació final
-		resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + bonificacions + "\n";
+		resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + lloguer.bonificacions(lloguer) + "\n";
 		return resultat;
 	}
 }
