@@ -23,30 +23,10 @@ public class TestGestor {
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
 				double total = 0;
-				double quantitat = 0;
 				int bonificacions = 0;
-				for(Lloguer lloguer : lloguers) {
-						switch (lloguer.getVehicle().getCategoria()) {
-								case BASIC:
-										quantitat += 3;
-										if (lloguer.getDies() > 3) {
-												quantitat += (lloguer.getDies() - 3) * 1.5;
-										}
-										break;
-								case GENERAL:
-										quantitat += 4;
-										if (lloguer.getDies() > 2) {
-												quantitat += (lloguer.getDies() - 2) * 2.5;
-										}
-										break;
-								case LUXE:
-										quantitat += lloguer.getDies() * 6;
-										break;
-						}
-				}
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitatPL = quantitat;
+						double quantitat = quantitatPerLloguer(lloguer);
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
@@ -55,7 +35,7 @@ public class TestGestor {
 						}
 						// composa els resultats d'aquest lloguer
 						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (quantitat * 30) + "€" + "\n";
-						total += quantitatPL * 30;
+						total += quantitat * 30;
 				}
 				// afegeix informació final
 				resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + bonificacions + "\n";
