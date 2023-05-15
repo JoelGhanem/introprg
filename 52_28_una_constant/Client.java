@@ -3,6 +3,7 @@
 import java.util.ArrayList;
 
 public class Client {
+		private static final double EUROS_PER_UNITAT_DE_COST = 30;
 		private String nif;
 		private String nom;
 		private String telefon;
@@ -22,8 +23,8 @@ public class Client {
 		public void setNif(String nif) { this.nif = nif; }
 		public void setNom(String nom) { this.nom = nom; }
 		public void setTelefon(String telefon) { this.telefon = telefon; }
-	
-public String informe() {
+
+		public String informe() {
 
 				if(lloguers.size() == 0) {
 						return composaCapsalera() + "Aquest client no te cap lloguer registrat";
@@ -37,17 +38,17 @@ public String informe() {
 		public String composaDetall() {
 				String resultat = "";
 				for(Lloguer lloguer:lloguers) {
-						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
 				}
 				return resultat;
 		}
 		public String composaPeu() {
 				return "Import a pagar: " + importTotal() + "€\n" + "Punts guanyats: " + bonificacionsTotal() + "\n";
 		}
-		public Double importTotal() += {
+		public Double importTotal()  {
 				double total = 0;
 				for (Lloguer lloguer : lloguers) {
-						total += lloguer.quantitat() * 30;
+						total += lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST;
 				}
 				return total;
 		}
