@@ -22,27 +22,6 @@ public class Client {
 	public void setNif(String nif) { this.nif = nif; }
 	public void setNom(String nom) { this.nom = nom; }
 	public void setTelefon(String telefon) { this.telefon = telefon; }
-	public String informe() {
-		double total = 0;
-		int bonificacions = 0;
-		String resultat = "Informe de lloguers del client " + getNom() + " (" + getNif() + ")\n";
-		if(lloguers.size() == 0) {
-			resultat += "Aquest client no te cap lloguer registrat";
-			return resultat;
-		}
-		for (Lloguer lloguer: lloguers) {
-			double quantitat = lloguer.quantitat();
-			// afegeix lloguers freqüents
-			bonificacions += lloguer.bonificacionsDeLloguer(lloguer);
-			// afegeix bonificació per dos dies de lloguer de Luxe
-			// composa els resultats d'aquest lloguer
-			resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (quantitat * 30) + "€" + "\n";
-			total += quantitat * 30;
-		}
-		// afegeix informació final
-		resultat += "Import a pagar: " + importTotal() + "€\n" + "Punts guanyats: " + bonificacions + "\n";
-		return resultat;
-	}
 
 	public String informe() {
 		int bonificacions = 0;
