@@ -31,7 +31,7 @@ public class Client {
 		}
 		for (Lloguer lloguer: lloguers) {
 			// afegeix lloguers freqüents
-			bonificacions += lloguer.bonificacionsDeLloguer(lloguer);
+			bonificacions += lloguer.bonificacionsDeLloguer();
 			// afegeix bonificació per dos dies de lloguer de Luxe
 			// composa els resultats d'aquest lloguer
 			resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
