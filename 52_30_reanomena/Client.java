@@ -38,7 +38,7 @@ public class Client {
 		public String composaDetall() {
 				String resultat = "";
 				for(Lloguer lloguer:lloguers) {
-						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.preu() * EUROS_PER_UNITAT_DE_COST) + "€" + "\n";
 				}
 				return resultat;
 		}
@@ -48,7 +48,7 @@ public class Client {
 		public Double importTotal()  {
 				double total = 0;
 				for (Lloguer lloguer : lloguers) {
-						total += lloguer.quantitat() * EUROS_PER_UNITAT_DE_COST;
+						total += lloguer.preu() * EUROS_PER_UNITAT_DE_COST;
 				}
 				return total;
 		}

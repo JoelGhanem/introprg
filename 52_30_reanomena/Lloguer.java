@@ -10,7 +10,7 @@ public class Lloguer {
 		//getters
 		public int getDies() {return this.dies;}
 		public Vehicle getVehicle() {return this.vehicle;}
-		public Double quantitat() {
+		public Double preu() {
 				final double COST_BASIC = 3.0;
 				final double COST_GENERAL = 4.0;
 				final double COST_LUXE_PER_DIA = 6.0;
@@ -18,25 +18,25 @@ public class Lloguer {
 				final double COST_EXTRA_BASIC_PER_DIA = 1.5;
 				final int DIAS_INICIAL_GENERAL = 2;
 				final double COST_EXTRA_GENERAL_PER_DIA = 2.5; 
-				double quantitat = 0;
+				double preu = 0;
 				switch (getVehicle().getCategoria()) {
 						case BASIC:
-								quantitat += COST_BASIC;
+								preu += COST_BASIC;
 								if (getDies() > COST_BASIC) {
-										quantitat += (getDies() - COST_BASIC) * COST_EXTRA_BASIC_PER_DIA;
+										preu += (getDies() - COST_BASIC) * COST_EXTRA_BASIC_PER_DIA;
 								}
 								break;
 						case GENERAL:
-								quantitat += COST_GENERAL;
+								preu += COST_GENERAL;
 								if (getDies() > DIAS_INICIAL_GENERAL) {
-										quantitat += (getDies() - DIAS_INICIAL_GENERAL) * COST_EXTRA_GENERAL_PER_DIA;
+										preu += (getDies() - DIAS_INICIAL_GENERAL) * COST_EXTRA_GENERAL_PER_DIA;
 								}
 								break;
 						case LUXE:
-								quantitat += getDies() * COST_LUXE_PER_DIA;
+								preu += getDies() * COST_LUXE_PER_DIA;
 								break;
 				}
-				return quantitat;
+				return preu;
 		}
 		public double bonificacionsDeLloguer(Lloguer lloguer) {
 				if(getVehicle().getCategoria() == Vehicle.Categoria.LUXE && getDies()>1) {
