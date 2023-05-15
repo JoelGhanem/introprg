@@ -34,8 +34,8 @@ public class Client {
 			// composa els resultats d'aquest lloguer
 			resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
 			total += lloguer.quantitat() * 30;
-resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + lloguer.bonificacionsDeLloguer(lloguer) + "\n";
 		}
+resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + lloguer.bonificacionsDeLloguer(lloguer) + "\n";
 		// afegeix informació final
 		return resultat;
 	}
