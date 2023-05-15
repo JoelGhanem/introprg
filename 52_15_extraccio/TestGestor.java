@@ -26,7 +26,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = quantitatPerLloguer(lloguer);
+						double quantitat = client.quantitatPerLloguer(lloguer);
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
