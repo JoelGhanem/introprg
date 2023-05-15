@@ -31,7 +31,7 @@ public class Client {
 		public String composaDetall() {
 				String resultat = "";
 				for(Lloguer lloguer:lloguers) {
-						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + " €" + "\n";
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
 				}
 				return resultat;
 		}
