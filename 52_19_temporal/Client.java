@@ -29,7 +29,6 @@ public class Client {
 return resultat;
 		}
 				for (Lloguer lloguer: lloguers) {
-						lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe

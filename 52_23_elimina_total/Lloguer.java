@@ -10,7 +10,7 @@ public class Lloguer {
     //getters
     public int getDies() {return this.dies;}
     public Vehicle getVehicle() {return this.vehicle;}
-    public Double quantitat() {
+    public double quantitat() {
         double quantitat = 0;
         switch (getVehicle().getCategoria()) {
             case BASIC:

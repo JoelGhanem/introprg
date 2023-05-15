@@ -10,7 +10,7 @@ public class Lloguer {
 		//getters
 		public int getDies() {return this.dies;}
 		public Vehicle getVehicle() {return this.vehicle;}
-		public Double quantitat() {
+		public double quantitat() {
 				final double COST_BASIC = 3.0;
 				final double COST_GENERAL = 4.0;
 				final double COST_LUXE_PER_DIA = 6.0;
