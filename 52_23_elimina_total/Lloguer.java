@@ -1,3 +1,4 @@
+
 /*Aquest arxiu ens representas el nostre lloguer, conte els dies i un constructor especific*/
 public class Lloguer {
     private int dies;
@@ -30,4 +31,12 @@ public class Lloguer {
         }
         return quantitat;
     }
+    public double bonificacionsDeLloguer(Lloguer lloguer) {
+        if(getVehicle().getCategoria() == Vehicle.Categoria.LUXE && getDies()>1) {
+            return 2.0;
+        }
+        return 1.0;
+    }
+
 }
+
