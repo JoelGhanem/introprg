@@ -18,26 +18,48 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				String resultatEsperat;
-				int precio = 0;
-				int suma = 0;
-				resultatEsperat = String.format("Informe de lloguers del client "+ client.getNom() + " (" + client.getNif() + ")\n");
-				for(int i = 0; i < client.getSize(); i++) {
-						if (client.getLloguers(i).getVehicle().getMarca().equals("Seat")) {
-								precio = 90;
-								suma += precio;
-						} else if (client.getLloguers(i).getVehicle().getMarca().equals("Tata")) {
-								precio = 180;
-								suma += precio;
-						} else {
-								precio = 540;
-								suma += precio;
+				ArrayList<Lloguer> lloguers = new ArrayList();
+				lloguers.add(lloguer1);
+				lloguers.add(lloguer2);
+				lloguers.add(lloguer3);
+				double total = 0;
+				double quantitat = 0;
+				int bonificacions = 0;
+				for(Lloguer lloguer : lloguers) {
+						switch (lloguer.getVehicle().getCategoria()) {
+								case BASIC:
+										quantitat += 3;
+										if (lloguer.getDies() > 3) {
+												quantitat += (lloguer.getDies() - 3) * 1.5;
+										}
+										break;
+								case GENERAL:
+										quantitat += 4;
+										if (lloguer.getDies() > 2) {
+												quantitat += (lloguer.getDies() - 2) * 2.5;
+										}
+										break;
+								case LUXE:
+										quantitat += lloguer.getDies() * 6;
+										break;
 						}
-						resultatEsperat += String.format("	%s %s: %d%s€\n",client.getLloguers(i).getVehicle().getMarca(),client.getLloguers(i).getVehicle().getModel(),precio,".0");
 				}
-				resultatEsperat += String.format("Import a pagar: "+ suma+".0€\n");
-				resultatEsperat += String.format("Punts guanyats: 4\n");
-				assertEquals(resultatEsperat, client.informe());
+				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
+				for (Lloguer lloguer: lloguers) {
+						double quantitatPL = quantitat;
+						// afegeix lloguers freqüents
+						bonificacions ++;
+						// afegeix bonificació per dos dies de lloguer de Luxe
+						if (lloguer.getVehicle().getCategoria() == Vehicle.Categoria.LUXE && lloguer.getDies()>1 ) {
+								bonificacions ++;
+						}
+						// composa els resultats d'aquest lloguer
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (quantitat * 30) + "€" + "\n";
+						total += quantitatPL * 30;
+				}
+				// afegeix informació final
+				resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + bonificacions + "\n";
+				assertEquals(resultat, client.informe());
 		}
 		@Test
 		public void senseLloguers() {
