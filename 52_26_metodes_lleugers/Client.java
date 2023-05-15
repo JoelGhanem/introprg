@@ -23,6 +23,9 @@ public class Client {
 		public void setNom(String nom) { this.nom = nom; }
 		public void setTelefon(String telefon) { this.telefon = telefon; }
 		public String informe() {
+				if (lloguers.size() == 0) {
+						return "Aquest client no te cap lloguer registrat";
+				}
 				return composaCapsalera() + composaDetall() + composaPeu();
 		}	
 		public String composaCapsalera() {
