@@ -43,7 +43,7 @@ public class Client {
 		public String composaPeu() {
 				return "Import a pagar: " + importTotal() + "€\n" + "Punts guanyats: " + bonificacionsTotal() + "\n";
 		}
-		public Double importTotal() {
+		public Double importTotal()  {
 				double total = 0;
 				for (Lloguer lloguer : lloguers) {
 						total += lloguer.quantitat() * 30;

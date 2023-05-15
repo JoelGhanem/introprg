@@ -22,7 +22,13 @@ public class Client {
 		public void setNif(String nif) { this.nif = nif; }
 		public void setNom(String nom) { this.nom = nom; }
 		public void setTelefon(String telefon) { this.telefon = telefon; }
-		public String informe() {
+	
+public String informe() {
+
+				if(lloguers.size() == 0) {
+						return composaCapsalera() + "Aquest client no te cap lloguer registrat";
+				}
+
 				return composaCapsalera() + composaDetall() + composaPeu();
 		}	
 		public String composaCapsalera() {
@@ -31,14 +37,14 @@ public class Client {
 		public String composaDetall() {
 				String resultat = "";
 				for(Lloguer lloguer:lloguers) {
-						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (quantitatPerLloguer(lloguer) * 30) + " €" + "\n";
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
 				}
 				return resultat;
 		}
 		public String composaPeu() {
-				return "Import a pagar: " + importTotal() + "€\n" + "Punt guanyats: " + bonificacionsTotal() + "\n";
+				return "Import a pagar: " + importTotal() + "€\n" + "Punts guanyats: " + bonificacionsTotal() + "\n";
 		}
-		public Double importTotal() {
+		public Double importTotal() += {
 				double total = 0;
 				for (Lloguer lloguer : lloguers) {
 						total += lloguer.quantitat() * 30;
@@ -53,3 +59,4 @@ public class Client {
 				return bonificacions;
 		}
 }
+
