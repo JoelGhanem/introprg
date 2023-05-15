@@ -29,11 +29,10 @@ public class Client {
 						return resultat;
 				}
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						// afegeix bonificació per dos dies de lloguer de Luxe
 						// composa els resultats d'aquest lloguer
-						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (quantitat * 30) + "€" + "\n";
+						resultat += "\t" + lloguer.getVehicle().getMarca() + " " + lloguer.getVehicle().getModel() + ": " + (lloguer.quantitat() * 30) + "€" + "\n";
 				}
 				// afegeix informació final
 				resultat += "Import a pagar: " + importTotal() + "€\n" + "Punts guanyats: " + bonificacionsTotal() + "\n";
