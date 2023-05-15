@@ -24,6 +24,10 @@ public class Client {
 				double total = 0;
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + getNom() + " (" + getNif() + ")\n";
+		if(lloguers.size() == 0) {
+			resultat += "Aquest client no te cap lloguer registrat";
+return resultat;
+		}
 				for (Lloguer lloguer: lloguers) {
 						double quantitat = quantitatPerLloguer(lloguer);
 						// afegeix lloguers freqüents
