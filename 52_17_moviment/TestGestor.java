@@ -18,7 +18,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList();
+				ArrayList<Lloguer> lloguers = new ArrayList<>();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -115,7 +115,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-					ArrayList<Lloguer> lloguers = new ArrayList();
+					ArrayList<Lloguer> lloguers = new ArrayList<>();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -150,7 +150,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList();
+				ArrayList<Lloguer> lloguers = new ArrayList<>();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -185,7 +185,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList();
+				ArrayList<Lloguer> lloguers = new ArrayList<>();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -220,7 +220,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList();
+				ArrayList<Lloguer> lloguers = new ArrayList<>();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -255,7 +255,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-					ArrayList<Lloguer> lloguers = new ArrayList();
+					ArrayList<Lloguer> lloguers = new ArrayList<>();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);

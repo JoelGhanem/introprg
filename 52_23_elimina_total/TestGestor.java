@@ -18,7 +18,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList<>();
+				ArrayList<Lloguer> lloguers = new ArrayList();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -26,7 +26,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = client.quantitatPerLloguer(lloguer);
+						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
@@ -115,7 +115,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-					ArrayList<Lloguer> lloguers = new ArrayList<>();
+					ArrayList<Lloguer> lloguers = new ArrayList();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -123,7 +123,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = client.quantitatPerLloguer(lloguer);
+						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
@@ -150,7 +150,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList<>();
+				ArrayList<Lloguer> lloguers = new ArrayList();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -158,7 +158,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = client.quantitatPerLloguer(lloguer);
+						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
@@ -185,7 +185,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList<>();
+				ArrayList<Lloguer> lloguers = new ArrayList();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -193,7 +193,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = client.quantitatPerLloguer(lloguer);
+						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
@@ -220,7 +220,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-				ArrayList<Lloguer> lloguers = new ArrayList<>();
+				ArrayList<Lloguer> lloguers = new ArrayList();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -228,7 +228,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = client.quantitatPerLloguer(lloguer);
+						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
@@ -255,7 +255,7 @@ public class TestGestor {
 				client.setLloguers(lloguer1);
 				client.setLloguers(lloguer2);
 				client.setLloguers(lloguer3);
-					ArrayList<Lloguer> lloguers = new ArrayList<>();
+					ArrayList<Lloguer> lloguers = new ArrayList();
 				lloguers.add(lloguer1);
 				lloguers.add(lloguer2);
 				lloguers.add(lloguer3);
@@ -263,7 +263,7 @@ public class TestGestor {
 				int bonificacions = 0;
 				String resultat = "Informe de lloguers del client " + client.getNom() + " (" + client.getNif() + ")\n";
 				for (Lloguer lloguer: lloguers) {
-						double quantitat = client.quantitatPerLloguer(lloguer);
+						double quantitat = lloguer.quantitat();
 						// afegeix lloguers freqüents
 						bonificacions ++;
 						// afegeix bonificació per dos dies de lloguer de Luxe
