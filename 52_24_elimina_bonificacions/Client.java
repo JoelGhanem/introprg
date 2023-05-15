@@ -46,8 +46,8 @@ public class Client {
 				}
 				return total;
 		}
-		public double bonificacionsTotal() {
-				double bonificacions = 0;
+		public int bonificacionsTotal() {
+				int bonificacions = 0;
 				for(Lloguer lloguer:lloguers) {
 						bonificacions+=lloguer.bonificacionsDeLloguer(lloguer);
 				}
