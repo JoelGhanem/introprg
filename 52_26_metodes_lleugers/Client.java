@@ -36,7 +36,7 @@ public class Client {
 				return resultat;
 		}
 		public String composaPeu() {
-				return "Import a pagar: " + importTotal() + "€\n" + "Punt guanyats: " + bonificacionsTotal() + "\n";
+				return "Import a pagar: " + importTotal() + "€\n" + "Punts guanyats: " + bonificacionsTotal() + "\n";
 		}
 		public Double importTotal() {
 				double total = 0;
