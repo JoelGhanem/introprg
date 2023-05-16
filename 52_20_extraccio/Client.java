@@ -40,10 +40,10 @@ return resultat;
 				resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + bonificacions + "\n";
 				return resultat;
 		}
-	public double bonificacionsDeLloguer(Lloguer lloguer) {
+	public int bonificacionsDeLloguer(Lloguer lloguer) {
 		if(lloguer.getVehicle().getCategoria() == Vehicle.Categoria.LUXE && lloguer.getDies()>1) {
-			return 2.0;
+			return 2;
 		}
-		return 1.0;
+		return 1;
 	}
 }
