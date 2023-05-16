@@ -41,4 +41,4 @@ public class Client {
 		resultat += "Import a pagar: " + total + "€\n" + "Punts guanyats: " + bonificacions + "\n";
 		return resultat;
 	}
-}
+
