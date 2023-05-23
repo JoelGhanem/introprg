@@ -22,12 +22,18 @@ public class Categoria {
         }
         return id;
     }
-    public void setId(int num) {if (num >0) {this.id = num;}}
+    public void setId(int num) {
+        if (num >0) {
+            this.id = num;
+        } else {
+            throw new IllegalArgumentException("L'identificador ha de ser positiu");
+        }
+    }
     public String getNom() { return nom; }
     @Override
     public String toString() {
         return "Categoria(id:" +
-            (id < 0 ? "indefinit" : id) +
-            ", " + nom + ")";
+    (id < 0 ? "indefinit" : id) +
+        ", " + nom + ")";
     }
 }
