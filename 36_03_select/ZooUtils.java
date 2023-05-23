@@ -7,6 +7,9 @@ import java.util.List;
 public class ZooUtils {
     public static void mostraCategories(List<Categoria> categories) {
         //System.out.println("Esto son las categorias");
+        if (categories.isEmpty()) {
+            System.out.println("Cap categoria");
+        }
         for (Categoria categoria : categories) {
             System.out.println(categoria);
         }

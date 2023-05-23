@@ -76,9 +76,6 @@ public class Zoo {
                 Categoria categoria = new Categoria(bdId, nom);
                 categories.add(categoria);
             }
-            if (rs == null) {
-            System.out.println("Cap categoria");
-            }
             rs.close();
             return categories;
         } finally {
