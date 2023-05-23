@@ -92,7 +92,8 @@ public class Zoo {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             String nomC = rs.getString("nom");
-            categoria = new Categoria(nomC);
+            int idB = rs.getInt("id");
+            categoria = new Categoria(idB,nomC);
         } catch (SQLException e) {}
         return categoria;
     }
