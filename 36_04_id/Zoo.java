@@ -50,10 +50,10 @@ public class Zoo {
         }
     }
     public void afegeixCategoria(Categoria categoria) throws SQLException {
+        categoria = obteCategoriaPerNom(categoria.getNom());
         String sql = String.format(
-            "INSERT INTO CATEGORIES (nom) VALUES ('%s')",
+            "INSERT INTO CATEGORIES (nom) VALUES (%d,'%s')",categoria.getId(),
             categoria.getNom());
-        obteCategoriaPerNom(categoria.getNom());
         Statement st = null;
         try {
             st = conn.createStatement();
