@@ -92,8 +92,13 @@ public class Zoo {
             ResultSet rs = st.executeQuery(sql);
             int idC = rs.getInt("id");
             String nomC = rs.getString("nom");
+            if (nomC == null) {
+                return null;
+            } else if (idC == 0) {
+                return null;
+            }
             Categoria categoria = new Categoria(idC,nomC);
-        return categoria;
+            return categoria;
         } finally {
             if (st!=null) {
                 st.close();
