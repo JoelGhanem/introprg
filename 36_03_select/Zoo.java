@@ -87,10 +87,13 @@ public class Zoo {
     public Categoria obteCategoriaPerNom(String nom) {
         String sql = "SELECT id FROM CATEGORIES WHERE NOM = '"+nom+"' ORDER BY id LIMIT 1";
         Statement st = null;
+        Categoria categoria = new Categoria("");
         try {
-        st = conn.createStatement();
-        ResultSet rs = st.executeQuery(sql);
+            st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            String nomC = rs.getString("nom");
+            categoria = new Categoria(nomC);
         } catch (SQLException e) {}
-        return null;
+        return categoria;
     }
 }
