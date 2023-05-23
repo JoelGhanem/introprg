@@ -54,6 +54,7 @@ public class Zoo {
         String sql = String.format(
             "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')",numId,
             categoria.getNom());
+        categoria.setId(numId);
         numId++;
         Statement st = null;
         try {
