@@ -84,17 +84,20 @@ public class Zoo {
             }
         }
     }
-    public Categoria obteCategoriaPerNom(String nom) {
+    public Categoria obteCategoriaPerNom(String nom) throws SQLException{
         String sql = "SELECT id FROM CATEGORIES WHERE NOM = '"+nom+"' ORDER BY id LIMIT 1";
         Statement st = null;
-        Categoria categoria = new Categoria(nom);
         try {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
             String nomC = rs.getString("nom");
-            int idB = rs.getInt("id");
-            categoria = new Categoria(idB,nomC);
-        } catch (SQLException e) {}
+            int idC = rs.getInt("id");
+            Categoria categoria = new Categoria(idC,nomC);
         return categoria;
+        } finally {
+            if (st!=null) {
+                st.close();
+            }
+        }
     }
 }
