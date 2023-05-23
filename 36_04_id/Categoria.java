@@ -22,7 +22,7 @@ public class Categoria {
         }
         return id;
     }
-    public void setId(int num) {this.id = num;}
+    public void setId(int num) {if (num >0) {this.id = num;}}
     public String getNom() { return nom; }
     @Override
     public String toString() {
