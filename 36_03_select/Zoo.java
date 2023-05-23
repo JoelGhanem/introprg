@@ -90,8 +90,8 @@ public class Zoo {
         try {
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(sql);
-            String nomC = rs.getString("nom");
             int idC = rs.getInt("id");
+            String nomC = rs.getString("nom");
             Categoria categoria = new Categoria(idC,nomC);
         return categoria;
         } finally {
