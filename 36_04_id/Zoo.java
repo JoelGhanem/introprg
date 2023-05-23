@@ -53,6 +53,7 @@ public class Zoo {
         String sql = String.format(
             "INSERT INTO CATEGORIES (nom) VALUES ('%s')",
             categoria.getNom());
+        obteCategoriaPerNom(categoria.getNom());
         Statement st = null;
         try {
             st = conn.createStatement();
