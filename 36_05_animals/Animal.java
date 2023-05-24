@@ -13,15 +13,24 @@ public class Animal {
         this.nom = nom;
         this.categoria = categoria;
     }
-    public Animal(int id, String nom, categoria categoria) {
+    public Animal(int id, String nom, Categoria categoria) {
         this.id = id;
         this.nom = nom;
         this.categoria = categoria;
     }
     //getters
-    public int getId() {if (!idIndefinit()) { return this.id;}}
+    public int getId() {
+        if (!idIndefinit()) {
+            return this.id;
+        }
+        return -1;
+    }
     public String getNom() {return this.nom;}
     public Categoria getCategoria() {return this.categoria;}
-    public boolean idIndefinit() {if (id > 0) { return false;}}
-
+    public boolean idIndefinit() {
+        if (id > 0) {
+            return false;
+        }
+        return true;
     }
+}
