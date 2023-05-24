@@ -25,12 +25,10 @@ public class Zoo {
     }
     //creacio de tules
     public void creaTaulaAnimals() throws SQLException {
-        String sql = "CREATE TABLE  IF NOT EXISTS CATEGORIES (" +
-        "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
-        "       nom       VARCHAR(40))" + 
-        " CREATE TABLE IF NOT EXISTS ANIMALS (" +
+        creaTaulaCategories();
+        String sql = " CREATE TABLE IF NOT EXISTS ANIMALS (" +
         "   id      INTEGER PRIMARY KEY AUTOINCREMENT," +
-        "   nom     VARCHAR(40)";
+        "   nom     VARCHAR(40))";
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -69,7 +67,8 @@ public class Zoo {
         }
     }
     public void eliminaTaulaCategories() throws SQLException{
-        String sql = "DROP TABLE IF EXISTS ANIMALS drop table if exists CATEGORIES";
+        eliminaTaulaAnimals();
+        String sql = "DROP TABLE IF EXISTS CATEGORIES";
         Statement st = null;
         try {
             st = conn.createStatement();
