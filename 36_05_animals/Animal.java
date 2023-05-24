@@ -4,7 +4,7 @@ public class Animal {
     private String nom;
     private Categoria categoria;
     public Animal(String nom, Categoria categoria) throws IllegalArgumentException {
-        if(nom == null) {
+        if(nom == null || nom.isBlank()) {
             throw new IllegalArgumentException("El nom no pot ser null ni blanc");
         }
         if (categoria == null) {
@@ -17,7 +17,7 @@ public class Animal {
         if (id < 0) {
             throw new IllegalArgumentException("L'identificador ha de ser positiu");
         }
-        if(nom == null) {
+        if(nom == null || nom.isBlank()) {
             throw new IllegalArgumentException("El nom no pot ser null ni blanc");
         }
         if (categoria == null) {
