@@ -17,6 +17,12 @@ public class Animal {
         if (id < 0) {
             throw new IllegalArgumentException("L'identificador ha de ser positiu");
         }
+        if(nom == null) {
+            throw new IllegalArgumentException("El nom no pot ser null ni blanc");
+        }
+        if (categoria == null) {
+            throw new IllegalArgumentException("La categoria no pot ser null");
+        }
         this.id = id;
         this.nom = nom;
         this.categoria = categoria;
