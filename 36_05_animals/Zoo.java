@@ -8,7 +8,6 @@ import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Set;
 import java.sql.ResultSet;
-
 public class Zoo {
     public int numId = 1;
     private static final String NOM_BASE_DE_DADES = "animals.bd";
@@ -24,6 +23,24 @@ public class Zoo {
         conn.close();
         conn = null;
     }
+    //creacio de tules
+    public void creaTaulaAnimals() throws SQLException {
+        String sql = "CREATE TABLE  IF NOT EXISTS CATEGORIES (" +
+        "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
+        "       nom       VARCHAR(40))" + 
+        " CREATE TABLE IF NOT EXISTS ANIMALS (" +
+        "   id      INTEGER PRIMARY KEY AUTOINCREMENT," +
+        "   nom     VARCHAR(40)";
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sql);
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
     public void creaTaulaCategories() throws SQLException {
         String sql = "CREATE TABLE  IF NOT EXISTS CATEGORIES (" +
         "       id        INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -38,8 +55,21 @@ public class Zoo {
             }
         }
     }
+    //elimina
+    public void eliminaTaulaAnimals() throws SQLException {
+        String sql = "DROP TABLE IF EXISTS ANIMALS";
+        Statement st = null;
+        try {
+        st = conn.createStatement();
+        st.executeUpdate(sql);
+        } finally {
+            if (st != null) {
+                st.close();
+            }
+        }
+    }
     public void eliminaTaulaCategories() throws SQLException{
-        String sql = "DROP TABLE IF EXISTS CATEGORIES";
+        String sql = "DROP TABLE IF EXISTS ANIMALS drop table if exists CATEGORIES";
         Statement st = null;
         try {
             st = conn.createStatement();
@@ -107,5 +137,17 @@ public class Zoo {
                 st.close();
             }
         }
+    }
+    public String getNomTaules() throws SQLException {
+        String sql = "SELECT name FROM sqlite_schema " +
+        "WHERE name NOT LIKE 'sqlite%' " +
+        "ORDER BY name";
+        List<String> taules = new ArrayList<>();
+        try (Statement st = conn.createStatement()) {
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) { taules.add(rs.getString("name")); }
+            rs.close();
+        }
+        return taules.size() > 0 ? String.join(", ", taules) : "cap";
     }
 }
