@@ -13,7 +13,10 @@ public class Animal {
         this.nom = nom;
         this.categoria = categoria;
     }
-    public Animal(int id, String nom, Categoria categoria) {
+    public Animal(int id, String nom, Categoria categoria) throws IllegalArgumentException {
+        if (id < 0) {
+            throw new IllegalArgumentException();
+        }
         this.id = id;
         this.nom = nom;
         this.categoria = categoria;
