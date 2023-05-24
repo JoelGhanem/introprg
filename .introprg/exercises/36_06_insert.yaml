@@ -17,7 +17,7 @@
   - "\tCategoria(id:3, ocell)"
   - "\tCategoria(id:2, peix)"
   - ''
-  - Afegim guppy dins d'una categoria coneguda
+  - Afegim pardal dins d'una categoria coneguda
   - 'Nombre de categories: 3'
   - "\tCategoria(id:1, ocell)"
   - "\tCategoria(id:3, ocell)"
