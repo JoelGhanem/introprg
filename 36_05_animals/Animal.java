@@ -15,7 +15,7 @@ public class Animal {
     }
     public Animal(int id, String nom, Categoria categoria) throws IllegalArgumentException {
         if (id < 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("L'identificador ha de ser positiu");
         }
         this.id = id;
         this.nom = nom;
