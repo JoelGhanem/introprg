@@ -151,7 +151,7 @@ public class Zoo {
     }
     public void afegeixAnimal(Animal animal) throws SQLException{
         if (animal.idIndefinit()) {
-            if (animal.obteCategoriaPerNom() == null) {
+            if (obteCategoriaPerNom(animal.getNom()) == null) {
                 //categoria nova
 
                 String sql = String.format(
