@@ -151,11 +151,8 @@ public class Zoo {
     }
     public void afegeixAnimal(Animal animal) throws SQLException{
         if (animal.idIndefinit()) {
-            if (obteCategoriaPerNom(animal.getNom()) != null) {
-                if (obteCategoriaPerNom(animal.getNom()).getId() <= 0) {
-                    //categoria nova
-                    afegeixCategoria(animal.getCategoria());
-                }
+            if (obteCategoriaPerNom(animal.getNom()) == null) {
+                afegeixCategoria(obteCategoriaPerNom(animal.getNom()));
             }
             String sql = String.format(
                 "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
