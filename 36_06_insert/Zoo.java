@@ -154,11 +154,11 @@ public class Zoo {
             if (obteCategoriaPerNom(animal.getNom()) == null) {
                 //categoria nova
                 afegeixCategoria(animal.getCategoria());
+            }
                 String sql = String.format(
                     "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
                     animal.getNom(),
                     animal.getId());
-            }
         }
     }
 }
