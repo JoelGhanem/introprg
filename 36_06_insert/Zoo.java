@@ -155,10 +155,10 @@ public class Zoo {
                 //categoria nova
                 afegeixCategoria(animal.getCategoria());
             }
-                String sql = String.format(
-                    "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
-                    animal.getNom(),
-                    animal.getId());
+            String sql = String.format(
+                "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
+                animal.getNom(),
+                animal.getId());
         }
     }
 }
