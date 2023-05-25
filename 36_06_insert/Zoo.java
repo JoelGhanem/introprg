@@ -157,7 +157,7 @@ public class Zoo {
                 String sql = String.format(
                     "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
                     animal.getNom(),
-                    animal.getCategoria().getId());
+                    animal.getId());
             }
         }
     }
