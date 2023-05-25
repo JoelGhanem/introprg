@@ -160,6 +160,8 @@ public class Zoo {
                     animal.getNom(),
                     animal.getId());
             }
+        } else {
+            animal.getId();
         }
     }
 }
