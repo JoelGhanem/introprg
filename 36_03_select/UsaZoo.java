@@ -1,4 +1,4 @@
-/*Aquesta classe ens permet executar la classe Zoo*/
+/*Aquesta classe ens permet executar la classe Zoo primer mostra les categories, despres les disponibles inicialment, despres insereix categories, despres consulta per diverses categories i per ultim tannca*/
 import java.sql.SQLException;
 public class UsaZoo {
     public static void main( String args[]) throws SQLException {

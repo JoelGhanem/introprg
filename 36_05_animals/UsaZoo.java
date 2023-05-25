@@ -1,4 +1,4 @@
-/*Aquesta classe ens permet executar la classe Zoo*/
+/*Aquesta classe ens permet executar la classe Zoo conecta a la base, crea en el ordre correte elimina animals, mostra les taules restants, crea animals, elimina cateopgirs ti tanca*/
 import java.sql.SQLException;
 public class UsaZoo {
     public static void main( String args[]) throws SQLException {

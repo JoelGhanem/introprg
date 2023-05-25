@@ -1,4 +1,4 @@
-/*Aquesta classe ens permet executar la classe Zoo*/
+/*Aquesta classe ens permet executar la classe Zoo primer elimina la taula categories, despres la crea, despres la elimina, despres la crea, despres la torna a crear i per ultim la tanca*/
 import java.sql.SQLException;
 public class UsaZoo {
     public static void main( String args[]) throws SQLException {

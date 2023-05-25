@@ -153,11 +153,12 @@ public class Zoo {
         if (animal.idIndefinit()) {
             if (animal.obteCategoriaPerNom() == null) {
                 //categoria nova
-            
-            String sql = String.format(
-                "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
-                animal.getNom(),
-                animal.getCategoria().getId());
+
+                String sql = String.format(
+                    "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
+                    animal.getNom(),
+                    animal.getCategoria().getId());
+            }
         }
     }
 }

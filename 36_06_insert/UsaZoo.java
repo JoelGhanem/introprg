@@ -1,4 +1,4 @@
-/*Aquesta classe ens permet executar la classe Zoo*/
+/*Aquesta classe ens permet executar la classe Zoo, conecta, crea tasulesm mostra resultants, introdueix categories, afegeix pardal afeagex un animal amb nova categoria, tanca la conexio*/
 public class UsaZoo {
     public static void main( String args[]) throws SQLException {
         Zoo zoo = new Zoo();
