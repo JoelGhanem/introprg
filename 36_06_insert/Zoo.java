@@ -79,22 +79,21 @@ public class Zoo {
             }
         }
     }
-    public void afegeixCategoria(Categoria categoria) throws SQLException {
-        String sql = String.format(
-            "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')",numId,
+   
+public void afegeixCategoria(Categoria categoria) throws SQLException {
+    String sql = String.format(
+            "INSERT INTO CATEGORIES (nom) VALUES ('%s')",
             categoria.getNom());
-        categoria.setId(numId);
-        numId++;
-        Statement st = null;
-        try {
-            st = conn.createStatement();
-            st.executeUpdate(sql);
-        } finally {
-            if (st != null) {
-                st.close();
-            }
+    Statement st = null;
+    try {
+        st = conn.createStatement();
+        st.executeUpdate(sql);
+    } finally {
+        if (st != null) {
+            st.close();
         }
     }
+}
     public List<Categoria> recuperaCategories() throws SQLException {
         String sql = "SELECT * FROM CATEGORIES ORDER BY nom";
         Statement st = null;
@@ -152,14 +151,12 @@ public class Zoo {
     public void afegeixAnimal(Animal animal) throws SQLException{
         if (animal.idIndefinit()) {
             if (obteCategoriaPerNom(animal.getNom()) == null) {
-                afegeixCategoria(obteCategoriaPerNom(animal.getNom()));
+                //categoria nova
+                String sql = String.format(
+                    "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
+                    animal.getNom(),
+                    animal.getId());
             }
-            String sql = String.format(
-                "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', '%d')",
-                animal.getNom(),
-                animal.getId());
-        } else {
-            animal.getId();
         }
     }
 }
