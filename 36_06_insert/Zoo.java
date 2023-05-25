@@ -79,22 +79,22 @@ public class Zoo {
             }
         }
     }
-   
-public void afegeixCategoria(Categoria categoria) throws SQLException {
-    String sql = String.format(
+
+    public void afegeixCategoria(Categoria categoria) throws SQLException {
+        String sql = String.format(
             "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId,
             categoria.getNom());
         numId++;
-    Statement st = null;
-    try {
-        st = conn.createStatement();
-        st.executeUpdate(sql);
-    } finally {
-        if (st != null) {
-            st.close();
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            st.executeUpdate(sql);
+        } finally {
+            if (st != null) {
+                st.close();
+            }
         }
     }
-}
     public List<Categoria> recuperaCategories() throws SQLException {
         String sql = "SELECT * FROM CATEGORIES ORDER BY nom";
         Statement st = null;
