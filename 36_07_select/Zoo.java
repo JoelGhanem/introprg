@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.sql.ResultSet;
 public class Zoo {
-  public int numId = 2;
+  public int numId = 1;
   private static final String NOM_BASE_DE_DADES = "animals.bd";
   private static final String CADENA_DE_CONNEXIO = "jdbc:sqlite:" +
   NOM_BASE_DE_DADES;
