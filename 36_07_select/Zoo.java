@@ -81,8 +81,7 @@ public class Zoo {
   }
 
   public void afegeixCategoria(Categoria categoria) throws SQLException {
-    String sql = String.format(
-      "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
+    String sql = String.format( "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
     categoria.setId(numId);
     numId++;
     Statement st = null;
@@ -196,7 +195,7 @@ public class Zoo {
     }
   }
   public List<Animal> recuperaAnimals() throws SQLException {
-  String sql = "SELECT ANIMALS.id as id_animal, " +
+    String sql = "SELECT ANIMALS.id as id_animal, " +
     "ANIMALS.nom as nom_animal, " +
     "CATEGORIES.id as id_categoria, " +
     "CATEGORIES.nom as nom_categoria " +
@@ -205,9 +204,9 @@ public class Zoo {
     "ORDER BY ANIMALS.nom ";   
     Statement st = null;
     try {
-    st = conn.createStatement();
-    ResultSet rs = st.executeQuery(sql);
-    List<Animal> animals = new LinkedList<>();
+      st = conn.createStatement();
+      ResultSet rs = st.executeQuery(sql);
+      List<Animal> animals = new LinkedList<>();
       while(rs.next()){
         int idAnimals = rs.getInt("id_animal");
         String nom = rs.getString("nom_animal");
