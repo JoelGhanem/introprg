@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name=".introprg">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.introprg/sqlite-jdbc-3.41.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/.introprg/junit-platform-console-standalone.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
