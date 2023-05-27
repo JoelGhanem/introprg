@@ -190,7 +190,7 @@ public class Zoo {
       }
       String sql = String.format(
         "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),
-        categoria.getId());
+        categoria);
       animal.setId(numIdA);
       Statement st = null;
       try {
