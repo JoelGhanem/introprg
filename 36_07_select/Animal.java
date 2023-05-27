@@ -1,6 +1,6 @@
 /*És tracta de la classe que defineix els objectes que manipularem a la nostra demostració. Disposa de dos camps: el nom i la categoria A banda, inclou un identificador de base de dades. Serà un valor que generarà el nostre SGBD i que ens permetrà vincular les instàncies de Animal amb la taula corresponent.*/
 public class Animal {
-  private int id;
+  private int id = -1;
   private String nom;
   private Categoria categoria;
   public Animal(String nom, Categoria categoria) throws IllegalArgumentException {
@@ -47,7 +47,7 @@ public class Animal {
   @Override
   public String toString() {
     return "Animal(id:" +
-  (id < 0 ? "indefinit" : id) +
+  (id <= 0 ? "indefinit" : id) +
     ", " + nom + ")";
   }
 }
