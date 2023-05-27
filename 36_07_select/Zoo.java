@@ -181,14 +181,16 @@ public class Zoo {
     return taules.size() > 0 ? String.join(", ", taules) : "cap";
   }
   public void afegeixAnimal(Animal animal) throws SQLException{
+    Categoria categoria = null;
     determinaIdA();
     if (animal.idIndefinit()) {
       if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
-        //categoria nova
+        categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
         afegeixCategoria(animal.getCategoria());
       }
       String sql = String.format(
-        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),animal.getCategoria());
+        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),
+        categoria.getId());
       animal.setId(numIdA);
       Statement st = null;
       try {
