@@ -23,6 +23,21 @@ public class Zoo {
     conn.close();
     conn = null;
   }
+  //determinar el id pq sino hay error en la PK
+  public void DeterminaId() throws SQLException{
+    String sql = "select id from categories";
+    Statement st = null;
+    try {
+      st = conn.createStatement();
+      ResultSet rs = st.executeQuery(sql);
+      numId = rs.getInt("id");
+      rs.close();
+    } finally {
+      if(st!= null){
+        st.close();
+      }
+    }
+  }
   //creacio de tules
   public void creaTaulaAnimals() throws SQLException {
     creaTaulaCategories();
