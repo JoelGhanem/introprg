@@ -40,13 +40,13 @@ public class Zoo {
     }
   }
   public void determinaIdA() throws SQLException {
-  String sql = "select id from animals order by id desc";
+    String sql = "select id from animals order by id desc";
     Statement st = null;
     try {
-    st = conn.createStatement();
-    ResultSet rs = st.executeQuery(sql);
-    numIdA = rs.getInt("id")+1;
-    rs.close();
+      st = conn.createStatement();
+      ResultSet rs = st.executeQuery(sql);
+      numIdA = rs.getInt("id")+1;
+      rs.close();
     } finally {
       if (st!=null) {
         st.close();
@@ -59,7 +59,8 @@ public class Zoo {
     String sql = " CREATE TABLE IF NOT EXISTS ANIMALS (" +
     "   id      INTEGER PRIMARY KEY AUTOINCREMENT," +
     "   nom     VARCHAR(40)," +
-    "   categoria integer )";
+    "   categoria integer, "+
+    "   foreign key (categoria) references Categories(id))";
     Statement st = null;
     try {
       st = conn.createStatement();
@@ -202,19 +203,25 @@ public class Zoo {
     }
   }
   public Animal obteAnimalPerNom(String nom)  throws SQLException{
-    String sql = "select id, nom from animals where nom = '"+nom+"' order by id limit 1";
+    String sql = "SELECT ANIMALS.id as id_animal," +
+    "ANIMALS.nom as nom_animal," +
+    "CATEGORIES.id as id_categoria," +
+    "CATEGORIES.nom as nom_categoria" +
+    "FROM animals, CATEGORIES" +
+    "WHERE ANIMALS.categoria = CATEGORIES.id" +
+    "ORDER BY ANIMALS.nom";
     Statement st = null;
     try {
       st = conn.createStatement();
       ResultSet rs = st.executeQuery(sql);
       if (rs!= null){
-      int idAnimal = rs.getInt("id_animal");
-      String nomAnimal = rs.getString("nom_animal");
-      int idCategoria = rs.getInt("id_categoria");
-      String nomCategoria = rs.getString("nom_categoria");
-      Categoria categoria = new Categoria(idCategoria,nomCategoria);
-      Animal animal = new Animal(idAnimal, nomAnimal,categoria);
-      return animal;
+        int idAnimal = rs.getInt("id_animal");
+        String nomAnimal = rs.getString("nom_animal");
+        int idCategoria = rs.getInt("id_categoria");
+        String nomCategoria = rs.getString("nom_categoria");
+        Categoria categoria = new Categoria(idCategoria,nomCategoria);
+        Animal animal = new Animal(idAnimal, nomAnimal,categoria);
+        return animal;
       }
       return null;
     } finally {
