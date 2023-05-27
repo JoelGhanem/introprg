@@ -184,9 +184,11 @@ public class Zoo {
     determinaIdA();
     if (animal.idIndefinit()) {
       if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
+        System.out.println("obte es nula");
         afegeixCategoria(animal.getCategoria());
         animal.setCategoria(animal.getCategoria());
       }
+      System.out.println("XXX OBTE NO ERA NULA");
       String sql = String.format(
         "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),
         animal.getId());
