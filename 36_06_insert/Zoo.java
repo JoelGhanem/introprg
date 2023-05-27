@@ -19,6 +19,20 @@ public class Zoo {
     if (conn != null) return;   // ja connectat
     conn = DriverManager.getConnection(CADENA_DE_CONNEXIO);
   }
+  public void determinaId() throws SQLException {
+    String sql = "select id from categories order by id desc";
+    Statement st = null;
+    try {
+      st = conn.createStatement();
+      ResultSet rs = st.executeQuery(sql);
+      numId = rs.getInt("id")+1;
+      rs.close();
+    } finally {
+      if (st!=null) {
+        st.close();
+      }
+    }
+  }
   public void determinaIdA() throws SQLException {
     String sql = "select id from animals order by id desc";
     Statement st = null;
@@ -98,10 +112,9 @@ public class Zoo {
   }
 
   public void afegeixCategoria(Categoria categoria) throws SQLException {
-    String sql = String.format(
-      "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
+    determinaId();
+    String sql = String.format( "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
     categoria.setId(numId);
-    numId++;
     Statement st = null;
     try {
       st = conn.createStatement();
@@ -170,7 +183,8 @@ public class Zoo {
     determinaIdA();
     if (animal.idIndefinit()) {
       if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
-       // System.out.println("obte es nula");
+        // System.out.println("obte es nula");
+        determinaId();
         afegeixCategoria(animal.getCategoria());
         animal.setCategoria(animal.getCategoria());
       }
