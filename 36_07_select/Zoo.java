@@ -10,6 +10,7 @@ import java.util.Set;
 import java.sql.ResultSet;
 public class Zoo {
   public int numId = 1;
+  public int numIdA = 1;
   private static final String NOM_BASE_DE_DADES = "animals.bd";
   private static final String CADENA_DE_CONNEXIO = "jdbc:sqlite:" +
   NOM_BASE_DE_DADES;
@@ -25,15 +26,29 @@ public class Zoo {
   }
   //determinar el id pq sino hay error en la PK
   public void DeterminaId() throws SQLException{
-    String sql = "select id from categories";
+    String sql = "select id from categories order by id DESC";
     Statement st = null;
     try {
       st = conn.createStatement();
       ResultSet rs = st.executeQuery(sql);
-      numId = rs.getInt("id");
+      numId = rs.getInt("id")+1;
       rs.close();
     } finally {
       if(st!= null){
+        st.close();
+      }
+    }
+  }
+  public void determinaIdA() throws SQLException {
+  String sql = "select id from animals order by id desc";
+    Statement st = null;
+    try {
+    st = conn.createStatement();
+    ResultSet rs = st.executeQuery(sql);
+    numIdA = rs.getInt("id")+1;
+    rs.close();
+    } finally {
+      if (st!=null) {
         st.close();
       }
     }
@@ -96,9 +111,9 @@ public class Zoo {
   }
 
   public void afegeixCategoria(Categoria categoria) throws SQLException {
+    DeterminaId();
     String sql = String.format( "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
     categoria.setId(numId);
-    numId++;
     Statement st = null;
     try {
       st = conn.createStatement();
@@ -164,15 +179,15 @@ public class Zoo {
     return taules.size() > 0 ? String.join(", ", taules) : "cap";
   }
   public void afegeixAnimal(Animal animal) throws SQLException{
+    determinaIdA();
     if (animal.idIndefinit()) {
       if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
         //categoria nova
         afegeixCategoria(animal.getCategoria());
       }
       String sql = String.format(
-        "INSERT INTO ANIMALS (id,nom) VALUES ('%d', '%s')",
-        animal.getId(),
-        animal.getNom());
+        "INSERT INTO ANIMALS (id,nom) VALUES ('%d', '%s')", numIdA, animal.getNom());
+      animal.setId(numIdA);
       Statement st = null;
       try {
         st = conn.createStatement();

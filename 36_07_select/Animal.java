@@ -34,6 +34,8 @@ public class Animal {
         }
         return -1;
     }
+  //setters
+  public void setId(int id){ this.id = id;}
     public String getNom() {return this.nom;}
     public Categoria getCategoria() {return this.categoria;}
     public boolean idIndefinit() {
