@@ -184,8 +184,9 @@ public class Zoo {
     Categoria categoria = null;
     determinaIdA();
     if (animal.idIndefinit()) {
-      if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
+      if (obteCategoriaPerNom(animal.getCategoria().getNom()) != null) {
         categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
+      } else {
         afegeixCategoria(animal.getCategoria());
       }
       String sql = String.format(
