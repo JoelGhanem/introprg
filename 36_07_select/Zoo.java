@@ -25,7 +25,7 @@ public class Zoo {
     conn = null;
   }
   //determinar el id pq sino hay error en la PK
-  public void DeterminaId() throws SQLException{
+  public void determinaId() throws SQLException{
     String sql = "select id from categories order by id DESC";
     Statement st = null;
     try {
@@ -113,7 +113,7 @@ public class Zoo {
   }
 
   public void afegeixCategoria(Categoria categoria) throws SQLException {
-    DeterminaId();
+    determinaId();
     String sql = String.format( "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
     categoria.setId(numId);
     Statement st = null;
@@ -190,7 +190,7 @@ public class Zoo {
       }
       String sql = String.format(
         "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%d')", numIdA, animal.getNom(),
-        categoria);
+        categoria.getId());
       animal.setId(numIdA);
       Statement st = null;
       try {
