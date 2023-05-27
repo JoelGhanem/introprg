@@ -34,10 +34,11 @@ public class Animal {
     }
     return -1;
   }
-  //setters
-  public void setId(int id){ this.id = id;}
   public String getNom() {return this.nom;}
   public Categoria getCategoria() {return this.categoria;}
+  //setters
+  public void setId(int id){ this.id = id;}
+  public void setCategoria(Categoria categoria) {this.categoria = categoria;}
   public boolean idIndefinit() {
     if (id > 0) {
       return false;

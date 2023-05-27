@@ -185,6 +185,7 @@ public class Zoo {
     if (animal.idIndefinit()) {
       if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
         afegeixCategoria(animal.getCategoria());
+        animal.setCategoria(animal.getCategoria());
       }
       String sql = String.format(
         "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),
