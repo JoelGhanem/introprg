@@ -188,7 +188,7 @@ public class Zoo {
         afegeixCategoria(animal.getCategoria());
       }
       String sql = String.format(
-        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),animal.getCategoria().getId());
+        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),animal.getCategoria());
       animal.setId(numIdA);
       Statement st = null;
       try {
