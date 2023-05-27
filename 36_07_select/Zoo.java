@@ -25,7 +25,7 @@ public class Zoo {
     conn = null;
   }
   //determinar el id pq sino hay error en la PK
-  public void determinaId() throws SQLException{
+  public void DeterminaId() throws SQLException{
     String sql = "select id from categories order by id DESC";
     Statement st = null;
     try {
@@ -113,7 +113,7 @@ public class Zoo {
   }
 
   public void afegeixCategoria(Categoria categoria) throws SQLException {
-    determinaId();
+    DeterminaId();
     String sql = String.format( "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
     categoria.setId(numId);
     Statement st = null;
@@ -181,17 +181,14 @@ public class Zoo {
     return taules.size() > 0 ? String.join(", ", taules) : "cap";
   }
   public void afegeixAnimal(Animal animal) throws SQLException{
-    Categoria categoria = null;
     determinaIdA();
     if (animal.idIndefinit()) {
-      if (obteCategoriaPerNom(animal.getCategoria().getNom()) != null) {
-        categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
-      } else {
+      if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
         afegeixCategoria(animal.getCategoria());
       }
       String sql = String.format(
-        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%d')", numIdA, animal.getNom(),
-        categoria.getId());
+        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),
+        animal.getId());
       animal.setId(numIdA);
       Statement st = null;
       try {
