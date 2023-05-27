@@ -59,7 +59,7 @@ public class Zoo {
     String sql = " CREATE TABLE IF NOT EXISTS ANIMALS (" +
     "   id      INTEGER PRIMARY KEY AUTOINCREMENT," +
     "   nom     VARCHAR(40)," +
-    "   categoria integer foreign key)";
+    "   categoria integer )";
     Statement st = null;
     try {
       st = conn.createStatement();
