@@ -207,7 +207,7 @@ public class Zoo {
     "ANIMALS.nom as nom_animal," +
     "CATEGORIES.id as id_categoria," +
     "CATEGORIES.nom as nom_categoria" +
-    "FROM animals, CATEGORIES" +
+    "FROM ANIMALS, CATEGORIES" +
     "WHERE ANIMALS.categoria = CATEGORIES.id" +
     "ORDER BY ANIMALS.nom";
     Statement st = null;
