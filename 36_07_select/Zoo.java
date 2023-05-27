@@ -25,7 +25,7 @@ public class Zoo {
     conn = null;
   }
   //determinar el id pq sino hay error en la PK
-  public void DeterminaId() throws SQLException{
+  public void determinaId() throws SQLException{
     String sql = "select id from categories order by id DESC";
     Statement st = null;
     try {
@@ -180,61 +180,63 @@ public class Zoo {
     }
     return taules.size() > 0 ? String.join(", ", taules) : "cap";
   }
-  public void afegeixAnimal(Animal animal) throws SQLException{
+
+  public void afegeixAnimal(Animal animal) throws SQLException {
     determinaIdA();
     if (animal.idIndefinit()) {
-      if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
-        System.out.println("obte es nula");
+      Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
+      if (categoria == null) {
+        // Nueva categoría
         afegeixCategoria(animal.getCategoria());
-        animal.setCategoria(animal.getCategoria());
+        categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
       }
-      System.out.println("XXX OBTE NO ERA NULA");
       String sql = String.format(
-        "INSERT INTO ANIMALS (id,nom,categoria) VALUES ('%d', '%s','%s')", numIdA, animal.getNom(),
-        animal.getId());
+        "INSERT INTO ANIMALS (id, nom, categoria) VALUES (%d, '%s', %d)",
+        numIdA, animal.getNom(), categoria.getId());
       animal.setId(numIdA);
       Statement st = null;
       try {
         st = conn.createStatement();
         st.executeUpdate(sql);
       } finally {
-        if (st !=null) {
+        if (st != null) {
           st.close();
         }
-
       }
     }
   }
+
   public Animal obteAnimalPerNom(String nom) throws SQLException {
     String sql = "SELECT ANIMALS.id as id_animal, " +
-                 "ANIMALS.nom as nom_animal, " +
-                 "CATEGORIES.id as id_categoria, " +
-                 "CATEGORIES.nom as nom_categoria " +
-                 "FROM ANIMALS, CATEGORIES " +
-                 "WHERE ANIMALS.categoria = CATEGORIES.id " +
-                 "AND ANIMALS.nom = '" + nom + "' " +
-                 "ORDER BY ANIMALS.nom";
+    "ANIMALS.nom as nom_animal, " +
+    "CATEGORIES.id as id_categoria, " +
+    "CATEGORIES.nom as nom_categoria " +
+    "FROM ANIMALS, CATEGORIES " +
+    "WHERE ANIMALS.categoria = CATEGORIES.id " +
+    "AND ANIMALS.nom = '" + nom + "' " +
+    "ORDER BY ANIMALS.nom";
 
     Statement st = null;
     try {
-        st = conn.createStatement();
-        ResultSet rs = st.executeQuery(sql);
-        if (rs.next()) {
-            int idAnimal = rs.getInt("id_animal");
-            String nomAnimal = rs.getString("nom_animal");
-            int idCategoria = rs.getInt("id_categoria");
-            String nomCategoria = rs.getString("nom_categoria");
-            Categoria categoria = new Categoria(idCategoria, nomCategoria);
-            Animal animal = new Animal(idAnimal, nomAnimal, categoria);
-            return animal;
-        }
-        return null;
+      st = conn.createStatement();
+      ResultSet rs = st.executeQuery(sql);
+      if (rs.next()) {
+        int idAnimal = rs.getInt("id_animal");
+        String nomAnimal = rs.getString("nom_animal");
+        int idCategoria = rs.getInt("id_categoria");
+        String nomCategoria = rs.getString("nom_categoria");
+        Categoria categoria = new Categoria(idCategoria, nomCategoria);
+        Animal animal = new Animal(idAnimal, nomAnimal, categoria);
+        return animal;
+      }
+      return null;
     } finally {
-        if (st != null) {
-            st.close();
-        }
+      if (st != null) {
+        st.close();
+      }
     }
-}  public List<Animal> recuperaAnimals() throws SQLException {
+  }  
+  public List<Animal> recuperaAnimals() throws SQLException {
     String sql = "SELECT ANIMALS.id as id_animal, " +
     "ANIMALS.nom as nom_animal, " +
     "CATEGORIES.id as id_categoria, " +
