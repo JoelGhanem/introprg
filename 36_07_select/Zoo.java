@@ -202,34 +202,36 @@ public class Zoo {
       }
     }
   }
-  public Animal obteAnimalPerNom(String nom)  throws SQLException{
-    String sql = "SELECT ANIMALS.id as id_animal," +
-    "ANIMALS.nom as nom_animal," +
-    "CATEGORIES.id as id_categoria," +
-    "CATEGORIES.nom as nom_categoria" +
-    "FROM ANIMALS, CATEGORIES" +
-    "WHERE ANIMALS.categoria = CATEGORIES.id" +
-    "ORDER BY ANIMALS.nom";
+  public Animal obteAnimalPerNom(String nom) throws SQLException {
+    String sql = "SELECT ANIMALS.id as id_animal, " +
+                 "ANIMALS.nom as nom_animal, " +
+                 "CATEGORIES.id as id_categoria, " +
+                 "CATEGORIES.nom as nom_categoria " +
+                 "FROM ANIMALS, CATEGORIES " +
+                 "WHERE ANIMALS.categoria = CATEGORIES.id " +
+                 "AND ANIMALS.nom = '" + nom + "' " +
+                 "ORDER BY ANIMALS.nom";
+
     Statement st = null;
     try {
-      st = conn.createStatement();
-      ResultSet rs = st.executeQuery(sql);
-      if (rs!= null){
-        int idAnimal = rs.getInt("id_animal");
-        String nomAnimal = rs.getString("nom_animal");
-        int idCategoria = rs.getInt("id_categoria");
-        String nomCategoria = rs.getString("nom_categoria");
-        Categoria categoria = new Categoria(idCategoria,nomCategoria);
-        Animal animal = new Animal(idAnimal, nomAnimal,categoria);
-        return animal;
-      }
-      return null;
+        st = conn.createStatement();
+        ResultSet rs = st.executeQuery(sql);
+        if (rs.next()) {
+            int idAnimal = rs.getInt("id_animal");
+            String nomAnimal = rs.getString("nom_animal");
+            int idCategoria = rs.getInt("id_categoria");
+            String nomCategoria = rs.getString("nom_categoria");
+            Categoria categoria = new Categoria(idCategoria, nomCategoria);
+            Animal animal = new Animal(idAnimal, nomAnimal, categoria);
+            return animal;
+        }
+        return null;
     } finally {
-      if (st != null) {st.close();
-      }
+        if (st != null) {
+            st.close();
+        }
     }
-  }
-  public List<Animal> recuperaAnimals() throws SQLException {
+}  public List<Animal> recuperaAnimals() throws SQLException {
     String sql = "SELECT ANIMALS.id as id_animal, " +
     "ANIMALS.nom as nom_animal, " +
     "CATEGORIES.id as id_categoria, " +
