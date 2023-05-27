@@ -202,17 +202,12 @@ public class Zoo {
     }
   }
   public Animal obteAnimalPerNom(String nom)  throws SQLException{
-    String sql = "SELECT ANIMALS.id as id_animal," +
-    "ANIMALS.nom as nom_animal," +
-    "CATEGORIES.id as id_categoria," +
-    "CATEGORIES.nom as nom_categoria" +
-    "FROM ANIMALS, CATEGORIES" +
-    "WHERE ANIMALS.categoria = CATEGORIES.id" +
-    "ORDER BY ANIMALS.nom";
+    String sql = "select id, nom from animals where nom = '"+nom+"' order by id limit 1";
     Statement st = null;
     try {
       st = conn.createStatement();
       ResultSet rs = st.executeQuery(sql);
+      if (rs!= null){
       int idAnimal = rs.getInt("id_animal");
       String nomAnimal = rs.getString("nom_animal");
       int idCategoria = rs.getInt("id_categoria");
@@ -220,6 +215,8 @@ public class Zoo {
       Categoria categoria = new Categoria(idCategoria,nomCategoria);
       Animal animal = new Animal(idAnimal, nomAnimal,categoria);
       return animal;
+      }
+      return null;
     } finally {
       if (st != null) {st.close();
       }
