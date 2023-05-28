@@ -1,4 +1,3 @@
-java
-kotlin
-scala
-clojure
+culo
+sexo
+smash
