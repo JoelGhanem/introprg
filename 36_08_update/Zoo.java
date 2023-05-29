@@ -265,6 +265,24 @@ public class Zoo {
 
     }
   }
-  public void canviaCategoria(Animal animal, Categoria categoria) {
+  public void canviaCategoria(Animal animal, Categoria categoria) throws SQLException {
+    if (obteAnimalPerNom(animal.getNom())== null) {
+      animal.setCategoria(categoria);
+      afegeixAnimal(animal);
+    } else {
+      if (obteCategoriaPerNom(categoria.getNom())==null) {
+        afegeixCategoria(categoria);
+      }
+    }
+    String sql = "update animals set categoria = " + categoria + "where id = "+ animal.getId();
+    Statement st = null;
+    try {
+      st = conn.createStatement();
+      st.executeUpdate(sql);
+    } finally {
+      if(st!=null) {
+        st.close();
+      }
+    }
   }
 }
