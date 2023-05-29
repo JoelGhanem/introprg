@@ -265,4 +265,6 @@ public class Zoo {
 
     }
   }
+  public void canviaCategoria(Animal animal, Categoria categoria) {
+  }
 }
