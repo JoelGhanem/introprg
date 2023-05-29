@@ -183,10 +183,12 @@ public class Zoo {
     if (animal.idIndefinit()) {
       if(obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
         afegeixCategoria(animal.getCategoria());
+        Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
+        animal.getCategoria().setId(categoria.getId());
       }
       String sql = String.format(
-        "INSERT INTO ANIMALS (id, nom, categoria) VALUES ('%s',%d," + animal.getCategoria() + ")",
-        animal.getNom(), numIdA, animal.getCategoria());
+        "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s',%d,)",
+        animal.getNom(),numId);
       Statement st = null;
       ResultSet rs = null;
       try {
@@ -195,7 +197,7 @@ public class Zoo {
         animal.setCategoria(obteCategoriaPerNom(animal.getCategoria().getNom()));
         rs = st.executeQuery("SELECT last_insert_rowid()");
       } finally {
-          st.close();
+        st.close();
       }
     }
   }
