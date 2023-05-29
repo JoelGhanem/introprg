@@ -197,7 +197,7 @@ public class Zoo {
         st.executeUpdate(sql);
         animal.setCategoria(obteCategoriaPerNom(animal.getCategoria().getNom()));
         rs = st.executeQuery("SELECT last_insert_rowid()");
-        animal.setId(8);
+        animal.setId(numIdA);
       } finally {
         st.close();
       }
