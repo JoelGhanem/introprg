@@ -180,15 +180,16 @@ public class Zoo {
 
   public void afegeixAnimal(Animal animal) throws SQLException {
     determinaIdA();
+    Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
     if (animal.idIndefinit()) {
       if(obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
         afegeixCategoria(animal.getCategoria());
-        Categoria categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
-        animal.getCategoria().setId(categoria.getId());
+        categoria = obteCategoriaPerNom(animal.getCategoria().getNom());
       }
+      animal.getCategoria().setId(categoria.getId());
       String sql = String.format(
-        "INSERT INTO ANIMALS (id,nom, categoria) VALUES (%d,'%s',%d)",
-        animal.getId(),animal.getNom(),animal.getCategoria());
+        "INSERT INTO ANIMALS (nom, categoria) VALUES ('%s',%d)",
+        animal.getNom(),animal.getCategoria().getId());
       Statement st = null;
       ResultSet rs = null;
       try {
