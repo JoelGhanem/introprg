@@ -274,7 +274,7 @@ public class Zoo {
         afegeixCategoria(categoria);
       }
     }
-    String sql = String.format("update animals set categoria = '" + categoria + "' where id = '"+ animal.getId() + "'");
+    String sql = String.format("update animals set categoria = '" + categoria.getId() + "' where id = '"+ animal.getId() + "'");
     Statement st = null;
     try {
       st = conn.createStatement();
