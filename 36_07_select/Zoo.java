@@ -185,8 +185,8 @@ public class Zoo {
         afegeixCategoria(animal.getCategoria());
       }
       String sql = String.format(
-        "INSERT INTO ANIMALS (id, nom, categoria) VALUES ('%s',%d)",
-        animal.getNom(), animal.getCategoria().getId());
+        "INSERT INTO ANIMALS (id, nom, categoria) VALUES ('%s',%d," + animal.getCategoria() + ")",
+        animal.getNom(), numIdA, animal.getCategoria());
       Statement st = null;
       ResultSet rs = null;
       try {
@@ -195,9 +195,7 @@ public class Zoo {
         animal.setCategoria(obteCategoriaPerNom(animal.getCategoria().getNom()));
         rs = st.executeQuery("SELECT last_insert_rowid()");
       } finally {
-        if (rs.next()) {
           st.close();
-        }
       }
     }
   }
