@@ -111,7 +111,7 @@ public class Zoo {
 
   public void afegeixCategoria(Categoria categoria) throws SQLException {
     determinaId();
-    String sql = String.format( "INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
+    String sql = String.format("INSERT INTO CATEGORIES (id,nom) VALUES (%d,'%s')", numId, categoria.getNom());
     categoria.setId(numId);
     Statement st = null;
     try {
@@ -274,7 +274,7 @@ public class Zoo {
         afegeixCategoria(categoria);
       }
     }
-    String sql = "update animals set categoria = " + categoria + "where id = "+ animal.getId();
+    String sql = String.format("update animals set categoria = " + categoria + "where id = "+ animal.getId());
     Statement st = null;
     try {
       st = conn.createStatement();
