@@ -27,7 +27,6 @@ public class Vi {
 				} else {
 						this.preu = -1;
 				}
-
 				if (estoc > 0) {
 						this.estoc = estoc;
 				} else {
