@@ -1,8 +1,5 @@
 /*Una classe contenidor que simplement realitzarà accessos a la base de dades.*/
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.ArrayList;
@@ -191,11 +188,12 @@ public class Zoo {
         "INSERT INTO ANIMALS (id, nom, categoria) VALUES ('%s',%d)",
         animal.getNom(), animal.getCategoria().getId());
       Statement st = null;
+      ResultSet rs = null;
       try {
         st = conn.createStatement();
         st.executeUpdate(sql);
         animal.setCategoria(obteCategoriaPerNom(animal.getCategoria().getNom()));
-        ResultSet rs = st.executeQuery("SELECT last_insert_rowid()");
+        rs = st.executeQuery("SELECT last_insert_rowid()");
       } finally {
         if (rs.next()) {
           st.close();
