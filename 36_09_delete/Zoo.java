@@ -286,14 +286,12 @@ public class Zoo {
         }
     }
     public void eliminaAnimal(Animal animal) throws SQLException {
-        String sql = String.format("delete from animals where id = "+ animal.getId());
-        Statement st = null;
-        if(animal.idIndefinit()) {
-            return;
-        } else{
+        if(!animal.idIndefinit()) {
+            String sql = String.format("delete from animals where id = "+ animal.getId());
+            Statement st = null;
             try {
                 st = conn.createStatement();
-                    st.executeUpdate(sql);
+                st.executeUpdate(sql);
             } finally {
                 if(st!= null) {
                     st.close();
@@ -305,19 +303,19 @@ public class Zoo {
         String sql = "";
         if (!categoria.idIndefinit() && categoria != null) {
             int categoriaId = categoria.getId();
-        sql = String.format("delete from animals where categoria = "+ categoriaId + "delete from categories where id = "+ categoriaId); 
-        Statement st = null;
-        if(obteCategoriaPerNom(categoria.getNom()) != null) {
-            return;
-        }
-        try {
-            st = conn.createStatement();
-            st.executeUpdate(sql);
-        } finally {
-            if (st!= null) {
-                st.close();
+            sql = String.format("delete from animals where categoria = "+ categoriaId + "delete from categories where id = "+ categoriaId); 
+            Statement st = null;
+            if(obteCategoriaPerNom(categoria.getNom()) != null) {
+                return;
             }
-        }
+            try {
+                st = conn.createStatement();
+                st.executeUpdate(sql);
+            } finally {
+                if (st!= null) {
+                    st.close();
+                }
+            }
         }
     }
 }
