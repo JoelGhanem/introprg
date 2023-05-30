@@ -288,7 +288,8 @@ public class Zoo {
     public void eliminaAnimal(Animal animal) throws SQLException {
         String sql = String.format("delete from animals where id = "+ animal.getId());
         Statement st = null;
-        if(animal.idIndefinit() || animal.getId() == obteAnimalPerNom(animal.getNom()).getId()) {
+        if(animal.idIndefinit()) {
+            return;
         } else{
             try {
                 st = conn.createStatement();
