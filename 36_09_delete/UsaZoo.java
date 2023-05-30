@@ -13,51 +13,55 @@ public class UsaZoo {
         System.out.println("Creem les taules");
         zoo.creaTaulaAnimals();
         System.out.println("Taules resultants: " + zoo.getNomTaules());
-        System.out.println();
-        System.out.println("Introduïm una categoria");
-        Categoria mamifer = new Categoria("mamífer");
-        zoo.afegeixCategoria(mamifer);
+        System.out.println("Intentem eliminar una categoria i un animal inexistents");
+        zoo.eliminaCategoria(new Categoria("mamífer"));
+        zoo.eliminaAnimal(new Animal("gat", new Categoria("mamífer")));
+        ZooUtils.mostraAnimals(zoo.recuperaAnimals());
         ZooUtils.mostraCategories(zoo.recuperaCategories());
-        //
-        // creem una llista d'animals amb algun malament classificat
-        Animal balena = new Animal("balena", new Categoria("peix"));
-        Animal tarantula = new Animal("taràntula", new Categoria("insecte"));
+        Animal pardal = new Animal("pardal", new Categoria("ocell"));
+        System.out.println();
+        System.out.println("Introduïm " + pardal);
+        zoo.afegeixAnimal(pardal);
+        ZooUtils.mostraAnimals(zoo.recuperaAnimals());
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
+        System.out.println();
+        System.out.println("Eliminem l'animal");
+        zoo.eliminaAnimal(pardal);
+        ZooUtils.mostraAnimals(zoo.recuperaAnimals());
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
+        // creem una llista d'animals
+        Categoria ocell = new Categoria("ocell");
+        Animal gat = new Animal("gat", new Categoria("mamífer"));
         List<Animal> animals = Arrays.asList(
-            new Animal("pardal", new Categoria("ocell")),
-            new Animal("gat", mamifer),
-            new Animal("guppy", new Categoria("peix")),
-            balena,
-            tarantula
+            new Animal("pardal", ocell),
+            new Animal("àliga", ocell),
+            new Animal("gallina",  ocell),
+            gat,
+            new Animal("trencalós",  ocell)
             );
         System.out.println();
         System.out.println("Afegim uns quants animals");
         for (Animal animal: animals) {
             zoo.afegeixAnimal(animal);
         }
-        System.out.println("A la base de dades, els animals són:");
         ZooUtils.mostraAnimals(zoo.recuperaAnimals());
-        System.out.println("A la base de dades, les categories són:");
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
+        ocell = zoo.obteCategoriaPerNom("ocell");
+        System.out.println();
+        System.out.println("Eliminem " + ocell);
+        zoo.eliminaCategoria(ocell);
+        ZooUtils.mostraAnimals(zoo.recuperaAnimals());
         ZooUtils.mostraCategories(zoo.recuperaCategories());
         System.out.println();
-        System.out.println("Corregim la categoria de la balena a una ja existent");
-        zoo.canviaCategoria(balena, mamifer);
-        System.out.println("A la base de dades, els animals són:");
+        System.out.println("No deixem ni el gat!");
+        zoo.eliminaAnimal(gat);
         ZooUtils.mostraAnimals(zoo.recuperaAnimals());
-        System.out.println("A la base de dades, les categories són:");
         ZooUtils.mostraCategories(zoo.recuperaCategories());
+        Categoria mamifer = zoo.obteCategoriaPerNom("mamífer");
         System.out.println();
-        System.out.println("Modifiquem la categoria de la taràntula a una que no existeix");
-        zoo.canviaCategoria(tarantula, new Categoria("aràcnid"));
-        System.out.println("A la base de dades, els animals són:");
+        System.out.println("Eliminem " + mamifer);
+        zoo.eliminaCategoria(mamifer);
         ZooUtils.mostraAnimals(zoo.recuperaAnimals());
-        System.out.println("A la base de dades, les categories són:");
-        ZooUtils.mostraCategories(zoo.recuperaCategories());
-        System.out.println();
-        System.out.println("Intentem modificar la categoria d'un animal que no existeix");
-        zoo.canviaCategoria(new Animal("cavall de mar", mamifer), new Categoria("peix"));
-        System.out.println("A la base de dades, els animals són:");
-        ZooUtils.mostraAnimals(zoo.recuperaAnimals());
-        System.out.println("A la base de dades, les categories són:");
         ZooUtils.mostraCategories(zoo.recuperaCategories());
         System.out.println();
         System.out.print("Finalment tanquem la connexió amb la base de dades: ");
