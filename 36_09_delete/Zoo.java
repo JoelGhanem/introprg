@@ -303,7 +303,8 @@ public class Zoo {
     public void eliminaCategoria(Categoria categoria) throws SQLException {
         String sql = "";
         if (!categoria.idIndefinit() && categoria != null) {
-        sql = String.format("delete from categories where id = "+ categoria.getId()); 
+            int categoriaId = categoria.getId();
+        sql = String.format("delete from animals where categoria = "+ categoriaId + "delete from categories where id = "+ categoriaId); 
         Statement st = null;
         if(obteCategoriaPerNom(categoria.getNom()) != null) {
             return;
