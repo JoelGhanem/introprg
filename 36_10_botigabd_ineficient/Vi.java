@@ -2,6 +2,7 @@
 public class Vi {
 		private String nom;
 		private int preu;
+		private int id;
 		private int estoc = 0;
 
 		//constructors
@@ -33,15 +34,40 @@ public class Vi {
 						this.estoc = -1;
 				}
 		}
-
+		public Vi(int id,String nom, int preu, int estoc) {
+				String nombreBien;
+				nombreBien = normalitzaNom(nom);
+				//System.out.println("nom despues del normaliza " + nom);
+				this.nom = nombreBien;
+				if (preu > 0) {
+						this.preu = preu;
+				} else {
+						this.preu = -1;
+				}
+				if (estoc > 0) {
+						this.estoc = estoc;
+				} else {
+						this.estoc = -1;
+				}
+    this.id = id;
+  }
+ public boolean idIndefinit() {
+    if (id > 0) {
+      return false;
+    }
+    return true;
+  }
 		//getters
 		public String getNom() { return this.nom; }
 
 		public int getPreu() { return this.preu; }
 
 		public int getEstoc() { return this.estoc; }
-
+public int getId() {return this.id;}
 		//setters
+  public void setId(int id) {
+    this.id = id;
+  }
 		public void setNom(String nom){
 				this.nom = nom;
 		}

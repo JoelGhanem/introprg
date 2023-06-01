@@ -9,25 +9,13 @@ public class Entorn {
   public static int numerito = 0;
   public static int escritas = 0;
   private static final Botiga botiga = new Botiga();
-  public static void main(String[] args) throws IOException {
-    connecta();
-    creaVins();
-    boolean llegides = true;
-		Entorn entorn = new Entorn();
+  public static void main(String[] args) throws IOException, SQLException {
+    Entorn  entorn = new Entorn();
 		mostraBenvinguda();
-		while(true) {
-			Vi vi = new Vi();
-			if(vi!=null) { 
-			botiga.afegeix(vi);
-			//System.out.println("llega al numerito");
-			//numerito++;
-			}
-			//System.out.println("el numero es " + numerito);
-		}
-    if (llegides) { System.out.println("Referències llegides: " + numerito);}
-    llegides = false;
+    entorn.botiga.connecta();//connectem el programa a la base de dades
+    entorn.botiga.creaVins();//creem la taula vins
+    entorn.botiga.agafaVins();//llegim tots els vins 
     while (true) {
-
       mostraPrompt();
       String comanda = Entrada.readLine().strip();
       if (comanda.isEmpty()) continue;
@@ -36,94 +24,21 @@ public class Entorn {
         case "ajuda": mostraAjuda();
         break;
         case "afegeix": entorn.processaAfegeix();
-        desconnecta();
         break;
         case "cerca": entorn.processaCerca();
-        desconnecta();
         break;
         case "modifica": entorn.processaModifica();
-        desconnecta();
         break;
         case "elimina": entorn.processaElimina();
-        desconnecta();
         break;
         default: mostraErrorComandaDesconeguda();
       }
     }
-    botiga.iniciaRecorregut();
-    while(true) {
-      vinoNuevo = botiga.getSeguent();
-      if (vinoNuevo == null) {
-        break;
-      }
-      String [] texto = vinoNuevo.aArrayString();
-      String linea = String.join(";", texto);
-      //System.out.println(linea);
-      bw.write(linea);
-      bw.write("\n");
-      escritas++;
-    }
-    bw.close();
-    System.out.println("Referències guardades: " + escritas);
+    entorn.botiga.treuVins();
+    entorn.botiga.insertaVins();
     mostraComiat();
   }
-  //BBDD
-  private static final String NOM_BASE_DE_DADES = "vins.bd";
-  private static final String CADENA_DE_CONNEXIO = "jdbc:sqlite:" +
-  NOM_BASE_DE_DADES;
-  private Connection conn = null;
-  public static void connecta() throws SQLException {
-    if (conn != null) return;   // ja connectat
-    conn = DriverManager.getConnection(CADENA_DE_CONNEXIO);
-  }
-  public static void desconnecta() throws SQLException {
-    if (conn == null) return; // ja desconnectat
-    conn.close();
-    conn = null;
-  }
-  public static void creaVins() {
-    String sql = "create table if not exists vins (" +
-    " nom varchar(40) primary key, " +
-    " preu integer, " +
-    " estoc integer)";
-    Statement st = null;
-    try {
-    st = conn.createStatement();
-    st.executeUpdate(sql);
-    } finally {
-      if(st!= null){
-        st.close();
-      }
-    }
-  }
-  public void mostraVins() {
-
-  }
-  public void buscaVins() {
-    String sql = "select * from vins order by nom";
-    Statement st = null;
-    try {
-    st = conn.createStatement();
-    ResultSet rs = st.executeQuery(sql);
-      Vi vi = new Vi();
-      while(rs.next()) {
-        numerito++;
-       /* String nom = rs.getStrins("nom");
-        vi.setNom(nom);
-        int preu = rs.getInt("preu");
-        vi.setPreu(preu);
-        int estoc = rs.getInt("estoc");
-        vi.setEstoc(estoc);
-        mostraVins();
-        */
-      }
-    } finally {
-      if (st!= null){
-        st.close();
-      }
-    }
-  }
-  //Entorn
+   //Entorn
   public static Entorn mostraBenvinguda() {
     System.out.println("Celler La Bona Estrella. Escriviu ajuda per veure opcions.");
     return null;
