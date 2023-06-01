@@ -131,7 +131,7 @@ public class Botiga {
         determinaId();
         vinito.setId(numId);
       }
-      String sql = String.format("insert into vins(id,nom,preu,estoc) values(%d,'%s',%d,%d);",vinito.getNom(),vinito.getPreu(),vinito.getEstoc());
+      String sql = String.format("insert into vins(id,nom,preu,estoc) values(%d,'%s',%d,%d);",vinito.getId(),vinito.getNom(),vinito.getPreu(),vinito.getEstoc());
       Statement st = null;
       try {
       st = conn.createStatement();
